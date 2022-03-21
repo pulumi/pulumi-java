@@ -61,12 +61,10 @@ public final class GetIpsetResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetIpsetResult build() {
+        }        public GetIpsetResult build() {
             return new GetIpsetResult(id, name);
         }
     }

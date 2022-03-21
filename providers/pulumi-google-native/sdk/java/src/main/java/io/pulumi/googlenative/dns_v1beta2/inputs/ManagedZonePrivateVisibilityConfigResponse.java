@@ -87,17 +87,20 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
             this.gkeClusters = Objects.requireNonNull(gkeClusters);
             return this;
         }
-
+        public Builder gkeClusters(ManagedZonePrivateVisibilityConfigGKEClusterResponse... gkeClusters) {
+            return gkeClusters(List.of(gkeClusters));
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-        public ManagedZonePrivateVisibilityConfigResponse build() {
+        public Builder networks(ManagedZonePrivateVisibilityConfigNetworkResponse... networks) {
+            return networks(List.of(networks));
+        }        public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(gkeClusters, kind, networks);
         }
     }

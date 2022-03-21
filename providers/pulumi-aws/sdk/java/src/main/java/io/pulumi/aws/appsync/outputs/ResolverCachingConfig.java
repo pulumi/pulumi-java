@@ -73,12 +73,13 @@ public final class ResolverCachingConfig {
             this.cachingKeys = cachingKeys;
             return this;
         }
-
+        public Builder cachingKeys(String... cachingKeys) {
+            return cachingKeys(List.of(cachingKeys));
+        }
         public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
-        }
-        public ResolverCachingConfig build() {
+        }        public ResolverCachingConfig build() {
             return new ResolverCachingConfig(cachingKeys, ttl);
         }
     }

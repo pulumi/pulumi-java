@@ -57,12 +57,10 @@ public final class RuleGroupRuleActionAllowArgs extends io.pulumi.resources.Reso
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public Builder customRequestHandling(@Nullable RuleGroupRuleActionAllowCustomRequestHandlingArgs customRequestHandling) {
             this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
-        }
-        public RuleGroupRuleActionAllowArgs build() {
+        }        public RuleGroupRuleActionAllowArgs build() {
             return new RuleGroupRuleActionAllowArgs(customRequestHandling);
         }
     }

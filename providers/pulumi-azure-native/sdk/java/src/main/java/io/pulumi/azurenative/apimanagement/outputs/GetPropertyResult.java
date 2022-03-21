@@ -153,37 +153,33 @@ public final class GetPropertyResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secret(@Nullable Boolean secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetPropertyResult build() {
+        }        public GetPropertyResult build() {
             return new GetPropertyResult(displayName, id, name, secret, tags, type, value);
         }
     }

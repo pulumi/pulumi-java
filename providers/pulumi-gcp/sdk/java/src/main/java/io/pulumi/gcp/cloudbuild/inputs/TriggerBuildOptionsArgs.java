@@ -263,122 +263,110 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder dynamicSubstitutions(@Nullable Output<Boolean> dynamicSubstitutions) {
             this.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
-
         public Builder dynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
             this.dynamicSubstitutions = Output.ofNullable(dynamicSubstitutions);
             return this;
         }
-
         public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
-
         public Builder envs(@Nullable List<String> envs) {
             this.envs = Output.ofNullable(envs);
             return this;
         }
-
+        public Builder envs(String... envs) {
+            return envs(List.of(envs));
+        }
         public Builder logStreamingOption(@Nullable Output<String> logStreamingOption) {
             this.logStreamingOption = logStreamingOption;
             return this;
         }
-
         public Builder logStreamingOption(@Nullable String logStreamingOption) {
             this.logStreamingOption = Output.ofNullable(logStreamingOption);
             return this;
         }
-
         public Builder logging(@Nullable Output<String> logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder logging(@Nullable String logging) {
             this.logging = Output.ofNullable(logging);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder requestedVerifyOption(@Nullable Output<String> requestedVerifyOption) {
             this.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
-
         public Builder requestedVerifyOption(@Nullable String requestedVerifyOption) {
             this.requestedVerifyOption = Output.ofNullable(requestedVerifyOption);
             return this;
         }
-
         public Builder secretEnvs(@Nullable Output<List<String>> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
-
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = Output.ofNullable(secretEnvs);
             return this;
         }
-
+        public Builder secretEnvs(String... secretEnvs) {
+            return secretEnvs(List.of(secretEnvs));
+        }
         public Builder sourceProvenanceHashes(@Nullable Output<List<String>> sourceProvenanceHashes) {
             this.sourceProvenanceHashes = sourceProvenanceHashes;
             return this;
         }
-
         public Builder sourceProvenanceHashes(@Nullable List<String> sourceProvenanceHashes) {
             this.sourceProvenanceHashes = Output.ofNullable(sourceProvenanceHashes);
             return this;
         }
-
+        public Builder sourceProvenanceHashes(String... sourceProvenanceHashes) {
+            return sourceProvenanceHashes(List.of(sourceProvenanceHashes));
+        }
         public Builder substitutionOption(@Nullable Output<String> substitutionOption) {
             this.substitutionOption = substitutionOption;
             return this;
         }
-
         public Builder substitutionOption(@Nullable String substitutionOption) {
             this.substitutionOption = Output.ofNullable(substitutionOption);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<TriggerBuildOptionsVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<TriggerBuildOptionsVolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-
+        public Builder volumes(TriggerBuildOptionsVolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder workerPool(@Nullable Output<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
-
         public Builder workerPool(@Nullable String workerPool) {
             this.workerPool = Output.ofNullable(workerPool);
             return this;
-        }
-        public TriggerBuildOptionsArgs build() {
+        }        public TriggerBuildOptionsArgs build() {
             return new TriggerBuildOptionsArgs(diskSizeGb, dynamicSubstitutions, envs, logStreamingOption, logging, machineType, requestedVerifyOption, secretEnvs, sourceProvenanceHashes, substitutionOption, volumes, workerPool);
         }
     }

@@ -238,122 +238,98 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsArgs> connectSettings) {
             this.connectSettings = connectSettings;
             return this;
         }
-
         public Builder connectSettings(@Nullable DirectoryConnectSettingsArgs connectSettings) {
             this.connectSettings = Output.ofNullable(connectSettings);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = Output.ofNullable(edition);
             return this;
         }
-
         public Builder enableSso(@Nullable Output<Boolean> enableSso) {
             this.enableSso = enableSso;
             return this;
         }
-
         public Builder enableSso(@Nullable Boolean enableSso) {
             this.enableSso = Output.ofNullable(enableSso);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsArgs> vpcSettings) {
             this.vpcSettings = vpcSettings;
             return this;
         }
-
         public Builder vpcSettings(@Nullable DirectoryVpcSettingsArgs vpcSettings) {
             this.vpcSettings = Output.ofNullable(vpcSettings);
             return this;
-        }
-        public DirectoryArgs build() {
+        }        public DirectoryArgs build() {
             return new DirectoryArgs(alias, connectSettings, description, edition, enableSso, name, password, shortName, size, tags, type, vpcSettings);
         }
     }

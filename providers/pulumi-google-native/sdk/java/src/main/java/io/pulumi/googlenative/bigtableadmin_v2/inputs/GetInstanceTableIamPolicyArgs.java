@@ -78,17 +78,14 @@ public final class GetInstanceTableIamPolicyArgs extends io.pulumi.resources.Inv
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public GetInstanceTableIamPolicyArgs build() {
+        }        public GetInstanceTableIamPolicyArgs build() {
             return new GetInstanceTableIamPolicyArgs(instanceId, project, tableId);
         }
     }

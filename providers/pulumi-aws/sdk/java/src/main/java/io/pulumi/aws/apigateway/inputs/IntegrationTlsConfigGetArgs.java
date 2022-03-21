@@ -57,12 +57,10 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
             this.insecureSkipVerification = insecureSkipVerification;
             return this;
         }
-
         public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
             this.insecureSkipVerification = Output.ofNullable(insecureSkipVerification);
             return this;
-        }
-        public IntegrationTlsConfigGetArgs build() {
+        }        public IntegrationTlsConfigGetArgs build() {
             return new IntegrationTlsConfigGetArgs(insecureSkipVerification);
         }
     }

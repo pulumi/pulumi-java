@@ -72,12 +72,10 @@ public final class ListenerRuleActionForwardTargetGroup {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ListenerRuleActionForwardTargetGroup build() {
+        }        public ListenerRuleActionForwardTargetGroup build() {
             return new ListenerRuleActionForwardTargetGroup(arn, weight);
         }
     }

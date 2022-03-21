@@ -89,17 +89,14 @@ public final class VirtualGatewaySpecListenerTlsCertificate {
             this.acm = acm;
             return this;
         }
-
         public Builder file(@Nullable VirtualGatewaySpecListenerTlsCertificateFile file) {
             this.file = file;
             return this;
         }
-
         public Builder sds(@Nullable VirtualGatewaySpecListenerTlsCertificateSds sds) {
             this.sds = sds;
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificate build() {
+        }        public VirtualGatewaySpecListenerTlsCertificate build() {
             return new VirtualGatewaySpecListenerTlsCertificate(acm, file, sds);
         }
     }

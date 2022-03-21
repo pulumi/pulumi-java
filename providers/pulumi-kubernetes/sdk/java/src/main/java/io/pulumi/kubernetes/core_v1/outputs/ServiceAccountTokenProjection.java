@@ -88,17 +88,14 @@ public final class ServiceAccountTokenProjection {
             this.audience = audience;
             return this;
         }
-
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public ServiceAccountTokenProjection build() {
+        }        public ServiceAccountTokenProjection build() {
             return new ServiceAccountTokenProjection(audience, expirationSeconds, path);
         }
     }

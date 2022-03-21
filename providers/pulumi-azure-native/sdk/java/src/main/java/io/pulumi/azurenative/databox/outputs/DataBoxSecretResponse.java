@@ -120,27 +120,28 @@ public final class DataBoxSecretResponse {
             this.accountCredentialDetails = Objects.requireNonNull(accountCredentialDetails);
             return this;
         }
-
+        public Builder accountCredentialDetails(AccountCredentialDetailsResponse... accountCredentialDetails) {
+            return accountCredentialDetails(List.of(accountCredentialDetails));
+        }
         public Builder devicePassword(String devicePassword) {
             this.devicePassword = Objects.requireNonNull(devicePassword);
             return this;
         }
-
         public Builder deviceSerialNumber(String deviceSerialNumber) {
             this.deviceSerialNumber = Objects.requireNonNull(deviceSerialNumber);
             return this;
         }
-
         public Builder encodedValidationCertPubKey(String encodedValidationCertPubKey) {
             this.encodedValidationCertPubKey = Objects.requireNonNull(encodedValidationCertPubKey);
             return this;
         }
-
         public Builder networkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
             this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
             return this;
         }
-        public DataBoxSecretResponse build() {
+        public Builder networkConfigurations(ApplianceNetworkConfigurationResponse... networkConfigurations) {
+            return networkConfigurations(List.of(networkConfigurations));
+        }        public DataBoxSecretResponse build() {
             return new DataBoxSecretResponse(accountCredentialDetails, devicePassword, deviceSerialNumber, encodedValidationCertPubKey, networkConfigurations);
         }
     }

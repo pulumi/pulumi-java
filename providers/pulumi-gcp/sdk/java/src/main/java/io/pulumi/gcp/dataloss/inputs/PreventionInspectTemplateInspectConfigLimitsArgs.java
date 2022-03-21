@@ -93,32 +93,29 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
             this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
             return this;
         }
-
         public Builder maxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs> maxFindingsPerInfoTypes) {
             this.maxFindingsPerInfoTypes = Output.ofNullable(maxFindingsPerInfoTypes);
             return this;
         }
-
+        public Builder maxFindingsPerInfoTypes(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs... maxFindingsPerInfoTypes) {
+            return maxFindingsPerInfoTypes(List.of(maxFindingsPerInfoTypes));
+        }
         public Builder maxFindingsPerItem(Output<Integer> maxFindingsPerItem) {
             this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
             return this;
         }
-
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
             this.maxFindingsPerItem = Output.of(Objects.requireNonNull(maxFindingsPerItem));
             return this;
         }
-
         public Builder maxFindingsPerRequest(Output<Integer> maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }
-
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Output.of(Objects.requireNonNull(maxFindingsPerRequest));
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigLimitsArgs build() {
+        }        public PreventionInspectTemplateInspectConfigLimitsArgs build() {
             return new PreventionInspectTemplateInspectConfigLimitsArgs(maxFindingsPerInfoTypes, maxFindingsPerItem, maxFindingsPerRequest);
         }
     }

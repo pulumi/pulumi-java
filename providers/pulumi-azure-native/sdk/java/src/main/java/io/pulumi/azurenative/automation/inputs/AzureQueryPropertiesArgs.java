@@ -96,32 +96,32 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder scope(@Nullable Output<List<String>> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable List<String> scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
+        public Builder scope(String... scope) {
+            return scope(List.of(scope));
+        }
         public Builder tagSettings(@Nullable Output<TagSettingsPropertiesArgs> tagSettings) {
             this.tagSettings = tagSettings;
             return this;
         }
-
         public Builder tagSettings(@Nullable TagSettingsPropertiesArgs tagSettings) {
             this.tagSettings = Output.ofNullable(tagSettings);
             return this;
-        }
-        public AzureQueryPropertiesArgs build() {
+        }        public AzureQueryPropertiesArgs build() {
             return new AzureQueryPropertiesArgs(locations, scope, tagSettings);
         }
     }

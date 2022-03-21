@@ -77,22 +77,21 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
+        public Builder mode(LaunchProfileStreamingSessionStorageMode... mode) {
+            return mode(List.of(mode));
+        }
         public Builder root(@Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root) {
             this.root = root;
             return this;
         }
-
         public Builder root(@Nullable LaunchProfileStreamingSessionStorageRootArgs root) {
             this.root = Output.ofNullable(root);
             return this;
-        }
-        public LaunchProfileStreamConfigurationSessionStorageArgs build() {
+        }        public LaunchProfileStreamConfigurationSessionStorageArgs build() {
             return new LaunchProfileStreamConfigurationSessionStorageArgs(mode, root);
         }
     }

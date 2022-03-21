@@ -63,17 +63,14 @@ public final class DatabaseInstanceIpAddress {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder timeToRetire(@Nullable String timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DatabaseInstanceIpAddress build() {
+        }        public DatabaseInstanceIpAddress build() {
             return new DatabaseInstanceIpAddress(ipAddress, timeToRetire, type);
         }
     }

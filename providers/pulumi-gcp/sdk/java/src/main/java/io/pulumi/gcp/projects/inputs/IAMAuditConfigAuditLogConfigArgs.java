@@ -75,22 +75,21 @@ public final class IAMAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
             this.exemptedMembers = exemptedMembers;
             return this;
         }
-
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
-
+        public Builder exemptedMembers(String... exemptedMembers) {
+            return exemptedMembers(List.of(exemptedMembers));
+        }
         public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public Builder logType(String logType) {
             this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
-        }
-        public IAMAuditConfigAuditLogConfigArgs build() {
+        }        public IAMAuditConfigAuditLogConfigArgs build() {
             return new IAMAuditConfigAuditLogConfigArgs(exemptedMembers, logType);
         }
     }

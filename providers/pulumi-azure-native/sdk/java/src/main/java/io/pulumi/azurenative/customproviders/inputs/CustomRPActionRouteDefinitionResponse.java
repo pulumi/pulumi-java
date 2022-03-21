@@ -94,17 +94,14 @@ public final class CustomRPActionRouteDefinitionResponse extends io.pulumi.resou
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder routingType(@Nullable String routingType) {
             this.routingType = routingType;
             return this;
-        }
-        public CustomRPActionRouteDefinitionResponse build() {
+        }        public CustomRPActionRouteDefinitionResponse build() {
             return new CustomRPActionRouteDefinitionResponse(endpoint, name, routingType);
         }
     }

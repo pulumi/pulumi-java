@@ -104,22 +104,18 @@ public final class ExternalMetricStatus {
             this.currentAverageValue = currentAverageValue;
             return this;
         }
-
         public Builder currentValue(String currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricSelector(@Nullable LabelSelector metricSelector) {
             this.metricSelector = metricSelector;
             return this;
-        }
-        public ExternalMetricStatus build() {
+        }        public ExternalMetricStatus build() {
             return new ExternalMetricStatus(currentAverageValue, currentValue, metricName, metricSelector);
         }
     }

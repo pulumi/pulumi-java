@@ -76,12 +76,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
-
         public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList wordList) {
             this.wordList = wordList;
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary build() {
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary(cloudStoragePath, wordList);
         }
     }

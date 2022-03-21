@@ -43,8 +43,7 @@ public final class NetworkInterfaceInstanceIpv6Address {
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
-        }
-        public NetworkInterfaceInstanceIpv6Address build() {
+        }        public NetworkInterfaceInstanceIpv6Address build() {
             return new NetworkInterfaceInstanceIpv6Address(ipv6Address);
         }
     }

@@ -71,12 +71,16 @@ public final class GoogleCloudRetailV2betaConditionResponse {
             this.activeTimeRange = Objects.requireNonNull(activeTimeRange);
             return this;
         }
-
+        public Builder activeTimeRange(GoogleCloudRetailV2betaConditionTimeRangeResponse... activeTimeRange) {
+            return activeTimeRange(List.of(activeTimeRange));
+        }
         public Builder queryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-        public GoogleCloudRetailV2betaConditionResponse build() {
+        public Builder queryTerms(GoogleCloudRetailV2betaConditionQueryTermResponse... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }        public GoogleCloudRetailV2betaConditionResponse build() {
             return new GoogleCloudRetailV2betaConditionResponse(activeTimeRange, queryTerms);
         }
     }

@@ -56,12 +56,10 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
             this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
             return this;
         }
-
         public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Output.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
             return this;
-        }
-        public MonitoringSubscriptionMonitoringSubscriptionGetArgs build() {
+        }        public MonitoringSubscriptionMonitoringSubscriptionGetArgs build() {
             return new MonitoringSubscriptionMonitoringSubscriptionGetArgs(realtimeMetricsSubscriptionConfig);
         }
     }

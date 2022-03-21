@@ -79,22 +79,18 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.disruptionBudget = disruptionBudget;
             return this;
         }
-
         public Builder disruptionBudget(@Nullable FixedOrPercentArgs disruptionBudget) {
             this.disruptionBudget = Output.ofNullable(disruptionBudget);
             return this;
         }
-
         public Builder mode(@Nullable Output<PatchRolloutMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable PatchRolloutMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public PatchRolloutArgs build() {
+        }        public PatchRolloutArgs build() {
             return new PatchRolloutArgs(disruptionBudget, mode);
         }
     }

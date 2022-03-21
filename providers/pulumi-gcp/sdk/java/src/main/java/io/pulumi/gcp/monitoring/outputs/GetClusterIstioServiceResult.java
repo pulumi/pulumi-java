@@ -129,52 +129,45 @@ public final class GetClusterIstioServiceResult {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public Builder telemetries(List<GetClusterIstioServiceTelemetry> telemetries) {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-        public GetClusterIstioServiceResult build() {
+        public Builder telemetries(GetClusterIstioServiceTelemetry... telemetries) {
+            return telemetries(List.of(telemetries));
+        }        public GetClusterIstioServiceResult build() {
             return new GetClusterIstioServiceResult(clusterName, displayName, id, location, name, project, serviceId, serviceName, serviceNamespace, telemetries);
         }
     }

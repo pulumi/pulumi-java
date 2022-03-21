@@ -76,12 +76,10 @@ public final class CredentialResultResponse extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CredentialResultResponse build() {
+        }        public CredentialResultResponse build() {
             return new CredentialResultResponse(name, value);
         }
     }

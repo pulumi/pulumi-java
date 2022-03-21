@@ -55,12 +55,13 @@ public final class DistributionGeoRestriction {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder restrictionType(String restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
-        }
-        public DistributionGeoRestriction build() {
+        }        public DistributionGeoRestriction build() {
             return new DistributionGeoRestriction(locations, restrictionType);
         }
     }

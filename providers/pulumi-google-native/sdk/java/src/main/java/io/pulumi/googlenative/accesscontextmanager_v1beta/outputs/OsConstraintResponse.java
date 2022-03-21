@@ -86,17 +86,14 @@ public final class OsConstraintResponse {
             this.minimumVersion = Objects.requireNonNull(minimumVersion);
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder requireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs);
             return this;
-        }
-        public OsConstraintResponse build() {
+        }        public OsConstraintResponse build() {
             return new OsConstraintResponse(minimumVersion, osType, requireVerifiedChromeOs);
         }
     }

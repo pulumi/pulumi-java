@@ -162,72 +162,58 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetType = datasetType;
             return this;
         }
-
         public Builder datasetType(@Nullable Either<String,DatasetType> datasetType) {
             this.datasetType = Output.ofNullable(datasetType);
             return this;
         }
-
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = Output.ofNullable(datastoreId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
-
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = Output.ofNullable(isAnonymous);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DataVersionArgs build() {
+        }        public DataVersionArgs build() {
             return new DataVersionArgs(datasetType, datastoreId, description, isAnonymous, path, properties, tags);
         }
     }

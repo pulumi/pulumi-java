@@ -61,12 +61,10 @@ public final class DnsCacheConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public DnsCacheConfigArgs build() {
+        }        public DnsCacheConfigArgs build() {
             return new DnsCacheConfigArgs(enabled);
         }
     }

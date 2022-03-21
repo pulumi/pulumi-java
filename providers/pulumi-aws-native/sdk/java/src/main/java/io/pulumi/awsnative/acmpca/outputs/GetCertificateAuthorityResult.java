@@ -98,22 +98,21 @@ public final class GetCertificateAuthorityResult {
             this.arn = arn;
             return this;
         }
-
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
-
         public Builder tags(@Nullable List<CertificateAuthorityTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetCertificateAuthorityResult build() {
+        public Builder tags(CertificateAuthorityTag... tags) {
+            return tags(List.of(tags));
+        }        public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(arn, certificateSigningRequest, revocationConfiguration, tags);
         }
     }

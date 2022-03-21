@@ -72,12 +72,10 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetprivateLinkForAzureAdArgs build() {
+        }        public GetprivateLinkForAzureAdArgs build() {
             return new GetprivateLinkForAzureAdArgs(policyName, resourceGroupName);
         }
     }

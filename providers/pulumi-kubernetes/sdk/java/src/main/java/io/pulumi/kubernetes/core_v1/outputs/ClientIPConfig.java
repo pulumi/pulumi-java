@@ -53,8 +53,7 @@ public final class ClientIPConfig {
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
-        }
-        public ClientIPConfig build() {
+        }        public ClientIPConfig build() {
             return new ClientIPConfig(timeoutSeconds);
         }
     }

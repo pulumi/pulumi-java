@@ -167,72 +167,58 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
             this.archiveExtraction = archiveExtraction;
             return this;
         }
-
         public Builder archiveExtraction(@Nullable GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs archiveExtraction) {
             this.archiveExtraction = Output.ofNullable(archiveExtraction);
             return this;
         }
-
         public Builder dpkgInstallation(@Nullable Output<GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs> dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
-
         public Builder dpkgInstallation(@Nullable GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs dpkgInstallation) {
             this.dpkgInstallation = Output.ofNullable(dpkgInstallation);
             return this;
         }
-
         public Builder fileCopy(@Nullable Output<GuestPoliciesRecipeUpdateStepFileCopyGetArgs> fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
-
         public Builder fileCopy(@Nullable GuestPoliciesRecipeUpdateStepFileCopyGetArgs fileCopy) {
             this.fileCopy = Output.ofNullable(fileCopy);
             return this;
         }
-
         public Builder fileExec(@Nullable Output<GuestPoliciesRecipeUpdateStepFileExecGetArgs> fileExec) {
             this.fileExec = fileExec;
             return this;
         }
-
         public Builder fileExec(@Nullable GuestPoliciesRecipeUpdateStepFileExecGetArgs fileExec) {
             this.fileExec = Output.ofNullable(fileExec);
             return this;
         }
-
         public Builder msiInstallation(@Nullable Output<GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs> msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
-
         public Builder msiInstallation(@Nullable GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs msiInstallation) {
             this.msiInstallation = Output.ofNullable(msiInstallation);
             return this;
         }
-
         public Builder rpmInstallation(@Nullable Output<GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs> rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
-
         public Builder rpmInstallation(@Nullable GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs rpmInstallation) {
             this.rpmInstallation = Output.ofNullable(rpmInstallation);
             return this;
         }
-
         public Builder scriptRun(@Nullable Output<GuestPoliciesRecipeUpdateStepScriptRunGetArgs> scriptRun) {
             this.scriptRun = scriptRun;
             return this;
         }
-
         public Builder scriptRun(@Nullable GuestPoliciesRecipeUpdateStepScriptRunGetArgs scriptRun) {
             this.scriptRun = Output.ofNullable(scriptRun);
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepGetArgs build() {
+        }        public GuestPoliciesRecipeUpdateStepGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepGetArgs(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }
     }

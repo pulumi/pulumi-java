@@ -156,47 +156,47 @@ public final class DataSourceSalesforceConfiguration extends io.pulumi.resources
             this.chatterFeedConfiguration = chatterFeedConfiguration;
             return this;
         }
-
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
-
+        public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
+            return excludeAttachmentFilePatterns(List.of(excludeAttachmentFilePatterns));
+        }
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
-
+        public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
+            return includeAttachmentFilePatterns(List.of(includeAttachmentFilePatterns));
+        }
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder serverUrl(String serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
-
         public Builder standardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
             this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
             return this;
         }
-
         public Builder standardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
             this.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }
-        public DataSourceSalesforceConfiguration build() {
+        public Builder standardObjectConfigurations(DataSourceSalesforceStandardObjectConfiguration... standardObjectConfigurations) {
+            return standardObjectConfigurations(List.of(standardObjectConfigurations));
+        }        public DataSourceSalesforceConfiguration build() {
             return new DataSourceSalesforceConfiguration(chatterFeedConfiguration, crawlAttachments, excludeAttachmentFilePatterns, includeAttachmentFilePatterns, knowledgeArticleConfiguration, secretArn, serverUrl, standardObjectAttachmentConfiguration, standardObjectConfigurations);
         }
     }

@@ -87,17 +87,14 @@ public final class BucketIamConfigurationResponse {
             this.bucketPolicyOnly = Objects.requireNonNull(bucketPolicyOnly);
             return this;
         }
-
         public Builder publicAccessPrevention(String publicAccessPrevention) {
             this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
             return this;
         }
-
         public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
-        }
-        public BucketIamConfigurationResponse build() {
+        }        public BucketIamConfigurationResponse build() {
             return new BucketIamConfigurationResponse(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
         }
     }

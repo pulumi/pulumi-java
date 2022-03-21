@@ -194,102 +194,85 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
-
         public Builder alternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigArgs alternativeNameServerConfig) {
             this.alternativeNameServerConfig = Output.ofNullable(alternativeNameServerConfig);
             return this;
         }
-
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableInboundForwarding(@Nullable Output<Boolean> enableInboundForwarding) {
             this.enableInboundForwarding = enableInboundForwarding;
             return this;
         }
-
         public Builder enableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
             this.enableInboundForwarding = Output.ofNullable(enableInboundForwarding);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networks(@Nullable Output<List<PolicyNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
-
         public Builder networks(@Nullable List<PolicyNetworkArgs> networks) {
             this.networks = Output.ofNullable(networks);
             return this;
         }
-
+        public Builder networks(PolicyNetworkArgs... networks) {
+            return networks(List.of(networks));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public PolicyArgs build() {
+        }        public PolicyArgs build() {
             return new PolicyArgs(alternativeNameServerConfig, clientOperationId, description, enableInboundForwarding, enableLogging, id, kind, name, networks, project);
         }
     }

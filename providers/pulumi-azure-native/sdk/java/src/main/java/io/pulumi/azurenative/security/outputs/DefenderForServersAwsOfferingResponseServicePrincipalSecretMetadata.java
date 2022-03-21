@@ -87,17 +87,14 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
             this.expiryDate = expiryDate;
             return this;
         }
-
         public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
             this.parameterNameInStore = parameterNameInStore;
             return this;
         }
-
         public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
-        }
-        public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata build() {
+        }        public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata build() {
             return new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(expiryDate, parameterNameInStore, parameterStoreRegion);
         }
     }

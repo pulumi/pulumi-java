@@ -85,17 +85,14 @@ public final class GcsObjectResponse {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generationNumber(String generationNumber) {
             this.generationNumber = Objects.requireNonNull(generationNumber);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public GcsObjectResponse build() {
+        }        public GcsObjectResponse build() {
             return new GcsObjectResponse(bucket, generationNumber, object);
         }
     }

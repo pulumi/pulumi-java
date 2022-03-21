@@ -53,8 +53,7 @@ public final class AlertsDataTypeOfDataConnectorResponse {
         public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
             this.alerts = alerts;
             return this;
-        }
-        public AlertsDataTypeOfDataConnectorResponse build() {
+        }        public AlertsDataTypeOfDataConnectorResponse build() {
             return new AlertsDataTypeOfDataConnectorResponse(alerts);
         }
     }

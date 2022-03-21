@@ -124,52 +124,54 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = Output.ofNullable(allowedHeaders);
             return this;
         }
-
+        public Builder allowedHeaders(String... allowedHeaders) {
+            return allowedHeaders(List.of(allowedHeaders));
+        }
         public Builder allowedMethods(Output<List<String>> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
-
         public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder allowedOrigins(Output<List<String>> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
         public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
             return this;
         }
-
+        public Builder allowedOrigins(String... allowedOrigins) {
+            return allowedOrigins(List.of(allowedOrigins));
+        }
         public Builder exposeHeaders(@Nullable Output<List<String>> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
-
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = Output.ofNullable(exposeHeaders);
             return this;
         }
-
+        public Builder exposeHeaders(String... exposeHeaders) {
+            return exposeHeaders(List.of(exposeHeaders));
+        }
         public Builder maxAgeSeconds(@Nullable Output<Integer> maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
-
         public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = Output.ofNullable(maxAgeSeconds);
             return this;
-        }
-        public BucketCorsRuleArgs build() {
+        }        public BucketCorsRuleArgs build() {
             return new BucketCorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposeHeaders, maxAgeSeconds);
         }
     }

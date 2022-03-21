@@ -127,52 +127,42 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
-
         public Builder vmStartSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs> vmStartSchedule) {
             this.vmStartSchedule = vmStartSchedule;
             return this;
         }
-
         public Builder vmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs vmStartSchedule) {
             this.vmStartSchedule = Output.ofNullable(vmStartSchedule);
             return this;
         }
-
         public Builder vmStopSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs> vmStopSchedule) {
             this.vmStopSchedule = vmStopSchedule;
             return this;
         }
-
         public Builder vmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs vmStopSchedule) {
             this.vmStopSchedule = Output.ofNullable(vmStopSchedule);
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyArgs build() {
+        }        public ResourcePolicyInstanceSchedulePolicyArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyArgs(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }
     }

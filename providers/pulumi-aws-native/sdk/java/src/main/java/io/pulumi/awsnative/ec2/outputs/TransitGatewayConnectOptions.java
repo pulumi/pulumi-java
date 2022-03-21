@@ -53,8 +53,7 @@ public final class TransitGatewayConnectOptions {
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
-        }
-        public TransitGatewayConnectOptions build() {
+        }        public TransitGatewayConnectOptions build() {
             return new TransitGatewayConnectOptions(protocol);
         }
     }

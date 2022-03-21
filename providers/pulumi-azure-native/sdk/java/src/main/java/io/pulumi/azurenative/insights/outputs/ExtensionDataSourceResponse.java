@@ -125,27 +125,28 @@ public final class ExtensionDataSourceResponse {
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
-
         public Builder extensionSettings(@Nullable Object extensionSettings) {
             this.extensionSettings = extensionSettings;
             return this;
         }
-
         public Builder inputDataSources(@Nullable List<String> inputDataSources) {
             this.inputDataSources = inputDataSources;
             return this;
         }
-
+        public Builder inputDataSources(String... inputDataSources) {
+            return inputDataSources(List.of(inputDataSources));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }
-        public ExtensionDataSourceResponse build() {
+        public Builder streams(String... streams) {
+            return streams(List.of(streams));
+        }        public ExtensionDataSourceResponse build() {
             return new ExtensionDataSourceResponse(extensionName, extensionSettings, inputDataSources, name, streams);
         }
     }

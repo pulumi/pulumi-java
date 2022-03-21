@@ -73,12 +73,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigContainerImage build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigContainerImage build() {
             return new RuntimeVirtualMachineVirtualMachineConfigContainerImage(repository, tag);
         }
     }

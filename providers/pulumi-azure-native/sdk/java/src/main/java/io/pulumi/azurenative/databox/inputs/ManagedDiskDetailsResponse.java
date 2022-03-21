@@ -93,17 +93,14 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
-
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
-
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
             this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
             return this;
-        }
-        public ManagedDiskDetailsResponse build() {
+        }        public ManagedDiskDetailsResponse build() {
             return new ManagedDiskDetailsResponse(dataAccountType, resourceGroupId, stagingStorageAccountId);
         }
     }

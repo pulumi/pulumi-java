@@ -114,42 +114,34 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
-
         public Builder cloudBuildOptions(@Nullable CloudBuildOptionsArgs cloudBuildOptions) {
             this.cloudBuildOptions = Output.ofNullable(cloudBuildOptions);
             return this;
         }
-
         public Builder container(@Nullable Output<ContainerInfoArgs> container) {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable ContainerInfoArgs container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder files(@Nullable Output<Map<String,String>> files) {
             this.files = files;
             return this;
         }
-
         public Builder files(@Nullable Map<String,String> files) {
             this.files = Output.ofNullable(files);
             return this;
         }
-
         public Builder zip(@Nullable Output<ZipInfoArgs> zip) {
             this.zip = zip;
             return this;
         }
-
         public Builder zip(@Nullable ZipInfoArgs zip) {
             this.zip = Output.ofNullable(zip);
             return this;
-        }
-        public DeploymentArgs build() {
+        }        public DeploymentArgs build() {
             return new DeploymentArgs(cloudBuildOptions, container, files, zip);
         }
     }

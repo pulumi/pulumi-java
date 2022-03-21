@@ -220,57 +220,49 @@ public final class GetFhirStoreResult {
             this.defaultSearchHandlingStrict = Objects.requireNonNull(defaultSearchHandlingStrict);
             return this;
         }
-
         public Builder disableReferentialIntegrity(Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Objects.requireNonNull(disableReferentialIntegrity);
             return this;
         }
-
         public Builder disableResourceVersioning(Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Objects.requireNonNull(disableResourceVersioning);
             return this;
         }
-
         public Builder enableUpdateCreate(Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Objects.requireNonNull(enableUpdateCreate);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
-
         public Builder searchConfig(SearchConfigResponse searchConfig) {
             this.searchConfig = Objects.requireNonNull(searchConfig);
             return this;
         }
-
         public Builder streamConfigs(List<StreamConfigResponse> streamConfigs) {
             this.streamConfigs = Objects.requireNonNull(streamConfigs);
             return this;
         }
-
+        public Builder streamConfigs(StreamConfigResponse... streamConfigs) {
+            return streamConfigs(List.of(streamConfigs));
+        }
         public Builder validationConfig(ValidationConfigResponse validationConfig) {
             this.validationConfig = Objects.requireNonNull(validationConfig);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetFhirStoreResult build() {
+        }        public GetFhirStoreResult build() {
             return new GetFhirStoreResult(defaultSearchHandlingStrict, disableReferentialIntegrity, disableResourceVersioning, enableUpdateCreate, labels, name, notificationConfig, searchConfig, streamConfigs, validationConfig, version);
         }
     }

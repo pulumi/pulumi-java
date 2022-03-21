@@ -71,12 +71,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRe
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote(sha256Checksum, uri);
         }
     }

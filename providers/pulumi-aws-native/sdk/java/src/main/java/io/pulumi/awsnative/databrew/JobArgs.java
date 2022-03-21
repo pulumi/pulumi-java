@@ -356,202 +356,177 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
-
         public Builder dataCatalogOutputs(@Nullable List<JobDataCatalogOutputArgs> dataCatalogOutputs) {
             this.dataCatalogOutputs = Output.ofNullable(dataCatalogOutputs);
             return this;
         }
-
+        public Builder dataCatalogOutputs(JobDataCatalogOutputArgs... dataCatalogOutputs) {
+            return dataCatalogOutputs(List.of(dataCatalogOutputs));
+        }
         public Builder databaseOutputs(@Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs) {
             this.databaseOutputs = databaseOutputs;
             return this;
         }
-
         public Builder databaseOutputs(@Nullable List<JobDatabaseOutputArgs> databaseOutputs) {
             this.databaseOutputs = Output.ofNullable(databaseOutputs);
             return this;
         }
-
+        public Builder databaseOutputs(JobDatabaseOutputArgs... databaseOutputs) {
+            return databaseOutputs(List.of(databaseOutputs));
+        }
         public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
-
         public Builder encryptionKeyArn(@Nullable Output<String> encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
-
         public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
             this.encryptionKeyArn = Output.ofNullable(encryptionKeyArn);
             return this;
         }
-
         public Builder encryptionMode(@Nullable Output<JobEncryptionMode> encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
-
         public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
             this.encryptionMode = Output.ofNullable(encryptionMode);
             return this;
         }
-
         public Builder jobSample(@Nullable Output<JobSampleArgs> jobSample) {
             this.jobSample = jobSample;
             return this;
         }
-
         public Builder jobSample(@Nullable JobSampleArgs jobSample) {
             this.jobSample = Output.ofNullable(jobSample);
             return this;
         }
-
         public Builder logSubscription(@Nullable Output<JobLogSubscription> logSubscription) {
             this.logSubscription = logSubscription;
             return this;
         }
-
         public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
             this.logSubscription = Output.ofNullable(logSubscription);
             return this;
         }
-
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
-
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<JobOutputLocationArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable JobOutputLocationArgs outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<JobOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<JobOutputArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(JobOutputArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder profileConfiguration(@Nullable Output<JobProfileConfigurationArgs> profileConfiguration) {
             this.profileConfiguration = profileConfiguration;
             return this;
         }
-
         public Builder profileConfiguration(@Nullable JobProfileConfigurationArgs profileConfiguration) {
             this.profileConfiguration = Output.ofNullable(profileConfiguration);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder recipe(@Nullable Output<JobRecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
-
         public Builder recipe(@Nullable JobRecipeArgs recipe) {
             this.recipe = Output.ofNullable(recipe);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<JobTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<JobTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(JobTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(Output<JobType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(JobType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder validationConfigurations(@Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations) {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
-
         public Builder validationConfigurations(@Nullable List<JobValidationConfigurationArgs> validationConfigurations) {
             this.validationConfigurations = Output.ofNullable(validationConfigurations);
             return this;
         }
-        public JobArgs build() {
+        public Builder validationConfigurations(JobValidationConfigurationArgs... validationConfigurations) {
+            return validationConfigurations(List.of(validationConfigurations));
+        }        public JobArgs build() {
             return new JobArgs(dataCatalogOutputs, databaseOutputs, datasetName, encryptionKeyArn, encryptionMode, jobSample, logSubscription, maxCapacity, maxRetries, name, outputLocation, outputs, profileConfiguration, projectName, recipe, roleArn, tags, timeout, type, validationConfigurations);
         }
     }

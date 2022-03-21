@@ -66,12 +66,10 @@ public final class CertificateAuthorityTag extends io.pulumi.resources.InvokeArg
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CertificateAuthorityTag build() {
+        }        public CertificateAuthorityTag build() {
             return new CertificateAuthorityTag(key, value);
         }
     }

@@ -272,72 +272,67 @@ public final class CognitiveServicesAccountPropertiesResponse {
             this.apiProperties = apiProperties;
             return this;
         }
-
         public Builder capabilities(List<SkuCapabilityResponse> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
-
+        public Builder capabilities(SkuCapabilityResponse... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder customSubDomainName(@Nullable String customSubDomainName) {
             this.customSubDomainName = customSubDomainName;
             return this;
         }
-
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder internalId(String internalId) {
             this.internalId = Objects.requireNonNull(internalId);
             return this;
         }
-
         public Builder isMigrated(Boolean isMigrated) {
             this.isMigrated = Objects.requireNonNull(isMigrated);
             return this;
         }
-
         public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
-
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder skuChangeInfo(CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo) {
             this.skuChangeInfo = Objects.requireNonNull(skuChangeInfo);
             return this;
         }
-
         public Builder userOwnedStorage(@Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
             this.userOwnedStorage = userOwnedStorage;
             return this;
         }
-        public CognitiveServicesAccountPropertiesResponse build() {
+        public Builder userOwnedStorage(UserOwnedStorageResponse... userOwnedStorage) {
+            return userOwnedStorage(List.of(userOwnedStorage));
+        }        public CognitiveServicesAccountPropertiesResponse build() {
             return new CognitiveServicesAccountPropertiesResponse(apiProperties, capabilities, customSubDomainName, dateCreated, encryption, endpoint, internalId, isMigrated, networkAcls, privateEndpointConnections, provisioningState, publicNetworkAccess, skuChangeInfo, userOwnedStorage);
         }
     }

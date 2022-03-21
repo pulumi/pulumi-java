@@ -70,17 +70,14 @@ public final class GetServiceTemplateSpecContainerPort {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public GetServiceTemplateSpecContainerPort build() {
+        }        public GetServiceTemplateSpecContainerPort build() {
             return new GetServiceTemplateSpecContainerPort(containerPort, name, protocol);
         }
     }

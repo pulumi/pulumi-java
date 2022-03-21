@@ -77,12 +77,10 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
-        }
-        public SubjectConfigResponse build() {
+        }        public SubjectConfigResponse build() {
             return new SubjectConfigResponse(subject, subjectAltName);
         }
     }

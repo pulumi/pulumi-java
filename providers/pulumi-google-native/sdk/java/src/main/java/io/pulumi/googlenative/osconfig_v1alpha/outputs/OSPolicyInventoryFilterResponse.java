@@ -69,12 +69,10 @@ public final class OSPolicyInventoryFilterResponse {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
-
         public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
-        }
-        public OSPolicyInventoryFilterResponse build() {
+        }        public OSPolicyInventoryFilterResponse build() {
             return new OSPolicyInventoryFilterResponse(osShortName, osVersion);
         }
     }

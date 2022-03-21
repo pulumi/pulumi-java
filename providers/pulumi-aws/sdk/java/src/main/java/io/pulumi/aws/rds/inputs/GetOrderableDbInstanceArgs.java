@@ -316,87 +316,76 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
             this.availabilityZoneGroup = availabilityZoneGroup;
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder preferredEngineVersions(@Nullable List<String> preferredEngineVersions) {
             this.preferredEngineVersions = preferredEngineVersions;
             return this;
         }
-
+        public Builder preferredEngineVersions(String... preferredEngineVersions) {
+            return preferredEngineVersions(List.of(preferredEngineVersions));
+        }
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
-
+        public Builder preferredInstanceClasses(String... preferredInstanceClasses) {
+            return preferredInstanceClasses(List.of(preferredInstanceClasses));
+        }
         public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder supportsEnhancedMonitoring(@Nullable Boolean supportsEnhancedMonitoring) {
             this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
             return this;
         }
-
         public Builder supportsGlobalDatabases(@Nullable Boolean supportsGlobalDatabases) {
             this.supportsGlobalDatabases = supportsGlobalDatabases;
             return this;
         }
-
         public Builder supportsIamDatabaseAuthentication(@Nullable Boolean supportsIamDatabaseAuthentication) {
             this.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
             return this;
         }
-
         public Builder supportsIops(@Nullable Boolean supportsIops) {
             this.supportsIops = supportsIops;
             return this;
         }
-
         public Builder supportsKerberosAuthentication(@Nullable Boolean supportsKerberosAuthentication) {
             this.supportsKerberosAuthentication = supportsKerberosAuthentication;
             return this;
         }
-
         public Builder supportsPerformanceInsights(@Nullable Boolean supportsPerformanceInsights) {
             this.supportsPerformanceInsights = supportsPerformanceInsights;
             return this;
         }
-
         public Builder supportsStorageAutoscaling(@Nullable Boolean supportsStorageAutoscaling) {
             this.supportsStorageAutoscaling = supportsStorageAutoscaling;
             return this;
         }
-
         public Builder supportsStorageEncryption(@Nullable Boolean supportsStorageEncryption) {
             this.supportsStorageEncryption = supportsStorageEncryption;
             return this;
         }
-
         public Builder vpc(@Nullable Boolean vpc) {
             this.vpc = vpc;
             return this;
-        }
-        public GetOrderableDbInstanceArgs build() {
+        }        public GetOrderableDbInstanceArgs build() {
             return new GetOrderableDbInstanceArgs(availabilityZoneGroup, engine, engineVersion, instanceClass, licenseModel, preferredEngineVersions, preferredInstanceClasses, storageType, supportsEnhancedMonitoring, supportsGlobalDatabases, supportsIamDatabaseAuthentication, supportsIops, supportsKerberosAuthentication, supportsPerformanceInsights, supportsStorageAutoscaling, supportsStorageEncryption, vpc);
         }
     }

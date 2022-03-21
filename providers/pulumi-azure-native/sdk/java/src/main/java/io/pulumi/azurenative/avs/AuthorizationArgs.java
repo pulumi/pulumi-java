@@ -90,32 +90,26 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizationName = authorizationName;
             return this;
         }
-
         public Builder authorizationName(@Nullable String authorizationName) {
             this.authorizationName = Output.ofNullable(authorizationName);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public AuthorizationArgs build() {
+        }        public AuthorizationArgs build() {
             return new AuthorizationArgs(authorizationName, privateCloudName, resourceGroupName);
         }
     }

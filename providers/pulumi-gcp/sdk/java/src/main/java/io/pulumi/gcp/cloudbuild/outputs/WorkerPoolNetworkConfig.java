@@ -51,8 +51,7 @@ public final class WorkerPoolNetworkConfig {
         public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
-        }
-        public WorkerPoolNetworkConfig build() {
+        }        public WorkerPoolNetworkConfig build() {
             return new WorkerPoolNetworkConfig(peeredNetwork);
         }
     }

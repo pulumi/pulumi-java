@@ -72,12 +72,10 @@ public final class DataSourceHttpConfigAuthorizationConfig {
             this.authorizationType = authorizationType;
             return this;
         }
-
         public Builder awsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
             this.awsIamConfig = awsIamConfig;
             return this;
-        }
-        public DataSourceHttpConfigAuthorizationConfig build() {
+        }        public DataSourceHttpConfigAuthorizationConfig build() {
             return new DataSourceHttpConfigAuthorizationConfig(authorizationType, awsIamConfig);
         }
     }

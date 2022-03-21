@@ -114,42 +114,43 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
-
         public Builder commandLineArguments(@Nullable List<String> commandLineArguments) {
             this.commandLineArguments = Output.ofNullable(commandLineArguments);
             return this;
         }
-
+        public Builder commandLineArguments(String... commandLineArguments) {
+            return commandLineArguments(List.of(commandLineArguments));
+        }
         public Builder exitCode(@Nullable Output<ToolExitCodeArgs> exitCode) {
             this.exitCode = exitCode;
             return this;
         }
-
         public Builder exitCode(@Nullable ToolExitCodeArgs exitCode) {
             this.exitCode = Output.ofNullable(exitCode);
             return this;
         }
-
         public Builder toolLogs(@Nullable Output<List<FileReferenceArgs>> toolLogs) {
             this.toolLogs = toolLogs;
             return this;
         }
-
         public Builder toolLogs(@Nullable List<FileReferenceArgs> toolLogs) {
             this.toolLogs = Output.ofNullable(toolLogs);
             return this;
         }
-
+        public Builder toolLogs(FileReferenceArgs... toolLogs) {
+            return toolLogs(List.of(toolLogs));
+        }
         public Builder toolOutputs(@Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs) {
             this.toolOutputs = toolOutputs;
             return this;
         }
-
         public Builder toolOutputs(@Nullable List<ToolOutputReferenceArgs> toolOutputs) {
             this.toolOutputs = Output.ofNullable(toolOutputs);
             return this;
         }
-        public ToolExecutionArgs build() {
+        public Builder toolOutputs(ToolOutputReferenceArgs... toolOutputs) {
+            return toolOutputs(List.of(toolOutputs));
+        }        public ToolExecutionArgs build() {
             return new ToolExecutionArgs(commandLineArguments, exitCode, toolLogs, toolOutputs);
         }
     }

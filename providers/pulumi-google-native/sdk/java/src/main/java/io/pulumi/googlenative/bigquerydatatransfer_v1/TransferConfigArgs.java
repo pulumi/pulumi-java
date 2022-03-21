@@ -283,162 +283,130 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.authorizationCode = authorizationCode;
             return this;
         }
-
         public Builder authorizationCode(@Nullable String authorizationCode) {
             this.authorizationCode = Output.ofNullable(authorizationCode);
             return this;
         }
-
         public Builder dataRefreshWindowDays(@Nullable Output<Integer> dataRefreshWindowDays) {
             this.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
-
         public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
             this.dataRefreshWindowDays = Output.ofNullable(dataRefreshWindowDays);
             return this;
         }
-
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
-
         public Builder dataSourceId(@Nullable String dataSourceId) {
             this.dataSourceId = Output.ofNullable(dataSourceId);
             return this;
         }
-
         public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
             this.destinationDatasetId = destinationDatasetId;
             return this;
         }
-
         public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
             this.destinationDatasetId = Output.ofNullable(destinationDatasetId);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder emailPreferences(@Nullable Output<EmailPreferencesArgs> emailPreferences) {
             this.emailPreferences = emailPreferences;
             return this;
         }
-
         public Builder emailPreferences(@Nullable EmailPreferencesArgs emailPreferences) {
             this.emailPreferences = Output.ofNullable(emailPreferences);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
             this.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
-
         public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
             this.notificationPubsubTopic = Output.ofNullable(notificationPubsubTopic);
             return this;
         }
-
         public Builder params(@Nullable Output<Map<String,String>> params) {
             this.params = params;
             return this;
         }
-
         public Builder params(@Nullable Map<String,String> params) {
             this.params = Output.ofNullable(params);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder scheduleOptions(@Nullable Output<ScheduleOptionsArgs> scheduleOptions) {
             this.scheduleOptions = scheduleOptions;
             return this;
         }
-
         public Builder scheduleOptions(@Nullable ScheduleOptionsArgs scheduleOptions) {
             this.scheduleOptions = Output.ofNullable(scheduleOptions);
             return this;
         }
-
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
-
         public Builder versionInfo(@Nullable Output<String> versionInfo) {
             this.versionInfo = versionInfo;
             return this;
         }
-
         public Builder versionInfo(@Nullable String versionInfo) {
             this.versionInfo = Output.ofNullable(versionInfo);
             return this;
-        }
-        public TransferConfigArgs build() {
+        }        public TransferConfigArgs build() {
             return new TransferConfigArgs(authorizationCode, dataRefreshWindowDays, dataSourceId, destinationDatasetId, disabled, displayName, emailPreferences, location, name, notificationPubsubTopic, params, project, schedule, scheduleOptions, serviceAccountName, versionInfo);
         }
     }

@@ -407,222 +407,184 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
-
         public Builder connectionMode(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
-
         public Builder connectionMode(@Nullable Either<String,VirtualNetworkGatewayConnectionMode> connectionMode) {
             this.connectionMode = Output.ofNullable(connectionMode);
             return this;
         }
-
         public Builder connectionProtocol(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol) {
             this.connectionProtocol = connectionProtocol;
             return this;
         }
-
         public Builder connectionProtocol(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> connectionProtocol) {
             this.connectionProtocol = Output.ofNullable(connectionProtocol);
             return this;
         }
-
         public Builder connectionType(Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
-
         public Builder connectionType(Either<String,VirtualNetworkGatewayConnectionType> connectionType) {
             this.connectionType = Output.of(Objects.requireNonNull(connectionType));
             return this;
         }
-
         public Builder dpdTimeoutSeconds(@Nullable Output<Integer> dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
-
         public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = Output.ofNullable(dpdTimeoutSeconds);
             return this;
         }
-
         public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
-
         public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = Output.ofNullable(enableBgp);
             return this;
         }
-
         public Builder expressRouteGatewayBypass(@Nullable Output<Boolean> expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
-
         public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = Output.ofNullable(expressRouteGatewayBypass);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
-
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
             this.ipsecPolicies = Output.ofNullable(ipsecPolicies);
             return this;
         }
-
+        public Builder ipsecPolicies(IpsecPolicyArgs... ipsecPolicies) {
+            return ipsecPolicies(List.of(ipsecPolicies));
+        }
         public Builder localNetworkGateway2(@Nullable Output<LocalNetworkGatewayArgs> localNetworkGateway2) {
             this.localNetworkGateway2 = localNetworkGateway2;
             return this;
         }
-
         public Builder localNetworkGateway2(@Nullable LocalNetworkGatewayArgs localNetworkGateway2) {
             this.localNetworkGateway2 = Output.ofNullable(localNetworkGateway2);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder peer(@Nullable Output<SubResourceArgs> peer) {
             this.peer = peer;
             return this;
         }
-
         public Builder peer(@Nullable SubResourceArgs peer) {
             this.peer = Output.ofNullable(peer);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = Output.ofNullable(routingWeight);
             return this;
         }
-
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Output.ofNullable(sharedKey);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder trafficSelectorPolicies(@Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
-
         public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyArgs> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = Output.ofNullable(trafficSelectorPolicies);
             return this;
         }
-
+        public Builder trafficSelectorPolicies(TrafficSelectorPolicyArgs... trafficSelectorPolicies) {
+            return trafficSelectorPolicies(List.of(trafficSelectorPolicies));
+        }
         public Builder useLocalAzureIpAddress(@Nullable Output<Boolean> useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
-
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = Output.ofNullable(useLocalAzureIpAddress);
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Output<Boolean> usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = Output.ofNullable(usePolicyBasedTrafficSelectors);
             return this;
         }
-
         public Builder virtualNetworkGateway1(Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1) {
             this.virtualNetworkGateway1 = Objects.requireNonNull(virtualNetworkGateway1);
             return this;
         }
-
         public Builder virtualNetworkGateway1(VirtualNetworkGatewayArgs virtualNetworkGateway1) {
             this.virtualNetworkGateway1 = Output.of(Objects.requireNonNull(virtualNetworkGateway1));
             return this;
         }
-
         public Builder virtualNetworkGateway2(@Nullable Output<VirtualNetworkGatewayArgs> virtualNetworkGateway2) {
             this.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
         }
-
         public Builder virtualNetworkGateway2(@Nullable VirtualNetworkGatewayArgs virtualNetworkGateway2) {
             this.virtualNetworkGateway2 = Output.ofNullable(virtualNetworkGateway2);
             return this;
         }
-
         public Builder virtualNetworkGatewayConnectionName(@Nullable Output<String> virtualNetworkGatewayConnectionName) {
             this.virtualNetworkGatewayConnectionName = virtualNetworkGatewayConnectionName;
             return this;
         }
-
         public Builder virtualNetworkGatewayConnectionName(@Nullable String virtualNetworkGatewayConnectionName) {
             this.virtualNetworkGatewayConnectionName = Output.ofNullable(virtualNetworkGatewayConnectionName);
             return this;
-        }
-        public VirtualNetworkGatewayConnectionArgs build() {
+        }        public VirtualNetworkGatewayConnectionArgs build() {
             return new VirtualNetworkGatewayConnectionArgs(authorizationKey, connectionMode, connectionProtocol, connectionType, dpdTimeoutSeconds, enableBgp, expressRouteGatewayBypass, id, ipsecPolicies, localNetworkGateway2, location, peer, resourceGroupName, routingWeight, sharedKey, tags, trafficSelectorPolicies, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, virtualNetworkGateway1, virtualNetworkGateway2, virtualNetworkGatewayConnectionName);
         }
     }

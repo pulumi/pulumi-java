@@ -172,42 +172,34 @@ public final class GetFileEventTriggerResult {
             this.customContextTag = customContextTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sinkInfo(RoleSinkInfoResponse sinkInfo) {
             this.sinkInfo = Objects.requireNonNull(sinkInfo);
             return this;
         }
-
         public Builder sourceInfo(FileSourceInfoResponse sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFileEventTriggerResult build() {
+        }        public GetFileEventTriggerResult build() {
             return new GetFileEventTriggerResult(customContextTag, id, kind, name, sinkInfo, sourceInfo, systemData, type);
         }
     }

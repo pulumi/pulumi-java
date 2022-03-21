@@ -255,132 +255,109 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<TriggerActionGetArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(TriggerActionGetArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predicate(@Nullable Output<TriggerPredicateGetArgs> predicate) {
             this.predicate = predicate;
             return this;
         }
-
         public Builder predicate(@Nullable TriggerPredicateGetArgs predicate) {
             this.predicate = Output.ofNullable(predicate);
             return this;
         }
-
         public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
-
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = Output.ofNullable(startOnCreation);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder workflowName(@Nullable Output<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
-
         public Builder workflowName(@Nullable String workflowName) {
             this.workflowName = Output.ofNullable(workflowName);
             return this;
-        }
-        public TriggerState build() {
+        }        public TriggerState build() {
             return new TriggerState(actions, arn, description, enabled, name, predicate, schedule, startOnCreation, state, tags, tagsAll, type, workflowName);
         }
     }

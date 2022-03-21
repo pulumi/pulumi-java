@@ -120,27 +120,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
             this.dial = Objects.requireNonNull(dial);
             return this;
         }
-
         public Builder openUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl) {
             this.openUrl = Objects.requireNonNull(openUrl);
             return this;
         }
-
         public Builder postbackData(String postbackData) {
             this.postbackData = Objects.requireNonNull(postbackData);
             return this;
         }
-
         public Builder shareLocation(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation) {
             this.shareLocation = Objects.requireNonNull(shareLocation);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(dial, openUrl, postbackData, shareLocation, text);
         }
     }

@@ -57,12 +57,10 @@ public final class EventTargetSqsTargetArgs extends io.pulumi.resources.Resource
             this.messageGroupId = messageGroupId;
             return this;
         }
-
         public Builder messageGroupId(@Nullable String messageGroupId) {
             this.messageGroupId = Output.ofNullable(messageGroupId);
             return this;
-        }
-        public EventTargetSqsTargetArgs build() {
+        }        public EventTargetSqsTargetArgs build() {
             return new EventTargetSqsTargetArgs(messageGroupId);
         }
     }

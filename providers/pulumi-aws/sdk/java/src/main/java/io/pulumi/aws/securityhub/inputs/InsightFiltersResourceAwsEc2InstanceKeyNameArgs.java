@@ -73,22 +73,18 @@ public final class InsightFiltersResourceAwsEc2InstanceKeyNameArgs extends io.pu
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder comparison(String comparison) {
             this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceKeyNameArgs build() {
+        }        public InsightFiltersResourceAwsEc2InstanceKeyNameArgs build() {
             return new InsightFiltersResourceAwsEc2InstanceKeyNameArgs(comparison, value);
         }
     }

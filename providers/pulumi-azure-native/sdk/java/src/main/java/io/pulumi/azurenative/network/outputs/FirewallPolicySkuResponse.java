@@ -53,8 +53,7 @@ public final class FirewallPolicySkuResponse {
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public FirewallPolicySkuResponse build() {
+        }        public FirewallPolicySkuResponse build() {
             return new FirewallPolicySkuResponse(tier);
         }
     }

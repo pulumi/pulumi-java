@@ -71,12 +71,10 @@ public final class LocalVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public LocalVolumeSource build() {
+        }        public LocalVolumeSource build() {
             return new LocalVolumeSource(fsType, path);
         }
     }

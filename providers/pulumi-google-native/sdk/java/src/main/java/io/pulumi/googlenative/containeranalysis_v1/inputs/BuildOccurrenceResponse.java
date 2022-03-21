@@ -94,17 +94,14 @@ public final class BuildOccurrenceResponse extends io.pulumi.resources.InvokeArg
             this.intotoStatement = Objects.requireNonNull(intotoStatement);
             return this;
         }
-
         public Builder provenance(BuildProvenanceResponse provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
-
         public Builder provenanceBytes(String provenanceBytes) {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
-        }
-        public BuildOccurrenceResponse build() {
+        }        public BuildOccurrenceResponse build() {
             return new BuildOccurrenceResponse(intotoStatement, provenance, provenanceBytes);
         }
     }

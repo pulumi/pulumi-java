@@ -95,17 +95,14 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(List<Map<String,String>> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public StatusResponse build() {
+        }        public StatusResponse build() {
             return new StatusResponse(code, details, message);
         }
     }

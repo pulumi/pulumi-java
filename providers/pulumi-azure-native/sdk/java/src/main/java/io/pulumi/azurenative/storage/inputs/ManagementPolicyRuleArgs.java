@@ -114,42 +114,34 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(ManagementPolicyDefinitionArgs definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<Either<String,RuleType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,RuleType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ManagementPolicyRuleArgs build() {
+        }        public ManagementPolicyRuleArgs build() {
             return new ManagementPolicyRuleArgs(definition, enabled, name, type);
         }
     }

@@ -81,32 +81,32 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
             this.capacityProviders = Objects.requireNonNull(capacityProviders);
             return this;
         }
-
         public Builder capacityProviders(List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProviders) {
             this.capacityProviders = Output.of(Objects.requireNonNull(capacityProviders));
             return this;
         }
-
+        public Builder capacityProviders(Either<ClusterCapacityProviderAssociationsCapacityProvider,String>... capacityProviders) {
+            return capacityProviders(List.of(capacityProviders));
+        }
         public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder cluster(String cluster) {
             this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
-
         public Builder defaultCapacityProviderStrategy(Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = Objects.requireNonNull(defaultCapacityProviderStrategy);
             return this;
         }
-
         public Builder defaultCapacityProviderStrategy(List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = Output.of(Objects.requireNonNull(defaultCapacityProviderStrategy));
             return this;
         }
-        public ClusterCapacityProviderAssociationsArgs build() {
+        public Builder defaultCapacityProviderStrategy(ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs... defaultCapacityProviderStrategy) {
+            return defaultCapacityProviderStrategy(List.of(defaultCapacityProviderStrategy));
+        }        public ClusterCapacityProviderAssociationsArgs build() {
             return new ClusterCapacityProviderAssociationsArgs(capacityProviders, cluster, defaultCapacityProviderStrategy);
         }
     }

@@ -92,32 +92,26 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
             this.bucketName = bucketName;
             return this;
         }
-
         public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
-
         public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
-
         public Builder enable(Boolean enable) {
             this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
-        }
-        public ClusterLoggingGetArgs build() {
+        }        public ClusterLoggingGetArgs build() {
             return new ClusterLoggingGetArgs(bucketName, enable, s3KeyPrefix);
         }
     }

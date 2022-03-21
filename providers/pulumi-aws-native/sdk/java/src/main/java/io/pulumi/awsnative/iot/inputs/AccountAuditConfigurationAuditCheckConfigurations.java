@@ -214,72 +214,58 @@ public final class AccountAuditConfigurationAuditCheckConfigurations extends io.
             this.authenticatedCognitoRoleOverlyPermissiveCheck = authenticatedCognitoRoleOverlyPermissiveCheck;
             return this;
         }
-
         public Builder caCertificateExpiringCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration caCertificateExpiringCheck) {
             this.caCertificateExpiringCheck = caCertificateExpiringCheck;
             return this;
         }
-
         public Builder caCertificateKeyQualityCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration caCertificateKeyQualityCheck) {
             this.caCertificateKeyQualityCheck = caCertificateKeyQualityCheck;
             return this;
         }
-
         public Builder conflictingClientIdsCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration conflictingClientIdsCheck) {
             this.conflictingClientIdsCheck = conflictingClientIdsCheck;
             return this;
         }
-
         public Builder deviceCertificateExpiringCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration deviceCertificateExpiringCheck) {
             this.deviceCertificateExpiringCheck = deviceCertificateExpiringCheck;
             return this;
         }
-
         public Builder deviceCertificateKeyQualityCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration deviceCertificateKeyQualityCheck) {
             this.deviceCertificateKeyQualityCheck = deviceCertificateKeyQualityCheck;
             return this;
         }
-
         public Builder deviceCertificateSharedCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration deviceCertificateSharedCheck) {
             this.deviceCertificateSharedCheck = deviceCertificateSharedCheck;
             return this;
         }
-
         public Builder iotPolicyOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration iotPolicyOverlyPermissiveCheck) {
             this.iotPolicyOverlyPermissiveCheck = iotPolicyOverlyPermissiveCheck;
             return this;
         }
-
         public Builder iotRoleAliasAllowsAccessToUnusedServicesCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration iotRoleAliasAllowsAccessToUnusedServicesCheck) {
             this.iotRoleAliasAllowsAccessToUnusedServicesCheck = iotRoleAliasAllowsAccessToUnusedServicesCheck;
             return this;
         }
-
         public Builder iotRoleAliasOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration iotRoleAliasOverlyPermissiveCheck) {
             this.iotRoleAliasOverlyPermissiveCheck = iotRoleAliasOverlyPermissiveCheck;
             return this;
         }
-
         public Builder loggingDisabledCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration loggingDisabledCheck) {
             this.loggingDisabledCheck = loggingDisabledCheck;
             return this;
         }
-
         public Builder revokedCaCertificateStillActiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration revokedCaCertificateStillActiveCheck) {
             this.revokedCaCertificateStillActiveCheck = revokedCaCertificateStillActiveCheck;
             return this;
         }
-
         public Builder revokedDeviceCertificateStillActiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration revokedDeviceCertificateStillActiveCheck) {
             this.revokedDeviceCertificateStillActiveCheck = revokedDeviceCertificateStillActiveCheck;
             return this;
         }
-
         public Builder unauthenticatedCognitoRoleOverlyPermissiveCheck(@Nullable AccountAuditConfigurationAuditCheckConfiguration unauthenticatedCognitoRoleOverlyPermissiveCheck) {
             this.unauthenticatedCognitoRoleOverlyPermissiveCheck = unauthenticatedCognitoRoleOverlyPermissiveCheck;
             return this;
-        }
-        public AccountAuditConfigurationAuditCheckConfigurations build() {
+        }        public AccountAuditConfigurationAuditCheckConfigurations build() {
             return new AccountAuditConfigurationAuditCheckConfigurations(authenticatedCognitoRoleOverlyPermissiveCheck, caCertificateExpiringCheck, caCertificateKeyQualityCheck, conflictingClientIdsCheck, deviceCertificateExpiringCheck, deviceCertificateKeyQualityCheck, deviceCertificateSharedCheck, iotPolicyOverlyPermissiveCheck, iotRoleAliasAllowsAccessToUnusedServicesCheck, iotRoleAliasOverlyPermissiveCheck, loggingDisabledCheck, revokedCaCertificateStillActiveCheck, revokedDeviceCertificateStillActiveCheck, unauthenticatedCognitoRoleOverlyPermissiveCheck);
         }
     }

@@ -91,22 +91,18 @@ public final class FlowRedshiftDestinationProperties extends io.pulumi.resources
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder intermediateBucketName(String intermediateBucketName) {
             this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowRedshiftDestinationProperties build() {
+        }        public FlowRedshiftDestinationProperties build() {
             return new FlowRedshiftDestinationProperties(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
         }
     }

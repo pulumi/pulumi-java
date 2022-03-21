@@ -56,12 +56,10 @@ public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.res
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
-        }
-        public ScheduledQueryScheduleConfigurationArgs build() {
+        }        public ScheduledQueryScheduleConfigurationArgs build() {
             return new ScheduledQueryScheduleConfigurationArgs(scheduleExpression);
         }
     }

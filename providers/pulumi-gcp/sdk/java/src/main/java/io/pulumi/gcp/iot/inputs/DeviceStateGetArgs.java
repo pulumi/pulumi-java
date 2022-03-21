@@ -66,22 +66,18 @@ public final class DeviceStateGetArgs extends io.pulumi.resources.ResourceArgs {
             this.binaryData = binaryData;
             return this;
         }
-
         public Builder binaryData(@Nullable String binaryData) {
             this.binaryData = Output.ofNullable(binaryData);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public DeviceStateGetArgs build() {
+        }        public DeviceStateGetArgs build() {
             return new DeviceStateGetArgs(binaryData, updateTime);
         }
     }

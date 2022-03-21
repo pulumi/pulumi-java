@@ -105,42 +105,34 @@ public final class TopicRuleErrorActionCloudwatchAlarmGetArgs extends io.pulumi.
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
-
         public Builder alarmName(String alarmName) {
             this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder stateReason(Output<String> stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
-
         public Builder stateReason(String stateReason) {
             this.stateReason = Output.of(Objects.requireNonNull(stateReason));
             return this;
         }
-
         public Builder stateValue(Output<String> stateValue) {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }
-
         public Builder stateValue(String stateValue) {
             this.stateValue = Output.of(Objects.requireNonNull(stateValue));
             return this;
-        }
-        public TopicRuleErrorActionCloudwatchAlarmGetArgs build() {
+        }        public TopicRuleErrorActionCloudwatchAlarmGetArgs build() {
             return new TopicRuleErrorActionCloudwatchAlarmGetArgs(alarmName, roleArn, stateReason, stateValue);
         }
     }

@@ -121,27 +121,22 @@ public final class MethodIntegrationResponse {
             this.contentHandling = contentHandling;
             return this;
         }
-
         public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseTemplates(@Nullable Object responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
-
         public Builder selectionPattern(@Nullable String selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
-        }
-        public MethodIntegrationResponse build() {
+        }        public MethodIntegrationResponse build() {
             return new MethodIntegrationResponse(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
         }
     }

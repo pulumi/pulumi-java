@@ -79,22 +79,18 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
             this.exe = exe;
             return this;
         }
-
         public Builder exe(@Nullable String exe) {
             this.exe = Output.ofNullable(exe);
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public AutoHealCustomActionArgs build() {
+        }        public AutoHealCustomActionArgs build() {
             return new AutoHealCustomActionArgs(exe, parameters);
         }
     }

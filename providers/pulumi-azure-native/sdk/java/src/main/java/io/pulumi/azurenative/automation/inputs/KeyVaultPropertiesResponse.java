@@ -94,17 +94,14 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder keyvaultUri(@Nullable String keyvaultUri) {
             this.keyvaultUri = keyvaultUri;
             return this;
-        }
-        public KeyVaultPropertiesResponse build() {
+        }        public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVersion, keyvaultUri);
         }
     }

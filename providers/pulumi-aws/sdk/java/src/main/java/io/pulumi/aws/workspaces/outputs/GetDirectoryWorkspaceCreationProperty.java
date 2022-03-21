@@ -118,27 +118,22 @@ public final class GetDirectoryWorkspaceCreationProperty {
             this.customSecurityGroupId = Objects.requireNonNull(customSecurityGroupId);
             return this;
         }
-
         public Builder defaultOu(String defaultOu) {
             this.defaultOu = Objects.requireNonNull(defaultOu);
             return this;
         }
-
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.enableInternetAccess = Objects.requireNonNull(enableInternetAccess);
             return this;
         }
-
         public Builder enableMaintenanceMode(Boolean enableMaintenanceMode) {
             this.enableMaintenanceMode = Objects.requireNonNull(enableMaintenanceMode);
             return this;
         }
-
         public Builder userEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = Objects.requireNonNull(userEnabledAsLocalAdministrator);
             return this;
-        }
-        public GetDirectoryWorkspaceCreationProperty build() {
+        }        public GetDirectoryWorkspaceCreationProperty build() {
             return new GetDirectoryWorkspaceCreationProperty(customSecurityGroupId, defaultOu, enableInternetAccess, enableMaintenanceMode, userEnabledAsLocalAdministrator);
         }
     }

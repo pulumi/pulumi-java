@@ -124,52 +124,42 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
             this.ledgerName = ledgerName;
             return this;
         }
-
         public Builder ledgerName(@Nullable String ledgerName) {
             this.ledgerName = Output.ofNullable(ledgerName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<LedgerPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable LedgerPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LedgerArgs build() {
+        }        public LedgerArgs build() {
             return new LedgerArgs(ledgerName, location, properties, resourceGroupName, tags);
         }
     }

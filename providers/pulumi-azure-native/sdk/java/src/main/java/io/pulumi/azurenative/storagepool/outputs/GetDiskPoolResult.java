@@ -250,67 +250,63 @@ public final class GetDiskPoolResult {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
-
+        public Builder additionalCapabilities(String... additionalCapabilities) {
+            return additionalCapabilities(List.of(additionalCapabilities));
+        }
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder disks(@Nullable List<DiskResponse> disks) {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(DiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder systemData(SystemMetadataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDiskPoolResult build() {
+        }        public GetDiskPoolResult build() {
             return new GetDiskPoolResult(additionalCapabilities, availabilityZones, disks, id, location, name, provisioningState, status, subnetId, systemData, tags, tier, type);
         }
     }

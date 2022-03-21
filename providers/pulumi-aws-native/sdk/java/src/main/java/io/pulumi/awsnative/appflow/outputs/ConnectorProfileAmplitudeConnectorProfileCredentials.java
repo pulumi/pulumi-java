@@ -61,12 +61,10 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder secretKey(String secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
-        }
-        public ConnectorProfileAmplitudeConnectorProfileCredentials build() {
+        }        public ConnectorProfileAmplitudeConnectorProfileCredentials build() {
             return new ConnectorProfileAmplitudeConnectorProfileCredentials(apiKey, secretKey);
         }
     }

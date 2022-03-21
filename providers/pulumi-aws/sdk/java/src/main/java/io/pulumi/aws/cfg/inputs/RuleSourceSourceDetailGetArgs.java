@@ -90,32 +90,26 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
             this.eventSource = eventSource;
             return this;
         }
-
         public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = Output.ofNullable(eventSource);
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
             return this;
         }
-
         public Builder messageType(@Nullable Output<String> messageType) {
             this.messageType = messageType;
             return this;
         }
-
         public Builder messageType(@Nullable String messageType) {
             this.messageType = Output.ofNullable(messageType);
             return this;
-        }
-        public RuleSourceSourceDetailGetArgs build() {
+        }        public RuleSourceSourceDetailGetArgs build() {
             return new RuleSourceSourceDetailGetArgs(eventSource, maximumExecutionFrequency, messageType);
         }
     }

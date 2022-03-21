@@ -70,12 +70,13 @@ public final class GetLocationsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder locationCodes(List<String> locationCodes) {
             this.locationCodes = Objects.requireNonNull(locationCodes);
             return this;
         }
-        public GetLocationsResult build() {
+        public Builder locationCodes(String... locationCodes) {
+            return locationCodes(List.of(locationCodes));
+        }        public GetLocationsResult build() {
             return new GetLocationsResult(id, locationCodes);
         }
     }

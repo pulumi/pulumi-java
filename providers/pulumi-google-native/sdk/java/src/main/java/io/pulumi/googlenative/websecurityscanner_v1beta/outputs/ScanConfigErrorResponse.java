@@ -69,12 +69,10 @@ public final class ScanConfigErrorResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
-        }
-        public ScanConfigErrorResponse build() {
+        }        public ScanConfigErrorResponse build() {
             return new ScanConfigErrorResponse(code, fieldName);
         }
     }

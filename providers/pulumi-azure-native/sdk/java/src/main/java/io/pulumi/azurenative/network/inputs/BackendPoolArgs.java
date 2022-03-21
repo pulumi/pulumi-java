@@ -129,52 +129,45 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.backends = backends;
             return this;
         }
-
         public Builder backends(@Nullable List<BackendArgs> backends) {
             this.backends = Output.ofNullable(backends);
             return this;
         }
-
+        public Builder backends(BackendArgs... backends) {
+            return backends(List.of(backends));
+        }
         public Builder healthProbeSettings(@Nullable Output<SubResourceArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder healthProbeSettings(@Nullable SubResourceArgs healthProbeSettings) {
             this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable Output<SubResourceArgs> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable SubResourceArgs loadBalancingSettings) {
             this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public BackendPoolArgs build() {
+        }        public BackendPoolArgs build() {
             return new BackendPoolArgs(backends, healthProbeSettings, id, loadBalancingSettings, name);
         }
     }

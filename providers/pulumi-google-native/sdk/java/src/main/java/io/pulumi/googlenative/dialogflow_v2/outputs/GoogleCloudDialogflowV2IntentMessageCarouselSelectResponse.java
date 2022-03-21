@@ -53,7 +53,9 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse build() {
+        public Builder items(GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse... items) {
+            return items(List.of(items));
+        }        public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(items);
         }
     }

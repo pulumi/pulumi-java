@@ -90,17 +90,14 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
             this.blobName = blobName;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
-        }
-        public GetTestBaseAccountFileUploadUrlArgs build() {
+        }        public GetTestBaseAccountFileUploadUrlArgs build() {
             return new GetTestBaseAccountFileUploadUrlArgs(blobName, resourceGroupName, testBaseAccountName);
         }
     }

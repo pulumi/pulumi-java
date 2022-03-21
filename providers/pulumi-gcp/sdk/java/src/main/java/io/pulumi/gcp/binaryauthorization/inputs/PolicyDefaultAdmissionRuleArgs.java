@@ -100,32 +100,29 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
-
         public Builder enforcementMode(String enforcementMode) {
             this.enforcementMode = Output.of(Objects.requireNonNull(enforcementMode));
             return this;
         }
-
         public Builder evaluationMode(Output<String> evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
-
         public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Output.of(Objects.requireNonNull(evaluationMode));
             return this;
         }
-
         public Builder requireAttestationsBies(@Nullable Output<List<String>> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-
         public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = Output.ofNullable(requireAttestationsBies);
             return this;
         }
-        public PolicyDefaultAdmissionRuleArgs build() {
+        public Builder requireAttestationsBies(String... requireAttestationsBies) {
+            return requireAttestationsBies(List.of(requireAttestationsBies));
+        }        public PolicyDefaultAdmissionRuleArgs build() {
             return new PolicyDefaultAdmissionRuleArgs(enforcementMode, evaluationMode, requireAttestationsBies);
         }
     }

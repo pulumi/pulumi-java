@@ -93,17 +93,17 @@ public final class FingerprintResponse extends io.pulumi.resources.InvokeArgs {
             this.v1Name = Objects.requireNonNull(v1Name);
             return this;
         }
-
         public Builder v2Blob(List<String> v2Blob) {
             this.v2Blob = Objects.requireNonNull(v2Blob);
             return this;
         }
-
+        public Builder v2Blob(String... v2Blob) {
+            return v2Blob(List.of(v2Blob));
+        }
         public Builder v2Name(String v2Name) {
             this.v2Name = Objects.requireNonNull(v2Name);
             return this;
-        }
-        public FingerprintResponse build() {
+        }        public FingerprintResponse build() {
             return new FingerprintResponse(v1Name, v2Blob, v2Name);
         }
     }

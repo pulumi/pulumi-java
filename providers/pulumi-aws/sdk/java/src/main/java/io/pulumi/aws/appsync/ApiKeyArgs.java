@@ -90,32 +90,26 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expires(@Nullable Output<String> expires) {
             this.expires = expires;
             return this;
         }
-
         public Builder expires(@Nullable String expires) {
             this.expires = Output.ofNullable(expires);
             return this;
-        }
-        public ApiKeyArgs build() {
+        }        public ApiKeyArgs build() {
             return new ApiKeyArgs(apiId, description, expires);
         }
     }

@@ -142,32 +142,26 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder iconUrl(@Nullable String iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
-
         public Builder releaseTag(@Nullable String releaseTag) {
             this.releaseTag = releaseTag;
             return this;
         }
-
         public Builder termsOfUseUrl(@Nullable String termsOfUseUrl) {
             this.termsOfUseUrl = termsOfUseUrl;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ApiResourceGeneralInformationResponse build() {
+        }        public ApiResourceGeneralInformationResponse build() {
             return new ApiResourceGeneralInformationResponse(description, displayName, iconUrl, releaseTag, termsOfUseUrl, tier);
         }
     }

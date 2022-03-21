@@ -131,52 +131,45 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
             this.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
-
         public Builder defaultValueSpecification(@Nullable BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
             this.defaultValueSpecification = Output.ofNullable(defaultValueSpecification);
             return this;
         }
-
         public Builder promptSpecification(@Nullable Output<BotPromptSpecificationArgs> promptSpecification) {
             this.promptSpecification = promptSpecification;
             return this;
         }
-
         public Builder promptSpecification(@Nullable BotPromptSpecificationArgs promptSpecification) {
             this.promptSpecification = Output.ofNullable(promptSpecification);
             return this;
         }
-
         public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
-
         public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
             this.sampleUtterances = Output.ofNullable(sampleUtterances);
             return this;
         }
-
+        public Builder sampleUtterances(BotSampleUtteranceArgs... sampleUtterances) {
+            return sampleUtterances(List.of(sampleUtterances));
+        }
         public Builder slotConstraint(Output<BotSlotConstraint> slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
-
         public Builder slotConstraint(BotSlotConstraint slotConstraint) {
             this.slotConstraint = Output.of(Objects.requireNonNull(slotConstraint));
             return this;
         }
-
         public Builder waitAndContinueSpecification(@Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
             this.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }
-
         public Builder waitAndContinueSpecification(@Nullable BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
             this.waitAndContinueSpecification = Output.ofNullable(waitAndContinueSpecification);
             return this;
-        }
-        public BotSlotValueElicitationSettingArgs build() {
+        }        public BotSlotValueElicitationSettingArgs build() {
             return new BotSlotValueElicitationSettingArgs(defaultValueSpecification, promptSpecification, sampleUtterances, slotConstraint, waitAndContinueSpecification);
         }
     }

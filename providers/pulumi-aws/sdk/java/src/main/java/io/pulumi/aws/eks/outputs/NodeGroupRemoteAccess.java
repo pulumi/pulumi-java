@@ -72,12 +72,13 @@ public final class NodeGroupRemoteAccess {
             this.ec2SshKey = ec2SshKey;
             return this;
         }
-
         public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
-        public NodeGroupRemoteAccess build() {
+        public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {
+            return sourceSecurityGroupIds(List.of(sourceSecurityGroupIds));
+        }        public NodeGroupRemoteAccess build() {
             return new NodeGroupRemoteAccess(ec2SshKey, sourceSecurityGroupIds);
         }
     }

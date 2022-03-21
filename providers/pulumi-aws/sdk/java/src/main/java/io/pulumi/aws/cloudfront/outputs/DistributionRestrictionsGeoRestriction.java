@@ -79,12 +79,13 @@ public final class DistributionRestrictionsGeoRestriction {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder restrictionType(String restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
-        }
-        public DistributionRestrictionsGeoRestriction build() {
+        }        public DistributionRestrictionsGeoRestriction build() {
             return new DistributionRestrictionsGeoRestriction(locations, restrictionType);
         }
     }

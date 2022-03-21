@@ -71,12 +71,10 @@ public final class ListSqlMigrationServiceAuthKeysResult {
             this.authKey1 = authKey1;
             return this;
         }
-
         public Builder authKey2(@Nullable String authKey2) {
             this.authKey2 = authKey2;
             return this;
-        }
-        public ListSqlMigrationServiceAuthKeysResult build() {
+        }        public ListSqlMigrationServiceAuthKeysResult build() {
             return new ListSqlMigrationServiceAuthKeysResult(authKey1, authKey2);
         }
     }

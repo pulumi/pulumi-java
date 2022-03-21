@@ -91,32 +91,26 @@ public final class InsightFiltersLastObservedAtGetArgs extends io.pulumi.resourc
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder dateRange(@Nullable InsightFiltersLastObservedAtDateRangeGetArgs dateRange) {
             this.dateRange = Output.ofNullable(dateRange);
             return this;
         }
-
         public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public InsightFiltersLastObservedAtGetArgs build() {
+        }        public InsightFiltersLastObservedAtGetArgs build() {
             return new InsightFiltersLastObservedAtGetArgs(dateRange, end, start);
         }
     }

@@ -152,37 +152,30 @@ public final class GetGroupResult {
             this.builtIn = Objects.requireNonNull(builtIn);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGroupResult build() {
+        }        public GetGroupResult build() {
             return new GetGroupResult(builtIn, description, displayName, externalId, id, name, type);
         }
     }

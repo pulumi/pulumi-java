@@ -76,12 +76,10 @@ public final class InterconnectMacsecPreSharedKeyResponse extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public InterconnectMacsecPreSharedKeyResponse build() {
+        }        public InterconnectMacsecPreSharedKeyResponse build() {
             return new InterconnectMacsecPreSharedKeyResponse(name, startTime);
         }
     }

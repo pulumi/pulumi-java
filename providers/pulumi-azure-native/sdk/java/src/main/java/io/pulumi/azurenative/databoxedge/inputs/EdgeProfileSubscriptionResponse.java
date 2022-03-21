@@ -176,52 +176,45 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
             this.id = id;
             return this;
         }
-
         public Builder locationPlacementId(@Nullable String locationPlacementId) {
             this.locationPlacementId = locationPlacementId;
             return this;
         }
-
         public Builder quotaId(@Nullable String quotaId) {
             this.quotaId = quotaId;
             return this;
         }
-
         public Builder registeredFeatures(@Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures) {
             this.registeredFeatures = registeredFeatures;
             return this;
         }
-
+        public Builder registeredFeatures(SubscriptionRegisteredFeaturesResponse... registeredFeatures) {
+            return registeredFeatures(List.of(registeredFeatures));
+        }
         public Builder registrationDate(@Nullable String registrationDate) {
             this.registrationDate = registrationDate;
             return this;
         }
-
         public Builder registrationId(@Nullable String registrationId) {
             this.registrationId = registrationId;
             return this;
         }
-
         public Builder serializedDetails(@Nullable String serializedDetails) {
             this.serializedDetails = serializedDetails;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public EdgeProfileSubscriptionResponse build() {
+        }        public EdgeProfileSubscriptionResponse build() {
             return new EdgeProfileSubscriptionResponse(id, locationPlacementId, quotaId, registeredFeatures, registrationDate, registrationId, serializedDetails, state, subscriptionId, tenantId);
         }
     }

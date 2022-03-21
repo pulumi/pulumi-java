@@ -74,17 +74,14 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
             this.accessPolicies = accessPolicies;
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
-        }
-        public DomainPolicyState build() {
+        }        public DomainPolicyState build() {
             return new DomainPolicyState(accessPolicies, domainName);
         }
     }

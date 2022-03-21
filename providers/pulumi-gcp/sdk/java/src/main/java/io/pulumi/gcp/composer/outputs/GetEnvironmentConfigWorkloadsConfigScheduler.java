@@ -70,22 +70,18 @@ public final class GetEnvironmentConfigWorkloadsConfigScheduler {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
-
         public Builder storageGb(Double storageGb) {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
-        }
-        public GetEnvironmentConfigWorkloadsConfigScheduler build() {
+        }        public GetEnvironmentConfigWorkloadsConfigScheduler build() {
             return new GetEnvironmentConfigWorkloadsConfigScheduler(count, cpu, memoryGb, storageGb);
         }
     }

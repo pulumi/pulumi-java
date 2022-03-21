@@ -101,27 +101,22 @@ public final class GetCertificateResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
-
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(arn, certificate, certificateAuthorityArn, certificateChain, id);
         }
     }

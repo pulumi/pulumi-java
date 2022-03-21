@@ -224,57 +224,52 @@ public final class RoleResponse {
             this.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
-
         public Builder dataDisksGroups(@Nullable List<DataDisksGroupsResponse> dataDisksGroups) {
             this.dataDisksGroups = dataDisksGroups;
             return this;
         }
-
+        public Builder dataDisksGroups(DataDisksGroupsResponse... dataDisksGroups) {
+            return dataDisksGroups(List.of(dataDisksGroups));
+        }
         public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
             this.encryptDataDisks = encryptDataDisks;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder scriptActions(@Nullable List<ScriptActionResponse> scriptActions) {
             this.scriptActions = scriptActions;
             return this;
         }
-
+        public Builder scriptActions(ScriptActionResponse... scriptActions) {
+            return scriptActions(List.of(scriptActions));
+        }
         public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
             this.targetInstanceCount = targetInstanceCount;
             return this;
         }
-
         public Builder vMGroupName(@Nullable String vMGroupName) {
             this.vMGroupName = vMGroupName;
             return this;
         }
-
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
-        }
-        public RoleResponse build() {
+        }        public RoleResponse build() {
             return new RoleResponse(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);
         }
     }

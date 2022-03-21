@@ -53,8 +53,7 @@ public final class GetAmiResult {
         public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
-        }
-        public GetAmiResult build() {
+        }        public GetAmiResult build() {
             return new GetAmiResult(kernelId);
         }
     }

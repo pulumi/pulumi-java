@@ -79,22 +79,18 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
             this.deploymentSettings = deploymentSettings;
             return this;
         }
-
         public Builder deploymentSettings(@Nullable DeploymentSettingsArgs deploymentSettings) {
             this.deploymentSettings = Output.ofNullable(deploymentSettings);
             return this;
         }
-
         public Builder source(@Nullable Output<UserSourceInfoArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable UserSourceInfoArgs source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public DeploymentResourcePropertiesArgs build() {
+        }        public DeploymentResourcePropertiesArgs build() {
             return new DeploymentResourcePropertiesArgs(deploymentSettings, source);
         }
     }

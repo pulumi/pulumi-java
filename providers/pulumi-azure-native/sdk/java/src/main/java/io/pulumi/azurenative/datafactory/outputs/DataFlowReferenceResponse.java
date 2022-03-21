@@ -105,22 +105,18 @@ public final class DataFlowReferenceResponse {
             this.datasetParameters = datasetParameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DataFlowReferenceResponse build() {
+        }        public DataFlowReferenceResponse build() {
             return new DataFlowReferenceResponse(datasetParameters, parameters, referenceName, type);
         }
     }

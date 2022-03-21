@@ -80,22 +80,21 @@ public final class FSGroupStrategyOptionsArgs extends io.pulumi.resources.Resour
             this.ranges = ranges;
             return this;
         }
-
         public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
             this.ranges = Output.ofNullable(ranges);
             return this;
         }
-
+        public Builder ranges(IDRangeArgs... ranges) {
+            return ranges(List.of(ranges));
+        }
         public Builder rule(@Nullable Output<String> rule) {
             this.rule = rule;
             return this;
         }
-
         public Builder rule(@Nullable String rule) {
             this.rule = Output.ofNullable(rule);
             return this;
-        }
-        public FSGroupStrategyOptionsArgs build() {
+        }        public FSGroupStrategyOptionsArgs build() {
             return new FSGroupStrategyOptionsArgs(ranges, rule);
         }
     }

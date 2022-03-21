@@ -207,102 +207,85 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
             this.automatic = automatic;
             return this;
         }
-
         public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = Output.ofNullable(automatic);
             return this;
         }
-
         public Builder configRuleName(Output<String> configRuleName) {
             this.configRuleName = Objects.requireNonNull(configRuleName);
             return this;
         }
-
         public Builder configRuleName(String configRuleName) {
             this.configRuleName = Output.of(Objects.requireNonNull(configRuleName));
             return this;
         }
-
         public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls) {
             this.executionControls = executionControls;
             return this;
         }
-
         public Builder executionControls(@Nullable RemediationConfigurationExecutionControlsArgs executionControls) {
             this.executionControls = Output.ofNullable(executionControls);
             return this;
         }
-
         public Builder maximumAutomaticAttempts(@Nullable Output<Integer> maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = maximumAutomaticAttempts;
             return this;
         }
-
         public Builder maximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = Output.ofNullable(maximumAutomaticAttempts);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<RemediationConfigurationParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(RemediationConfigurationParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder retryAttemptSeconds(@Nullable Output<Integer> retryAttemptSeconds) {
             this.retryAttemptSeconds = retryAttemptSeconds;
             return this;
         }
-
         public Builder retryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
             this.retryAttemptSeconds = Output.ofNullable(retryAttemptSeconds);
             return this;
         }
-
         public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
-
         public Builder targetId(String targetId) {
             this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
-
         public Builder targetType(Output<String> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public Builder targetType(String targetType) {
             this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
         }
-
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
             this.targetVersion = targetVersion;
             return this;
         }
-
         public Builder targetVersion(@Nullable String targetVersion) {
             this.targetVersion = Output.ofNullable(targetVersion);
             return this;
-        }
-        public RemediationConfigurationArgs build() {
+        }        public RemediationConfigurationArgs build() {
             return new RemediationConfigurationArgs(automatic, configRuleName, executionControls, maximumAutomaticAttempts, parameters, resourceType, retryAttemptSeconds, targetId, targetType, targetVersion);
         }
     }

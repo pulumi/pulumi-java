@@ -142,62 +142,53 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder memberDefinitions(Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
             this.memberDefinitions = Objects.requireNonNull(memberDefinitions);
             return this;
         }
-
         public Builder memberDefinitions(List<WorkteamMemberDefinitionArgs> memberDefinitions) {
             this.memberDefinitions = Output.of(Objects.requireNonNull(memberDefinitions));
             return this;
         }
-
+        public Builder memberDefinitions(WorkteamMemberDefinitionArgs... memberDefinitions) {
+            return memberDefinitions(List.of(memberDefinitions));
+        }
         public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
             this.notificationConfiguration = notificationConfiguration;
             return this;
         }
-
         public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationArgs notificationConfiguration) {
             this.notificationConfiguration = Output.ofNullable(notificationConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workforceName(Output<String> workforceName) {
             this.workforceName = Objects.requireNonNull(workforceName);
             return this;
         }
-
         public Builder workforceName(String workforceName) {
             this.workforceName = Output.of(Objects.requireNonNull(workforceName));
             return this;
         }
-
         public Builder workteamName(Output<String> workteamName) {
             this.workteamName = Objects.requireNonNull(workteamName);
             return this;
         }
-
         public Builder workteamName(String workteamName) {
             this.workteamName = Output.of(Objects.requireNonNull(workteamName));
             return this;
-        }
-        public WorkteamArgs build() {
+        }        public WorkteamArgs build() {
             return new WorkteamArgs(description, memberDefinitions, notificationConfiguration, tags, workforceName, workteamName);
         }
     }

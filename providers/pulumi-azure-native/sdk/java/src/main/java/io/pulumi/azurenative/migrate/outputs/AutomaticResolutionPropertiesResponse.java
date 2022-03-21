@@ -55,8 +55,7 @@ public final class AutomaticResolutionPropertiesResponse {
         public Builder moveResourceId(@Nullable String moveResourceId) {
             this.moveResourceId = moveResourceId;
             return this;
-        }
-        public AutomaticResolutionPropertiesResponse build() {
+        }        public AutomaticResolutionPropertiesResponse build() {
             return new AutomaticResolutionPropertiesResponse(moveResourceId);
         }
     }

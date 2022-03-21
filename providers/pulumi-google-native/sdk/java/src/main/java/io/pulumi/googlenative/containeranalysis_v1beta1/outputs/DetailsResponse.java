@@ -51,8 +51,7 @@ public final class DetailsResponse {
         public Builder attestation(AttestationResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
-        }
-        public DetailsResponse build() {
+        }        public DetailsResponse build() {
             return new DetailsResponse(attestation);
         }
     }

@@ -87,17 +87,17 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlDbSyncDatabaseInputResponse... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
-        }
-        public ValidateSyncMigrationInputSqlServerTaskInputResponse build() {
+        }        public ValidateSyncMigrationInputSqlServerTaskInputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
         }
     }

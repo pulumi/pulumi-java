@@ -112,22 +112,21 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
             this.description = description;
             return this;
         }
-
         public Builder isCompatible(@Nullable Boolean isCompatible) {
             this.isCompatible = isCompatible;
             return this;
         }
-
         public Builder issues(@Nullable List<String> issues) {
             this.issues = issues;
             return this;
         }
-
+        public Builder issues(String... issues) {
+            return issues(List.of(issues));
+        }
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public CompatibilityResponse build() {
+        }        public CompatibilityResponse build() {
             return new CompatibilityResponse(description, isCompatible, issues, message);
         }
     }

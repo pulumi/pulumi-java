@@ -54,8 +54,7 @@ public final class GetCertificateAuthorityActivationArgs extends io.pulumi.resou
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
-        }
-        public GetCertificateAuthorityActivationArgs build() {
+        }        public GetCertificateAuthorityActivationArgs build() {
             return new GetCertificateAuthorityActivationArgs(certificateAuthorityArn);
         }
     }

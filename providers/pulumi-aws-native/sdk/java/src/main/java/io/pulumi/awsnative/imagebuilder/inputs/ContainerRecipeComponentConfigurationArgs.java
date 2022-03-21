@@ -61,12 +61,10 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
             this.componentArn = componentArn;
             return this;
         }
-
         public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = Output.ofNullable(componentArn);
             return this;
-        }
-        public ContainerRecipeComponentConfigurationArgs build() {
+        }        public ContainerRecipeComponentConfigurationArgs build() {
             return new ContainerRecipeComponentConfigurationArgs(componentArn);
         }
     }

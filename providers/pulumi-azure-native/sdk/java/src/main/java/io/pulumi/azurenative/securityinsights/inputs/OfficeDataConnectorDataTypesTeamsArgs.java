@@ -63,12 +63,10 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends io.pulumi.resou
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public OfficeDataConnectorDataTypesTeamsArgs build() {
+        }        public OfficeDataConnectorDataTypesTeamsArgs build() {
             return new OfficeDataConnectorDataTypesTeamsArgs(state);
         }
     }

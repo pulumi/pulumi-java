@@ -141,52 +141,45 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
             this.createDisposition = createDisposition;
             return this;
         }
-
         public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Output.ofNullable(createDisposition);
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-
         public Builder destinationEncryptionConfiguration(@Nullable JobCopyDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationTable(@Nullable Output<JobCopyDestinationTableGetArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
-
         public Builder destinationTable(@Nullable JobCopyDestinationTableGetArgs destinationTable) {
             this.destinationTable = Output.ofNullable(destinationTable);
             return this;
         }
-
         public Builder sourceTables(Output<List<JobCopySourceTableGetArgs>> sourceTables) {
             this.sourceTables = Objects.requireNonNull(sourceTables);
             return this;
         }
-
         public Builder sourceTables(List<JobCopySourceTableGetArgs> sourceTables) {
             this.sourceTables = Output.of(Objects.requireNonNull(sourceTables));
             return this;
         }
-
+        public Builder sourceTables(JobCopySourceTableGetArgs... sourceTables) {
+            return sourceTables(List.of(sourceTables));
+        }
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public JobCopyGetArgs build() {
+        }        public JobCopyGetArgs build() {
             return new JobCopyGetArgs(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
         }
     }

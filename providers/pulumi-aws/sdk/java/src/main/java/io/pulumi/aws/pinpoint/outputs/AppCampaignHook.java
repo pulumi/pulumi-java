@@ -87,17 +87,14 @@ public final class AppCampaignHook {
             this.lambdaFunctionName = lambdaFunctionName;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
-        }
-        public AppCampaignHook build() {
+        }        public AppCampaignHook build() {
             return new AppCampaignHook(lambdaFunctionName, mode, webUrl);
         }
     }

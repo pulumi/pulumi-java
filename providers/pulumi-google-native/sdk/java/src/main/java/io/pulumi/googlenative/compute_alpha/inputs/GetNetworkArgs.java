@@ -66,12 +66,10 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetNetworkArgs build() {
+        }        public GetNetworkArgs build() {
             return new GetNetworkArgs(network, project);
         }
     }

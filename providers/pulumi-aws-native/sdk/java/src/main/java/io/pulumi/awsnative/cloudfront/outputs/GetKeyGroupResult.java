@@ -64,17 +64,14 @@ public final class GetKeyGroupResult {
             this.id = id;
             return this;
         }
-
         public Builder keyGroupConfig(@Nullable KeyGroupConfig keyGroupConfig) {
             this.keyGroupConfig = keyGroupConfig;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
-        }
-        public GetKeyGroupResult build() {
+        }        public GetKeyGroupResult build() {
             return new GetKeyGroupResult(id, keyGroupConfig, lastModifiedTime);
         }
     }

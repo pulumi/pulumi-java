@@ -375,107 +375,92 @@ public final class GetVpnTunnelResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder detailedStatus(String detailedStatus) {
             this.detailedStatus = Objects.requireNonNull(detailedStatus);
             return this;
         }
-
         public Builder ikeVersion(Integer ikeVersion) {
             this.ikeVersion = Objects.requireNonNull(ikeVersion);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder localTrafficSelector(List<String> localTrafficSelector) {
             this.localTrafficSelector = Objects.requireNonNull(localTrafficSelector);
             return this;
         }
-
+        public Builder localTrafficSelector(String... localTrafficSelector) {
+            return localTrafficSelector(List.of(localTrafficSelector));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder peerExternalGateway(String peerExternalGateway) {
             this.peerExternalGateway = Objects.requireNonNull(peerExternalGateway);
             return this;
         }
-
         public Builder peerExternalGatewayInterface(Integer peerExternalGatewayInterface) {
             this.peerExternalGatewayInterface = Objects.requireNonNull(peerExternalGatewayInterface);
             return this;
         }
-
         public Builder peerGcpGateway(String peerGcpGateway) {
             this.peerGcpGateway = Objects.requireNonNull(peerGcpGateway);
             return this;
         }
-
         public Builder peerIp(String peerIp) {
             this.peerIp = Objects.requireNonNull(peerIp);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder remoteTrafficSelector(List<String> remoteTrafficSelector) {
             this.remoteTrafficSelector = Objects.requireNonNull(remoteTrafficSelector);
             return this;
         }
-
+        public Builder remoteTrafficSelector(String... remoteTrafficSelector) {
+            return remoteTrafficSelector(List.of(remoteTrafficSelector));
+        }
         public Builder router(String router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sharedSecret(String sharedSecret) {
             this.sharedSecret = Objects.requireNonNull(sharedSecret);
             return this;
         }
-
         public Builder sharedSecretHash(String sharedSecretHash) {
             this.sharedSecretHash = Objects.requireNonNull(sharedSecretHash);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetVpnGateway(String targetVpnGateway) {
             this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway);
             return this;
         }
-
         public Builder vpnGateway(String vpnGateway) {
             this.vpnGateway = Objects.requireNonNull(vpnGateway);
             return this;
         }
-
         public Builder vpnGatewayInterface(Integer vpnGatewayInterface) {
             this.vpnGatewayInterface = Objects.requireNonNull(vpnGatewayInterface);
             return this;
-        }
-        public GetVpnTunnelResult build() {
+        }        public GetVpnTunnelResult build() {
             return new GetVpnTunnelResult(creationTimestamp, description, detailedStatus, ikeVersion, kind, localTrafficSelector, name, peerExternalGateway, peerExternalGatewayInterface, peerGcpGateway, peerIp, region, remoteTrafficSelector, router, selfLink, sharedSecret, sharedSecretHash, status, targetVpnGateway, vpnGateway, vpnGatewayInterface);
         }
     }

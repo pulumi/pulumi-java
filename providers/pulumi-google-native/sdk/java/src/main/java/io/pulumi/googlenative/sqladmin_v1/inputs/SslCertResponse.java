@@ -188,47 +188,38 @@ public final class SslCertResponse extends io.pulumi.resources.InvokeArgs {
             this.cert = Objects.requireNonNull(cert);
             return this;
         }
-
         public Builder certSerialNumber(String certSerialNumber) {
             this.certSerialNumber = Objects.requireNonNull(certSerialNumber);
             return this;
         }
-
         public Builder commonName(String commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
-        }
-        public SslCertResponse build() {
+        }        public SslCertResponse build() {
             return new SslCertResponse(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
         }
     }

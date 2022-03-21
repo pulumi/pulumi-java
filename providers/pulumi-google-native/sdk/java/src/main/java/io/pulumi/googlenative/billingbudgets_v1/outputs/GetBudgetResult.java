@@ -154,37 +154,33 @@ public final class GetBudgetResult {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder budgetFilter(GoogleCloudBillingBudgetsV1FilterResponse budgetFilter) {
             this.budgetFilter = Objects.requireNonNull(budgetFilter);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notificationsRule(GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule) {
             this.notificationsRule = Objects.requireNonNull(notificationsRule);
             return this;
         }
-
         public Builder thresholdRules(List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
             this.thresholdRules = Objects.requireNonNull(thresholdRules);
             return this;
         }
-        public GetBudgetResult build() {
+        public Builder thresholdRules(GoogleCloudBillingBudgetsV1ThresholdRuleResponse... thresholdRules) {
+            return thresholdRules(List.of(thresholdRules));
+        }        public GetBudgetResult build() {
             return new GetBudgetResult(amount, budgetFilter, displayName, etag, name, notificationsRule, thresholdRules);
         }
     }

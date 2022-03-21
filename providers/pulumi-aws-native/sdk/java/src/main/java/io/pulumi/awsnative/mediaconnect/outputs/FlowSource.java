@@ -282,77 +282,62 @@ public final class FlowSource {
             this.decryption = decryption;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
-
         public Builder ingestIp(@Nullable String ingestIp) {
             this.ingestIp = ingestIp;
             return this;
         }
-
         public Builder ingestPort(@Nullable Integer ingestPort) {
             this.ingestPort = ingestPort;
             return this;
         }
-
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
-
         public Builder maxLatency(@Nullable Integer maxLatency) {
             this.maxLatency = maxLatency;
             return this;
         }
-
         public Builder minLatency(@Nullable Integer minLatency) {
             this.minLatency = minLatency;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder protocol(@Nullable FlowSourceProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
-
         public Builder sourceIngestPort(@Nullable String sourceIngestPort) {
             this.sourceIngestPort = sourceIngestPort;
             return this;
         }
-
         public Builder streamId(@Nullable String streamId) {
             this.streamId = streamId;
             return this;
         }
-
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
-
         public Builder whitelistCidr(@Nullable String whitelistCidr) {
             this.whitelistCidr = whitelistCidr;
             return this;
-        }
-        public FlowSource build() {
+        }        public FlowSource build() {
             return new FlowSource(decryption, description, entitlementArn, ingestIp, ingestPort, maxBitrate, maxLatency, minLatency, name, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
         }
     }

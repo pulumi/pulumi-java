@@ -74,22 +74,18 @@ public final class BotAssociationLexBotGetArgs extends io.pulumi.resources.Resou
             this.lexRegion = lexRegion;
             return this;
         }
-
         public Builder lexRegion(@Nullable String lexRegion) {
             this.lexRegion = Output.ofNullable(lexRegion);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public BotAssociationLexBotGetArgs build() {
+        }        public BotAssociationLexBotGetArgs build() {
             return new BotAssociationLexBotGetArgs(lexRegion, name);
         }
     }

@@ -74,22 +74,18 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
             this.planTypeName = planTypeName;
             return this;
         }
-
         public Builder planTypeName(@Nullable String planTypeName) {
             this.planTypeName = Output.ofNullable(planTypeName);
             return this;
         }
-
         public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
-        }
-        public SupportPlanTypeArgs build() {
+        }        public SupportPlanTypeArgs build() {
             return new SupportPlanTypeArgs(planTypeName, providerName);
         }
     }

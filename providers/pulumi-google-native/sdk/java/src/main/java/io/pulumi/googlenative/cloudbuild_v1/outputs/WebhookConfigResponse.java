@@ -69,12 +69,10 @@ public final class WebhookConfigResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public WebhookConfigResponse build() {
+        }        public WebhookConfigResponse build() {
             return new WebhookConfigResponse(secret, state);
         }
     }

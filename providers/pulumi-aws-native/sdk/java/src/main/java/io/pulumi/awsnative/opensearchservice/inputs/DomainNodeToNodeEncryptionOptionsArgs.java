@@ -53,12 +53,10 @@ public final class DomainNodeToNodeEncryptionOptionsArgs extends io.pulumi.resou
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public DomainNodeToNodeEncryptionOptionsArgs build() {
+        }        public DomainNodeToNodeEncryptionOptionsArgs build() {
             return new DomainNodeToNodeEncryptionOptionsArgs(enabled);
         }
     }

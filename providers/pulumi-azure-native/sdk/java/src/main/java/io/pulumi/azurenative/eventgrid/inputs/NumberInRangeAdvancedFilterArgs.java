@@ -97,32 +97,26 @@ public final class NumberInRangeAdvancedFilterArgs extends io.pulumi.resources.R
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operatorType(Output<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Output.of(Objects.requireNonNull(operatorType));
             return this;
         }
-
         public Builder values(@Nullable Output<List<List<Double>>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<List<Double>> values) {
             this.values = Output.ofNullable(values);
             return this;
-        }
-        public NumberInRangeAdvancedFilterArgs build() {
+        }        public NumberInRangeAdvancedFilterArgs build() {
             return new NumberInRangeAdvancedFilterArgs(key, operatorType, values);
         }
     }

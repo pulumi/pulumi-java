@@ -95,32 +95,26 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder primaryZone(@Nullable Output<String> primaryZone) {
             this.primaryZone = primaryZone;
             return this;
         }
-
         public Builder primaryZone(@Nullable String primaryZone) {
             this.primaryZone = Output.ofNullable(primaryZone);
             return this;
         }
-
         public Builder recoveryZone(@Nullable Output<String> recoveryZone) {
             this.recoveryZone = recoveryZone;
             return this;
         }
-
         public Builder recoveryZone(@Nullable String recoveryZone) {
             this.recoveryZone = Output.ofNullable(recoveryZone);
             return this;
-        }
-        public RecoveryPlanA2AInputArgs build() {
+        }        public RecoveryPlanA2AInputArgs build() {
             return new RecoveryPlanA2AInputArgs(instanceType, primaryZone, recoveryZone);
         }
     }

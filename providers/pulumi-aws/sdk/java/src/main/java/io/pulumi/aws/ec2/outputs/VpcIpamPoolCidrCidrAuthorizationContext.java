@@ -71,12 +71,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContext {
             this.message = message;
             return this;
         }
-
         public Builder signature(@Nullable String signature) {
             this.signature = signature;
             return this;
-        }
-        public VpcIpamPoolCidrCidrAuthorizationContext build() {
+        }        public VpcIpamPoolCidrCidrAuthorizationContext build() {
             return new VpcIpamPoolCidrCidrAuthorizationContext(message, signature);
         }
     }

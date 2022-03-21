@@ -92,32 +92,26 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
             this.grpc = grpc;
             return this;
         }
-
         public Builder grpc(@Nullable VirtualGatewaySpecListenerConnectionPoolGrpcArgs grpc) {
             this.grpc = Output.ofNullable(grpc);
             return this;
         }
-
         public Builder http(@Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> http) {
             this.http = http;
             return this;
         }
-
         public Builder http(@Nullable VirtualGatewaySpecListenerConnectionPoolHttpArgs http) {
             this.http = Output.ofNullable(http);
             return this;
         }
-
         public Builder http2(@Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> http2) {
             this.http2 = http2;
             return this;
         }
-
         public Builder http2(@Nullable VirtualGatewaySpecListenerConnectionPoolHttp2Args http2) {
             this.http2 = Output.ofNullable(http2);
             return this;
-        }
-        public VirtualGatewaySpecListenerConnectionPoolArgs build() {
+        }        public VirtualGatewaySpecListenerConnectionPoolArgs build() {
             return new VirtualGatewaySpecListenerConnectionPoolArgs(grpc, http, http2);
         }
     }

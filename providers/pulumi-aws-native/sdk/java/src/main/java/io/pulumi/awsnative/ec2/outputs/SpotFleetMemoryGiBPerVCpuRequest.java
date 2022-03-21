@@ -55,12 +55,10 @@ public final class SpotFleetMemoryGiBPerVCpuRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
-        }
-        public SpotFleetMemoryGiBPerVCpuRequest build() {
+        }        public SpotFleetMemoryGiBPerVCpuRequest build() {
             return new SpotFleetMemoryGiBPerVCpuRequest(max, min);
         }
     }

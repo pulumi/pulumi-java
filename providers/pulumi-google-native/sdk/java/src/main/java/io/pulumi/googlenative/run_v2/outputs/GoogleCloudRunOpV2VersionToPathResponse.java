@@ -86,17 +86,14 @@ public final class GoogleCloudRunOpV2VersionToPathResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GoogleCloudRunOpV2VersionToPathResponse build() {
+        }        public GoogleCloudRunOpV2VersionToPathResponse build() {
             return new GoogleCloudRunOpV2VersionToPathResponse(mode, path, version);
         }
     }

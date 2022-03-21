@@ -51,8 +51,7 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
-        }
-        public ConnectorProfileServiceNowConnectorProfileProperties build() {
+        }        public ConnectorProfileServiceNowConnectorProfileProperties build() {
             return new ConnectorProfileServiceNowConnectorProfileProperties(instanceUrl);
         }
     }

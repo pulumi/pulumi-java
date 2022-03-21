@@ -216,57 +216,46 @@ public final class GetEncryptionProtectorResult {
             this.autoRotationEnabled = autoRotationEnabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serverKeyName(@Nullable String serverKeyName) {
             this.serverKeyName = serverKeyName;
             return this;
         }
-
         public Builder serverKeyType(String serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
-
         public Builder subregion(String subregion) {
             this.subregion = Objects.requireNonNull(subregion);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GetEncryptionProtectorResult build() {
+        }        public GetEncryptionProtectorResult build() {
             return new GetEncryptionProtectorResult(autoRotationEnabled, id, kind, location, name, serverKeyName, serverKeyType, subregion, thumbprint, type, uri);
         }
     }

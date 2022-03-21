@@ -74,22 +74,18 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleDefinition(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs> ruleDefinition) {
             this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
             return this;
         }
-
         public Builder ruleDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs ruleDefinition) {
             this.ruleDefinition = Output.of(Objects.requireNonNull(ruleDefinition));
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs build() {
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs(priority, ruleDefinition);
         }
     }

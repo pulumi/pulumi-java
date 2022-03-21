@@ -69,12 +69,10 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GooglePrivacyDlpV2StoredTypeResponse build() {
+        }        public GooglePrivacyDlpV2StoredTypeResponse build() {
             return new GooglePrivacyDlpV2StoredTypeResponse(createTime, name);
         }
     }

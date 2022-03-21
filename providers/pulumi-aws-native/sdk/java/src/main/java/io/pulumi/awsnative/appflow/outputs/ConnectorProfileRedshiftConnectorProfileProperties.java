@@ -103,22 +103,18 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder databaseUrl(String databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public ConnectorProfileRedshiftConnectorProfileProperties build() {
+        }        public ConnectorProfileRedshiftConnectorProfileProperties build() {
             return new ConnectorProfileRedshiftConnectorProfileProperties(bucketName, bucketPrefix, databaseUrl, roleArn);
         }
     }

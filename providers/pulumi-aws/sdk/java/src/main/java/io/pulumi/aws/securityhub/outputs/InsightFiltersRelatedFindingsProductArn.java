@@ -69,12 +69,10 @@ public final class InsightFiltersRelatedFindingsProductArn {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersRelatedFindingsProductArn build() {
+        }        public InsightFiltersRelatedFindingsProductArn build() {
             return new InsightFiltersRelatedFindingsProductArn(comparison, value);
         }
     }

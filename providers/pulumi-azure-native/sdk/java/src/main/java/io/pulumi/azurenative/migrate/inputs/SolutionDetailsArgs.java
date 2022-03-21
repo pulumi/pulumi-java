@@ -96,32 +96,26 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.assessmentCount = assessmentCount;
             return this;
         }
-
         public Builder assessmentCount(@Nullable Integer assessmentCount) {
             this.assessmentCount = Output.ofNullable(assessmentCount);
             return this;
         }
-
         public Builder extendedDetails(@Nullable Output<Map<String,String>> extendedDetails) {
             this.extendedDetails = extendedDetails;
             return this;
         }
-
         public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
             this.extendedDetails = Output.ofNullable(extendedDetails);
             return this;
         }
-
         public Builder groupCount(@Nullable Output<Integer> groupCount) {
             this.groupCount = groupCount;
             return this;
         }
-
         public Builder groupCount(@Nullable Integer groupCount) {
             this.groupCount = Output.ofNullable(groupCount);
             return this;
-        }
-        public SolutionDetailsArgs build() {
+        }        public SolutionDetailsArgs build() {
             return new SolutionDetailsArgs(assessmentCount, extendedDetails, groupCount);
         }
     }

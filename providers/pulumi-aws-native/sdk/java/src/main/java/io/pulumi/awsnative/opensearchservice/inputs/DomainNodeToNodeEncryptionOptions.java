@@ -52,8 +52,7 @@ public final class DomainNodeToNodeEncryptionOptions extends io.pulumi.resources
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public DomainNodeToNodeEncryptionOptions build() {
+        }        public DomainNodeToNodeEncryptionOptions build() {
             return new DomainNodeToNodeEncryptionOptions(enabled);
         }
     }

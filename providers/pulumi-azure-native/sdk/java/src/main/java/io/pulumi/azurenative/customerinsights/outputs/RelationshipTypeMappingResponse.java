@@ -53,7 +53,9 @@ public final class RelationshipTypeMappingResponse {
             this.fieldMappings = Objects.requireNonNull(fieldMappings);
             return this;
         }
-        public RelationshipTypeMappingResponse build() {
+        public Builder fieldMappings(RelationshipTypeFieldMappingResponse... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }        public RelationshipTypeMappingResponse build() {
             return new RelationshipTypeMappingResponse(fieldMappings);
         }
     }

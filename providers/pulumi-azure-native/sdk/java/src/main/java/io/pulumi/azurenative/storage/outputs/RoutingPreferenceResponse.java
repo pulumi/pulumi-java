@@ -88,17 +88,14 @@ public final class RoutingPreferenceResponse {
             this.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
-
         public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
             this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
-
         public Builder routingChoice(@Nullable String routingChoice) {
             this.routingChoice = routingChoice;
             return this;
-        }
-        public RoutingPreferenceResponse build() {
+        }        public RoutingPreferenceResponse build() {
             return new RoutingPreferenceResponse(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
         }
     }

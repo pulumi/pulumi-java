@@ -108,42 +108,34 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder filter(@Nullable Output<AnalyticsConfigurationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable AnalyticsConfigurationFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
             this.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
-
         public Builder storageClassAnalysis(@Nullable AnalyticsConfigurationStorageClassAnalysisArgs storageClassAnalysis) {
             this.storageClassAnalysis = Output.ofNullable(storageClassAnalysis);
             return this;
-        }
-        public AnalyticsConfigurationArgs build() {
+        }        public AnalyticsConfigurationArgs build() {
             return new AnalyticsConfigurationArgs(bucket, filter, name, storageClassAnalysis);
         }
     }

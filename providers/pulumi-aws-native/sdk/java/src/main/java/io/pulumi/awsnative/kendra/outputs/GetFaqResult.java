@@ -73,17 +73,17 @@ public final class GetFaqResult {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<FaqTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFaqResult build() {
+        public Builder tags(FaqTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFaqResult build() {
             return new GetFaqResult(arn, id, tags);
         }
     }

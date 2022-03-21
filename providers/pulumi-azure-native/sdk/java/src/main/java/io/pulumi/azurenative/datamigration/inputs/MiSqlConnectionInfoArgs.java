@@ -111,42 +111,34 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
             this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
             return this;
         }
-
         public Builder managedInstanceResourceId(String managedInstanceResourceId) {
             this.managedInstanceResourceId = Output.of(Objects.requireNonNull(managedInstanceResourceId));
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public MiSqlConnectionInfoArgs build() {
+        }        public MiSqlConnectionInfoArgs build() {
             return new MiSqlConnectionInfoArgs(managedInstanceResourceId, password, type, userName);
         }
     }

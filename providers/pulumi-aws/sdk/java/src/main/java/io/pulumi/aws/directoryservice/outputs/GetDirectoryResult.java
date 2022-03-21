@@ -275,82 +275,75 @@ public final class GetDirectoryResult {
             this.accessUrl = Objects.requireNonNull(accessUrl);
             return this;
         }
-
         public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder connectSettings(List<GetDirectoryConnectSetting> connectSettings) {
             this.connectSettings = Objects.requireNonNull(connectSettings);
             return this;
         }
-
+        public Builder connectSettings(GetDirectoryConnectSetting... connectSettings) {
+            return connectSettings(List.of(connectSettings));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder dnsIpAddresses(List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
             return this;
         }
-
+        public Builder dnsIpAddresses(String... dnsIpAddresses) {
+            return dnsIpAddresses(List.of(dnsIpAddresses));
+        }
         public Builder edition(String edition) {
             this.edition = Objects.requireNonNull(edition);
             return this;
         }
-
         public Builder enableSso(Boolean enableSso) {
             this.enableSso = Objects.requireNonNull(enableSso);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
-
         public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vpcSettings(List<GetDirectoryVpcSetting> vpcSettings) {
             this.vpcSettings = Objects.requireNonNull(vpcSettings);
             return this;
         }
-        public GetDirectoryResult build() {
+        public Builder vpcSettings(GetDirectoryVpcSetting... vpcSettings) {
+            return vpcSettings(List.of(vpcSettings));
+        }        public GetDirectoryResult build() {
             return new GetDirectoryResult(accessUrl, alias, connectSettings, description, directoryId, dnsIpAddresses, edition, enableSso, id, name, securityGroupId, shortName, size, tags, type, vpcSettings);
         }
     }

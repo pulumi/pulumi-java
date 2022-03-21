@@ -91,32 +91,26 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
             this.limit = limit;
             return this;
         }
-
         public Builder limit(@Nullable Integer limit) {
             this.limit = Output.ofNullable(limit);
             return this;
         }
-
         public Builder offset(@Nullable Output<Integer> offset) {
             this.offset = offset;
             return this;
         }
-
         public Builder offset(@Nullable Integer offset) {
             this.offset = Output.ofNullable(offset);
             return this;
         }
-
         public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
-        }
-        public UsagePlanQuotaSettingsArgs build() {
+        }        public UsagePlanQuotaSettingsArgs build() {
             return new UsagePlanQuotaSettingsArgs(limit, offset, period);
         }
     }

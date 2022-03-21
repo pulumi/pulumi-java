@@ -58,12 +58,10 @@ public final class InboundSamlConfigSpConfigSpCertificateGetArgs extends io.pulu
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = Output.ofNullable(x509Certificate);
             return this;
-        }
-        public InboundSamlConfigSpConfigSpCertificateGetArgs build() {
+        }        public InboundSamlConfigSpConfigSpCertificateGetArgs build() {
             return new InboundSamlConfigSpConfigSpCertificateGetArgs(x509Certificate);
         }
     }

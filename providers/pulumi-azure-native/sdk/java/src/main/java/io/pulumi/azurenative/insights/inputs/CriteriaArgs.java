@@ -80,22 +80,21 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable List<DimensionArgs> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
+        public Builder dimensions(DimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
-        }
-        public CriteriaArgs build() {
+        }        public CriteriaArgs build() {
             return new CriteriaArgs(dimensions, metricName);
         }
     }

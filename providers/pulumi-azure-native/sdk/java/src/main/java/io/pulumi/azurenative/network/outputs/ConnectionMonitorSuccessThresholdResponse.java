@@ -72,12 +72,10 @@ public final class ConnectionMonitorSuccessThresholdResponse {
             this.checksFailedPercent = checksFailedPercent;
             return this;
         }
-
         public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
             this.roundTripTimeMs = roundTripTimeMs;
             return this;
-        }
-        public ConnectionMonitorSuccessThresholdResponse build() {
+        }        public ConnectionMonitorSuccessThresholdResponse build() {
             return new ConnectionMonitorSuccessThresholdResponse(checksFailedPercent, roundTripTimeMs);
         }
     }

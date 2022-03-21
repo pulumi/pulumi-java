@@ -131,27 +131,22 @@ public final class AccessLevelsAccessLevel {
             this.basic = basic;
             return this;
         }
-
         public Builder custom(@Nullable AccessLevelsAccessLevelCustom custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public AccessLevelsAccessLevel build() {
+        }        public AccessLevelsAccessLevel build() {
             return new AccessLevelsAccessLevel(basic, custom, description, name, title);
         }
     }

@@ -72,12 +72,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate {
             this.file = file;
             return this;
         }
-
         public Builder sds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
             this.sds = sds;
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate(file, sds);
         }
     }

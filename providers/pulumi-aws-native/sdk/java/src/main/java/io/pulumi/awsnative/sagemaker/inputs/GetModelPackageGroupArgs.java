@@ -50,8 +50,7 @@ public final class GetModelPackageGroupArgs extends io.pulumi.resources.InvokeAr
         public Builder modelPackageGroupArn(String modelPackageGroupArn) {
             this.modelPackageGroupArn = Objects.requireNonNull(modelPackageGroupArn);
             return this;
-        }
-        public GetModelPackageGroupArgs build() {
+        }        public GetModelPackageGroupArgs build() {
             return new GetModelPackageGroupArgs(modelPackageGroupArn);
         }
     }

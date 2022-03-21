@@ -52,8 +52,7 @@ public final class RuntimeMetricsResponse {
         public Builder systemMetrics(Map<String,String> systemMetrics) {
             this.systemMetrics = Objects.requireNonNull(systemMetrics);
             return this;
-        }
-        public RuntimeMetricsResponse build() {
+        }        public RuntimeMetricsResponse build() {
             return new RuntimeMetricsResponse(systemMetrics);
         }
     }

@@ -209,57 +209,52 @@ public final class GetSigningProfileResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platformDisplayName(String platformDisplayName) {
             this.platformDisplayName = Objects.requireNonNull(platformDisplayName);
             return this;
         }
-
         public Builder platformId(String platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
-
         public Builder revocationRecords(List<GetSigningProfileRevocationRecord> revocationRecords) {
             this.revocationRecords = Objects.requireNonNull(revocationRecords);
             return this;
         }
-
+        public Builder revocationRecords(GetSigningProfileRevocationRecord... revocationRecords) {
+            return revocationRecords(List.of(revocationRecords));
+        }
         public Builder signatureValidityPeriods(List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods) {
             this.signatureValidityPeriods = Objects.requireNonNull(signatureValidityPeriods);
             return this;
         }
-
+        public Builder signatureValidityPeriods(GetSigningProfileSignatureValidityPeriod... signatureValidityPeriods) {
+            return signatureValidityPeriods(List.of(signatureValidityPeriods));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder versionArn(String versionArn) {
             this.versionArn = Objects.requireNonNull(versionArn);
             return this;
-        }
-        public GetSigningProfileResult build() {
+        }        public GetSigningProfileResult build() {
             return new GetSigningProfileResult(arn, id, name, platformDisplayName, platformId, revocationRecords, signatureValidityPeriods, status, tags, version, versionArn);
         }
     }

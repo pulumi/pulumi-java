@@ -57,12 +57,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs outputConfig) {
             this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
-        }
-        public PreventionJobTriggerInspectJobActionSaveFindingsArgs build() {
+        }        public PreventionJobTriggerInspectJobActionSaveFindingsArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsArgs(outputConfig);
         }
     }

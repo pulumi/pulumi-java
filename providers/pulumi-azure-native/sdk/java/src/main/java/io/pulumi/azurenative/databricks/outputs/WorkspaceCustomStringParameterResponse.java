@@ -69,12 +69,10 @@ public final class WorkspaceCustomStringParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WorkspaceCustomStringParameterResponse build() {
+        }        public WorkspaceCustomStringParameterResponse build() {
             return new WorkspaceCustomStringParameterResponse(type, value);
         }
     }

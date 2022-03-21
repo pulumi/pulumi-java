@@ -89,32 +89,26 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogId(String catalogId) {
             this.catalogId = Output.of(Objects.requireNonNull(catalogId));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public CatalogTableTargetTableGetArgs build() {
+        }        public CatalogTableTargetTableGetArgs build() {
             return new CatalogTableTargetTableGetArgs(catalogId, databaseName, name);
         }
     }

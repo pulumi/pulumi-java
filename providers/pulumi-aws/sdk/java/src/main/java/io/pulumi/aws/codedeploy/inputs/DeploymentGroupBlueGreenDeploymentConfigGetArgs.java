@@ -92,32 +92,26 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGetArgs extends io.pu
             this.deploymentReadyOption = deploymentReadyOption;
             return this;
         }
-
         public Builder deploymentReadyOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs deploymentReadyOption) {
             this.deploymentReadyOption = Output.ofNullable(deploymentReadyOption);
             return this;
         }
-
         public Builder greenFleetProvisioningOption(@Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs> greenFleetProvisioningOption) {
             this.greenFleetProvisioningOption = greenFleetProvisioningOption;
             return this;
         }
-
         public Builder greenFleetProvisioningOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs greenFleetProvisioningOption) {
             this.greenFleetProvisioningOption = Output.ofNullable(greenFleetProvisioningOption);
             return this;
         }
-
         public Builder terminateBlueInstancesOnDeploymentSuccess(@Nullable Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs> terminateBlueInstancesOnDeploymentSuccess) {
             this.terminateBlueInstancesOnDeploymentSuccess = terminateBlueInstancesOnDeploymentSuccess;
             return this;
         }
-
         public Builder terminateBlueInstancesOnDeploymentSuccess(@Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs terminateBlueInstancesOnDeploymentSuccess) {
             this.terminateBlueInstancesOnDeploymentSuccess = Output.ofNullable(terminateBlueInstancesOnDeploymentSuccess);
             return this;
-        }
-        public DeploymentGroupBlueGreenDeploymentConfigGetArgs build() {
+        }        public DeploymentGroupBlueGreenDeploymentConfigGetArgs build() {
             return new DeploymentGroupBlueGreenDeploymentConfigGetArgs(deploymentReadyOption, greenFleetProvisioningOption, terminateBlueInstancesOnDeploymentSuccess);
         }
     }

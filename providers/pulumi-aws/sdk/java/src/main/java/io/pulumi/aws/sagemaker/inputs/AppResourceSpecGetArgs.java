@@ -106,42 +106,34 @@ public final class AppResourceSpecGetArgs extends io.pulumi.resources.ResourceAr
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder lifecycleConfigArn(@Nullable Output<String> lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
-
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = Output.ofNullable(lifecycleConfigArn);
             return this;
         }
-
         public Builder sagemakerImageArn(@Nullable Output<String> sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
-
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = Output.ofNullable(sagemakerImageArn);
             return this;
         }
-
         public Builder sagemakerImageVersionArn(@Nullable Output<String> sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
         }
-
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = Output.ofNullable(sagemakerImageVersionArn);
             return this;
-        }
-        public AppResourceSpecGetArgs build() {
+        }        public AppResourceSpecGetArgs build() {
             return new AppResourceSpecGetArgs(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);
         }
     }

@@ -104,22 +104,18 @@ public final class ServiceReference {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
-        }
-        public ServiceReference build() {
+        }        public ServiceReference build() {
             return new ServiceReference(name, namespace, path, port);
         }
     }

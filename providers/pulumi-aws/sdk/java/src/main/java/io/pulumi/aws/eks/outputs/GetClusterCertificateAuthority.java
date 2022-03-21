@@ -51,8 +51,7 @@ public final class GetClusterCertificateAuthority {
         public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
-        }
-        public GetClusterCertificateAuthority build() {
+        }        public GetClusterCertificateAuthority build() {
             return new GetClusterCertificateAuthority(data);
         }
     }

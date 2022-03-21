@@ -169,82 +169,66 @@ public final class WorkforceOidcConfigGetArgs extends io.pulumi.resources.Resour
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
-
         public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
-
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
-
         public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
-
         public Builder jwksUri(Output<String> jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
-
         public Builder jwksUri(String jwksUri) {
             this.jwksUri = Output.of(Objects.requireNonNull(jwksUri));
             return this;
         }
-
         public Builder logoutEndpoint(Output<String> logoutEndpoint) {
             this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
             return this;
         }
-
         public Builder logoutEndpoint(String logoutEndpoint) {
             this.logoutEndpoint = Output.of(Objects.requireNonNull(logoutEndpoint));
             return this;
         }
-
         public Builder tokenEndpoint(Output<String> tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
-
         public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Output.of(Objects.requireNonNull(tokenEndpoint));
             return this;
         }
-
         public Builder userInfoEndpoint(Output<String> userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
-
         public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Output.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
-        }
-        public WorkforceOidcConfigGetArgs build() {
+        }        public WorkforceOidcConfigGetArgs build() {
             return new WorkforceOidcConfigGetArgs(authorizationEndpoint, clientId, clientSecret, issuer, jwksUri, logoutEndpoint, tokenEndpoint, userInfoEndpoint);
         }
     }

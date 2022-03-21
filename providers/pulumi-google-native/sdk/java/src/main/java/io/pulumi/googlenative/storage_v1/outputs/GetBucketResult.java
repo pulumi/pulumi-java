@@ -518,147 +518,127 @@ public final class GetBucketResult {
             this.acl = Objects.requireNonNull(acl);
             return this;
         }
-
+        public Builder acl(BucketAccessControlResponse... acl) {
+            return acl(List.of(acl));
+        }
         public Builder autoclass(BucketAutoclassResponse autoclass) {
             this.autoclass = Objects.requireNonNull(autoclass);
             return this;
         }
-
         public Builder billing(BucketBillingResponse billing) {
             this.billing = Objects.requireNonNull(billing);
             return this;
         }
-
         public Builder cors(List<BucketCorsItemResponse> cors) {
             this.cors = Objects.requireNonNull(cors);
             return this;
         }
-
+        public Builder cors(BucketCorsItemResponse... cors) {
+            return cors(List.of(cors));
+        }
         public Builder customPlacementConfig(BucketCustomPlacementConfigResponse customPlacementConfig) {
             this.customPlacementConfig = Objects.requireNonNull(customPlacementConfig);
             return this;
         }
-
         public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
             return this;
         }
-
         public Builder defaultObjectAcl(List<ObjectAccessControlResponse> defaultObjectAcl) {
             this.defaultObjectAcl = Objects.requireNonNull(defaultObjectAcl);
             return this;
         }
-
+        public Builder defaultObjectAcl(ObjectAccessControlResponse... defaultObjectAcl) {
+            return defaultObjectAcl(List.of(defaultObjectAcl));
+        }
         public Builder encryption(BucketEncryptionResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder iamConfiguration(BucketIamConfigurationResponse iamConfiguration) {
             this.iamConfiguration = Objects.requireNonNull(iamConfiguration);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lifecycle(BucketLifecycleResponse lifecycle) {
             this.lifecycle = Objects.requireNonNull(lifecycle);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder locationType(String locationType) {
             this.locationType = Objects.requireNonNull(locationType);
             return this;
         }
-
         public Builder logging(BucketLoggingResponse logging) {
             this.logging = Objects.requireNonNull(logging);
             return this;
         }
-
         public Builder metageneration(String metageneration) {
             this.metageneration = Objects.requireNonNull(metageneration);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder owner(BucketOwnerResponse owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder projectNumber(String projectNumber) {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
-
         public Builder retentionPolicy(BucketRetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
-
         public Builder rpo(String rpo) {
             this.rpo = Objects.requireNonNull(rpo);
             return this;
         }
-
         public Builder satisfiesPZS(Boolean satisfiesPZS) {
             this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public Builder versioning(BucketVersioningResponse versioning) {
             this.versioning = Objects.requireNonNull(versioning);
             return this;
         }
-
         public Builder website(BucketWebsiteResponse website) {
             this.website = Objects.requireNonNull(website);
             return this;
-        }
-        public GetBucketResult build() {
+        }        public GetBucketResult build() {
             return new GetBucketResult(acl, autoclass, billing, cors, customPlacementConfig, defaultEventBasedHold, defaultObjectAcl, encryption, etag, iamConfiguration, kind, labels, lifecycle, location, locationType, logging, metageneration, name, owner, projectNumber, retentionPolicy, rpo, satisfiesPZS, selfLink, storageClass, timeCreated, updated, versioning, website);
         }
     }

@@ -51,8 +51,7 @@ public final class PrivateEndpointPropertyResponse {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public PrivateEndpointPropertyResponse build() {
+        }        public PrivateEndpointPropertyResponse build() {
             return new PrivateEndpointPropertyResponse(id);
         }
     }

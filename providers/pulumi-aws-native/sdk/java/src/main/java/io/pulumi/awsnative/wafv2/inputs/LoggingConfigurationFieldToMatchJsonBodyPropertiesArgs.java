@@ -96,32 +96,26 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
-
         public Builder invalidFallbackBehavior(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
             return this;
         }
-
         public Builder matchPattern(Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
-
         public Builder matchPattern(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs matchPattern) {
             this.matchPattern = Output.of(Objects.requireNonNull(matchPattern));
             return this;
         }
-
         public Builder matchScope(Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public Builder matchScope(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
             this.matchScope = Output.of(Objects.requireNonNull(matchScope));
             return this;
-        }
-        public LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs build() {
+        }        public LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(invalidFallbackBehavior, matchPattern, matchScope);
         }
     }

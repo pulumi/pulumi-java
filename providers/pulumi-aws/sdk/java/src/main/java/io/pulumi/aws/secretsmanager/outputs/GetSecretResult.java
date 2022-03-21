@@ -217,52 +217,45 @@ public final class GetSecretResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder rotationEnabled(Boolean rotationEnabled) {
             this.rotationEnabled = Objects.requireNonNull(rotationEnabled);
             return this;
         }
-
         public Builder rotationLambdaArn(String rotationLambdaArn) {
             this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
             return this;
         }
-
         public Builder rotationRules(List<GetSecretRotationRule> rotationRules) {
             this.rotationRules = Objects.requireNonNull(rotationRules);
             return this;
         }
-
+        public Builder rotationRules(GetSecretRotationRule... rotationRules) {
+            return rotationRules(List.of(rotationRules));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetSecretResult build() {
+        }        public GetSecretResult build() {
             return new GetSecretResult(arn, description, id, kmsKeyId, name, policy, rotationEnabled, rotationLambdaArn, rotationRules, tags);
         }
     }

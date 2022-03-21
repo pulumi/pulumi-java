@@ -53,8 +53,7 @@ public final class ManagementLockOwnerResponse {
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
-        }
-        public ManagementLockOwnerResponse build() {
+        }        public ManagementLockOwnerResponse build() {
             return new ManagementLockOwnerResponse(applicationId);
         }
     }

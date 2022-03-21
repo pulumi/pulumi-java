@@ -145,32 +145,26 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
             this.destination = destination;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
             this.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
-
         public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
-        }
-        public CaptureDescriptionResponse build() {
+        }        public CaptureDescriptionResponse build() {
             return new CaptureDescriptionResponse(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
         }
     }

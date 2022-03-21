@@ -51,8 +51,7 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1IntegrationConfigResponse build() {
+        }        public GoogleCloudApigeeV1IntegrationConfigResponse build() {
             return new GoogleCloudApigeeV1IntegrationConfigResponse(enabled);
         }
     }

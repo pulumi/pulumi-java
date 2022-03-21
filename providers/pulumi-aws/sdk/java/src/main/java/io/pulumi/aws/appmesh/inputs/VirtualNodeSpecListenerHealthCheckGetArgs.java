@@ -155,72 +155,58 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
-
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Output.of(Objects.requireNonNull(healthyThreshold));
             return this;
         }
-
         public Builder intervalMillis(Output<Integer> intervalMillis) {
             this.intervalMillis = Objects.requireNonNull(intervalMillis);
             return this;
         }
-
         public Builder intervalMillis(Integer intervalMillis) {
             this.intervalMillis = Output.of(Objects.requireNonNull(intervalMillis));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder timeoutMillis(Output<Integer> timeoutMillis) {
             this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
             return this;
         }
-
         public Builder timeoutMillis(Integer timeoutMillis) {
             this.timeoutMillis = Output.of(Objects.requireNonNull(timeoutMillis));
             return this;
         }
-
         public Builder unhealthyThreshold(Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.of(Objects.requireNonNull(unhealthyThreshold));
             return this;
-        }
-        public VirtualNodeSpecListenerHealthCheckGetArgs build() {
+        }        public VirtualNodeSpecListenerHealthCheckGetArgs build() {
             return new VirtualNodeSpecListenerHealthCheckGetArgs(healthyThreshold, intervalMillis, path, port, protocol, timeoutMillis, unhealthyThreshold);
         }
     }

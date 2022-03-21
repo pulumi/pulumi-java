@@ -81,22 +81,18 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends io.pu
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
             this.diskEncryptionSet = Output.ofNullable(diskEncryptionSet);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
-        }
-        public VirtualMachineScaleSetManagedDiskParametersArgs build() {
+        }        public VirtualMachineScaleSetManagedDiskParametersArgs build() {
             return new VirtualMachineScaleSetManagedDiskParametersArgs(diskEncryptionSet, storageAccountType);
         }
     }

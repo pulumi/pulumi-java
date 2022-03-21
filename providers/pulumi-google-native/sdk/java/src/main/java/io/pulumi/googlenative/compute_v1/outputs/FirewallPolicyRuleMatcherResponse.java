@@ -87,17 +87,23 @@ public final class FirewallPolicyRuleMatcherResponse {
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
-
+        public Builder destIpRanges(String... destIpRanges) {
+            return destIpRanges(List.of(destIpRanges));
+        }
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
-
+        public Builder layer4Configs(FirewallPolicyRuleMatcherLayer4ConfigResponse... layer4Configs) {
+            return layer4Configs(List.of(layer4Configs));
+        }
         public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-        public FirewallPolicyRuleMatcherResponse build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public FirewallPolicyRuleMatcherResponse build() {
             return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges);
         }
     }

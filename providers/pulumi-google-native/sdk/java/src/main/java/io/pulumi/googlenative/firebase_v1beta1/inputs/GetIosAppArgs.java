@@ -66,12 +66,10 @@ public final class GetIosAppArgs extends io.pulumi.resources.InvokeArgs {
             this.iosAppId = Objects.requireNonNull(iosAppId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetIosAppArgs build() {
+        }        public GetIosAppArgs build() {
             return new GetIosAppArgs(iosAppId, project);
         }
     }

@@ -162,92 +162,80 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
             this.captchaConfig = captchaConfig;
             return this;
         }
-
         public Builder captchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
             this.captchaConfig = Output.ofNullable(captchaConfig);
             return this;
         }
-
         public Builder customResponseBodies(@Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
-
         public Builder customResponseBodies(@Nullable WebACLCustomResponseBodiesArgs customResponseBodies) {
             this.customResponseBodies = Output.ofNullable(customResponseBodies);
             return this;
         }
-
         public Builder defaultAction(Output<WebACLDefaultActionArgs> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
-
         public Builder defaultAction(WebACLDefaultActionArgs defaultAction) {
             this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<WebACLRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<WebACLRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(WebACLRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder scope(Output<WebACLScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(WebACLScope scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<WebACLTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<WebACLTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(WebACLTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder visibilityConfig(Output<WebACLVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public Builder visibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
-        }
-        public WebACLArgs build() {
+        }        public WebACLArgs build() {
             return new WebACLArgs(captchaConfig, customResponseBodies, defaultAction, description, name, rules, scope, tags, visibilityConfig);
         }
     }

@@ -130,52 +130,45 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
             this.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
-
         public Builder clientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationArgs clientAuthConfiguration) {
             this.clientAuthConfiguration = Output.ofNullable(clientAuthConfiguration);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sslPolicy(@Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyArgs sslPolicy) {
             this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
-
         public Builder trustedClientCertificates(@Nullable Output<List<SubResourceArgs>> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
-
         public Builder trustedClientCertificates(@Nullable List<SubResourceArgs> trustedClientCertificates) {
             this.trustedClientCertificates = Output.ofNullable(trustedClientCertificates);
             return this;
         }
-        public ApplicationGatewaySslProfileArgs build() {
+        public Builder trustedClientCertificates(SubResourceArgs... trustedClientCertificates) {
+            return trustedClientCertificates(List.of(trustedClientCertificates));
+        }        public ApplicationGatewaySslProfileArgs build() {
             return new ApplicationGatewaySslProfileArgs(clientAuthConfiguration, id, name, sslPolicy, trustedClientCertificates);
         }
     }

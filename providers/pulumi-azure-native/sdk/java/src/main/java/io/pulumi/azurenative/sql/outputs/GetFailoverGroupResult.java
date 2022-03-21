@@ -220,57 +220,52 @@ public final class GetFailoverGroupResult {
             this.databases = databases;
             return this;
         }
-
+        public Builder databases(String... databases) {
+            return databases(List.of(databases));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerServers(List<PartnerInfoResponse> partnerServers) {
             this.partnerServers = Objects.requireNonNull(partnerServers);
             return this;
         }
-
+        public Builder partnerServers(PartnerInfoResponse... partnerServers) {
+            return partnerServers(List.of(partnerServers));
+        }
         public Builder readOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
-
         public Builder readWriteEndpoint(FailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
-
         public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
-
         public Builder replicationState(String replicationState) {
             this.replicationState = Objects.requireNonNull(replicationState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetFailoverGroupResult build() {
+        }        public GetFailoverGroupResult build() {
             return new GetFailoverGroupResult(databases, id, location, name, partnerServers, readOnlyEndpoint, readWriteEndpoint, replicationRole, replicationState, tags, type);
         }
     }

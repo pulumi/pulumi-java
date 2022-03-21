@@ -206,102 +206,97 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             this.accounts = accounts;
             return this;
         }
-
         public Builder accounts(@Nullable List<OrganizationAccountGetArgs> accounts) {
             this.accounts = Output.ofNullable(accounts);
             return this;
         }
-
+        public Builder accounts(OrganizationAccountGetArgs... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder awsServiceAccessPrincipals(@Nullable Output<List<String>> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
-
         public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = Output.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
-
+        public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
+            return awsServiceAccessPrincipals(List.of(awsServiceAccessPrincipals));
+        }
         public Builder enabledPolicyTypes(@Nullable Output<List<String>> enabledPolicyTypes) {
             this.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
-
         public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
             this.enabledPolicyTypes = Output.ofNullable(enabledPolicyTypes);
             return this;
         }
-
+        public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
+            return enabledPolicyTypes(List.of(enabledPolicyTypes));
+        }
         public Builder featureSet(@Nullable Output<String> featureSet) {
             this.featureSet = featureSet;
             return this;
         }
-
         public Builder featureSet(@Nullable String featureSet) {
             this.featureSet = Output.ofNullable(featureSet);
             return this;
         }
-
         public Builder masterAccountArn(@Nullable Output<String> masterAccountArn) {
             this.masterAccountArn = masterAccountArn;
             return this;
         }
-
         public Builder masterAccountArn(@Nullable String masterAccountArn) {
             this.masterAccountArn = Output.ofNullable(masterAccountArn);
             return this;
         }
-
         public Builder masterAccountEmail(@Nullable Output<String> masterAccountEmail) {
             this.masterAccountEmail = masterAccountEmail;
             return this;
         }
-
         public Builder masterAccountEmail(@Nullable String masterAccountEmail) {
             this.masterAccountEmail = Output.ofNullable(masterAccountEmail);
             return this;
         }
-
         public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
-
         public Builder masterAccountId(@Nullable String masterAccountId) {
             this.masterAccountId = Output.ofNullable(masterAccountId);
             return this;
         }
-
         public Builder nonMasterAccounts(@Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
             this.nonMasterAccounts = nonMasterAccounts;
             return this;
         }
-
         public Builder nonMasterAccounts(@Nullable List<OrganizationNonMasterAccountGetArgs> nonMasterAccounts) {
             this.nonMasterAccounts = Output.ofNullable(nonMasterAccounts);
             return this;
         }
-
+        public Builder nonMasterAccounts(OrganizationNonMasterAccountGetArgs... nonMasterAccounts) {
+            return nonMasterAccounts(List.of(nonMasterAccounts));
+        }
         public Builder roots(@Nullable Output<List<OrganizationRootGetArgs>> roots) {
             this.roots = roots;
             return this;
         }
-
         public Builder roots(@Nullable List<OrganizationRootGetArgs> roots) {
             this.roots = Output.ofNullable(roots);
             return this;
         }
-        public OrganizationState build() {
+        public Builder roots(OrganizationRootGetArgs... roots) {
+            return roots(List.of(roots));
+        }        public OrganizationState build() {
             return new OrganizationState(accounts, arn, awsServiceAccessPrincipals, enabledPolicyTypes, featureSet, masterAccountArn, masterAccountEmail, masterAccountId, nonMasterAccounts, roots);
         }
     }

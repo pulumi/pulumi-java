@@ -369,122 +369,98 @@ public final class GetSnapshotResult {
             this.allocatedStorage = Objects.requireNonNull(allocatedStorage);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-
         public Builder dbSnapshotArn(String dbSnapshotArn) {
             this.dbSnapshotArn = Objects.requireNonNull(dbSnapshotArn);
             return this;
         }
-
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includePublic(@Nullable Boolean includePublic) {
             this.includePublic = includePublic;
             return this;
         }
-
         public Builder includeShared(@Nullable Boolean includeShared) {
             this.includeShared = includeShared;
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
-
         public Builder licenseModel(String licenseModel) {
             this.licenseModel = Objects.requireNonNull(licenseModel);
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder optionGroupName(String optionGroupName) {
             this.optionGroupName = Objects.requireNonNull(optionGroupName);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder snapshotCreateTime(String snapshotCreateTime) {
             this.snapshotCreateTime = Objects.requireNonNull(snapshotCreateTime);
             return this;
         }
-
         public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
-
         public Builder sourceDbSnapshotIdentifier(String sourceDbSnapshotIdentifier) {
             this.sourceDbSnapshotIdentifier = Objects.requireNonNull(sourceDbSnapshotIdentifier);
             return this;
         }
-
         public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetSnapshotResult build() {
+        }        public GetSnapshotResult build() {
             return new GetSnapshotResult(allocatedStorage, availabilityZone, dbInstanceIdentifier, dbSnapshotArn, dbSnapshotIdentifier, encrypted, engine, engineVersion, id, includePublic, includeShared, iops, kmsKeyId, licenseModel, mostRecent, optionGroupName, port, snapshotCreateTime, snapshotType, sourceDbSnapshotIdentifier, sourceRegion, status, storageType, vpcId);
         }
     }

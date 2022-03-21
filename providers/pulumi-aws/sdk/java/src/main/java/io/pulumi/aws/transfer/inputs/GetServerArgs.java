@@ -54,8 +54,7 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
         public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
-        }
-        public GetServerArgs build() {
+        }        public GetServerArgs build() {
             return new GetServerArgs(serverId);
         }
     }

@@ -123,52 +123,42 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
             this.linkName = linkName;
             return this;
         }
-
         public Builder linkName(@Nullable String linkName) {
             this.linkName = Output.ofNullable(linkName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder properties(@Nullable Output<LinkedWorkspacePropsArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable LinkedWorkspacePropsArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public LinkedWorkspaceArgs build() {
+        }        public LinkedWorkspaceArgs build() {
             return new LinkedWorkspaceArgs(linkName, name, properties, resourceGroupName, workspaceName);
         }
     }

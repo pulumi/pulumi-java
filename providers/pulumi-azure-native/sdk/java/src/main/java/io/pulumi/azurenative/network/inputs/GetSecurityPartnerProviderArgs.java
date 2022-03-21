@@ -72,12 +72,10 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder securityPartnerProviderName(String securityPartnerProviderName) {
             this.securityPartnerProviderName = Objects.requireNonNull(securityPartnerProviderName);
             return this;
-        }
-        public GetSecurityPartnerProviderArgs build() {
+        }        public GetSecurityPartnerProviderArgs build() {
             return new GetSecurityPartnerProviderArgs(resourceGroupName, securityPartnerProviderName);
         }
     }

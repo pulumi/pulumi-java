@@ -94,32 +94,26 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
             this.certVersion = certVersion;
             return this;
         }
-
         public Builder certVersion(@Nullable String certVersion) {
             this.certVersion = Output.ofNullable(certVersion);
             return this;
         }
-
         public Builder keyVaultCertName(Output<String> keyVaultCertName) {
             this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
             return this;
         }
-
         public Builder keyVaultCertName(String keyVaultCertName) {
             this.keyVaultCertName = Output.of(Objects.requireNonNull(keyVaultCertName));
             return this;
         }
-
         public Builder vaultUri(Output<String> vaultUri) {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }
-
         public Builder vaultUri(String vaultUri) {
             this.vaultUri = Output.of(Objects.requireNonNull(vaultUri));
             return this;
-        }
-        public CertificatePropertiesArgs build() {
+        }        public CertificatePropertiesArgs build() {
             return new CertificatePropertiesArgs(certVersion, keyVaultCertName, vaultUri);
         }
     }

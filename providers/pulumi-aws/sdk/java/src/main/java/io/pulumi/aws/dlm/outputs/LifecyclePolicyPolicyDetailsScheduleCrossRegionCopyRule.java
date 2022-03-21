@@ -138,32 +138,26 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
             this.cmkArn = cmkArn;
             return this;
         }
-
         public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = copyTags;
             return this;
         }
-
         public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule) {
             this.deprecateRule = deprecateRule;
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule) {
             this.retainRule = retainRule;
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule build() {
             return new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule(cmkArn, copyTags, deprecateRule, encrypted, retainRule, target);
         }
     }

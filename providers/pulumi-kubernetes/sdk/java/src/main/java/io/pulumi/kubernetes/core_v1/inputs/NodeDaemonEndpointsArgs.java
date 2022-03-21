@@ -61,12 +61,10 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
             this.kubeletEndpoint = kubeletEndpoint;
             return this;
         }
-
         public Builder kubeletEndpoint(@Nullable DaemonEndpointArgs kubeletEndpoint) {
             this.kubeletEndpoint = Output.ofNullable(kubeletEndpoint);
             return this;
-        }
-        public NodeDaemonEndpointsArgs build() {
+        }        public NodeDaemonEndpointsArgs build() {
             return new NodeDaemonEndpointsArgs(kubeletEndpoint);
         }
     }

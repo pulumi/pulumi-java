@@ -52,8 +52,7 @@ public final class FlowLookoutMetricsDestinationProperties extends io.pulumi.res
         public Builder object(@Nullable String object) {
             this.object = object;
             return this;
-        }
-        public FlowLookoutMetricsDestinationProperties build() {
+        }        public FlowLookoutMetricsDestinationProperties build() {
             return new FlowLookoutMetricsDestinationProperties(object);
         }
     }

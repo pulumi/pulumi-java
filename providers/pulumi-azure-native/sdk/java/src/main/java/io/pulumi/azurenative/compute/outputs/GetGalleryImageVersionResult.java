@@ -187,47 +187,38 @@ public final class GetGalleryImageVersionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publishingProfile(@Nullable GalleryImageVersionPublishingProfileResponse publishingProfile) {
             this.publishingProfile = publishingProfile;
             return this;
         }
-
         public Builder replicationStatus(ReplicationStatusResponse replicationStatus) {
             this.replicationStatus = Objects.requireNonNull(replicationStatus);
             return this;
         }
-
         public Builder storageProfile(GalleryImageVersionStorageProfileResponse storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGalleryImageVersionResult build() {
+        }        public GetGalleryImageVersionResult build() {
             return new GetGalleryImageVersionResult(id, location, name, provisioningState, publishingProfile, replicationStatus, storageProfile, tags, type);
         }
     }

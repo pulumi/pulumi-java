@@ -90,17 +90,14 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder restorePointCollectionName(String restorePointCollectionName) {
             this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
             return this;
-        }
-        public GetRestorePointCollectionArgs build() {
+        }        public GetRestorePointCollectionArgs build() {
             return new GetRestorePointCollectionArgs(expand, resourceGroupName, restorePointCollectionName);
         }
     }

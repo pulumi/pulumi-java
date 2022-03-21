@@ -58,8 +58,7 @@ public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resour
         public Builder installation(InstallationResponse installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
-        }
-        public GrafeasV1beta1PackageDetailsResponse build() {
+        }        public GrafeasV1beta1PackageDetailsResponse build() {
             return new GrafeasV1beta1PackageDetailsResponse(installation);
         }
     }

@@ -72,12 +72,13 @@ public final class WebChatChannelPropertiesResponse {
             this.sites = sites;
             return this;
         }
-
+        public Builder sites(WebChatSiteResponse... sites) {
+            return sites(List.of(sites));
+        }
         public Builder webChatEmbedCode(String webChatEmbedCode) {
             this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
             return this;
-        }
-        public WebChatChannelPropertiesResponse build() {
+        }        public WebChatChannelPropertiesResponse build() {
             return new WebChatChannelPropertiesResponse(sites, webChatEmbedCode);
         }
     }

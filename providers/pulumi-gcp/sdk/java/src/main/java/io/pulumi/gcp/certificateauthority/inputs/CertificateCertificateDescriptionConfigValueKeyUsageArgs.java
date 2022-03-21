@@ -96,32 +96,35 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageArgs exte
             this.baseKeyUsages = baseKeyUsages;
             return this;
         }
-
         public Builder baseKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs> baseKeyUsages) {
             this.baseKeyUsages = Output.ofNullable(baseKeyUsages);
             return this;
         }
-
+        public Builder baseKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs... baseKeyUsages) {
+            return baseKeyUsages(List.of(baseKeyUsages));
+        }
         public Builder extendedKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs>> extendedKeyUsages) {
             this.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
-
         public Builder extendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs> extendedKeyUsages) {
             this.extendedKeyUsages = Output.ofNullable(extendedKeyUsages);
             return this;
         }
-
+        public Builder extendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs... extendedKeyUsages) {
+            return extendedKeyUsages(List.of(extendedKeyUsages));
+        }
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-        public CertificateCertificateDescriptionConfigValueKeyUsageArgs build() {
+        public Builder unknownExtendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CertificateCertificateDescriptionConfigValueKeyUsageArgs build() {
             return new CertificateCertificateDescriptionConfigValueKeyUsageArgs(baseKeyUsages, extendedKeyUsages, unknownExtendedKeyUsages);
         }
     }

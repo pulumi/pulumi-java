@@ -206,102 +206,85 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hoursOfOperationId(Output<String> hoursOfOperationId) {
             this.hoursOfOperationId = Objects.requireNonNull(hoursOfOperationId);
             return this;
         }
-
         public Builder hoursOfOperationId(String hoursOfOperationId) {
             this.hoursOfOperationId = Output.of(Objects.requireNonNull(hoursOfOperationId));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder maxContacts(@Nullable Output<Integer> maxContacts) {
             this.maxContacts = maxContacts;
             return this;
         }
-
         public Builder maxContacts(@Nullable Integer maxContacts) {
             this.maxContacts = Output.ofNullable(maxContacts);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outboundCallerConfig(@Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig) {
             this.outboundCallerConfig = outboundCallerConfig;
             return this;
         }
-
         public Builder outboundCallerConfig(@Nullable QueueOutboundCallerConfigArgs outboundCallerConfig) {
             this.outboundCallerConfig = Output.ofNullable(outboundCallerConfig);
             return this;
         }
-
         public Builder quickConnectIds(@Nullable Output<List<String>> quickConnectIds) {
             this.quickConnectIds = quickConnectIds;
             return this;
         }
-
         public Builder quickConnectIds(@Nullable List<String> quickConnectIds) {
             this.quickConnectIds = Output.ofNullable(quickConnectIds);
             return this;
         }
-
+        public Builder quickConnectIds(String... quickConnectIds) {
+            return quickConnectIds(List.of(quickConnectIds));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public QueueArgs build() {
+        }        public QueueArgs build() {
             return new QueueArgs(description, hoursOfOperationId, instanceId, maxContacts, name, outboundCallerConfig, quickConnectIds, status, tags, tagsAll);
         }
     }

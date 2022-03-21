@@ -57,12 +57,10 @@ public final class MeshSpecGetArgs extends io.pulumi.resources.ResourceArgs {
             this.egressFilter = egressFilter;
             return this;
         }
-
         public Builder egressFilter(@Nullable MeshSpecEgressFilterGetArgs egressFilter) {
             this.egressFilter = Output.ofNullable(egressFilter);
             return this;
-        }
-        public MeshSpecGetArgs build() {
+        }        public MeshSpecGetArgs build() {
             return new MeshSpecGetArgs(egressFilter);
         }
     }

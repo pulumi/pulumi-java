@@ -64,12 +64,10 @@ public final class RuleGroupPortRange extends io.pulumi.resources.InvokeArgs {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
-        }
-        public RuleGroupPortRange build() {
+        }        public RuleGroupPortRange build() {
             return new RuleGroupPortRange(fromPort, toPort);
         }
     }

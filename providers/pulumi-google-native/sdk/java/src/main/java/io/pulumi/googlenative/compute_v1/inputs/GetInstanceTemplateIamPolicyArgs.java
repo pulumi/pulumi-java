@@ -78,17 +78,14 @@ public final class GetInstanceTemplateIamPolicyArgs extends io.pulumi.resources.
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetInstanceTemplateIamPolicyArgs build() {
+        }        public GetInstanceTemplateIamPolicyArgs build() {
             return new GetInstanceTemplateIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
         }
     }

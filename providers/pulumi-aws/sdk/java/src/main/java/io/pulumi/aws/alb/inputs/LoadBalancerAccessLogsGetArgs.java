@@ -91,32 +91,26 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public LoadBalancerAccessLogsGetArgs build() {
+        }        public LoadBalancerAccessLogsGetArgs build() {
             return new LoadBalancerAccessLogsGetArgs(bucket, enabled, prefix);
         }
     }

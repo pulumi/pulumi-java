@@ -87,17 +87,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference build() {
             return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference(datasetId, projectId, tableId);
         }
     }

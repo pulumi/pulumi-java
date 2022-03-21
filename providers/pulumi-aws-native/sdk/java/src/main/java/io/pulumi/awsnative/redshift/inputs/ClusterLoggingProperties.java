@@ -66,12 +66,10 @@ public final class ClusterLoggingProperties extends io.pulumi.resources.InvokeAr
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }
-        public ClusterLoggingProperties build() {
+        }        public ClusterLoggingProperties build() {
             return new ClusterLoggingProperties(bucketName, s3KeyPrefix);
         }
     }

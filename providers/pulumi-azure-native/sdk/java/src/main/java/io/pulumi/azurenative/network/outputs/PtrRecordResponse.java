@@ -53,8 +53,7 @@ public final class PtrRecordResponse {
         public Builder ptrdname(@Nullable String ptrdname) {
             this.ptrdname = ptrdname;
             return this;
-        }
-        public PtrRecordResponse build() {
+        }        public PtrRecordResponse build() {
             return new PtrRecordResponse(ptrdname);
         }
     }

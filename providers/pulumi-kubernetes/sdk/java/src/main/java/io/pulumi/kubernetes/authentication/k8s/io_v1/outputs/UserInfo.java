@@ -105,22 +105,21 @@ public final class UserInfo {
             this.extra = extra;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public UserInfo build() {
+        }        public UserInfo build() {
             return new UserInfo(extra, groups, uid, username);
         }
     }

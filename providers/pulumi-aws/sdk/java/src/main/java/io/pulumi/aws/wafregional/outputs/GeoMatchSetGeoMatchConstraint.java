@@ -73,12 +73,10 @@ public final class GeoMatchSetGeoMatchConstraint {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GeoMatchSetGeoMatchConstraint build() {
+        }        public GeoMatchSetGeoMatchConstraint build() {
             return new GeoMatchSetGeoMatchConstraint(type, value);
         }
     }

@@ -205,52 +205,48 @@ public final class GetDedicatedHostGroupResult {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
+        public Builder hosts(SubResourceReadOnlyResponse... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceView(DedicatedHostGroupInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount);
             return this;
         }
-
         public Builder supportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
             this.supportAutomaticPlacement = supportAutomaticPlacement;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetDedicatedHostGroupResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetDedicatedHostGroupResult build() {
             return new GetDedicatedHostGroupResult(hosts, id, instanceView, location, name, platformFaultDomainCount, supportAutomaticPlacement, tags, type, zones);
         }
     }

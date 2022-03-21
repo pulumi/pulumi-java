@@ -162,37 +162,42 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
             this.account = Objects.requireNonNull(account);
             return this;
         }
-
         public Builder additionalApks(List<ApkResponse> additionalApks) {
             this.additionalApks = Objects.requireNonNull(additionalApks);
             return this;
         }
-
+        public Builder additionalApks(ApkResponse... additionalApks) {
+            return additionalApks(List.of(additionalApks));
+        }
         public Builder directoriesToPull(List<String> directoriesToPull) {
             this.directoriesToPull = Objects.requireNonNull(directoriesToPull);
             return this;
         }
-
+        public Builder directoriesToPull(String... directoriesToPull) {
+            return directoriesToPull(List.of(directoriesToPull));
+        }
         public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
             this.dontAutograntPermissions = Objects.requireNonNull(dontAutograntPermissions);
             return this;
         }
-
         public Builder environmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = Objects.requireNonNull(environmentVariables);
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder filesToPush(List<DeviceFileResponse> filesToPush) {
             this.filesToPush = Objects.requireNonNull(filesToPush);
             return this;
         }
-
+        public Builder filesToPush(DeviceFileResponse... filesToPush) {
+            return filesToPush(List.of(filesToPush));
+        }
         public Builder networkProfile(String networkProfile) {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
-        }
-        public TestSetupResponse build() {
+        }        public TestSetupResponse build() {
             return new TestSetupResponse(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
         }
     }

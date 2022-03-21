@@ -135,32 +135,26 @@ public final class SiteSpnPropertiesResponse {
             this.aadAuthority = aadAuthority;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public SiteSpnPropertiesResponse build() {
+        }        public SiteSpnPropertiesResponse build() {
             return new SiteSpnPropertiesResponse(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
         }
     }

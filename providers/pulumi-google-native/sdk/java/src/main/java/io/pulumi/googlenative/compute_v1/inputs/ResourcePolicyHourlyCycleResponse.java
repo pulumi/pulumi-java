@@ -93,17 +93,14 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder hoursInCycle(Integer hoursInCycle) {
             this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ResourcePolicyHourlyCycleResponse build() {
+        }        public ResourcePolicyHourlyCycleResponse build() {
             return new ResourcePolicyHourlyCycleResponse(duration, hoursInCycle, startTime);
         }
     }

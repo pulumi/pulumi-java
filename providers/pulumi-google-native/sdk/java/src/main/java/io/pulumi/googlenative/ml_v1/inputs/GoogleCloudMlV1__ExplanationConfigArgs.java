@@ -96,32 +96,26 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
             this.integratedGradientsAttribution = integratedGradientsAttribution;
             return this;
         }
-
         public Builder integratedGradientsAttribution(@Nullable GoogleCloudMlV1__IntegratedGradientsAttributionArgs integratedGradientsAttribution) {
             this.integratedGradientsAttribution = Output.ofNullable(integratedGradientsAttribution);
             return this;
         }
-
         public Builder sampledShapleyAttribution(@Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution) {
             this.sampledShapleyAttribution = sampledShapleyAttribution;
             return this;
         }
-
         public Builder sampledShapleyAttribution(@Nullable GoogleCloudMlV1__SampledShapleyAttributionArgs sampledShapleyAttribution) {
             this.sampledShapleyAttribution = Output.ofNullable(sampledShapleyAttribution);
             return this;
         }
-
         public Builder xraiAttribution(@Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
             this.xraiAttribution = xraiAttribution;
             return this;
         }
-
         public Builder xraiAttribution(@Nullable GoogleCloudMlV1__XraiAttributionArgs xraiAttribution) {
             this.xraiAttribution = Output.ofNullable(xraiAttribution);
             return this;
-        }
-        public GoogleCloudMlV1__ExplanationConfigArgs build() {
+        }        public GoogleCloudMlV1__ExplanationConfigArgs build() {
             return new GoogleCloudMlV1__ExplanationConfigArgs(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
         }
     }

@@ -74,22 +74,18 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
-        }
-        public NetworkInterfaceSecurityGroupAttachmentState build() {
+        }        public NetworkInterfaceSecurityGroupAttachmentState build() {
             return new NetworkInterfaceSecurityGroupAttachmentState(networkInterfaceId, securityGroupId);
         }
     }

@@ -189,92 +189,74 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
             this.bgpSettings = bgpSettings;
             return this;
         }
-
         public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
             this.bgpSettings = Output.ofNullable(bgpSettings);
             return this;
         }
-
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
-
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = Output.ofNullable(gatewayIpAddress);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder localNetworkAddressSpace(@Nullable Output<AddressSpaceArgs> localNetworkAddressSpace) {
             this.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
-
         public Builder localNetworkAddressSpace(@Nullable AddressSpaceArgs localNetworkAddressSpace) {
             this.localNetworkAddressSpace = Output.ofNullable(localNetworkAddressSpace);
             return this;
         }
-
         public Builder localNetworkGatewayName(@Nullable Output<String> localNetworkGatewayName) {
             this.localNetworkGatewayName = localNetworkGatewayName;
             return this;
         }
-
         public Builder localNetworkGatewayName(@Nullable String localNetworkGatewayName) {
             this.localNetworkGatewayName = Output.ofNullable(localNetworkGatewayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LocalNetworkGatewayArgs build() {
+        }        public LocalNetworkGatewayArgs build() {
             return new LocalNetworkGatewayArgs(bgpSettings, fqdn, gatewayIpAddress, id, localNetworkAddressSpace, localNetworkGatewayName, location, resourceGroupName, tags);
         }
     }

@@ -162,82 +162,72 @@ public final class FunctionIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.auditConfigs = auditConfigs;
             return this;
         }
-
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder functionId(Output<String> functionId) {
             this.functionId = Objects.requireNonNull(functionId);
             return this;
         }
-
         public Builder functionId(String functionId) {
             this.functionId = Output.of(Objects.requireNonNull(functionId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
-
         public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public FunctionIamPolicyArgs build() {
+        }        public FunctionIamPolicyArgs build() {
             return new FunctionIamPolicyArgs(auditConfigs, bindings, etag, functionId, location, project, updateMask, version);
         }
     }

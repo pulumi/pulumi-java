@@ -149,52 +149,42 @@ public final class SloWindowsBasedSliArgs extends io.pulumi.resources.ResourceAr
             this.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
-
         public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
             this.goodBadMetricFilter = Output.ofNullable(goodBadMetricFilter);
             return this;
         }
-
         public Builder goodTotalRatioThreshold(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
-
         public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdArgs goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = Output.ofNullable(goodTotalRatioThreshold);
             return this;
         }
-
         public Builder metricMeanInRange(@Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange) {
             this.metricMeanInRange = metricMeanInRange;
             return this;
         }
-
         public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRangeArgs metricMeanInRange) {
             this.metricMeanInRange = Output.ofNullable(metricMeanInRange);
             return this;
         }
-
         public Builder metricSumInRange(@Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange) {
             this.metricSumInRange = metricSumInRange;
             return this;
         }
-
         public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRangeArgs metricSumInRange) {
             this.metricSumInRange = Output.ofNullable(metricSumInRange);
             return this;
         }
-
         public Builder windowPeriod(@Nullable Output<String> windowPeriod) {
             this.windowPeriod = windowPeriod;
             return this;
         }
-
         public Builder windowPeriod(@Nullable String windowPeriod) {
             this.windowPeriod = Output.ofNullable(windowPeriod);
             return this;
-        }
-        public SloWindowsBasedSliArgs build() {
+        }        public SloWindowsBasedSliArgs build() {
             return new SloWindowsBasedSliArgs(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }
     }

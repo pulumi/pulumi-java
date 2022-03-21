@@ -150,62 +150,50 @@ public final class DatasetAccessGetArgs extends io.pulumi.resources.ResourceArgs
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
-
         public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = Output.ofNullable(groupByEmail);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
-
         public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = Output.ofNullable(specialGroup);
             return this;
         }
-
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
-
         public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = Output.ofNullable(userByEmail);
             return this;
         }
-
         public Builder view(@Nullable Output<DatasetAccessViewGetArgs> view) {
             this.view = view;
             return this;
         }
-
         public Builder view(@Nullable DatasetAccessViewGetArgs view) {
             this.view = Output.ofNullable(view);
             return this;
-        }
-        public DatasetAccessGetArgs build() {
+        }        public DatasetAccessGetArgs build() {
             return new DatasetAccessGetArgs(domain, groupByEmail, role, specialGroup, userByEmail, view);
         }
     }

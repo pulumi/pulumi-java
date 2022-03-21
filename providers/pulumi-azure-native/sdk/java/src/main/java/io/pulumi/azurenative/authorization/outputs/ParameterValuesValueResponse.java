@@ -53,8 +53,7 @@ public final class ParameterValuesValueResponse {
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public ParameterValuesValueResponse build() {
+        }        public ParameterValuesValueResponse build() {
             return new ParameterValuesValueResponse(value);
         }
     }

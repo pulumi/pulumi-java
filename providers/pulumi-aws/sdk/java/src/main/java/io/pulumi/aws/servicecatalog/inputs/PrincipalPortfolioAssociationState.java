@@ -106,42 +106,34 @@ public final class PrincipalPortfolioAssociationState extends io.pulumi.resource
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
-
         public Builder portfolioId(@Nullable String portfolioId) {
             this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
-
         public Builder principalArn(@Nullable Output<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
-
         public Builder principalArn(@Nullable String principalArn) {
             this.principalArn = Output.ofNullable(principalArn);
             return this;
         }
-
         public Builder principalType(@Nullable Output<String> principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder principalType(@Nullable String principalType) {
             this.principalType = Output.ofNullable(principalType);
             return this;
-        }
-        public PrincipalPortfolioAssociationState build() {
+        }        public PrincipalPortfolioAssociationState build() {
             return new PrincipalPortfolioAssociationState(acceptLanguage, portfolioId, principalArn, principalType);
         }
     }

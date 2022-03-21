@@ -79,22 +79,18 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
-
         public Builder maxScaledInReplicas(@Nullable FixedOrPercentArgs maxScaledInReplicas) {
             this.maxScaledInReplicas = Output.ofNullable(maxScaledInReplicas);
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = Output.ofNullable(timeWindowSec);
             return this;
-        }
-        public AutoscalingPolicyScaleInControlArgs build() {
+        }        public AutoscalingPolicyScaleInControlArgs build() {
             return new AutoscalingPolicyScaleInControlArgs(maxScaledInReplicas, timeWindowSec);
         }
     }

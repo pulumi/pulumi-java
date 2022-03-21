@@ -104,22 +104,18 @@ public final class GetAdvancedThreatProtectionResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAdvancedThreatProtectionResult build() {
+        }        public GetAdvancedThreatProtectionResult build() {
             return new GetAdvancedThreatProtectionResult(id, isEnabled, name, type);
         }
     }

@@ -63,12 +63,10 @@ public final class FirewallPolicyFilterRuleActionArgs extends io.pulumi.resource
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,FirewallPolicyFilterRuleActionType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public FirewallPolicyFilterRuleActionArgs build() {
+        }        public FirewallPolicyFilterRuleActionArgs build() {
             return new FirewallPolicyFilterRuleActionArgs(type);
         }
     }

@@ -71,12 +71,10 @@ public final class GetTestResultFileResult {
             this.data = data;
             return this;
         }
-
         public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
-        }
-        public GetTestResultFileResult build() {
+        }        public GetTestResultFileResult build() {
             return new GetTestResultFileResult(data, nextLink);
         }
     }

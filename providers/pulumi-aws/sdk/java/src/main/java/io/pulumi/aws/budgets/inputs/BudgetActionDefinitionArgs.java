@@ -92,32 +92,26 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
-
         public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionArgs iamActionDefinition) {
             this.iamActionDefinition = Output.ofNullable(iamActionDefinition);
             return this;
         }
-
         public Builder scpActionDefinition(@Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
-
         public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionArgs scpActionDefinition) {
             this.scpActionDefinition = Output.ofNullable(scpActionDefinition);
             return this;
         }
-
         public Builder ssmActionDefinition(@Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }
-
         public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionArgs ssmActionDefinition) {
             this.ssmActionDefinition = Output.ofNullable(ssmActionDefinition);
             return this;
-        }
-        public BudgetActionDefinitionArgs build() {
+        }        public BudgetActionDefinitionArgs build() {
             return new BudgetActionDefinitionArgs(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
         }
     }

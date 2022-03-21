@@ -128,52 +128,45 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
             this.container = container;
             return this;
         }
-
         public Builder container(@Nullable String container) {
             this.container = Output.ofNullable(container);
             return this;
         }
-
         public Builder elementaryStreams(@Nullable Output<List<String>> elementaryStreams) {
             this.elementaryStreams = elementaryStreams;
             return this;
         }
-
         public Builder elementaryStreams(@Nullable List<String> elementaryStreams) {
             this.elementaryStreams = Output.ofNullable(elementaryStreams);
             return this;
         }
-
+        public Builder elementaryStreams(String... elementaryStreams) {
+            return elementaryStreams(List.of(elementaryStreams));
+        }
         public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
-
         public Builder fileName(@Nullable String fileName) {
             this.fileName = Output.ofNullable(fileName);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder segmentSettings(@Nullable Output<SegmentSettingsArgs> segmentSettings) {
             this.segmentSettings = segmentSettings;
             return this;
         }
-
         public Builder segmentSettings(@Nullable SegmentSettingsArgs segmentSettings) {
             this.segmentSettings = Output.ofNullable(segmentSettings);
             return this;
-        }
-        public MuxStreamArgs build() {
+        }        public MuxStreamArgs build() {
             return new MuxStreamArgs(container, elementaryStreams, fileName, key, segmentSettings);
         }
     }

@@ -51,8 +51,7 @@ public final class FlexibleAppVersionVpcAccessConnector {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public FlexibleAppVersionVpcAccessConnector build() {
+        }        public FlexibleAppVersionVpcAccessConnector build() {
             return new FlexibleAppVersionVpcAccessConnector(name);
         }
     }

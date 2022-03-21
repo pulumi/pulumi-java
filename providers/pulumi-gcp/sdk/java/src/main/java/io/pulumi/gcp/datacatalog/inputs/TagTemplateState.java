@@ -160,72 +160,61 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fields(@Nullable Output<List<TagTemplateFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<TagTemplateFieldGetArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(TagTemplateFieldGetArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder tagTemplateId(@Nullable Output<String> tagTemplateId) {
             this.tagTemplateId = tagTemplateId;
             return this;
         }
-
         public Builder tagTemplateId(@Nullable String tagTemplateId) {
             this.tagTemplateId = Output.ofNullable(tagTemplateId);
             return this;
-        }
-        public TagTemplateState build() {
+        }        public TagTemplateState build() {
             return new TagTemplateState(displayName, fields, forceDelete, name, project, region, tagTemplateId);
         }
     }

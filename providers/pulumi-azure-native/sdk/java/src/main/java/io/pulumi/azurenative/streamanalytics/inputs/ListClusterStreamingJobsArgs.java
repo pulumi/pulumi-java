@@ -72,12 +72,10 @@ public final class ListClusterStreamingJobsArgs extends io.pulumi.resources.Invo
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListClusterStreamingJobsArgs build() {
+        }        public ListClusterStreamingJobsArgs build() {
             return new ListClusterStreamingJobsArgs(clusterName, resourceGroupName);
         }
     }

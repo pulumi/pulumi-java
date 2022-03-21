@@ -323,182 +323,146 @@ public final class SnapshotImportState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder clientData(@Nullable Output<SnapshotImportClientDataGetArgs> clientData) {
             this.clientData = clientData;
             return this;
         }
-
         public Builder clientData(@Nullable SnapshotImportClientDataGetArgs clientData) {
             this.clientData = Output.ofNullable(clientData);
             return this;
         }
-
         public Builder dataEncryptionKeyId(@Nullable Output<String> dataEncryptionKeyId) {
             this.dataEncryptionKeyId = dataEncryptionKeyId;
             return this;
         }
-
         public Builder dataEncryptionKeyId(@Nullable String dataEncryptionKeyId) {
             this.dataEncryptionKeyId = Output.ofNullable(dataEncryptionKeyId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diskContainer(@Nullable Output<SnapshotImportDiskContainerGetArgs> diskContainer) {
             this.diskContainer = diskContainer;
             return this;
         }
-
         public Builder diskContainer(@Nullable SnapshotImportDiskContainerGetArgs diskContainer) {
             this.diskContainer = Output.ofNullable(diskContainer);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
-
         public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
-
         public Builder ownerAlias(@Nullable Output<String> ownerAlias) {
             this.ownerAlias = ownerAlias;
             return this;
         }
-
         public Builder ownerAlias(@Nullable String ownerAlias) {
             this.ownerAlias = Output.ofNullable(ownerAlias);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
-
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
             this.permanentRestore = Output.ofNullable(permanentRestore);
             return this;
         }
-
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder storageTier(@Nullable Output<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
-
         public Builder storageTier(@Nullable String storageTier) {
             this.storageTier = Output.ofNullable(storageTier);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
-
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
             this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
             return this;
         }
-
         public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
-
         public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = Output.ofNullable(volumeId);
             return this;
         }
-
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
-
         public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Output.ofNullable(volumeSize);
             return this;
-        }
-        public SnapshotImportState build() {
+        }        public SnapshotImportState build() {
             return new SnapshotImportState(arn, clientData, dataEncryptionKeyId, description, diskContainer, encrypted, kmsKeyId, outpostArn, ownerAlias, ownerId, permanentRestore, roleName, storageTier, tags, tagsAll, temporaryRestoreDays, volumeId, volumeSize);
         }
     }

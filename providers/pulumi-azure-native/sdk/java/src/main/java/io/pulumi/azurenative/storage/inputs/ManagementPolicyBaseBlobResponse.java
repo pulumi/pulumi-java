@@ -111,22 +111,18 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
             this.delete = delete;
             return this;
         }
-
         public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
-
         public Builder tierToArchive(@Nullable DateAfterModificationResponse tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
-
         public Builder tierToCool(@Nullable DateAfterModificationResponse tierToCool) {
             this.tierToCool = tierToCool;
             return this;
-        }
-        public ManagementPolicyBaseBlobResponse build() {
+        }        public ManagementPolicyBaseBlobResponse build() {
             return new ManagementPolicyBaseBlobResponse(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
         }
     }

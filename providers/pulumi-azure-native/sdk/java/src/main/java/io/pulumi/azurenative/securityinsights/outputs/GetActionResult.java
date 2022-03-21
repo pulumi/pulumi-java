@@ -135,32 +135,26 @@ public final class GetActionResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder logicAppResourceId(String logicAppResourceId) {
             this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder workflowId(@Nullable String workflowId) {
             this.workflowId = workflowId;
             return this;
-        }
-        public GetActionResult build() {
+        }        public GetActionResult build() {
             return new GetActionResult(etag, id, logicAppResourceId, name, type, workflowId);
         }
     }

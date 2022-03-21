@@ -350,192 +350,163 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
-
         public Builder blockDeviceMappings(@Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-
         public Builder blockDeviceMappings(@Nullable List<LaunchConfigurationBlockDeviceMappingArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
-
+        public Builder blockDeviceMappings(LaunchConfigurationBlockDeviceMappingArgs... blockDeviceMappings) {
+            return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
         public Builder classicLinkVPCId(@Nullable Output<String> classicLinkVPCId) {
             this.classicLinkVPCId = classicLinkVPCId;
             return this;
         }
-
         public Builder classicLinkVPCId(@Nullable String classicLinkVPCId) {
             this.classicLinkVPCId = Output.ofNullable(classicLinkVPCId);
             return this;
         }
-
         public Builder classicLinkVPCSecurityGroups(@Nullable Output<List<String>> classicLinkVPCSecurityGroups) {
             this.classicLinkVPCSecurityGroups = classicLinkVPCSecurityGroups;
             return this;
         }
-
         public Builder classicLinkVPCSecurityGroups(@Nullable List<String> classicLinkVPCSecurityGroups) {
             this.classicLinkVPCSecurityGroups = Output.ofNullable(classicLinkVPCSecurityGroups);
             return this;
         }
-
+        public Builder classicLinkVPCSecurityGroups(String... classicLinkVPCSecurityGroups) {
+            return classicLinkVPCSecurityGroups(List.of(classicLinkVPCSecurityGroups));
+        }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-
         public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
             this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
             return this;
         }
-
         public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder imageId(String imageId) {
             this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder instanceMonitoring(@Nullable Output<Boolean> instanceMonitoring) {
             this.instanceMonitoring = instanceMonitoring;
             return this;
         }
-
         public Builder instanceMonitoring(@Nullable Boolean instanceMonitoring) {
             this.instanceMonitoring = Output.ofNullable(instanceMonitoring);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder kernelId(@Nullable Output<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
-
         public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Output.ofNullable(kernelId);
             return this;
         }
-
         public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = Output.ofNullable(keyName);
             return this;
         }
-
         public Builder launchConfigurationName(@Nullable Output<String> launchConfigurationName) {
             this.launchConfigurationName = launchConfigurationName;
             return this;
         }
-
         public Builder launchConfigurationName(@Nullable String launchConfigurationName) {
             this.launchConfigurationName = Output.ofNullable(launchConfigurationName);
             return this;
         }
-
         public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
-
         public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsArgs metadataOptions) {
             this.metadataOptions = Output.ofNullable(metadataOptions);
             return this;
         }
-
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
-
         public Builder placementTenancy(@Nullable String placementTenancy) {
             this.placementTenancy = Output.ofNullable(placementTenancy);
             return this;
         }
-
         public Builder ramDiskId(@Nullable Output<String> ramDiskId) {
             this.ramDiskId = ramDiskId;
             return this;
         }
-
         public Builder ramDiskId(@Nullable String ramDiskId) {
             this.ramDiskId = Output.ofNullable(ramDiskId);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
-        }
-        public LaunchConfigurationArgs build() {
+        }        public LaunchConfigurationArgs build() {
             return new LaunchConfigurationArgs(associatePublicIpAddress, blockDeviceMappings, classicLinkVPCId, classicLinkVPCSecurityGroups, ebsOptimized, iamInstanceProfile, imageId, instanceId, instanceMonitoring, instanceType, kernelId, keyName, launchConfigurationName, metadataOptions, placementTenancy, ramDiskId, securityGroups, spotPrice, userData);
         }
     }

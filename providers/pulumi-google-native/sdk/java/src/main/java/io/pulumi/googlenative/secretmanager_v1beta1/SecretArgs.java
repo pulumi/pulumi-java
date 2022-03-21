@@ -100,42 +100,34 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder replication(Output<ReplicationArgs> replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
-
         public Builder replication(ReplicationArgs replication) {
             this.replication = Output.of(Objects.requireNonNull(replication));
             return this;
         }
-
         public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder secretId(String secretId) {
             this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(labels, project, replication, secretId);
         }
     }

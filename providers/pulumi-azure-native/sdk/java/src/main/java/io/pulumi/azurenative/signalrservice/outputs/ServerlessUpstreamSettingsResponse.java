@@ -54,7 +54,9 @@ public final class ServerlessUpstreamSettingsResponse {
             this.templates = templates;
             return this;
         }
-        public ServerlessUpstreamSettingsResponse build() {
+        public Builder templates(UpstreamTemplateResponse... templates) {
+            return templates(List.of(templates));
+        }        public ServerlessUpstreamSettingsResponse build() {
             return new ServerlessUpstreamSettingsResponse(templates);
         }
     }

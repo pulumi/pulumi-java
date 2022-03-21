@@ -325,172 +325,153 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             this.accessLogs = accessLogs;
             return this;
         }
-
         public Builder accessLogs(@Nullable LoadBalancerAccessLogsArgs accessLogs) {
             this.accessLogs = Output.ofNullable(accessLogs);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder connectionDraining(@Nullable Output<Boolean> connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
-
         public Builder connectionDraining(@Nullable Boolean connectionDraining) {
             this.connectionDraining = Output.ofNullable(connectionDraining);
             return this;
         }
-
         public Builder connectionDrainingTimeout(@Nullable Output<Integer> connectionDrainingTimeout) {
             this.connectionDrainingTimeout = connectionDrainingTimeout;
             return this;
         }
-
         public Builder connectionDrainingTimeout(@Nullable Integer connectionDrainingTimeout) {
             this.connectionDrainingTimeout = Output.ofNullable(connectionDrainingTimeout);
             return this;
         }
-
         public Builder crossZoneLoadBalancing(@Nullable Output<Boolean> crossZoneLoadBalancing) {
             this.crossZoneLoadBalancing = crossZoneLoadBalancing;
             return this;
         }
-
         public Builder crossZoneLoadBalancing(@Nullable Boolean crossZoneLoadBalancing) {
             this.crossZoneLoadBalancing = Output.ofNullable(crossZoneLoadBalancing);
             return this;
         }
-
         public Builder desyncMitigationMode(@Nullable Output<String> desyncMitigationMode) {
             this.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
-
         public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
             this.desyncMitigationMode = Output.ofNullable(desyncMitigationMode);
             return this;
         }
-
         public Builder healthCheck(@Nullable Output<LoadBalancerHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder healthCheck(@Nullable LoadBalancerHealthCheckArgs healthCheck) {
             this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
-
         public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
-
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
         }
-
         public Builder instances(@Nullable Output<List<String>> instances) {
             this.instances = instances;
             return this;
         }
-
         public Builder instances(@Nullable List<String> instances) {
             this.instances = Output.ofNullable(instances);
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder internal(@Nullable Output<Boolean> internal) {
             this.internal = internal;
             return this;
         }
-
         public Builder internal(@Nullable Boolean internal) {
             this.internal = Output.ofNullable(internal);
             return this;
         }
-
         public Builder listeners(Output<List<LoadBalancerListenerArgs>> listeners) {
             this.listeners = Objects.requireNonNull(listeners);
             return this;
         }
-
         public Builder listeners(List<LoadBalancerListenerArgs> listeners) {
             this.listeners = Output.of(Objects.requireNonNull(listeners));
             return this;
         }
-
+        public Builder listeners(LoadBalancerListenerArgs... listeners) {
+            return listeners(List.of(listeners));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sourceSecurityGroup(@Nullable Output<String> sourceSecurityGroup) {
             this.sourceSecurityGroup = sourceSecurityGroup;
             return this;
         }
-
         public Builder sourceSecurityGroup(@Nullable String sourceSecurityGroup) {
             this.sourceSecurityGroup = Output.ofNullable(sourceSecurityGroup);
             return this;
         }
-
         public Builder subnets(@Nullable Output<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
-
         public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = Output.ofNullable(subnets);
             return this;
         }
-
+        public Builder subnets(String... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LoadBalancerArgs build() {
+        }        public LoadBalancerArgs build() {
             return new LoadBalancerArgs(accessLogs, availabilityZones, connectionDraining, connectionDrainingTimeout, crossZoneLoadBalancing, desyncMitigationMode, healthCheck, idleTimeout, instances, internal, listeners, name, namePrefix, securityGroups, sourceSecurityGroup, subnets, tags);
         }
     }

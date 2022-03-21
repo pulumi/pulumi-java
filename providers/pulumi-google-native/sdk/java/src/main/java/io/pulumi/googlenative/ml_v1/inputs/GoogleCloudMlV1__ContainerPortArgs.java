@@ -61,12 +61,10 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resource
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Output.ofNullable(containerPort);
             return this;
-        }
-        public GoogleCloudMlV1__ContainerPortArgs build() {
+        }        public GoogleCloudMlV1__ContainerPortArgs build() {
             return new GoogleCloudMlV1__ContainerPortArgs(containerPort);
         }
     }

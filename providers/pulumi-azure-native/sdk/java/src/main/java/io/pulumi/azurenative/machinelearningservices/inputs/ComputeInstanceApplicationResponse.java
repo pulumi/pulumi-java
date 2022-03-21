@@ -78,12 +78,10 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
             this.displayName = displayName;
             return this;
         }
-
         public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
-        }
-        public ComputeInstanceApplicationResponse build() {
+        }        public ComputeInstanceApplicationResponse build() {
             return new ComputeInstanceApplicationResponse(displayName, endpointUri);
         }
     }

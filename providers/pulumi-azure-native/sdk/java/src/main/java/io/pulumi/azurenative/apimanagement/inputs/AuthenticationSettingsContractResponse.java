@@ -79,12 +79,10 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
             this.oAuth2 = oAuth2;
             return this;
         }
-
         public Builder openid(@Nullable OpenIdAuthenticationSettingsContractResponse openid) {
             this.openid = openid;
             return this;
-        }
-        public AuthenticationSettingsContractResponse build() {
+        }        public AuthenticationSettingsContractResponse build() {
             return new AuthenticationSettingsContractResponse(oAuth2, openid);
         }
     }

@@ -111,42 +111,34 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public Builder storageAccountKey(@Nullable Output<String> storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
-
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
             this.storageAccountKey = Output.ofNullable(storageAccountKey);
             return this;
         }
-
         public Builder storageAccountName(Output<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
             return this;
-        }
-        public AzureFileVolumeArgs build() {
+        }        public AzureFileVolumeArgs build() {
             return new AzureFileVolumeArgs(readOnly, shareName, storageAccountKey, storageAccountName);
         }
     }

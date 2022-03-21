@@ -143,32 +143,26 @@ public final class RuleMetricDataSourceResponse extends io.pulumi.resources.Invo
             this.legacyResourceId = legacyResourceId;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
-        }
-        public RuleMetricDataSourceResponse build() {
+        }        public RuleMetricDataSourceResponse build() {
             return new RuleMetricDataSourceResponse(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }
     }

@@ -57,12 +57,10 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
             this.capacityReservationId = capacityReservationId;
             return this;
         }
-
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = Output.ofNullable(capacityReservationId);
             return this;
-        }
-        public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs build() {
+        }        public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs build() {
             return new LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs(capacityReservationId);
         }
     }

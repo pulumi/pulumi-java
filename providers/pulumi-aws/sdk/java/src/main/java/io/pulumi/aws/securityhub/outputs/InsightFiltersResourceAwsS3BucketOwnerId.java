@@ -69,12 +69,10 @@ public final class InsightFiltersResourceAwsS3BucketOwnerId {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsS3BucketOwnerId build() {
+        }        public InsightFiltersResourceAwsS3BucketOwnerId build() {
             return new InsightFiltersResourceAwsS3BucketOwnerId(comparison, value);
         }
     }

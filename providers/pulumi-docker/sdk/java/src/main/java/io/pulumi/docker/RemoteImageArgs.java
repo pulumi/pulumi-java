@@ -149,62 +149,53 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable RemoteImageBuildArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
-
         public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = Output.ofNullable(forceRemove);
             return this;
         }
-
         public Builder keepLocally(@Nullable Output<Boolean> keepLocally) {
             this.keepLocally = keepLocally;
             return this;
         }
-
         public Builder keepLocally(@Nullable Boolean keepLocally) {
             this.keepLocally = Output.ofNullable(keepLocally);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder pullTrigger(@Nullable Output<String> pullTrigger) {
             this.pullTrigger = pullTrigger;
             return this;
         }
-
         public Builder pullTrigger(@Nullable String pullTrigger) {
             this.pullTrigger = Output.ofNullable(pullTrigger);
             return this;
         }
-
         public Builder pullTriggers(@Nullable Output<List<String>> pullTriggers) {
             this.pullTriggers = pullTriggers;
             return this;
         }
-
         public Builder pullTriggers(@Nullable List<String> pullTriggers) {
             this.pullTriggers = Output.ofNullable(pullTriggers);
             return this;
         }
-        public RemoteImageArgs build() {
+        public Builder pullTriggers(String... pullTriggers) {
+            return pullTriggers(List.of(pullTriggers));
+        }        public RemoteImageArgs build() {
             return new RemoteImageArgs(build, forceRemove, keepLocally, name, pullTrigger, pullTriggers);
         }
     }

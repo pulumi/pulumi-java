@@ -179,82 +179,66 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
-
         public Builder createOption(Either<String,DiskCreateOption> createOption) {
             this.createOption = Output.of(Objects.requireNonNull(createOption));
             return this;
         }
-
         public Builder galleryImageReference(@Nullable Output<ImageDiskReferenceArgs> galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
-
         public Builder galleryImageReference(@Nullable ImageDiskReferenceArgs galleryImageReference) {
             this.galleryImageReference = Output.ofNullable(galleryImageReference);
             return this;
         }
-
         public Builder imageReference(@Nullable Output<ImageDiskReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
-
         public Builder imageReference(@Nullable ImageDiskReferenceArgs imageReference) {
             this.imageReference = Output.ofNullable(imageReference);
             return this;
         }
-
         public Builder logicalSectorSize(@Nullable Output<Integer> logicalSectorSize) {
             this.logicalSectorSize = logicalSectorSize;
             return this;
         }
-
         public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
             this.logicalSectorSize = Output.ofNullable(logicalSectorSize);
             return this;
         }
-
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
-
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
-
         public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = Output.ofNullable(sourceUri);
             return this;
         }
-
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
-
         public Builder uploadSizeBytes(@Nullable Output<Double> uploadSizeBytes) {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
-
         public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
             this.uploadSizeBytes = Output.ofNullable(uploadSizeBytes);
             return this;
-        }
-        public CreationDataArgs build() {
+        }        public CreationDataArgs build() {
             return new CreationDataArgs(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUri, storageAccountId, uploadSizeBytes);
         }
     }

@@ -173,42 +173,37 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
-
         public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
-
         public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
-
+        public Builder networkTags(String... networkTags) {
+            return networkTags(List.of(networkTags));
+        }
         public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public InstanceInfoResponse build() {
+        }        public InstanceInfoResponse build() {
             return new InstanceInfoResponse(displayName, externalIp, $interface, internalIp, networkTags, networkUri, serviceAccount, uri);
         }
     }

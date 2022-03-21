@@ -105,22 +105,21 @@ public final class AssetModelCompositeModel {
             this.compositeModelProperties = compositeModelProperties;
             return this;
         }
-
+        public Builder compositeModelProperties(AssetModelProperty... compositeModelProperties) {
+            return compositeModelProperties(List.of(compositeModelProperties));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AssetModelCompositeModel build() {
+        }        public AssetModelCompositeModel build() {
             return new AssetModelCompositeModel(compositeModelProperties, description, name, type);
         }
     }

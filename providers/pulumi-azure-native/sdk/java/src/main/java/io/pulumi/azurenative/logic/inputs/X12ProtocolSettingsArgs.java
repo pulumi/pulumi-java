@@ -250,122 +250,113 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
-
         public Builder acknowledgementSettings(X12AcknowledgementSettingsArgs acknowledgementSettings) {
             this.acknowledgementSettings = Output.of(Objects.requireNonNull(acknowledgementSettings));
             return this;
         }
-
         public Builder envelopeOverrides(@Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
-
         public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideArgs> envelopeOverrides) {
             this.envelopeOverrides = Output.ofNullable(envelopeOverrides);
             return this;
         }
-
+        public Builder envelopeOverrides(X12EnvelopeOverrideArgs... envelopeOverrides) {
+            return envelopeOverrides(List.of(envelopeOverrides));
+        }
         public Builder envelopeSettings(Output<X12EnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
-
         public Builder envelopeSettings(X12EnvelopeSettingsArgs envelopeSettings) {
             this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
-
         public Builder framingSettings(Output<X12FramingSettingsArgs> framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
-
         public Builder framingSettings(X12FramingSettingsArgs framingSettings) {
             this.framingSettings = Output.of(Objects.requireNonNull(framingSettings));
             return this;
         }
-
         public Builder messageFilter(Output<X12MessageFilterArgs> messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
-
         public Builder messageFilter(X12MessageFilterArgs messageFilter) {
             this.messageFilter = Output.of(Objects.requireNonNull(messageFilter));
             return this;
         }
-
         public Builder messageFilterList(@Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
-
         public Builder messageFilterList(@Nullable List<X12MessageIdentifierArgs> messageFilterList) {
             this.messageFilterList = Output.ofNullable(messageFilterList);
             return this;
         }
-
+        public Builder messageFilterList(X12MessageIdentifierArgs... messageFilterList) {
+            return messageFilterList(List.of(messageFilterList));
+        }
         public Builder processingSettings(Output<X12ProcessingSettingsArgs> processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
-
         public Builder processingSettings(X12ProcessingSettingsArgs processingSettings) {
             this.processingSettings = Output.of(Objects.requireNonNull(processingSettings));
             return this;
         }
-
         public Builder schemaReferences(Output<List<X12SchemaReferenceArgs>> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
-
         public Builder schemaReferences(List<X12SchemaReferenceArgs> schemaReferences) {
             this.schemaReferences = Output.of(Objects.requireNonNull(schemaReferences));
             return this;
         }
-
+        public Builder schemaReferences(X12SchemaReferenceArgs... schemaReferences) {
+            return schemaReferences(List.of(schemaReferences));
+        }
         public Builder securitySettings(Output<X12SecuritySettingsArgs> securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
-
         public Builder securitySettings(X12SecuritySettingsArgs securitySettings) {
             this.securitySettings = Output.of(Objects.requireNonNull(securitySettings));
             return this;
         }
-
         public Builder validationOverrides(@Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
-
         public Builder validationOverrides(@Nullable List<X12ValidationOverrideArgs> validationOverrides) {
             this.validationOverrides = Output.ofNullable(validationOverrides);
             return this;
         }
-
+        public Builder validationOverrides(X12ValidationOverrideArgs... validationOverrides) {
+            return validationOverrides(List.of(validationOverrides));
+        }
         public Builder validationSettings(Output<X12ValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public Builder validationSettings(X12ValidationSettingsArgs validationSettings) {
             this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
             return this;
         }
-
         public Builder x12DelimiterOverrides(@Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
-
         public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesArgs> x12DelimiterOverrides) {
             this.x12DelimiterOverrides = Output.ofNullable(x12DelimiterOverrides);
             return this;
         }
-        public X12ProtocolSettingsArgs build() {
+        public Builder x12DelimiterOverrides(X12DelimiterOverridesArgs... x12DelimiterOverrides) {
+            return x12DelimiterOverrides(List.of(x12DelimiterOverrides));
+        }        public X12ProtocolSettingsArgs build() {
             return new X12ProtocolSettingsArgs(acknowledgementSettings, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, securitySettings, validationOverrides, validationSettings, x12DelimiterOverrides);
         }
     }

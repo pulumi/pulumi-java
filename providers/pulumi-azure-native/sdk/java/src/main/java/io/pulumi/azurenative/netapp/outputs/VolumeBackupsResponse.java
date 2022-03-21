@@ -89,17 +89,14 @@ public final class VolumeBackupsResponse {
             this.backupsCount = backupsCount;
             return this;
         }
-
         public Builder policyEnabled(@Nullable Boolean policyEnabled) {
             this.policyEnabled = policyEnabled;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
-        }
-        public VolumeBackupsResponse build() {
+        }        public VolumeBackupsResponse build() {
             return new VolumeBackupsResponse(backupsCount, policyEnabled, volumeName);
         }
     }

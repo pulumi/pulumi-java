@@ -143,62 +143,50 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
             this.databaseVersion = databaseVersion;
             return this;
         }
-
         public Builder databaseVersion(@Nullable String databaseVersion) {
             this.databaseVersion = Output.ofNullable(databaseVersion);
             return this;
         }
-
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public SourceRepresentationInstanceState build() {
+        }        public SourceRepresentationInstanceState build() {
             return new SourceRepresentationInstanceState(databaseVersion, host, name, port, project, region);
         }
     }

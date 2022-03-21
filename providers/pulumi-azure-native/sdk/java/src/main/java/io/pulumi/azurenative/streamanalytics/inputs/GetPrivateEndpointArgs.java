@@ -88,17 +88,14 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPrivateEndpointArgs build() {
+        }        public GetPrivateEndpointArgs build() {
             return new GetPrivateEndpointArgs(clusterName, privateEndpointName, resourceGroupName);
         }
     }

@@ -50,8 +50,7 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public GetKeyArgs build() {
+        }        public GetKeyArgs build() {
             return new GetKeyArgs(keyId);
         }
     }

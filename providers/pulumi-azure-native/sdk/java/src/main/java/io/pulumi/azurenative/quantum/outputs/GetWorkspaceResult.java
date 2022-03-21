@@ -236,62 +236,53 @@ public final class GetWorkspaceResult {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable QuantumWorkspaceResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder providers(@Nullable List<ProviderResponse> providers) {
             this.providers = providers;
             return this;
         }
-
+        public Builder providers(ProviderResponse... providers) {
+            return providers(List.of(providers));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder usable(String usable) {
             this.usable = Objects.requireNonNull(usable);
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(endpointUri, id, identity, location, name, providers, provisioningState, storageAccount, systemData, tags, type, usable);
         }
     }

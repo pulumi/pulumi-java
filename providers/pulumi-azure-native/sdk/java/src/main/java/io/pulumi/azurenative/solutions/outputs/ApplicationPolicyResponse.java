@@ -87,17 +87,14 @@ public final class ApplicationPolicyResponse {
             this.name = name;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
-        }
-        public ApplicationPolicyResponse build() {
+        }        public ApplicationPolicyResponse build() {
             return new ApplicationPolicyResponse(name, parameters, policyDefinitionId);
         }
     }

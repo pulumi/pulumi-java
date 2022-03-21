@@ -140,62 +140,50 @@ public final class LedgerState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissionsMode(@Nullable Output<String> permissionsMode) {
             this.permissionsMode = permissionsMode;
             return this;
         }
-
         public Builder permissionsMode(@Nullable String permissionsMode) {
             this.permissionsMode = Output.ofNullable(permissionsMode);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public LedgerState build() {
+        }        public LedgerState build() {
             return new LedgerState(arn, deletionProtection, name, permissionsMode, tags, tagsAll);
         }
     }

@@ -108,22 +108,21 @@ public final class RequestSchemeMatchConditionParametersResponse extends io.pulu
             this.matchValues = matchValues;
             return this;
         }
-
+        public Builder matchValues(String... matchValues) {
+            return matchValues(List.of(matchValues));
+        }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
-        }
-        public RequestSchemeMatchConditionParametersResponse build() {
+        }        public RequestSchemeMatchConditionParametersResponse build() {
             return new RequestSchemeMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator);
         }
     }

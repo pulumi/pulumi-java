@@ -88,17 +88,14 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
             this.failoverGroupName = Objects.requireNonNull(failoverGroupName);
             return this;
         }
-
         public Builder locationName(String locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetInstanceFailoverGroupArgs build() {
+        }        public GetInstanceFailoverGroupArgs build() {
             return new GetInstanceFailoverGroupArgs(failoverGroupName, locationName, resourceGroupName);
         }
     }

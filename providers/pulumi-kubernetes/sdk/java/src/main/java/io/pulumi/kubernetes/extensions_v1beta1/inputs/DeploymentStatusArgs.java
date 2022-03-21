@@ -176,82 +176,69 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             this.availableReplicas = availableReplicas;
             return this;
         }
-
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = Output.ofNullable(availableReplicas);
             return this;
         }
-
         public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
-
         public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = Output.ofNullable(collisionCount);
             return this;
         }
-
         public Builder conditions(@Nullable Output<List<DeploymentConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<DeploymentConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
+        public Builder conditions(DeploymentConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
-
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
-
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = Output.ofNullable(readyReplicas);
             return this;
         }
-
         public Builder replicas(@Nullable Output<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Output.ofNullable(replicas);
             return this;
         }
-
         public Builder unavailableReplicas(@Nullable Output<Integer> unavailableReplicas) {
             this.unavailableReplicas = unavailableReplicas;
             return this;
         }
-
         public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
             this.unavailableReplicas = Output.ofNullable(unavailableReplicas);
             return this;
         }
-
         public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = Output.ofNullable(updatedReplicas);
             return this;
-        }
-        public DeploymentStatusArgs build() {
+        }        public DeploymentStatusArgs build() {
             return new DeploymentStatusArgs(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);
         }
     }

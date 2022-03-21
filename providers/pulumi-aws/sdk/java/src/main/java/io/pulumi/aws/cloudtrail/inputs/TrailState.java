@@ -352,192 +352,163 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             this.advancedEventSelectors = advancedEventSelectors;
             return this;
         }
-
         public Builder advancedEventSelectors(@Nullable List<TrailAdvancedEventSelectorGetArgs> advancedEventSelectors) {
             this.advancedEventSelectors = Output.ofNullable(advancedEventSelectors);
             return this;
         }
-
+        public Builder advancedEventSelectors(TrailAdvancedEventSelectorGetArgs... advancedEventSelectors) {
+            return advancedEventSelectors(List.of(advancedEventSelectors));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cloudWatchLogsGroupArn(@Nullable Output<String> cloudWatchLogsGroupArn) {
             this.cloudWatchLogsGroupArn = cloudWatchLogsGroupArn;
             return this;
         }
-
         public Builder cloudWatchLogsGroupArn(@Nullable String cloudWatchLogsGroupArn) {
             this.cloudWatchLogsGroupArn = Output.ofNullable(cloudWatchLogsGroupArn);
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable Output<String> cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = Output.ofNullable(cloudWatchLogsRoleArn);
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Output<Boolean> enableLogFileValidation) {
             this.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
             this.enableLogFileValidation = Output.ofNullable(enableLogFileValidation);
             return this;
         }
-
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
-
         public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Output.ofNullable(enableLogging);
             return this;
         }
-
         public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors) {
             this.eventSelectors = eventSelectors;
             return this;
         }
-
         public Builder eventSelectors(@Nullable List<TrailEventSelectorGetArgs> eventSelectors) {
             this.eventSelectors = Output.ofNullable(eventSelectors);
             return this;
         }
-
+        public Builder eventSelectors(TrailEventSelectorGetArgs... eventSelectors) {
+            return eventSelectors(List.of(eventSelectors));
+        }
         public Builder homeRegion(@Nullable Output<String> homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
-
         public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = Output.ofNullable(homeRegion);
             return this;
         }
-
         public Builder includeGlobalServiceEvents(@Nullable Output<Boolean> includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
-
         public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = Output.ofNullable(includeGlobalServiceEvents);
             return this;
         }
-
         public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors) {
             this.insightSelectors = insightSelectors;
             return this;
         }
-
         public Builder insightSelectors(@Nullable List<TrailInsightSelectorGetArgs> insightSelectors) {
             this.insightSelectors = Output.ofNullable(insightSelectors);
             return this;
         }
-
+        public Builder insightSelectors(TrailInsightSelectorGetArgs... insightSelectors) {
+            return insightSelectors(List.of(insightSelectors));
+        }
         public Builder isMultiRegionTrail(@Nullable Output<Boolean> isMultiRegionTrail) {
             this.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
-
         public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
             this.isMultiRegionTrail = Output.ofNullable(isMultiRegionTrail);
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Output<Boolean> isOrganizationTrail) {
             this.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
             this.isOrganizationTrail = Output.ofNullable(isOrganizationTrail);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = Output.ofNullable(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
-
         public Builder snsTopicName(@Nullable Output<String> snsTopicName) {
             this.snsTopicName = snsTopicName;
             return this;
         }
-
         public Builder snsTopicName(@Nullable String snsTopicName) {
             this.snsTopicName = Output.ofNullable(snsTopicName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public TrailState build() {
+        }        public TrailState build() {
             return new TrailState(advancedEventSelectors, arn, cloudWatchLogsGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, enableLogging, eventSelectors, homeRegion, includeGlobalServiceEvents, insightSelectors, isMultiRegionTrail, isOrganizationTrail, kmsKeyId, name, s3BucketName, s3KeyPrefix, snsTopicName, tags, tagsAll);
         }
     }

@@ -207,92 +207,74 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
-
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
             return this;
         }
-
         public Builder deleteDefaultRoutesOnCreate(@Nullable Output<Boolean> deleteDefaultRoutesOnCreate) {
             this.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
             return this;
         }
-
         public Builder deleteDefaultRoutesOnCreate(@Nullable Boolean deleteDefaultRoutesOnCreate) {
             this.deleteDefaultRoutesOnCreate = Output.ofNullable(deleteDefaultRoutesOnCreate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder gatewayIpv4(@Nullable Output<String> gatewayIpv4) {
             this.gatewayIpv4 = gatewayIpv4;
             return this;
         }
-
         public Builder gatewayIpv4(@Nullable String gatewayIpv4) {
             this.gatewayIpv4 = Output.ofNullable(gatewayIpv4);
             return this;
         }
-
         public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder routingMode(@Nullable Output<String> routingMode) {
             this.routingMode = routingMode;
             return this;
         }
-
         public Builder routingMode(@Nullable String routingMode) {
             this.routingMode = Output.ofNullable(routingMode);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public NetworkState build() {
+        }        public NetworkState build() {
             return new NetworkState(autoCreateSubnetworks, deleteDefaultRoutesOnCreate, description, gatewayIpv4, mtu, name, project, routingMode, selfLink);
         }
     }

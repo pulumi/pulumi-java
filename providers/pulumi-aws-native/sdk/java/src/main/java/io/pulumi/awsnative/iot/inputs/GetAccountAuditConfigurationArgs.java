@@ -54,8 +54,7 @@ public final class GetAccountAuditConfigurationArgs extends io.pulumi.resources.
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
-        }
-        public GetAccountAuditConfigurationArgs build() {
+        }        public GetAccountAuditConfigurationArgs build() {
             return new GetAccountAuditConfigurationArgs(accountId);
         }
     }

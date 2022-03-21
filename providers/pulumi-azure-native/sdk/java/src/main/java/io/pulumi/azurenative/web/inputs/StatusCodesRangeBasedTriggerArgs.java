@@ -107,42 +107,34 @@ public final class StatusCodesRangeBasedTriggerArgs extends io.pulumi.resources.
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder statusCodes(@Nullable Output<String> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
-
         public Builder statusCodes(@Nullable String statusCodes) {
             this.statusCodes = Output.ofNullable(statusCodes);
             return this;
         }
-
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = Output.ofNullable(timeInterval);
             return this;
-        }
-        public StatusCodesRangeBasedTriggerArgs build() {
+        }        public StatusCodesRangeBasedTriggerArgs build() {
             return new StatusCodesRangeBasedTriggerArgs(count, path, statusCodes, timeInterval);
         }
     }

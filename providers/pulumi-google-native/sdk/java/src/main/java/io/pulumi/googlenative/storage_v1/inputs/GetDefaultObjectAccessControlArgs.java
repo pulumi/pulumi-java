@@ -90,22 +90,18 @@ public final class GetDefaultObjectAccessControlArgs extends io.pulumi.resources
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetDefaultObjectAccessControlArgs build() {
+        }        public GetDefaultObjectAccessControlArgs build() {
             return new GetDefaultObjectAccessControlArgs(bucket, entity, provisionalUserProject, userProject);
         }
     }

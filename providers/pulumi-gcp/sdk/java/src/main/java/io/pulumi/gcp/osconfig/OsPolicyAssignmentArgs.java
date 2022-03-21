@@ -158,72 +158,61 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder instanceFilter(Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
-
         public Builder instanceFilter(OsPolicyAssignmentInstanceFilterArgs instanceFilter) {
             this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osPolicies(Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies) {
             this.osPolicies = Objects.requireNonNull(osPolicies);
             return this;
         }
-
         public Builder osPolicies(List<OsPolicyAssignmentOsPolicyArgs> osPolicies) {
             this.osPolicies = Output.of(Objects.requireNonNull(osPolicies));
             return this;
         }
-
+        public Builder osPolicies(OsPolicyAssignmentOsPolicyArgs... osPolicies) {
+            return osPolicies(List.of(osPolicies));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rollout(Output<OsPolicyAssignmentRolloutArgs> rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
-
         public Builder rollout(OsPolicyAssignmentRolloutArgs rollout) {
             this.rollout = Output.of(Objects.requireNonNull(rollout));
             return this;
-        }
-        public OsPolicyAssignmentArgs build() {
+        }        public OsPolicyAssignmentArgs build() {
             return new OsPolicyAssignmentArgs(description, instanceFilter, location, name, osPolicies, project, rollout);
         }
     }

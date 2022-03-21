@@ -185,47 +185,44 @@ public final class GetMetricStreamResult {
             this.arn = arn;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder excludeFilters(@Nullable List<MetricStreamFilter> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
-
+        public Builder excludeFilters(MetricStreamFilter... excludeFilters) {
+            return excludeFilters(List.of(excludeFilters));
+        }
         public Builder firehoseArn(@Nullable String firehoseArn) {
             this.firehoseArn = firehoseArn;
             return this;
         }
-
         public Builder includeFilters(@Nullable List<MetricStreamFilter> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
-
+        public Builder includeFilters(MetricStreamFilter... includeFilters) {
+            return includeFilters(List.of(includeFilters));
+        }
         public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
             this.lastUpdateDate = lastUpdateDate;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public GetMetricStreamResult build() {
+        }        public GetMetricStreamResult build() {
             return new GetMetricStreamResult(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, outputFormat, roleArn, state);
         }
     }

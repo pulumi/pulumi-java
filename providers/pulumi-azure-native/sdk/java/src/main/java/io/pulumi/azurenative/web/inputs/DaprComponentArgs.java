@@ -112,42 +112,37 @@ public final class DaprComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable List<DaprMetadataArgs> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
+        public Builder metadata(DaprMetadataArgs... metadata) {
+            return metadata(List.of(metadata));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public DaprComponentArgs build() {
+        }        public DaprComponentArgs build() {
             return new DaprComponentArgs(metadata, name, type, version);
         }
     }

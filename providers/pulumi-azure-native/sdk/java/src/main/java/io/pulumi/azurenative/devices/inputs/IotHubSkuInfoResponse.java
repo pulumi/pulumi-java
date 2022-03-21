@@ -95,17 +95,14 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
-        }
-        public IotHubSkuInfoResponse build() {
+        }        public IotHubSkuInfoResponse build() {
             return new IotHubSkuInfoResponse(capacity, name, tier);
         }
     }

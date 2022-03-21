@@ -97,17 +97,17 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends io.pulum
             this.healthProbe = healthProbe;
             return this;
         }
-
         public Builder networkApiVersion(@Nullable String networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
-
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-        public VirtualMachineScaleSetNetworkProfileResponse build() {
+        public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationResponse... networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
+        }        public VirtualMachineScaleSetNetworkProfileResponse build() {
             return new VirtualMachineScaleSetNetworkProfileResponse(healthProbe, networkApiVersion, networkInterfaceConfigurations);
         }
     }

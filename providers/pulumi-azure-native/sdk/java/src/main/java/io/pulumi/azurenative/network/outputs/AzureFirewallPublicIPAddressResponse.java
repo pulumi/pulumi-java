@@ -53,8 +53,7 @@ public final class AzureFirewallPublicIPAddressResponse {
         public Builder address(@Nullable String address) {
             this.address = address;
             return this;
-        }
-        public AzureFirewallPublicIPAddressResponse build() {
+        }        public AzureFirewallPublicIPAddressResponse build() {
             return new AzureFirewallPublicIPAddressResponse(address);
         }
     }

@@ -69,12 +69,10 @@ public final class QuickConnectTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public QuickConnectTag build() {
+        }        public QuickConnectTag build() {
             return new QuickConnectTag(key, value);
         }
     }

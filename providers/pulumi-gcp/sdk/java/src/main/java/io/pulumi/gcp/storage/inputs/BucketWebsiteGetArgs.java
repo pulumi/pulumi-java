@@ -76,22 +76,18 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
             this.mainPageSuffix = mainPageSuffix;
             return this;
         }
-
         public Builder mainPageSuffix(@Nullable String mainPageSuffix) {
             this.mainPageSuffix = Output.ofNullable(mainPageSuffix);
             return this;
         }
-
         public Builder notFoundPage(@Nullable Output<String> notFoundPage) {
             this.notFoundPage = notFoundPage;
             return this;
         }
-
         public Builder notFoundPage(@Nullable String notFoundPage) {
             this.notFoundPage = Output.ofNullable(notFoundPage);
             return this;
-        }
-        public BucketWebsiteGetArgs build() {
+        }        public BucketWebsiteGetArgs build() {
             return new BucketWebsiteGetArgs(mainPageSuffix, notFoundPage);
         }
     }

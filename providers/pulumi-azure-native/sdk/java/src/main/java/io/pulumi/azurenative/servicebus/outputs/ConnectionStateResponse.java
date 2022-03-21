@@ -71,12 +71,10 @@ public final class ConnectionStateResponse {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public ConnectionStateResponse build() {
+        }        public ConnectionStateResponse build() {
             return new ConnectionStateResponse(description, status);
         }
     }

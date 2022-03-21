@@ -54,8 +54,7 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetContactArgs build() {
+        }        public GetContactArgs build() {
             return new GetContactArgs(arn);
         }
     }

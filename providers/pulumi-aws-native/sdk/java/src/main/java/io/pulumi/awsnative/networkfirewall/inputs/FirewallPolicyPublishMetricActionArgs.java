@@ -53,12 +53,13 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-
         public Builder dimensions(List<FirewallPolicyDimensionArgs> dimensions) {
             this.dimensions = Output.of(Objects.requireNonNull(dimensions));
             return this;
         }
-        public FirewallPolicyPublishMetricActionArgs build() {
+        public Builder dimensions(FirewallPolicyDimensionArgs... dimensions) {
+            return dimensions(List.of(dimensions));
+        }        public FirewallPolicyPublishMetricActionArgs build() {
             return new FirewallPolicyPublishMetricActionArgs(dimensions);
         }
     }

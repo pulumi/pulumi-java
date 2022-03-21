@@ -115,17 +115,17 @@ public final class ScopedResourceSelectorRequirement {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder scopeName(String scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ScopedResourceSelectorRequirement build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ScopedResourceSelectorRequirement build() {
             return new ScopedResourceSelectorRequirement(operator, scopeName, values);
         }
     }

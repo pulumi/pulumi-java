@@ -43,8 +43,7 @@ public final class IntegrationMarketoSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public IntegrationMarketoSourceProperties build() {
+        }        public IntegrationMarketoSourceProperties build() {
             return new IntegrationMarketoSourceProperties(object);
         }
     }

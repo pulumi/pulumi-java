@@ -94,32 +94,26 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
-
         public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
             this.applianceModeSupport = Output.ofNullable(applianceModeSupport);
             return this;
         }
-
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
-
         public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = Output.ofNullable(dnsSupport);
             return this;
         }
-
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
         }
-
         public Builder ipv6Support(@Nullable String ipv6Support) {
             this.ipv6Support = Output.ofNullable(ipv6Support);
             return this;
-        }
-        public OptionsPropertiesArgs build() {
+        }        public OptionsPropertiesArgs build() {
             return new OptionsPropertiesArgs(applianceModeSupport, dnsSupport, ipv6Support);
         }
     }

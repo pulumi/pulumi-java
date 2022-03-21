@@ -364,102 +364,82 @@ public final class GenericProtectedItemResponse {
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
-
         public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
-
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
-
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
-
         public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = fabricName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
-
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
-
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
-
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
-
         public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
-
         public Builder policyState(@Nullable String policyState) {
             this.policyState = policyState;
             return this;
         }
-
         public Builder protectedItemId(@Nullable Double protectedItemId) {
             this.protectedItemId = protectedItemId;
             return this;
         }
-
         public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
-
         public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
-
         public Builder sourceAssociations(@Nullable Map<String,String> sourceAssociations) {
             this.sourceAssociations = sourceAssociations;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
-        }
-        public GenericProtectedItemResponse build() {
+        }        public GenericProtectedItemResponse build() {
             return new GenericProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, fabricName, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastRecoveryPoint, policyId, policyState, protectedItemId, protectedItemType, protectionState, sourceAssociations, sourceResourceId, workloadType);
         }
     }

@@ -108,42 +108,34 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public IamPolicyArgs build() {
+        }        public IamPolicyArgs build() {
             return new IamPolicyArgs(location, policyData, project, service);
         }
     }

@@ -124,27 +124,31 @@ public final class CertificateTemplatePredefinedValues {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
-
+        public Builder additionalExtensions(CertificateTemplatePredefinedValuesAdditionalExtension... additionalExtensions) {
+            return additionalExtensions(List.of(additionalExtensions));
+        }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
-
+        public Builder aiaOcspServers(String... aiaOcspServers) {
+            return aiaOcspServers(List.of(aiaOcspServers));
+        }
         public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptions caOptions) {
             this.caOptions = caOptions;
             return this;
         }
-
         public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
-
         public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
-        public CertificateTemplatePredefinedValues build() {
+        public Builder policyIds(CertificateTemplatePredefinedValuesPolicyId... policyIds) {
+            return policyIds(List.of(policyIds));
+        }        public CertificateTemplatePredefinedValues build() {
             return new CertificateTemplatePredefinedValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }
     }

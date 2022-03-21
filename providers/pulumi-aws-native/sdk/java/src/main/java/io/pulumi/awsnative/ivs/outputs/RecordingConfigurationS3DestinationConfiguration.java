@@ -43,8 +43,7 @@ public final class RecordingConfigurationS3DestinationConfiguration {
         public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
-        }
-        public RecordingConfigurationS3DestinationConfiguration build() {
+        }        public RecordingConfigurationS3DestinationConfiguration build() {
             return new RecordingConfigurationS3DestinationConfiguration(bucketName);
         }
     }

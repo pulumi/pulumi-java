@@ -326,172 +326,138 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             this.autoBackupSettings = autoBackupSettings;
             return this;
         }
-
         public Builder autoBackupSettings(@Nullable AutoBackupSettingsArgs autoBackupSettings) {
             this.autoBackupSettings = Output.ofNullable(autoBackupSettings);
             return this;
         }
-
         public Builder autoPatchingSettings(@Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings) {
             this.autoPatchingSettings = autoPatchingSettings;
             return this;
         }
-
         public Builder autoPatchingSettings(@Nullable AutoPatchingSettingsArgs autoPatchingSettings) {
             this.autoPatchingSettings = Output.ofNullable(autoPatchingSettings);
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder keyVaultCredentialSettings(@Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = keyVaultCredentialSettings;
             return this;
         }
-
         public Builder keyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsArgs keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = Output.ofNullable(keyVaultCredentialSettings);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverConfigurationsManagementSettings(@Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
             return this;
         }
-
         public Builder serverConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsArgs serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = Output.ofNullable(serverConfigurationsManagementSettings);
             return this;
         }
-
         public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
-
         public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = Output.ofNullable(sqlImageOffer);
             return this;
         }
-
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlImageSku>> sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
-
         public Builder sqlImageSku(@Nullable Either<String,SqlImageSku> sqlImageSku) {
             this.sqlImageSku = Output.ofNullable(sqlImageSku);
             return this;
         }
-
         public Builder sqlManagement(@Nullable Output<Either<String,SqlManagementMode>> sqlManagement) {
             this.sqlManagement = sqlManagement;
             return this;
         }
-
         public Builder sqlManagement(@Nullable Either<String,SqlManagementMode> sqlManagement) {
             this.sqlManagement = Output.ofNullable(sqlManagement);
             return this;
         }
-
         public Builder sqlServerLicenseType(@Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
             this.sqlServerLicenseType = sqlServerLicenseType;
             return this;
         }
-
         public Builder sqlServerLicenseType(@Nullable Either<String,SqlServerLicenseType> sqlServerLicenseType) {
             this.sqlServerLicenseType = Output.ofNullable(sqlServerLicenseType);
             return this;
         }
-
         public Builder sqlVirtualMachineGroupResourceId(@Nullable Output<String> sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
             return this;
         }
-
         public Builder sqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = Output.ofNullable(sqlVirtualMachineGroupResourceId);
             return this;
         }
-
         public Builder sqlVirtualMachineName(@Nullable Output<String> sqlVirtualMachineName) {
             this.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;
         }
-
         public Builder sqlVirtualMachineName(@Nullable String sqlVirtualMachineName) {
             this.sqlVirtualMachineName = Output.ofNullable(sqlVirtualMachineName);
             return this;
         }
-
         public Builder storageConfigurationSettings(@Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
             this.storageConfigurationSettings = storageConfigurationSettings;
             return this;
         }
-
         public Builder storageConfigurationSettings(@Nullable StorageConfigurationSettingsArgs storageConfigurationSettings) {
             this.storageConfigurationSettings = Output.ofNullable(storageConfigurationSettings);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualMachineResourceId(@Nullable Output<String> virtualMachineResourceId) {
             this.virtualMachineResourceId = virtualMachineResourceId;
             return this;
         }
-
         public Builder virtualMachineResourceId(@Nullable String virtualMachineResourceId) {
             this.virtualMachineResourceId = Output.ofNullable(virtualMachineResourceId);
             return this;
         }
-
         public Builder wsfcDomainCredentials(@Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }
-
         public Builder wsfcDomainCredentials(@Nullable WsfcDomainCredentialsArgs wsfcDomainCredentials) {
             this.wsfcDomainCredentials = Output.ofNullable(wsfcDomainCredentials);
             return this;
-        }
-        public SqlVirtualMachineArgs build() {
+        }        public SqlVirtualMachineArgs build() {
             return new SqlVirtualMachineArgs(autoBackupSettings, autoPatchingSettings, identity, keyVaultCredentialSettings, location, resourceGroupName, serverConfigurationsManagementSettings, sqlImageOffer, sqlImageSku, sqlManagement, sqlServerLicenseType, sqlVirtualMachineGroupResourceId, sqlVirtualMachineName, storageConfigurationSettings, tags, virtualMachineResourceId, wsfcDomainCredentials);
         }
     }

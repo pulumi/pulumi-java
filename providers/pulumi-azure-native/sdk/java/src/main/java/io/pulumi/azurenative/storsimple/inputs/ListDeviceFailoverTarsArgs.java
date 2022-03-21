@@ -107,22 +107,21 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder sourceDeviceName(String sourceDeviceName) {
             this.sourceDeviceName = Objects.requireNonNull(sourceDeviceName);
             return this;
         }
-
         public Builder volumeContainers(@Nullable List<String> volumeContainers) {
             this.volumeContainers = volumeContainers;
             return this;
         }
-        public ListDeviceFailoverTarsArgs build() {
+        public Builder volumeContainers(String... volumeContainers) {
+            return volumeContainers(List.of(volumeContainers));
+        }        public ListDeviceFailoverTarsArgs build() {
             return new ListDeviceFailoverTarsArgs(managerName, resourceGroupName, sourceDeviceName, volumeContainers);
         }
     }

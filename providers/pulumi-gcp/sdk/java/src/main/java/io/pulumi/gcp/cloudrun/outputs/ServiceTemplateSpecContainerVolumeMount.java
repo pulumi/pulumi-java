@@ -71,12 +71,10 @@ public final class ServiceTemplateSpecContainerVolumeMount {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ServiceTemplateSpecContainerVolumeMount build() {
+        }        public ServiceTemplateSpecContainerVolumeMount build() {
             return new ServiceTemplateSpecContainerVolumeMount(mountPath, name);
         }
     }

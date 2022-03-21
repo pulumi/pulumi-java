@@ -71,12 +71,10 @@ public final class ArtifactParameterPropertiesResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ArtifactParameterPropertiesResponse build() {
+        }        public ArtifactParameterPropertiesResponse build() {
             return new ArtifactParameterPropertiesResponse(name, value);
         }
     }

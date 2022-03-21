@@ -58,8 +58,7 @@ public final class HttpLoadBalancingResponse extends io.pulumi.resources.InvokeA
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public HttpLoadBalancingResponse build() {
+        }        public HttpLoadBalancingResponse build() {
             return new HttpLoadBalancingResponse(disabled);
         }
     }

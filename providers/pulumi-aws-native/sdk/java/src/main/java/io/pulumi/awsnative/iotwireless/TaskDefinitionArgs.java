@@ -144,62 +144,53 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.autoCreateTasks = Objects.requireNonNull(autoCreateTasks);
             return this;
         }
-
         public Builder autoCreateTasks(Boolean autoCreateTasks) {
             this.autoCreateTasks = Output.of(Objects.requireNonNull(autoCreateTasks));
             return this;
         }
-
         public Builder loRaWANUpdateGatewayTaskEntry(@Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry) {
             this.loRaWANUpdateGatewayTaskEntry = loRaWANUpdateGatewayTaskEntry;
             return this;
         }
-
         public Builder loRaWANUpdateGatewayTaskEntry(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs loRaWANUpdateGatewayTaskEntry) {
             this.loRaWANUpdateGatewayTaskEntry = Output.ofNullable(loRaWANUpdateGatewayTaskEntry);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TaskDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TaskDefinitionTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(TaskDefinitionTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder taskDefinitionType(@Nullable Output<TaskDefinitionType> taskDefinitionType) {
             this.taskDefinitionType = taskDefinitionType;
             return this;
         }
-
         public Builder taskDefinitionType(@Nullable TaskDefinitionType taskDefinitionType) {
             this.taskDefinitionType = Output.ofNullable(taskDefinitionType);
             return this;
         }
-
         public Builder update(@Nullable Output<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update) {
             this.update = update;
             return this;
         }
-
         public Builder update(@Nullable TaskDefinitionUpdateWirelessGatewayTaskCreateArgs update) {
             this.update = Output.ofNullable(update);
             return this;
-        }
-        public TaskDefinitionArgs build() {
+        }        public TaskDefinitionArgs build() {
             return new TaskDefinitionArgs(autoCreateTasks, loRaWANUpdateGatewayTaskEntry, name, tags, taskDefinitionType, update);
         }
     }

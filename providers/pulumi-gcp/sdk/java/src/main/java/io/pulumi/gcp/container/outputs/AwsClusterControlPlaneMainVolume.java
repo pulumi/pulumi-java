@@ -104,22 +104,18 @@ public final class AwsClusterControlPlaneMainVolume {
             this.iops = iops;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
-        }
-        public AwsClusterControlPlaneMainVolume build() {
+        }        public AwsClusterControlPlaneMainVolume build() {
             return new AwsClusterControlPlaneMainVolume(iops, kmsKeyArn, sizeGib, volumeType);
         }
     }

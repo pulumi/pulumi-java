@@ -101,22 +101,18 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sqlDedicatedGatewayEndpoint(String sqlDedicatedGatewayEndpoint) {
             this.sqlDedicatedGatewayEndpoint = Objects.requireNonNull(sqlDedicatedGatewayEndpoint);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public SqlDedicatedGatewayRegionalServiceResourceResponse build() {
+        }        public SqlDedicatedGatewayRegionalServiceResourceResponse build() {
             return new SqlDedicatedGatewayRegionalServiceResourceResponse(location, name, sqlDedicatedGatewayEndpoint, status);
         }
     }

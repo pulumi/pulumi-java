@@ -51,8 +51,7 @@ public final class ClusterEncryptionConfigProvider {
         public Builder keyArn(String keyArn) {
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
-        }
-        public ClusterEncryptionConfigProvider build() {
+        }        public ClusterEncryptionConfigProvider build() {
             return new ClusterEncryptionConfigProvider(keyArn);
         }
     }

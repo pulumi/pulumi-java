@@ -72,12 +72,10 @@ public final class GetContactProfileArgs extends io.pulumi.resources.InvokeArgs 
             this.contactProfileName = Objects.requireNonNull(contactProfileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetContactProfileArgs build() {
+        }        public GetContactProfileArgs build() {
             return new GetContactProfileArgs(contactProfileName, resourceGroupName);
         }
     }

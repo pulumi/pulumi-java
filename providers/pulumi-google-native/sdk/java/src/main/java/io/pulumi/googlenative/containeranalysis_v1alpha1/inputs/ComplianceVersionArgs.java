@@ -78,22 +78,18 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
             this.cpeUri = cpeUri;
             return this;
         }
-
         public Builder cpeUri(@Nullable String cpeUri) {
             this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ComplianceVersionArgs build() {
+        }        public ComplianceVersionArgs build() {
             return new ComplianceVersionArgs(cpeUri, version);
         }
     }

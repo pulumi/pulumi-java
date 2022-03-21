@@ -58,12 +58,10 @@ public final class RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetA
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(Double target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs build() {
+        }        public RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs(target);
         }
     }

@@ -86,17 +86,17 @@ public final class GetInputResult {
             this.inputDefinition = inputDefinition;
             return this;
         }
-
         public Builder inputDescription(@Nullable String inputDescription) {
             this.inputDescription = inputDescription;
             return this;
         }
-
         public Builder tags(@Nullable List<InputTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetInputResult build() {
+        public Builder tags(InputTag... tags) {
+            return tags(List.of(tags));
+        }        public GetInputResult build() {
             return new GetInputResult(inputDefinition, inputDescription, tags);
         }
     }

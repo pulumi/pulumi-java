@@ -104,42 +104,34 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.fairSharePolicy = fairSharePolicy;
             return this;
         }
-
         public Builder fairSharePolicy(@Nullable SchedulingPolicyFairSharePolicyArgs fairSharePolicy) {
             this.fairSharePolicy = Output.ofNullable(fairSharePolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public SchedulingPolicyArgs build() {
+        }        public SchedulingPolicyArgs build() {
             return new SchedulingPolicyArgs(fairSharePolicy, name, tags, tagsAll);
         }
     }

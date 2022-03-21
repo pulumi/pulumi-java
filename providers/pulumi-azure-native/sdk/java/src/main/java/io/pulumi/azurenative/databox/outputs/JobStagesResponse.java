@@ -118,27 +118,22 @@ public final class JobStagesResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder jobStageDetails(Object jobStageDetails) {
             this.jobStageDetails = Objects.requireNonNull(jobStageDetails);
             return this;
         }
-
         public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
-
         public Builder stageStatus(String stageStatus) {
             this.stageStatus = Objects.requireNonNull(stageStatus);
             return this;
         }
-
         public Builder stageTime(String stageTime) {
             this.stageTime = Objects.requireNonNull(stageTime);
             return this;
-        }
-        public JobStagesResponse build() {
+        }        public JobStagesResponse build() {
             return new JobStagesResponse(displayName, jobStageDetails, stageName, stageStatus, stageTime);
         }
     }

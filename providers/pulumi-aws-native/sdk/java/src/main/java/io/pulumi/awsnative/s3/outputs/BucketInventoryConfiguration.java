@@ -149,37 +149,33 @@ public final class BucketInventoryConfiguration {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
-
         public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
-
+        public Builder optionalFields(BucketInventoryConfigurationOptionalFieldsItem... optionalFields) {
+            return optionalFields(List.of(optionalFields));
+        }
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
-        }
-        public BucketInventoryConfiguration build() {
+        }        public BucketInventoryConfiguration build() {
             return new BucketInventoryConfiguration(destination, enabled, id, includedObjectVersions, optionalFields, prefix, scheduleFrequency);
         }
     }

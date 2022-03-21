@@ -272,97 +272,78 @@ public final class ServiceProfileLoRaWANServiceProfile extends io.pulumi.resourc
             this.addGwMetadata = addGwMetadata;
             return this;
         }
-
         public Builder channelMask(@Nullable String channelMask) {
             this.channelMask = channelMask;
             return this;
         }
-
         public Builder devStatusReqFreq(@Nullable Integer devStatusReqFreq) {
             this.devStatusReqFreq = devStatusReqFreq;
             return this;
         }
-
         public Builder dlBucketSize(@Nullable Integer dlBucketSize) {
             this.dlBucketSize = dlBucketSize;
             return this;
         }
-
         public Builder dlRate(@Nullable Integer dlRate) {
             this.dlRate = dlRate;
             return this;
         }
-
         public Builder dlRatePolicy(@Nullable String dlRatePolicy) {
             this.dlRatePolicy = dlRatePolicy;
             return this;
         }
-
         public Builder drMax(@Nullable Integer drMax) {
             this.drMax = drMax;
             return this;
         }
-
         public Builder drMin(@Nullable Integer drMin) {
             this.drMin = drMin;
             return this;
         }
-
         public Builder hrAllowed(@Nullable Boolean hrAllowed) {
             this.hrAllowed = hrAllowed;
             return this;
         }
-
         public Builder minGwDiversity(@Nullable Integer minGwDiversity) {
             this.minGwDiversity = minGwDiversity;
             return this;
         }
-
         public Builder nwkGeoLoc(@Nullable Boolean nwkGeoLoc) {
             this.nwkGeoLoc = nwkGeoLoc;
             return this;
         }
-
         public Builder prAllowed(@Nullable Boolean prAllowed) {
             this.prAllowed = prAllowed;
             return this;
         }
-
         public Builder raAllowed(@Nullable Boolean raAllowed) {
             this.raAllowed = raAllowed;
             return this;
         }
-
         public Builder reportDevStatusBattery(@Nullable Boolean reportDevStatusBattery) {
             this.reportDevStatusBattery = reportDevStatusBattery;
             return this;
         }
-
         public Builder reportDevStatusMargin(@Nullable Boolean reportDevStatusMargin) {
             this.reportDevStatusMargin = reportDevStatusMargin;
             return this;
         }
-
         public Builder targetPer(@Nullable Integer targetPer) {
             this.targetPer = targetPer;
             return this;
         }
-
         public Builder ulBucketSize(@Nullable Integer ulBucketSize) {
             this.ulBucketSize = ulBucketSize;
             return this;
         }
-
         public Builder ulRate(@Nullable Integer ulRate) {
             this.ulRate = ulRate;
             return this;
         }
-
         public Builder ulRatePolicy(@Nullable String ulRatePolicy) {
             this.ulRatePolicy = ulRatePolicy;
             return this;
-        }
-        public ServiceProfileLoRaWANServiceProfile build() {
+        }        public ServiceProfileLoRaWANServiceProfile build() {
             return new ServiceProfileLoRaWANServiceProfile(addGwMetadata, channelMask, devStatusReqFreq, dlBucketSize, dlRate, dlRatePolicy, drMax, drMin, hrAllowed, minGwDiversity, nwkGeoLoc, prAllowed, raAllowed, reportDevStatusBattery, reportDevStatusMargin, targetPer, ulBucketSize, ulRate, ulRatePolicy);
         }
     }

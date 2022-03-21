@@ -223,112 +223,93 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder eventTimeFeatureName(@Nullable Output<String> eventTimeFeatureName) {
             this.eventTimeFeatureName = eventTimeFeatureName;
             return this;
         }
-
         public Builder eventTimeFeatureName(@Nullable String eventTimeFeatureName) {
             this.eventTimeFeatureName = Output.ofNullable(eventTimeFeatureName);
             return this;
         }
-
         public Builder featureDefinitions(@Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
             this.featureDefinitions = featureDefinitions;
             return this;
         }
-
         public Builder featureDefinitions(@Nullable List<FeatureGroupFeatureDefinitionGetArgs> featureDefinitions) {
             this.featureDefinitions = Output.ofNullable(featureDefinitions);
             return this;
         }
-
+        public Builder featureDefinitions(FeatureGroupFeatureDefinitionGetArgs... featureDefinitions) {
+            return featureDefinitions(List.of(featureDefinitions));
+        }
         public Builder featureGroupName(@Nullable Output<String> featureGroupName) {
             this.featureGroupName = featureGroupName;
             return this;
         }
-
         public Builder featureGroupName(@Nullable String featureGroupName) {
             this.featureGroupName = Output.ofNullable(featureGroupName);
             return this;
         }
-
         public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
             this.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
-
         public Builder offlineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigGetArgs offlineStoreConfig) {
             this.offlineStoreConfig = Output.ofNullable(offlineStoreConfig);
             return this;
         }
-
         public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
             this.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
-
         public Builder onlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigGetArgs onlineStoreConfig) {
             this.onlineStoreConfig = Output.ofNullable(onlineStoreConfig);
             return this;
         }
-
         public Builder recordIdentifierFeatureName(@Nullable Output<String> recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = recordIdentifierFeatureName;
             return this;
         }
-
         public Builder recordIdentifierFeatureName(@Nullable String recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = Output.ofNullable(recordIdentifierFeatureName);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public FeatureGroupState build() {
+        }        public FeatureGroupState build() {
             return new FeatureGroupState(arn, description, eventTimeFeatureName, featureDefinitions, featureGroupName, offlineStoreConfig, onlineStoreConfig, recordIdentifierFeatureName, roleArn, tags, tagsAll);
         }
     }

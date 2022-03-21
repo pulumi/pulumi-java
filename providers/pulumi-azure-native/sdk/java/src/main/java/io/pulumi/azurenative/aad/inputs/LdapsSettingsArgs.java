@@ -113,42 +113,34 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.externalAccess = externalAccess;
             return this;
         }
-
         public Builder externalAccess(@Nullable Either<String,ExternalAccess> externalAccess) {
             this.externalAccess = Output.ofNullable(externalAccess);
             return this;
         }
-
         public Builder ldaps(@Nullable Output<Either<String,Ldaps>> ldaps) {
             this.ldaps = ldaps;
             return this;
         }
-
         public Builder ldaps(@Nullable Either<String,Ldaps> ldaps) {
             this.ldaps = Output.ofNullable(ldaps);
             return this;
         }
-
         public Builder pfxCertificate(@Nullable Output<String> pfxCertificate) {
             this.pfxCertificate = pfxCertificate;
             return this;
         }
-
         public Builder pfxCertificate(@Nullable String pfxCertificate) {
             this.pfxCertificate = Output.ofNullable(pfxCertificate);
             return this;
         }
-
         public Builder pfxCertificatePassword(@Nullable Output<String> pfxCertificatePassword) {
             this.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
-
         public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
             this.pfxCertificatePassword = Output.ofNullable(pfxCertificatePassword);
             return this;
-        }
-        public LdapsSettingsArgs build() {
+        }        public LdapsSettingsArgs build() {
             return new LdapsSettingsArgs(externalAccess, ldaps, pfxCertificate, pfxCertificatePassword);
         }
     }

@@ -185,92 +185,74 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
-
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
             this.permanentRestore = Output.ofNullable(permanentRestore);
             return this;
         }
-
         public Builder sourceRegion(Output<String> sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
-
         public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Output.of(Objects.requireNonNull(sourceRegion));
             return this;
         }
-
         public Builder sourceSnapshotId(Output<String> sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
-
         public Builder sourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = Output.of(Objects.requireNonNull(sourceSnapshotId));
             return this;
         }
-
         public Builder storageTier(@Nullable Output<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
-
         public Builder storageTier(@Nullable String storageTier) {
             this.storageTier = Output.ofNullable(storageTier);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
-
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
             this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
             return this;
-        }
-        public SnapshotCopyArgs build() {
+        }        public SnapshotCopyArgs build() {
             return new SnapshotCopyArgs(description, encrypted, kmsKeyId, permanentRestore, sourceRegion, sourceSnapshotId, storageTier, tags, temporaryRestoreDays);
         }
     }

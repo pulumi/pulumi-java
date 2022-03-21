@@ -88,17 +88,14 @@ public final class InsightFiltersResourceContainerLaunchedAt {
             this.dateRange = dateRange;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = start;
             return this;
-        }
-        public InsightFiltersResourceContainerLaunchedAt build() {
+        }        public InsightFiltersResourceContainerLaunchedAt build() {
             return new InsightFiltersResourceContainerLaunchedAt(dateRange, end, start);
         }
     }

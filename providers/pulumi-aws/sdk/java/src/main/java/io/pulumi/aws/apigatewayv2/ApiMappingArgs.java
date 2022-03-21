@@ -106,42 +106,34 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder apiMappingKey(@Nullable Output<String> apiMappingKey) {
             this.apiMappingKey = apiMappingKey;
             return this;
         }
-
         public Builder apiMappingKey(@Nullable String apiMappingKey) {
             this.apiMappingKey = Output.ofNullable(apiMappingKey);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder stage(Output<String> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
-        }
-        public ApiMappingArgs build() {
+        }        public ApiMappingArgs build() {
             return new ApiMappingArgs(apiId, apiMappingKey, domainName, stage);
         }
     }

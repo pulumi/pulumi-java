@@ -80,22 +80,21 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
             this.authorizationRule = Objects.requireNonNull(authorizationRule);
             return this;
         }
-
         public Builder authorizationRule(ExprArgs authorizationRule) {
             this.authorizationRule = Output.of(Objects.requireNonNull(authorizationRule));
             return this;
         }
-
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
-
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
             this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
-        public GoogleCloudHealthcareV1ConsentPolicyArgs build() {
+        public Builder resourceAttributes(AttributeArgs... resourceAttributes) {
+            return resourceAttributes(List.of(resourceAttributes));
+        }        public GoogleCloudHealthcareV1ConsentPolicyArgs build() {
             return new GoogleCloudHealthcareV1ConsentPolicyArgs(authorizationRule, resourceAttributes);
         }
     }

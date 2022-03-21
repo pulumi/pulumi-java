@@ -54,12 +54,10 @@ public final class GetClusterAddonsConfigIstioConfig {
             this.auth = Objects.requireNonNull(auth);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
-        }
-        public GetClusterAddonsConfigIstioConfig build() {
+        }        public GetClusterAddonsConfigIstioConfig build() {
             return new GetClusterAddonsConfigIstioConfig(auth, disabled);
         }
     }

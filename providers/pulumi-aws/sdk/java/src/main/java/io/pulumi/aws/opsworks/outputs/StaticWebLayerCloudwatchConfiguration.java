@@ -57,12 +57,13 @@ public final class StaticWebLayerCloudwatchConfiguration {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logStreams(@Nullable List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-        public StaticWebLayerCloudwatchConfiguration build() {
+        public Builder logStreams(StaticWebLayerCloudwatchConfigurationLogStream... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public StaticWebLayerCloudwatchConfiguration build() {
             return new StaticWebLayerCloudwatchConfiguration(enabled, logStreams);
         }
     }

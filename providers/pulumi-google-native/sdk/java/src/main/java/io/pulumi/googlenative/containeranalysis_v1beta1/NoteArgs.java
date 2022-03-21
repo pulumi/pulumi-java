@@ -352,192 +352,160 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
             this.attestationAuthority = attestationAuthority;
             return this;
         }
-
         public Builder attestationAuthority(@Nullable AuthorityArgs attestationAuthority) {
             this.attestationAuthority = Output.ofNullable(attestationAuthority);
             return this;
         }
-
         public Builder baseImage(@Nullable Output<BasisArgs> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
-
         public Builder baseImage(@Nullable BasisArgs baseImage) {
             this.baseImage = Output.ofNullable(baseImage);
             return this;
         }
-
         public Builder build(@Nullable Output<BuildArgs> build) {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable BuildArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder deployable(@Nullable Output<DeployableArgs> deployable) {
             this.deployable = deployable;
             return this;
         }
-
         public Builder deployable(@Nullable DeployableArgs deployable) {
             this.deployable = Output.ofNullable(deployable);
             return this;
         }
-
         public Builder discovery(@Nullable Output<DiscoveryArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
-
         public Builder discovery(@Nullable DiscoveryArgs discovery) {
             this.discovery = Output.ofNullable(discovery);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder intoto(@Nullable Output<InTotoArgs> intoto) {
             this.intoto = intoto;
             return this;
         }
-
         public Builder intoto(@Nullable InTotoArgs intoto) {
             this.intoto = Output.ofNullable(intoto);
             return this;
         }
-
         public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
-
         public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
-
         public Builder noteId(Output<String> noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
-
         public Builder noteId(String noteId) {
             this.noteId = Output.of(Objects.requireNonNull(noteId));
             return this;
         }
-
         public Builder $package(@Nullable Output<PackageArgs> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable PackageArgs $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
-
         public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
             this.relatedNoteNames = Output.ofNullable(relatedNoteNames);
             return this;
         }
-
+        public Builder relatedNoteNames(String... relatedNoteNames) {
+            return relatedNoteNames(List.of(relatedNoteNames));
+        }
         public Builder relatedUrl(@Nullable Output<List<RelatedUrlArgs>> relatedUrl) {
             this.relatedUrl = relatedUrl;
             return this;
         }
-
         public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
             this.relatedUrl = Output.ofNullable(relatedUrl);
             return this;
         }
-
+        public Builder relatedUrl(RelatedUrlArgs... relatedUrl) {
+            return relatedUrl(List.of(relatedUrl));
+        }
         public Builder sbom(@Nullable Output<DocumentNoteArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
-
         public Builder sbom(@Nullable DocumentNoteArgs sbom) {
             this.sbom = Output.ofNullable(sbom);
             return this;
         }
-
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
-
         public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Output.ofNullable(shortDescription);
             return this;
         }
-
         public Builder spdxFile(@Nullable Output<FileNoteArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
-
         public Builder spdxFile(@Nullable FileNoteArgs spdxFile) {
             this.spdxFile = Output.ofNullable(spdxFile);
             return this;
         }
-
         public Builder spdxPackage(@Nullable Output<PackageInfoNoteArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
-
         public Builder spdxPackage(@Nullable PackageInfoNoteArgs spdxPackage) {
             this.spdxPackage = Output.ofNullable(spdxPackage);
             return this;
         }
-
         public Builder spdxRelationship(@Nullable Output<RelationshipNoteArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
-
         public Builder spdxRelationship(@Nullable RelationshipNoteArgs spdxRelationship) {
             this.spdxRelationship = Output.ofNullable(spdxRelationship);
             return this;
         }
-
         public Builder vulnerability(@Nullable Output<VulnerabilityArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
-
         public Builder vulnerability(@Nullable VulnerabilityArgs vulnerability) {
             this.vulnerability = Output.ofNullable(vulnerability);
             return this;
-        }
-        public NoteArgs build() {
+        }        public NoteArgs build() {
             return new NoteArgs(attestationAuthority, baseImage, build, deployable, discovery, expirationTime, intoto, longDescription, noteId, $package, project, relatedNoteNames, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, vulnerability);
         }
     }

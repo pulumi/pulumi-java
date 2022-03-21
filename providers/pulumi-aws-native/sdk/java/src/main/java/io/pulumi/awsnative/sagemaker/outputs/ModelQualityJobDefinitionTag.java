@@ -69,12 +69,10 @@ public final class ModelQualityJobDefinitionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ModelQualityJobDefinitionTag build() {
+        }        public ModelQualityJobDefinitionTag build() {
             return new ModelQualityJobDefinitionTag(key, value);
         }
     }

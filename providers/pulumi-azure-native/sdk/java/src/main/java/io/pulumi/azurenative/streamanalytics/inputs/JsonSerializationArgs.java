@@ -98,32 +98,26 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable Either<String,Encoding> encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder format(@Nullable Output<Either<String,JsonOutputSerializationFormat>> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable Either<String,JsonOutputSerializationFormat> format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public JsonSerializationArgs build() {
+        }        public JsonSerializationArgs build() {
             return new JsonSerializationArgs(encoding, format, type);
         }
     }

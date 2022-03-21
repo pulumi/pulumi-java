@@ -67,22 +67,18 @@ public final class ChannelRetentionPeriodArgs extends io.pulumi.resources.Resour
             this.numberOfDays = numberOfDays;
             return this;
         }
-
         public Builder numberOfDays(@Nullable Integer numberOfDays) {
             this.numberOfDays = Output.ofNullable(numberOfDays);
             return this;
         }
-
         public Builder unlimited(@Nullable Output<Boolean> unlimited) {
             this.unlimited = unlimited;
             return this;
         }
-
         public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = Output.ofNullable(unlimited);
             return this;
-        }
-        public ChannelRetentionPeriodArgs build() {
+        }        public ChannelRetentionPeriodArgs build() {
             return new ChannelRetentionPeriodArgs(numberOfDays, unlimited);
         }
     }

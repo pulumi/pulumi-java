@@ -78,17 +78,14 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder resourcePolicy(String resourcePolicy) {
             this.resourcePolicy = Objects.requireNonNull(resourcePolicy);
             return this;
-        }
-        public GetResourcePolicyArgs build() {
+        }        public GetResourcePolicyArgs build() {
             return new GetResourcePolicyArgs(project, region, resourcePolicy);
         }
     }

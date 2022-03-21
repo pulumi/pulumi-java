@@ -171,82 +171,66 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             this.allocationId = allocationId;
             return this;
         }
-
         public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
-
         public Builder connectivityType(@Nullable Output<String> connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
-
         public Builder connectivityType(@Nullable String connectivityType) {
             this.connectivityType = Output.ofNullable(connectivityType);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder privateIp(@Nullable Output<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
-
         public Builder privateIp(@Nullable String privateIp) {
             this.privateIp = Output.ofNullable(privateIp);
             return this;
         }
-
         public Builder publicIp(@Nullable Output<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
-
         public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Output.ofNullable(publicIp);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public NatGatewayState build() {
+        }        public NatGatewayState build() {
             return new NatGatewayState(allocationId, connectivityType, networkInterfaceId, privateIp, publicIp, subnetId, tags, tagsAll);
         }
     }

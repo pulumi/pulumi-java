@@ -62,12 +62,13 @@ public final class DailyRetentionFormatArgs extends io.pulumi.resources.Resource
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
-
         public Builder daysOfTheMonth(@Nullable List<DayArgs> daysOfTheMonth) {
             this.daysOfTheMonth = Output.ofNullable(daysOfTheMonth);
             return this;
         }
-        public DailyRetentionFormatArgs build() {
+        public Builder daysOfTheMonth(DayArgs... daysOfTheMonth) {
+            return daysOfTheMonth(List.of(daysOfTheMonth));
+        }        public DailyRetentionFormatArgs build() {
             return new DailyRetentionFormatArgs(daysOfTheMonth);
         }
     }

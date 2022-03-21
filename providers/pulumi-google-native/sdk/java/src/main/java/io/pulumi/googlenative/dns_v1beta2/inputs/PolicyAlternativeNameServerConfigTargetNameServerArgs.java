@@ -103,42 +103,34 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
             this.forwardingPath = forwardingPath;
             return this;
         }
-
         public Builder forwardingPath(@Nullable PolicyAlternativeNameServerConfigTargetNameServerForwardingPath forwardingPath) {
             this.forwardingPath = Output.ofNullable(forwardingPath);
             return this;
         }
-
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
         }
-
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
-        }
-        public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
+        }        public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerArgs(forwardingPath, ipv4Address, ipv6Address, kind);
         }
     }

@@ -143,62 +143,53 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder fields(Output<List<TagTemplateFieldArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public Builder fields(List<TagTemplateFieldArgs> fields) {
             this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
-
+        public Builder fields(TagTemplateFieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
-
         public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder tagTemplateId(Output<String> tagTemplateId) {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
         }
-
         public Builder tagTemplateId(String tagTemplateId) {
             this.tagTemplateId = Output.of(Objects.requireNonNull(tagTemplateId));
             return this;
-        }
-        public TagTemplateArgs build() {
+        }        public TagTemplateArgs build() {
             return new TagTemplateArgs(displayName, fields, forceDelete, project, region, tagTemplateId);
         }
     }

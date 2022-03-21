@@ -62,12 +62,13 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
             this.corsRules = corsRules;
             return this;
         }
-
         public Builder corsRules(@Nullable List<CorsRuleArgs> corsRules) {
             this.corsRules = Output.ofNullable(corsRules);
             return this;
         }
-        public CorsRulesArgs build() {
+        public Builder corsRules(CorsRuleArgs... corsRules) {
+            return corsRules(List.of(corsRules));
+        }        public CorsRulesArgs build() {
             return new CorsRulesArgs(corsRules);
         }
     }

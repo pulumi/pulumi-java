@@ -78,22 +78,18 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(String metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
-
         public Builder value(Output<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public GoogleCloudMlV1_Measurement_MetricArgs build() {
+        }        public GoogleCloudMlV1_Measurement_MetricArgs build() {
             return new GoogleCloudMlV1_Measurement_MetricArgs(metric, value);
         }
     }

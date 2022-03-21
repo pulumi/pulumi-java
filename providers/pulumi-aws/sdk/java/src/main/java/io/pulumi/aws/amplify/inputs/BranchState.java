@@ -413,232 +413,192 @@ public final class BranchState extends io.pulumi.resources.ResourceArgs {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder associatedResources(@Nullable Output<List<String>> associatedResources) {
             this.associatedResources = associatedResources;
             return this;
         }
-
         public Builder associatedResources(@Nullable List<String> associatedResources) {
             this.associatedResources = Output.ofNullable(associatedResources);
             return this;
         }
-
+        public Builder associatedResources(String... associatedResources) {
+            return associatedResources(List.of(associatedResources));
+        }
         public Builder backendEnvironmentArn(@Nullable Output<String> backendEnvironmentArn) {
             this.backendEnvironmentArn = backendEnvironmentArn;
             return this;
         }
-
         public Builder backendEnvironmentArn(@Nullable String backendEnvironmentArn) {
             this.backendEnvironmentArn = Output.ofNullable(backendEnvironmentArn);
             return this;
         }
-
         public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-
         public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
             this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
             return this;
         }
-
         public Builder branchName(@Nullable Output<String> branchName) {
             this.branchName = branchName;
             return this;
         }
-
         public Builder branchName(@Nullable String branchName) {
             this.branchName = Output.ofNullable(branchName);
             return this;
         }
-
         public Builder customDomains(@Nullable Output<List<String>> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
-
         public Builder customDomains(@Nullable List<String> customDomains) {
             this.customDomains = Output.ofNullable(customDomains);
             return this;
         }
-
+        public Builder customDomains(String... customDomains) {
+            return customDomains(List.of(customDomains));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destinationBranch(@Nullable Output<String> destinationBranch) {
             this.destinationBranch = destinationBranch;
             return this;
         }
-
         public Builder destinationBranch(@Nullable String destinationBranch) {
             this.destinationBranch = Output.ofNullable(destinationBranch);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
-
         public Builder enableNotification(@Nullable Output<Boolean> enableNotification) {
             this.enableNotification = enableNotification;
             return this;
         }
-
         public Builder enableNotification(@Nullable Boolean enableNotification) {
             this.enableNotification = Output.ofNullable(enableNotification);
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
-
         public Builder framework(@Nullable String framework) {
             this.framework = Output.ofNullable(framework);
             return this;
         }
-
         public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
             return this;
         }
-
         public Builder sourceBranch(@Nullable Output<String> sourceBranch) {
             this.sourceBranch = sourceBranch;
             return this;
         }
-
         public Builder sourceBranch(@Nullable String sourceBranch) {
             this.sourceBranch = Output.ofNullable(sourceBranch);
             return this;
         }
-
         public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = Output.ofNullable(stage);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public BranchState build() {
+        }        public BranchState build() {
             return new BranchState(appId, arn, associatedResources, backendEnvironmentArn, basicAuthCredentials, branchName, customDomains, description, destinationBranch, displayName, enableAutoBuild, enableBasicAuth, enableNotification, enablePerformanceMode, enablePullRequestPreview, environmentVariables, framework, pullRequestEnvironmentName, sourceBranch, stage, tags, tagsAll, ttl);
         }
     }

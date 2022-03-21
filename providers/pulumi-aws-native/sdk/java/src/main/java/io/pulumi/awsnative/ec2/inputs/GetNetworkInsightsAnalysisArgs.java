@@ -50,8 +50,7 @@ public final class GetNetworkInsightsAnalysisArgs extends io.pulumi.resources.In
         public Builder networkInsightsAnalysisId(String networkInsightsAnalysisId) {
             this.networkInsightsAnalysisId = Objects.requireNonNull(networkInsightsAnalysisId);
             return this;
-        }
-        public GetNetworkInsightsAnalysisArgs build() {
+        }        public GetNetworkInsightsAnalysisArgs build() {
             return new GetNetworkInsightsAnalysisArgs(networkInsightsAnalysisId);
         }
     }

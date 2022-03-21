@@ -268,137 +268,110 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder confirmationTimeoutInMinutes(@Nullable Output<Integer> confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
-
         public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = Output.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
-
         public Builder confirmationWasAuthenticated(@Nullable Output<Boolean> confirmationWasAuthenticated) {
             this.confirmationWasAuthenticated = confirmationWasAuthenticated;
             return this;
         }
-
         public Builder confirmationWasAuthenticated(@Nullable Boolean confirmationWasAuthenticated) {
             this.confirmationWasAuthenticated = Output.ofNullable(confirmationWasAuthenticated);
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
-
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
             this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder endpointAutoConfirms(@Nullable Output<Boolean> endpointAutoConfirms) {
             this.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
-
         public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
             this.endpointAutoConfirms = Output.ofNullable(endpointAutoConfirms);
             return this;
         }
-
         public Builder filterPolicy(@Nullable Output<String> filterPolicy) {
             this.filterPolicy = filterPolicy;
             return this;
         }
-
         public Builder filterPolicy(@Nullable String filterPolicy) {
             this.filterPolicy = Output.ofNullable(filterPolicy);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder pendingConfirmation(@Nullable Output<Boolean> pendingConfirmation) {
             this.pendingConfirmation = pendingConfirmation;
             return this;
         }
-
         public Builder pendingConfirmation(@Nullable Boolean pendingConfirmation) {
             this.pendingConfirmation = Output.ofNullable(pendingConfirmation);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder rawMessageDelivery(@Nullable Output<Boolean> rawMessageDelivery) {
             this.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
-
         public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
             this.rawMessageDelivery = Output.ofNullable(rawMessageDelivery);
             return this;
         }
-
         public Builder redrivePolicy(@Nullable Output<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
-
         public Builder redrivePolicy(@Nullable String redrivePolicy) {
             this.redrivePolicy = Output.ofNullable(redrivePolicy);
             return this;
         }
-
         public Builder subscriptionRoleArn(@Nullable Output<String> subscriptionRoleArn) {
             this.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
-
         public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
             this.subscriptionRoleArn = Output.ofNullable(subscriptionRoleArn);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
-        }
-        public TopicSubscriptionState build() {
+        }        public TopicSubscriptionState build() {
             return new TopicSubscriptionState(arn, confirmationTimeoutInMinutes, confirmationWasAuthenticated, deliveryPolicy, endpoint, endpointAutoConfirms, filterPolicy, ownerId, pendingConfirmation, protocol, rawMessageDelivery, redrivePolicy, subscriptionRoleArn, topic);
         }
     }

@@ -104,22 +104,18 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
-        }
-        public ListStorageAccountSasTokensArgs build() {
+        }        public ListStorageAccountSasTokensArgs build() {
             return new ListStorageAccountSasTokensArgs(accountName, containerName, resourceGroupName, storageAccountName);
         }
     }

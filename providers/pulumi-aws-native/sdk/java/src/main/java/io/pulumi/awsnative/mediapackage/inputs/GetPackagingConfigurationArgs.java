@@ -54,8 +54,7 @@ public final class GetPackagingConfigurationArgs extends io.pulumi.resources.Inv
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetPackagingConfigurationArgs build() {
+        }        public GetPackagingConfigurationArgs build() {
             return new GetPackagingConfigurationArgs(id);
         }
     }

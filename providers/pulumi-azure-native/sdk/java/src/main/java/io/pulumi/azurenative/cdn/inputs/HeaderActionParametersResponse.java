@@ -106,22 +106,18 @@ public final class HeaderActionParametersResponse extends io.pulumi.resources.In
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public HeaderActionParametersResponse build() {
+        }        public HeaderActionParametersResponse build() {
             return new HeaderActionParametersResponse(headerAction, headerName, odataType, value);
         }
     }

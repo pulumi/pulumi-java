@@ -60,12 +60,10 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public Builder attestation(AttestationArgs attestation) {
             this.attestation = Output.of(Objects.requireNonNull(attestation));
             return this;
-        }
-        public DetailsArgs build() {
+        }        public DetailsArgs build() {
             return new DetailsArgs(attestation);
         }
     }

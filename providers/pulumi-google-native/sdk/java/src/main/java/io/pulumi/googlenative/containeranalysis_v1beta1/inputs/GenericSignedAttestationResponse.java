@@ -94,17 +94,17 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
-
         public Builder signatures(List<SignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-        public GenericSignedAttestationResponse build() {
+        public Builder signatures(SignatureResponse... signatures) {
+            return signatures(List.of(signatures));
+        }        public GenericSignedAttestationResponse build() {
             return new GenericSignedAttestationResponse(contentType, serializedPayload, signatures);
         }
     }

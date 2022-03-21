@@ -549,157 +549,129 @@ public final class GetVirtualMachineResult {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder firmwareType(@Nullable String firmwareType) {
             this.firmwareType = firmwareType;
             return this;
         }
-
         public Builder folderPath(String folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
-
         public Builder guestAgentProfile(@Nullable GuestAgentProfileResponse guestAgentProfile) {
             this.guestAgentProfile = guestAgentProfile;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder instanceUuid(String instanceUuid) {
             this.instanceUuid = Objects.requireNonNull(instanceUuid);
             return this;
         }
-
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder moName(String moName) {
             this.moName = Objects.requireNonNull(moName);
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder placementProfile(@Nullable PlacementProfileResponse placementProfile) {
             this.placementProfile = placementProfile;
             return this;
         }
-
         public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
-
         public Builder smbiosUuid(@Nullable String smbiosUuid) {
             this.smbiosUuid = smbiosUuid;
             return this;
         }
-
         public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
-
+        public Builder statuses(ResourceStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
-        }
-        public GetVirtualMachineResult build() {
+        }        public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(customResourceName, extendedLocation, firmwareType, folderPath, guestAgentProfile, hardwareProfile, id, identity, instanceUuid, inventoryItemId, kind, location, moName, moRefId, name, networkProfile, osProfile, placementProfile, powerState, provisioningState, resourcePoolId, smbiosUuid, statuses, storageProfile, systemData, tags, templateId, type, uuid, vCenterId, vmId);
         }
     }

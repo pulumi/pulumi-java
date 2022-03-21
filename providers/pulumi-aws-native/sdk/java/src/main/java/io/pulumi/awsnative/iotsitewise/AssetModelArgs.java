@@ -143,62 +143,62 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
             this.assetModelCompositeModels = assetModelCompositeModels;
             return this;
         }
-
         public Builder assetModelCompositeModels(@Nullable List<AssetModelCompositeModelArgs> assetModelCompositeModels) {
             this.assetModelCompositeModels = Output.ofNullable(assetModelCompositeModels);
             return this;
         }
-
+        public Builder assetModelCompositeModels(AssetModelCompositeModelArgs... assetModelCompositeModels) {
+            return assetModelCompositeModels(List.of(assetModelCompositeModels));
+        }
         public Builder assetModelDescription(@Nullable Output<String> assetModelDescription) {
             this.assetModelDescription = assetModelDescription;
             return this;
         }
-
         public Builder assetModelDescription(@Nullable String assetModelDescription) {
             this.assetModelDescription = Output.ofNullable(assetModelDescription);
             return this;
         }
-
         public Builder assetModelHierarchies(@Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies) {
             this.assetModelHierarchies = assetModelHierarchies;
             return this;
         }
-
         public Builder assetModelHierarchies(@Nullable List<AssetModelHierarchyArgs> assetModelHierarchies) {
             this.assetModelHierarchies = Output.ofNullable(assetModelHierarchies);
             return this;
         }
-
+        public Builder assetModelHierarchies(AssetModelHierarchyArgs... assetModelHierarchies) {
+            return assetModelHierarchies(List.of(assetModelHierarchies));
+        }
         public Builder assetModelName(@Nullable Output<String> assetModelName) {
             this.assetModelName = assetModelName;
             return this;
         }
-
         public Builder assetModelName(@Nullable String assetModelName) {
             this.assetModelName = Output.ofNullable(assetModelName);
             return this;
         }
-
         public Builder assetModelProperties(@Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties) {
             this.assetModelProperties = assetModelProperties;
             return this;
         }
-
         public Builder assetModelProperties(@Nullable List<AssetModelPropertyArgs> assetModelProperties) {
             this.assetModelProperties = Output.ofNullable(assetModelProperties);
             return this;
         }
-
+        public Builder assetModelProperties(AssetModelPropertyArgs... assetModelProperties) {
+            return assetModelProperties(List.of(assetModelProperties));
+        }
         public Builder tags(@Nullable Output<List<AssetModelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AssetModelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public AssetModelArgs build() {
+        public Builder tags(AssetModelTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public AssetModelArgs build() {
             return new AssetModelArgs(assetModelCompositeModels, assetModelDescription, assetModelHierarchies, assetModelName, assetModelProperties, tags);
         }
     }

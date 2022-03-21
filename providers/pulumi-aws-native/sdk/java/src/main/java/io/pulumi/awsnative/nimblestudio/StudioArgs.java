@@ -132,62 +132,50 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             this.adminRoleArn = Objects.requireNonNull(adminRoleArn);
             return this;
         }
-
         public Builder adminRoleArn(String adminRoleArn) {
             this.adminRoleArn = Output.of(Objects.requireNonNull(adminRoleArn));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder studioEncryptionConfiguration(@Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration) {
             this.studioEncryptionConfiguration = studioEncryptionConfiguration;
             return this;
         }
-
         public Builder studioEncryptionConfiguration(@Nullable StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
             this.studioEncryptionConfiguration = Output.ofNullable(studioEncryptionConfiguration);
             return this;
         }
-
         public Builder studioName(@Nullable Output<String> studioName) {
             this.studioName = studioName;
             return this;
         }
-
         public Builder studioName(@Nullable String studioName) {
             this.studioName = Output.ofNullable(studioName);
             return this;
         }
-
         public Builder tags(@Nullable Output<StudioTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable StudioTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userRoleArn(Output<String> userRoleArn) {
             this.userRoleArn = Objects.requireNonNull(userRoleArn);
             return this;
         }
-
         public Builder userRoleArn(String userRoleArn) {
             this.userRoleArn = Output.of(Objects.requireNonNull(userRoleArn));
             return this;
-        }
-        public StudioArgs build() {
+        }        public StudioArgs build() {
             return new StudioArgs(adminRoleArn, displayName, studioEncryptionConfiguration, studioName, tags, userRoleArn);
         }
     }

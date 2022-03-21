@@ -130,52 +130,42 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
-
         public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
             this.defaultCustomBlockResponseBody = Output.ofNullable(defaultCustomBlockResponseBody);
             return this;
         }
-
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Output<Integer> defaultCustomBlockResponseStatusCode) {
             this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
-
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
             this.defaultCustomBlockResponseStatusCode = Output.ofNullable(defaultCustomBlockResponseStatusCode);
             return this;
         }
-
         public Builder defaultRedirectUrl(@Nullable Output<String> defaultRedirectUrl) {
             this.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
-
         public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
             this.defaultRedirectUrl = Output.ofNullable(defaultRedirectUrl);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,PolicyMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
-        }
-        public PolicySettingsArgs build() {
+        }        public PolicySettingsArgs build() {
             return new PolicySettingsArgs(defaultCustomBlockResponseBody, defaultCustomBlockResponseStatusCode, defaultRedirectUrl, enabledState, mode);
         }
     }

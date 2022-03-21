@@ -191,92 +191,74 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             this.androidSettings = androidSettings;
             return this;
         }
-
         public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
             this.androidSettings = Output.ofNullable(androidSettings);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
-
         public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsGetArgs iosSettings) {
             this.iosSettings = Output.ofNullable(iosSettings);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
-
         public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsGetArgs testingOptions) {
             this.testingOptions = Output.ofNullable(testingOptions);
             return this;
         }
-
         public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
-
         public Builder webSettings(@Nullable EnterpriseKeyWebSettingsGetArgs webSettings) {
             this.webSettings = Output.ofNullable(webSettings);
             return this;
-        }
-        public EnterpriseKeyState build() {
+        }        public EnterpriseKeyState build() {
             return new EnterpriseKeyState(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, webSettings);
         }
     }

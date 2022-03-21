@@ -92,17 +92,14 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder generation(String generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public OSPolicyResourceFileGcsResponse build() {
+        }        public OSPolicyResourceFileGcsResponse build() {
             return new OSPolicyResourceFileGcsResponse(bucket, generation, object);
         }
     }

@@ -113,42 +113,34 @@ public final class SqlConnectivityUpdateSettingsArgs extends io.pulumi.resources
             this.connectivityType = connectivityType;
             return this;
         }
-
         public Builder connectivityType(@Nullable Either<String,ConnectivityType> connectivityType) {
             this.connectivityType = Output.ofNullable(connectivityType);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder sqlAuthUpdatePassword(@Nullable Output<String> sqlAuthUpdatePassword) {
             this.sqlAuthUpdatePassword = sqlAuthUpdatePassword;
             return this;
         }
-
         public Builder sqlAuthUpdatePassword(@Nullable String sqlAuthUpdatePassword) {
             this.sqlAuthUpdatePassword = Output.ofNullable(sqlAuthUpdatePassword);
             return this;
         }
-
         public Builder sqlAuthUpdateUserName(@Nullable Output<String> sqlAuthUpdateUserName) {
             this.sqlAuthUpdateUserName = sqlAuthUpdateUserName;
             return this;
         }
-
         public Builder sqlAuthUpdateUserName(@Nullable String sqlAuthUpdateUserName) {
             this.sqlAuthUpdateUserName = Output.ofNullable(sqlAuthUpdateUserName);
             return this;
-        }
-        public SqlConnectivityUpdateSettingsArgs build() {
+        }        public SqlConnectivityUpdateSettingsArgs build() {
             return new SqlConnectivityUpdateSettingsArgs(connectivityType, port, sqlAuthUpdatePassword, sqlAuthUpdateUserName);
         }
     }

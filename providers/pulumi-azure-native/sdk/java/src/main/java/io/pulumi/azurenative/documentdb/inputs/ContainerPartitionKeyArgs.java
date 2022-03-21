@@ -98,32 +98,29 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,PartitionKind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = Output.ofNullable(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ContainerPartitionKeyArgs build() {
+        }        public ContainerPartitionKeyArgs build() {
             return new ContainerPartitionKeyArgs(kind, paths, version);
         }
     }

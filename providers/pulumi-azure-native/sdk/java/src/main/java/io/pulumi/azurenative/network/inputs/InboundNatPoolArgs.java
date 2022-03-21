@@ -211,102 +211,82 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
-
         public Builder backendPort(Integer backendPort) {
             this.backendPort = Output.of(Objects.requireNonNull(backendPort));
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
-
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = Output.ofNullable(enableFloatingIP);
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
-
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
-
         public Builder frontendPortRangeEnd(Output<Integer> frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
-
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Output.of(Objects.requireNonNull(frontendPortRangeEnd));
             return this;
         }
-
         public Builder frontendPortRangeStart(Output<Integer> frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
-
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Output.of(Objects.requireNonNull(frontendPortRangeStart));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(Output<Either<String,TransportProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,TransportProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public InboundNatPoolArgs build() {
+        }        public InboundNatPoolArgs build() {
             return new InboundNatPoolArgs(backendPort, enableFloatingIP, enableTcpReset, frontendIPConfiguration, frontendPortRangeEnd, frontendPortRangeStart, id, idleTimeoutInMinutes, name, protocol);
         }
     }

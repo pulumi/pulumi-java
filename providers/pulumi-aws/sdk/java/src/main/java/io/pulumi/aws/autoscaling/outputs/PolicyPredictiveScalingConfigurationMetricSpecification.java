@@ -106,22 +106,18 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecification {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
-
         public Builder predefinedMetricPairSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification predefinedMetricPairSpecification) {
             this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
             return this;
         }
-
         public Builder predefinedScalingMetricSpecification(@Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
-
         public Builder targetValue(Integer targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
-        }
-        public PolicyPredictiveScalingConfigurationMetricSpecification build() {
+        }        public PolicyPredictiveScalingConfigurationMetricSpecification build() {
             return new PolicyPredictiveScalingConfigurationMetricSpecification(predefinedLoadMetricSpecification, predefinedMetricPairSpecification, predefinedScalingMetricSpecification, targetValue);
         }
     }

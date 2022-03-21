@@ -106,42 +106,34 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder validationStatus(@Nullable Output<String> validationStatus) {
             this.validationStatus = validationStatus;
             return this;
         }
-
         public Builder validationStatus(@Nullable String validationStatus) {
             this.validationStatus = Output.ofNullable(validationStatus);
             return this;
-        }
-        public ResolverDnsSecConfigState build() {
+        }        public ResolverDnsSecConfigState build() {
             return new ResolverDnsSecConfigState(arn, ownerId, resourceId, validationStatus);
         }
     }

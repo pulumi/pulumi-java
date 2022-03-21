@@ -197,92 +197,77 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder correlationData(@Nullable Output<Map<String,String>> correlationData) {
             this.correlationData = correlationData;
             return this;
         }
-
         public Builder correlationData(@Nullable Map<String,String> correlationData) {
             this.correlationData = Output.ofNullable(correlationData);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder input(Output<Object> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder input(Object input) {
             this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
-
         public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = Output.ofNullable(jobName);
             return this;
         }
-
         public Builder outputs(Output<List<JobOutputAssetArgs>> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
         public Builder outputs(List<JobOutputAssetArgs> outputs) {
             this.outputs = Output.of(Objects.requireNonNull(outputs));
             return this;
         }
-
+        public Builder outputs(JobOutputAssetArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder priority(@Nullable Output<Either<String,Priority>> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Either<String,Priority> priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder transformName(Output<String> transformName) {
             this.transformName = Objects.requireNonNull(transformName);
             return this;
         }
-
         public Builder transformName(String transformName) {
             this.transformName = Output.of(Objects.requireNonNull(transformName));
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(accountName, correlationData, description, input, jobName, outputs, priority, resourceGroupName, transformName);
         }
     }

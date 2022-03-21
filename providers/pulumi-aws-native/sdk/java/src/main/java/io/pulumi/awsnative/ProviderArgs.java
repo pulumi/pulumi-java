@@ -370,202 +370,171 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.accessKey = Output.ofNullable(accessKey).asSecret();
             return this;
         }
-
         public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Output.ofNullable(accessKey).asSecret();
             return this;
         }
-
         public Builder allowedAccountIds(@Nullable Output<List<String>> allowedAccountIds) {
             this.allowedAccountIds = allowedAccountIds;
             return this;
         }
-
         public Builder allowedAccountIds(@Nullable List<String> allowedAccountIds) {
             this.allowedAccountIds = Output.ofNullable(allowedAccountIds);
             return this;
         }
-
+        public Builder allowedAccountIds(String... allowedAccountIds) {
+            return allowedAccountIds(List.of(allowedAccountIds));
+        }
         public Builder assumeRole(@Nullable Output<ProviderAssumeRoleArgs> assumeRole) {
             this.assumeRole = assumeRole;
             return this;
         }
-
         public Builder assumeRole(@Nullable ProviderAssumeRoleArgs assumeRole) {
             this.assumeRole = Output.ofNullable(assumeRole);
             return this;
         }
-
         public Builder defaultTags(@Nullable Output<ProviderDefaultTagsArgs> defaultTags) {
             this.defaultTags = defaultTags;
             return this;
         }
-
         public Builder defaultTags(@Nullable ProviderDefaultTagsArgs defaultTags) {
             this.defaultTags = Output.ofNullable(defaultTags);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<ProviderEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ProviderEndpointArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(ProviderEndpointArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder forbiddenAccountIds(@Nullable Output<List<String>> forbiddenAccountIds) {
             this.forbiddenAccountIds = forbiddenAccountIds;
             return this;
         }
-
         public Builder forbiddenAccountIds(@Nullable List<String> forbiddenAccountIds) {
             this.forbiddenAccountIds = Output.ofNullable(forbiddenAccountIds);
             return this;
         }
-
+        public Builder forbiddenAccountIds(String... forbiddenAccountIds) {
+            return forbiddenAccountIds(List.of(forbiddenAccountIds));
+        }
         public Builder ignoreTags(@Nullable Output<ProviderIgnoreTagsArgs> ignoreTags) {
             this.ignoreTags = ignoreTags;
             return this;
         }
-
         public Builder ignoreTags(@Nullable ProviderIgnoreTagsArgs ignoreTags) {
             this.ignoreTags = Output.ofNullable(ignoreTags);
             return this;
         }
-
         public Builder insecure(@Nullable Output<Boolean> insecure) {
             this.insecure = insecure;
             return this;
         }
-
         public Builder insecure(@Nullable Boolean insecure) {
             this.insecure = Output.ofNullable(insecure);
             return this;
         }
-
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
-
         public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
-
         public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder s3ForcePathStyle(@Nullable Output<Boolean> s3ForcePathStyle) {
             this.s3ForcePathStyle = s3ForcePathStyle;
             return this;
         }
-
         public Builder s3ForcePathStyle(@Nullable Boolean s3ForcePathStyle) {
             this.s3ForcePathStyle = Output.ofNullable(s3ForcePathStyle);
             return this;
         }
-
         public Builder secretKey(@Nullable Output<String> secretKey) {
             this.secretKey = Output.ofNullable(secretKey).asSecret();
             return this;
         }
-
         public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = Output.ofNullable(secretKey).asSecret();
             return this;
         }
-
         public Builder sharedCredentialsFile(@Nullable Output<String> sharedCredentialsFile) {
             this.sharedCredentialsFile = sharedCredentialsFile;
             return this;
         }
-
         public Builder sharedCredentialsFile(@Nullable String sharedCredentialsFile) {
             this.sharedCredentialsFile = Output.ofNullable(sharedCredentialsFile);
             return this;
         }
-
         public Builder skipCredentialsValidation(@Nullable Output<Boolean> skipCredentialsValidation) {
             this.skipCredentialsValidation = skipCredentialsValidation;
             return this;
         }
-
         public Builder skipCredentialsValidation(@Nullable Boolean skipCredentialsValidation) {
             this.skipCredentialsValidation = Output.ofNullable(skipCredentialsValidation);
             return this;
         }
-
         public Builder skipGetEc2Platforms(@Nullable Output<Boolean> skipGetEc2Platforms) {
             this.skipGetEc2Platforms = skipGetEc2Platforms;
             return this;
         }
-
         public Builder skipGetEc2Platforms(@Nullable Boolean skipGetEc2Platforms) {
             this.skipGetEc2Platforms = Output.ofNullable(skipGetEc2Platforms);
             return this;
         }
-
         public Builder skipMetadataApiCheck(@Nullable Output<Boolean> skipMetadataApiCheck) {
             this.skipMetadataApiCheck = skipMetadataApiCheck;
             return this;
         }
-
         public Builder skipMetadataApiCheck(@Nullable Boolean skipMetadataApiCheck) {
             this.skipMetadataApiCheck = Output.ofNullable(skipMetadataApiCheck);
             return this;
         }
-
         public Builder skipRegionValidation(@Nullable Output<Boolean> skipRegionValidation) {
             this.skipRegionValidation = skipRegionValidation;
             return this;
         }
-
         public Builder skipRegionValidation(@Nullable Boolean skipRegionValidation) {
             this.skipRegionValidation = Output.ofNullable(skipRegionValidation);
             return this;
         }
-
         public Builder skipRequestingAccountId(@Nullable Output<Boolean> skipRequestingAccountId) {
             this.skipRequestingAccountId = skipRequestingAccountId;
             return this;
         }
-
         public Builder skipRequestingAccountId(@Nullable Boolean skipRequestingAccountId) {
             this.skipRequestingAccountId = Output.ofNullable(skipRequestingAccountId);
             return this;
         }
-
         public Builder token(@Nullable Output<String> token) {
             this.token = Output.ofNullable(token).asSecret();
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = Output.ofNullable(token).asSecret();
             return this;
-        }
-        public ProviderArgs build() {
+        }        public ProviderArgs build() {
             return new ProviderArgs(accessKey, allowedAccountIds, assumeRole, defaultTags, endpoints, forbiddenAccountIds, ignoreTags, insecure, maxRetries, profile, region, s3ForcePathStyle, secretKey, sharedCredentialsFile, skipCredentialsValidation, skipGetEc2Platforms, skipMetadataApiCheck, skipRegionValidation, skipRequestingAccountId, token);
         }
     }

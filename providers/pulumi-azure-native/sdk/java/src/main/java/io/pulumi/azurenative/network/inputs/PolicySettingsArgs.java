@@ -131,52 +131,42 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
-
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             this.fileUploadLimitInMb = Output.ofNullable(fileUploadLimitInMb);
             return this;
         }
-
         public Builder maxRequestBodySizeInKb(@Nullable Output<Integer> maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
-
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = Output.ofNullable(maxRequestBodySizeInKb);
             return this;
         }
-
         public Builder mode(@Nullable Output<Either<String,WebApplicationFirewallMode>> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Either<String,WebApplicationFirewallMode> mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder requestBodyCheck(@Nullable Output<Boolean> requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
-
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = Output.ofNullable(requestBodyCheck);
             return this;
         }
-
         public Builder state(@Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable Either<String,WebApplicationFirewallEnabledState> state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public PolicySettingsArgs build() {
+        }        public PolicySettingsArgs build() {
             return new PolicySettingsArgs(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
         }
     }

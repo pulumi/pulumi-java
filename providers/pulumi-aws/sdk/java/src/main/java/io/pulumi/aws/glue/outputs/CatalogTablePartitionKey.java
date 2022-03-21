@@ -87,17 +87,14 @@ public final class CatalogTablePartitionKey {
             this.comment = comment;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public CatalogTablePartitionKey build() {
+        }        public CatalogTablePartitionKey build() {
             return new CatalogTablePartitionKey(comment, name, type);
         }
     }

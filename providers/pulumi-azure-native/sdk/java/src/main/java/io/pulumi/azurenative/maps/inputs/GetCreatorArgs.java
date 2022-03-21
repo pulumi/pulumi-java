@@ -88,17 +88,14 @@ public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder creatorName(String creatorName) {
             this.creatorName = Objects.requireNonNull(creatorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCreatorArgs build() {
+        }        public GetCreatorArgs build() {
             return new GetCreatorArgs(accountName, creatorName, resourceGroupName);
         }
     }

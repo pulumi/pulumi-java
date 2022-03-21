@@ -63,12 +63,10 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,DigitalTwinsIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DigitalTwinsIdentityArgs build() {
+        }        public DigitalTwinsIdentityArgs build() {
             return new DigitalTwinsIdentityArgs(type);
         }
     }

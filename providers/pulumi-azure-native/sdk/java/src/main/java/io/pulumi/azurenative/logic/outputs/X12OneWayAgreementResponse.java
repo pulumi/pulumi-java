@@ -86,17 +86,14 @@ public final class X12OneWayAgreementResponse {
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
-
         public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
-
         public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
-        }
-        public X12OneWayAgreementResponse build() {
+        }        public X12OneWayAgreementResponse build() {
             return new X12OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
         }
     }

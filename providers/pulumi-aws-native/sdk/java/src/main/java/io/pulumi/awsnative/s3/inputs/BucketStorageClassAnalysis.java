@@ -56,8 +56,7 @@ public final class BucketStorageClassAnalysis extends io.pulumi.resources.Invoke
         public Builder dataExport(@Nullable BucketDataExport dataExport) {
             this.dataExport = dataExport;
             return this;
-        }
-        public BucketStorageClassAnalysis build() {
+        }        public BucketStorageClassAnalysis build() {
             return new BucketStorageClassAnalysis(dataExport);
         }
     }

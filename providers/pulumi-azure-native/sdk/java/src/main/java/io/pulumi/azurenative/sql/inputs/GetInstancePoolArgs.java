@@ -72,12 +72,10 @@ public final class GetInstancePoolArgs extends io.pulumi.resources.InvokeArgs {
             this.instancePoolName = Objects.requireNonNull(instancePoolName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetInstancePoolArgs build() {
+        }        public GetInstancePoolArgs build() {
             return new GetInstancePoolArgs(instancePoolName, resourceGroupName);
         }
     }

@@ -88,17 +88,14 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
             this.customerSubscriptionName = Objects.requireNonNull(customerSubscriptionName);
             return this;
         }
-
         public Builder registrationName(String registrationName) {
             this.registrationName = Objects.requireNonNull(registrationName);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
-        }
-        public GetCustomerSubscriptionArgs build() {
+        }        public GetCustomerSubscriptionArgs build() {
             return new GetCustomerSubscriptionArgs(customerSubscriptionName, registrationName, resourceGroup);
         }
     }

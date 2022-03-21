@@ -104,22 +104,18 @@ public final class TaskSetLoadBalancer {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
-
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
-        }
-        public TaskSetLoadBalancer build() {
+        }        public TaskSetLoadBalancer build() {
             return new TaskSetLoadBalancer(containerName, containerPort, loadBalancerName, targetGroupArn);
         }
     }

@@ -55,12 +55,16 @@ public final class PolicyIEMap {
             this.aCCOUNT = aCCOUNT;
             return this;
         }
-
+        public Builder aCCOUNT(String... aCCOUNT) {
+            return aCCOUNT(List.of(aCCOUNT));
+        }
         public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
             this.oRGUNIT = oRGUNIT;
             return this;
         }
-        public PolicyIEMap build() {
+        public Builder oRGUNIT(String... oRGUNIT) {
+            return oRGUNIT(List.of(oRGUNIT));
+        }        public PolicyIEMap build() {
             return new PolicyIEMap(aCCOUNT, oRGUNIT);
         }
     }

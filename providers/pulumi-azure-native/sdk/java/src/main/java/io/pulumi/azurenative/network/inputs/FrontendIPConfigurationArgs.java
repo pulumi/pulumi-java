@@ -197,92 +197,77 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
             this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
             this.publicIPAddress = Output.ofNullable(publicIPAddress);
             return this;
         }
-
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
-
         public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
             this.publicIPPrefix = Output.ofNullable(publicIPPrefix);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public FrontendIPConfigurationArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public FrontendIPConfigurationArgs build() {
             return new FrontendIPConfigurationArgs(id, name, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, publicIPAddress, publicIPPrefix, subnet, zones);
         }
     }

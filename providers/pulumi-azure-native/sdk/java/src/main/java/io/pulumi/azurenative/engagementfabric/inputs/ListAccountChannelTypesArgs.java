@@ -72,12 +72,10 @@ public final class ListAccountChannelTypesArgs extends io.pulumi.resources.Invok
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListAccountChannelTypesArgs build() {
+        }        public ListAccountChannelTypesArgs build() {
             return new ListAccountChannelTypesArgs(accountName, resourceGroupName);
         }
     }

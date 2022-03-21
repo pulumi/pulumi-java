@@ -89,17 +89,17 @@ public final class EmailNotificationResponse {
             this.customEmails = customEmails;
             return this;
         }
-
+        public Builder customEmails(String... customEmails) {
+            return customEmails(List.of(customEmails));
+        }
         public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
-
         public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
-        }
-        public EmailNotificationResponse build() {
+        }        public EmailNotificationResponse build() {
             return new EmailNotificationResponse(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
         }
     }

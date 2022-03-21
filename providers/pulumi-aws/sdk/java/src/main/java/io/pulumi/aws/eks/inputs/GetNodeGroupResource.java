@@ -74,12 +74,13 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
             this.autoscalingGroups = Objects.requireNonNull(autoscalingGroups);
             return this;
         }
-
+        public Builder autoscalingGroups(GetNodeGroupResourceAutoscalingGroup... autoscalingGroups) {
+            return autoscalingGroups(List.of(autoscalingGroups));
+        }
         public Builder remoteAccessSecurityGroupId(String remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = Objects.requireNonNull(remoteAccessSecurityGroupId);
             return this;
-        }
-        public GetNodeGroupResource build() {
+        }        public GetNodeGroupResource build() {
             return new GetNodeGroupResource(autoscalingGroups, remoteAccessSecurityGroupId);
         }
     }

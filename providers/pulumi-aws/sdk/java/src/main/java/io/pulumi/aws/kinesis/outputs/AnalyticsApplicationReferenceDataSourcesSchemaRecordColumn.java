@@ -87,17 +87,14 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
             this.mapping = mapping;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sqlType(String sqlType) {
             this.sqlType = Objects.requireNonNull(sqlType);
             return this;
-        }
-        public AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn build() {
+        }        public AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn build() {
             return new AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn(mapping, name, sqlType);
         }
     }

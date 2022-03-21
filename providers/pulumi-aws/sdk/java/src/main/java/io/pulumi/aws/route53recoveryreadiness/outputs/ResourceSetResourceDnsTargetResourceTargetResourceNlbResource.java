@@ -53,8 +53,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceTargetResourceNlbResource build() {
+        }        public ResourceSetResourceDnsTargetResourceTargetResourceNlbResource build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceNlbResource(arn);
         }
     }

@@ -277,82 +277,69 @@ public final class GetWorkspaceResult {
             this.applicationGroupReferences = applicationGroupReferences;
             return this;
         }
-
+        public Builder applicationGroupReferences(String... applicationGroupReferences) {
+            return applicationGroupReferences(List.of(applicationGroupReferences));
+        }
         public Builder cloudPcResource(Boolean cloudPcResource) {
             this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkspaceResult build() {
+        }        public GetWorkspaceResult build() {
             return new GetWorkspaceResult(applicationGroupReferences, cloudPcResource, description, etag, friendlyName, id, identity, kind, location, managedBy, name, objectId, plan, sku, tags, type);
         }
     }

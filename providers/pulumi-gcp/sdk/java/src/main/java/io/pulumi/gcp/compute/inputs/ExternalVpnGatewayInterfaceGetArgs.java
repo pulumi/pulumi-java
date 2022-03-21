@@ -82,22 +82,18 @@ public final class ExternalVpnGatewayInterfaceGetArgs extends io.pulumi.resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable Integer id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
-        }
-        public ExternalVpnGatewayInterfaceGetArgs build() {
+        }        public ExternalVpnGatewayInterfaceGetArgs build() {
             return new ExternalVpnGatewayInterfaceGetArgs(id, ipAddress);
         }
     }

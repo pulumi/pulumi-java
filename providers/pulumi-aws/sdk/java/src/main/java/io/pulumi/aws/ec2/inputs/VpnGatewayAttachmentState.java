@@ -74,22 +74,18 @@ public final class VpnGatewayAttachmentState extends io.pulumi.resources.Resourc
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
-        }
-        public VpnGatewayAttachmentState build() {
+        }        public VpnGatewayAttachmentState build() {
             return new VpnGatewayAttachmentState(vpcId, vpnGatewayId);
         }
     }

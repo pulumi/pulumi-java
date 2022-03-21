@@ -72,12 +72,10 @@ public final class MxRecordResponse {
             this.exchange = exchange;
             return this;
         }
-
         public Builder preference(@Nullable Integer preference) {
             this.preference = preference;
             return this;
-        }
-        public MxRecordResponse build() {
+        }        public MxRecordResponse build() {
             return new MxRecordResponse(exchange, preference);
         }
     }

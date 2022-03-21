@@ -57,12 +57,10 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }
-
         public Builder cloudSecret(String cloudSecret) {
             this.cloudSecret = Output.of(Objects.requireNonNull(cloudSecret));
             return this;
-        }
-        public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs build() {
+        }        public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(cloudSecret);
         }
     }

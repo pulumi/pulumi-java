@@ -92,32 +92,29 @@ public final class EventTargetHttpTargetGetArgs extends io.pulumi.resources.Reso
             this.headerParameters = headerParameters;
             return this;
         }
-
         public Builder headerParameters(@Nullable Map<String,String> headerParameters) {
             this.headerParameters = Output.ofNullable(headerParameters);
             return this;
         }
-
         public Builder pathParameterValues(@Nullable Output<List<String>> pathParameterValues) {
             this.pathParameterValues = pathParameterValues;
             return this;
         }
-
         public Builder pathParameterValues(@Nullable List<String> pathParameterValues) {
             this.pathParameterValues = Output.ofNullable(pathParameterValues);
             return this;
         }
-
+        public Builder pathParameterValues(String... pathParameterValues) {
+            return pathParameterValues(List.of(pathParameterValues));
+        }
         public Builder queryStringParameters(@Nullable Output<Map<String,String>> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }
-
         public Builder queryStringParameters(@Nullable Map<String,String> queryStringParameters) {
             this.queryStringParameters = Output.ofNullable(queryStringParameters);
             return this;
-        }
-        public EventTargetHttpTargetGetArgs build() {
+        }        public EventTargetHttpTargetGetArgs build() {
             return new EventTargetHttpTargetGetArgs(headerParameters, pathParameterValues, queryStringParameters);
         }
     }

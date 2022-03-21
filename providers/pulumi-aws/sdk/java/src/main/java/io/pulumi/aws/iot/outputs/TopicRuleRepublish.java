@@ -88,17 +88,14 @@ public final class TopicRuleRepublish {
             this.qos = qos;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
-        }
-        public TopicRuleRepublish build() {
+        }        public TopicRuleRepublish build() {
             return new TopicRuleRepublish(qos, roleArn, topic);
         }
     }

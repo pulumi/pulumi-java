@@ -280,142 +280,117 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authHeaders(@Nullable Output<Object> authHeaders) {
             this.authHeaders = authHeaders;
             return this;
         }
-
         public Builder authHeaders(@Nullable Object authHeaders) {
             this.authHeaders = Output.ofNullable(authHeaders);
             return this;
         }
-
         public Builder authenticationType(@Nullable Output<Either<String,HttpAuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
-
         public Builder authenticationType(@Nullable Either<String,HttpAuthenticationType> authenticationType) {
             this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
-
         public Builder certThumbprint(@Nullable Output<Object> certThumbprint) {
             this.certThumbprint = certThumbprint;
             return this;
         }
-
         public Builder certThumbprint(@Nullable Object certThumbprint) {
             this.certThumbprint = Output.ofNullable(certThumbprint);
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder embeddedCertData(@Nullable Output<Object> embeddedCertData) {
             this.embeddedCertData = embeddedCertData;
             return this;
         }
-
         public Builder embeddedCertData(@Nullable Object embeddedCertData) {
             this.embeddedCertData = Output.ofNullable(embeddedCertData);
             return this;
         }
-
         public Builder enableServerCertificateValidation(@Nullable Output<Object> enableServerCertificateValidation) {
             this.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
-
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
             this.enableServerCertificateValidation = Output.ofNullable(enableServerCertificateValidation);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder userName(@Nullable Output<Object> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public HttpLinkedServiceArgs build() {
+        }        public HttpLinkedServiceArgs build() {
             return new HttpLinkedServiceArgs(annotations, authHeaders, authenticationType, certThumbprint, connectVia, description, embeddedCertData, enableServerCertificateValidation, encryptedCredential, parameters, password, type, url, userName);
         }
     }

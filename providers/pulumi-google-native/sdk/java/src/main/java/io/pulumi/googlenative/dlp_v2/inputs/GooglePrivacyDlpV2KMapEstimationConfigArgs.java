@@ -97,32 +97,32 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
             this.auxiliaryTables = auxiliaryTables;
             return this;
         }
-
         public Builder auxiliaryTables(@Nullable List<GooglePrivacyDlpV2AuxiliaryTableArgs> auxiliaryTables) {
             this.auxiliaryTables = Output.ofNullable(auxiliaryTables);
             return this;
         }
-
+        public Builder auxiliaryTables(GooglePrivacyDlpV2AuxiliaryTableArgs... auxiliaryTables) {
+            return auxiliaryTables(List.of(auxiliaryTables));
+        }
         public Builder quasiIds(Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
         public Builder quasiIds(List<GooglePrivacyDlpV2TaggedFieldArgs> quasiIds) {
             this.quasiIds = Output.of(Objects.requireNonNull(quasiIds));
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2TaggedFieldArgs... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder regionCode(@Nullable Output<String> regionCode) {
             this.regionCode = regionCode;
             return this;
         }
-
         public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = Output.ofNullable(regionCode);
             return this;
-        }
-        public GooglePrivacyDlpV2KMapEstimationConfigArgs build() {
+        }        public GooglePrivacyDlpV2KMapEstimationConfigArgs build() {
             return new GooglePrivacyDlpV2KMapEstimationConfigArgs(auxiliaryTables, quasiIds, regionCode);
         }
     }

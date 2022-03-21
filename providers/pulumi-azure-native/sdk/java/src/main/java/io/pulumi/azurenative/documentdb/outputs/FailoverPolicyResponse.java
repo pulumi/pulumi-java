@@ -88,17 +88,14 @@ public final class FailoverPolicyResponse {
             this.failoverPriority = failoverPriority;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
-        }
-        public FailoverPolicyResponse build() {
+        }        public FailoverPolicyResponse build() {
             return new FailoverPolicyResponse(failoverPriority, id, locationName);
         }
     }

@@ -97,42 +97,34 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
             this.customPayload = customPayload;
             return this;
         }
-
         public Builder customPayload(@Nullable BotCustomPayloadArgs customPayload) {
             this.customPayload = Output.ofNullable(customPayload);
             return this;
         }
-
         public Builder imageResponseCard(@Nullable Output<BotImageResponseCardArgs> imageResponseCard) {
             this.imageResponseCard = imageResponseCard;
             return this;
         }
-
         public Builder imageResponseCard(@Nullable BotImageResponseCardArgs imageResponseCard) {
             this.imageResponseCard = Output.ofNullable(imageResponseCard);
             return this;
         }
-
         public Builder plainTextMessage(@Nullable Output<BotPlainTextMessageArgs> plainTextMessage) {
             this.plainTextMessage = plainTextMessage;
             return this;
         }
-
         public Builder plainTextMessage(@Nullable BotPlainTextMessageArgs plainTextMessage) {
             this.plainTextMessage = Output.ofNullable(plainTextMessage);
             return this;
         }
-
         public Builder sSMLMessage(@Nullable Output<BotSSMLMessageArgs> sSMLMessage) {
             this.sSMLMessage = sSMLMessage;
             return this;
         }
-
         public Builder sSMLMessage(@Nullable BotSSMLMessageArgs sSMLMessage) {
             this.sSMLMessage = Output.ofNullable(sSMLMessage);
             return this;
-        }
-        public BotMessageArgs build() {
+        }        public BotMessageArgs build() {
             return new BotMessageArgs(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);
         }
     }

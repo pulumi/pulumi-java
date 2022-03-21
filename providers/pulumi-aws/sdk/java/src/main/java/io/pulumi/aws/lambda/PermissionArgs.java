@@ -190,87 +190,70 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder eventSourceToken(@Nullable Output<String> eventSourceToken) {
             this.eventSourceToken = eventSourceToken;
             return this;
         }
-
         public Builder eventSourceToken(@Nullable String eventSourceToken) {
             this.eventSourceToken = Output.ofNullable(eventSourceToken);
             return this;
         }
-
         public Builder function(Output<String> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public Builder principal(String principal) {
             this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
-
         public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
             this.sourceAccount = sourceAccount;
             return this;
         }
-
         public Builder sourceAccount(@Nullable String sourceAccount) {
             this.sourceAccount = Output.ofNullable(sourceAccount);
             return this;
         }
-
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
-
         public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = Output.ofNullable(sourceArn);
             return this;
         }
-
         public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
-
         public Builder statementId(@Nullable String statementId) {
             this.statementId = Output.ofNullable(statementId);
             return this;
         }
-
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
-
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
             this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
             return this;
-        }
-        public PermissionArgs build() {
+        }        public PermissionArgs build() {
             return new PermissionArgs(action, eventSourceToken, function, principal, qualifier, sourceAccount, sourceArn, statementId, statementIdPrefix);
         }
     }

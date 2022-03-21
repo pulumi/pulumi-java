@@ -88,17 +88,14 @@ public final class LaunchConfigurationMetadataOptions {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
-
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-
         public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
-        }
-        public LaunchConfigurationMetadataOptions build() {
+        }        public LaunchConfigurationMetadataOptions build() {
             return new LaunchConfigurationMetadataOptions(httpEndpoint, httpPutResponseHopLimit, httpTokens);
         }
     }

@@ -78,12 +78,13 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
-
         public Builder vaultCertificates(List<VaultCertificateResponse> vaultCertificates) {
             this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
             return this;
         }
-        public VaultSecretGroupResponse build() {
+        public Builder vaultCertificates(VaultCertificateResponse... vaultCertificates) {
+            return vaultCertificates(List.of(vaultCertificates));
+        }        public VaultSecretGroupResponse build() {
             return new VaultSecretGroupResponse(sourceVault, vaultCertificates);
         }
     }

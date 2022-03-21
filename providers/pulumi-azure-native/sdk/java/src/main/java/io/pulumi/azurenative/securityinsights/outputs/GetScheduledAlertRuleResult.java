@@ -348,97 +348,81 @@ public final class GetScheduledAlertRuleResult {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder queryFrequency(String queryFrequency) {
             this.queryFrequency = Objects.requireNonNull(queryFrequency);
             return this;
         }
-
         public Builder queryPeriod(String queryPeriod) {
             this.queryPeriod = Objects.requireNonNull(queryPeriod);
             return this;
         }
-
         public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public Builder suppressionDuration(String suppressionDuration) {
             this.suppressionDuration = Objects.requireNonNull(suppressionDuration);
             return this;
         }
-
         public Builder suppressionEnabled(Boolean suppressionEnabled) {
             this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled);
             return this;
         }
-
         public Builder tactics(@Nullable List<String> tactics) {
             this.tactics = tactics;
             return this;
         }
-
+        public Builder tactics(String... tactics) {
+            return tactics(List.of(tactics));
+        }
         public Builder triggerOperator(String triggerOperator) {
             this.triggerOperator = Objects.requireNonNull(triggerOperator);
             return this;
         }
-
         public Builder triggerThreshold(Integer triggerThreshold) {
             this.triggerThreshold = Objects.requireNonNull(triggerThreshold);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetScheduledAlertRuleResult build() {
+        }        public GetScheduledAlertRuleResult build() {
             return new GetScheduledAlertRuleResult(alertRuleTemplateName, description, displayName, enabled, etag, id, kind, lastModifiedUtc, name, query, queryFrequency, queryPeriod, severity, suppressionDuration, suppressionEnabled, tactics, triggerOperator, triggerThreshold, type);
         }
     }

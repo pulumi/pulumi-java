@@ -74,12 +74,10 @@ public final class TableRangePartitioning {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder range(TableRangePartitioningRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
-        }
-        public TableRangePartitioning build() {
+        }        public TableRangePartitioning build() {
             return new TableRangePartitioning(field, range);
         }
     }

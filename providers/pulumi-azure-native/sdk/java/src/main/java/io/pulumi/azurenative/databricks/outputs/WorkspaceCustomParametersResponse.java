@@ -298,82 +298,66 @@ public final class WorkspaceCustomParametersResponse {
             this.amlWorkspaceId = amlWorkspaceId;
             return this;
         }
-
         public Builder customPrivateSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName) {
             this.customPrivateSubnetName = customPrivateSubnetName;
             return this;
         }
-
         public Builder customPublicSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName) {
             this.customPublicSubnetName = customPublicSubnetName;
             return this;
         }
-
         public Builder customVirtualNetworkId(@Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId) {
             this.customVirtualNetworkId = customVirtualNetworkId;
             return this;
         }
-
         public Builder enableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp) {
             this.enableNoPublicIp = enableNoPublicIp;
             return this;
         }
-
         public Builder encryption(@Nullable WorkspaceEncryptionParameterResponse encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder loadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName) {
             this.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
             return this;
         }
-
         public Builder loadBalancerId(@Nullable WorkspaceCustomStringParameterResponse loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
             return this;
         }
-
         public Builder natGatewayName(@Nullable WorkspaceCustomStringParameterResponse natGatewayName) {
             this.natGatewayName = natGatewayName;
             return this;
         }
-
         public Builder prepareEncryption(@Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption) {
             this.prepareEncryption = prepareEncryption;
             return this;
         }
-
         public Builder publicIpName(@Nullable WorkspaceCustomStringParameterResponse publicIpName) {
             this.publicIpName = publicIpName;
             return this;
         }
-
         public Builder requireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
-
         public Builder resourceTags(WorkspaceCustomObjectParameterResponse resourceTags) {
             this.resourceTags = Objects.requireNonNull(resourceTags);
             return this;
         }
-
         public Builder storageAccountName(@Nullable WorkspaceCustomStringParameterResponse storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountSkuName(@Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName) {
             this.storageAccountSkuName = storageAccountSkuName;
             return this;
         }
-
         public Builder vnetAddressPrefix(@Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
             this.vnetAddressPrefix = vnetAddressPrefix;
             return this;
-        }
-        public WorkspaceCustomParametersResponse build() {
+        }        public WorkspaceCustomParametersResponse build() {
             return new WorkspaceCustomParametersResponse(amlWorkspaceId, customPrivateSubnetName, customPublicSubnetName, customVirtualNetworkId, enableNoPublicIp, encryption, loadBalancerBackendPoolName, loadBalancerId, natGatewayName, prepareEncryption, publicIpName, requireInfrastructureEncryption, resourceTags, storageAccountName, storageAccountSkuName, vnetAddressPrefix);
         }
     }

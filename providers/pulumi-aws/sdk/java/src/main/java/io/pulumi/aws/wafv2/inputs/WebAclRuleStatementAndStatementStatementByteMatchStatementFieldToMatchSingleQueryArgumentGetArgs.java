@@ -56,12 +56,10 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
+        }        public WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
             return new WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs(name);
         }
     }

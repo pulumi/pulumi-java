@@ -101,22 +101,18 @@ public final class GoogleType__ExprResponse {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleType__ExprResponse build() {
+        }        public GoogleType__ExprResponse build() {
             return new GoogleType__ExprResponse(description, expression, location, title);
         }
     }

@@ -71,12 +71,13 @@ public final class InterconnectMacsecResponse {
             this.failOpen = Objects.requireNonNull(failOpen);
             return this;
         }
-
         public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
             this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
             return this;
         }
-        public InterconnectMacsecResponse build() {
+        public Builder preSharedKeys(InterconnectMacsecPreSharedKeyResponse... preSharedKeys) {
+            return preSharedKeys(List.of(preSharedKeys));
+        }        public InterconnectMacsecResponse build() {
             return new InterconnectMacsecResponse(failOpen, preSharedKeys);
         }
     }

@@ -175,82 +175,66 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
             this.apiBuildCommand = apiBuildCommand;
             return this;
         }
-
         public Builder apiBuildCommand(@Nullable String apiBuildCommand) {
             this.apiBuildCommand = Output.ofNullable(apiBuildCommand);
             return this;
         }
-
         public Builder apiLocation(@Nullable Output<String> apiLocation) {
             this.apiLocation = apiLocation;
             return this;
         }
-
         public Builder apiLocation(@Nullable String apiLocation) {
             this.apiLocation = Output.ofNullable(apiLocation);
             return this;
         }
-
         public Builder appArtifactLocation(@Nullable Output<String> appArtifactLocation) {
             this.appArtifactLocation = appArtifactLocation;
             return this;
         }
-
         public Builder appArtifactLocation(@Nullable String appArtifactLocation) {
             this.appArtifactLocation = Output.ofNullable(appArtifactLocation);
             return this;
         }
-
         public Builder appBuildCommand(@Nullable Output<String> appBuildCommand) {
             this.appBuildCommand = appBuildCommand;
             return this;
         }
-
         public Builder appBuildCommand(@Nullable String appBuildCommand) {
             this.appBuildCommand = Output.ofNullable(appBuildCommand);
             return this;
         }
-
         public Builder appLocation(@Nullable Output<String> appLocation) {
             this.appLocation = appLocation;
             return this;
         }
-
         public Builder appLocation(@Nullable String appLocation) {
             this.appLocation = Output.ofNullable(appLocation);
             return this;
         }
-
         public Builder githubActionSecretNameOverride(@Nullable Output<String> githubActionSecretNameOverride) {
             this.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
-
         public Builder githubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
             this.githubActionSecretNameOverride = Output.ofNullable(githubActionSecretNameOverride);
             return this;
         }
-
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
-
         public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
-
         public Builder skipGithubActionWorkflowGeneration(@Nullable Output<Boolean> skipGithubActionWorkflowGeneration) {
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }
-
         public Builder skipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
             this.skipGithubActionWorkflowGeneration = Output.ofNullable(skipGithubActionWorkflowGeneration);
             return this;
-        }
-        public StaticSiteBuildPropertiesArgs build() {
+        }        public StaticSiteBuildPropertiesArgs build() {
             return new StaticSiteBuildPropertiesArgs(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
         }
     }

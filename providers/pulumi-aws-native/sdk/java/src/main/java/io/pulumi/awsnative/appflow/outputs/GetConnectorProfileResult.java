@@ -88,17 +88,14 @@ public final class GetConnectorProfileResult {
             this.connectionMode = connectionMode;
             return this;
         }
-
         public Builder connectorProfileArn(@Nullable String connectorProfileArn) {
             this.connectorProfileArn = connectorProfileArn;
             return this;
         }
-
         public Builder credentialsArn(@Nullable String credentialsArn) {
             this.credentialsArn = credentialsArn;
             return this;
-        }
-        public GetConnectorProfileResult build() {
+        }        public GetConnectorProfileResult build() {
             return new GetConnectorProfileResult(connectionMode, connectorProfileArn, credentialsArn);
         }
     }

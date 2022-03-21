@@ -61,12 +61,10 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
-        }
-        public GoogleCloudRetailV2betaRuleFilterActionArgs build() {
+        }        public GoogleCloudRetailV2betaRuleFilterActionArgs build() {
             return new GoogleCloudRetailV2betaRuleFilterActionArgs(filter);
         }
     }

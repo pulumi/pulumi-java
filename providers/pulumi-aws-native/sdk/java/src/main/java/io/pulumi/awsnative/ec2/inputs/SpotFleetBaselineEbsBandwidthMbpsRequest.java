@@ -66,12 +66,10 @@ public final class SpotFleetBaselineEbsBandwidthMbpsRequest extends io.pulumi.re
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public SpotFleetBaselineEbsBandwidthMbpsRequest build() {
+        }        public SpotFleetBaselineEbsBandwidthMbpsRequest build() {
             return new SpotFleetBaselineEbsBandwidthMbpsRequest(max, min);
         }
     }

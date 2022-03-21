@@ -104,22 +104,18 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
             this.actionId = Objects.requireNonNull(actionId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetActionArgs build() {
+        }        public GetActionArgs build() {
             return new GetActionArgs(actionId, resourceGroupName, ruleId, workspaceName);
         }
     }

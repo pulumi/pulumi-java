@@ -61,12 +61,10 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = Output.ofNullable(revision);
             return this;
-        }
-        public RollbackConfigArgs build() {
+        }        public RollbackConfigArgs build() {
             return new RollbackConfigArgs(revision);
         }
     }

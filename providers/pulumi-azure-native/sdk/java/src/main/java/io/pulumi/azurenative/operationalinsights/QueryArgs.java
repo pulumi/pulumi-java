@@ -190,92 +190,74 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder body(String body) {
             this.body = Output.of(Objects.requireNonNull(body));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Object properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder queryPackName(Output<String> queryPackName) {
             this.queryPackName = Objects.requireNonNull(queryPackName);
             return this;
         }
-
         public Builder queryPackName(String queryPackName) {
             this.queryPackName = Output.of(Objects.requireNonNull(queryPackName));
             return this;
         }
-
         public Builder related(@Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related) {
             this.related = related;
             return this;
         }
-
         public Builder related(@Nullable LogAnalyticsQueryPackQueryPropertiesRelatedArgs related) {
             this.related = Output.ofNullable(related);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,List<String>> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public QueryArgs build() {
+        }        public QueryArgs build() {
             return new QueryArgs(body, description, displayName, id, properties, queryPackName, related, resourceGroupName, tags);
         }
     }

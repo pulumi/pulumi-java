@@ -79,22 +79,18 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
             this.tableSpec = tableSpec;
             return this;
         }
-
         public Builder tableSpec(@Nullable GoogleCloudDatacatalogV1TableSpecArgs tableSpec) {
             this.tableSpec = Output.ofNullable(tableSpec);
             return this;
         }
-
         public Builder viewSpec(@Nullable Output<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec) {
             this.viewSpec = viewSpec;
             return this;
         }
-
         public Builder viewSpec(@Nullable GoogleCloudDatacatalogV1ViewSpecArgs viewSpec) {
             this.viewSpec = Output.ofNullable(viewSpec);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BigQueryTableSpecArgs build() {
+        }        public GoogleCloudDatacatalogV1BigQueryTableSpecArgs build() {
             return new GoogleCloudDatacatalogV1BigQueryTableSpecArgs(tableSpec, viewSpec);
         }
     }

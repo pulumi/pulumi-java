@@ -79,22 +79,18 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
-
         public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Output.of(Objects.requireNonNull(intervalDurationDays));
             return this;
         }
-
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }
-
         public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = Output.ofNullable(scheduleTime);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(intervalDurationDays, scheduleTime);
         }
     }

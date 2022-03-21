@@ -141,62 +141,50 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             this.hubBillingInfo = hubBillingInfo;
             return this;
         }
-
         public Builder hubBillingInfo(@Nullable HubBillingInfoFormatArgs hubBillingInfo) {
             this.hubBillingInfo = Output.ofNullable(hubBillingInfo);
             return this;
         }
-
         public Builder hubName(@Nullable Output<String> hubName) {
             this.hubName = hubName;
             return this;
         }
-
         public Builder hubName(@Nullable String hubName) {
             this.hubName = Output.ofNullable(hubName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tenantFeatures(@Nullable Output<Integer> tenantFeatures) {
             this.tenantFeatures = tenantFeatures;
             return this;
         }
-
         public Builder tenantFeatures(@Nullable Integer tenantFeatures) {
             this.tenantFeatures = Output.ofNullable(tenantFeatures);
             return this;
-        }
-        public HubArgs build() {
+        }        public HubArgs build() {
             return new HubArgs(hubBillingInfo, hubName, location, resourceGroupName, tags, tenantFeatures);
         }
     }

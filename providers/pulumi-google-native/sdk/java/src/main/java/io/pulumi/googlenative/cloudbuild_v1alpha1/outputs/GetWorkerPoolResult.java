@@ -199,52 +199,45 @@ public final class GetWorkerPoolResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder workerConfig(WorkerConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public Builder workerCount(String workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
-        }
-        public GetWorkerPoolResult build() {
+        }        public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(createTime, deleteTime, name, project, regions, serviceAccountEmail, status, updateTime, workerConfig, workerCount);
         }
     }

@@ -88,17 +88,14 @@ public final class AttachNewDataDiskOptionsResponse {
             this.diskName = diskName;
             return this;
         }
-
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
-        }
-        public AttachNewDataDiskOptionsResponse build() {
+        }        public AttachNewDataDiskOptionsResponse build() {
             return new AttachNewDataDiskOptionsResponse(diskName, diskSizeGiB, diskType);
         }
     }

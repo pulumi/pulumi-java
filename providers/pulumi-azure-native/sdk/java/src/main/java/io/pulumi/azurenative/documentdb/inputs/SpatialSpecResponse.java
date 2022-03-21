@@ -75,12 +75,13 @@ public final class SpatialSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.path = path;
             return this;
         }
-
         public Builder types(@Nullable List<String> types) {
             this.types = types;
             return this;
         }
-        public SpatialSpecResponse build() {
+        public Builder types(String... types) {
+            return types(List.of(types));
+        }        public SpatialSpecResponse build() {
             return new SpatialSpecResponse(path, types);
         }
     }

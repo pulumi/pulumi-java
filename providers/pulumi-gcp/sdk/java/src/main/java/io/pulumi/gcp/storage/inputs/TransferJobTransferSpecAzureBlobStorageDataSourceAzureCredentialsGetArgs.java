@@ -56,12 +56,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
         }
-
         public Builder sasToken(String sasToken) {
             this.sasToken = Output.of(Objects.requireNonNull(sasToken));
             return this;
-        }
-        public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs build() {
+        }        public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs build() {
             return new TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs(sasToken);
         }
     }

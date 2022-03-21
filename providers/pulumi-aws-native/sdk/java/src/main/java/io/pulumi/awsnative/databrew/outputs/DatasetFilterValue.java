@@ -61,12 +61,10 @@ public final class DatasetFilterValue {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder valueReference(String valueReference) {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
-        }
-        public DatasetFilterValue build() {
+        }        public DatasetFilterValue build() {
             return new DatasetFilterValue(value, valueReference);
         }
     }

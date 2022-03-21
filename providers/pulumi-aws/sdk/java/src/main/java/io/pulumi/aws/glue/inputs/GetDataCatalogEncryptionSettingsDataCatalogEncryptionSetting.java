@@ -74,12 +74,16 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
             this.connectionPasswordEncryptions = Objects.requireNonNull(connectionPasswordEncryptions);
             return this;
         }
-
+        public Builder connectionPasswordEncryptions(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption... connectionPasswordEncryptions) {
+            return connectionPasswordEncryptions(List.of(connectionPasswordEncryptions));
+        }
         public Builder encryptionAtRests(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
             this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
             return this;
         }
-        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting build() {
+        public Builder encryptionAtRests(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest... encryptionAtRests) {
+            return encryptionAtRests(List.of(encryptionAtRests));
+        }        public GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting build() {
             return new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(connectionPasswordEncryptions, encryptionAtRests);
         }
     }

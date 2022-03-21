@@ -221,57 +221,46 @@ public final class GetEnterprisePolicyResult {
             this.encryption = encryption;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable EnterprisePolicyIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder lockbox(@Nullable PropertiesResponseLockbox lockbox) {
             this.lockbox = lockbox;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInjection(@Nullable PropertiesResponseNetworkInjection networkInjection) {
             this.networkInjection = networkInjection;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetEnterprisePolicyResult build() {
+        }        public GetEnterprisePolicyResult build() {
             return new GetEnterprisePolicyResult(encryption, id, identity, kind, location, lockbox, name, networkInjection, systemData, tags, type);
         }
     }

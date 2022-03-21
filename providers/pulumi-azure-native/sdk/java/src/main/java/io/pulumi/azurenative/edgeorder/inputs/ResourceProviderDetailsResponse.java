@@ -58,8 +58,7 @@ public final class ResourceProviderDetailsResponse extends io.pulumi.resources.I
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
-        }
-        public ResourceProviderDetailsResponse build() {
+        }        public ResourceProviderDetailsResponse build() {
             return new ResourceProviderDetailsResponse(resourceProviderNamespace);
         }
     }

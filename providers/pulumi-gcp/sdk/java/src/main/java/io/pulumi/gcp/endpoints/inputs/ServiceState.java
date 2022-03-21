@@ -193,92 +193,80 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             this.apis = apis;
             return this;
         }
-
         public Builder apis(@Nullable List<ServiceApiGetArgs> apis) {
             this.apis = Output.ofNullable(apis);
             return this;
         }
-
+        public Builder apis(ServiceApiGetArgs... apis) {
+            return apis(List.of(apis));
+        }
         public Builder configId(@Nullable Output<String> configId) {
             this.configId = configId;
             return this;
         }
-
         public Builder configId(@Nullable String configId) {
             this.configId = Output.ofNullable(configId);
             return this;
         }
-
         public Builder dnsAddress(@Nullable Output<String> dnsAddress) {
             this.dnsAddress = dnsAddress;
             return this;
         }
-
         public Builder dnsAddress(@Nullable String dnsAddress) {
             this.dnsAddress = Output.ofNullable(dnsAddress);
             return this;
         }
-
         public Builder endpoints(@Nullable Output<List<ServiceEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
-
         public Builder endpoints(@Nullable List<ServiceEndpointGetArgs> endpoints) {
             this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
-
+        public Builder endpoints(ServiceEndpointGetArgs... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder grpcConfig(@Nullable Output<String> grpcConfig) {
             this.grpcConfig = grpcConfig;
             return this;
         }
-
         public Builder grpcConfig(@Nullable String grpcConfig) {
             this.grpcConfig = Output.ofNullable(grpcConfig);
             return this;
         }
-
         public Builder openapiConfig(@Nullable Output<String> openapiConfig) {
             this.openapiConfig = openapiConfig;
             return this;
         }
-
         public Builder openapiConfig(@Nullable String openapiConfig) {
             this.openapiConfig = Output.ofNullable(openapiConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protocOutputBase64(@Nullable Output<String> protocOutputBase64) {
             this.protocOutputBase64 = protocOutputBase64;
             return this;
         }
-
         public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
             this.protocOutputBase64 = Output.ofNullable(protocOutputBase64);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
-        }
-        public ServiceState build() {
+        }        public ServiceState build() {
             return new ServiceState(apis, configId, dnsAddress, endpoints, grpcConfig, openapiConfig, project, protocOutputBase64, serviceName);
         }
     }

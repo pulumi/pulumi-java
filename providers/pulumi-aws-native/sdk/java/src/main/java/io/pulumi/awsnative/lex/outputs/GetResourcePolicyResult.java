@@ -72,22 +72,18 @@ public final class GetResourcePolicyResult {
             this.id = id;
             return this;
         }
-
         public Builder policy(@Nullable ResourcePolicyPolicy policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = revisionId;
             return this;
-        }
-        public GetResourcePolicyResult build() {
+        }        public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(id, policy, resourceArn, revisionId);
         }
     }

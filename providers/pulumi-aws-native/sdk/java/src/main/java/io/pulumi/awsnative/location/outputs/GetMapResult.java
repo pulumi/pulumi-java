@@ -79,27 +79,22 @@ public final class GetMapResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder mapArn(@Nullable String mapArn) {
             this.mapArn = mapArn;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
-        }
-        public GetMapResult build() {
+        }        public GetMapResult build() {
             return new GetMapResult(arn, createTime, dataSource, mapArn, updateTime);
         }
     }

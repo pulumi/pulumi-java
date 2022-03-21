@@ -72,12 +72,10 @@ public final class GetWorkspaceSqlAadAdminArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetWorkspaceSqlAadAdminArgs build() {
+        }        public GetWorkspaceSqlAadAdminArgs build() {
             return new GetWorkspaceSqlAadAdminArgs(resourceGroupName, workspaceName);
         }
     }

@@ -53,7 +53,9 @@ public final class ListenerRuleConditionHttpRequestMethod {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ListenerRuleConditionHttpRequestMethod build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionHttpRequestMethod build() {
             return new ListenerRuleConditionHttpRequestMethod(values);
         }
     }

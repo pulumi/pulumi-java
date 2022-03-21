@@ -88,17 +88,17 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
             this.comparator = comparator;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm build() {
             return new ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm(comparator, key, values);
         }
     }

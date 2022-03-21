@@ -71,12 +71,10 @@ public final class WebhookAuthenticationConfiguration {
             this.allowedIpRange = allowedIpRange;
             return this;
         }
-
         public Builder secretToken(@Nullable String secretToken) {
             this.secretToken = secretToken;
             return this;
-        }
-        public WebhookAuthenticationConfiguration build() {
+        }        public WebhookAuthenticationConfiguration build() {
             return new WebhookAuthenticationConfiguration(allowedIpRange, secretToken);
         }
     }

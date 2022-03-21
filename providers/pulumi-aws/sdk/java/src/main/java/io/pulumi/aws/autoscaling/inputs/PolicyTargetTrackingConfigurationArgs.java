@@ -109,42 +109,34 @@ public final class PolicyTargetTrackingConfigurationArgs extends io.pulumi.resou
             this.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
-
         public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs customizedMetricSpecification) {
             this.customizedMetricSpecification = Output.ofNullable(customizedMetricSpecification);
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = Output.ofNullable(disableScaleIn);
             return this;
         }
-
         public Builder predefinedMetricSpecification(@Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs> predefinedMetricSpecification) {
             this.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
-
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs predefinedMetricSpecification) {
             this.predefinedMetricSpecification = Output.ofNullable(predefinedMetricSpecification);
             return this;
         }
-
         public Builder targetValue(Output<Double> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
-        }
-        public PolicyTargetTrackingConfigurationArgs build() {
+        }        public PolicyTargetTrackingConfigurationArgs build() {
             return new PolicyTargetTrackingConfigurationArgs(customizedMetricSpecification, disableScaleIn, predefinedMetricSpecification, targetValue);
         }
     }

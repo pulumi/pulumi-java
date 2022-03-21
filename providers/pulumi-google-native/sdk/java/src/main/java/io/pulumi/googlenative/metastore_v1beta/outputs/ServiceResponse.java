@@ -365,102 +365,82 @@ public final class ServiceResponse {
             this.artifactGcsUri = Objects.requireNonNull(artifactGcsUri);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
-
         public Builder hiveMetastoreConfig(HiveMetastoreConfigResponse hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Objects.requireNonNull(hiveMetastoreConfig);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
-
         public Builder metadataIntegration(MetadataIntegrationResponse metadataIntegration) {
             this.metadataIntegration = Objects.requireNonNull(metadataIntegration);
             return this;
         }
-
         public Builder metadataManagementActivity(MetadataManagementActivityResponse metadataManagementActivity) {
             this.metadataManagementActivity = Objects.requireNonNull(metadataManagementActivity);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder releaseChannel(String releaseChannel) {
             this.releaseChannel = Objects.requireNonNull(releaseChannel);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
-
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public ServiceResponse build() {
+        }        public ServiceResponse build() {
             return new ServiceResponse(artifactGcsUri, createTime, databaseType, encryptionConfig, endpointUri, hiveMetastoreConfig, labels, maintenanceWindow, metadataIntegration, metadataManagementActivity, name, network, networkConfig, port, releaseChannel, state, stateMessage, tier, uid, updateTime);
         }
     }

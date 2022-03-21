@@ -123,52 +123,45 @@ public final class OriginEndpointCmafPackageArgs extends io.pulumi.resources.Res
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable OriginEndpointCmafEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder hlsManifests(@Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = hlsManifests;
             return this;
         }
-
         public Builder hlsManifests(@Nullable List<OriginEndpointHlsManifestArgs> hlsManifests) {
             this.hlsManifests = Output.ofNullable(hlsManifests);
             return this;
         }
-
+        public Builder hlsManifests(OriginEndpointHlsManifestArgs... hlsManifests) {
+            return hlsManifests(List.of(hlsManifests));
+        }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public Builder segmentPrefix(@Nullable Output<String> segmentPrefix) {
             this.segmentPrefix = segmentPrefix;
             return this;
         }
-
         public Builder segmentPrefix(@Nullable String segmentPrefix) {
             this.segmentPrefix = Output.ofNullable(segmentPrefix);
             return this;
         }
-
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Output.ofNullable(streamSelection);
             return this;
-        }
-        public OriginEndpointCmafPackageArgs build() {
+        }        public OriginEndpointCmafPackageArgs build() {
             return new OriginEndpointCmafPackageArgs(encryption, hlsManifests, segmentDurationSeconds, segmentPrefix, streamSelection);
         }
     }

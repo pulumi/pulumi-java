@@ -270,72 +270,70 @@ public final class GetWebApplicationFirewallPolicyResult {
             this.applicationGateways = Objects.requireNonNull(applicationGateways);
             return this;
         }
-
+        public Builder applicationGateways(ApplicationGatewayResponse... applicationGateways) {
+            return applicationGateways(List.of(applicationGateways));
+        }
         public Builder customRules(@Nullable List<WebApplicationFirewallCustomRuleResponse> customRules) {
             this.customRules = customRules;
             return this;
         }
-
+        public Builder customRules(WebApplicationFirewallCustomRuleResponse... customRules) {
+            return customRules(List.of(customRules));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder httpListeners(List<SubResourceResponse> httpListeners) {
             this.httpListeners = Objects.requireNonNull(httpListeners);
             return this;
         }
-
+        public Builder httpListeners(SubResourceResponse... httpListeners) {
+            return httpListeners(List.of(httpListeners));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedRules(ManagedRulesDefinitionResponse managedRules) {
             this.managedRules = Objects.requireNonNull(managedRules);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathBasedRules(List<SubResourceResponse> pathBasedRules) {
             this.pathBasedRules = Objects.requireNonNull(pathBasedRules);
             return this;
         }
-
+        public Builder pathBasedRules(SubResourceResponse... pathBasedRules) {
+            return pathBasedRules(List.of(pathBasedRules));
+        }
         public Builder policySettings(@Nullable PolicySettingsResponse policySettings) {
             this.policySettings = policySettings;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebApplicationFirewallPolicyResult build() {
+        }        public GetWebApplicationFirewallPolicyResult build() {
             return new GetWebApplicationFirewallPolicyResult(applicationGateways, customRules, etag, httpListeners, id, location, managedRules, name, pathBasedRules, policySettings, provisioningState, resourceState, tags, type);
         }
     }

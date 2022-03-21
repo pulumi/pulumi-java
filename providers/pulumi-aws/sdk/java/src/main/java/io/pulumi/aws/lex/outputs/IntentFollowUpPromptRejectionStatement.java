@@ -81,12 +81,13 @@ public final class IntentFollowUpPromptRejectionStatement {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(IntentFollowUpPromptRejectionStatementMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public IntentFollowUpPromptRejectionStatement build() {
+        }        public IntentFollowUpPromptRejectionStatement build() {
             return new IntentFollowUpPromptRejectionStatement(messages, responseCard);
         }
     }

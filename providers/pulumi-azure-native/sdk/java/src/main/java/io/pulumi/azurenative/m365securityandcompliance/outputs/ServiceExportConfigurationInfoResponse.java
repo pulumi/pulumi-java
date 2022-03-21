@@ -53,8 +53,7 @@ public final class ServiceExportConfigurationInfoResponse {
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
-        }
-        public ServiceExportConfigurationInfoResponse build() {
+        }        public ServiceExportConfigurationInfoResponse build() {
             return new ServiceExportConfigurationInfoResponse(storageAccountName);
         }
     }

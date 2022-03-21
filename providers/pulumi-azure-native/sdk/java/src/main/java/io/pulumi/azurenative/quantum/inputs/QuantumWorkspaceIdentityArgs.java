@@ -63,12 +63,10 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ResourceIdentityType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public QuantumWorkspaceIdentityArgs build() {
+        }        public QuantumWorkspaceIdentityArgs build() {
             return new QuantumWorkspaceIdentityArgs(type);
         }
     }

@@ -73,22 +73,18 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(String definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
-        }
-        public AlertManagerDefinitionArgs build() {
+        }        public AlertManagerDefinitionArgs build() {
             return new AlertManagerDefinitionArgs(definition, workspaceId);
         }
     }

@@ -78,22 +78,18 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends io.pulumi.reso
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
-
         public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
             this.cooldownPeriod = Output.ofNullable(cooldownPeriod);
             return this;
         }
-
         public Builder yarnConfig(Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig) {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public Builder yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs yarnConfig) {
             this.yarnConfig = Output.of(Objects.requireNonNull(yarnConfig));
             return this;
-        }
-        public AutoscalingPolicyBasicAlgorithmGetArgs build() {
+        }        public AutoscalingPolicyBasicAlgorithmGetArgs build() {
             return new AutoscalingPolicyBasicAlgorithmGetArgs(cooldownPeriod, yarnConfig);
         }
     }

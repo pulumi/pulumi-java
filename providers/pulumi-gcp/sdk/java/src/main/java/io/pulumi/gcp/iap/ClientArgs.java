@@ -75,22 +75,18 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
-
         public Builder brand(String brand) {
             this.brand = Output.of(Objects.requireNonNull(brand));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
-        }
-        public ClientArgs build() {
+        }        public ClientArgs build() {
             return new ClientArgs(brand, displayName);
         }
     }

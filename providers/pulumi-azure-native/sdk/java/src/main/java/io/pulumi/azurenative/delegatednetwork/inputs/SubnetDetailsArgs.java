@@ -61,12 +61,10 @@ public final class SubnetDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public SubnetDetailsArgs build() {
+        }        public SubnetDetailsArgs build() {
             return new SubnetDetailsArgs(id);
         }
     }

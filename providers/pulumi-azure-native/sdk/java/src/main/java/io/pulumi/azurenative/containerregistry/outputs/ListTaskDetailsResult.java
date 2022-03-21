@@ -356,97 +356,78 @@ public final class ListTaskDetailsResult {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable IdentityPropertiesResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder isSystemTask(@Nullable Boolean isSystemTask) {
             this.isSystemTask = isSystemTask;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platform(@Nullable PlatformPropertiesResponse platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder step(@Nullable Object step) {
             this.step = step;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder trigger(@Nullable TriggerPropertiesResponse trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListTaskDetailsResult build() {
+        }        public ListTaskDetailsResult build() {
             return new ListTaskDetailsResult(agentConfiguration, agentPoolName, creationDate, credentials, id, identity, isSystemTask, location, logTemplate, name, platform, provisioningState, status, step, systemData, tags, timeout, trigger, type);
         }
     }

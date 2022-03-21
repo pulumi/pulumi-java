@@ -51,8 +51,7 @@ public final class ConnectorProfileDynatraceConnectorProfileProperties {
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
-        }
-        public ConnectorProfileDynatraceConnectorProfileProperties build() {
+        }        public ConnectorProfileDynatraceConnectorProfileProperties build() {
             return new ConnectorProfileDynatraceConnectorProfileProperties(instanceUrl);
         }
     }

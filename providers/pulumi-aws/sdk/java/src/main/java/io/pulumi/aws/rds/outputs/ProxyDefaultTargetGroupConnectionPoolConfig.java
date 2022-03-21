@@ -121,27 +121,25 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfig {
             this.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
-
         public Builder initQuery(@Nullable String initQuery) {
             this.initQuery = initQuery;
             return this;
         }
-
         public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
             this.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
-
         public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
-
         public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
-        public ProxyDefaultTargetGroupConnectionPoolConfig build() {
+        public Builder sessionPinningFilters(String... sessionPinningFilters) {
+            return sessionPinningFilters(List.of(sessionPinningFilters));
+        }        public ProxyDefaultTargetGroupConnectionPoolConfig build() {
             return new ProxyDefaultTargetGroupConnectionPoolConfig(connectionBorrowTimeout, initQuery, maxConnectionsPercent, maxIdleConnectionsPercent, sessionPinningFilters);
         }
     }

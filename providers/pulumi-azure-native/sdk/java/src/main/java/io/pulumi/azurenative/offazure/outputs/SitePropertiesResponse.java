@@ -121,27 +121,22 @@ public final class SitePropertiesResponse {
             this.agentDetails = agentDetails;
             return this;
         }
-
         public Builder applianceName(@Nullable String applianceName) {
             this.applianceName = applianceName;
             return this;
         }
-
         public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
             this.discoverySolutionId = discoverySolutionId;
             return this;
         }
-
         public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
-
         public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
-        }
-        public SitePropertiesResponse build() {
+        }        public SitePropertiesResponse build() {
             return new SitePropertiesResponse(agentDetails, applianceName, discoverySolutionId, serviceEndpoint, servicePrincipalIdentityDetails);
         }
     }

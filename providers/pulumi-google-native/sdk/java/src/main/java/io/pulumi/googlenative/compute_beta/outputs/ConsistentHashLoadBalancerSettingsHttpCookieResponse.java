@@ -86,17 +86,14 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder ttl(DurationResponse ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
+        }        public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
             return new ConsistentHashLoadBalancerSettingsHttpCookieResponse(name, path, ttl);
         }
     }

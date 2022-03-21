@@ -331,92 +331,74 @@ public final class AzureMySqlSectionResponse extends io.pulumi.resources.InvokeA
             this.authorityUrl = authorityUrl;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder credentialType(@Nullable String credentialType) {
             this.credentialType = credentialType;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder isCertAuth(@Nullable Boolean isCertAuth) {
             this.isCertAuth = isCertAuth;
             return this;
         }
-
         public Builder portNumber(@Nullable String portNumber) {
             this.portNumber = portNumber;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userPassword(@Nullable String userPassword) {
             this.userPassword = userPassword;
             return this;
-        }
-        public AzureMySqlSectionResponse build() {
+        }        public AzureMySqlSectionResponse build() {
             return new AzureMySqlSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, databaseName, endpoint, isCertAuth, portNumber, resourceGroup, resourceUri, serverName, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint, userId, userPassword);
         }
     }

@@ -122,52 +122,42 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
             this.identityId = identityId;
             return this;
         }
-
         public Builder identityId(@Nullable String identityId) {
             this.identityId = Output.ofNullable(identityId);
             return this;
         }
-
         public Builder identityName(@Nullable Output<String> identityName) {
             this.identityName = identityName;
             return this;
         }
-
         public Builder identityName(@Nullable String identityName) {
             this.identityName = Output.ofNullable(identityName);
             return this;
         }
-
         public Builder identityType(@Nullable Output<String> identityType) {
             this.identityType = identityType;
             return this;
         }
-
         public Builder identityType(@Nullable String identityType) {
             this.identityType = Output.ofNullable(identityType);
             return this;
         }
-
         public Builder sessionPolicyArn(@Nullable Output<String> sessionPolicyArn) {
             this.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
-
         public Builder sessionPolicyArn(@Nullable String sessionPolicyArn) {
             this.sessionPolicyArn = Output.ofNullable(sessionPolicyArn);
             return this;
         }
-
         public Builder studioId(@Nullable Output<String> studioId) {
             this.studioId = studioId;
             return this;
         }
-
         public Builder studioId(@Nullable String studioId) {
             this.studioId = Output.ofNullable(studioId);
             return this;
-        }
-        public StudioSessionMappingState build() {
+        }        public StudioSessionMappingState build() {
             return new StudioSessionMappingState(identityId, identityName, identityType, sessionPolicyArn, studioId);
         }
     }

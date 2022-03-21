@@ -53,8 +53,7 @@ public final class CxEntityTypeExcludedPhrase {
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CxEntityTypeExcludedPhrase build() {
+        }        public CxEntityTypeExcludedPhrase build() {
             return new CxEntityTypeExcludedPhrase(value);
         }
     }

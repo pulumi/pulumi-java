@@ -172,82 +172,66 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder firewallRuleGroupId(@Nullable Output<String> firewallRuleGroupId) {
             this.firewallRuleGroupId = firewallRuleGroupId;
             return this;
         }
-
         public Builder firewallRuleGroupId(@Nullable String firewallRuleGroupId) {
             this.firewallRuleGroupId = Output.ofNullable(firewallRuleGroupId);
             return this;
         }
-
         public Builder mutationProtection(@Nullable Output<String> mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
-
         public Builder mutationProtection(@Nullable String mutationProtection) {
             this.mutationProtection = Output.ofNullable(mutationProtection);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public ResolverFirewallRuleGroupAssociationState build() {
+        }        public ResolverFirewallRuleGroupAssociationState build() {
             return new ResolverFirewallRuleGroupAssociationState(arn, firewallRuleGroupId, mutationProtection, name, priority, tags, tagsAll, vpcId);
         }
     }

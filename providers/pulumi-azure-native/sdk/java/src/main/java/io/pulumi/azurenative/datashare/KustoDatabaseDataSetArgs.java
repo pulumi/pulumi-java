@@ -139,62 +139,50 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
-
         public Builder dataSetName(@Nullable String dataSetName) {
             this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder kustoDatabaseResourceId(Output<String> kustoDatabaseResourceId) {
             this.kustoDatabaseResourceId = Objects.requireNonNull(kustoDatabaseResourceId);
             return this;
         }
-
         public Builder kustoDatabaseResourceId(String kustoDatabaseResourceId) {
             this.kustoDatabaseResourceId = Output.of(Objects.requireNonNull(kustoDatabaseResourceId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
-        }
-        public KustoDatabaseDataSetArgs build() {
+        }        public KustoDatabaseDataSetArgs build() {
             return new KustoDatabaseDataSetArgs(accountName, dataSetName, kind, kustoDatabaseResourceId, resourceGroupName, shareName);
         }
     }

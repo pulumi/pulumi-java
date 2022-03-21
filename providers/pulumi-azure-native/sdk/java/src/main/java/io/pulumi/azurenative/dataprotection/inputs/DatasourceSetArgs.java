@@ -158,72 +158,58 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             this.datasourceType = datasourceType;
             return this;
         }
-
         public Builder datasourceType(@Nullable String datasourceType) {
             this.datasourceType = Output.ofNullable(datasourceType);
             return this;
         }
-
         public Builder objectType(@Nullable Output<String> objectType) {
             this.objectType = objectType;
             return this;
         }
-
         public Builder objectType(@Nullable String objectType) {
             this.objectType = Output.ofNullable(objectType);
             return this;
         }
-
         public Builder resourceID(Output<String> resourceID) {
             this.resourceID = Objects.requireNonNull(resourceID);
             return this;
         }
-
         public Builder resourceID(String resourceID) {
             this.resourceID = Output.of(Objects.requireNonNull(resourceID));
             return this;
         }
-
         public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
-
         public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = Output.ofNullable(resourceLocation);
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Output.ofNullable(resourceUri);
             return this;
-        }
-        public DatasourceSetArgs build() {
+        }        public DatasourceSetArgs build() {
             return new DatasourceSetArgs(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);
         }
     }

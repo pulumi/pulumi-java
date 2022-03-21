@@ -92,32 +92,26 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
-
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
-
         public Builder encryptionMethod(@Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
-
         public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = Output.ofNullable(encryptionMethod);
             return this;
         }
-
         public Builder spekeKeyProvider(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
-        }
-        public PackagingConfigurationHlsEncryptionArgs build() {
+        }        public PackagingConfigurationHlsEncryptionArgs build() {
             return new PackagingConfigurationHlsEncryptionArgs(constantInitializationVector, encryptionMethod, spekeKeyProvider);
         }
     }

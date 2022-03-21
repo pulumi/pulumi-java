@@ -78,22 +78,18 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
-        }
-        public ClientGroupInfoArgs build() {
+        }        public ClientGroupInfoArgs build() {
             return new ClientGroupInfoArgs(groupId, groupName);
         }
     }

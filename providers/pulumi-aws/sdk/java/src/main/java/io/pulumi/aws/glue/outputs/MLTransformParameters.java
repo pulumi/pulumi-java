@@ -70,12 +70,10 @@ public final class MLTransformParameters {
             this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters);
             return this;
         }
-
         public Builder transformType(String transformType) {
             this.transformType = Objects.requireNonNull(transformType);
             return this;
-        }
-        public MLTransformParameters build() {
+        }        public MLTransformParameters build() {
             return new MLTransformParameters(findMatchesParameters, transformType);
         }
     }

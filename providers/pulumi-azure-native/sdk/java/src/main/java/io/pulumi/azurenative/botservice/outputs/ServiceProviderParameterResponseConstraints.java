@@ -53,8 +53,7 @@ public final class ServiceProviderParameterResponseConstraints {
         public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
-        }
-        public ServiceProviderParameterResponseConstraints build() {
+        }        public ServiceProviderParameterResponseConstraints build() {
             return new ServiceProviderParameterResponseConstraints(required);
         }
     }

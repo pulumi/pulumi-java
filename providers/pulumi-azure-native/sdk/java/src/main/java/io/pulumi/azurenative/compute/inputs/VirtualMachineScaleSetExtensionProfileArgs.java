@@ -80,22 +80,21 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionArgs> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
+        public Builder extensions(VirtualMachineScaleSetExtensionArgs... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder extensionsTimeBudget(@Nullable Output<String> extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = Output.ofNullable(extensionsTimeBudget);
             return this;
-        }
-        public VirtualMachineScaleSetExtensionProfileArgs build() {
+        }        public VirtualMachineScaleSetExtensionProfileArgs build() {
             return new VirtualMachineScaleSetExtensionProfileArgs(extensions, extensionsTimeBudget);
         }
     }

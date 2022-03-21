@@ -56,12 +56,10 @@ public final class ServicePlacementStrategy {
             this.field = field;
             return this;
         }
-
         public Builder type(ServicePlacementStrategyType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ServicePlacementStrategy build() {
+        }        public ServicePlacementStrategy build() {
             return new ServicePlacementStrategy(field, type);
         }
     }

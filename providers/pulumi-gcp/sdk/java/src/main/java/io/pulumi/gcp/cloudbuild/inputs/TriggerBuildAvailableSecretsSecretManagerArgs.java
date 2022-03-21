@@ -76,22 +76,18 @@ public final class TriggerBuildAvailableSecretsSecretManagerArgs extends io.pulu
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
         public Builder env(String env) {
             this.env = Output.of(Objects.requireNonNull(env));
             return this;
         }
-
         public Builder versionName(Output<String> versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public Builder versionName(String versionName) {
             this.versionName = Output.of(Objects.requireNonNull(versionName));
             return this;
-        }
-        public TriggerBuildAvailableSecretsSecretManagerArgs build() {
+        }        public TriggerBuildAvailableSecretsSecretManagerArgs build() {
             return new TriggerBuildAvailableSecretsSecretManagerArgs(env, versionName);
         }
     }

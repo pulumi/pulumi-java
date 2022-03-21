@@ -64,17 +64,17 @@ public final class RuleGroupRegexPatternSetReferenceStatement {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupRegexPatternSetReferenceStatement build() {
+        public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupRegexPatternSetReferenceStatement build() {
             return new RuleGroupRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
         }
     }

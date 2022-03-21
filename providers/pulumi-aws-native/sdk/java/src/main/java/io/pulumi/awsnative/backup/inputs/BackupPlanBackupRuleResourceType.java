@@ -156,47 +156,41 @@ public final class BackupPlanBackupRuleResourceType extends io.pulumi.resources.
             this.completionWindowMinutes = completionWindowMinutes;
             return this;
         }
-
         public Builder copyActions(@Nullable List<BackupPlanCopyActionResourceType> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
-
+        public Builder copyActions(BackupPlanCopyActionResourceType... copyActions) {
+            return copyActions(List.of(copyActions));
+        }
         public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
-
         public Builder lifecycle(@Nullable BackupPlanLifecycleResourceType lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public Builder recoveryPointTags(@Nullable Object recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
-
         public Builder startWindowMinutes(@Nullable Double startWindowMinutes) {
             this.startWindowMinutes = startWindowMinutes;
             return this;
         }
-
         public Builder targetBackupVault(String targetBackupVault) {
             this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
             return this;
-        }
-        public BackupPlanBackupRuleResourceType build() {
+        }        public BackupPlanBackupRuleResourceType build() {
             return new BackupPlanBackupRuleResourceType(completionWindowMinutes, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, scheduleExpression, startWindowMinutes, targetBackupVault);
         }
     }

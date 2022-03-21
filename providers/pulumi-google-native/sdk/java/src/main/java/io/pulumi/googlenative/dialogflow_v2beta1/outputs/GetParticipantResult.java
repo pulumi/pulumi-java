@@ -102,22 +102,18 @@ public final class GetParticipantResult {
             this.documentsMetadataFilters = Objects.requireNonNull(documentsMetadataFilters);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
-        }
-        public GetParticipantResult build() {
+        }        public GetParticipantResult build() {
             return new GetParticipantResult(documentsMetadataFilters, name, obfuscatedExternalUserId, role);
         }
     }

@@ -88,17 +88,14 @@ public final class ListDeviceFailoverSetsArgs extends io.pulumi.resources.Invoke
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListDeviceFailoverSetsArgs build() {
+        }        public ListDeviceFailoverSetsArgs build() {
             return new ListDeviceFailoverSetsArgs(deviceName, managerName, resourceGroupName);
         }
     }

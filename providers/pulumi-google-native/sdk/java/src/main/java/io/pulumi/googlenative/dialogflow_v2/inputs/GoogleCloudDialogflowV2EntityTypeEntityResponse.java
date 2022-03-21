@@ -77,12 +77,13 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityResponse extends io.pu
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudDialogflowV2EntityTypeEntityResponse build() {
+        }        public GoogleCloudDialogflowV2EntityTypeEntityResponse build() {
             return new GoogleCloudDialogflowV2EntityTypeEntityResponse(synonyms, value);
         }
     }

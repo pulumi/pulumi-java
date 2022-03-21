@@ -77,22 +77,18 @@ public final class ProjectProvisioningParameterArgs extends io.pulumi.resources.
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ProjectProvisioningParameterArgs build() {
+        }        public ProjectProvisioningParameterArgs build() {
             return new ProjectProvisioningParameterArgs(key, value);
         }
     }

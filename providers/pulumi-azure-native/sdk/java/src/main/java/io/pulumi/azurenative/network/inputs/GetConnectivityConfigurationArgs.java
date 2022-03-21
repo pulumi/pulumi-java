@@ -88,17 +88,14 @@ public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectivityConfigurationArgs build() {
+        }        public GetConnectivityConfigurationArgs build() {
             return new GetConnectivityConfigurationArgs(configurationName, networkManagerName, resourceGroupName);
         }
     }

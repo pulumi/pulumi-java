@@ -106,42 +106,34 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
             this.attachmentTarget = attachmentTarget;
             return this;
         }
-
         public Builder attachmentTarget(@Nullable String attachmentTarget) {
             this.attachmentTarget = Output.ofNullable(attachmentTarget);
             return this;
         }
-
         public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
-
         public Builder firewallPolicy(@Nullable String firewallPolicy) {
             this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
-        }
-        public FirewallPolicyAssociationState build() {
+        }        public FirewallPolicyAssociationState build() {
             return new FirewallPolicyAssociationState(attachmentTarget, firewallPolicy, name, shortName);
         }
     }

@@ -74,22 +74,18 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
-
         public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
-        }
-        public VoiceConnectorGroupConnectorGetArgs build() {
+        }        public VoiceConnectorGroupConnectorGetArgs build() {
             return new VoiceConnectorGroupConnectorGetArgs(priority, voiceConnectorId);
         }
     }

@@ -79,22 +79,18 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.actionGroupId = Objects.requireNonNull(actionGroupId);
             return this;
         }
-
         public Builder actionGroupId(String actionGroupId) {
             this.actionGroupId = Output.of(Objects.requireNonNull(actionGroupId));
             return this;
         }
-
         public Builder webhookProperties(@Nullable Output<Map<String,String>> webhookProperties) {
             this.webhookProperties = webhookProperties;
             return this;
         }
-
         public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
             this.webhookProperties = Output.ofNullable(webhookProperties);
             return this;
-        }
-        public ActionGroupArgs build() {
+        }        public ActionGroupArgs build() {
             return new ActionGroupArgs(actionGroupId, webhookProperties);
         }
     }

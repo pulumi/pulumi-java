@@ -118,32 +118,44 @@ public final class RuleGroupMatchAttributes extends io.pulumi.resources.InvokeAr
             this.destinationPorts = destinationPorts;
             return this;
         }
-
+        public Builder destinationPorts(RuleGroupPortRange... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder destinations(@Nullable List<RuleGroupAddress> destinations) {
             this.destinations = destinations;
             return this;
         }
-
+        public Builder destinations(RuleGroupAddress... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder protocols(@Nullable List<Integer> protocols) {
             this.protocols = protocols;
             return this;
         }
-
+        public Builder protocols(Integer... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder sourcePorts(@Nullable List<RuleGroupPortRange> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
-
+        public Builder sourcePorts(RuleGroupPortRange... sourcePorts) {
+            return sourcePorts(List.of(sourcePorts));
+        }
         public Builder sources(@Nullable List<RuleGroupAddress> sources) {
             this.sources = sources;
             return this;
         }
-
+        public Builder sources(RuleGroupAddress... sources) {
+            return sources(List.of(sources));
+        }
         public Builder tCPFlags(@Nullable List<RuleGroupTCPFlagField> tCPFlags) {
             this.tCPFlags = tCPFlags;
             return this;
         }
-        public RuleGroupMatchAttributes build() {
+        public Builder tCPFlags(RuleGroupTCPFlagField... tCPFlags) {
+            return tCPFlags(List.of(tCPFlags));
+        }        public RuleGroupMatchAttributes build() {
             return new RuleGroupMatchAttributes(destinationPorts, destinations, protocols, sourcePorts, sources, tCPFlags);
         }
     }

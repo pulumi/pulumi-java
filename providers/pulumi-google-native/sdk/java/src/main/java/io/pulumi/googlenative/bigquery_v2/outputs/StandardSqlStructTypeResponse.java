@@ -45,7 +45,9 @@ public final class StandardSqlStructTypeResponse {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-        public StandardSqlStructTypeResponse build() {
+        public Builder fields(StandardSqlFieldResponse... fields) {
+            return fields(List.of(fields));
+        }        public StandardSqlStructTypeResponse build() {
             return new StandardSqlStructTypeResponse(fields);
         }
     }

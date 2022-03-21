@@ -276,192 +276,172 @@ public final class DistributionDefaultCacheBehaviorArgs extends io.pulumi.resour
             this.allowedMethods = allowedMethods;
             return this;
         }
-
         public Builder allowedMethods(@Nullable List<String> allowedMethods) {
             this.allowedMethods = Output.ofNullable(allowedMethods);
             return this;
         }
-
+        public Builder allowedMethods(String... allowedMethods) {
+            return allowedMethods(List.of(allowedMethods));
+        }
         public Builder cachePolicyId(@Nullable Output<String> cachePolicyId) {
             this.cachePolicyId = cachePolicyId;
             return this;
         }
-
         public Builder cachePolicyId(@Nullable String cachePolicyId) {
             this.cachePolicyId = Output.ofNullable(cachePolicyId);
             return this;
         }
-
         public Builder cachedMethods(@Nullable Output<List<String>> cachedMethods) {
             this.cachedMethods = cachedMethods;
             return this;
         }
-
         public Builder cachedMethods(@Nullable List<String> cachedMethods) {
             this.cachedMethods = Output.ofNullable(cachedMethods);
             return this;
         }
-
+        public Builder cachedMethods(String... cachedMethods) {
+            return cachedMethods(List.of(cachedMethods));
+        }
         public Builder compress(@Nullable Output<Boolean> compress) {
             this.compress = compress;
             return this;
         }
-
         public Builder compress(@Nullable Boolean compress) {
             this.compress = Output.ofNullable(compress);
             return this;
         }
-
         public Builder defaultTTL(@Nullable Output<Double> defaultTTL) {
             this.defaultTTL = defaultTTL;
             return this;
         }
-
         public Builder defaultTTL(@Nullable Double defaultTTL) {
             this.defaultTTL = Output.ofNullable(defaultTTL);
             return this;
         }
-
         public Builder fieldLevelEncryptionId(@Nullable Output<String> fieldLevelEncryptionId) {
             this.fieldLevelEncryptionId = fieldLevelEncryptionId;
             return this;
         }
-
         public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
             this.fieldLevelEncryptionId = Output.ofNullable(fieldLevelEncryptionId);
             return this;
         }
-
         public Builder forwardedValues(@Nullable Output<DistributionForwardedValuesArgs> forwardedValues) {
             this.forwardedValues = forwardedValues;
             return this;
         }
-
         public Builder forwardedValues(@Nullable DistributionForwardedValuesArgs forwardedValues) {
             this.forwardedValues = Output.ofNullable(forwardedValues);
             return this;
         }
-
         public Builder functionAssociations(@Nullable Output<List<DistributionFunctionAssociationArgs>> functionAssociations) {
             this.functionAssociations = functionAssociations;
             return this;
         }
-
         public Builder functionAssociations(@Nullable List<DistributionFunctionAssociationArgs> functionAssociations) {
             this.functionAssociations = Output.ofNullable(functionAssociations);
             return this;
         }
-
+        public Builder functionAssociations(DistributionFunctionAssociationArgs... functionAssociations) {
+            return functionAssociations(List.of(functionAssociations));
+        }
         public Builder lambdaFunctionAssociations(@Nullable Output<List<DistributionLambdaFunctionAssociationArgs>> lambdaFunctionAssociations) {
             this.lambdaFunctionAssociations = lambdaFunctionAssociations;
             return this;
         }
-
         public Builder lambdaFunctionAssociations(@Nullable List<DistributionLambdaFunctionAssociationArgs> lambdaFunctionAssociations) {
             this.lambdaFunctionAssociations = Output.ofNullable(lambdaFunctionAssociations);
             return this;
         }
-
+        public Builder lambdaFunctionAssociations(DistributionLambdaFunctionAssociationArgs... lambdaFunctionAssociations) {
+            return lambdaFunctionAssociations(List.of(lambdaFunctionAssociations));
+        }
         public Builder maxTTL(@Nullable Output<Double> maxTTL) {
             this.maxTTL = maxTTL;
             return this;
         }
-
         public Builder maxTTL(@Nullable Double maxTTL) {
             this.maxTTL = Output.ofNullable(maxTTL);
             return this;
         }
-
         public Builder minTTL(@Nullable Output<Double> minTTL) {
             this.minTTL = minTTL;
             return this;
         }
-
         public Builder minTTL(@Nullable Double minTTL) {
             this.minTTL = Output.ofNullable(minTTL);
             return this;
         }
-
         public Builder originRequestPolicyId(@Nullable Output<String> originRequestPolicyId) {
             this.originRequestPolicyId = originRequestPolicyId;
             return this;
         }
-
         public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
             this.originRequestPolicyId = Output.ofNullable(originRequestPolicyId);
             return this;
         }
-
         public Builder realtimeLogConfigArn(@Nullable Output<String> realtimeLogConfigArn) {
             this.realtimeLogConfigArn = realtimeLogConfigArn;
             return this;
         }
-
         public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
             this.realtimeLogConfigArn = Output.ofNullable(realtimeLogConfigArn);
             return this;
         }
-
         public Builder responseHeadersPolicyId(@Nullable Output<String> responseHeadersPolicyId) {
             this.responseHeadersPolicyId = responseHeadersPolicyId;
             return this;
         }
-
         public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
             this.responseHeadersPolicyId = Output.ofNullable(responseHeadersPolicyId);
             return this;
         }
-
         public Builder smoothStreaming(@Nullable Output<Boolean> smoothStreaming) {
             this.smoothStreaming = smoothStreaming;
             return this;
         }
-
         public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
             this.smoothStreaming = Output.ofNullable(smoothStreaming);
             return this;
         }
-
         public Builder targetOriginId(Output<String> targetOriginId) {
             this.targetOriginId = Objects.requireNonNull(targetOriginId);
             return this;
         }
-
         public Builder targetOriginId(String targetOriginId) {
             this.targetOriginId = Output.of(Objects.requireNonNull(targetOriginId));
             return this;
         }
-
         public Builder trustedKeyGroups(@Nullable Output<List<String>> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
-
         public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
             this.trustedKeyGroups = Output.ofNullable(trustedKeyGroups);
             return this;
         }
-
+        public Builder trustedKeyGroups(String... trustedKeyGroups) {
+            return trustedKeyGroups(List.of(trustedKeyGroups));
+        }
         public Builder trustedSigners(@Nullable Output<List<String>> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
-
         public Builder trustedSigners(@Nullable List<String> trustedSigners) {
             this.trustedSigners = Output.ofNullable(trustedSigners);
             return this;
         }
-
+        public Builder trustedSigners(String... trustedSigners) {
+            return trustedSigners(List.of(trustedSigners));
+        }
         public Builder viewerProtocolPolicy(Output<String> viewerProtocolPolicy) {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
         }
-
         public Builder viewerProtocolPolicy(String viewerProtocolPolicy) {
             this.viewerProtocolPolicy = Output.of(Objects.requireNonNull(viewerProtocolPolicy));
             return this;
-        }
-        public DistributionDefaultCacheBehaviorArgs build() {
+        }        public DistributionDefaultCacheBehaviorArgs build() {
             return new DistributionDefaultCacheBehaviorArgs(allowedMethods, cachePolicyId, cachedMethods, compress, defaultTTL, fieldLevelEncryptionId, forwardedValues, functionAssociations, lambdaFunctionAssociations, maxTTL, minTTL, originRequestPolicyId, realtimeLogConfigArn, responseHeadersPolicyId, smoothStreaming, targetOriginId, trustedKeyGroups, trustedSigners, viewerProtocolPolicy);
         }
     }

@@ -71,12 +71,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
             this.rbmSuggestion = Objects.requireNonNull(rbmSuggestion);
             return this;
         }
-
+        public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse... rbmSuggestion) {
+            return rbmSuggestion(List.of(rbmSuggestion));
+        }
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(rbmSuggestion, text);
         }
     }

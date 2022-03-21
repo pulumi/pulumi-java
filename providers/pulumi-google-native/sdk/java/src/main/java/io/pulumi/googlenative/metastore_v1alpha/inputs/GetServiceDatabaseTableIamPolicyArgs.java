@@ -114,32 +114,26 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public GetServiceDatabaseTableIamPolicyArgs build() {
+        }        public GetServiceDatabaseTableIamPolicyArgs build() {
             return new GetServiceDatabaseTableIamPolicyArgs(databaseId, location, optionsRequestedPolicyVersion, project, serviceId, tableId);
         }
     }

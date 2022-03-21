@@ -105,22 +105,18 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public DestinationTablePropertiesResponse build() {
+        }        public DestinationTablePropertiesResponse build() {
             return new DestinationTablePropertiesResponse(description, expirationTime, friendlyName, labels);
         }
     }

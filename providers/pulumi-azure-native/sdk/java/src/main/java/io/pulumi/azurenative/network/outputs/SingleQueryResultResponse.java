@@ -218,57 +218,52 @@ public final class SingleQueryResultResponse {
             this.description = description;
             return this;
         }
-
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
-
+        public Builder destinationPorts(String... destinationPorts) {
+            return destinationPorts(List.of(destinationPorts));
+        }
         public Builder direction(@Nullable Integer direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
-
         public Builder inheritedFromParentPolicy(@Nullable Boolean inheritedFromParentPolicy) {
             this.inheritedFromParentPolicy = inheritedFromParentPolicy;
             return this;
         }
-
         public Builder lastUpdated(@Nullable String lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder severity(@Nullable Integer severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder signatureId(@Nullable Integer signatureId) {
             this.signatureId = signatureId;
             return this;
         }
-
         public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
-        public SingleQueryResultResponse build() {
+        public Builder sourcePorts(String... sourcePorts) {
+            return sourcePorts(List.of(sourcePorts));
+        }        public SingleQueryResultResponse build() {
             return new SingleQueryResultResponse(description, destinationPorts, direction, group, inheritedFromParentPolicy, lastUpdated, mode, protocol, severity, signatureId, sourcePorts);
         }
     }

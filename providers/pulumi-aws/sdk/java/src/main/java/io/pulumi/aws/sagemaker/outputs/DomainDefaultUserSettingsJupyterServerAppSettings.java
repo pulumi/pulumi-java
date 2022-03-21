@@ -73,12 +73,13 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettings {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-        public DomainDefaultUserSettingsJupyterServerAppSettings build() {
+        public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
+            return lifecycleConfigArns(List.of(lifecycleConfigArns));
+        }        public DomainDefaultUserSettingsJupyterServerAppSettings build() {
             return new DomainDefaultUserSettingsJupyterServerAppSettings(defaultResourceSpec, lifecycleConfigArns);
         }
     }

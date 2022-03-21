@@ -61,12 +61,10 @@ public final class CreateParentGroupInfoArgs extends io.pulumi.resources.Resourc
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public CreateParentGroupInfoArgs build() {
+        }        public CreateParentGroupInfoArgs build() {
             return new CreateParentGroupInfoArgs(id);
         }
     }

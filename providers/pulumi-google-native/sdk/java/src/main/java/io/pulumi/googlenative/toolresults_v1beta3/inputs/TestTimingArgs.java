@@ -61,12 +61,10 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
             this.testProcessDuration = testProcessDuration;
             return this;
         }
-
         public Builder testProcessDuration(@Nullable DurationArgs testProcessDuration) {
             this.testProcessDuration = Output.ofNullable(testProcessDuration);
             return this;
-        }
-        public TestTimingArgs build() {
+        }        public TestTimingArgs build() {
             return new TestTimingArgs(testProcessDuration);
         }
     }

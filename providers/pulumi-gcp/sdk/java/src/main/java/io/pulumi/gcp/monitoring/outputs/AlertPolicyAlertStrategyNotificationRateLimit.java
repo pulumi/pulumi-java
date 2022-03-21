@@ -53,8 +53,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
         public Builder period(@Nullable String period) {
             this.period = period;
             return this;
-        }
-        public AlertPolicyAlertStrategyNotificationRateLimit build() {
+        }        public AlertPolicyAlertStrategyNotificationRateLimit build() {
             return new AlertPolicyAlertStrategyNotificationRateLimit(period);
         }
     }

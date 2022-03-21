@@ -239,122 +239,98 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder autoScalingConfigurationArn(@Nullable Output<String> autoScalingConfigurationArn) {
             this.autoScalingConfigurationArn = autoScalingConfigurationArn;
             return this;
         }
-
         public Builder autoScalingConfigurationArn(@Nullable String autoScalingConfigurationArn) {
             this.autoScalingConfigurationArn = Output.ofNullable(autoScalingConfigurationArn);
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-
         public Builder encryptionConfiguration(@Nullable ServiceEncryptionConfigurationGetArgs encryptionConfiguration) {
             this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
-
         public Builder healthCheckConfiguration(@Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
-
         public Builder healthCheckConfiguration(@Nullable ServiceHealthCheckConfigurationGetArgs healthCheckConfiguration) {
             this.healthCheckConfiguration = Output.ofNullable(healthCheckConfiguration);
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
-
         public Builder instanceConfiguration(@Nullable ServiceInstanceConfigurationGetArgs instanceConfiguration) {
             this.instanceConfiguration = Output.ofNullable(instanceConfiguration);
             return this;
         }
-
         public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
-
         public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder serviceUrl(@Nullable Output<String> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
-
         public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = Output.ofNullable(serviceUrl);
             return this;
         }
-
         public Builder sourceConfiguration(@Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration) {
             this.sourceConfiguration = sourceConfiguration;
             return this;
         }
-
         public Builder sourceConfiguration(@Nullable ServiceSourceConfigurationGetArgs sourceConfiguration) {
             this.sourceConfiguration = Output.ofNullable(sourceConfiguration);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ServiceState build() {
+        }        public ServiceState build() {
             return new ServiceState(arn, autoScalingConfigurationArn, encryptionConfiguration, healthCheckConfiguration, instanceConfiguration, serviceId, serviceName, serviceUrl, sourceConfiguration, status, tags, tagsAll);
         }
     }

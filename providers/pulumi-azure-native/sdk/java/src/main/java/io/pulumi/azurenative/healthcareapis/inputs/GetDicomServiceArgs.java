@@ -88,17 +88,14 @@ public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.dicomServiceName = Objects.requireNonNull(dicomServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetDicomServiceArgs build() {
+        }        public GetDicomServiceArgs build() {
             return new GetDicomServiceArgs(dicomServiceName, resourceGroupName, workspaceName);
         }
     }

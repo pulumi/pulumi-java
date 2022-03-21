@@ -101,22 +101,18 @@ public final class VmStateDetailsResponse {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
-
         public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
-
         public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
-
         public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
-        }
-        public VmStateDetailsResponse build() {
+        }        public VmStateDetailsResponse build() {
             return new VmStateDetailsResponse(lastKnownPowerState, powerState, rdpAuthority, sshAuthority);
         }
     }

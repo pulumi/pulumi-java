@@ -145,62 +145,50 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
             this.agentPoolName = agentPoolName;
             return this;
         }
-
         public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
-
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
             return this;
         }
-
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
-
         public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
-
         public Builder overrideTaskStepProperties(@Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
             this.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
-
         public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesArgs overrideTaskStepProperties) {
             this.overrideTaskStepProperties = Output.ofNullable(overrideTaskStepProperties);
             return this;
         }
-
         public Builder taskId(Output<String> taskId) {
             this.taskId = Objects.requireNonNull(taskId);
             return this;
         }
-
         public Builder taskId(String taskId) {
             this.taskId = Output.of(Objects.requireNonNull(taskId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TaskRunRequestArgs build() {
+        }        public TaskRunRequestArgs build() {
             return new TaskRunRequestArgs(agentPoolName, isArchiveEnabled, logTemplate, overrideTaskStepProperties, taskId, type);
         }
     }

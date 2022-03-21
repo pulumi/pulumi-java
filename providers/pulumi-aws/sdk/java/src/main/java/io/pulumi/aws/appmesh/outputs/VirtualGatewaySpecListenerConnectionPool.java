@@ -89,17 +89,14 @@ public final class VirtualGatewaySpecListenerConnectionPool {
             this.grpc = grpc;
             return this;
         }
-
         public Builder http(@Nullable VirtualGatewaySpecListenerConnectionPoolHttp http) {
             this.http = http;
             return this;
         }
-
         public Builder http2(@Nullable VirtualGatewaySpecListenerConnectionPoolHttp2 http2) {
             this.http2 = http2;
             return this;
-        }
-        public VirtualGatewaySpecListenerConnectionPool build() {
+        }        public VirtualGatewaySpecListenerConnectionPool build() {
             return new VirtualGatewaySpecListenerConnectionPool(grpc, http, http2);
         }
     }

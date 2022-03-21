@@ -88,17 +88,14 @@ public final class GetWebAppDeploymentArgs extends io.pulumi.resources.InvokeArg
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppDeploymentArgs build() {
+        }        public GetWebAppDeploymentArgs build() {
             return new GetWebAppDeploymentArgs(id, name, resourceGroupName);
         }
     }

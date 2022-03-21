@@ -97,32 +97,29 @@ public final class IntentSlotValueElicitationPromptGetArgs extends io.pulumi.res
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
             return this;
         }
-
         public Builder messages(Output<List<IntentSlotValueElicitationPromptMessageGetArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<IntentSlotValueElicitationPromptMessageGetArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(IntentSlotValueElicitationPromptMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public IntentSlotValueElicitationPromptGetArgs build() {
+        }        public IntentSlotValueElicitationPromptGetArgs build() {
             return new IntentSlotValueElicitationPromptGetArgs(maxAttempts, messages, responseCard);
         }
     }

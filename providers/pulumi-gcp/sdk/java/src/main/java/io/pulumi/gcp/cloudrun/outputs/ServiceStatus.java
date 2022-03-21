@@ -82,27 +82,25 @@ public final class ServiceStatus {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(ServiceStatusCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
-
         public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
             this.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
-
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public ServiceStatus build() {
+        }        public ServiceStatus build() {
             return new ServiceStatus(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
         }
     }

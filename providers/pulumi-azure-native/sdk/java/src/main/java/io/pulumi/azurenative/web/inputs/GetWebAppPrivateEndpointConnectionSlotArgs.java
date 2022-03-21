@@ -104,22 +104,18 @@ public final class GetWebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppPrivateEndpointConnectionSlotArgs build() {
+        }        public GetWebAppPrivateEndpointConnectionSlotArgs build() {
             return new GetWebAppPrivateEndpointConnectionSlotArgs(name, privateEndpointConnectionName, resourceGroupName, slot);
         }
     }

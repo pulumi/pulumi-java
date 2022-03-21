@@ -126,52 +126,45 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder magneticStoreWriteProperties(@Nullable Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
-
         public Builder magneticStoreWriteProperties(@Nullable MagneticStoreWritePropertiesPropertiesArgs magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = Output.ofNullable(magneticStoreWriteProperties);
             return this;
         }
-
         public Builder retentionProperties(@Nullable Output<RetentionPropertiesPropertiesArgs> retentionProperties) {
             this.retentionProperties = retentionProperties;
             return this;
         }
-
         public Builder retentionProperties(@Nullable RetentionPropertiesPropertiesArgs retentionProperties) {
             this.retentionProperties = Output.ofNullable(retentionProperties);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TableTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public TableArgs build() {
+        public Builder tags(TableTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public TableArgs build() {
             return new TableArgs(databaseName, magneticStoreWriteProperties, retentionProperties, tableName, tags);
         }
     }

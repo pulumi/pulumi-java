@@ -88,17 +88,14 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GetTaskSetArgs build() {
+        }        public GetTaskSetArgs build() {
             return new GetTaskSetArgs(cluster, id, service);
         }
     }

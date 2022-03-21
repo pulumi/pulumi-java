@@ -90,17 +90,17 @@ public final class StorageProfileResponse {
             this.dataDisks = dataDisks;
             return this;
         }
-
+        public Builder dataDisks(DataDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
-
         public Builder osDisk(@Nullable OSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
-        }
-        public StorageProfileResponse build() {
+        }        public StorageProfileResponse build() {
             return new StorageProfileResponse(dataDisks, imageReference, osDisk);
         }
     }

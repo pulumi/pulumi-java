@@ -71,12 +71,10 @@ public final class ListWorkspaceCollectionAccessKeysResult {
             this.key1 = key1;
             return this;
         }
-
         public Builder key2(@Nullable String key2) {
             this.key2 = key2;
             return this;
-        }
-        public ListWorkspaceCollectionAccessKeysResult build() {
+        }        public ListWorkspaceCollectionAccessKeysResult build() {
             return new ListWorkspaceCollectionAccessKeysResult(key1, key2);
         }
     }

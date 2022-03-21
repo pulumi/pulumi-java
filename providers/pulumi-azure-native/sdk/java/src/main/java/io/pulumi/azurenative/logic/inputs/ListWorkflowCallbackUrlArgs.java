@@ -108,22 +108,18 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
             this.keyType = keyType;
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public ListWorkflowCallbackUrlArgs build() {
+        }        public ListWorkflowCallbackUrlArgs build() {
             return new ListWorkflowCallbackUrlArgs(keyType, notAfter, resourceGroupName, workflowName);
         }
     }

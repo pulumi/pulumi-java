@@ -72,12 +72,10 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
-
         public Builder userProfileName(String userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
-        }
-        public GetUserProfileArgs build() {
+        }        public GetUserProfileArgs build() {
             return new GetUserProfileArgs(domainId, userProfileName);
         }
     }

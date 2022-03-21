@@ -85,17 +85,14 @@ public final class GoogleCloudApigeeV1QuotaResponse {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder limit(String limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
-        }
-        public GoogleCloudApigeeV1QuotaResponse build() {
+        }        public GoogleCloudApigeeV1QuotaResponse build() {
             return new GoogleCloudApigeeV1QuotaResponse(interval, limit, timeUnit);
         }
     }

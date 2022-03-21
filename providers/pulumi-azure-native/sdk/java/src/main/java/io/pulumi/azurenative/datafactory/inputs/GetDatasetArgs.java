@@ -88,17 +88,14 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public Builder factoryName(String factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDatasetArgs build() {
+        }        public GetDatasetArgs build() {
             return new GetDatasetArgs(datasetName, factoryName, resourceGroupName);
         }
     }

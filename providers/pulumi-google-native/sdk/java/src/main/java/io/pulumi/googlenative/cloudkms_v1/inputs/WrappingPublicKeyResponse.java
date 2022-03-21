@@ -58,8 +58,7 @@ public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeA
         public Builder pem(String pem) {
             this.pem = Objects.requireNonNull(pem);
             return this;
-        }
-        public WrappingPublicKeyResponse build() {
+        }        public WrappingPublicKeyResponse build() {
             return new WrappingPublicKeyResponse(pem);
         }
     }

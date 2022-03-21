@@ -87,17 +87,14 @@ public final class LiveEventInputTrackSelectionResponse {
             this.operation = operation;
             return this;
         }
-
         public Builder property(@Nullable String property) {
             this.property = property;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public LiveEventInputTrackSelectionResponse build() {
+        }        public LiveEventInputTrackSelectionResponse build() {
             return new LiveEventInputTrackSelectionResponse(operation, property, value);
         }
     }

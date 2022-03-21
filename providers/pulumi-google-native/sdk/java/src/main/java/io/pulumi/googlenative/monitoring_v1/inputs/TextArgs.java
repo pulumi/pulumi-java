@@ -79,22 +79,18 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder format(@Nullable Output<TextFormat> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable TextFormat format) {
             this.format = Output.ofNullable(format);
             return this;
-        }
-        public TextArgs build() {
+        }        public TextArgs build() {
             return new TextArgs(content, format);
         }
     }

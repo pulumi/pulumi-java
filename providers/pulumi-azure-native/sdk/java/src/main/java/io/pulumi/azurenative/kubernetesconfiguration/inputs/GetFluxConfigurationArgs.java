@@ -120,27 +120,22 @@ public final class GetFluxConfigurationArgs extends io.pulumi.resources.InvokeAr
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
-
         public Builder clusterRp(String clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
-
         public Builder fluxConfigurationName(String fluxConfigurationName) {
             this.fluxConfigurationName = Objects.requireNonNull(fluxConfigurationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFluxConfigurationArgs build() {
+        }        public GetFluxConfigurationArgs build() {
             return new GetFluxConfigurationArgs(clusterName, clusterResourceName, clusterRp, fluxConfigurationName, resourceGroupName);
         }
     }

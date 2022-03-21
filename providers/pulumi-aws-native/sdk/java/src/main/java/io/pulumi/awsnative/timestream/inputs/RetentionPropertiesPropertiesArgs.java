@@ -78,22 +78,18 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
             this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
-
         public Builder magneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = Output.ofNullable(magneticStoreRetentionPeriodInDays);
             return this;
         }
-
         public Builder memoryStoreRetentionPeriodInHours(@Nullable Output<String> memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }
-
         public Builder memoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = Output.ofNullable(memoryStoreRetentionPeriodInHours);
             return this;
-        }
-        public RetentionPropertiesPropertiesArgs build() {
+        }        public RetentionPropertiesPropertiesArgs build() {
             return new RetentionPropertiesPropertiesArgs(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
         }
     }

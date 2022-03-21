@@ -121,27 +121,25 @@ public final class GetTransitGatewayConnectResult {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<TransitGatewayConnectTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(TransitGatewayConnectTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
-        }
-        public GetTransitGatewayConnectResult build() {
+        }        public GetTransitGatewayConnectResult build() {
             return new GetTransitGatewayConnectResult(creationTime, state, tags, transitGatewayAttachmentId, transitGatewayId);
         }
     }

@@ -96,17 +96,17 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
             this.id = id;
             return this;
         }
-
         public Builder images(@Nullable List<ImageDescriptorResponse> images) {
             this.images = images;
             return this;
         }
-
+        public Builder images(ImageDescriptorResponse... images) {
+            return images(List.of(images));
+        }
         public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
-        }
-        public ImageUpdateTriggerResponse build() {
+        }        public ImageUpdateTriggerResponse build() {
             return new ImageUpdateTriggerResponse(id, images, timestamp);
         }
     }

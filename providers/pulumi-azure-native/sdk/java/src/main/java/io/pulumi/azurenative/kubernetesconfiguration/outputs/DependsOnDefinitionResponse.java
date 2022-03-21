@@ -53,8 +53,7 @@ public final class DependsOnDefinitionResponse {
         public Builder kustomizationName(@Nullable String kustomizationName) {
             this.kustomizationName = kustomizationName;
             return this;
-        }
-        public DependsOnDefinitionResponse build() {
+        }        public DependsOnDefinitionResponse build() {
             return new DependsOnDefinitionResponse(kustomizationName);
         }
     }

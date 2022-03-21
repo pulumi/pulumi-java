@@ -86,17 +86,23 @@ public final class WindowsUpdateSettingsResponse {
             this.classifications = Objects.requireNonNull(classifications);
             return this;
         }
-
+        public Builder classifications(String... classifications) {
+            return classifications(List.of(classifications));
+        }
         public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
-
+        public Builder excludes(String... excludes) {
+            return excludes(List.of(excludes));
+        }
         public Builder exclusivePatches(List<String> exclusivePatches) {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }
-        public WindowsUpdateSettingsResponse build() {
+        public Builder exclusivePatches(String... exclusivePatches) {
+            return exclusivePatches(List.of(exclusivePatches));
+        }        public WindowsUpdateSettingsResponse build() {
             return new WindowsUpdateSettingsResponse(classifications, excludes, exclusivePatches);
         }
     }

@@ -145,32 +145,26 @@ public final class LimitRangeItem {
             this.$default = $default;
             return this;
         }
-
         public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
             this.defaultRequest = defaultRequest;
             return this;
         }
-
         public Builder max(@Nullable Map<String,String> max) {
             this.max = max;
             return this;
         }
-
         public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
-
         public Builder min(@Nullable Map<String,String> min) {
             this.min = min;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public LimitRangeItem build() {
+        }        public LimitRangeItem build() {
             return new LimitRangeItem($default, defaultRequest, max, maxLimitRequestRatio, min, type);
         }
     }

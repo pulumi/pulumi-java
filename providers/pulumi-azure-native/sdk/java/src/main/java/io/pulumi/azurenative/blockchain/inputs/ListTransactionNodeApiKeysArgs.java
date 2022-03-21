@@ -88,17 +88,14 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
             this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder transactionNodeName(String transactionNodeName) {
             this.transactionNodeName = Objects.requireNonNull(transactionNodeName);
             return this;
-        }
-        public ListTransactionNodeApiKeysArgs build() {
+        }        public ListTransactionNodeApiKeysArgs build() {
             return new ListTransactionNodeApiKeysArgs(blockchainMemberName, resourceGroupName, transactionNodeName);
         }
     }

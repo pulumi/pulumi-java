@@ -72,12 +72,10 @@ public final class ComputeBindingResponse {
             this.computeId = computeId;
             return this;
         }
-
         public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
-        }
-        public ComputeBindingResponse build() {
+        }        public ComputeBindingResponse build() {
             return new ComputeBindingResponse(computeId, nodeCount);
         }
     }

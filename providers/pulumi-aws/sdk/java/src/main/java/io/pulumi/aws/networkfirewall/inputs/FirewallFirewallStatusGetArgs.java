@@ -58,12 +58,13 @@ public final class FirewallFirewallStatusGetArgs extends io.pulumi.resources.Res
             this.syncStates = syncStates;
             return this;
         }
-
         public Builder syncStates(@Nullable List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
             this.syncStates = Output.ofNullable(syncStates);
             return this;
         }
-        public FirewallFirewallStatusGetArgs build() {
+        public Builder syncStates(FirewallFirewallStatusSyncStateGetArgs... syncStates) {
+            return syncStates(List.of(syncStates));
+        }        public FirewallFirewallStatusGetArgs build() {
             return new FirewallFirewallStatusGetArgs(syncStates);
         }
     }

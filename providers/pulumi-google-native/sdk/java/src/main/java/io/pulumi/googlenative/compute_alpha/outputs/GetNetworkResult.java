@@ -306,87 +306,76 @@ public final class GetNetworkResult {
             this.autoCreateSubnetworks = Objects.requireNonNull(autoCreateSubnetworks);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enableUlaInternalIpv6(Boolean enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = Objects.requireNonNull(enableUlaInternalIpv6);
             return this;
         }
-
         public Builder firewallPolicy(String firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
-
         public Builder gatewayIPv4(String gatewayIPv4) {
             this.gatewayIPv4 = Objects.requireNonNull(gatewayIPv4);
             return this;
         }
-
         public Builder internalIpv6Range(String internalIpv6Range) {
             this.internalIpv6Range = Objects.requireNonNull(internalIpv6Range);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder mtu(Integer mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkFirewallPolicyEnforcementOrder(String networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = Objects.requireNonNull(networkFirewallPolicyEnforcementOrder);
             return this;
         }
-
         public Builder peerings(List<NetworkPeeringResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
-
+        public Builder peerings(NetworkPeeringResponse... peerings) {
+            return peerings(List.of(peerings));
+        }
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder routingConfig(NetworkRoutingConfigResponse routingConfig) {
             this.routingConfig = Objects.requireNonNull(routingConfig);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public Builder subnetworks(List<String> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-        public GetNetworkResult build() {
+        public Builder subnetworks(String... subnetworks) {
+            return subnetworks(List.of(subnetworks));
+        }        public GetNetworkResult build() {
             return new GetNetworkResult(autoCreateSubnetworks, creationTimestamp, description, enableUlaInternalIpv6, firewallPolicy, gatewayIPv4, internalIpv6Range, kind, mtu, name, networkFirewallPolicyEnforcementOrder, peerings, region, routingConfig, selfLink, selfLinkWithId, subnetworks);
         }
     }

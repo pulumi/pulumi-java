@@ -121,27 +121,22 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
-
         public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public Builder viewDefinition(String viewDefinition) {
             this.viewDefinition = Objects.requireNonNull(viewDefinition);
             return this;
-        }
-        public CassandraViewGetPropertiesResponseResource build() {
+        }        public CassandraViewGetPropertiesResponseResource build() {
             return new CassandraViewGetPropertiesResponseResource(etag, id, rid, ts, viewDefinition);
         }
     }

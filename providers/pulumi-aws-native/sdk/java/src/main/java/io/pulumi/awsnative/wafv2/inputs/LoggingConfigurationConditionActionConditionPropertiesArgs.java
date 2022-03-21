@@ -60,12 +60,10 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
-        }
-        public LoggingConfigurationConditionActionConditionPropertiesArgs build() {
+        }        public LoggingConfigurationConditionActionConditionPropertiesArgs build() {
             return new LoggingConfigurationConditionActionConditionPropertiesArgs(action);
         }
     }

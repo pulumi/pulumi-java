@@ -56,12 +56,10 @@ public final class ConnectorProfileDatadogConnectorProfilePropertiesArgs extends
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
-
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
             return this;
-        }
-        public ConnectorProfileDatadogConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileDatadogConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileDatadogConnectorProfilePropertiesArgs(instanceUrl);
         }
     }

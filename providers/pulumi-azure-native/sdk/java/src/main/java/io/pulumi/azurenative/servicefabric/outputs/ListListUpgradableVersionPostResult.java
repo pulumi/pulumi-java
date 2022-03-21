@@ -46,7 +46,9 @@ public final class ListListUpgradableVersionPostResult {
             this.supportedPath = supportedPath;
             return this;
         }
-        public ListListUpgradableVersionPostResult build() {
+        public Builder supportedPath(String... supportedPath) {
+            return supportedPath(List.of(supportedPath));
+        }        public ListListUpgradableVersionPostResult build() {
             return new ListListUpgradableVersionPostResult(supportedPath);
         }
     }

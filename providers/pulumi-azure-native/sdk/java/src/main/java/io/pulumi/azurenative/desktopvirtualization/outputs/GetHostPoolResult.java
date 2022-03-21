@@ -536,162 +536,133 @@ public final class GetHostPoolResult {
             this.applicationGroupReferences = Objects.requireNonNull(applicationGroupReferences);
             return this;
         }
-
+        public Builder applicationGroupReferences(String... applicationGroupReferences) {
+            return applicationGroupReferences(List.of(applicationGroupReferences));
+        }
         public Builder cloudPcResource(Boolean cloudPcResource) {
             this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
             return this;
         }
-
         public Builder customRdpProperty(@Nullable String customRdpProperty) {
             this.customRdpProperty = customRdpProperty;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder hostPoolType(String hostPoolType) {
             this.hostPoolType = Objects.requireNonNull(hostPoolType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder maxSessionLimit(@Nullable Integer maxSessionLimit) {
             this.maxSessionLimit = maxSessionLimit;
             return this;
         }
-
         public Builder migrationRequest(@Nullable MigrationRequestPropertiesResponse migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder personalDesktopAssignmentType(@Nullable String personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder preferredAppGroupType(String preferredAppGroupType) {
             this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
             return this;
         }
-
         public Builder registrationInfo(@Nullable RegistrationInfoResponse registrationInfo) {
             this.registrationInfo = registrationInfo;
             return this;
         }
-
         public Builder ring(@Nullable Integer ring) {
             this.ring = ring;
             return this;
         }
-
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
-
         public Builder ssoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
-
         public Builder ssoSecretType(@Nullable String ssoSecretType) {
             this.ssoSecretType = ssoSecretType;
             return this;
         }
-
         public Builder ssoadfsAuthority(@Nullable String ssoadfsAuthority) {
             this.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
-
         public Builder startVMOnConnect(@Nullable Boolean startVMOnConnect) {
             this.startVMOnConnect = startVMOnConnect;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder validationEnvironment(@Nullable Boolean validationEnvironment) {
             this.validationEnvironment = validationEnvironment;
             return this;
         }
-
         public Builder vmTemplate(@Nullable String vmTemplate) {
             this.vmTemplate = vmTemplate;
             return this;
-        }
-        public GetHostPoolResult build() {
+        }        public GetHostPoolResult build() {
             return new GetHostPoolResult(applicationGroupReferences, cloudPcResource, customRdpProperty, description, etag, friendlyName, hostPoolType, id, identity, kind, loadBalancerType, location, managedBy, maxSessionLimit, migrationRequest, name, objectId, personalDesktopAssignmentType, plan, preferredAppGroupType, registrationInfo, ring, sku, ssoClientId, ssoClientSecretKeyVaultPath, ssoSecretType, ssoadfsAuthority, startVMOnConnect, tags, type, validationEnvironment, vmTemplate);
         }
     }

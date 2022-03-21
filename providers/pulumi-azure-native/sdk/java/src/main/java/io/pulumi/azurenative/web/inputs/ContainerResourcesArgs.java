@@ -79,22 +79,18 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
             this.cpu = cpu;
             return this;
         }
-
         public Builder cpu(@Nullable Double cpu) {
             this.cpu = Output.ofNullable(cpu);
             return this;
         }
-
         public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
-
         public Builder memory(@Nullable String memory) {
             this.memory = Output.ofNullable(memory);
             return this;
-        }
-        public ContainerResourcesArgs build() {
+        }        public ContainerResourcesArgs build() {
             return new ContainerResourcesArgs(cpu, memory);
         }
     }

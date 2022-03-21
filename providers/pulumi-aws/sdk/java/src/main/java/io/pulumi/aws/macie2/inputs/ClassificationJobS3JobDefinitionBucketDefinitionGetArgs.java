@@ -74,22 +74,21 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder accountId(String accountId) {
             this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
-
         public Builder buckets(Output<List<String>> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
-
         public Builder buckets(List<String> buckets) {
             this.buckets = Output.of(Objects.requireNonNull(buckets));
             return this;
         }
-        public ClassificationJobS3JobDefinitionBucketDefinitionGetArgs build() {
+        public Builder buckets(String... buckets) {
+            return buckets(List.of(buckets));
+        }        public ClassificationJobS3JobDefinitionBucketDefinitionGetArgs build() {
             return new ClassificationJobS3JobDefinitionBucketDefinitionGetArgs(accountId, buckets);
         }
     }

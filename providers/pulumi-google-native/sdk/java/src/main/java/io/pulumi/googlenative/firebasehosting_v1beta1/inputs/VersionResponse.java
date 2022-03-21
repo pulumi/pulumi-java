@@ -239,62 +239,50 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder createUser(ActingUserResponse createUser) {
             this.createUser = Objects.requireNonNull(createUser);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder deleteUser(ActingUserResponse deleteUser) {
             this.deleteUser = Objects.requireNonNull(deleteUser);
             return this;
         }
-
         public Builder fileCount(String fileCount) {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }
-
         public Builder finalizeTime(String finalizeTime) {
             this.finalizeTime = Objects.requireNonNull(finalizeTime);
             return this;
         }
-
         public Builder finalizeUser(ActingUserResponse finalizeUser) {
             this.finalizeUser = Objects.requireNonNull(finalizeUser);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder versionBytes(String versionBytes) {
             this.versionBytes = Objects.requireNonNull(versionBytes);
             return this;
-        }
-        public VersionResponse build() {
+        }        public VersionResponse build() {
             return new VersionResponse(config, createTime, createUser, deleteTime, deleteUser, fileCount, finalizeTime, finalizeUser, labels, name, status, versionBytes);
         }
     }

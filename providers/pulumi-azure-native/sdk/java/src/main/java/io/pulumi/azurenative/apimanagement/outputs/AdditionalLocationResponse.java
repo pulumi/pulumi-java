@@ -171,42 +171,43 @@ public final class AdditionalLocationResponse {
             this.disableGateway = disableGateway;
             return this;
         }
-
         public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
             this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder privateIPAddresses(List<String> privateIPAddresses) {
             this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
             return this;
         }
-
+        public Builder privateIPAddresses(String... privateIPAddresses) {
+            return privateIPAddresses(List.of(privateIPAddresses));
+        }
         public Builder publicIPAddresses(List<String> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
-
+        public Builder publicIPAddresses(String... publicIPAddresses) {
+            return publicIPAddresses(List.of(publicIPAddresses));
+        }
         public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public AdditionalLocationResponse build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public AdditionalLocationResponse build() {
             return new AdditionalLocationResponse(disableGateway, gatewayRegionalUrl, location, privateIPAddresses, publicIPAddresses, sku, virtualNetworkConfiguration, zones);
         }
     }

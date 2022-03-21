@@ -65,17 +65,14 @@ public final class EnvironmentConfigWorkloadsConfig {
             this.scheduler = scheduler;
             return this;
         }
-
         public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServer webServer) {
             this.webServer = webServer;
             return this;
         }
-
         public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
             this.worker = worker;
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfig build() {
+        }        public EnvironmentConfigWorkloadsConfig build() {
             return new EnvironmentConfigWorkloadsConfig(scheduler, webServer, worker);
         }
     }

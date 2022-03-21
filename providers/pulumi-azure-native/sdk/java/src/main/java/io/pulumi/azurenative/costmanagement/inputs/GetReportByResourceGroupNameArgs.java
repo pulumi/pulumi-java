@@ -72,12 +72,10 @@ public final class GetReportByResourceGroupNameArgs extends io.pulumi.resources.
             this.reportName = Objects.requireNonNull(reportName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetReportByResourceGroupNameArgs build() {
+        }        public GetReportByResourceGroupNameArgs build() {
             return new GetReportByResourceGroupNameArgs(reportName, resourceGroupName);
         }
     }

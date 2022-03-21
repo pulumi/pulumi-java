@@ -73,22 +73,18 @@ public final class UserHomeDirectoryMappingArgs extends io.pulumi.resources.Reso
             this.entry = Objects.requireNonNull(entry);
             return this;
         }
-
         public Builder entry(String entry) {
             this.entry = Output.of(Objects.requireNonNull(entry));
             return this;
         }
-
         public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
-        }
-        public UserHomeDirectoryMappingArgs build() {
+        }        public UserHomeDirectoryMappingArgs build() {
             return new UserHomeDirectoryMappingArgs(entry, target);
         }
     }

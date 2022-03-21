@@ -88,17 +88,14 @@ public final class GetVirtualMachineRdpFileContentsArgs extends io.pulumi.resour
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetVirtualMachineRdpFileContentsArgs build() {
+        }        public GetVirtualMachineRdpFileContentsArgs build() {
             return new GetVirtualMachineRdpFileContentsArgs(labName, name, resourceGroupName);
         }
     }

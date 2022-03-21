@@ -50,8 +50,7 @@ public final class GetCredentialsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetCredentialsArgs build() {
+        }        public GetCredentialsArgs build() {
             return new GetCredentialsArgs(registryId);
         }
     }

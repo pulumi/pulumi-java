@@ -88,17 +88,14 @@ public final class ListBatchEndpointKeysArgs extends io.pulumi.resources.InvokeA
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public ListBatchEndpointKeysArgs build() {
+        }        public ListBatchEndpointKeysArgs build() {
             return new ListBatchEndpointKeysArgs(endpointName, resourceGroupName, workspaceName);
         }
     }

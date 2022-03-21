@@ -144,42 +144,37 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
             this.aggregations = aggregations;
             return this;
         }
-
         public Builder aggregations(@Nullable List<AlertPolicyConditionConditionAbsentAggregationGetArgs> aggregations) {
             this.aggregations = Output.ofNullable(aggregations);
             return this;
         }
-
+        public Builder aggregations(AlertPolicyConditionConditionAbsentAggregationGetArgs... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder trigger(@Nullable AlertPolicyConditionConditionAbsentTriggerGetArgs trigger) {
             this.trigger = Output.ofNullable(trigger);
             return this;
-        }
-        public AlertPolicyConditionConditionAbsentGetArgs build() {
+        }        public AlertPolicyConditionConditionAbsentGetArgs build() {
             return new AlertPolicyConditionConditionAbsentGetArgs(aggregations, duration, filter, trigger);
         }
     }

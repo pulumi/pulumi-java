@@ -217,42 +217,43 @@ public final class UntilActivityResponse extends io.pulumi.resources.InvokeArgs 
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder expression(ExpressionResponse expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder timeout(@Nullable Object timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public UntilActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public UntilActivityResponse build() {
             return new UntilActivityResponse(activities, dependsOn, description, expression, name, timeout, type, userProperties);
         }
     }

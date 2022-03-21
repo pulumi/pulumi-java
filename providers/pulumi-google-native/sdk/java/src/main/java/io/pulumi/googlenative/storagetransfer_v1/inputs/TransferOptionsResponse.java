@@ -109,22 +109,18 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
             this.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull(deleteObjectsFromSourceAfterTransfer);
             return this;
         }
-
         public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = Objects.requireNonNull(deleteObjectsUniqueInSink);
             return this;
         }
-
         public Builder metadataOptions(MetadataOptionsResponse metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
-
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
             return this;
-        }
-        public TransferOptionsResponse build() {
+        }        public TransferOptionsResponse build() {
             return new TransferOptionsResponse(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
         }
     }

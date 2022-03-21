@@ -89,17 +89,14 @@ public final class MoveResourcePropertiesResponseMoveStatus {
             this.errors = errors;
             return this;
         }
-
         public Builder jobStatus(@Nullable JobStatusResponse jobStatus) {
             this.jobStatus = jobStatus;
             return this;
         }
-
         public Builder moveState(String moveState) {
             this.moveState = Objects.requireNonNull(moveState);
             return this;
-        }
-        public MoveResourcePropertiesResponseMoveStatus build() {
+        }        public MoveResourcePropertiesResponseMoveStatus build() {
             return new MoveResourcePropertiesResponseMoveStatus(errors, jobStatus, moveState);
         }
     }

@@ -56,12 +56,10 @@ public final class TableBillingMode {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder provisionedThroughput(@Nullable TableProvisionedThroughput provisionedThroughput) {
             this.provisionedThroughput = provisionedThroughput;
             return this;
-        }
-        public TableBillingMode build() {
+        }        public TableBillingMode build() {
             return new TableBillingMode(mode, provisionedThroughput);
         }
     }

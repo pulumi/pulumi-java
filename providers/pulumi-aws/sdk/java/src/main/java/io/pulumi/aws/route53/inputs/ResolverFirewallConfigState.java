@@ -90,32 +90,26 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
             this.firewallFailOpen = firewallFailOpen;
             return this;
         }
-
         public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
             this.firewallFailOpen = Output.ofNullable(firewallFailOpen);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ResolverFirewallConfigState build() {
+        }        public ResolverFirewallConfigState build() {
             return new ResolverFirewallConfigState(firewallFailOpen, ownerId, resourceId);
         }
     }

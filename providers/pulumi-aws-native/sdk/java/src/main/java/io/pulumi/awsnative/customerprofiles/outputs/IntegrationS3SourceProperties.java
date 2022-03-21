@@ -55,12 +55,10 @@ public final class IntegrationS3SourceProperties {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
-        }
-        public IntegrationS3SourceProperties build() {
+        }        public IntegrationS3SourceProperties build() {
             return new IntegrationS3SourceProperties(bucketName, bucketPrefix);
         }
     }

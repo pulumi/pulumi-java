@@ -78,22 +78,21 @@ public final class BackendServiceSecuritySettingsGetArgs extends io.pulumi.resou
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
-
         public Builder clientTlsPolicy(String clientTlsPolicy) {
             this.clientTlsPolicy = Output.of(Objects.requireNonNull(clientTlsPolicy));
             return this;
         }
-
         public Builder subjectAltNames(Output<List<String>> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-
         public Builder subjectAltNames(List<String> subjectAltNames) {
             this.subjectAltNames = Output.of(Objects.requireNonNull(subjectAltNames));
             return this;
         }
-        public BackendServiceSecuritySettingsGetArgs build() {
+        public Builder subjectAltNames(String... subjectAltNames) {
+            return subjectAltNames(List.of(subjectAltNames));
+        }        public BackendServiceSecuritySettingsGetArgs build() {
             return new BackendServiceSecuritySettingsGetArgs(clientTlsPolicy, subjectAltNames);
         }
     }

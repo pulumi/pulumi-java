@@ -55,12 +55,10 @@ public final class CarrierGatewayTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CarrierGatewayTag build() {
+        }        public CarrierGatewayTag build() {
             return new CarrierGatewayTag(key, value);
         }
     }

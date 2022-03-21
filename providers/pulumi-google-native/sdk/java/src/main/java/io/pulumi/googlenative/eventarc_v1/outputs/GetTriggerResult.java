@@ -202,52 +202,45 @@ public final class GetTriggerResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder destination(DestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder eventFilters(List<EventFilterResponse> eventFilters) {
             this.eventFilters = Objects.requireNonNull(eventFilters);
             return this;
         }
-
+        public Builder eventFilters(EventFilterResponse... eventFilters) {
+            return eventFilters(List.of(eventFilters));
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder transport(TransportResponse transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetTriggerResult build() {
+        }        public GetTriggerResult build() {
             return new GetTriggerResult(createTime, destination, etag, eventFilters, labels, name, serviceAccount, transport, uid, updateTime);
         }
     }

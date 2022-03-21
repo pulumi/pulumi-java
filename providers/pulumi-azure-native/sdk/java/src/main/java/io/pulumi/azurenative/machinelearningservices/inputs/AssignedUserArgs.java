@@ -77,22 +77,18 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder objectId(String objectId) {
             this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
-
         public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
-        }
-        public AssignedUserArgs build() {
+        }        public AssignedUserArgs build() {
             return new AssignedUserArgs(objectId, tenantId);
         }
     }

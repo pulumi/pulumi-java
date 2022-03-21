@@ -189,92 +189,74 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
             this.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
-
         public Builder exportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Output.ofNullable(exportCustomRoutes);
             return this;
         }
-
         public Builder exportSubnetRoutesWithPublicIp(@Nullable Output<Boolean> exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
             return this;
         }
-
         public Builder exportSubnetRoutesWithPublicIp(@Nullable Boolean exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = Output.ofNullable(exportSubnetRoutesWithPublicIp);
             return this;
         }
-
         public Builder importCustomRoutes(@Nullable Output<Boolean> importCustomRoutes) {
             this.importCustomRoutes = importCustomRoutes;
             return this;
         }
-
         public Builder importCustomRoutes(@Nullable Boolean importCustomRoutes) {
             this.importCustomRoutes = Output.ofNullable(importCustomRoutes);
             return this;
         }
-
         public Builder importSubnetRoutesWithPublicIp(@Nullable Output<Boolean> importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
             return this;
         }
-
         public Builder importSubnetRoutesWithPublicIp(@Nullable Boolean importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = Output.ofNullable(importSubnetRoutesWithPublicIp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder peerNetwork(@Nullable Output<String> peerNetwork) {
             this.peerNetwork = peerNetwork;
             return this;
         }
-
         public Builder peerNetwork(@Nullable String peerNetwork) {
             this.peerNetwork = Output.ofNullable(peerNetwork);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder stateDetails(@Nullable Output<String> stateDetails) {
             this.stateDetails = stateDetails;
             return this;
         }
-
         public Builder stateDetails(@Nullable String stateDetails) {
             this.stateDetails = Output.ofNullable(stateDetails);
             return this;
-        }
-        public NetworkPeeringState build() {
+        }        public NetworkPeeringState build() {
             return new NetworkPeeringState(exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerNetwork, state, stateDetails);
         }
     }

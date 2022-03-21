@@ -68,22 +68,21 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pets(@Nullable Output<List<PetArgs>> pets) {
             this.pets = pets;
             return this;
         }
-
         public Builder pets(@Nullable List<PetArgs> pets) {
             this.pets = Output.ofNullable(pets);
             return this;
         }
-        public PersonArgs build() {
+        public Builder pets(PetArgs... pets) {
+            return pets(List.of(pets));
+        }        public PersonArgs build() {
             return new PersonArgs(name, pets);
         }
     }

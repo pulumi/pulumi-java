@@ -62,12 +62,13 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
             this.synonyms = synonyms;
             return this;
         }
-
         public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
-        public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs build() {
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }        public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs build() {
             return new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(synonyms);
         }
     }

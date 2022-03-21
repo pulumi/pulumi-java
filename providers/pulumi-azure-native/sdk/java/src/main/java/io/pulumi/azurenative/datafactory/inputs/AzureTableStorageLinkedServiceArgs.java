@@ -213,102 +213,85 @@ public final class AzureTableStorageLinkedServiceArgs extends io.pulumi.resource
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceArgs accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder connectionString(@Nullable Output<Object> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<String> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable String encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder sasToken(@Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
-
         public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceArgs sasToken) {
             this.sasToken = Output.ofNullable(sasToken);
             return this;
         }
-
         public Builder sasUri(@Nullable Output<Object> sasUri) {
             this.sasUri = sasUri;
             return this;
         }
-
         public Builder sasUri(@Nullable Object sasUri) {
             this.sasUri = Output.ofNullable(sasUri);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AzureTableStorageLinkedServiceArgs build() {
+        }        public AzureTableStorageLinkedServiceArgs build() {
             return new AzureTableStorageLinkedServiceArgs(accountKey, annotations, connectVia, connectionString, description, encryptedCredential, parameters, sasToken, sasUri, type);
         }
     }

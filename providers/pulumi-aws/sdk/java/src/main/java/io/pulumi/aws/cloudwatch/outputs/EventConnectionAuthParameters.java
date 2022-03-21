@@ -106,22 +106,18 @@ public final class EventConnectionAuthParameters {
             this.apiKey = apiKey;
             return this;
         }
-
         public Builder basic(@Nullable EventConnectionAuthParametersBasic basic) {
             this.basic = basic;
             return this;
         }
-
         public Builder invocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
-
         public Builder oauth(@Nullable EventConnectionAuthParametersOauth oauth) {
             this.oauth = oauth;
             return this;
-        }
-        public EventConnectionAuthParameters build() {
+        }        public EventConnectionAuthParameters build() {
             return new EventConnectionAuthParameters(apiKey, basic, invocationHttpParameters, oauth);
         }
     }

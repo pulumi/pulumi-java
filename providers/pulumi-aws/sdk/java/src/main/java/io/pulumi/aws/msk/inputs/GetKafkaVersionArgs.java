@@ -75,12 +75,13 @@ public final class GetKafkaVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.preferredVersions = preferredVersions;
             return this;
         }
-
+        public Builder preferredVersions(String... preferredVersions) {
+            return preferredVersions(List.of(preferredVersions));
+        }
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetKafkaVersionArgs build() {
+        }        public GetKafkaVersionArgs build() {
             return new GetKafkaVersionArgs(preferredVersions, version);
         }
     }

@@ -61,12 +61,10 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
-        }
-        public GkeClusterArgs build() {
+        }        public GkeClusterArgs build() {
             return new GkeClusterArgs(cluster);
         }
     }

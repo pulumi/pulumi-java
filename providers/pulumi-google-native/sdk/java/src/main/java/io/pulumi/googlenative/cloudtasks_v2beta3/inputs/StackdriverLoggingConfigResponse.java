@@ -58,8 +58,7 @@ public final class StackdriverLoggingConfigResponse extends io.pulumi.resources.
         public Builder samplingRatio(Double samplingRatio) {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
-        }
-        public StackdriverLoggingConfigResponse build() {
+        }        public StackdriverLoggingConfigResponse build() {
             return new StackdriverLoggingConfigResponse(samplingRatio);
         }
     }

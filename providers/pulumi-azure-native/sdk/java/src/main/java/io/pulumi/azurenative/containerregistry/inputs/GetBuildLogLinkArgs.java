@@ -88,17 +88,14 @@ public final class GetBuildLogLinkArgs extends io.pulumi.resources.InvokeArgs {
             this.buildId = Objects.requireNonNull(buildId);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBuildLogLinkArgs build() {
+        }        public GetBuildLogLinkArgs build() {
             return new GetBuildLogLinkArgs(buildId, registryName, resourceGroupName);
         }
     }

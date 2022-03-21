@@ -69,12 +69,10 @@ public final class InsightFiltersResourceAwsEc2InstanceKeyName {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceKeyName build() {
+        }        public InsightFiltersResourceAwsEc2InstanceKeyName build() {
             return new InsightFiltersResourceAwsEc2InstanceKeyName(comparison, value);
         }
     }

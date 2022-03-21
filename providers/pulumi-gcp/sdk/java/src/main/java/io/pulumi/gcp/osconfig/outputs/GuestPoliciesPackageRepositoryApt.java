@@ -126,27 +126,25 @@ public final class GuestPoliciesPackageRepositoryApt {
             this.archiveType = archiveType;
             return this;
         }
-
         public Builder components(List<String> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
-
+        public Builder components(String... components) {
+            return components(List.of(components));
+        }
         public Builder distribution(String distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
-
         public Builder gpgKey(@Nullable String gpgKey) {
             this.gpgKey = gpgKey;
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GuestPoliciesPackageRepositoryApt build() {
+        }        public GuestPoliciesPackageRepositoryApt build() {
             return new GuestPoliciesPackageRepositoryApt(archiveType, components, distribution, gpgKey, uri);
         }
     }

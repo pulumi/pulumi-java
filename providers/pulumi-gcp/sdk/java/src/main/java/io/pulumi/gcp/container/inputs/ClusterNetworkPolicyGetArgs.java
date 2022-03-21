@@ -76,22 +76,18 @@ public final class ClusterNetworkPolicyGetArgs extends io.pulumi.resources.Resou
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public Builder provider(@Nullable Output<String> provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable String provider) {
             this.provider = Output.ofNullable(provider);
             return this;
-        }
-        public ClusterNetworkPolicyGetArgs build() {
+        }        public ClusterNetworkPolicyGetArgs build() {
             return new ClusterNetworkPolicyGetArgs(enabled, provider);
         }
     }

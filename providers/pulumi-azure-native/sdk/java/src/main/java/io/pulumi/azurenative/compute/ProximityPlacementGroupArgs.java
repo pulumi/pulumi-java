@@ -142,62 +142,50 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
             this.colocationStatus = colocationStatus;
             return this;
         }
-
         public Builder colocationStatus(@Nullable InstanceViewStatusArgs colocationStatus) {
             this.colocationStatus = Output.ofNullable(colocationStatus);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder proximityPlacementGroupName(@Nullable Output<String> proximityPlacementGroupName) {
             this.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
-
         public Builder proximityPlacementGroupName(@Nullable String proximityPlacementGroupName) {
             this.proximityPlacementGroupName = Output.ofNullable(proximityPlacementGroupName);
             return this;
         }
-
         public Builder proximityPlacementGroupType(@Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
             this.proximityPlacementGroupType = proximityPlacementGroupType;
             return this;
         }
-
         public Builder proximityPlacementGroupType(@Nullable Either<String,ProximityPlacementGroupType> proximityPlacementGroupType) {
             this.proximityPlacementGroupType = Output.ofNullable(proximityPlacementGroupType);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ProximityPlacementGroupArgs build() {
+        }        public ProximityPlacementGroupArgs build() {
             return new ProximityPlacementGroupArgs(colocationStatus, location, proximityPlacementGroupName, proximityPlacementGroupType, resourceGroupName, tags);
         }
     }

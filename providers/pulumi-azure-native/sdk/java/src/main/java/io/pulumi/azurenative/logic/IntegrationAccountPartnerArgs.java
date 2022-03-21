@@ -175,82 +175,66 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(PartnerContentArgs content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
-
         public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
-
         public Builder partnerType(Output<Either<String,PartnerType>> partnerType) {
             this.partnerType = Objects.requireNonNull(partnerType);
             return this;
         }
-
         public Builder partnerType(Either<String,PartnerType> partnerType) {
             this.partnerType = Output.of(Objects.requireNonNull(partnerType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountPartnerArgs build() {
+        }        public IntegrationAccountPartnerArgs build() {
             return new IntegrationAccountPartnerArgs(content, integrationAccountName, location, metadata, partnerName, partnerType, resourceGroupName, tags);
         }
     }

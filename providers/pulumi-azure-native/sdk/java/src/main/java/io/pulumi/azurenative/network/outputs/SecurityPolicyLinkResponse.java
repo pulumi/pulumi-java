@@ -53,8 +53,7 @@ public final class SecurityPolicyLinkResponse {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SecurityPolicyLinkResponse build() {
+        }        public SecurityPolicyLinkResponse build() {
             return new SecurityPolicyLinkResponse(id);
         }
     }

@@ -53,12 +53,10 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }
-
         public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroupArgs cloudWatchLogsLogGroup) {
             this.cloudWatchLogsLogGroup = Output.ofNullable(cloudWatchLogsLogGroup);
             return this;
-        }
-        public StateMachineLogDestinationArgs build() {
+        }        public StateMachineLogDestinationArgs build() {
             return new StateMachineLogDestinationArgs(cloudWatchLogsLogGroup);
         }
     }

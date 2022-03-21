@@ -45,8 +45,7 @@ public final class GetResourceDataSyncResult {
         public Builder syncSource(@Nullable ResourceDataSyncSyncSource syncSource) {
             this.syncSource = syncSource;
             return this;
-        }
-        public GetResourceDataSyncResult build() {
+        }        public GetResourceDataSyncResult build() {
             return new GetResourceDataSyncResult(syncSource);
         }
     }

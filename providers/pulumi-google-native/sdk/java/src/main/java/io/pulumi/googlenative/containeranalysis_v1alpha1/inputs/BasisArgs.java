@@ -79,22 +79,18 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable FingerprintArgs fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
             this.resourceUrl = resourceUrl;
             return this;
         }
-
         public Builder resourceUrl(@Nullable String resourceUrl) {
             this.resourceUrl = Output.ofNullable(resourceUrl);
             return this;
-        }
-        public BasisArgs build() {
+        }        public BasisArgs build() {
             return new BasisArgs(fingerprint, resourceUrl);
         }
     }

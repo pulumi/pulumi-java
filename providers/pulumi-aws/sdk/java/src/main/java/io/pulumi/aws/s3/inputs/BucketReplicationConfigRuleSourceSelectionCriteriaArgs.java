@@ -75,22 +75,18 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
             this.replicaModifications = replicaModifications;
             return this;
         }
-
         public Builder replicaModifications(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs replicaModifications) {
             this.replicaModifications = Output.ofNullable(replicaModifications);
             return this;
         }
-
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-
         public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
             return this;
-        }
-        public BucketReplicationConfigRuleSourceSelectionCriteriaArgs build() {
+        }        public BucketReplicationConfigRuleSourceSelectionCriteriaArgs build() {
             return new BucketReplicationConfigRuleSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);
         }
     }

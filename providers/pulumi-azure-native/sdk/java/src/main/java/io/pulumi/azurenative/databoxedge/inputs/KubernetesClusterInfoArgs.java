@@ -60,12 +60,10 @@ public final class KubernetesClusterInfoArgs extends io.pulumi.resources.Resourc
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public KubernetesClusterInfoArgs build() {
+        }        public KubernetesClusterInfoArgs build() {
             return new KubernetesClusterInfoArgs(version);
         }
     }

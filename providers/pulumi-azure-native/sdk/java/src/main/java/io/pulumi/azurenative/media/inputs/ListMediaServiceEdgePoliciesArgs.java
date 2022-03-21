@@ -90,17 +90,14 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListMediaServiceEdgePoliciesArgs build() {
+        }        public ListMediaServiceEdgePoliciesArgs build() {
             return new ListMediaServiceEdgePoliciesArgs(accountName, deviceId, resourceGroupName);
         }
     }

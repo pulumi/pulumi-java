@@ -251,67 +251,63 @@ public final class GetZoneResult {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maxNumberOfRecordSets(Double maxNumberOfRecordSets) {
             this.maxNumberOfRecordSets = Objects.requireNonNull(maxNumberOfRecordSets);
             return this;
         }
-
         public Builder maxNumberOfRecordsPerRecordSet(Double maxNumberOfRecordsPerRecordSet) {
             this.maxNumberOfRecordsPerRecordSet = Objects.requireNonNull(maxNumberOfRecordsPerRecordSet);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder numberOfRecordSets(Double numberOfRecordSets) {
             this.numberOfRecordSets = Objects.requireNonNull(numberOfRecordSets);
             return this;
         }
-
         public Builder registrationVirtualNetworks(@Nullable List<SubResourceResponse> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
-
+        public Builder registrationVirtualNetworks(SubResourceResponse... registrationVirtualNetworks) {
+            return registrationVirtualNetworks(List.of(registrationVirtualNetworks));
+        }
         public Builder resolutionVirtualNetworks(@Nullable List<SubResourceResponse> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
-
+        public Builder resolutionVirtualNetworks(SubResourceResponse... resolutionVirtualNetworks) {
+            return resolutionVirtualNetworks(List.of(resolutionVirtualNetworks));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zoneType(@Nullable String zoneType) {
             this.zoneType = zoneType;
             return this;
-        }
-        public GetZoneResult build() {
+        }        public GetZoneResult build() {
             return new GetZoneResult(etag, id, location, maxNumberOfRecordSets, maxNumberOfRecordsPerRecordSet, name, nameServers, numberOfRecordSets, registrationVirtualNetworks, resolutionVirtualNetworks, tags, type, zoneType);
         }
     }

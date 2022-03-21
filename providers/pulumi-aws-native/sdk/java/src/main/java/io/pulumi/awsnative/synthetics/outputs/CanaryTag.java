@@ -69,12 +69,10 @@ public final class CanaryTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public CanaryTag build() {
+        }        public CanaryTag build() {
             return new CanaryTag(key, value);
         }
     }

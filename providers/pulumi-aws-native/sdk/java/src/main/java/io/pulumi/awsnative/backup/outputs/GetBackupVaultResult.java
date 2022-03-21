@@ -82,27 +82,22 @@ public final class GetBackupVaultResult {
             this.accessPolicy = accessPolicy;
             return this;
         }
-
         public Builder backupVaultArn(@Nullable String backupVaultArn) {
             this.backupVaultArn = backupVaultArn;
             return this;
         }
-
         public Builder backupVaultTags(@Nullable Object backupVaultTags) {
             this.backupVaultTags = backupVaultTags;
             return this;
         }
-
         public Builder lockConfiguration(@Nullable BackupVaultLockConfigurationType lockConfiguration) {
             this.lockConfiguration = lockConfiguration;
             return this;
         }
-
         public Builder notifications(@Nullable BackupVaultNotificationObjectType notifications) {
             this.notifications = notifications;
             return this;
-        }
-        public GetBackupVaultResult build() {
+        }        public GetBackupVaultResult build() {
             return new GetBackupVaultResult(accessPolicy, backupVaultArn, backupVaultTags, lockConfiguration, notifications);
         }
     }

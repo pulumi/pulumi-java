@@ -327,172 +327,138 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
-
         public Builder creationData(CreationDataArgs creationData) {
             this.creationData = Output.of(Objects.requireNonNull(creationData));
             return this;
         }
-
         public Builder diskAccessId(@Nullable Output<String> diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
-
         public Builder diskAccessId(@Nullable String diskAccessId) {
             this.diskAccessId = Output.ofNullable(diskAccessId);
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
-
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Output.ofNullable(diskSizeGB);
             return this;
         }
-
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
-
         public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
             this.encryptionSettingsCollection = Output.ofNullable(encryptionSettingsCollection);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
             this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
-
         public Builder incremental(@Nullable Output<Boolean> incremental) {
             this.incremental = incremental;
             return this;
         }
-
         public Builder incremental(@Nullable Boolean incremental) {
             this.incremental = Output.ofNullable(incremental);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
-
         public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
             this.networkAccessPolicy = Output.ofNullable(networkAccessPolicy);
             return this;
         }
-
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable OperatingSystemTypes osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
-
         public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
             this.purchasePlan = Output.ofNullable(purchasePlan);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SnapshotSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SnapshotSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
-
         public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
-
         public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
-
         public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
             this.supportsHibernation = Output.ofNullable(supportsHibernation);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SnapshotArgs build() {
+        }        public SnapshotArgs build() {
             return new SnapshotArgs(creationData, diskAccessId, diskSizeGB, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, incremental, location, networkAccessPolicy, osType, purchasePlan, resourceGroupName, sku, snapshotName, supportsHibernation, tags);
         }
     }

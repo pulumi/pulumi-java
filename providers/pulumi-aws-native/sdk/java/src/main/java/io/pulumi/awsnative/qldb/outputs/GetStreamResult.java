@@ -73,17 +73,17 @@ public final class GetStreamResult {
             this.arn = arn;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<StreamTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetStreamResult build() {
+        public Builder tags(StreamTag... tags) {
+            return tags(List.of(tags));
+        }        public GetStreamResult build() {
             return new GetStreamResult(arn, id, tags);
         }
     }

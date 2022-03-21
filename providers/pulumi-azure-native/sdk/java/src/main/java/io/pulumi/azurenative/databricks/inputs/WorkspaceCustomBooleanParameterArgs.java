@@ -60,12 +60,10 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Boolean value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public WorkspaceCustomBooleanParameterArgs build() {
+        }        public WorkspaceCustomBooleanParameterArgs build() {
             return new WorkspaceCustomBooleanParameterArgs(value);
         }
     }

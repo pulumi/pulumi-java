@@ -235,62 +235,56 @@ public final class GetCapacityReservationResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceView(CapacityReservationInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder provisioningTime(String provisioningTime) {
             this.provisioningTime = Objects.requireNonNull(provisioningTime);
             return this;
         }
-
         public Builder reservationId(String reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
             this.virtualMachinesAssociated = Objects.requireNonNull(virtualMachinesAssociated);
             return this;
         }
-
+        public Builder virtualMachinesAssociated(SubResourceReadOnlyResponse... virtualMachinesAssociated) {
+            return virtualMachinesAssociated(List.of(virtualMachinesAssociated));
+        }
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetCapacityReservationResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetCapacityReservationResult build() {
             return new GetCapacityReservationResult(id, instanceView, location, name, provisioningState, provisioningTime, reservationId, sku, tags, type, virtualMachinesAssociated, zones);
         }
     }

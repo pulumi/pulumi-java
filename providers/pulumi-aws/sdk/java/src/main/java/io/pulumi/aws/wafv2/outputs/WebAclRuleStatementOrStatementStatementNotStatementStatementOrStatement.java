@@ -53,7 +53,9 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementO
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatement build() {
+        public Builder statements(WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatement... statements) {
+            return statements(List.of(statements));
+        }        public WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatement build() {
             return new WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatement(statements);
         }
     }

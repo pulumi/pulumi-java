@@ -51,8 +51,7 @@ public final class GetDeploymentLogFileUrlResult {
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public GetDeploymentLogFileUrlResult build() {
+        }        public GetDeploymentLogFileUrlResult build() {
             return new GetDeploymentLogFileUrlResult(url);
         }
     }

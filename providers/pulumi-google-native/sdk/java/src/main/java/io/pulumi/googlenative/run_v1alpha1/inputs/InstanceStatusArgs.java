@@ -176,82 +176,66 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.completionTime = completionTime;
             return this;
         }
-
         public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
-
         public Builder failed(@Nullable Output<Integer> failed) {
             this.failed = failed;
             return this;
         }
-
         public Builder failed(@Nullable Integer failed) {
             this.failed = Output.ofNullable(failed);
             return this;
         }
-
         public Builder index(Output<Integer> index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder index(Integer index) {
             this.index = Output.of(Objects.requireNonNull(index));
             return this;
         }
-
         public Builder lastAttemptResult(@Nullable Output<InstanceAttemptResultArgs> lastAttemptResult) {
             this.lastAttemptResult = lastAttemptResult;
             return this;
         }
-
         public Builder lastAttemptResult(@Nullable InstanceAttemptResultArgs lastAttemptResult) {
             this.lastAttemptResult = Output.ofNullable(lastAttemptResult);
             return this;
         }
-
         public Builder lastExitCode(@Nullable Output<Integer> lastExitCode) {
             this.lastExitCode = lastExitCode;
             return this;
         }
-
         public Builder lastExitCode(@Nullable Integer lastExitCode) {
             this.lastExitCode = Output.ofNullable(lastExitCode);
             return this;
         }
-
         public Builder restarted(@Nullable Output<Integer> restarted) {
             this.restarted = restarted;
             return this;
         }
-
         public Builder restarted(@Nullable Integer restarted) {
             this.restarted = Output.ofNullable(restarted);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder succeeded(@Nullable Output<Integer> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
-
         public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = Output.ofNullable(succeeded);
             return this;
-        }
-        public InstanceStatusArgs build() {
+        }        public InstanceStatusArgs build() {
             return new InstanceStatusArgs(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
         }
     }

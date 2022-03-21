@@ -192,92 +192,74 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder clientSecret(@Nullable Output<GitHubClientSecretArgs> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder clientSecret(@Nullable GitHubClientSecretArgs clientSecret) {
             this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
-
         public Builder collaborationBranch(Output<String> collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
-
         public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Output.of(Objects.requireNonNull(collaborationBranch));
             return this;
         }
-
         public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
-
         public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = Output.ofNullable(lastCommitId);
             return this;
         }
-
         public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
-
         public Builder rootFolder(Output<String> rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
-
         public Builder rootFolder(String rootFolder) {
             this.rootFolder = Output.of(Objects.requireNonNull(rootFolder));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FactoryGitHubConfigurationArgs build() {
+        }        public FactoryGitHubConfigurationArgs build() {
             return new FactoryGitHubConfigurationArgs(accountName, clientId, clientSecret, collaborationBranch, hostName, lastCommitId, repositoryName, rootFolder, type);
         }
     }

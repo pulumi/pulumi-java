@@ -44,8 +44,7 @@ public final class GetFunctionEnvironment {
         public Builder variables(Map<String,String> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
-        }
-        public GetFunctionEnvironment build() {
+        }        public GetFunctionEnvironment build() {
             return new GetFunctionEnvironment(variables);
         }
     }

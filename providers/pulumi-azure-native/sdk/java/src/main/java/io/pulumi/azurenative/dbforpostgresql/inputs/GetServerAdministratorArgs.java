@@ -72,12 +72,10 @@ public final class GetServerAdministratorArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerAdministratorArgs build() {
+        }        public GetServerAdministratorArgs build() {
             return new GetServerAdministratorArgs(resourceGroupName, serverName);
         }
     }

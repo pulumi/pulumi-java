@@ -164,72 +164,61 @@ public final class RateLimitRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(Either<String,ActionType> action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
-
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
             this.matchConditions = Output.of(Objects.requireNonNull(matchConditions));
             return this;
         }
-
+        public Builder matchConditions(MatchConditionArgs... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder rateLimitDurationInMinutes(Output<Integer> rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes);
             return this;
         }
-
         public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = Output.of(Objects.requireNonNull(rateLimitDurationInMinutes));
             return this;
         }
-
         public Builder rateLimitThreshold(Output<Integer> rateLimitThreshold) {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }
-
         public Builder rateLimitThreshold(Integer rateLimitThreshold) {
             this.rateLimitThreshold = Output.of(Objects.requireNonNull(rateLimitThreshold));
             return this;
-        }
-        public RateLimitRuleArgs build() {
+        }        public RateLimitRuleArgs build() {
             return new RateLimitRuleArgs(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold);
         }
     }

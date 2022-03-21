@@ -104,22 +104,18 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
             this.contentItemId = Objects.requireNonNull(contentItemId);
             return this;
         }
-
         public Builder contentTypeId(String contentTypeId) {
             this.contentTypeId = Objects.requireNonNull(contentTypeId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetContentItemArgs build() {
+        }        public GetContentItemArgs build() {
             return new GetContentItemArgs(contentItemId, contentTypeId, resourceGroupName, serviceName);
         }
     }

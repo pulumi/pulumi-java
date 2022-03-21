@@ -112,42 +112,34 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder oauth2ClientId(@Nullable Output<String> oauth2ClientId) {
             this.oauth2ClientId = oauth2ClientId;
             return this;
         }
-
         public Builder oauth2ClientId(@Nullable String oauth2ClientId) {
             this.oauth2ClientId = Output.ofNullable(oauth2ClientId);
             return this;
         }
-
         public Builder oauth2ClientInfo(@Nullable Output<BackendServiceIAPOAuth2ClientInfoArgs> oauth2ClientInfo) {
             this.oauth2ClientInfo = oauth2ClientInfo;
             return this;
         }
-
         public Builder oauth2ClientInfo(@Nullable BackendServiceIAPOAuth2ClientInfoArgs oauth2ClientInfo) {
             this.oauth2ClientInfo = Output.ofNullable(oauth2ClientInfo);
             return this;
         }
-
         public Builder oauth2ClientSecret(@Nullable Output<String> oauth2ClientSecret) {
             this.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
-
         public Builder oauth2ClientSecret(@Nullable String oauth2ClientSecret) {
             this.oauth2ClientSecret = Output.ofNullable(oauth2ClientSecret);
             return this;
-        }
-        public BackendServiceIAPArgs build() {
+        }        public BackendServiceIAPArgs build() {
             return new BackendServiceIAPArgs(enabled, oauth2ClientId, oauth2ClientInfo, oauth2ClientSecret);
         }
     }

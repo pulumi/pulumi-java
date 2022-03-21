@@ -208,102 +208,82 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder baseGroupDN(@Nullable Output<String> baseGroupDN) {
             this.baseGroupDN = baseGroupDN;
             return this;
         }
-
         public Builder baseGroupDN(@Nullable String baseGroupDN) {
             this.baseGroupDN = Output.ofNullable(baseGroupDN);
             return this;
         }
-
         public Builder baseUserDN(@Nullable Output<String> baseUserDN) {
             this.baseUserDN = baseUserDN;
             return this;
         }
-
         public Builder baseUserDN(@Nullable String baseUserDN) {
             this.baseUserDN = Output.ofNullable(baseUserDN);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder primaryServer(@Nullable Output<String> primaryServer) {
             this.primaryServer = primaryServer;
             return this;
         }
-
         public Builder primaryServer(@Nullable String primaryServer) {
             this.primaryServer = Output.ofNullable(primaryServer);
             return this;
         }
-
         public Builder secondaryServer(@Nullable Output<String> secondaryServer) {
             this.secondaryServer = secondaryServer;
             return this;
         }
-
         public Builder secondaryServer(@Nullable String secondaryServer) {
             this.secondaryServer = Output.ofNullable(secondaryServer);
             return this;
         }
-
         public Builder ssl(@Nullable Output<Either<String,SslEnum>> ssl) {
             this.ssl = ssl;
             return this;
         }
-
         public Builder ssl(@Nullable Either<String,SslEnum> ssl) {
             this.ssl = Output.ofNullable(ssl);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public IdentitySourceArgs build() {
+        }        public IdentitySourceArgs build() {
             return new IdentitySourceArgs(alias, baseGroupDN, baseUserDN, domain, name, password, primaryServer, secondaryServer, ssl, username);
         }
     }

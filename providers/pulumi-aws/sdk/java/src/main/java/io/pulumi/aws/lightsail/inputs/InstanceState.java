@@ -342,182 +342,149 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
-
         public Builder blueprintId(@Nullable String blueprintId) {
             this.blueprintId = Output.ofNullable(blueprintId);
             return this;
         }
-
         public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
-
         public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
-
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
-
         public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = Output.ofNullable(cpuCount);
             return this;
         }
-
         public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
-
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
-
+        public Builder ipv6Addresses(String... ipv6Addresses) {
+            return ipv6Addresses(List.of(ipv6Addresses));
+        }
         public Builder isStaticIp(@Nullable Output<Boolean> isStaticIp) {
             this.isStaticIp = isStaticIp;
             return this;
         }
-
         public Builder isStaticIp(@Nullable Boolean isStaticIp) {
             this.isStaticIp = Output.ofNullable(isStaticIp);
             return this;
         }
-
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
-
         public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = Output.ofNullable(keyPairName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
         }
-
         public Builder ramSize(@Nullable Output<Double> ramSize) {
             this.ramSize = ramSize;
             return this;
         }
-
         public Builder ramSize(@Nullable Double ramSize) {
             this.ramSize = Output.ofNullable(ramSize);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = Output.ofNullable(userData);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(arn, availabilityZone, blueprintId, bundleId, cpuCount, createdAt, ipv6Address, ipv6Addresses, isStaticIp, keyPairName, name, privateIpAddress, publicIpAddress, ramSize, tags, tagsAll, userData, username);
         }
     }

@@ -272,142 +272,123 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
             this.checkerType = checkerType;
             return this;
         }
-
         public Builder checkerType(@Nullable UptimeCheckConfigCheckerType checkerType) {
             this.checkerType = Output.ofNullable(checkerType);
             return this;
         }
-
         public Builder contentMatchers(@Nullable Output<List<ContentMatcherArgs>> contentMatchers) {
             this.contentMatchers = contentMatchers;
             return this;
         }
-
         public Builder contentMatchers(@Nullable List<ContentMatcherArgs> contentMatchers) {
             this.contentMatchers = Output.ofNullable(contentMatchers);
             return this;
         }
-
+        public Builder contentMatchers(ContentMatcherArgs... contentMatchers) {
+            return contentMatchers(List.of(contentMatchers));
+        }
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder httpCheck(@Nullable Output<HttpCheckArgs> httpCheck) {
             this.httpCheck = httpCheck;
             return this;
         }
-
         public Builder httpCheck(@Nullable HttpCheckArgs httpCheck) {
             this.httpCheck = Output.ofNullable(httpCheck);
             return this;
         }
-
         public Builder internalCheckers(@Nullable Output<List<InternalCheckerArgs>> internalCheckers) {
             this.internalCheckers = internalCheckers;
             return this;
         }
-
         public Builder internalCheckers(@Nullable List<InternalCheckerArgs> internalCheckers) {
             this.internalCheckers = Output.ofNullable(internalCheckers);
             return this;
         }
-
+        public Builder internalCheckers(InternalCheckerArgs... internalCheckers) {
+            return internalCheckers(List.of(internalCheckers));
+        }
         public Builder isInternal(@Nullable Output<Boolean> isInternal) {
             this.isInternal = isInternal;
             return this;
         }
-
         public Builder isInternal(@Nullable Boolean isInternal) {
             this.isInternal = Output.ofNullable(isInternal);
             return this;
         }
-
         public Builder monitoredResource(@Nullable Output<MonitoredResourceArgs> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
-
         public Builder monitoredResource(@Nullable MonitoredResourceArgs monitoredResource) {
             this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<ResourceGroupArgs> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable ResourceGroupArgs resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder selectedRegions(@Nullable Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions) {
             this.selectedRegions = selectedRegions;
             return this;
         }
-
         public Builder selectedRegions(@Nullable List<UptimeCheckConfigSelectedRegionsItem> selectedRegions) {
             this.selectedRegions = Output.ofNullable(selectedRegions);
             return this;
         }
-
+        public Builder selectedRegions(UptimeCheckConfigSelectedRegionsItem... selectedRegions) {
+            return selectedRegions(List.of(selectedRegions));
+        }
         public Builder tcpCheck(@Nullable Output<TcpCheckArgs> tcpCheck) {
             this.tcpCheck = tcpCheck;
             return this;
         }
-
         public Builder tcpCheck(@Nullable TcpCheckArgs tcpCheck) {
             this.tcpCheck = Output.ofNullable(tcpCheck);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public UptimeCheckConfigArgs build() {
+        }        public UptimeCheckConfigArgs build() {
             return new UptimeCheckConfigArgs(checkerType, contentMatchers, displayName, httpCheck, internalCheckers, isInternal, monitoredResource, name, period, project, resourceGroup, selectedRegions, tcpCheck, timeout);
         }
     }

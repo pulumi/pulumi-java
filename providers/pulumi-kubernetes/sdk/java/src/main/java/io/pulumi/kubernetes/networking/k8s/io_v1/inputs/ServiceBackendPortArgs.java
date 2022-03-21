@@ -79,22 +79,18 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
-
         public Builder number(@Nullable Integer number) {
             this.number = Output.ofNullable(number);
             return this;
-        }
-        public ServiceBackendPortArgs build() {
+        }        public ServiceBackendPortArgs build() {
             return new ServiceBackendPortArgs(name, number);
         }
     }

@@ -72,12 +72,10 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
             this.loadTestName = Objects.requireNonNull(loadTestName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLoadTestArgs build() {
+        }        public GetLoadTestArgs build() {
             return new GetLoadTestArgs(loadTestName, resourceGroupName);
         }
     }

@@ -51,8 +51,7 @@ public final class NsgReferenceResponse {
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public NsgReferenceResponse build() {
+        }        public NsgReferenceResponse build() {
             return new NsgReferenceResponse(sourceArmResourceId);
         }
     }

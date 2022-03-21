@@ -96,17 +96,14 @@ public final class AzureDataLakeStoreLocationResponse extends io.pulumi.resource
             this.fileName = fileName;
             return this;
         }
-
         public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AzureDataLakeStoreLocationResponse build() {
+        }        public AzureDataLakeStoreLocationResponse build() {
             return new AzureDataLakeStoreLocationResponse(fileName, folderPath, type);
         }
     }

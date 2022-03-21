@@ -105,22 +105,18 @@ public final class AccountEncryptionResponse {
             this.identity = identity;
             return this;
         }
-
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public AccountEncryptionResponse build() {
+        }        public AccountEncryptionResponse build() {
             return new AccountEncryptionResponse(identity, keyVaultProperties, status, type);
         }
     }

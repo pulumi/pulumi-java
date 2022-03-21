@@ -156,37 +156,36 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
             this.currentPage = Objects.requireNonNull(currentPage);
             return this;
         }
-
         public Builder diagnosticInfo(Map<String,String> diagnosticInfo) {
             this.diagnosticInfo = Objects.requireNonNull(diagnosticInfo);
             return this;
         }
-
         public Builder differences(List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences) {
             this.differences = Objects.requireNonNull(differences);
             return this;
         }
-
+        public Builder differences(GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse... differences) {
+            return differences(List.of(differences));
+        }
         public Builder sessionParameters(Map<String,String> sessionParameters) {
             this.sessionParameters = Objects.requireNonNull(sessionParameters);
             return this;
         }
-
         public Builder status(GoogleRpcStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder textResponses(List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses) {
             this.textResponses = Objects.requireNonNull(textResponses);
             return this;
         }
-
+        public Builder textResponses(GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse... textResponses) {
+            return textResponses(List.of(textResponses));
+        }
         public Builder triggeredIntent(GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
             this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse build() {
+        }        public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(currentPage, diagnosticInfo, differences, sessionParameters, status, textResponses, triggeredIntent);
         }
     }

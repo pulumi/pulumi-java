@@ -72,12 +72,10 @@ public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
-        }
-        public GetTestBaseAccountArgs build() {
+        }        public GetTestBaseAccountArgs build() {
             return new GetTestBaseAccountArgs(resourceGroupName, testBaseAccountName);
         }
     }

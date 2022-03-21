@@ -54,8 +54,7 @@ public final class GetReplicationSetArgs extends io.pulumi.resources.InvokeArgs 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetReplicationSetArgs build() {
+        }        public GetReplicationSetArgs build() {
             return new GetReplicationSetArgs(arn);
         }
     }

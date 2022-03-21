@@ -79,22 +79,18 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
             this.asn = asn;
             return this;
         }
-
         public Builder asn(@Nullable Double asn) {
             this.asn = Output.ofNullable(asn);
             return this;
         }
-
         public Builder bgpPeeringAddress(@Nullable Output<String> bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
-
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = Output.ofNullable(bgpPeeringAddress);
             return this;
-        }
-        public VpnLinkBgpSettingsArgs build() {
+        }        public VpnLinkBgpSettingsArgs build() {
             return new VpnLinkBgpSettingsArgs(asn, bgpPeeringAddress);
         }
     }

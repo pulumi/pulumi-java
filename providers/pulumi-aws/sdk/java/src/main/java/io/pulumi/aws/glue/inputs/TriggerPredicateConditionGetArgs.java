@@ -122,52 +122,42 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
             this.crawlState = crawlState;
             return this;
         }
-
         public Builder crawlState(@Nullable String crawlState) {
             this.crawlState = Output.ofNullable(crawlState);
             return this;
         }
-
         public Builder crawlerName(@Nullable Output<String> crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
-
         public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = Output.ofNullable(crawlerName);
             return this;
         }
-
         public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = Output.ofNullable(jobName);
             return this;
         }
-
         public Builder logicalOperator(@Nullable Output<String> logicalOperator) {
             this.logicalOperator = logicalOperator;
             return this;
         }
-
         public Builder logicalOperator(@Nullable String logicalOperator) {
             this.logicalOperator = Output.ofNullable(logicalOperator);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public TriggerPredicateConditionGetArgs build() {
+        }        public TriggerPredicateConditionGetArgs build() {
             return new TriggerPredicateConditionGetArgs(crawlState, crawlerName, jobName, logicalOperator, state);
         }
     }

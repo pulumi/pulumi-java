@@ -150,62 +150,50 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder match(Output<SecurityPolicyRuleMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(SecurityPolicyRuleMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
             this.rateLimitOptions = rateLimitOptions;
             return this;
         }
-
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
             this.rateLimitOptions = Output.ofNullable(rateLimitOptions);
             return this;
-        }
-        public SecurityPolicyRuleArgs build() {
+        }        public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, match, preview, priority, rateLimitOptions);
         }
     }

@@ -172,82 +172,69 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.conditionalMembership = conditionalMembership;
             return this;
         }
-
         public Builder conditionalMembership(@Nullable String conditionalMembership) {
             this.conditionalMembership = Output.ofNullable(conditionalMembership);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder groupMembers(@Nullable Output<List<GroupMembersItemArgs>> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
-
         public Builder groupMembers(@Nullable List<GroupMembersItemArgs> groupMembers) {
             this.groupMembers = Output.ofNullable(groupMembers);
             return this;
         }
-
+        public Builder groupMembers(GroupMembersItemArgs... groupMembers) {
+            return groupMembers(List.of(groupMembers));
+        }
         public Builder memberType(@Nullable Output<String> memberType) {
             this.memberType = memberType;
             return this;
         }
-
         public Builder memberType(@Nullable String memberType) {
             this.memberType = Output.ofNullable(memberType);
             return this;
         }
-
         public Builder networkGroupName(@Nullable Output<String> networkGroupName) {
             this.networkGroupName = networkGroupName;
             return this;
         }
-
         public Builder networkGroupName(@Nullable String networkGroupName) {
             this.networkGroupName = Output.ofNullable(networkGroupName);
             return this;
         }
-
         public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
-
         public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public NetworkGroupArgs build() {
+        }        public NetworkGroupArgs build() {
             return new NetworkGroupArgs(conditionalMembership, description, displayName, groupMembers, memberType, networkGroupName, networkManagerName, resourceGroupName);
         }
     }

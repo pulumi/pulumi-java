@@ -146,62 +146,50 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.basic = basic;
             return this;
         }
-
         public Builder basic(@Nullable AccessLevelBasicArgs basic) {
             this.basic = Output.ofNullable(basic);
             return this;
         }
-
         public Builder custom(@Nullable Output<AccessLevelCustomArgs> custom) {
             this.custom = custom;
             return this;
         }
-
         public Builder custom(@Nullable AccessLevelCustomArgs custom) {
             this.custom = Output.ofNullable(custom);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public AccessLevelArgs build() {
+        }        public AccessLevelArgs build() {
             return new AccessLevelArgs(basic, custom, description, name, parent, title);
         }
     }

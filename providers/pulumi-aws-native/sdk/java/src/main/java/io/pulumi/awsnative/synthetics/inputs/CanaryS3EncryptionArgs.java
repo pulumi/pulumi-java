@@ -74,22 +74,18 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
             this.encryptionMode = encryptionMode;
             return this;
         }
-
         public Builder encryptionMode(@Nullable String encryptionMode) {
             this.encryptionMode = Output.ofNullable(encryptionMode);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
-        }
-        public CanaryS3EncryptionArgs build() {
+        }        public CanaryS3EncryptionArgs build() {
             return new CanaryS3EncryptionArgs(encryptionMode, kmsKeyArn);
         }
     }

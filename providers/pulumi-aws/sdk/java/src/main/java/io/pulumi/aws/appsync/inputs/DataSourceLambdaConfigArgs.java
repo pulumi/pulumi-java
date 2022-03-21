@@ -56,12 +56,10 @@ public final class DataSourceLambdaConfigArgs extends io.pulumi.resources.Resour
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
-
         public Builder functionArn(String functionArn) {
             this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
-        }
-        public DataSourceLambdaConfigArgs build() {
+        }        public DataSourceLambdaConfigArgs build() {
             return new DataSourceLambdaConfigArgs(functionArn);
         }
     }

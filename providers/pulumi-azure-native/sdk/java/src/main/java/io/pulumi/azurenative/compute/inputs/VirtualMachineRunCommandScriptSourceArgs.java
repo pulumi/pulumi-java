@@ -94,32 +94,26 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
             this.commandId = commandId;
             return this;
         }
-
         public Builder commandId(@Nullable String commandId) {
             this.commandId = Output.ofNullable(commandId);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
         }
-
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = Output.ofNullable(scriptUri);
             return this;
-        }
-        public VirtualMachineRunCommandScriptSourceArgs build() {
+        }        public VirtualMachineRunCommandScriptSourceArgs build() {
             return new VirtualMachineRunCommandScriptSourceArgs(commandId, script, scriptUri);
         }
     }

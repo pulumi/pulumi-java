@@ -71,12 +71,10 @@ public final class NodePoolAutoscaling {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
-
         public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
-        }
-        public NodePoolAutoscaling build() {
+        }        public NodePoolAutoscaling build() {
             return new NodePoolAutoscaling(maxNodeCount, minNodeCount);
         }
     }

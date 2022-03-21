@@ -96,32 +96,26 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
-
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
-
         public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
             this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
             return this;
-        }
-        public GooglePrivacyDlpV2CryptoDeterministicConfigArgs build() {
+        }        public GooglePrivacyDlpV2CryptoDeterministicConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoDeterministicConfigArgs(context, cryptoKey, surrogateInfoType);
         }
     }

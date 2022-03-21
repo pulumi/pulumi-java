@@ -219,102 +219,88 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
-
         public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<CxIntentParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<CxIntentParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(CxIntentParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder trainingPhrases(@Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
-
         public Builder trainingPhrases(@Nullable List<CxIntentTrainingPhraseGetArgs> trainingPhrases) {
             this.trainingPhrases = Output.ofNullable(trainingPhrases);
             return this;
         }
-        public CxIntentState build() {
+        public Builder trainingPhrases(CxIntentTrainingPhraseGetArgs... trainingPhrases) {
+            return trainingPhrases(List.of(trainingPhrases));
+        }        public CxIntentState build() {
             return new CxIntentState(description, displayName, isFallback, labels, languageCode, name, parameters, parent, priority, trainingPhrases);
         }
     }

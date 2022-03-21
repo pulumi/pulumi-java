@@ -136,32 +136,26 @@ public final class HttpTargetResponse {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
-
         public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder oauthToken(OAuthTokenResponse oauthToken) {
             this.oauthToken = Objects.requireNonNull(oauthToken);
             return this;
         }
-
         public Builder oidcToken(OidcTokenResponse oidcToken) {
             this.oidcToken = Objects.requireNonNull(oidcToken);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public HttpTargetResponse build() {
+        }        public HttpTargetResponse build() {
             return new HttpTargetResponse(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }
     }

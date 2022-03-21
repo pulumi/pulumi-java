@@ -117,27 +117,22 @@ public final class GetViewResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetViewResult build() {
+        }        public GetViewResult build() {
             return new GetViewResult(createTime, displayName, name, updateTime, value);
         }
     }

@@ -76,12 +76,10 @@ public final class SearchParameterResponse extends io.pulumi.resources.InvokeArg
             this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
             return this;
         }
-
         public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
-        }
-        public SearchParameterResponse build() {
+        }        public SearchParameterResponse build() {
             return new SearchParameterResponse(canonicalUrl, parameter);
         }
     }

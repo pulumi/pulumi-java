@@ -53,8 +53,7 @@ public final class LabPlanNetworkProfileResponse {
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
-        }
-        public LabPlanNetworkProfileResponse build() {
+        }        public LabPlanNetworkProfileResponse build() {
             return new LabPlanNetworkProfileResponse(subnetId);
         }
     }

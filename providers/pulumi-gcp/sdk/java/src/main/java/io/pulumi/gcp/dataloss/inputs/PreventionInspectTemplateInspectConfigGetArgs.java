@@ -185,82 +185,78 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
             this.contentOptions = contentOptions;
             return this;
         }
-
         public Builder contentOptions(@Nullable List<String> contentOptions) {
             this.contentOptions = Output.ofNullable(contentOptions);
             return this;
         }
-
+        public Builder contentOptions(String... contentOptions) {
+            return contentOptions(List.of(contentOptions));
+        }
         public Builder customInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
-
         public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs> customInfoTypes) {
             this.customInfoTypes = Output.ofNullable(customInfoTypes);
             return this;
         }
-
+        public Builder customInfoTypes(PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs... customInfoTypes) {
+            return customInfoTypes(List.of(customInfoTypes));
+        }
         public Builder excludeInfoTypes(@Nullable Output<Boolean> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
-
         public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
-
         public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = Output.ofNullable(includeQuote);
             return this;
         }
-
         public Builder infoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
-
         public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs> infoTypes) {
             this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(PreventionInspectTemplateInspectConfigInfoTypeGetArgs... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder limits(@Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits) {
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimitsGetArgs limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder minLikelihood(@Nullable Output<String> minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
-
         public Builder minLikelihood(@Nullable String minLikelihood) {
             this.minLikelihood = Output.ofNullable(minLikelihood);
             return this;
         }
-
         public Builder ruleSets(@Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSetGetArgs> ruleSets) {
             this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
-        public PreventionInspectTemplateInspectConfigGetArgs build() {
+        public Builder ruleSets(PreventionInspectTemplateInspectConfigRuleSetGetArgs... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }        public PreventionInspectTemplateInspectConfigGetArgs build() {
             return new PreventionInspectTemplateInspectConfigGetArgs(contentOptions, customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSets);
         }
     }

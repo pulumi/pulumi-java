@@ -70,12 +70,10 @@ public final class RatioPartResponse {
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
-        }
-        public RatioPartResponse build() {
+        }        public RatioPartResponse build() {
             return new RatioPartResponse(aggregation, filter);
         }
     }

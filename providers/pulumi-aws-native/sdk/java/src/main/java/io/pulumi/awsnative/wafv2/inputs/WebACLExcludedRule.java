@@ -54,8 +54,7 @@ public final class WebACLExcludedRule extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebACLExcludedRule build() {
+        }        public WebACLExcludedRule build() {
             return new WebACLExcludedRule(name);
         }
     }

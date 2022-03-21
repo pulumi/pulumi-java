@@ -316,87 +316,73 @@ public final class ListWebAppBackupStatusSecretsResult {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder blobName(String blobName) {
             this.blobName = Objects.requireNonNull(blobName);
             return this;
         }
-
         public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder databases(List<DatabaseBackupSettingResponse> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
-
+        public Builder databases(DatabaseBackupSettingResponse... databases) {
+            return databases(List.of(databases));
+        }
         public Builder finishedTimeStamp(String finishedTimeStamp) {
             this.finishedTimeStamp = Objects.requireNonNull(finishedTimeStamp);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder lastRestoreTimeStamp(String lastRestoreTimeStamp) {
             this.lastRestoreTimeStamp = Objects.requireNonNull(lastRestoreTimeStamp);
             return this;
         }
-
         public Builder log(String log) {
             this.log = Objects.requireNonNull(log);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scheduled(Boolean scheduled) {
             this.scheduled = Objects.requireNonNull(scheduled);
             return this;
         }
-
         public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder storageAccountUrl(String storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder websiteSizeInBytes(Double websiteSizeInBytes) {
             this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
             return this;
-        }
-        public ListWebAppBackupStatusSecretsResult build() {
+        }        public ListWebAppBackupStatusSecretsResult build() {
             return new ListWebAppBackupStatusSecretsResult(backupId, blobName, correlationId, created, databases, finishedTimeStamp, id, kind, lastRestoreTimeStamp, log, name, scheduled, sizeInBytes, status, storageAccountUrl, type, websiteSizeInBytes);
         }
     }

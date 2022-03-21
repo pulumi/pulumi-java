@@ -143,62 +143,53 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
             this.application = application;
             return this;
         }
-
         public Builder application(@Nullable String application) {
             this.application = Output.ofNullable(application);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder settings(@Nullable List<ConfigurationTemplateSettingGetArgs> settings) {
             this.settings = Output.ofNullable(settings);
             return this;
         }
-
+        public Builder settings(ConfigurationTemplateSettingGetArgs... settings) {
+            return settings(List.of(settings));
+        }
         public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
-
         public Builder solutionStackName(@Nullable String solutionStackName) {
             this.solutionStackName = Output.ofNullable(solutionStackName);
             return this;
-        }
-        public ConfigurationTemplateState build() {
+        }        public ConfigurationTemplateState build() {
             return new ConfigurationTemplateState(application, description, environmentId, name, settings, solutionStackName);
         }
     }

@@ -204,102 +204,82 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
             this.importance = importance;
             return this;
         }
-
         public Builder importance(@Nullable String importance) {
             this.importance = Output.ofNullable(importance);
             return this;
         }
-
         public Builder maxResourcePercent(Output<Integer> maxResourcePercent) {
             this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent);
             return this;
         }
-
         public Builder maxResourcePercent(Integer maxResourcePercent) {
             this.maxResourcePercent = Output.of(Objects.requireNonNull(maxResourcePercent));
             return this;
         }
-
         public Builder maxResourcePercentPerRequest(@Nullable Output<Double> maxResourcePercentPerRequest) {
             this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
-
         public Builder maxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
             this.maxResourcePercentPerRequest = Output.ofNullable(maxResourcePercentPerRequest);
             return this;
         }
-
         public Builder minResourcePercent(Output<Integer> minResourcePercent) {
             this.minResourcePercent = Objects.requireNonNull(minResourcePercent);
             return this;
         }
-
         public Builder minResourcePercent(Integer minResourcePercent) {
             this.minResourcePercent = Output.of(Objects.requireNonNull(minResourcePercent));
             return this;
         }
-
         public Builder minResourcePercentPerRequest(Output<Double> minResourcePercentPerRequest) {
             this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest);
             return this;
         }
-
         public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
             this.minResourcePercentPerRequest = Output.of(Objects.requireNonNull(minResourcePercentPerRequest));
             return this;
         }
-
         public Builder queryExecutionTimeout(@Nullable Output<Integer> queryExecutionTimeout) {
             this.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
-
         public Builder queryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
             this.queryExecutionTimeout = Output.ofNullable(queryExecutionTimeout);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
-
         public Builder workloadGroupName(@Nullable Output<String> workloadGroupName) {
             this.workloadGroupName = workloadGroupName;
             return this;
         }
-
         public Builder workloadGroupName(@Nullable String workloadGroupName) {
             this.workloadGroupName = Output.ofNullable(workloadGroupName);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public SqlPoolWorkloadGroupArgs build() {
+        }        public SqlPoolWorkloadGroupArgs build() {
             return new SqlPoolWorkloadGroupArgs(importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, queryExecutionTimeout, resourceGroupName, sqlPoolName, workloadGroupName, workspaceName);
         }
     }

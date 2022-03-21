@@ -79,22 +79,18 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends io.pu
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder endpointType(String endpointType) {
             this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public ServiceBusQueueEventSubscriptionDestinationArgs build() {
+        }        public ServiceBusQueueEventSubscriptionDestinationArgs build() {
             return new ServiceBusQueueEventSubscriptionDestinationArgs(endpointType, resourceId);
         }
     }

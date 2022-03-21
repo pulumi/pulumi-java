@@ -168,47 +168,38 @@ public final class GetCertificateResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder certificateType(String certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
-
         public Builder customerOverride(Boolean customerOverride) {
             this.customerOverride = Objects.requireNonNull(customerOverride);
             return this;
         }
-
         public Builder customerOverrideValidTill(String customerOverrideValidTill) {
             this.customerOverrideValidTill = Objects.requireNonNull(customerOverrideValidTill);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder latestValidTill(@Nullable Boolean latestValidTill) {
             this.latestValidTill = latestValidTill;
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder validFrom(String validFrom) {
             this.validFrom = Objects.requireNonNull(validFrom);
             return this;
         }
-
         public Builder validTill(String validTill) {
             this.validTill = Objects.requireNonNull(validTill);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(arn, certificateType, customerOverride, customerOverrideValidTill, id, latestValidTill, thumbprint, validFrom, validTill);
         }
     }

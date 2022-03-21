@@ -189,92 +189,74 @@ public final class SqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resou
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
         public Builder resource(Output<SqlUserDefinedFunctionResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(SqlUserDefinedFunctionResourceArgs resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userDefinedFunctionName(@Nullable Output<String> userDefinedFunctionName) {
             this.userDefinedFunctionName = userDefinedFunctionName;
             return this;
         }
-
         public Builder userDefinedFunctionName(@Nullable String userDefinedFunctionName) {
             this.userDefinedFunctionName = Output.ofNullable(userDefinedFunctionName);
             return this;
-        }
-        public SqlResourceSqlUserDefinedFunctionArgs build() {
+        }        public SqlResourceSqlUserDefinedFunctionArgs build() {
             return new SqlResourceSqlUserDefinedFunctionArgs(accountName, containerName, databaseName, location, options, resource, resourceGroupName, tags, userDefinedFunctionName);
         }
     }

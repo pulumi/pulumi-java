@@ -55,12 +55,10 @@ public final class RegexPatternSetTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public RegexPatternSetTag build() {
+        }        public RegexPatternSetTag build() {
             return new RegexPatternSetTag(key, value);
         }
     }

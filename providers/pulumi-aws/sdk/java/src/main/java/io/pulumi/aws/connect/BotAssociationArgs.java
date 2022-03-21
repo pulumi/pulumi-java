@@ -74,22 +74,18 @@ public final class BotAssociationArgs extends io.pulumi.resources.ResourceArgs {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder lexBot(Output<BotAssociationLexBotArgs> lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
         }
-
         public Builder lexBot(BotAssociationLexBotArgs lexBot) {
             this.lexBot = Output.of(Objects.requireNonNull(lexBot));
             return this;
-        }
-        public BotAssociationArgs build() {
+        }        public BotAssociationArgs build() {
             return new BotAssociationArgs(instanceId, lexBot);
         }
     }

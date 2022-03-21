@@ -109,42 +109,34 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             this.canarySize = canarySize;
             return this;
         }
-
         public Builder canarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs canarySize) {
             this.canarySize = Output.ofNullable(canarySize);
             return this;
         }
-
         public Builder linearStepSize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
             this.linearStepSize = linearStepSize;
             return this;
         }
-
         public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs linearStepSize) {
             this.linearStepSize = Output.ofNullable(linearStepSize);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder waitIntervalInSeconds(Output<Integer> waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Objects.requireNonNull(waitIntervalInSeconds);
             return this;
         }
-
         public Builder waitIntervalInSeconds(Integer waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Output.of(Objects.requireNonNull(waitIntervalInSeconds));
             return this;
-        }
-        public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs build() {
+        }        public EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs build() {
             return new EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs(canarySize, linearStepSize, type, waitIntervalInSeconds);
         }
     }

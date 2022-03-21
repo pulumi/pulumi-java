@@ -206,52 +206,48 @@ public final class GetVideoAnalyzerResult {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
-
         public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(EndpointResponse... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable VideoAnalyzerIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder storageAccounts(List<StorageAccountResponse> storageAccounts) {
             this.storageAccounts = Objects.requireNonNull(storageAccounts);
             return this;
         }
-
+        public Builder storageAccounts(StorageAccountResponse... storageAccounts) {
+            return storageAccounts(List.of(storageAccounts));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVideoAnalyzerResult build() {
+        }        public GetVideoAnalyzerResult build() {
             return new GetVideoAnalyzerResult(encryption, endpoints, id, identity, location, name, storageAccounts, systemData, tags, type);
         }
     }

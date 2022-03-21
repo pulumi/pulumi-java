@@ -115,32 +115,26 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule extends io.p
             this.cidr = cidr;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
-
         public Builder portRange(@Nullable NetworkInsightsAnalysisPortRange portRange) {
             this.portRange = portRange;
             return this;
         }
-
         public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
-        }
-        public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
+        }        public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
             return new NetworkInsightsAnalysisAnalysisSecurityGroupRule(cidr, direction, portRange, prefixListId, protocol, securityGroupId);
         }
     }

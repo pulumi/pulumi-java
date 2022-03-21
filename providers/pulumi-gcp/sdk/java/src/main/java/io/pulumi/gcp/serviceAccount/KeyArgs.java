@@ -145,62 +145,50 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keepers = keepers;
             return this;
         }
-
         public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Output.ofNullable(keepers);
             return this;
         }
-
         public Builder keyAlgorithm(@Nullable Output<String> keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
-
         public Builder keyAlgorithm(@Nullable String keyAlgorithm) {
             this.keyAlgorithm = Output.ofNullable(keyAlgorithm);
             return this;
         }
-
         public Builder privateKeyType(@Nullable Output<String> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
-
         public Builder privateKeyType(@Nullable String privateKeyType) {
             this.privateKeyType = Output.ofNullable(privateKeyType);
             return this;
         }
-
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
-
         public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = Output.ofNullable(publicKeyData);
             return this;
         }
-
         public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
         }
-
         public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = Output.ofNullable(publicKeyType);
             return this;
         }
-
         public Builder serviceAccountId(Output<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
-
         public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Output.of(Objects.requireNonNull(serviceAccountId));
             return this;
-        }
-        public KeyArgs build() {
+        }        public KeyArgs build() {
             return new KeyArgs(keepers, keyAlgorithm, privateKeyType, publicKeyData, publicKeyType, serviceAccountId);
         }
     }

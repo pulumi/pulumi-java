@@ -89,17 +89,14 @@ public final class LogSettingsResponse {
             this.category = category;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
-        }
-        public LogSettingsResponse build() {
+        }        public LogSettingsResponse build() {
             return new LogSettingsResponse(category, enabled, retentionPolicy);
         }
     }

@@ -53,8 +53,7 @@ public final class WebAclRuleActionAllow {
         public Builder customRequestHandling(@Nullable WebAclRuleActionAllowCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebAclRuleActionAllow build() {
+        }        public WebAclRuleActionAllow build() {
             return new WebAclRuleActionAllow(customRequestHandling);
         }
     }

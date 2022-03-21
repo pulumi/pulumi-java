@@ -238,72 +238,58 @@ public final class GetInstanceResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder autoResolveBestVoicesEnabled(Boolean autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = Objects.requireNonNull(autoResolveBestVoicesEnabled);
             return this;
         }
-
         public Builder contactFlowLogsEnabled(Boolean contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = Objects.requireNonNull(contactFlowLogsEnabled);
             return this;
         }
-
         public Builder contactLensEnabled(Boolean contactLensEnabled) {
             this.contactLensEnabled = Objects.requireNonNull(contactLensEnabled);
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder earlyMediaEnabled(Boolean earlyMediaEnabled) {
             this.earlyMediaEnabled = Objects.requireNonNull(earlyMediaEnabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identityManagementType(String identityManagementType) {
             this.identityManagementType = Objects.requireNonNull(identityManagementType);
             return this;
         }
-
         public Builder inboundCallsEnabled(Boolean inboundCallsEnabled) {
             this.inboundCallsEnabled = Objects.requireNonNull(inboundCallsEnabled);
             return this;
         }
-
         public Builder instanceAlias(String instanceAlias) {
             this.instanceAlias = Objects.requireNonNull(instanceAlias);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder outboundCallsEnabled(Boolean outboundCallsEnabled) {
             this.outboundCallsEnabled = Objects.requireNonNull(outboundCallsEnabled);
             return this;
         }
-
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(arn, autoResolveBestVoicesEnabled, contactFlowLogsEnabled, contactLensEnabled, createdTime, earlyMediaEnabled, id, identityManagementType, inboundCallsEnabled, instanceAlias, instanceId, outboundCallsEnabled, serviceRole, status);
         }
     }

@@ -234,62 +234,59 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder includePath(@Nullable Boolean includePath) {
             this.includePath = includePath;
             return this;
         }
-
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder pathRules(@Nullable List<SubResourceResponse> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
+        public Builder pathRules(SubResourceResponse... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder redirectType(@Nullable String redirectType) {
             this.redirectType = redirectType;
             return this;
         }
-
         public Builder requestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
-
+        public Builder requestRoutingRules(SubResourceResponse... requestRoutingRules) {
+            return requestRoutingRules(List.of(requestRoutingRules));
+        }
         public Builder targetListener(@Nullable SubResourceResponse targetListener) {
             this.targetListener = targetListener;
             return this;
         }
-
         public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder urlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
-        public ApplicationGatewayRedirectConfigurationResponse build() {
+        public Builder urlPathMaps(SubResourceResponse... urlPathMaps) {
+            return urlPathMaps(List.of(urlPathMaps));
+        }        public ApplicationGatewayRedirectConfigurationResponse build() {
             return new ApplicationGatewayRedirectConfigurationResponse(etag, id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, type, urlPathMaps);
         }
     }

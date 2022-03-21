@@ -64,12 +64,10 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
-        }
-        public GetJobArgs build() {
+        }        public GetJobArgs build() {
             return new GetJobArgs(jobId, namespaceId);
         }
     }

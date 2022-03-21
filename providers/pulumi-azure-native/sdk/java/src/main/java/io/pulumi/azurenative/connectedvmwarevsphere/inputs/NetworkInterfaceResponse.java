@@ -226,57 +226,49 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.deviceKey = deviceKey;
             return this;
         }
-
         public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder ipSettings(@Nullable NicIPSettingsResponse ipSettings) {
             this.ipSettings = ipSettings;
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder networkId(@Nullable String networkId) {
             this.networkId = networkId;
             return this;
         }
-
         public Builder networkMoName(String networkMoName) {
             this.networkMoName = Objects.requireNonNull(networkMoName);
             return this;
         }
-
         public Builder networkMoRefId(String networkMoRefId) {
             this.networkMoRefId = Objects.requireNonNull(networkMoRefId);
             return this;
         }
-
         public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder powerOnBoot(@Nullable String powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
-        }
-        public NetworkInterfaceResponse build() {
+        }        public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(deviceKey, ipAddresses, ipSettings, label, macAddress, name, networkId, networkMoName, networkMoRefId, nicType, powerOnBoot);
         }
     }

@@ -60,12 +60,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
-
         public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
             return this;
-        }
-        public KeyVaultPropertiesArgs build() {
+        }        public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyIdentifier);
         }
     }

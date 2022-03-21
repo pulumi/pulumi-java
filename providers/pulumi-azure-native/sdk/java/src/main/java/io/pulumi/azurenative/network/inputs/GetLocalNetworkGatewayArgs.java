@@ -72,12 +72,10 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
             this.localNetworkGatewayName = Objects.requireNonNull(localNetworkGatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLocalNetworkGatewayArgs build() {
+        }        public GetLocalNetworkGatewayArgs build() {
             return new GetLocalNetworkGatewayArgs(localNetworkGatewayName, resourceGroupName);
         }
     }

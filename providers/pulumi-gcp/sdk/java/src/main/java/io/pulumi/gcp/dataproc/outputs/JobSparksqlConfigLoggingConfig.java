@@ -44,8 +44,7 @@ public final class JobSparksqlConfigLoggingConfig {
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
-        }
-        public JobSparksqlConfigLoggingConfig build() {
+        }        public JobSparksqlConfigLoggingConfig build() {
             return new JobSparksqlConfigLoggingConfig(driverLogLevels);
         }
     }

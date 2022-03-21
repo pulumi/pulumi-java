@@ -321,87 +321,85 @@ public final class NetworkInterfaceIPConfigurationResponse {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
-
+        public Builder applicationGatewayBackendAddressPools(ApplicationGatewayBackendAddressPoolResponse... applicationGatewayBackendAddressPools) {
+            return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
+        }
         public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
-
+        public Builder applicationSecurityGroups(ApplicationSecurityGroupResponse... applicationSecurityGroups) {
+            return applicationSecurityGroups(List.of(applicationSecurityGroups));
+        }
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-
+        public Builder loadBalancerBackendAddressPools(BackendAddressPoolResponse... loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
+        }
         public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
-
+        public Builder loadBalancerInboundNatRules(InboundNatRuleResponse... loadBalancerInboundNatRules) {
+            return loadBalancerInboundNatRules(List.of(loadBalancerInboundNatRules));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateLinkConnectionProperties(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties) {
             this.privateLinkConnectionProperties = Objects.requireNonNull(privateLinkConnectionProperties);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
             this.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
-        public NetworkInterfaceIPConfigurationResponse build() {
+        public Builder virtualNetworkTaps(VirtualNetworkTapResponse... virtualNetworkTaps) {
+            return virtualNetworkTaps(List.of(virtualNetworkTaps));
+        }        public NetworkInterfaceIPConfigurationResponse build() {
             return new NetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, etag, id, loadBalancerBackendAddressPools, loadBalancerInboundNatRules, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, privateLinkConnectionProperties, provisioningState, publicIPAddress, subnet, type, virtualNetworkTaps);
         }
     }

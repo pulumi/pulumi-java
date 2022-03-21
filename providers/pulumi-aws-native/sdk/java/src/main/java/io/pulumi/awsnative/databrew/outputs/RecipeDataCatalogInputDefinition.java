@@ -96,22 +96,18 @@ public final class RecipeDataCatalogInputDefinition {
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tempDirectory(@Nullable RecipeS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
-        }
-        public RecipeDataCatalogInputDefinition build() {
+        }        public RecipeDataCatalogInputDefinition build() {
             return new RecipeDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
         }
     }

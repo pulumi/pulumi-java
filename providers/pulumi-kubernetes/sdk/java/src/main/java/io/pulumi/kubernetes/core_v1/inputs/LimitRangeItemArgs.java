@@ -148,62 +148,50 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable Map<String,String> $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder defaultRequest(@Nullable Output<Map<String,String>> defaultRequest) {
             this.defaultRequest = defaultRequest;
             return this;
         }
-
         public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
             this.defaultRequest = Output.ofNullable(defaultRequest);
             return this;
         }
-
         public Builder max(@Nullable Output<Map<String,String>> max) {
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Map<String,String> max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder maxLimitRequestRatio(@Nullable Output<Map<String,String>> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
-
         public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = Output.ofNullable(maxLimitRequestRatio);
             return this;
         }
-
         public Builder min(@Nullable Output<Map<String,String>> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Map<String,String> min) {
             this.min = Output.ofNullable(min);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public LimitRangeItemArgs build() {
+        }        public LimitRangeItemArgs build() {
             return new LimitRangeItemArgs($default, defaultRequest, max, maxLimitRequestRatio, min, type);
         }
     }

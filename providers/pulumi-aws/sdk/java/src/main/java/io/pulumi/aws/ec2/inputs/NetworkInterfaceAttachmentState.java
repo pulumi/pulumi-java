@@ -123,52 +123,42 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
             this.attachmentId = attachmentId;
             return this;
         }
-
         public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
-
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
-
         public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = Output.ofNullable(deviceIndex);
             return this;
         }
-
         public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public NetworkInterfaceAttachmentState build() {
+        }        public NetworkInterfaceAttachmentState build() {
             return new NetworkInterfaceAttachmentState(attachmentId, deviceIndex, instanceId, networkInterfaceId, status);
         }
     }

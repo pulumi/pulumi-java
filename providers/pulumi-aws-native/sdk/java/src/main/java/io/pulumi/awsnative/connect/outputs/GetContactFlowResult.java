@@ -154,37 +154,33 @@ public final class GetContactFlowResult {
             this.contactFlowArn = contactFlowArn;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder state(@Nullable ContactFlowState state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable List<ContactFlowTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetContactFlowResult build() {
+        public Builder tags(ContactFlowTag... tags) {
+            return tags(List.of(tags));
+        }        public GetContactFlowResult build() {
             return new GetContactFlowResult(contactFlowArn, content, description, instanceArn, name, state, tags);
         }
     }

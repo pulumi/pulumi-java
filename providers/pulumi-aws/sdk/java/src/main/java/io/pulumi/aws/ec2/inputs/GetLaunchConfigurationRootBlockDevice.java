@@ -138,32 +138,26 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
             this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
             return this;
         }
-
         public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
-
         public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
-
         public Builder throughput(Boolean throughput) {
             this.throughput = Objects.requireNonNull(throughput);
             return this;
         }
-
         public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
-
         public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
-        }
-        public GetLaunchConfigurationRootBlockDevice build() {
+        }        public GetLaunchConfigurationRootBlockDevice build() {
             return new GetLaunchConfigurationRootBlockDevice(deleteOnTermination, encrypted, iops, throughput, volumeSize, volumeType);
         }
     }

@@ -90,22 +90,18 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetBackupArgs build() {
+        }        public GetBackupArgs build() {
             return new GetBackupArgs(backupId, clusterId, instanceId, project);
         }
     }

@@ -110,42 +110,34 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
             this.groupConnectivity = groupConnectivity;
             return this;
         }
-
         public Builder groupConnectivity(@Nullable Either<String,GroupConnectivity> groupConnectivity) {
             this.groupConnectivity = Output.ofNullable(groupConnectivity);
             return this;
         }
-
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
-
         public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
             this.isGlobal = Output.ofNullable(isGlobal);
             return this;
         }
-
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }
-
         public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = Output.ofNullable(networkGroupId);
             return this;
         }
-
         public Builder useHubGateway(@Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
             this.useHubGateway = useHubGateway;
             return this;
         }
-
         public Builder useHubGateway(@Nullable Either<String,UseHubGateway> useHubGateway) {
             this.useHubGateway = Output.ofNullable(useHubGateway);
             return this;
-        }
-        public ConnectivityGroupItemArgs build() {
+        }        public ConnectivityGroupItemArgs build() {
             return new ConnectivityGroupItemArgs(groupConnectivity, isGlobal, networkGroupId, useHubGateway);
         }
     }

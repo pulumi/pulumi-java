@@ -123,27 +123,22 @@ public final class EnvironmentLoggingConfiguration {
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
-
         public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
-
         public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
-
         public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
-
         public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
             this.workerLogs = workerLogs;
             return this;
-        }
-        public EnvironmentLoggingConfiguration build() {
+        }        public EnvironmentLoggingConfiguration build() {
             return new EnvironmentLoggingConfiguration(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
         }
     }

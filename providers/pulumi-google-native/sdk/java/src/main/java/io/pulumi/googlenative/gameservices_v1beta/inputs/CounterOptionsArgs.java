@@ -96,32 +96,29 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.customFields = customFields;
             return this;
         }
-
         public Builder customFields(@Nullable List<CustomFieldArgs> customFields) {
             this.customFields = Output.ofNullable(customFields);
             return this;
         }
-
+        public Builder customFields(CustomFieldArgs... customFields) {
+            return customFields(List.of(customFields));
+        }
         public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable String metric) {
             this.metric = Output.ofNullable(metric);
             return this;
-        }
-        public CounterOptionsArgs build() {
+        }        public CounterOptionsArgs build() {
             return new CounterOptionsArgs(customFields, field, metric);
         }
     }

@@ -73,22 +73,21 @@ public final class WebACLSizeConstraintStatement {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public WebACLSizeConstraintStatement build() {
+        public Builder textTransformations(WebACLTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public WebACLSizeConstraintStatement build() {
             return new WebACLSizeConstraintStatement(comparisonOperator, fieldToMatch, size, textTransformations);
         }
     }

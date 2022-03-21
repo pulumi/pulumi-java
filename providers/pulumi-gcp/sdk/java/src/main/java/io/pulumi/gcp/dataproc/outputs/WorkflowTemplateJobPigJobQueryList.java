@@ -53,7 +53,9 @@ public final class WorkflowTemplateJobPigJobQueryList {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-        public WorkflowTemplateJobPigJobQueryList build() {
+        public Builder queries(String... queries) {
+            return queries(List.of(queries));
+        }        public WorkflowTemplateJobPigJobQueryList build() {
             return new WorkflowTemplateJobPigJobQueryList(queries);
         }
     }

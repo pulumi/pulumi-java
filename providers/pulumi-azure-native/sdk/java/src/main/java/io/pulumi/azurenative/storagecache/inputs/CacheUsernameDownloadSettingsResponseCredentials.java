@@ -78,12 +78,10 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends io.p
             this.bindDn = bindDn;
             return this;
         }
-
         public Builder bindPassword(@Nullable String bindPassword) {
             this.bindPassword = bindPassword;
             return this;
-        }
-        public CacheUsernameDownloadSettingsResponseCredentials build() {
+        }        public CacheUsernameDownloadSettingsResponseCredentials build() {
             return new CacheUsernameDownloadSettingsResponseCredentials(bindDn, bindPassword);
         }
     }

@@ -151,62 +151,56 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder aggregation(@Nullable Map<String,ReportConfigAggregationArgs> aggregation) {
             this.aggregation = Output.ofNullable(aggregation);
             return this;
         }
-
         public Builder configuration(@Nullable Output<ReportConfigDatasetConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable ReportConfigDatasetConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder filter(@Nullable Output<ReportConfigFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable ReportConfigFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder granularity(@Nullable Output<Either<String,ReportGranularityType>> granularity) {
             this.granularity = granularity;
             return this;
         }
-
         public Builder granularity(@Nullable Either<String,ReportGranularityType> granularity) {
             this.granularity = Output.ofNullable(granularity);
             return this;
         }
-
         public Builder grouping(@Nullable Output<List<ReportConfigGroupingArgs>> grouping) {
             this.grouping = grouping;
             return this;
         }
-
         public Builder grouping(@Nullable List<ReportConfigGroupingArgs> grouping) {
             this.grouping = Output.ofNullable(grouping);
             return this;
         }
-
+        public Builder grouping(ReportConfigGroupingArgs... grouping) {
+            return grouping(List.of(grouping));
+        }
         public Builder sorting(@Nullable Output<List<ReportConfigSortingArgs>> sorting) {
             this.sorting = sorting;
             return this;
         }
-
         public Builder sorting(@Nullable List<ReportConfigSortingArgs> sorting) {
             this.sorting = Output.ofNullable(sorting);
             return this;
         }
-        public ReportConfigDatasetArgs build() {
+        public Builder sorting(ReportConfigSortingArgs... sorting) {
+            return sorting(List.of(sorting));
+        }        public ReportConfigDatasetArgs build() {
             return new ReportConfigDatasetArgs(aggregation, configuration, filter, granularity, grouping, sorting);
         }
     }

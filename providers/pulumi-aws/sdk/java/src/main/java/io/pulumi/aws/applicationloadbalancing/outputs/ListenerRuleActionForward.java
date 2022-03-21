@@ -73,12 +73,13 @@ public final class ListenerRuleActionForward {
             this.stickiness = stickiness;
             return this;
         }
-
         public Builder targetGroups(List<ListenerRuleActionForwardTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-        public ListenerRuleActionForward build() {
+        public Builder targetGroups(ListenerRuleActionForwardTargetGroup... targetGroups) {
+            return targetGroups(List.of(targetGroups));
+        }        public ListenerRuleActionForward build() {
             return new ListenerRuleActionForward(stickiness, targetGroups);
         }
     }

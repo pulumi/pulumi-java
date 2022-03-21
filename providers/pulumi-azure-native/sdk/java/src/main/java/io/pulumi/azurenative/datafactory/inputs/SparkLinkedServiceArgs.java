@@ -362,192 +362,157 @@ public final class SparkLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
-
         public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = Output.ofNullable(allowHostNameCNMismatch);
             return this;
         }
-
         public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
-
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = Output.ofNullable(allowSelfSignedServerCert);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder authenticationType(Output<Either<String,SparkAuthenticationType>> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(Either<String,SparkAuthenticationType> authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
-
         public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = Output.ofNullable(enableSsl);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder host(Output<Object> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(Object host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder httpPath(@Nullable Output<Object> httpPath) {
             this.httpPath = httpPath;
             return this;
         }
-
         public Builder httpPath(@Nullable Object httpPath) {
             this.httpPath = Output.ofNullable(httpPath);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder port(Output<Object> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Object port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder serverType(@Nullable Output<Either<String,SparkServerType>> serverType) {
             this.serverType = serverType;
             return this;
         }
-
         public Builder serverType(@Nullable Either<String,SparkServerType> serverType) {
             this.serverType = Output.ofNullable(serverType);
             return this;
         }
-
         public Builder thriftTransportProtocol(@Nullable Output<Either<String,SparkThriftTransportProtocol>> thriftTransportProtocol) {
             this.thriftTransportProtocol = thriftTransportProtocol;
             return this;
         }
-
         public Builder thriftTransportProtocol(@Nullable Either<String,SparkThriftTransportProtocol> thriftTransportProtocol) {
             this.thriftTransportProtocol = Output.ofNullable(thriftTransportProtocol);
             return this;
         }
-
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
-
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = Output.ofNullable(trustedCertPath);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
-
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
             return this;
         }
-
         public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public SparkLinkedServiceArgs build() {
+        }        public SparkLinkedServiceArgs build() {
             return new SparkLinkedServiceArgs(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, thriftTransportProtocol, trustedCertPath, type, useSystemTrustStore, username);
         }
     }

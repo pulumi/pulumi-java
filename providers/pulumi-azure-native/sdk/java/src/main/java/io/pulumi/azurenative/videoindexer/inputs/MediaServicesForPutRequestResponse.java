@@ -78,12 +78,10 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }
-        public MediaServicesForPutRequestResponse build() {
+        }        public MediaServicesForPutRequestResponse build() {
             return new MediaServicesForPutRequestResponse(resourceId, userAssignedIdentity);
         }
     }

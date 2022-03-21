@@ -78,22 +78,18 @@ public final class SloRequestBasedSliDistributionCutRangeGetArgs extends io.pulu
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Double max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Double> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public SloRequestBasedSliDistributionCutRangeGetArgs build() {
+        }        public SloRequestBasedSliDistributionCutRangeGetArgs build() {
             return new SloRequestBasedSliDistributionCutRangeGetArgs(max, min);
         }
     }

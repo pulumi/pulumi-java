@@ -93,17 +93,14 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
             this.end = Objects.requireNonNull(end);
             return this;
         }
-
         public Builder fee(GoogleTypeMoneyResponse fee) {
             this.fee = Objects.requireNonNull(fee);
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
-        }
-        public GoogleCloudApigeeV1RateRangeResponse build() {
+        }        public GoogleCloudApigeeV1RateRangeResponse build() {
             return new GoogleCloudApigeeV1RateRangeResponse(end, fee, start);
         }
     }

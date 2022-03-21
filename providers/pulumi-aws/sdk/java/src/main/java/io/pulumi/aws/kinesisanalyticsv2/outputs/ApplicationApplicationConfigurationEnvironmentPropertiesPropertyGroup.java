@@ -70,12 +70,10 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
             this.propertyGroupId = Objects.requireNonNull(propertyGroupId);
             return this;
         }
-
         public Builder propertyMap(Map<String,String> propertyMap) {
             this.propertyMap = Objects.requireNonNull(propertyMap);
             return this;
-        }
-        public ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup build() {
+        }        public ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup build() {
             return new ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup(propertyGroupId, propertyMap);
         }
     }

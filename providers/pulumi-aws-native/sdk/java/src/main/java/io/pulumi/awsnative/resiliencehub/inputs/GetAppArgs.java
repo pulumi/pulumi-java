@@ -54,8 +54,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
         public Builder appArn(String appArn) {
             this.appArn = Objects.requireNonNull(appArn);
             return this;
-        }
-        public GetAppArgs build() {
+        }        public GetAppArgs build() {
             return new GetAppArgs(appArn);
         }
     }

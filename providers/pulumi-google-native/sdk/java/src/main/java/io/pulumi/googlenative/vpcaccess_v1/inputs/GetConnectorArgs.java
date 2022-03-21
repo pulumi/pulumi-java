@@ -78,17 +78,14 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.connectorId = Objects.requireNonNull(connectorId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConnectorArgs build() {
+        }        public GetConnectorArgs build() {
             return new GetConnectorArgs(connectorId, location, project);
         }
     }

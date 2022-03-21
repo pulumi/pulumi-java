@@ -71,12 +71,10 @@ public final class ServicePrincipalProfileResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
-        }
-        public ServicePrincipalProfileResponse build() {
+        }        public ServicePrincipalProfileResponse build() {
             return new ServicePrincipalProfileResponse(clientId, clientSecret);
         }
     }

@@ -87,17 +87,14 @@ public final class ChannelHlsIngestIngestEndpoint {
             this.password = password;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ChannelHlsIngestIngestEndpoint build() {
+        }        public ChannelHlsIngestIngestEndpoint build() {
             return new ChannelHlsIngestIngestEndpoint(password, url, username);
         }
     }

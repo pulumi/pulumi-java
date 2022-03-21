@@ -78,22 +78,18 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
-
         public Builder adminUsername(String adminUsername) {
             this.adminUsername = Output.of(Objects.requireNonNull(adminUsername));
             return this;
         }
-
         public Builder ssh(Output<ContainerServiceSshConfigurationArgs> ssh) {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }
-
         public Builder ssh(ContainerServiceSshConfigurationArgs ssh) {
             this.ssh = Output.of(Objects.requireNonNull(ssh));
             return this;
-        }
-        public ContainerServiceLinuxProfileArgs build() {
+        }        public ContainerServiceLinuxProfileArgs build() {
             return new ContainerServiceLinuxProfileArgs(adminUsername, ssh);
         }
     }

@@ -116,62 +116,53 @@ public final class TagTemplateIamBindingArgs extends io.pulumi.resources.Resourc
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable TagTemplateIamBindingConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
-
         public Builder members(List<String> members) {
             this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
-
+        public Builder members(String... members) {
+            return members(List.of(members));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
-
         public Builder tagTemplate(Output<String> tagTemplate) {
             this.tagTemplate = Objects.requireNonNull(tagTemplate);
             return this;
         }
-
         public Builder tagTemplate(String tagTemplate) {
             this.tagTemplate = Output.of(Objects.requireNonNull(tagTemplate));
             return this;
-        }
-        public TagTemplateIamBindingArgs build() {
+        }        public TagTemplateIamBindingArgs build() {
             return new TagTemplateIamBindingArgs(condition, members, project, region, role, tagTemplate);
         }
     }

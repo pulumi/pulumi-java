@@ -259,132 +259,106 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
             this.additionalColumns = additionalColumns;
             return this;
         }
-
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Output.ofNullable(additionalColumns);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder partitionOption(@Nullable Output<Object> partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
-
         public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = Output.ofNullable(partitionOption);
             return this;
         }
-
         public Builder partitionSettings(@Nullable Output<SqlPartitionSettingsArgs> partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
-
         public Builder partitionSettings(@Nullable SqlPartitionSettingsArgs partitionSettings) {
             this.partitionSettings = Output.ofNullable(partitionSettings);
             return this;
         }
-
         public Builder produceAdditionalTypes(@Nullable Output<Object> produceAdditionalTypes) {
             this.produceAdditionalTypes = produceAdditionalTypes;
             return this;
         }
-
         public Builder produceAdditionalTypes(@Nullable Object produceAdditionalTypes) {
             this.produceAdditionalTypes = Output.ofNullable(produceAdditionalTypes);
             return this;
         }
-
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
-
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = Output.ofNullable(queryTimeout);
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
-
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
-
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
-
         public Builder sqlReaderQuery(@Nullable Output<Object> sqlReaderQuery) {
             this.sqlReaderQuery = sqlReaderQuery;
             return this;
         }
-
         public Builder sqlReaderQuery(@Nullable Object sqlReaderQuery) {
             this.sqlReaderQuery = Output.ofNullable(sqlReaderQuery);
             return this;
         }
-
         public Builder sqlReaderStoredProcedureName(@Nullable Output<Object> sqlReaderStoredProcedureName) {
             this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
             return this;
         }
-
         public Builder sqlReaderStoredProcedureName(@Nullable Object sqlReaderStoredProcedureName) {
             this.sqlReaderStoredProcedureName = Output.ofNullable(sqlReaderStoredProcedureName);
             return this;
         }
-
         public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
-
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
             this.storedProcedureParameters = Output.ofNullable(storedProcedureParameters);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AmazonRdsForSqlServerSourceArgs build() {
+        }        public AmazonRdsForSqlServerSourceArgs build() {
             return new AmazonRdsForSqlServerSourceArgs(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, produceAdditionalTypes, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }
     }

@@ -123,52 +123,45 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
-
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
-
         public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder endpointName(String endpointName) {
             this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
-
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
-
         public Builder resourceOwner(@Nullable String resourceOwner) {
             this.resourceOwner = Output.ofNullable(resourceOwner);
             return this;
         }
-
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
-
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
-
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Output.of(Objects.requireNonNull(vpcSecurityGroupIds));
             return this;
         }
-        public EndpointAccessArgs build() {
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }        public EndpointAccessArgs build() {
             return new EndpointAccessArgs(clusterIdentifier, endpointName, resourceOwner, subnetGroupName, vpcSecurityGroupIds);
         }
     }

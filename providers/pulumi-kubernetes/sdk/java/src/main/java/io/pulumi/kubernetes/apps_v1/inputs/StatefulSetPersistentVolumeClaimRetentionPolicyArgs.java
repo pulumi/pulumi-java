@@ -78,22 +78,18 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
             this.whenDeleted = whenDeleted;
             return this;
         }
-
         public Builder whenDeleted(@Nullable String whenDeleted) {
             this.whenDeleted = Output.ofNullable(whenDeleted);
             return this;
         }
-
         public Builder whenScaled(@Nullable Output<String> whenScaled) {
             this.whenScaled = whenScaled;
             return this;
         }
-
         public Builder whenScaled(@Nullable String whenScaled) {
             this.whenScaled = Output.ofNullable(whenScaled);
             return this;
-        }
-        public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {
+        }        public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {
             return new StatefulSetPersistentVolumeClaimRetentionPolicyArgs(whenDeleted, whenScaled);
         }
     }

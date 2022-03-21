@@ -56,12 +56,10 @@ public final class BucketAccelerateConfigurationArgs extends io.pulumi.resources
             this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
             return this;
         }
-
         public Builder accelerationStatus(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
             this.accelerationStatus = Output.of(Objects.requireNonNull(accelerationStatus));
             return this;
-        }
-        public BucketAccelerateConfigurationArgs build() {
+        }        public BucketAccelerateConfigurationArgs build() {
             return new BucketAccelerateConfigurationArgs(accelerationStatus);
         }
     }

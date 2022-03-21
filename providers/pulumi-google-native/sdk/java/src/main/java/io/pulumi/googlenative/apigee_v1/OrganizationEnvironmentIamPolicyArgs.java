@@ -150,72 +150,64 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
             this.auditConfigs = auditConfigs;
             return this;
         }
-
         public Builder auditConfigs(@Nullable List<GoogleIamV1AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
-
+        public Builder auditConfigs(GoogleIamV1AuditConfigArgs... auditConfigs) {
+            return auditConfigs(List.of(auditConfigs));
+        }
         public Builder bindings(@Nullable Output<List<GoogleIamV1BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
-
         public Builder bindings(@Nullable List<GoogleIamV1BindingArgs> bindings) {
             this.bindings = Output.ofNullable(bindings);
             return this;
         }
-
+        public Builder bindings(GoogleIamV1BindingArgs... bindings) {
+            return bindings(List.of(bindings));
+        }
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
-
         public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public OrganizationEnvironmentIamPolicyArgs build() {
+        }        public OrganizationEnvironmentIamPolicyArgs build() {
             return new OrganizationEnvironmentIamPolicyArgs(auditConfigs, bindings, environmentId, etag, organizationId, updateMask, version);
         }
     }

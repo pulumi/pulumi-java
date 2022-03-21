@@ -88,17 +88,14 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder webhookName(String webhookName) {
             this.webhookName = Objects.requireNonNull(webhookName);
             return this;
-        }
-        public GetWebhookArgs build() {
+        }        public GetWebhookArgs build() {
             return new GetWebhookArgs(automationAccountName, resourceGroupName, webhookName);
         }
     }

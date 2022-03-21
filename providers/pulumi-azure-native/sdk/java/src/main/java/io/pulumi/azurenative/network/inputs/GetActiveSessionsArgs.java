@@ -72,12 +72,10 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
             this.bastionHostName = Objects.requireNonNull(bastionHostName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetActiveSessionsArgs build() {
+        }        public GetActiveSessionsArgs build() {
             return new GetActiveSessionsArgs(bastionHostName, resourceGroupName);
         }
     }

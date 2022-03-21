@@ -79,27 +79,22 @@ public final class ListWorkspaceKeysResult {
             this.appInsightsInstrumentationKey = Objects.requireNonNull(appInsightsInstrumentationKey);
             return this;
         }
-
         public Builder containerRegistryCredentials(RegistryListCredentialsResultResponse containerRegistryCredentials) {
             this.containerRegistryCredentials = Objects.requireNonNull(containerRegistryCredentials);
             return this;
         }
-
         public Builder notebookAccessKeys(ListNotebookKeysResultResponse notebookAccessKeys) {
             this.notebookAccessKeys = Objects.requireNonNull(notebookAccessKeys);
             return this;
         }
-
         public Builder userStorageKey(String userStorageKey) {
             this.userStorageKey = Objects.requireNonNull(userStorageKey);
             return this;
         }
-
         public Builder userStorageResourceId(String userStorageResourceId) {
             this.userStorageResourceId = Objects.requireNonNull(userStorageResourceId);
             return this;
-        }
-        public ListWorkspaceKeysResult build() {
+        }        public ListWorkspaceKeysResult build() {
             return new ListWorkspaceKeysResult(appInsightsInstrumentationKey, containerRegistryCredentials, notebookAccessKeys, userStorageKey, userStorageResourceId);
         }
     }

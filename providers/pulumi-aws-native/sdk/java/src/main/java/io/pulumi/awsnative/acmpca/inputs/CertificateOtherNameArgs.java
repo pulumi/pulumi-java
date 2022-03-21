@@ -69,22 +69,18 @@ public final class CertificateOtherNameArgs extends io.pulumi.resources.Resource
             this.typeId = Objects.requireNonNull(typeId);
             return this;
         }
-
         public Builder typeId(String typeId) {
             this.typeId = Output.of(Objects.requireNonNull(typeId));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public CertificateOtherNameArgs build() {
+        }        public CertificateOtherNameArgs build() {
             return new CertificateOtherNameArgs(typeId, value);
         }
     }

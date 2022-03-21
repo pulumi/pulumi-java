@@ -75,22 +75,21 @@ public final class FirewallDeniedItemArgs extends io.pulumi.resources.ResourceAr
             this.ipProtocol = ipProtocol;
             return this;
         }
-
         public Builder ipProtocol(@Nullable String ipProtocol) {
             this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<String> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public FirewallDeniedItemArgs build() {
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }        public FirewallDeniedItemArgs build() {
             return new FirewallDeniedItemArgs(ipProtocol, ports);
         }
     }

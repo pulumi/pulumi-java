@@ -78,22 +78,18 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
             this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec);
             return this;
         }
-
         public Builder drainTimeoutInSec(Integer drainTimeoutInSec) {
             this.drainTimeoutInSec = Output.of(Objects.requireNonNull(drainTimeoutInSec));
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ApplicationGatewayConnectionDrainingArgs build() {
+        }        public ApplicationGatewayConnectionDrainingArgs build() {
             return new ApplicationGatewayConnectionDrainingArgs(drainTimeoutInSec, enabled);
         }
     }

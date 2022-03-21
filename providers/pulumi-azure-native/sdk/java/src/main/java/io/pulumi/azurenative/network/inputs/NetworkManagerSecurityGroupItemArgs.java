@@ -61,12 +61,10 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
             this.networkGroupId = networkGroupId;
             return this;
         }
-
         public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = Output.ofNullable(networkGroupId);
             return this;
-        }
-        public NetworkManagerSecurityGroupItemArgs build() {
+        }        public NetworkManagerSecurityGroupItemArgs build() {
             return new NetworkManagerSecurityGroupItemArgs(networkGroupId);
         }
     }

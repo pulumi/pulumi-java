@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
             this.phoneNumber = phoneNumber;
             return this;
         }
-
         public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = Output.ofNullable(phoneNumber);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs(phoneNumber);
         }
     }

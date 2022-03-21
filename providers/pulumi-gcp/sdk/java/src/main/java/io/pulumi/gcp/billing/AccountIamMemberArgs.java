@@ -91,42 +91,34 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
-
         public Builder condition(@Nullable Output<AccountIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable AccountIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public AccountIamMemberArgs build() {
+        }        public AccountIamMemberArgs build() {
             return new AccountIamMemberArgs(billingAccountId, condition, member, role);
         }
     }

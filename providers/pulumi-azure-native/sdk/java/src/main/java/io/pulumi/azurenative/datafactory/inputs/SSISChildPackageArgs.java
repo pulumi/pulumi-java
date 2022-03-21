@@ -111,42 +111,34 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
             this.packageContent = Objects.requireNonNull(packageContent);
             return this;
         }
-
         public Builder packageContent(Object packageContent) {
             this.packageContent = Output.of(Objects.requireNonNull(packageContent));
             return this;
         }
-
         public Builder packageLastModifiedDate(@Nullable Output<String> packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
-
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = Output.ofNullable(packageLastModifiedDate);
             return this;
         }
-
         public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = Output.ofNullable(packageName);
             return this;
         }
-
         public Builder packagePath(Output<Object> packagePath) {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }
-
         public Builder packagePath(Object packagePath) {
             this.packagePath = Output.of(Objects.requireNonNull(packagePath));
             return this;
-        }
-        public SSISChildPackageArgs build() {
+        }        public SSISChildPackageArgs build() {
             return new SSISChildPackageArgs(packageContent, packageLastModifiedDate, packageName, packagePath);
         }
     }

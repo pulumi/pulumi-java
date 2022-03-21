@@ -69,12 +69,10 @@ public final class BusinessIdentityResponse {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BusinessIdentityResponse build() {
+        }        public BusinessIdentityResponse build() {
             return new BusinessIdentityResponse(qualifier, value);
         }
     }

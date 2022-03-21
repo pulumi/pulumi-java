@@ -150,37 +150,30 @@ public final class GetApiResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder managedService(String managedService) {
             this.managedService = Objects.requireNonNull(managedService);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetApiResult build() {
+        }        public GetApiResult build() {
             return new GetApiResult(createTime, displayName, labels, managedService, name, state, updateTime);
         }
     }

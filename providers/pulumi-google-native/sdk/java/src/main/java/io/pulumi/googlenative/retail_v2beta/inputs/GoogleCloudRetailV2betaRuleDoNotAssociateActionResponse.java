@@ -93,17 +93,23 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
             this.doNotAssociateTerms = Objects.requireNonNull(doNotAssociateTerms);
             return this;
         }
-
+        public Builder doNotAssociateTerms(String... doNotAssociateTerms) {
+            return doNotAssociateTerms(List.of(doNotAssociateTerms));
+        }
         public Builder queryTerms(List<String> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-
+        public Builder queryTerms(String... queryTerms) {
+            return queryTerms(List.of(queryTerms));
+        }
         public Builder terms(List<String> terms) {
             this.terms = Objects.requireNonNull(terms);
             return this;
         }
-        public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse build() {
+        public Builder terms(String... terms) {
+            return terms(List.of(terms));
+        }        public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse build() {
             return new GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(doNotAssociateTerms, queryTerms, terms);
         }
     }

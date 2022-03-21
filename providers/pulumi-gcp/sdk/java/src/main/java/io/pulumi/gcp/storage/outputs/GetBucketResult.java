@@ -215,102 +215,103 @@ public final class GetBucketResult {
             this.cors = Objects.requireNonNull(cors);
             return this;
         }
-
+        public Builder cors(GetBucketCor... cors) {
+            return cors(List.of(cors));
+        }
         public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
             return this;
         }
-
         public Builder encryptions(List<GetBucketEncryption> encryptions) {
             this.encryptions = Objects.requireNonNull(encryptions);
             return this;
         }
-
+        public Builder encryptions(GetBucketEncryption... encryptions) {
+            return encryptions(List.of(encryptions));
+        }
         public Builder forceDestroy(Boolean forceDestroy) {
             this.forceDestroy = Objects.requireNonNull(forceDestroy);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lifecycleRules(List<GetBucketLifecycleRule> lifecycleRules) {
             this.lifecycleRules = Objects.requireNonNull(lifecycleRules);
             return this;
         }
-
+        public Builder lifecycleRules(GetBucketLifecycleRule... lifecycleRules) {
+            return lifecycleRules(List.of(lifecycleRules));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder loggings(List<GetBucketLogging> loggings) {
             this.loggings = Objects.requireNonNull(loggings);
             return this;
         }
-
+        public Builder loggings(GetBucketLogging... loggings) {
+            return loggings(List.of(loggings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder publicAccessPrevention(String publicAccessPrevention) {
             this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
             return this;
         }
-
         public Builder requesterPays(Boolean requesterPays) {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }
-
         public Builder retentionPolicies(List<GetBucketRetentionPolicy> retentionPolicies) {
             this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
             return this;
         }
-
+        public Builder retentionPolicies(GetBucketRetentionPolicy... retentionPolicies) {
+            return retentionPolicies(List.of(retentionPolicies));
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder uniformBucketLevelAccess(Boolean uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder versionings(List<GetBucketVersioning> versionings) {
             this.versionings = Objects.requireNonNull(versionings);
             return this;
         }
-
+        public Builder versionings(GetBucketVersioning... versionings) {
+            return versionings(List.of(versionings));
+        }
         public Builder websites(List<GetBucketWebsite> websites) {
             this.websites = Objects.requireNonNull(websites);
             return this;
         }
-        public GetBucketResult build() {
+        public Builder websites(GetBucketWebsite... websites) {
+            return websites(List.of(websites));
+        }        public GetBucketResult build() {
             return new GetBucketResult(cors, defaultEventBasedHold, encryptions, forceDestroy, id, labels, lifecycleRules, location, loggings, name, project, publicAccessPrevention, requesterPays, retentionPolicies, selfLink, storageClass, uniformBucketLevelAccess, url, versionings, websites);
         }
     }

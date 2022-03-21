@@ -92,32 +92,26 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
-
         public Builder appImageConfigName(String appImageConfigName) {
             this.appImageConfigName = Output.of(Objects.requireNonNull(appImageConfigName));
             return this;
         }
-
         public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
-
         public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = Output.ofNullable(kernelGatewayImageConfig);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AppImageConfigArgs build() {
+        }        public AppImageConfigArgs build() {
             return new AppImageConfigArgs(appImageConfigName, kernelGatewayImageConfig, tags);
         }
     }

@@ -225,112 +225,93 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
-
         public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = Output.ofNullable(allowedUnsafeSysctls);
             return this;
         }
-
+        public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
+            return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
+        }
         public Builder containerLogMaxFiles(@Nullable Output<Integer> containerLogMaxFiles) {
             this.containerLogMaxFiles = containerLogMaxFiles;
             return this;
         }
-
         public Builder containerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
             this.containerLogMaxFiles = Output.ofNullable(containerLogMaxFiles);
             return this;
         }
-
         public Builder containerLogMaxSizeMB(@Nullable Output<Integer> containerLogMaxSizeMB) {
             this.containerLogMaxSizeMB = containerLogMaxSizeMB;
             return this;
         }
-
         public Builder containerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
             this.containerLogMaxSizeMB = Output.ofNullable(containerLogMaxSizeMB);
             return this;
         }
-
         public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
-
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = Output.ofNullable(cpuCfsQuota);
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
-
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Output.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
-
         public Builder cpuManagerPolicy(@Nullable Output<String> cpuManagerPolicy) {
             this.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
-
         public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
             this.cpuManagerPolicy = Output.ofNullable(cpuManagerPolicy);
             return this;
         }
-
         public Builder failSwapOn(@Nullable Output<Boolean> failSwapOn) {
             this.failSwapOn = failSwapOn;
             return this;
         }
-
         public Builder failSwapOn(@Nullable Boolean failSwapOn) {
             this.failSwapOn = Output.ofNullable(failSwapOn);
             return this;
         }
-
         public Builder imageGcHighThreshold(@Nullable Output<Integer> imageGcHighThreshold) {
             this.imageGcHighThreshold = imageGcHighThreshold;
             return this;
         }
-
         public Builder imageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
             this.imageGcHighThreshold = Output.ofNullable(imageGcHighThreshold);
             return this;
         }
-
         public Builder imageGcLowThreshold(@Nullable Output<Integer> imageGcLowThreshold) {
             this.imageGcLowThreshold = imageGcLowThreshold;
             return this;
         }
-
         public Builder imageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
             this.imageGcLowThreshold = Output.ofNullable(imageGcLowThreshold);
             return this;
         }
-
         public Builder podMaxPids(@Nullable Output<Integer> podMaxPids) {
             this.podMaxPids = podMaxPids;
             return this;
         }
-
         public Builder podMaxPids(@Nullable Integer podMaxPids) {
             this.podMaxPids = Output.ofNullable(podMaxPids);
             return this;
         }
-
         public Builder topologyManagerPolicy(@Nullable Output<String> topologyManagerPolicy) {
             this.topologyManagerPolicy = topologyManagerPolicy;
             return this;
         }
-
         public Builder topologyManagerPolicy(@Nullable String topologyManagerPolicy) {
             this.topologyManagerPolicy = Output.ofNullable(topologyManagerPolicy);
             return this;
-        }
-        public KubeletConfigArgs build() {
+        }        public KubeletConfigArgs build() {
             return new KubeletConfigArgs(allowedUnsafeSysctls, containerLogMaxFiles, containerLogMaxSizeMB, cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, failSwapOn, imageGcHighThreshold, imageGcLowThreshold, podMaxPids, topologyManagerPolicy);
         }
     }

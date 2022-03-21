@@ -343,97 +343,78 @@ public final class GetExportConfigurationResult {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder destinationAccountId(String destinationAccountId) {
             this.destinationAccountId = Objects.requireNonNull(destinationAccountId);
             return this;
         }
-
         public Builder destinationStorageLocationId(String destinationStorageLocationId) {
             this.destinationStorageLocationId = Objects.requireNonNull(destinationStorageLocationId);
             return this;
         }
-
         public Builder destinationStorageSubscriptionId(String destinationStorageSubscriptionId) {
             this.destinationStorageSubscriptionId = Objects.requireNonNull(destinationStorageSubscriptionId);
             return this;
         }
-
         public Builder destinationType(String destinationType) {
             this.destinationType = Objects.requireNonNull(destinationType);
             return this;
         }
-
         public Builder exportId(String exportId) {
             this.exportId = Objects.requireNonNull(exportId);
             return this;
         }
-
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = Objects.requireNonNull(exportStatus);
             return this;
         }
-
         public Builder instrumentationKey(String instrumentationKey) {
             this.instrumentationKey = Objects.requireNonNull(instrumentationKey);
             return this;
         }
-
         public Builder isUserEnabled(String isUserEnabled) {
             this.isUserEnabled = Objects.requireNonNull(isUserEnabled);
             return this;
         }
-
         public Builder lastGapTime(String lastGapTime) {
             this.lastGapTime = Objects.requireNonNull(lastGapTime);
             return this;
         }
-
         public Builder lastSuccessTime(String lastSuccessTime) {
             this.lastSuccessTime = Objects.requireNonNull(lastSuccessTime);
             return this;
         }
-
         public Builder lastUserUpdate(String lastUserUpdate) {
             this.lastUserUpdate = Objects.requireNonNull(lastUserUpdate);
             return this;
         }
-
         public Builder notificationQueueEnabled(@Nullable String notificationQueueEnabled) {
             this.notificationQueueEnabled = notificationQueueEnabled;
             return this;
         }
-
         public Builder permanentErrorReason(String permanentErrorReason) {
             this.permanentErrorReason = Objects.requireNonNull(permanentErrorReason);
             return this;
         }
-
         public Builder recordTypes(@Nullable String recordTypes) {
             this.recordTypes = recordTypes;
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder storageName(String storageName) {
             this.storageName = Objects.requireNonNull(storageName);
             return this;
         }
-
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
-        }
-        public GetExportConfigurationResult build() {
+        }        public GetExportConfigurationResult build() {
             return new GetExportConfigurationResult(applicationName, containerName, destinationAccountId, destinationStorageLocationId, destinationStorageSubscriptionId, destinationType, exportId, exportStatus, instrumentationKey, isUserEnabled, lastGapTime, lastSuccessTime, lastUserUpdate, notificationQueueEnabled, permanentErrorReason, recordTypes, resourceGroup, storageName, subscriptionId);
         }
     }

@@ -250,67 +250,57 @@ public final class GetFuotaTaskResult {
             this.arn = arn;
             return this;
         }
-
         public Builder associateMulticastGroup(@Nullable String associateMulticastGroup) {
             this.associateMulticastGroup = associateMulticastGroup;
             return this;
         }
-
         public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder disassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
             this.disassociateMulticastGroup = disassociateMulticastGroup;
             return this;
         }
-
         public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
-
         public Builder firmwareUpdateImage(@Nullable String firmwareUpdateImage) {
             this.firmwareUpdateImage = firmwareUpdateImage;
             return this;
         }
-
         public Builder firmwareUpdateRole(@Nullable String firmwareUpdateRole) {
             this.firmwareUpdateRole = firmwareUpdateRole;
             return this;
         }
-
         public Builder fuotaTaskStatus(@Nullable String fuotaTaskStatus) {
             this.fuotaTaskStatus = fuotaTaskStatus;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder loRaWAN(@Nullable FuotaTaskLoRaWAN loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<FuotaTaskTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFuotaTaskResult build() {
+        public Builder tags(FuotaTaskTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFuotaTaskResult build() {
             return new GetFuotaTaskResult(arn, associateMulticastGroup, associateWirelessDevice, description, disassociateMulticastGroup, disassociateWirelessDevice, firmwareUpdateImage, firmwareUpdateRole, fuotaTaskStatus, id, loRaWAN, name, tags);
         }
     }

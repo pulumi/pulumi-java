@@ -328,92 +328,74 @@ public final class GetConnectorMappingResult {
             this.connectorMappingName = Objects.requireNonNull(connectorMappingName);
             return this;
         }
-
         public Builder connectorName(String connectorName) {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
-
         public Builder connectorType(@Nullable String connectorType) {
             this.connectorType = connectorType;
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder dataFormatId(String dataFormatId) {
             this.dataFormatId = Objects.requireNonNull(dataFormatId);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
-
         public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder mappingProperties(ConnectorMappingPropertiesResponse mappingProperties) {
             this.mappingProperties = Objects.requireNonNull(mappingProperties);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nextRunTime(String nextRunTime) {
             this.nextRunTime = Objects.requireNonNull(nextRunTime);
             return this;
         }
-
         public Builder runId(String runId) {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetConnectorMappingResult build() {
+        }        public GetConnectorMappingResult build() {
             return new GetConnectorMappingResult(connectorMappingName, connectorName, connectorType, created, dataFormatId, description, displayName, entityType, entityTypeName, id, lastModified, mappingProperties, name, nextRunTime, runId, state, tenantId, type);
         }
     }

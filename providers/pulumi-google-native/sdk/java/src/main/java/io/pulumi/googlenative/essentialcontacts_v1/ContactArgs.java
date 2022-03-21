@@ -153,72 +153,61 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
-
         public Builder languageTag(@Nullable Output<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
-
         public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Output.ofNullable(languageTag);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-
         public Builder notificationCategorySubscriptions(@Nullable List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
             return this;
         }
-
+        public Builder notificationCategorySubscriptions(ContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder validateTime(@Nullable Output<String> validateTime) {
             this.validateTime = validateTime;
             return this;
         }
-
         public Builder validateTime(@Nullable String validateTime) {
             this.validateTime = Output.ofNullable(validateTime);
             return this;
         }
-
         public Builder validationState(@Nullable Output<ContactValidationState> validationState) {
             this.validationState = validationState;
             return this;
         }
-
         public Builder validationState(@Nullable ContactValidationState validationState) {
             this.validationState = Output.ofNullable(validationState);
             return this;
-        }
-        public ContactArgs build() {
+        }        public ContactArgs build() {
             return new ContactArgs(email, languageTag, name, notificationCategorySubscriptions, project, validateTime, validationState);
         }
     }

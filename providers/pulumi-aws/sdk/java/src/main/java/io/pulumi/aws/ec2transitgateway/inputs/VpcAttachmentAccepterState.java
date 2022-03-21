@@ -237,122 +237,101 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
-
         public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
             this.applianceModeSupport = Output.ofNullable(applianceModeSupport);
             return this;
         }
-
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
-
         public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = Output.ofNullable(dnsSupport);
             return this;
         }
-
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
         }
-
         public Builder ipv6Support(@Nullable String ipv6Support) {
             this.ipv6Support = Output.ofNullable(ipv6Support);
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = Output.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
-
         public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = Output.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }
-
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Output.ofNullable(transitGatewayId);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
-
         public Builder vpcOwnerId(@Nullable Output<String> vpcOwnerId) {
             this.vpcOwnerId = vpcOwnerId;
             return this;
         }
-
         public Builder vpcOwnerId(@Nullable String vpcOwnerId) {
             this.vpcOwnerId = Output.ofNullable(vpcOwnerId);
             return this;
-        }
-        public VpcAttachmentAccepterState build() {
+        }        public VpcAttachmentAccepterState build() {
             return new VpcAttachmentAccepterState(applianceModeSupport, dnsSupport, ipv6Support, subnetIds, tags, tagsAll, transitGatewayAttachmentId, transitGatewayDefaultRouteTableAssociation, transitGatewayDefaultRouteTablePropagation, transitGatewayId, vpcId, vpcOwnerId);
         }
     }

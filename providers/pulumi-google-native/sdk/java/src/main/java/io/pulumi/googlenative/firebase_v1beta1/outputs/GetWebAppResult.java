@@ -134,32 +134,29 @@ public final class GetWebAppResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appUrls(List<String> appUrls) {
             this.appUrls = Objects.requireNonNull(appUrls);
             return this;
         }
-
+        public Builder appUrls(String... appUrls) {
+            return appUrls(List.of(appUrls));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder webId(String webId) {
             this.webId = Objects.requireNonNull(webId);
             return this;
-        }
-        public GetWebAppResult build() {
+        }        public GetWebAppResult build() {
             return new GetWebAppResult(appId, appUrls, displayName, name, project, webId);
         }
     }

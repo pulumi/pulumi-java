@@ -208,52 +208,42 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PrivateLinkServiceIpConfigurationResponse build() {
+        }        public PrivateLinkServiceIpConfigurationResponse build() {
             return new PrivateLinkServiceIpConfigurationResponse(etag, id, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, provisioningState, subnet, type);
         }
     }

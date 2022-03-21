@@ -99,42 +99,34 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder config(GooglePrivacyDlpV2StoredInfoTypeConfigArgs config) {
             this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder storedInfoTypeId(@Nullable Output<String> storedInfoTypeId) {
             this.storedInfoTypeId = storedInfoTypeId;
             return this;
         }
-
         public Builder storedInfoTypeId(@Nullable String storedInfoTypeId) {
             this.storedInfoTypeId = Output.ofNullable(storedInfoTypeId);
             return this;
-        }
-        public StoredInfoTypeArgs build() {
+        }        public StoredInfoTypeArgs build() {
             return new StoredInfoTypeArgs(config, location, project, storedInfoTypeId);
         }
     }

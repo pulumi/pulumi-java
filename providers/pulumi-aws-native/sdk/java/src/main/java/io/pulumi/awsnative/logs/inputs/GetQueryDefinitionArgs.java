@@ -54,8 +54,7 @@ public final class GetQueryDefinitionArgs extends io.pulumi.resources.InvokeArgs
         public Builder queryDefinitionId(String queryDefinitionId) {
             this.queryDefinitionId = Objects.requireNonNull(queryDefinitionId);
             return this;
-        }
-        public GetQueryDefinitionArgs build() {
+        }        public GetQueryDefinitionArgs build() {
             return new GetQueryDefinitionArgs(queryDefinitionId);
         }
     }

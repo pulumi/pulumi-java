@@ -137,32 +137,26 @@ public final class EventHubOutputDataSourceResponse {
             this.eventHubName = eventHubName;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EventHubOutputDataSourceResponse build() {
+        }        public EventHubOutputDataSourceResponse build() {
             return new EventHubOutputDataSourceResponse(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }
     }

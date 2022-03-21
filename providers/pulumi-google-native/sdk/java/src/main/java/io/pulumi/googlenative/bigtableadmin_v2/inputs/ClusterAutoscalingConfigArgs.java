@@ -78,22 +78,18 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
             this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
             return this;
         }
-
         public Builder autoscalingLimits(AutoscalingLimitsArgs autoscalingLimits) {
             this.autoscalingLimits = Output.of(Objects.requireNonNull(autoscalingLimits));
             return this;
         }
-
         public Builder autoscalingTargets(Output<AutoscalingTargetsArgs> autoscalingTargets) {
             this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
             return this;
         }
-
         public Builder autoscalingTargets(AutoscalingTargetsArgs autoscalingTargets) {
             this.autoscalingTargets = Output.of(Objects.requireNonNull(autoscalingTargets));
             return this;
-        }
-        public ClusterAutoscalingConfigArgs build() {
+        }        public ClusterAutoscalingConfigArgs build() {
             return new ClusterAutoscalingConfigArgs(autoscalingLimits, autoscalingTargets);
         }
     }

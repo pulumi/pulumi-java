@@ -73,12 +73,10 @@ public final class TCPSocketAction {
             this.host = host;
             return this;
         }
-
         public Builder port(Either<Integer,String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public TCPSocketAction build() {
+        }        public TCPSocketAction build() {
             return new TCPSocketAction(host, port);
         }
     }

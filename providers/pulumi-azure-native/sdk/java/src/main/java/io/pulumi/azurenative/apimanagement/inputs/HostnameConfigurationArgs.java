@@ -194,92 +194,74 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable CertificateInformationArgs certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
-
         public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = Output.ofNullable(certificatePassword);
             return this;
         }
-
         public Builder defaultSslBinding(@Nullable Output<Boolean> defaultSslBinding) {
             this.defaultSslBinding = defaultSslBinding;
             return this;
         }
-
         public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
             this.defaultSslBinding = Output.ofNullable(defaultSslBinding);
             return this;
         }
-
         public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
-
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = Output.ofNullable(encodedCertificate);
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
-
         public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = Output.ofNullable(identityClientId);
             return this;
         }
-
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
-
         public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Output.ofNullable(keyVaultId);
             return this;
         }
-
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
-
         public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = Output.ofNullable(negotiateClientCertificate);
             return this;
         }
-
         public Builder type(Output<Either<String,HostnameType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,HostnameType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public HostnameConfigurationArgs build() {
+        }        public HostnameConfigurationArgs build() {
             return new HostnameConfigurationArgs(certificate, certificatePassword, defaultSslBinding, encodedCertificate, hostName, identityClientId, keyVaultId, negotiateClientCertificate, type);
         }
     }

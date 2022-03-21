@@ -51,8 +51,7 @@ public final class GooglePrivacyDlpV2FieldIdResponse {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GooglePrivacyDlpV2FieldIdResponse build() {
+        }        public GooglePrivacyDlpV2FieldIdResponse build() {
             return new GooglePrivacyDlpV2FieldIdResponse(name);
         }
     }

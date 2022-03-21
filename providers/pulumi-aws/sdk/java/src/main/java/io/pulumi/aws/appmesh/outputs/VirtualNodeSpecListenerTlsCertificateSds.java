@@ -51,8 +51,7 @@ public final class VirtualNodeSpecListenerTlsCertificateSds {
         public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
-        }
-        public VirtualNodeSpecListenerTlsCertificateSds build() {
+        }        public VirtualNodeSpecListenerTlsCertificateSds build() {
             return new VirtualNodeSpecListenerTlsCertificateSds(secretName);
         }
     }

@@ -88,17 +88,14 @@ public final class ListNamespaceKeysArgs extends io.pulumi.resources.InvokeArgs 
             this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListNamespaceKeysArgs build() {
+        }        public ListNamespaceKeysArgs build() {
             return new ListNamespaceKeysArgs(authorizationRuleName, namespaceName, resourceGroupName);
         }
     }

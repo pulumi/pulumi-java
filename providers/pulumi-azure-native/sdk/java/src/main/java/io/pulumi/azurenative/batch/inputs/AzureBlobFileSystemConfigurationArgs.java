@@ -130,62 +130,50 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
-
         public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder blobfuseOptions(@Nullable Output<String> blobfuseOptions) {
             this.blobfuseOptions = blobfuseOptions;
             return this;
         }
-
         public Builder blobfuseOptions(@Nullable String blobfuseOptions) {
             this.blobfuseOptions = Output.ofNullable(blobfuseOptions);
             return this;
         }
-
         public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder relativeMountPath(Output<String> relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
-
         public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Output.of(Objects.requireNonNull(relativeMountPath));
             return this;
         }
-
         public Builder sasKey(@Nullable Output<String> sasKey) {
             this.sasKey = sasKey;
             return this;
         }
-
         public Builder sasKey(@Nullable String sasKey) {
             this.sasKey = Output.ofNullable(sasKey);
             return this;
-        }
-        public AzureBlobFileSystemConfigurationArgs build() {
+        }        public AzureBlobFileSystemConfigurationArgs build() {
             return new AzureBlobFileSystemConfigurationArgs(accountKey, accountName, blobfuseOptions, containerName, relativeMountPath, sasKey);
         }
     }

@@ -111,42 +111,34 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
-
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
-
         public Builder rights(Output<AccessRights> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
-
         public Builder rights(AccessRights rights) {
             this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
-
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = Output.ofNullable(secondaryKey);
             return this;
-        }
-        public SharedAccessSignatureAuthorizationRuleArgs build() {
+        }        public SharedAccessSignatureAuthorizationRuleArgs build() {
             return new SharedAccessSignatureAuthorizationRuleArgs(keyName, primaryKey, rights, secondaryKey);
         }
     }

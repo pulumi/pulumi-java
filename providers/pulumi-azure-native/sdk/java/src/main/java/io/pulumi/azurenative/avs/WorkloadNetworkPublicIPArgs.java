@@ -123,52 +123,42 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder numberOfPublicIPs(@Nullable Output<Double> numberOfPublicIPs) {
             this.numberOfPublicIPs = numberOfPublicIPs;
             return this;
         }
-
         public Builder numberOfPublicIPs(@Nullable Double numberOfPublicIPs) {
             this.numberOfPublicIPs = Output.ofNullable(numberOfPublicIPs);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder publicIPId(@Nullable Output<String> publicIPId) {
             this.publicIPId = publicIPId;
             return this;
         }
-
         public Builder publicIPId(@Nullable String publicIPId) {
             this.publicIPId = Output.ofNullable(publicIPId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public WorkloadNetworkPublicIPArgs build() {
+        }        public WorkloadNetworkPublicIPArgs build() {
             return new WorkloadNetworkPublicIPArgs(displayName, numberOfPublicIPs, privateCloudName, publicIPId, resourceGroupName);
         }
     }

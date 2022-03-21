@@ -53,8 +53,7 @@ public final class VirtualNodeSpecBackendDefaults {
         public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
-        }
-        public VirtualNodeSpecBackendDefaults build() {
+        }        public VirtualNodeSpecBackendDefaults build() {
             return new VirtualNodeSpecBackendDefaults(clientPolicy);
         }
     }

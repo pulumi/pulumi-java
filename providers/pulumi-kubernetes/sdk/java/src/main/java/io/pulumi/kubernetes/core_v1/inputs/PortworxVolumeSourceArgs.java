@@ -95,32 +95,26 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
             this.fsType = fsType;
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = Output.ofNullable(fsType);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder volumeID(Output<String> volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }
-
         public Builder volumeID(String volumeID) {
             this.volumeID = Output.of(Objects.requireNonNull(volumeID));
             return this;
-        }
-        public PortworxVolumeSourceArgs build() {
+        }        public PortworxVolumeSourceArgs build() {
             return new PortworxVolumeSourceArgs(fsType, readOnly, volumeID);
         }
     }

@@ -335,182 +335,149 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
-
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
             return this;
         }
-
         public Builder cacheAttributes(@Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
-
         public Builder cacheAttributes(@Nullable NfsFileShareCacheAttributesArgs cacheAttributes) {
             this.cacheAttributes = Output.ofNullable(cacheAttributes);
             return this;
         }
-
         public Builder clientLists(Output<List<String>> clientLists) {
             this.clientLists = Objects.requireNonNull(clientLists);
             return this;
         }
-
         public Builder clientLists(List<String> clientLists) {
             this.clientLists = Output.of(Objects.requireNonNull(clientLists));
             return this;
         }
-
+        public Builder clientLists(String... clientLists) {
+            return clientLists(List.of(clientLists));
+        }
         public Builder defaultStorageClass(@Nullable Output<String> defaultStorageClass) {
             this.defaultStorageClass = defaultStorageClass;
             return this;
         }
-
         public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
             this.defaultStorageClass = Output.ofNullable(defaultStorageClass);
             return this;
         }
-
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
-
         public Builder fileShareName(@Nullable String fileShareName) {
             this.fileShareName = Output.ofNullable(fileShareName);
             return this;
         }
-
         public Builder gatewayArn(Output<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
-
         public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
-
         public Builder guessMimeTypeEnabled(@Nullable Output<Boolean> guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = guessMimeTypeEnabled;
             return this;
         }
-
         public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = Output.ofNullable(guessMimeTypeEnabled);
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
-
         public Builder locationArn(Output<String> locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
-
         public Builder locationArn(String locationArn) {
             this.locationArn = Output.of(Objects.requireNonNull(locationArn));
             return this;
         }
-
         public Builder nfsFileShareDefaults(@Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults) {
             this.nfsFileShareDefaults = nfsFileShareDefaults;
             return this;
         }
-
         public Builder nfsFileShareDefaults(@Nullable NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
             this.nfsFileShareDefaults = Output.ofNullable(nfsFileShareDefaults);
             return this;
         }
-
         public Builder notificationPolicy(@Nullable Output<String> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
-
         public Builder notificationPolicy(@Nullable String notificationPolicy) {
             this.notificationPolicy = Output.ofNullable(notificationPolicy);
             return this;
         }
-
         public Builder objectAcl(@Nullable Output<String> objectAcl) {
             this.objectAcl = objectAcl;
             return this;
         }
-
         public Builder objectAcl(@Nullable String objectAcl) {
             this.objectAcl = Output.ofNullable(objectAcl);
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
-
         public Builder requesterPays(@Nullable Boolean requesterPays) {
             this.requesterPays = Output.ofNullable(requesterPays);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder squash(@Nullable Output<String> squash) {
             this.squash = squash;
             return this;
         }
-
         public Builder squash(@Nullable String squash) {
             this.squash = Output.ofNullable(squash);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NfsFileShareArgs build() {
+        }        public NfsFileShareArgs build() {
             return new NfsFileShareArgs(auditDestinationArn, cacheAttributes, clientLists, defaultStorageClass, fileShareName, gatewayArn, guessMimeTypeEnabled, kmsEncrypted, kmsKeyArn, locationArn, nfsFileShareDefaults, notificationPolicy, objectAcl, readOnly, requesterPays, roleArn, squash, tags);
         }
     }

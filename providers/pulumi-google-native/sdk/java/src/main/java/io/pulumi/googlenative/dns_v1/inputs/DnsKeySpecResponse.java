@@ -105,22 +105,18 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder keyLength(Integer keyLength) {
             this.keyLength = Objects.requireNonNull(keyLength);
             return this;
         }
-
         public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
-        }
-        public DnsKeySpecResponse build() {
+        }        public DnsKeySpecResponse build() {
             return new DnsKeySpecResponse(algorithm, keyLength, keyType, kind);
         }
     }

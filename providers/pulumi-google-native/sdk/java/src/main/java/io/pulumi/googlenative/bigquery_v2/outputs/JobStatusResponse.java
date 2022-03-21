@@ -87,17 +87,17 @@ public final class JobStatusResponse {
             this.errorResult = Objects.requireNonNull(errorResult);
             return this;
         }
-
         public Builder errors(List<ErrorProtoResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
-
+        public Builder errors(ErrorProtoResponse... errors) {
+            return errors(List.of(errors));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public JobStatusResponse build() {
+        }        public JobStatusResponse build() {
             return new JobStatusResponse(errorResult, errors, state);
         }
     }

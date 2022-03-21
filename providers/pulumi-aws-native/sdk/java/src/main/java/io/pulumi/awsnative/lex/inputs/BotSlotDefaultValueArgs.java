@@ -60,12 +60,10 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
-
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
             return this;
-        }
-        public BotSlotDefaultValueArgs build() {
+        }        public BotSlotDefaultValueArgs build() {
             return new BotSlotDefaultValueArgs(defaultValue);
         }
     }

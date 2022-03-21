@@ -78,17 +78,14 @@ public final class GetServiceTraffic extends io.pulumi.resources.InvokeArgs {
             this.latestRevision = Objects.requireNonNull(latestRevision);
             return this;
         }
-
         public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public Builder revisionName(String revisionName) {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
-        }
-        public GetServiceTraffic build() {
+        }        public GetServiceTraffic build() {
             return new GetServiceTraffic(latestRevision, percent, revisionName);
         }
     }

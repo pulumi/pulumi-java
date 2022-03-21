@@ -50,8 +50,7 @@ public final class GetHealthCheckLogConfig extends io.pulumi.resources.InvokeArg
         public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
-        }
-        public GetHealthCheckLogConfig build() {
+        }        public GetHealthCheckLogConfig build() {
             return new GetHealthCheckLogConfig(enable);
         }
     }

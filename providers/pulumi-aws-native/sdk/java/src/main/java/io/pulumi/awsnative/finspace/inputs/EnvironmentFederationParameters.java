@@ -143,32 +143,26 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
             this.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
-
         public Builder attributeMap(@Nullable Object attributeMap) {
             this.attributeMap = attributeMap;
             return this;
         }
-
         public Builder federationProviderName(@Nullable String federationProviderName) {
             this.federationProviderName = federationProviderName;
             return this;
         }
-
         public Builder federationURN(@Nullable String federationURN) {
             this.federationURN = federationURN;
             return this;
         }
-
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
-
         public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
             this.samlMetadataURL = samlMetadataURL;
             return this;
-        }
-        public EnvironmentFederationParameters build() {
+        }        public EnvironmentFederationParameters build() {
             return new EnvironmentFederationParameters(applicationCallBackURL, attributeMap, federationProviderName, federationURN, samlMetadataDocument, samlMetadataURL);
         }
     }

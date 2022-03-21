@@ -51,8 +51,7 @@ public final class BotVoiceSettings {
         public Builder voiceId(String voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
-        }
-        public BotVoiceSettings build() {
+        }        public BotVoiceSettings build() {
             return new BotVoiceSettings(voiceId);
         }
     }

@@ -110,42 +110,40 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
-
         public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
             this.gatewayCapabilitySummaries = Output.ofNullable(gatewayCapabilitySummaries);
             return this;
         }
-
+        public Builder gatewayCapabilitySummaries(GatewayCapabilitySummaryArgs... gatewayCapabilitySummaries) {
+            return gatewayCapabilitySummaries(List.of(gatewayCapabilitySummaries));
+        }
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
-
         public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
-
         public Builder gatewayPlatform(Output<GatewayPlatformArgs> gatewayPlatform) {
             this.gatewayPlatform = Objects.requireNonNull(gatewayPlatform);
             return this;
         }
-
         public Builder gatewayPlatform(GatewayPlatformArgs gatewayPlatform) {
             this.gatewayPlatform = Output.of(Objects.requireNonNull(gatewayPlatform));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<GatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<GatewayTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public GatewayArgs build() {
+        public Builder tags(GatewayTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public GatewayArgs build() {
             return new GatewayArgs(gatewayCapabilitySummaries, gatewayName, gatewayPlatform, tags);
         }
     }

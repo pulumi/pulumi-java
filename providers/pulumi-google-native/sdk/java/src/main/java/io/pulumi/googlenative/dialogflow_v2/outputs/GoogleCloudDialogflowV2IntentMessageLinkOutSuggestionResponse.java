@@ -69,12 +69,10 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse(destinationName, uri);
         }
     }

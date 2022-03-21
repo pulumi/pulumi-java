@@ -71,12 +71,10 @@ public final class ManagedInstancePairInfoResponse {
             this.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
-
         public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
             this.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
-        }
-        public ManagedInstancePairInfoResponse build() {
+        }        public ManagedInstancePairInfoResponse build() {
             return new ManagedInstancePairInfoResponse(partnerManagedInstanceId, primaryManagedInstanceId);
         }
     }

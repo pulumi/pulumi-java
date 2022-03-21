@@ -54,8 +54,7 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetAccessPointArgs build() {
+        }        public GetAccessPointArgs build() {
             return new GetAccessPointArgs(name);
         }
     }

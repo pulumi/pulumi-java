@@ -158,72 +158,61 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fileFormat(@Nullable Output<FaqFileFormat> fileFormat) {
             this.fileFormat = fileFormat;
             return this;
         }
-
         public Builder fileFormat(@Nullable FaqFileFormat fileFormat) {
             this.fileFormat = Output.ofNullable(fileFormat);
             return this;
         }
-
         public Builder indexId(Output<String> indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
-
         public Builder indexId(String indexId) {
             this.indexId = Output.of(Objects.requireNonNull(indexId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder s3Path(Output<FaqS3PathArgs> s3Path) {
             this.s3Path = Objects.requireNonNull(s3Path);
             return this;
         }
-
         public Builder s3Path(FaqS3PathArgs s3Path) {
             this.s3Path = Output.of(Objects.requireNonNull(s3Path));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<FaqTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<FaqTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public FaqArgs build() {
+        public Builder tags(FaqTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public FaqArgs build() {
             return new FaqArgs(description, fileFormat, indexId, name, roleArn, s3Path, tags);
         }
     }

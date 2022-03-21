@@ -92,17 +92,14 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
-
         public Builder stateStartTime(String stateStartTime) {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
-        }
-        public StateHistoryResponse build() {
+        }        public StateHistoryResponse build() {
             return new StateHistoryResponse(state, stateMessage, stateStartTime);
         }
     }

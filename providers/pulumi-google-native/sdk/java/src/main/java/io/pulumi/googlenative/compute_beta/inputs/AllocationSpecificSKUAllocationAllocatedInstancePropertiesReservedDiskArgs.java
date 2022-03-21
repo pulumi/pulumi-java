@@ -75,22 +75,18 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder $interface(@Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
             this.$interface = $interface;
             return this;
         }
-
         public Builder $interface(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface $interface) {
             this.$interface = Output.ofNullable($interface);
             return this;
-        }
-        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs build() {
+        }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(diskSizeGb, $interface);
         }
     }

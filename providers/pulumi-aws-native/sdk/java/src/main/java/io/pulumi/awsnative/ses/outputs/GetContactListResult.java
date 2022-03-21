@@ -90,17 +90,20 @@ public final class GetContactListResult {
             this.description = description;
             return this;
         }
-
         public Builder tags(@Nullable List<ContactListTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ContactListTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder topics(@Nullable List<ContactListTopic> topics) {
             this.topics = topics;
             return this;
         }
-        public GetContactListResult build() {
+        public Builder topics(ContactListTopic... topics) {
+            return topics(List.of(topics));
+        }        public GetContactListResult build() {
             return new GetContactListResult(description, tags, topics);
         }
     }

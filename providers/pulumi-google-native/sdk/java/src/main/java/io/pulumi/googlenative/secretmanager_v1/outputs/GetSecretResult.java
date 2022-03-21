@@ -186,47 +186,41 @@ public final class GetSecretResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder replication(ReplicationResponse replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
-
         public Builder rotation(RotationResponse rotation) {
             this.rotation = Objects.requireNonNull(rotation);
             return this;
         }
-
         public Builder topics(List<TopicResponse> topics) {
             this.topics = Objects.requireNonNull(topics);
             return this;
         }
-
+        public Builder topics(TopicResponse... topics) {
+            return topics(List.of(topics));
+        }
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public GetSecretResult build() {
+        }        public GetSecretResult build() {
             return new GetSecretResult(createTime, etag, expireTime, labels, name, replication, rotation, topics, ttl);
         }
     }

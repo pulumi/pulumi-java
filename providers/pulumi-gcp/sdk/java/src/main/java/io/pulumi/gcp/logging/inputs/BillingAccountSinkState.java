@@ -195,92 +195,77 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
-
         public Builder bigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsGetArgs bigqueryOptions) {
             this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
-
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder exclusions(@Nullable Output<List<BillingAccountSinkExclusionGetArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<BillingAccountSinkExclusionGetArgs> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(BillingAccountSinkExclusionGetArgs... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder writerIdentity(@Nullable Output<String> writerIdentity) {
             this.writerIdentity = writerIdentity;
             return this;
         }
-
         public Builder writerIdentity(@Nullable String writerIdentity) {
             this.writerIdentity = Output.ofNullable(writerIdentity);
             return this;
-        }
-        public BillingAccountSinkState build() {
+        }        public BillingAccountSinkState build() {
             return new BillingAccountSinkState(bigqueryOptions, billingAccount, description, destination, disabled, exclusions, filter, name, writerIdentity);
         }
     }

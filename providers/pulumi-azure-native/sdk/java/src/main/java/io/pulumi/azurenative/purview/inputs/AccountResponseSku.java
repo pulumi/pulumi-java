@@ -79,12 +79,10 @@ public final class AccountResponseSku extends io.pulumi.resources.InvokeArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public AccountResponseSku build() {
+        }        public AccountResponseSku build() {
             return new AccountResponseSku(capacity, name);
         }
     }

@@ -50,8 +50,7 @@ public final class GetTagValueArgs extends io.pulumi.resources.InvokeArgs {
         public Builder tagValueId(String tagValueId) {
             this.tagValueId = Objects.requireNonNull(tagValueId);
             return this;
-        }
-        public GetTagValueArgs build() {
+        }        public GetTagValueArgs build() {
             return new GetTagValueArgs(tagValueId);
         }
     }

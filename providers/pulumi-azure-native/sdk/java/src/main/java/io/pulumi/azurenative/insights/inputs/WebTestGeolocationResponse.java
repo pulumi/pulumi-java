@@ -60,8 +60,7 @@ public final class WebTestGeolocationResponse extends io.pulumi.resources.Invoke
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
-        }
-        public WebTestGeolocationResponse build() {
+        }        public WebTestGeolocationResponse build() {
             return new WebTestGeolocationResponse(location);
         }
     }

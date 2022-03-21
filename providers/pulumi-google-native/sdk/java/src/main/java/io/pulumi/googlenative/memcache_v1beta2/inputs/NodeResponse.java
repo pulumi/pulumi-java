@@ -155,37 +155,30 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
-
         public Builder parameters(MemcacheParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder updateAvailable(Boolean updateAvailable) {
             this.updateAvailable = Objects.requireNonNull(updateAvailable);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public NodeResponse build() {
+        }        public NodeResponse build() {
             return new NodeResponse(host, nodeId, parameters, port, state, updateAvailable, zone);
         }
     }

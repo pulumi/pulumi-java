@@ -66,12 +66,10 @@ public final class GetCompositeTypeArgs extends io.pulumi.resources.InvokeArgs {
             this.compositeType = Objects.requireNonNull(compositeType);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCompositeTypeArgs build() {
+        }        public GetCompositeTypeArgs build() {
             return new GetCompositeTypeArgs(compositeType, project);
         }
     }

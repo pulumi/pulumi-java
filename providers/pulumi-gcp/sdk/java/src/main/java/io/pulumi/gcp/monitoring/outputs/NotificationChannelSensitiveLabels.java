@@ -93,17 +93,14 @@ public final class NotificationChannelSensitiveLabels {
             this.authToken = authToken;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
-        }
-        public NotificationChannelSensitiveLabels build() {
+        }        public NotificationChannelSensitiveLabels build() {
             return new NotificationChannelSensitiveLabels(authToken, password, serviceKey);
         }
     }

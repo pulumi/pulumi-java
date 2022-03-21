@@ -79,17 +79,14 @@ public final class GetDefaultServiceAccountResult {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetDefaultServiceAccountResult build() {
+        }        public GetDefaultServiceAccountResult build() {
             return new GetDefaultServiceAccountResult(email, id, project);
         }
     }

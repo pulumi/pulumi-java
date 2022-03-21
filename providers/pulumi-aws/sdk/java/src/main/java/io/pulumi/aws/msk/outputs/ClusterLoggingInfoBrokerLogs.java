@@ -65,17 +65,14 @@ public final class ClusterLoggingInfoBrokerLogs {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
-
         public Builder firehose(@Nullable ClusterLoggingInfoBrokerLogsFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder s3(@Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
             this.s3 = s3;
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogs build() {
+        }        public ClusterLoggingInfoBrokerLogs build() {
             return new ClusterLoggingInfoBrokerLogs(cloudwatchLogs, firehose, s3);
         }
     }

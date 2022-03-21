@@ -369,77 +369,68 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
-
         public Builder containerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages) {
             this.containerImages = containerImages;
             return this;
         }
-
+        public Builder containerImages(RuntimeVirtualMachineVirtualMachineConfigContainerImage... containerImages) {
+            return containerImages(List.of(containerImages));
+        }
         public Builder dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
-
         public Builder encryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
-
         public Builder guestAttributes(@Nullable Map<String,String> guestAttributes) {
             this.guestAttributes = guestAttributes;
             return this;
         }
-
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
-
         public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfig build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfig(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }
     }

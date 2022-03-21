@@ -103,22 +103,21 @@ public final class TargetCostAllocationResourceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder values(List<CostAllocationProportionResponse> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public TargetCostAllocationResourceResponse build() {
+        public Builder values(CostAllocationProportionResponse... values) {
+            return values(List.of(values));
+        }        public TargetCostAllocationResourceResponse build() {
             return new TargetCostAllocationResourceResponse(name, policyType, resourceType, values);
         }
     }

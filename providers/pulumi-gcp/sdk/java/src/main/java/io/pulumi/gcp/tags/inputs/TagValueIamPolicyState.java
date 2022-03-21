@@ -91,32 +91,26 @@ public final class TagValueIamPolicyState extends io.pulumi.resources.ResourceAr
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
-
         public Builder policyData(@Nullable String policyData) {
             this.policyData = Output.ofNullable(policyData);
             return this;
         }
-
         public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = Output.ofNullable(tagValue);
             return this;
-        }
-        public TagValueIamPolicyState build() {
+        }        public TagValueIamPolicyState build() {
             return new TagValueIamPolicyState(etag, policyData, tagValue);
         }
     }

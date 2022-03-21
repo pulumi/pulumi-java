@@ -142,37 +142,33 @@ public final class GetManagedZoneResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
+        public Builder nameServers(String... nameServers) {
+            return nameServers(List.of(nameServers));
+        }
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder visibility(String visibility) {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
-        }
-        public GetManagedZoneResult build() {
+        }        public GetManagedZoneResult build() {
             return new GetManagedZoneResult(description, dnsName, id, name, nameServers, project, visibility);
         }
     }

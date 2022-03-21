@@ -60,12 +60,10 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
-
         public Builder numShards(Integer numShards) {
             this.numShards = Output.of(Objects.requireNonNull(numShards));
             return this;
-        }
-        public UniformShardingArgs build() {
+        }        public UniformShardingArgs build() {
             return new UniformShardingArgs(numShards);
         }
     }

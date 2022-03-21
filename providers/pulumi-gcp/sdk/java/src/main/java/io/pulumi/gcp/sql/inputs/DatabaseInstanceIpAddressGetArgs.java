@@ -78,32 +78,26 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder timeToRetire(@Nullable Output<String> timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
-
         public Builder timeToRetire(@Nullable String timeToRetire) {
             this.timeToRetire = Output.ofNullable(timeToRetire);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public DatabaseInstanceIpAddressGetArgs build() {
+        }        public DatabaseInstanceIpAddressGetArgs build() {
             return new DatabaseInstanceIpAddressGetArgs(ipAddress, timeToRetire, type);
         }
     }

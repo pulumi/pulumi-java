@@ -207,52 +207,42 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateLinkConfiguration(@Nullable SubResourceResponse privateLinkConfiguration) {
             this.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ApplicationGatewayFrontendIPConfigurationResponse build() {
+        }        public ApplicationGatewayFrontendIPConfigurationResponse build() {
             return new ApplicationGatewayFrontendIPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, privateLinkConfiguration, provisioningState, publicIPAddress, subnet, type);
         }
     }

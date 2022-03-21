@@ -78,17 +78,14 @@ public final class GetImageIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetImageIamPolicyArgs build() {
+        }        public GetImageIamPolicyArgs build() {
             return new GetImageIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
         }
     }

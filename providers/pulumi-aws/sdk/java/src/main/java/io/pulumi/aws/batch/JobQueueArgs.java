@@ -144,62 +144,53 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
             this.computeEnvironments = Objects.requireNonNull(computeEnvironments);
             return this;
         }
-
         public Builder computeEnvironments(List<String> computeEnvironments) {
             this.computeEnvironments = Output.of(Objects.requireNonNull(computeEnvironments));
             return this;
         }
-
+        public Builder computeEnvironments(String... computeEnvironments) {
+            return computeEnvironments(List.of(computeEnvironments));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder schedulingPolicyArn(@Nullable Output<String> schedulingPolicyArn) {
             this.schedulingPolicyArn = schedulingPolicyArn;
             return this;
         }
-
         public Builder schedulingPolicyArn(@Nullable String schedulingPolicyArn) {
             this.schedulingPolicyArn = Output.ofNullable(schedulingPolicyArn);
             return this;
         }
-
         public Builder state(Output<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public JobQueueArgs build() {
+        }        public JobQueueArgs build() {
             return new JobQueueArgs(computeEnvironments, name, priority, schedulingPolicyArn, state, tags);
         }
     }

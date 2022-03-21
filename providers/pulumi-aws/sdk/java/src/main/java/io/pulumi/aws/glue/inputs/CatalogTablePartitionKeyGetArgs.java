@@ -90,32 +90,26 @@ public final class CatalogTablePartitionKeyGetArgs extends io.pulumi.resources.R
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public CatalogTablePartitionKeyGetArgs build() {
+        }        public CatalogTablePartitionKeyGetArgs build() {
             return new CatalogTablePartitionKeyGetArgs(comment, name, type);
         }
     }

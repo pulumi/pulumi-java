@@ -142,62 +142,53 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public Builder instanceTypeConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs) {
             this.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
-
         public Builder instanceTypeConfigs(@Nullable List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
             this.instanceTypeConfigs = Output.ofNullable(instanceTypeConfigs);
             return this;
         }
-
+        public Builder instanceTypeConfigs(InstanceFleetInstanceTypeConfigArgs... instanceTypeConfigs) {
+            return instanceTypeConfigs(List.of(instanceTypeConfigs));
+        }
         public Builder launchSpecifications(@Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
-
         public Builder launchSpecifications(@Nullable InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
             this.launchSpecifications = Output.ofNullable(launchSpecifications);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder targetOnDemandCapacity(@Nullable Output<Integer> targetOnDemandCapacity) {
             this.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
-
         public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
             this.targetOnDemandCapacity = Output.ofNullable(targetOnDemandCapacity);
             return this;
         }
-
         public Builder targetSpotCapacity(@Nullable Output<Integer> targetSpotCapacity) {
             this.targetSpotCapacity = targetSpotCapacity;
             return this;
         }
-
         public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
             this.targetSpotCapacity = Output.ofNullable(targetSpotCapacity);
             return this;
-        }
-        public InstanceFleetArgs build() {
+        }        public InstanceFleetArgs build() {
             return new InstanceFleetArgs(clusterId, instanceTypeConfigs, launchSpecifications, name, targetOnDemandCapacity, targetSpotCapacity);
         }
     }

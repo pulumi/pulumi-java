@@ -117,52 +117,48 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder regularExpressionList(Output<List<String>> regularExpressionList) {
             this.regularExpressionList = Objects.requireNonNull(regularExpressionList);
             return this;
         }
-
         public Builder regularExpressionList(List<String> regularExpressionList) {
             this.regularExpressionList = Output.of(Objects.requireNonNull(regularExpressionList));
             return this;
         }
-
+        public Builder regularExpressionList(String... regularExpressionList) {
+            return regularExpressionList(List.of(regularExpressionList));
+        }
         public Builder scope(Output<RegexPatternSetScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(RegexPatternSetScope scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RegexPatternSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RegexPatternSetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public RegexPatternSetArgs build() {
+        public Builder tags(RegexPatternSetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public RegexPatternSetArgs build() {
             return new RegexPatternSetArgs(description, name, regularExpressionList, scope, tags);
         }
     }

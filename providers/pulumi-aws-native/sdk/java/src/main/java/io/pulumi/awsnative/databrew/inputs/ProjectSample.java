@@ -75,12 +75,10 @@ public final class ProjectSample extends io.pulumi.resources.InvokeArgs {
             this.size = size;
             return this;
         }
-
         public Builder type(ProjectSampleType type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ProjectSample build() {
+        }        public ProjectSample build() {
             return new ProjectSample(size, type);
         }
     }

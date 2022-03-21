@@ -74,12 +74,10 @@ public final class DocumentTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DocumentTag build() {
+        }        public DocumentTag build() {
             return new DocumentTag(key, value);
         }
     }

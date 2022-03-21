@@ -61,12 +61,10 @@ public final class FhirServiceExportConfigurationArgs extends io.pulumi.resource
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
-        }
-        public FhirServiceExportConfigurationArgs build() {
+        }        public FhirServiceExportConfigurationArgs build() {
             return new FhirServiceExportConfigurationArgs(storageAccountName);
         }
     }

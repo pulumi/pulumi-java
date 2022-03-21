@@ -114,42 +114,37 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = Output.ofNullable(enableAcceleratedNetworking);
             return this;
         }
-
         public Builder ipConfigurations(@Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
             this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(NicIpConfigurationResourceSettingsArgs... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
-        }
-        public NetworkInterfaceResourceSettingsArgs build() {
+        }        public NetworkInterfaceResourceSettingsArgs build() {
             return new NetworkInterfaceResourceSettingsArgs(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
         }
     }

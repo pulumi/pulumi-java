@@ -79,22 +79,18 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.pubsubTopic = pubsubTopic;
             return this;
         }
-
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
-
         public Builder sendForBulkImport(@Nullable Output<Boolean> sendForBulkImport) {
             this.sendForBulkImport = sendForBulkImport;
             return this;
         }
-
         public Builder sendForBulkImport(@Nullable Boolean sendForBulkImport) {
             this.sendForBulkImport = Output.ofNullable(sendForBulkImport);
             return this;
-        }
-        public NotificationConfigArgs build() {
+        }        public NotificationConfigArgs build() {
             return new NotificationConfigArgs(pubsubTopic, sendForBulkImport);
         }
     }

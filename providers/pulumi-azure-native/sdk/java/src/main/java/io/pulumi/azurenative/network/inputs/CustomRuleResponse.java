@@ -177,42 +177,37 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder matchConditions(List<FrontDoorMatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
-
+        public Builder matchConditions(FrontDoorMatchConditionResponse... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder rateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
-
         public Builder rateLimitThreshold(@Nullable Integer rateLimitThreshold) {
             this.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
-        }
-        public CustomRuleResponse build() {
+        }        public CustomRuleResponse build() {
             return new CustomRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold, ruleType);
         }
     }

@@ -62,12 +62,10 @@ public final class SanEnableProtectionInputArgs extends io.pulumi.resources.Reso
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
-        }
-        public SanEnableProtectionInputArgs build() {
+        }        public SanEnableProtectionInputArgs build() {
             return new SanEnableProtectionInputArgs(instanceType);
         }
     }

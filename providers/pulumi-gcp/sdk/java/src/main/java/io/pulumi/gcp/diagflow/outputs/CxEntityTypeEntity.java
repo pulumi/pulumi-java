@@ -74,12 +74,13 @@ public final class CxEntityTypeEntity {
             this.synonyms = synonyms;
             return this;
         }
-
+        public Builder synonyms(String... synonyms) {
+            return synonyms(List.of(synonyms));
+        }
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public CxEntityTypeEntity build() {
+        }        public CxEntityTypeEntity build() {
             return new CxEntityTypeEntity(synonyms, value);
         }
     }

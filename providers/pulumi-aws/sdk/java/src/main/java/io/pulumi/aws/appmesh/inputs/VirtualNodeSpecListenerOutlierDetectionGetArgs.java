@@ -108,42 +108,34 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
             this.baseEjectionDuration = Objects.requireNonNull(baseEjectionDuration);
             return this;
         }
-
         public Builder baseEjectionDuration(VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs baseEjectionDuration) {
             this.baseEjectionDuration = Output.of(Objects.requireNonNull(baseEjectionDuration));
             return this;
         }
-
         public Builder interval(Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder maxEjectionPercent(Output<Integer> maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
-
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Output.of(Objects.requireNonNull(maxEjectionPercent));
             return this;
         }
-
         public Builder maxServerErrors(Output<Integer> maxServerErrors) {
             this.maxServerErrors = Objects.requireNonNull(maxServerErrors);
             return this;
         }
-
         public Builder maxServerErrors(Integer maxServerErrors) {
             this.maxServerErrors = Output.of(Objects.requireNonNull(maxServerErrors));
             return this;
-        }
-        public VirtualNodeSpecListenerOutlierDetectionGetArgs build() {
+        }        public VirtualNodeSpecListenerOutlierDetectionGetArgs build() {
             return new VirtualNodeSpecListenerOutlierDetectionGetArgs(baseEjectionDuration, interval, maxEjectionPercent, maxServerErrors);
         }
     }

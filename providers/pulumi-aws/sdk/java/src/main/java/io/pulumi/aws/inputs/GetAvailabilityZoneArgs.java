@@ -125,27 +125,25 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
             this.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
-
         public Builder filters(@Nullable List<GetAvailabilityZoneFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetAvailabilityZoneFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = zoneId;
             return this;
-        }
-        public GetAvailabilityZoneArgs build() {
+        }        public GetAvailabilityZoneArgs build() {
             return new GetAvailabilityZoneArgs(allAvailabilityZones, filters, name, state, zoneId);
         }
     }

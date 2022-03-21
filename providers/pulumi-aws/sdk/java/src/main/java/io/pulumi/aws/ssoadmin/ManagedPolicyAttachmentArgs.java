@@ -89,32 +89,26 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
-
         public Builder instanceArn(String instanceArn) {
             this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public Builder managedPolicyArn(Output<String> managedPolicyArn) {
             this.managedPolicyArn = Objects.requireNonNull(managedPolicyArn);
             return this;
         }
-
         public Builder managedPolicyArn(String managedPolicyArn) {
             this.managedPolicyArn = Output.of(Objects.requireNonNull(managedPolicyArn));
             return this;
         }
-
         public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
-
         public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
-        }
-        public ManagedPolicyAttachmentArgs build() {
+        }        public ManagedPolicyAttachmentArgs build() {
             return new ManagedPolicyAttachmentArgs(instanceArn, managedPolicyArn, permissionSetArn);
         }
     }

@@ -72,12 +72,16 @@ public final class DetectorModelOnInput {
             this.events = events;
             return this;
         }
-
+        public Builder events(DetectorModelEvent... events) {
+            return events(List.of(events));
+        }
         public Builder transitionEvents(@Nullable List<DetectorModelTransitionEvent> transitionEvents) {
             this.transitionEvents = transitionEvents;
             return this;
         }
-        public DetectorModelOnInput build() {
+        public Builder transitionEvents(DetectorModelTransitionEvent... transitionEvents) {
+            return transitionEvents(List.of(transitionEvents));
+        }        public DetectorModelOnInput build() {
             return new DetectorModelOnInput(events, transitionEvents);
         }
     }

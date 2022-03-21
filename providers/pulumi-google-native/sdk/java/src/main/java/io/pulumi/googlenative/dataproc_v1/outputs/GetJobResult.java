@@ -357,97 +357,84 @@ public final class GetJobResult {
             this.done = Objects.requireNonNull(done);
             return this;
         }
-
         public Builder driverControlFilesUri(String driverControlFilesUri) {
             this.driverControlFilesUri = Objects.requireNonNull(driverControlFilesUri);
             return this;
         }
-
         public Builder driverOutputResourceUri(String driverOutputResourceUri) {
             this.driverOutputResourceUri = Objects.requireNonNull(driverOutputResourceUri);
             return this;
         }
-
         public Builder hadoopJob(HadoopJobResponse hadoopJob) {
             this.hadoopJob = Objects.requireNonNull(hadoopJob);
             return this;
         }
-
         public Builder hiveJob(HiveJobResponse hiveJob) {
             this.hiveJob = Objects.requireNonNull(hiveJob);
             return this;
         }
-
         public Builder jobUuid(String jobUuid) {
             this.jobUuid = Objects.requireNonNull(jobUuid);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder pigJob(PigJobResponse pigJob) {
             this.pigJob = Objects.requireNonNull(pigJob);
             return this;
         }
-
         public Builder placement(JobPlacementResponse placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
-
         public Builder prestoJob(PrestoJobResponse prestoJob) {
             this.prestoJob = Objects.requireNonNull(prestoJob);
             return this;
         }
-
         public Builder pysparkJob(PySparkJobResponse pysparkJob) {
             this.pysparkJob = Objects.requireNonNull(pysparkJob);
             return this;
         }
-
         public Builder reference(JobReferenceResponse reference) {
             this.reference = Objects.requireNonNull(reference);
             return this;
         }
-
         public Builder scheduling(JobSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
-
         public Builder sparkJob(SparkJobResponse sparkJob) {
             this.sparkJob = Objects.requireNonNull(sparkJob);
             return this;
         }
-
         public Builder sparkRJob(SparkRJobResponse sparkRJob) {
             this.sparkRJob = Objects.requireNonNull(sparkRJob);
             return this;
         }
-
         public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
             this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
             return this;
         }
-
         public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusHistory(List<JobStatusResponse> statusHistory) {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }
-
+        public Builder statusHistory(JobStatusResponse... statusHistory) {
+            return statusHistory(List.of(statusHistory));
+        }
         public Builder yarnApplications(List<YarnApplicationResponse> yarnApplications) {
             this.yarnApplications = Objects.requireNonNull(yarnApplications);
             return this;
         }
-        public GetJobResult build() {
+        public Builder yarnApplications(YarnApplicationResponse... yarnApplications) {
+            return yarnApplications(List.of(yarnApplications));
+        }        public GetJobResult build() {
             return new GetJobResult(done, driverControlFilesUri, driverOutputResourceUri, hadoopJob, hiveJob, jobUuid, labels, pigJob, placement, prestoJob, pysparkJob, reference, scheduling, sparkJob, sparkRJob, sparkSqlJob, status, statusHistory, yarnApplications);
         }
     }

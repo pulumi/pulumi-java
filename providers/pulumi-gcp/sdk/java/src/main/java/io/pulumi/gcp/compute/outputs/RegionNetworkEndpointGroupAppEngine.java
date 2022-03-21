@@ -105,17 +105,14 @@ public final class RegionNetworkEndpointGroupAppEngine {
             this.service = service;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = urlMask;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public RegionNetworkEndpointGroupAppEngine build() {
+        }        public RegionNetworkEndpointGroupAppEngine build() {
             return new RegionNetworkEndpointGroupAppEngine(service, urlMask, version);
         }
     }

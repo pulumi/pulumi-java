@@ -123,52 +123,42 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
             this.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
-
         public Builder customSecurityGroupId(@Nullable String customSecurityGroupId) {
             this.customSecurityGroupId = Output.ofNullable(customSecurityGroupId);
             return this;
         }
-
         public Builder defaultOu(@Nullable Output<String> defaultOu) {
             this.defaultOu = defaultOu;
             return this;
         }
-
         public Builder defaultOu(@Nullable String defaultOu) {
             this.defaultOu = Output.ofNullable(defaultOu);
             return this;
         }
-
         public Builder enableInternetAccess(@Nullable Output<Boolean> enableInternetAccess) {
             this.enableInternetAccess = enableInternetAccess;
             return this;
         }
-
         public Builder enableInternetAccess(@Nullable Boolean enableInternetAccess) {
             this.enableInternetAccess = Output.ofNullable(enableInternetAccess);
             return this;
         }
-
         public Builder enableMaintenanceMode(@Nullable Output<Boolean> enableMaintenanceMode) {
             this.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
-
         public Builder enableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
             this.enableMaintenanceMode = Output.ofNullable(enableMaintenanceMode);
             return this;
         }
-
         public Builder userEnabledAsLocalAdministrator(@Nullable Output<Boolean> userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;
         }
-
         public Builder userEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = Output.ofNullable(userEnabledAsLocalAdministrator);
             return this;
-        }
-        public DirectoryWorkspaceCreationPropertiesArgs build() {
+        }        public DirectoryWorkspaceCreationPropertiesArgs build() {
             return new DirectoryWorkspaceCreationPropertiesArgs(customSecurityGroupId, defaultOu, enableInternetAccess, enableMaintenanceMode, userEnabledAsLocalAdministrator);
         }
     }

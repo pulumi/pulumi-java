@@ -496,272 +496,227 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
-
         public Builder advancedMachineFeatures(@Nullable InstanceFromMachineImageAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
             return this;
         }
-
         public Builder allowStoppingForUpdate(@Nullable Output<Boolean> allowStoppingForUpdate) {
             this.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
-
         public Builder allowStoppingForUpdate(@Nullable Boolean allowStoppingForUpdate) {
             this.allowStoppingForUpdate = Output.ofNullable(allowStoppingForUpdate);
             return this;
         }
-
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
-
         public Builder canIpForward(@Nullable Boolean canIpForward) {
             this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
-
         public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
-
         public Builder confidentialInstanceConfig(@Nullable InstanceFromMachineImageConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
             return this;
         }
-
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder desiredStatus(@Nullable Output<String> desiredStatus) {
             this.desiredStatus = desiredStatus;
             return this;
         }
-
         public Builder desiredStatus(@Nullable String desiredStatus) {
             this.desiredStatus = Output.ofNullable(desiredStatus);
             return this;
         }
-
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             this.enableDisplay = enableDisplay;
             return this;
         }
-
         public Builder enableDisplay(@Nullable Boolean enableDisplay) {
             this.enableDisplay = Output.ofNullable(enableDisplay);
             return this;
         }
-
         public Builder guestAccelerators(@Nullable Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
         public Builder guestAccelerators(@Nullable List<InstanceFromMachineImageGuestAcceleratorArgs> guestAccelerators) {
             this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(InstanceFromMachineImageGuestAcceleratorArgs... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
             this.metadataStartupScript = metadataStartupScript;
             return this;
         }
-
         public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
             this.metadataStartupScript = Output.ofNullable(metadataStartupScript);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkInterfaces(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<InstanceFromMachineImageNetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(InstanceFromMachineImageNetworkInterfaceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder networkPerformanceConfig(@Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
-
         public Builder networkPerformanceConfig(@Nullable InstanceFromMachineImageNetworkPerformanceConfigArgs networkPerformanceConfig) {
             this.networkPerformanceConfig = Output.ofNullable(networkPerformanceConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reservationAffinity(@Nullable Output<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
-
         public Builder reservationAffinity(@Nullable InstanceFromMachineImageReservationAffinityArgs reservationAffinity) {
             this.reservationAffinity = Output.ofNullable(reservationAffinity);
             return this;
         }
-
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
-
         public Builder resourcePolicies(@Nullable String resourcePolicies) {
             this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
-
         public Builder scheduling(@Nullable Output<InstanceFromMachineImageSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable InstanceFromMachineImageSchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<InstanceFromMachineImageServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable InstanceFromMachineImageServiceAccountArgs serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-
         public Builder shieldedInstanceConfig(@Nullable InstanceFromMachineImageShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
-
         public Builder sourceMachineImage(Output<String> sourceMachineImage) {
             this.sourceMachineImage = Objects.requireNonNull(sourceMachineImage);
             return this;
         }
-
         public Builder sourceMachineImage(String sourceMachineImage) {
             this.sourceMachineImage = Output.of(Objects.requireNonNull(sourceMachineImage));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public InstanceFromMachineImageArgs build() {
+        }        public InstanceFromMachineImageArgs build() {
             return new InstanceFromMachineImageArgs(advancedMachineFeatures, allowStoppingForUpdate, canIpForward, confidentialInstanceConfig, deletionProtection, description, desiredStatus, enableDisplay, guestAccelerators, hostname, labels, machineType, metadata, metadataStartupScript, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, project, reservationAffinity, resourcePolicies, scheduling, serviceAccount, shieldedInstanceConfig, sourceMachineImage, tags, zone);
         }
     }

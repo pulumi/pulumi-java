@@ -61,17 +61,14 @@ public final class GetInstanceMaintenanceSchedule {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public GetInstanceMaintenanceSchedule build() {
+        }        public GetInstanceMaintenanceSchedule build() {
             return new GetInstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }
     }

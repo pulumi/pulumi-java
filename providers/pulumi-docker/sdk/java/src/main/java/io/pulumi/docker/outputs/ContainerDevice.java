@@ -63,17 +63,14 @@ public final class ContainerDevice {
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder hostPath(String hostPath) {
             this.hostPath = Objects.requireNonNull(hostPath);
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
-        }
-        public ContainerDevice build() {
+        }        public ContainerDevice build() {
             return new ContainerDevice(containerPath, hostPath, permissions);
         }
     }

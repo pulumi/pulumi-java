@@ -88,17 +88,14 @@ public final class GetIncidentArgs extends io.pulumi.resources.InvokeArgs {
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetIncidentArgs build() {
+        }        public GetIncidentArgs build() {
             return new GetIncidentArgs(incidentId, resourceGroupName, workspaceName);
         }
     }

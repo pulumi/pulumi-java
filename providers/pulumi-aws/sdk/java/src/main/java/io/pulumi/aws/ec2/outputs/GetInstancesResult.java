@@ -129,37 +129,45 @@ public final class GetInstancesResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInstancesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
-
+        public Builder ids(String... ids) {
+            return ids(List.of(ids));
+        }
         public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
             this.instanceStateNames = instanceStateNames;
             return this;
         }
-
+        public Builder instanceStateNames(String... instanceStateNames) {
+            return instanceStateNames(List.of(instanceStateNames));
+        }
         public Builder instanceTags(Map<String,String> instanceTags) {
             this.instanceTags = Objects.requireNonNull(instanceTags);
             return this;
         }
-
         public Builder privateIps(List<String> privateIps) {
             this.privateIps = Objects.requireNonNull(privateIps);
             return this;
         }
-
+        public Builder privateIps(String... privateIps) {
+            return privateIps(List.of(privateIps));
+        }
         public Builder publicIps(List<String> publicIps) {
             this.publicIps = Objects.requireNonNull(publicIps);
             return this;
         }
-        public GetInstancesResult build() {
+        public Builder publicIps(String... publicIps) {
+            return publicIps(List.of(publicIps));
+        }        public GetInstancesResult build() {
             return new GetInstancesResult(filters, id, ids, instanceStateNames, instanceTags, privateIps, publicIps);
         }
     }

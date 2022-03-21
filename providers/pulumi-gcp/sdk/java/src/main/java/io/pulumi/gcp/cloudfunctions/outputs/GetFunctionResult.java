@@ -390,122 +390,104 @@ public final class GetFunctionResult {
             this.availableMemoryMb = Objects.requireNonNull(availableMemoryMb);
             return this;
         }
-
         public Builder buildEnvironmentVariables(Map<String,Object> buildEnvironmentVariables) {
             this.buildEnvironmentVariables = Objects.requireNonNull(buildEnvironmentVariables);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder entryPoint(String entryPoint) {
             this.entryPoint = Objects.requireNonNull(entryPoint);
             return this;
         }
-
         public Builder environmentVariables(Map<String,Object> environmentVariables) {
             this.environmentVariables = Objects.requireNonNull(environmentVariables);
             return this;
         }
-
         public Builder eventTriggers(List<GetFunctionEventTrigger> eventTriggers) {
             this.eventTriggers = Objects.requireNonNull(eventTriggers);
             return this;
         }
-
+        public Builder eventTriggers(GetFunctionEventTrigger... eventTriggers) {
+            return eventTriggers(List.of(eventTriggers));
+        }
         public Builder httpsTriggerUrl(String httpsTriggerUrl) {
             this.httpsTriggerUrl = Objects.requireNonNull(httpsTriggerUrl);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ingressSettings(String ingressSettings) {
             this.ingressSettings = Objects.requireNonNull(ingressSettings);
             return this;
         }
-
         public Builder labels(Map<String,Object> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
-
         public Builder sourceArchiveBucket(String sourceArchiveBucket) {
             this.sourceArchiveBucket = Objects.requireNonNull(sourceArchiveBucket);
             return this;
         }
-
         public Builder sourceArchiveObject(String sourceArchiveObject) {
             this.sourceArchiveObject = Objects.requireNonNull(sourceArchiveObject);
             return this;
         }
-
         public Builder sourceRepositories(List<GetFunctionSourceRepository> sourceRepositories) {
             this.sourceRepositories = Objects.requireNonNull(sourceRepositories);
             return this;
         }
-
+        public Builder sourceRepositories(GetFunctionSourceRepository... sourceRepositories) {
+            return sourceRepositories(List.of(sourceRepositories));
+        }
         public Builder timeout(Integer timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder triggerHttp(Boolean triggerHttp) {
             this.triggerHttp = Objects.requireNonNull(triggerHttp);
             return this;
         }
-
         public Builder vpcConnector(String vpcConnector) {
             this.vpcConnector = Objects.requireNonNull(vpcConnector);
             return this;
         }
-
         public Builder vpcConnectorEgressSettings(String vpcConnectorEgressSettings) {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
-        }
-        public GetFunctionResult build() {
+        }        public GetFunctionResult build() {
             return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, description, entryPoint, environmentVariables, eventTriggers, httpsTriggerUrl, id, ingressSettings, labels, maxInstances, minInstances, name, project, region, runtime, serviceAccountEmail, sourceArchiveBucket, sourceArchiveObject, sourceRepositories, timeout, triggerHttp, vpcConnector, vpcConnectorEgressSettings);
         }
     }

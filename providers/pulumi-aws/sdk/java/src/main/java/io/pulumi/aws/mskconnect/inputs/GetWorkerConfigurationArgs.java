@@ -54,8 +54,7 @@ public final class GetWorkerConfigurationArgs extends io.pulumi.resources.Invoke
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetWorkerConfigurationArgs build() {
+        }        public GetWorkerConfigurationArgs build() {
             return new GetWorkerConfigurationArgs(name);
         }
     }

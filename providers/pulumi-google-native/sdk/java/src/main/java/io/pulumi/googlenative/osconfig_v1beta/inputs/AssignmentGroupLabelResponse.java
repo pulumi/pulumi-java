@@ -59,8 +59,7 @@ public final class AssignmentGroupLabelResponse extends io.pulumi.resources.Invo
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public AssignmentGroupLabelResponse build() {
+        }        public AssignmentGroupLabelResponse build() {
             return new AssignmentGroupLabelResponse(labels);
         }
     }

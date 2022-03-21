@@ -69,12 +69,10 @@ public final class AnalyzerTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AnalyzerTag build() {
+        }        public AnalyzerTag build() {
             return new AnalyzerTag(key, value);
         }
     }

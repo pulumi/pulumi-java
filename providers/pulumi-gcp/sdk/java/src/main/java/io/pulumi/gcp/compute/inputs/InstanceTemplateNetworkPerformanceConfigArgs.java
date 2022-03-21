@@ -56,12 +56,10 @@ public final class InstanceTemplateNetworkPerformanceConfigArgs extends io.pulum
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
-
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Output.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
-        }
-        public InstanceTemplateNetworkPerformanceConfigArgs build() {
+        }        public InstanceTemplateNetworkPerformanceConfigArgs build() {
             return new InstanceTemplateNetworkPerformanceConfigArgs(totalEgressBandwidthTier);
         }
     }

@@ -127,52 +127,42 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
             this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
-
         public Builder initialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
             this.initialRetryIntervalSeconds = Output.ofNullable(initialRetryIntervalSeconds);
             return this;
         }
-
         public Builder maximumRetryIntervalSeconds(@Nullable Output<Integer> maximumRetryIntervalSeconds) {
             this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
-
         public Builder maximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
             this.maximumRetryIntervalSeconds = Output.ofNullable(maximumRetryIntervalSeconds);
             return this;
         }
-
         public Builder retryAttempts(@Nullable Output<Integer> retryAttempts) {
             this.retryAttempts = retryAttempts;
             return this;
         }
-
         public Builder retryAttempts(@Nullable Integer retryAttempts) {
             this.retryAttempts = Output.ofNullable(retryAttempts);
             return this;
         }
-
         public Builder retryIntervalBackoffMultiplier(@Nullable Output<Double> retryIntervalBackoffMultiplier) {
             this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
-
         public Builder retryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
             this.retryIntervalBackoffMultiplier = Output.ofNullable(retryIntervalBackoffMultiplier);
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
-        }
-        public JobStepExecutionOptionsArgs build() {
+        }        public JobStepExecutionOptionsArgs build() {
             return new JobStepExecutionOptionsArgs(initialRetryIntervalSeconds, maximumRetryIntervalSeconds, retryAttempts, retryIntervalBackoffMultiplier, timeoutSeconds);
         }
     }

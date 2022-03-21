@@ -70,12 +70,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettings {
             this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption);
             return this;
         }
-
         public Builder encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest encryptionAtRest) {
             this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest);
             return this;
-        }
-        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettings build() {
+        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettings build() {
             return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettings(connectionPasswordEncryption, encryptionAtRest);
         }
     }

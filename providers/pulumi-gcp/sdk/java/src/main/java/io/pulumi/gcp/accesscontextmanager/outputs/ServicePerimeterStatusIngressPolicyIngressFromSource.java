@@ -95,12 +95,10 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
             this.accessLevel = accessLevel;
             return this;
         }
-
         public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
-        }
-        public ServicePerimeterStatusIngressPolicyIngressFromSource build() {
+        }        public ServicePerimeterStatusIngressPolicyIngressFromSource build() {
             return new ServicePerimeterStatusIngressPolicyIngressFromSource(accessLevel, resource);
         }
     }

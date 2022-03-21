@@ -180,82 +180,75 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
-
         public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
-
+        public Builder applicationGatewayBackendAddressPools(SubResourceArgs... applicationGatewayBackendAddressPools) {
+            return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
+        }
         public Builder applicationSecurityGroups(@Nullable Output<List<SubResourceArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
-
         public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
             this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
             return this;
         }
-
+        public Builder applicationSecurityGroups(SubResourceArgs... applicationSecurityGroups) {
+            return applicationSecurityGroups(List.of(applicationSecurityGroups));
+        }
         public Builder loadBalancerBackendAddressPools(@Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
-
+        public Builder loadBalancerBackendAddressPools(SubResourceArgs... loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = Output.ofNullable(primary);
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersions>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersions> privateIPAddressVersion) {
             this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public VirtualMachineNetworkInterfaceIPConfigurationArgs build() {
+        }        public VirtualMachineNetworkInterfaceIPConfigurationArgs build() {
             return new VirtualMachineNetworkInterfaceIPConfigurationArgs(applicationGatewayBackendAddressPools, applicationSecurityGroups, loadBalancerBackendAddressPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }
     }

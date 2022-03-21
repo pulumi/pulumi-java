@@ -91,32 +91,26 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersQueryStr
             this.isValueSecret = isValueSecret;
             return this;
         }
-
         public Builder isValueSecret(@Nullable Boolean isValueSecret) {
             this.isValueSecret = Output.ofNullable(isValueSecret);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs build() {
+        }        public EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs build() {
             return new EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs(isValueSecret, key, value);
         }
     }

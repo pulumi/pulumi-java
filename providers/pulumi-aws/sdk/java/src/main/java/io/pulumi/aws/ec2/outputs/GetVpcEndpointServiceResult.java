@@ -251,77 +251,71 @@ public final class GetVpcEndpointServiceResult {
             this.acceptanceRequired = Objects.requireNonNull(acceptanceRequired);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder baseEndpointDnsNames(List<String> baseEndpointDnsNames) {
             this.baseEndpointDnsNames = Objects.requireNonNull(baseEndpointDnsNames);
             return this;
         }
-
+        public Builder baseEndpointDnsNames(String... baseEndpointDnsNames) {
+            return baseEndpointDnsNames(List.of(baseEndpointDnsNames));
+        }
         public Builder filters(@Nullable List<GetVpcEndpointServiceFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcEndpointServiceFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder managesVpcEndpoints(Boolean managesVpcEndpoints) {
             this.managesVpcEndpoints = Objects.requireNonNull(managesVpcEndpoints);
             return this;
         }
-
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
-
         public Builder privateDnsName(String privateDnsName) {
             this.privateDnsName = Objects.requireNonNull(privateDnsName);
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceType(String serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder vpcEndpointPolicySupported(Boolean vpcEndpointPolicySupported) {
             this.vpcEndpointPolicySupported = Objects.requireNonNull(vpcEndpointPolicySupported);
             return this;
-        }
-        public GetVpcEndpointServiceResult build() {
+        }        public GetVpcEndpointServiceResult build() {
             return new GetVpcEndpointServiceResult(acceptanceRequired, arn, availabilityZones, baseEndpointDnsNames, filters, id, managesVpcEndpoints, owner, privateDnsName, service, serviceId, serviceName, serviceType, tags, vpcEndpointPolicySupported);
         }
     }

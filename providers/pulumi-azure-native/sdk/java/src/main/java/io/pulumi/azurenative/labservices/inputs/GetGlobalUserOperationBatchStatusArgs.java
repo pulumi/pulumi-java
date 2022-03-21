@@ -73,12 +73,13 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
-
+        public Builder urls(String... urls) {
+            return urls(List.of(urls));
+        }
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetGlobalUserOperationBatchStatusArgs build() {
+        }        public GetGlobalUserOperationBatchStatusArgs build() {
             return new GetGlobalUserOperationBatchStatusArgs(urls, userName);
         }
     }

@@ -631,182 +631,152 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
             this.availabilityZones = availabilityZones;
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
-
         public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
             this.enableAutoScaling = enableAutoScaling;
             return this;
         }
-
         public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
             this.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
-
         public Builder enableFIPS(@Nullable Boolean enableFIPS) {
             this.enableFIPS = enableFIPS;
             return this;
         }
-
         public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
             this.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
-
         public Builder gpuInstanceProfile(@Nullable String gpuInstanceProfile) {
             this.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
-
         public Builder kubeletConfig(@Nullable KubeletConfigResponse kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
-
         public Builder kubeletDiskType(@Nullable String kubeletDiskType) {
             this.kubeletDiskType = kubeletDiskType;
             return this;
         }
-
         public Builder linuxOSConfig(@Nullable LinuxOSConfigResponse linuxOSConfig) {
             this.linuxOSConfig = linuxOSConfig;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder maxPods(@Nullable Integer maxPods) {
             this.maxPods = maxPods;
             return this;
         }
-
         public Builder minCount(@Nullable Integer minCount) {
             this.minCount = minCount;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeImageVersion(String nodeImageVersion) {
             this.nodeImageVersion = Objects.requireNonNull(nodeImageVersion);
             return this;
         }
-
         public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
             this.nodeLabels = nodeLabels;
             return this;
         }
-
         public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
-
         public Builder nodeTaints(@Nullable List<String> nodeTaints) {
             this.nodeTaints = nodeTaints;
             return this;
         }
-
+        public Builder nodeTaints(String... nodeTaints) {
+            return nodeTaints(List.of(nodeTaints));
+        }
         public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
             this.orchestratorVersion = orchestratorVersion;
             return this;
         }
-
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
-
         public Builder osDiskType(@Nullable String osDiskType) {
             this.osDiskType = osDiskType;
             return this;
         }
-
         public Builder osSKU(@Nullable String osSKU) {
             this.osSKU = osSKU;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder podSubnetID(@Nullable String podSubnetID) {
             this.podSubnetID = podSubnetID;
             return this;
         }
-
         public Builder powerState(PowerStateResponse powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
             this.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
-
         public Builder scaleSetEvictionPolicy(@Nullable String scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
-
         public Builder scaleSetPriority(@Nullable String scaleSetPriority) {
             this.scaleSetPriority = scaleSetPriority;
             return this;
         }
-
         public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }
-
         public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
             this.vnetSubnetID = vnetSubnetID;
             return this;
-        }
-        public ManagedClusterAgentPoolProfileResponse build() {
+        }        public ManagedClusterAgentPoolProfileResponse build() {
             return new ManagedClusterAgentPoolProfileResponse(availabilityZones, count, enableAutoScaling, enableEncryptionAtHost, enableFIPS, enableNodePublicIP, gpuInstanceProfile, kubeletConfig, kubeletDiskType, linuxOSConfig, maxCount, maxPods, minCount, mode, name, nodeImageVersion, nodeLabels, nodePublicIPPrefixID, nodeTaints, orchestratorVersion, osDiskSizeGB, osDiskType, osSKU, osType, podSubnetID, powerState, provisioningState, proximityPlacementGroupID, scaleSetEvictionPolicy, scaleSetPriority, spotMaxPrice, tags, type, upgradeSettings, vmSize, vnetSubnetID);
         }
     }

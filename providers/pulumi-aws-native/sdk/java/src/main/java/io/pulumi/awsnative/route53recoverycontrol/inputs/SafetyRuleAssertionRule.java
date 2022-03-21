@@ -78,12 +78,13 @@ public final class SafetyRuleAssertionRule extends io.pulumi.resources.InvokeArg
             this.assertedControls = Objects.requireNonNull(assertedControls);
             return this;
         }
-
+        public Builder assertedControls(String... assertedControls) {
+            return assertedControls(List.of(assertedControls));
+        }
         public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
-        }
-        public SafetyRuleAssertionRule build() {
+        }        public SafetyRuleAssertionRule build() {
             return new SafetyRuleAssertionRule(assertedControls, waitPeriodMs);
         }
     }

@@ -111,42 +111,34 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Output.ofNullable(mimeType);
             return this;
         }
-
         public Builder unpack(@Nullable Output<Boolean> unpack) {
             this.unpack = unpack;
             return this;
         }
-
         public Builder unpack(@Nullable Boolean unpack) {
             this.unpack = Output.ofNullable(unpack);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ImageAssetArgs build() {
+        }        public ImageAssetArgs build() {
             return new ImageAssetArgs(id, mimeType, unpack, url);
         }
     }

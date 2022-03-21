@@ -102,22 +102,18 @@ public final class PackageInformationResponse {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public Builder driveCount(Double driveCount) {
             this.driveCount = Objects.requireNonNull(driveCount);
             return this;
         }
-
         public Builder shipDate(String shipDate) {
             this.shipDate = Objects.requireNonNull(shipDate);
             return this;
         }
-
         public Builder trackingNumber(String trackingNumber) {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
-        }
-        public PackageInformationResponse build() {
+        }        public PackageInformationResponse build() {
             return new PackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
         }
     }

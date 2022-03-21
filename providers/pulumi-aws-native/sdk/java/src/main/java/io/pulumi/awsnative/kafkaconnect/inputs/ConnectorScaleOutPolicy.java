@@ -58,8 +58,7 @@ public final class ConnectorScaleOutPolicy extends io.pulumi.resources.InvokeArg
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
-        }
-        public ConnectorScaleOutPolicy build() {
+        }        public ConnectorScaleOutPolicy build() {
             return new ConnectorScaleOutPolicy(cpuUtilizationPercentage);
         }
     }

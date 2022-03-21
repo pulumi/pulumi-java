@@ -140,62 +140,68 @@ public final class SkuSettingResponse {
             this.capabilities = capabilities;
             return this;
         }
-
+        public Builder capabilities(SkuCapabilityResponse... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder capacity(@Nullable SkuSettingResponseCapacity capacity) {
             this.capacity = capacity;
             return this;
         }
-
         public Builder costs(@Nullable List<SkuCostResponse> costs) {
             this.costs = costs;
             return this;
         }
-
+        public Builder costs(SkuCostResponse... costs) {
+            return costs(List.of(costs));
+        }
         public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder locationInfo(@Nullable List<SkuLocationInfoResponse> locationInfo) {
             this.locationInfo = locationInfo;
             return this;
         }
-
+        public Builder locationInfo(SkuLocationInfoResponse... locationInfo) {
+            return locationInfo(List.of(locationInfo));
+        }
         public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder requiredQuotaIds(@Nullable List<String> requiredQuotaIds) {
             this.requiredQuotaIds = requiredQuotaIds;
             return this;
         }
-
+        public Builder requiredQuotaIds(String... requiredQuotaIds) {
+            return requiredQuotaIds(List.of(requiredQuotaIds));
+        }
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SkuSettingResponse build() {
+        }        public SkuSettingResponse build() {
             return new SkuSettingResponse(capabilities, capacity, costs, family, kind, locationInfo, locations, name, requiredFeatures, requiredQuotaIds, size, tier);
         }
     }

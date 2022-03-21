@@ -72,12 +72,10 @@ public final class GetOperationalizationClusterArgs extends io.pulumi.resources.
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetOperationalizationClusterArgs build() {
+        }        public GetOperationalizationClusterArgs build() {
             return new GetOperationalizationClusterArgs(clusterName, resourceGroupName);
         }
     }

@@ -156,67 +156,60 @@ public final class GetWorkloadIdentityPoolProviderResult {
             this.attributeCondition = Objects.requireNonNull(attributeCondition);
             return this;
         }
-
         public Builder attributeMapping(Map<String,String> attributeMapping) {
             this.attributeMapping = Objects.requireNonNull(attributeMapping);
             return this;
         }
-
         public Builder aws(List<GetWorkloadIdentityPoolProviderAw> aws) {
             this.aws = Objects.requireNonNull(aws);
             return this;
         }
-
+        public Builder aws(GetWorkloadIdentityPoolProviderAw... aws) {
+            return aws(List.of(aws));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder oidcs(List<GetWorkloadIdentityPoolProviderOidc> oidcs) {
             this.oidcs = Objects.requireNonNull(oidcs);
             return this;
         }
-
+        public Builder oidcs(GetWorkloadIdentityPoolProviderOidc... oidcs) {
+            return oidcs(List.of(oidcs));
+        }
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }
-
         public Builder workloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
             return this;
-        }
-        public GetWorkloadIdentityPoolProviderResult build() {
+        }        public GetWorkloadIdentityPoolProviderResult build() {
             return new GetWorkloadIdentityPoolProviderResult(attributeCondition, attributeMapping, aws, description, disabled, displayName, id, name, oidcs, project, state, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }
     }

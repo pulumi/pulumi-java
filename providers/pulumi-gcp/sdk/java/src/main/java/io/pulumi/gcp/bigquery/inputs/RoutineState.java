@@ -287,142 +287,120 @@ public final class RoutineState extends io.pulumi.resources.ResourceArgs {
             this.arguments = arguments;
             return this;
         }
-
         public Builder arguments(@Nullable List<RoutineArgumentGetArgs> arguments) {
             this.arguments = Output.ofNullable(arguments);
             return this;
         }
-
+        public Builder arguments(RoutineArgumentGetArgs... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable Integer creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder definitionBody(@Nullable Output<String> definitionBody) {
             this.definitionBody = definitionBody;
             return this;
         }
-
         public Builder definitionBody(@Nullable String definitionBody) {
             this.definitionBody = Output.ofNullable(definitionBody);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder determinismLevel(@Nullable Output<String> determinismLevel) {
             this.determinismLevel = determinismLevel;
             return this;
         }
-
         public Builder determinismLevel(@Nullable String determinismLevel) {
             this.determinismLevel = Output.ofNullable(determinismLevel);
             return this;
         }
-
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             this.importedLibraries = importedLibraries;
             return this;
         }
-
         public Builder importedLibraries(@Nullable List<String> importedLibraries) {
             this.importedLibraries = Output.ofNullable(importedLibraries);
             return this;
         }
-
+        public Builder importedLibraries(String... importedLibraries) {
+            return importedLibraries(List.of(importedLibraries));
+        }
         public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
             this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder returnTableType(@Nullable Output<String> returnTableType) {
             this.returnTableType = returnTableType;
             return this;
         }
-
         public Builder returnTableType(@Nullable String returnTableType) {
             this.returnTableType = Output.ofNullable(returnTableType);
             return this;
         }
-
         public Builder returnType(@Nullable Output<String> returnType) {
             this.returnType = returnType;
             return this;
         }
-
         public Builder returnType(@Nullable String returnType) {
             this.returnType = Output.ofNullable(returnType);
             return this;
         }
-
         public Builder routineId(@Nullable Output<String> routineId) {
             this.routineId = routineId;
             return this;
         }
-
         public Builder routineId(@Nullable String routineId) {
             this.routineId = Output.ofNullable(routineId);
             return this;
         }
-
         public Builder routineType(@Nullable Output<String> routineType) {
             this.routineType = routineType;
             return this;
         }
-
         public Builder routineType(@Nullable String routineType) {
             this.routineType = Output.ofNullable(routineType);
             return this;
-        }
-        public RoutineState build() {
+        }        public RoutineState build() {
             return new RoutineState(arguments, creationTime, datasetId, definitionBody, description, determinismLevel, importedLibraries, language, lastModifiedTime, project, returnTableType, returnType, routineId, routineType);
         }
     }

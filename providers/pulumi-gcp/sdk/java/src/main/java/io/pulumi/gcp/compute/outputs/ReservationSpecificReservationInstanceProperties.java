@@ -118,22 +118,24 @@ public final class ReservationSpecificReservationInstanceProperties {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
+        public Builder guestAccelerators(ReservationSpecificReservationInstancePropertiesGuestAccelerator... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder localSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
-
+        public Builder localSsds(ReservationSpecificReservationInstancePropertiesLocalSsd... localSsds) {
+            return localSsds(List.of(localSsds));
+        }
         public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
-        }
-        public ReservationSpecificReservationInstanceProperties build() {
+        }        public ReservationSpecificReservationInstanceProperties build() {
             return new ReservationSpecificReservationInstanceProperties(guestAccelerators, localSsds, machineType, minCpuPlatform);
         }
     }

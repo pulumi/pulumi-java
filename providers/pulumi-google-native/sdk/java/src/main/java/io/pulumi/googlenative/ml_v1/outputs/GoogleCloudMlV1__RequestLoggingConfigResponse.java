@@ -70,12 +70,10 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse {
             this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
             return this;
         }
-
         public Builder samplingPercentage(Double samplingPercentage) {
             this.samplingPercentage = Objects.requireNonNull(samplingPercentage);
             return this;
-        }
-        public GoogleCloudMlV1__RequestLoggingConfigResponse build() {
+        }        public GoogleCloudMlV1__RequestLoggingConfigResponse build() {
             return new GoogleCloudMlV1__RequestLoggingConfigResponse(bigqueryTableName, samplingPercentage);
         }
     }

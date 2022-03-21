@@ -203,102 +203,82 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder dataSetId(Output<String> dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder dataSetId(String dataSetId) {
             this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
-
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
             this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
-
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
-
         public Builder sqlServerResourceId(Output<String> sqlServerResourceId) {
             this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
             return this;
         }
-
         public Builder sqlServerResourceId(String sqlServerResourceId) {
             this.sqlServerResourceId = Output.of(Objects.requireNonNull(sqlServerResourceId));
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public SqlDBTableDataSetMappingArgs build() {
+        }        public SqlDBTableDataSetMappingArgs build() {
             return new SqlDBTableDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, databaseName, kind, resourceGroupName, schemaName, shareSubscriptionName, sqlServerResourceId, tableName);
         }
     }

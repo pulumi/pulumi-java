@@ -143,62 +143,50 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             this.consumerGroupName = consumerGroupName;
             return this;
         }
-
         public Builder consumerGroupName(@Nullable String consumerGroupName) {
             this.consumerGroupName = Output.ofNullable(consumerGroupName);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder iotHubNamespace(@Nullable Output<String> iotHubNamespace) {
             this.iotHubNamespace = iotHubNamespace;
             return this;
         }
-
         public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
             this.iotHubNamespace = Output.ofNullable(iotHubNamespace);
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public IoTHubStreamInputDataSourceArgs build() {
+        }        public IoTHubStreamInputDataSourceArgs build() {
             return new IoTHubStreamInputDataSourceArgs(consumerGroupName, endpoint, iotHubNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }
     }

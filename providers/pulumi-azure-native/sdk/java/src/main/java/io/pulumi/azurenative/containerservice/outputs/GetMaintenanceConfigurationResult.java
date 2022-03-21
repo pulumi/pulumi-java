@@ -138,32 +138,32 @@ public final class GetMaintenanceConfigurationResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notAllowedTime(@Nullable List<TimeSpanResponse> notAllowedTime) {
             this.notAllowedTime = notAllowedTime;
             return this;
         }
-
+        public Builder notAllowedTime(TimeSpanResponse... notAllowedTime) {
+            return notAllowedTime(List.of(notAllowedTime));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder timeInWeek(@Nullable List<TimeInWeekResponse> timeInWeek) {
             this.timeInWeek = timeInWeek;
             return this;
         }
-
+        public Builder timeInWeek(TimeInWeekResponse... timeInWeek) {
+            return timeInWeek(List.of(timeInWeek));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMaintenanceConfigurationResult build() {
+        }        public GetMaintenanceConfigurationResult build() {
             return new GetMaintenanceConfigurationResult(id, name, notAllowedTime, systemData, timeInWeek, type);
         }
     }

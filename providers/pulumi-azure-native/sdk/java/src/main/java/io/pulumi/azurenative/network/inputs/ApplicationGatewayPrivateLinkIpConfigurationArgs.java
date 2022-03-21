@@ -146,62 +146,50 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = Output.ofNullable(primary);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public ApplicationGatewayPrivateLinkIpConfigurationArgs build() {
+        }        public ApplicationGatewayPrivateLinkIpConfigurationArgs build() {
             return new ApplicationGatewayPrivateLinkIpConfigurationArgs(id, name, primary, privateIPAddress, privateIPAllocationMethod, subnet);
         }
     }

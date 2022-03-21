@@ -138,32 +138,26 @@ public final class WorkgroupConfiguration {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
-
         public Builder enforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
             return this;
         }
-
         public Builder engineVersion(@Nullable WorkgroupConfigurationEngineVersion engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder publishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = publishCloudwatchMetricsEnabled;
             return this;
         }
-
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
-
         public Builder resultConfiguration(@Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
-        }
-        public WorkgroupConfiguration build() {
+        }        public WorkgroupConfiguration build() {
             return new WorkgroupConfiguration(bytesScannedCutoffPerQuery, enforceWorkgroupConfiguration, engineVersion, publishCloudwatchMetricsEnabled, requesterPaysEnabled, resultConfiguration);
         }
     }

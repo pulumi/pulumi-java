@@ -160,37 +160,30 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
-
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
-
         public Builder decodingConfiguration(@Nullable String decodingConfiguration) {
             this.decodingConfiguration = decodingConfiguration;
             return this;
         }
-
         public Builder demodulationConfiguration(@Nullable String demodulationConfiguration) {
             this.demodulationConfiguration = demodulationConfiguration;
             return this;
         }
-
         public Builder encodingConfiguration(@Nullable String encodingConfiguration) {
             this.encodingConfiguration = encodingConfiguration;
             return this;
         }
-
         public Builder endPoint(EndPointResponse endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
-
         public Builder modulationConfiguration(@Nullable String modulationConfiguration) {
             this.modulationConfiguration = modulationConfiguration;
             return this;
-        }
-        public ContactProfileLinkChannelResponse build() {
+        }        public ContactProfileLinkChannelResponse build() {
             return new ContactProfileLinkChannelResponse(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);
         }
     }

@@ -104,22 +104,18 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
             this.loadBalancerArn = loadBalancerArn;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetListenerArgs build() {
+        }        public GetListenerArgs build() {
             return new GetListenerArgs(arn, loadBalancerArn, port, tags);
         }
     }

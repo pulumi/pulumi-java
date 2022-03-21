@@ -51,8 +51,7 @@ public final class CustomLevelResponse {
         public Builder expr(ExprResponse expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
-        }
-        public CustomLevelResponse build() {
+        }        public CustomLevelResponse build() {
             return new CustomLevelResponse(expr);
         }
     }

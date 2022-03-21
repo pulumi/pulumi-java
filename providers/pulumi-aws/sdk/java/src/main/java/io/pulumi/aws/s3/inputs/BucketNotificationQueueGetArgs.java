@@ -123,52 +123,45 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Output.of(Objects.requireNonNull(events));
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder filterPrefix(@Nullable Output<String> filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
-
         public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = Output.ofNullable(filterPrefix);
             return this;
         }
-
         public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
-
         public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = Output.ofNullable(filterSuffix);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder queueArn(Output<String> queueArn) {
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
         }
-
         public Builder queueArn(String queueArn) {
             this.queueArn = Output.of(Objects.requireNonNull(queueArn));
             return this;
-        }
-        public BucketNotificationQueueGetArgs build() {
+        }        public BucketNotificationQueueGetArgs build() {
             return new BucketNotificationQueueGetArgs(events, filterPrefix, filterSuffix, id, queueArn);
         }
     }

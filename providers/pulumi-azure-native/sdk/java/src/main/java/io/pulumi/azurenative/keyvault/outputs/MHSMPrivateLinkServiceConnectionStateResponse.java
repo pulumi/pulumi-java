@@ -87,17 +87,14 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse {
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public MHSMPrivateLinkServiceConnectionStateResponse build() {
+        }        public MHSMPrivateLinkServiceConnectionStateResponse build() {
             return new MHSMPrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }
     }

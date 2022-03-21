@@ -53,12 +53,10 @@ public final class LaunchConfigurationEphemeralBlockDevice {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public LaunchConfigurationEphemeralBlockDevice build() {
+        }        public LaunchConfigurationEphemeralBlockDevice build() {
             return new LaunchConfigurationEphemeralBlockDevice(deviceName, virtualName);
         }
     }

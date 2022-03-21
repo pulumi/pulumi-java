@@ -57,12 +57,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudwatchRoleArn = cloudwatchRoleArn;
             return this;
         }
-
         public Builder cloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
             this.cloudwatchRoleArn = Output.ofNullable(cloudwatchRoleArn);
             return this;
-        }
-        public AccountArgs build() {
+        }        public AccountArgs build() {
             return new AccountArgs(cloudwatchRoleArn);
         }
     }

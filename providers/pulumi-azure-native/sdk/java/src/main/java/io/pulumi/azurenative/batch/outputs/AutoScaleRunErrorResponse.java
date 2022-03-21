@@ -79,17 +79,17 @@ public final class AutoScaleRunErrorResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(@Nullable List<AutoScaleRunErrorResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(AutoScaleRunErrorResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public AutoScaleRunErrorResponse build() {
+        }        public AutoScaleRunErrorResponse build() {
             return new AutoScaleRunErrorResponse(code, details, message);
         }
     }

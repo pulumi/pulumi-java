@@ -77,27 +77,22 @@ public final class GetInstanceServerCaCert {
             this.cert = Objects.requireNonNull(cert);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
-        }
-        public GetInstanceServerCaCert build() {
+        }        public GetInstanceServerCaCert build() {
             return new GetInstanceServerCaCert(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }
     }

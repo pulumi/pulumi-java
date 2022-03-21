@@ -179,82 +179,69 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
-
         public Builder addresses(List<String> addresses) {
             this.addresses = Output.of(Objects.requireNonNull(addresses));
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder conditions(@Nullable Output<EndpointConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable EndpointConditionsArgs conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-
         public Builder deprecatedTopology(@Nullable Output<Map<String,String>> deprecatedTopology) {
             this.deprecatedTopology = deprecatedTopology;
             return this;
         }
-
         public Builder deprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
             this.deprecatedTopology = Output.ofNullable(deprecatedTopology);
             return this;
         }
-
         public Builder hints(@Nullable Output<EndpointHintsArgs> hints) {
             this.hints = hints;
             return this;
         }
-
         public Builder hints(@Nullable EndpointHintsArgs hints) {
             this.hints = Output.ofNullable(hints);
             return this;
         }
-
         public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder nodeName(@Nullable Output<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
-
         public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Output.ofNullable(nodeName);
             return this;
         }
-
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
-
         public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
             this.targetRef = Output.ofNullable(targetRef);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(addresses, conditions, deprecatedTopology, hints, hostname, nodeName, targetRef, zone);
         }
     }

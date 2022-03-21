@@ -72,22 +72,18 @@ public final class ConnectionAliasAssociation {
             this.associatedAccountId = associatedAccountId;
             return this;
         }
-
         public Builder associationStatus(@Nullable ConnectionAliasAssociationAssociationStatus associationStatus) {
             this.associationStatus = associationStatus;
             return this;
         }
-
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public ConnectionAliasAssociation build() {
+        }        public ConnectionAliasAssociation build() {
             return new ConnectionAliasAssociation(associatedAccountId, associationStatus, connectionIdentifier, resourceId);
         }
     }

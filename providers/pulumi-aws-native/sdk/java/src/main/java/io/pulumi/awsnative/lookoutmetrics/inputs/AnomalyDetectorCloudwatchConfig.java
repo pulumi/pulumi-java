@@ -50,8 +50,7 @@ public final class AnomalyDetectorCloudwatchConfig extends io.pulumi.resources.I
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnomalyDetectorCloudwatchConfig build() {
+        }        public AnomalyDetectorCloudwatchConfig build() {
             return new AnomalyDetectorCloudwatchConfig(roleArn);
         }
     }

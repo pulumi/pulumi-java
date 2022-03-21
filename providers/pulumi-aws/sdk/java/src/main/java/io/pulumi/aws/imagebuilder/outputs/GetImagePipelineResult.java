@@ -306,87 +306,76 @@ public final class GetImagePipelineResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder dateLastRun(String dateLastRun) {
             this.dateLastRun = Objects.requireNonNull(dateLastRun);
             return this;
         }
-
         public Builder dateNextRun(String dateNextRun) {
             this.dateNextRun = Objects.requireNonNull(dateNextRun);
             return this;
         }
-
         public Builder dateUpdated(String dateUpdated) {
             this.dateUpdated = Objects.requireNonNull(dateUpdated);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder distributionConfigurationArn(String distributionConfigurationArn) {
             this.distributionConfigurationArn = Objects.requireNonNull(distributionConfigurationArn);
             return this;
         }
-
         public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Objects.requireNonNull(enhancedImageMetadataEnabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageRecipeArn(String imageRecipeArn) {
             this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
             return this;
         }
-
         public Builder imageTestsConfigurations(List<GetImagePipelineImageTestsConfiguration> imageTestsConfigurations) {
             this.imageTestsConfigurations = Objects.requireNonNull(imageTestsConfigurations);
             return this;
         }
-
+        public Builder imageTestsConfigurations(GetImagePipelineImageTestsConfiguration... imageTestsConfigurations) {
+            return imageTestsConfigurations(List.of(imageTestsConfigurations));
+        }
         public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder schedules(List<GetImagePipelineSchedule> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
+        public Builder schedules(GetImagePipelineSchedule... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetImagePipelineResult build() {
+        }        public GetImagePipelineResult build() {
             return new GetImagePipelineResult(arn, dateCreated, dateLastRun, dateNextRun, dateUpdated, description, distributionConfigurationArn, enhancedImageMetadataEnabled, id, imageRecipeArn, imageTestsConfigurations, infrastructureConfigurationArn, name, platform, schedules, status, tags);
         }
     }

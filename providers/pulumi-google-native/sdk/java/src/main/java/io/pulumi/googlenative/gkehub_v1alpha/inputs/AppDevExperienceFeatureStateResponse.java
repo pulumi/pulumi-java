@@ -58,8 +58,7 @@ public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resour
         public Builder networkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
-        }
-        public AppDevExperienceFeatureStateResponse build() {
+        }        public AppDevExperienceFeatureStateResponse build() {
             return new AppDevExperienceFeatureStateResponse(networkingInstallSucceeded);
         }
     }

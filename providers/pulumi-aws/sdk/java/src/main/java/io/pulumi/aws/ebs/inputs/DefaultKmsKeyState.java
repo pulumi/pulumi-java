@@ -57,12 +57,10 @@ public final class DefaultKmsKeyState extends io.pulumi.resources.ResourceArgs {
             this.keyArn = keyArn;
             return this;
         }
-
         public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = Output.ofNullable(keyArn);
             return this;
-        }
-        public DefaultKmsKeyState build() {
+        }        public DefaultKmsKeyState build() {
             return new DefaultKmsKeyState(keyArn);
         }
     }

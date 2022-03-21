@@ -106,22 +106,21 @@ public final class DedicatedHostInstanceViewWithNameResponse {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
-
         public Builder availableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
             this.availableCapacity = availableCapacity;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-        public DedicatedHostInstanceViewWithNameResponse build() {
+        public Builder statuses(InstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }        public DedicatedHostInstanceViewWithNameResponse build() {
             return new DedicatedHostInstanceViewWithNameResponse(assetId, availableCapacity, name, statuses);
         }
     }

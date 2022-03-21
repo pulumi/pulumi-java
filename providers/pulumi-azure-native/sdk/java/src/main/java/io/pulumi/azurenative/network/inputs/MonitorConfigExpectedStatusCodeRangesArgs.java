@@ -78,22 +78,18 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Integer max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public MonitorConfigExpectedStatusCodeRangesArgs build() {
+        }        public MonitorConfigExpectedStatusCodeRangesArgs build() {
             return new MonitorConfigExpectedStatusCodeRangesArgs(max, min);
         }
     }

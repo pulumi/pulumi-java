@@ -104,22 +104,18 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
-
         public Builder principalAssignmentName(String principalAssignmentName) {
             this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetKustoPoolPrincipalAssignmentArgs build() {
+        }        public GetKustoPoolPrincipalAssignmentArgs build() {
             return new GetKustoPoolPrincipalAssignmentArgs(kustoPoolName, principalAssignmentName, resourceGroupName, workspaceName);
         }
     }

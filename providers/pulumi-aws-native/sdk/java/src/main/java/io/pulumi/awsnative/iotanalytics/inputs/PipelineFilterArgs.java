@@ -78,32 +78,26 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = Output.ofNullable(next);
             return this;
-        }
-        public PipelineFilterArgs build() {
+        }        public PipelineFilterArgs build() {
             return new PipelineFilterArgs(filter, name, next);
         }
     }

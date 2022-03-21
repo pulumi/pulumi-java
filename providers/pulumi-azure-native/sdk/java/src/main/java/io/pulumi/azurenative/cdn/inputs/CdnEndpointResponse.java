@@ -60,8 +60,7 @@ public final class CdnEndpointResponse extends io.pulumi.resources.InvokeArgs {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public CdnEndpointResponse build() {
+        }        public CdnEndpointResponse build() {
             return new CdnEndpointResponse(id);
         }
     }

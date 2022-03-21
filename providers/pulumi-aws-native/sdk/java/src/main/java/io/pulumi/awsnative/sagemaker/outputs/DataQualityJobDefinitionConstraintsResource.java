@@ -53,8 +53,7 @@ public final class DataQualityJobDefinitionConstraintsResource {
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = s3Uri;
             return this;
-        }
-        public DataQualityJobDefinitionConstraintsResource build() {
+        }        public DataQualityJobDefinitionConstraintsResource build() {
             return new DataQualityJobDefinitionConstraintsResource(s3Uri);
         }
     }

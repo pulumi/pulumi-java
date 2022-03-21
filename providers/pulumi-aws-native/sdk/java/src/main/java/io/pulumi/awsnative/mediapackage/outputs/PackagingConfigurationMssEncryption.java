@@ -43,8 +43,7 @@ public final class PackagingConfigurationMssEncryption {
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
-        }
-        public PackagingConfigurationMssEncryption build() {
+        }        public PackagingConfigurationMssEncryption build() {
             return new PackagingConfigurationMssEncryption(spekeKeyProvider);
         }
     }

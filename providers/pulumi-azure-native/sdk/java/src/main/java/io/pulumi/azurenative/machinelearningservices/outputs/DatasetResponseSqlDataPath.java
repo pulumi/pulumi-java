@@ -102,22 +102,18 @@ public final class DatasetResponseSqlDataPath {
             this.queryTimeout = Objects.requireNonNull(queryTimeout);
             return this;
         }
-
         public Builder sqlQuery(String sqlQuery) {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }
-
         public Builder sqlStoredProcedureName(String sqlStoredProcedureName) {
             this.sqlStoredProcedureName = Objects.requireNonNull(sqlStoredProcedureName);
             return this;
         }
-
         public Builder sqlTableName(String sqlTableName) {
             this.sqlTableName = Objects.requireNonNull(sqlTableName);
             return this;
-        }
-        public DatasetResponseSqlDataPath build() {
+        }        public DatasetResponseSqlDataPath build() {
             return new DatasetResponseSqlDataPath(queryTimeout, sqlQuery, sqlStoredProcedureName, sqlTableName);
         }
     }

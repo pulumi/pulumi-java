@@ -140,62 +140,53 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
             this.attributeMapping = attributeMapping;
             return this;
         }
-
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
             this.attributeMapping = Output.ofNullable(attributeMapping);
             return this;
         }
-
         public Builder idpIdentifiers(@Nullable Output<List<String>> idpIdentifiers) {
             this.idpIdentifiers = idpIdentifiers;
             return this;
         }
-
         public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
             this.idpIdentifiers = Output.ofNullable(idpIdentifiers);
             return this;
         }
-
+        public Builder idpIdentifiers(String... idpIdentifiers) {
+            return idpIdentifiers(List.of(idpIdentifiers));
+        }
         public Builder providerDetails(@Nullable Output<Map<String,String>> providerDetails) {
             this.providerDetails = providerDetails;
             return this;
         }
-
         public Builder providerDetails(@Nullable Map<String,String> providerDetails) {
             this.providerDetails = Output.ofNullable(providerDetails);
             return this;
         }
-
         public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
-
         public Builder providerName(@Nullable String providerName) {
             this.providerName = Output.ofNullable(providerName);
             return this;
         }
-
         public Builder providerType(@Nullable Output<String> providerType) {
             this.providerType = providerType;
             return this;
         }
-
         public Builder providerType(@Nullable String providerType) {
             this.providerType = Output.ofNullable(providerType);
             return this;
         }
-
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
-
         public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Output.ofNullable(userPoolId);
             return this;
-        }
-        public IdentityProviderState build() {
+        }        public IdentityProviderState build() {
             return new IdentityProviderState(attributeMapping, idpIdentifiers, providerDetails, providerName, providerType, userPoolId);
         }
     }

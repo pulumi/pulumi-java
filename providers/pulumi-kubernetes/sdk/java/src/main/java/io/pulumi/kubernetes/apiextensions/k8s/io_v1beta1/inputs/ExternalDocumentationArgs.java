@@ -70,22 +70,18 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ExternalDocumentationArgs build() {
+        }        public ExternalDocumentationArgs build() {
             return new ExternalDocumentationArgs(description, url);
         }
     }

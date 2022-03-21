@@ -90,17 +90,14 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetLoadBalancerArgs build() {
+        }        public GetLoadBalancerArgs build() {
             return new GetLoadBalancerArgs(expand, loadBalancerName, resourceGroupName);
         }
     }

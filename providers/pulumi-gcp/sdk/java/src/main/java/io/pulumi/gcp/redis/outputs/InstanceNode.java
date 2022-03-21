@@ -63,12 +63,10 @@ public final class InstanceNode {
             this.id = id;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public InstanceNode build() {
+        }        public InstanceNode build() {
             return new InstanceNode(id, zone);
         }
     }

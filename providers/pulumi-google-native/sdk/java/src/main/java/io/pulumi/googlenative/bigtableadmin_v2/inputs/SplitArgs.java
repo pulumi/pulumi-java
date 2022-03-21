@@ -61,12 +61,10 @@ public final class SplitArgs extends io.pulumi.resources.ResourceArgs {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public SplitArgs build() {
+        }        public SplitArgs build() {
             return new SplitArgs(key);
         }
     }

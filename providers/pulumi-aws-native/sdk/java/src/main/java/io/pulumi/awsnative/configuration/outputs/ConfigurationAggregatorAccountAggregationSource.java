@@ -65,17 +65,20 @@ public final class ConfigurationAggregatorAccountAggregationSource {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
-
+        public Builder accountIds(String... accountIds) {
+            return accountIds(List.of(accountIds));
+        }
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
-
         public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
-        public ConfigurationAggregatorAccountAggregationSource build() {
+        public Builder awsRegions(String... awsRegions) {
+            return awsRegions(List.of(awsRegions));
+        }        public ConfigurationAggregatorAccountAggregationSource build() {
             return new ConfigurationAggregatorAccountAggregationSource(accountIds, allAwsRegions, awsRegions);
         }
     }

@@ -79,22 +79,21 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder cidr(String cidr) {
             this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
-
         public Builder except(@Nullable Output<List<String>> except) {
             this.except = except;
             return this;
         }
-
         public Builder except(@Nullable List<String> except) {
             this.except = Output.ofNullable(except);
             return this;
         }
-        public IPBlockArgs build() {
+        public Builder except(String... except) {
+            return except(List.of(except));
+        }        public IPBlockArgs build() {
             return new IPBlockArgs(cidr, except);
         }
     }

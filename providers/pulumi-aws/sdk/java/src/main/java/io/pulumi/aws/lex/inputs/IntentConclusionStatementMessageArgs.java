@@ -92,32 +92,26 @@ public final class IntentConclusionStatementMessageArgs extends io.pulumi.resour
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder groupNumber(@Nullable Output<Integer> groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = Output.ofNullable(groupNumber);
             return this;
-        }
-        public IntentConclusionStatementMessageArgs build() {
+        }        public IntentConclusionStatementMessageArgs build() {
             return new IntentConclusionStatementMessageArgs(content, contentType, groupNumber);
         }
     }

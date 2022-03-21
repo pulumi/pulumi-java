@@ -51,8 +51,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccess {
         public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
-        }
-        public FunctionEventInvokeConfigDestinationConfigOnSuccess build() {
+        }        public FunctionEventInvokeConfigDestinationConfigOnSuccess build() {
             return new FunctionEventInvokeConfigDestinationConfigOnSuccess(destination);
         }
     }

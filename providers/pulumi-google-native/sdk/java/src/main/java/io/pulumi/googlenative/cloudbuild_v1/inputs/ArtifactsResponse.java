@@ -78,12 +78,13 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
             this.images = Objects.requireNonNull(images);
             return this;
         }
-
+        public Builder images(String... images) {
+            return images(List.of(images));
+        }
         public Builder objects(ArtifactObjectsResponse objects) {
             this.objects = Objects.requireNonNull(objects);
             return this;
-        }
-        public ArtifactsResponse build() {
+        }        public ArtifactsResponse build() {
             return new ArtifactsResponse(images, objects);
         }
     }

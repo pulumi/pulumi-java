@@ -57,12 +57,10 @@ public final class InstanceCreditSpecificationGetArgs extends io.pulumi.resource
             this.cpuCredits = cpuCredits;
             return this;
         }
-
         public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = Output.ofNullable(cpuCredits);
             return this;
-        }
-        public InstanceCreditSpecificationGetArgs build() {
+        }        public InstanceCreditSpecificationGetArgs build() {
             return new InstanceCreditSpecificationGetArgs(cpuCredits);
         }
     }

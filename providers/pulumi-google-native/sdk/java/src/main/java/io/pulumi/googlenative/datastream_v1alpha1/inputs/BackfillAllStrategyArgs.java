@@ -79,22 +79,18 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
             this.mysqlExcludedObjects = mysqlExcludedObjects;
             return this;
         }
-
         public Builder mysqlExcludedObjects(@Nullable MysqlRdbmsArgs mysqlExcludedObjects) {
             this.mysqlExcludedObjects = Output.ofNullable(mysqlExcludedObjects);
             return this;
         }
-
         public Builder oracleExcludedObjects(@Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
             this.oracleExcludedObjects = oracleExcludedObjects;
             return this;
         }
-
         public Builder oracleExcludedObjects(@Nullable OracleRdbmsArgs oracleExcludedObjects) {
             this.oracleExcludedObjects = Output.ofNullable(oracleExcludedObjects);
             return this;
-        }
-        public BackfillAllStrategyArgs build() {
+        }        public BackfillAllStrategyArgs build() {
             return new BackfillAllStrategyArgs(mysqlExcludedObjects, oracleExcludedObjects);
         }
     }

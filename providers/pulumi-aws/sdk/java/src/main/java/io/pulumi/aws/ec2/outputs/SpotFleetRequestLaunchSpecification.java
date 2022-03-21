@@ -253,102 +253,94 @@ public final class SpotFleetRequestLaunchSpecification {
             this.ami = Objects.requireNonNull(ami);
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder ebsBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-
+        public Builder ebsBlockDevices(SpotFleetRequestLaunchSpecificationEbsBlockDevice... ebsBlockDevices) {
+            return ebsBlockDevices(List.of(ebsBlockDevices));
+        }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ephemeralBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-
+        public Builder ephemeralBlockDevices(SpotFleetRequestLaunchSpecificationEphemeralBlockDevice... ephemeralBlockDevices) {
+            return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
+        }
         public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-
         public Builder iamInstanceProfileArn(@Nullable String iamInstanceProfileArn) {
             this.iamInstanceProfileArn = iamInstanceProfileArn;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
-
         public Builder monitoring(@Nullable Boolean monitoring) {
             this.monitoring = monitoring;
             return this;
         }
-
         public Builder placementGroup(@Nullable String placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
-
         public Builder placementTenancy(@Nullable String placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
-
         public Builder rootBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices) {
             this.rootBlockDevices = rootBlockDevices;
             return this;
         }
-
+        public Builder rootBlockDevices(SpotFleetRequestLaunchSpecificationRootBlockDevice... rootBlockDevices) {
+            return rootBlockDevices(List.of(rootBlockDevices));
+        }
         public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
-
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
+        public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
+        }
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
-        }
-        public SpotFleetRequestLaunchSpecification build() {
+        }        public SpotFleetRequestLaunchSpecification build() {
             return new SpotFleetRequestLaunchSpecification(ami, associatePublicIpAddress, availabilityZone, ebsBlockDevices, ebsOptimized, ephemeralBlockDevices, iamInstanceProfile, iamInstanceProfileArn, instanceType, keyName, monitoring, placementGroup, placementTenancy, rootBlockDevices, spotPrice, subnetId, tags, userData, vpcSecurityGroupIds, weightedCapacity);
         }
     }

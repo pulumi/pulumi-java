@@ -73,22 +73,18 @@ public final class VirtualGatewaySpecListenerTlsCertificateFileArgs extends io.p
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
-
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
             return this;
         }
-
         public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificateFileArgs build() {
+        }        public VirtualGatewaySpecListenerTlsCertificateFileArgs build() {
             return new VirtualGatewaySpecListenerTlsCertificateFileArgs(certificateChain, privateKey);
         }
     }

@@ -119,27 +119,28 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
-
+        public Builder databases(String... databases) {
+            return databases(List.of(databases));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
-
         public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-        public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse build() {
+        public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }        public ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse build() {
             return new ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion, validationErrors);
         }
     }

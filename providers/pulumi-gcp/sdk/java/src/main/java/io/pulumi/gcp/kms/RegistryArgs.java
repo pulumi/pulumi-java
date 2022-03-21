@@ -190,92 +190,80 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable List<RegistryCredentialArgs> credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
+        public Builder credentials(RegistryCredentialArgs... credentials) {
+            return credentials(List.of(credentials));
+        }
         public Builder eventNotificationConfigs(@Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs) {
             this.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
-
         public Builder eventNotificationConfigs(@Nullable List<RegistryEventNotificationConfigItemArgs> eventNotificationConfigs) {
             this.eventNotificationConfigs = Output.ofNullable(eventNotificationConfigs);
             return this;
         }
-
+        public Builder eventNotificationConfigs(RegistryEventNotificationConfigItemArgs... eventNotificationConfigs) {
+            return eventNotificationConfigs(List.of(eventNotificationConfigs));
+        }
         public Builder httpConfig(@Nullable Output<Map<String,Object>> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
-
         public Builder httpConfig(@Nullable Map<String,Object> httpConfig) {
             this.httpConfig = Output.ofNullable(httpConfig);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder mqttConfig(@Nullable Output<Map<String,Object>> mqttConfig) {
             this.mqttConfig = mqttConfig;
             return this;
         }
-
         public Builder mqttConfig(@Nullable Map<String,Object> mqttConfig) {
             this.mqttConfig = Output.ofNullable(mqttConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder stateNotificationConfig(@Nullable Output<Map<String,Object>> stateNotificationConfig) {
             this.stateNotificationConfig = stateNotificationConfig;
             return this;
         }
-
         public Builder stateNotificationConfig(@Nullable Map<String,Object> stateNotificationConfig) {
             this.stateNotificationConfig = Output.ofNullable(stateNotificationConfig);
             return this;
-        }
-        public RegistryArgs build() {
+        }        public RegistryArgs build() {
             return new RegistryArgs(credentials, eventNotificationConfigs, httpConfig, logLevel, mqttConfig, name, project, region, stateNotificationConfig);
         }
     }

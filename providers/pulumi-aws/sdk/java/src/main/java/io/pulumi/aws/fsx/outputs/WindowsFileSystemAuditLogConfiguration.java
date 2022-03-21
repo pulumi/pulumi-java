@@ -87,17 +87,14 @@ public final class WindowsFileSystemAuditLogConfiguration {
             this.auditLogDestination = auditLogDestination;
             return this;
         }
-
         public Builder fileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
             return this;
         }
-
         public Builder fileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
             return this;
-        }
-        public WindowsFileSystemAuditLogConfiguration build() {
+        }        public WindowsFileSystemAuditLogConfiguration build() {
             return new WindowsFileSystemAuditLogConfiguration(auditLogDestination, fileAccessAuditLogLevel, fileShareAccessAuditLogLevel);
         }
     }

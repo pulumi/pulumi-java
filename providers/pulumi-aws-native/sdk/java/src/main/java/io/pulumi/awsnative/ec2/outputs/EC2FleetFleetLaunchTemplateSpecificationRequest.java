@@ -63,17 +63,14 @@ public final class EC2FleetFleetLaunchTemplateSpecificationRequest {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public EC2FleetFleetLaunchTemplateSpecificationRequest build() {
+        }        public EC2FleetFleetLaunchTemplateSpecificationRequest build() {
             return new EC2FleetFleetLaunchTemplateSpecificationRequest(launchTemplateId, launchTemplateName, version);
         }
     }

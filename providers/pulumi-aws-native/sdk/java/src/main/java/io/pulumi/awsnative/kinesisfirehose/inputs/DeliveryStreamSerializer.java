@@ -67,12 +67,10 @@ public final class DeliveryStreamSerializer extends io.pulumi.resources.InvokeAr
             this.orcSerDe = orcSerDe;
             return this;
         }
-
         public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDe parquetSerDe) {
             this.parquetSerDe = parquetSerDe;
             return this;
-        }
-        public DeliveryStreamSerializer build() {
+        }        public DeliveryStreamSerializer build() {
             return new DeliveryStreamSerializer(orcSerDe, parquetSerDe);
         }
     }

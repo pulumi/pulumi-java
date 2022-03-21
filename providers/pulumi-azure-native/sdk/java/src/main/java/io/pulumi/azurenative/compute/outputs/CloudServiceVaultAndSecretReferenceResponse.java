@@ -56,12 +56,10 @@ public final class CloudServiceVaultAndSecretReferenceResponse {
             this.secretUrl = secretUrl;
             return this;
         }
-
         public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
             this.sourceVault = sourceVault;
             return this;
-        }
-        public CloudServiceVaultAndSecretReferenceResponse build() {
+        }        public CloudServiceVaultAndSecretReferenceResponse build() {
             return new CloudServiceVaultAndSecretReferenceResponse(secretUrl, sourceVault);
         }
     }

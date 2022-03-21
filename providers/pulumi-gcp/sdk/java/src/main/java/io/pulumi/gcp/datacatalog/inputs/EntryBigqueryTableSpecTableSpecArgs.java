@@ -53,12 +53,10 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends io.pulumi.resourc
             this.groupedEntry = groupedEntry;
             return this;
         }
-
         public Builder groupedEntry(@Nullable String groupedEntry) {
             this.groupedEntry = Output.ofNullable(groupedEntry);
             return this;
-        }
-        public EntryBigqueryTableSpecTableSpecArgs build() {
+        }        public EntryBigqueryTableSpecTableSpecArgs build() {
             return new EntryBigqueryTableSpecTableSpecArgs(groupedEntry);
         }
     }

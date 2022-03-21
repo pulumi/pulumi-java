@@ -135,32 +135,26 @@ public final class SyncPropertiesResponse {
             this.gatewayEndpoint = Objects.requireNonNull(gatewayEndpoint);
             return this;
         }
-
         public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
-
         public Builder messageTtl(String messageTtl) {
             this.messageTtl = Objects.requireNonNull(messageTtl);
             return this;
         }
-
         public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder syncWindow(@Nullable String syncWindow) {
             this.syncWindow = syncWindow;
             return this;
         }
-
         public Builder tokenId(String tokenId) {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
-        }
-        public SyncPropertiesResponse build() {
+        }        public SyncPropertiesResponse build() {
             return new SyncPropertiesResponse(gatewayEndpoint, lastSyncTime, messageTtl, schedule, syncWindow, tokenId);
         }
     }

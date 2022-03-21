@@ -571,122 +571,116 @@ public final class CopyActivityResponse {
             this.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
-
         public Builder enableStaging(@Nullable Object enableStaging) {
             this.enableStaging = enableStaging;
             return this;
         }
-
         public Builder inputs(@Nullable List<DatasetReferenceResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
-
+        public Builder inputs(DatasetReferenceResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder logSettings(@Nullable LogSettingsResponse logSettings) {
             this.logSettings = logSettings;
             return this;
         }
-
         public Builder logStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputs(@Nullable List<DatasetReferenceResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
-
+        public Builder outputs(DatasetReferenceResponse... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder parallelCopies(@Nullable Object parallelCopies) {
             this.parallelCopies = parallelCopies;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder preserve(@Nullable List<Object> preserve) {
             this.preserve = preserve;
             return this;
         }
-
+        public Builder preserve(Object... preserve) {
+            return preserve(List.of(preserve));
+        }
         public Builder preserveRules(@Nullable List<Object> preserveRules) {
             this.preserveRules = preserveRules;
             return this;
         }
-
+        public Builder preserveRules(Object... preserveRules) {
+            return preserveRules(List.of(preserveRules));
+        }
         public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
-
         public Builder sink(Object sink) {
             this.sink = Objects.requireNonNull(sink);
             return this;
         }
-
         public Builder skipErrorFile(@Nullable SkipErrorFileResponse skipErrorFile) {
             this.skipErrorFile = skipErrorFile;
             return this;
         }
-
         public Builder source(Object source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder stagingSettings(@Nullable StagingSettingsResponse stagingSettings) {
             this.stagingSettings = stagingSettings;
             return this;
         }
-
         public Builder translator(@Nullable Object translator) {
             this.translator = translator;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
             this.validateDataConsistency = validateDataConsistency;
             return this;
-        }
-        public CopyActivityResponse build() {
+        }        public CopyActivityResponse build() {
             return new CopyActivityResponse(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }
     }

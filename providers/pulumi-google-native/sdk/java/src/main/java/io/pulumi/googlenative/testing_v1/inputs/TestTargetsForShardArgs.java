@@ -62,12 +62,13 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
             this.testTargets = testTargets;
             return this;
         }
-
         public Builder testTargets(@Nullable List<String> testTargets) {
             this.testTargets = Output.ofNullable(testTargets);
             return this;
         }
-        public TestTargetsForShardArgs build() {
+        public Builder testTargets(String... testTargets) {
+            return testTargets(List.of(testTargets));
+        }        public TestTargetsForShardArgs build() {
             return new TestTargetsForShardArgs(testTargets);
         }
     }

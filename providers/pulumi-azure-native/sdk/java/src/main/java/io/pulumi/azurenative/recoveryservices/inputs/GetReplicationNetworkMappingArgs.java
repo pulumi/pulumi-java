@@ -120,27 +120,22 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
-
         public Builder networkMappingName(String networkMappingName) {
             this.networkMappingName = Objects.requireNonNull(networkMappingName);
             return this;
         }
-
         public Builder networkName(String networkName) {
             this.networkName = Objects.requireNonNull(networkName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationNetworkMappingArgs build() {
+        }        public GetReplicationNetworkMappingArgs build() {
             return new GetReplicationNetworkMappingArgs(fabricName, networkMappingName, networkName, resourceGroupName, resourceName);
         }
     }

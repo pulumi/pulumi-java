@@ -54,12 +54,13 @@ public final class PatchBaselineApprovalRulePatchFilter {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public PatchBaselineApprovalRulePatchFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public PatchBaselineApprovalRulePatchFilter build() {
             return new PatchBaselineApprovalRulePatchFilter(key, values);
         }
     }

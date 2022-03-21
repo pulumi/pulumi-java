@@ -54,8 +54,7 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public GetWebAppSlotArgs build() {
+        }        public GetWebAppSlotArgs build() {
             return new GetWebAppSlotArgs(slot);
         }
     }

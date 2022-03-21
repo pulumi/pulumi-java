@@ -140,62 +140,50 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder locationUri(@Nullable Output<String> locationUri) {
             this.locationUri = locationUri;
             return this;
         }
-
         public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = Output.ofNullable(locationUri);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
-
         public Builder targetDatabase(@Nullable CatalogDatabaseTargetDatabaseArgs targetDatabase) {
             this.targetDatabase = Output.ofNullable(targetDatabase);
             return this;
-        }
-        public CatalogDatabaseArgs build() {
+        }        public CatalogDatabaseArgs build() {
             return new CatalogDatabaseArgs(catalogId, description, locationUri, name, parameters, targetDatabase);
         }
     }

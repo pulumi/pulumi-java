@@ -78,22 +78,18 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
             this.direction = direction;
             return this;
         }
-
         public Builder direction(@Nullable String direction) {
             this.direction = Output.ofNullable(direction);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public ReportConfigSortingArgs build() {
+        }        public ReportConfigSortingArgs build() {
             return new ReportConfigSortingArgs(direction, name);
         }
     }

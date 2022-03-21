@@ -127,52 +127,48 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<ListenerRuleActionArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(ListenerRuleActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder conditions(Output<List<ListenerRuleConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder conditions(List<ListenerRuleConditionArgs> conditions) {
             this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
-
+        public Builder conditions(ListenerRuleConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder listenerArn(Output<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
-
         public Builder listenerArn(String listenerArn) {
             this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ListenerRuleArgs build() {
+        }        public ListenerRuleArgs build() {
             return new ListenerRuleArgs(actions, conditions, listenerArn, priority, tags);
         }
     }

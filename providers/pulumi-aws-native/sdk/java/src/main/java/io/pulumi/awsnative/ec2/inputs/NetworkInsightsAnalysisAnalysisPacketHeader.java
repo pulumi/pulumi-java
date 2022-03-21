@@ -104,27 +104,34 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader extends io.pulumi
             this.destinationAddresses = destinationAddresses;
             return this;
         }
-
+        public Builder destinationAddresses(String... destinationAddresses) {
+            return destinationAddresses(List.of(destinationAddresses));
+        }
         public Builder destinationPortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
-
+        public Builder destinationPortRanges(NetworkInsightsAnalysisPortRange... destinationPortRanges) {
+            return destinationPortRanges(List.of(destinationPortRanges));
+        }
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
-
+        public Builder sourceAddresses(String... sourceAddresses) {
+            return sourceAddresses(List.of(sourceAddresses));
+        }
         public Builder sourcePortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-        public NetworkInsightsAnalysisAnalysisPacketHeader build() {
+        public Builder sourcePortRanges(NetworkInsightsAnalysisPortRange... sourcePortRanges) {
+            return sourcePortRanges(List.of(sourcePortRanges));
+        }        public NetworkInsightsAnalysisAnalysisPacketHeader build() {
             return new NetworkInsightsAnalysisAnalysisPacketHeader(destinationAddresses, destinationPortRanges, protocol, sourceAddresses, sourcePortRanges);
         }
     }

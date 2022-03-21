@@ -90,17 +90,17 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
             this.baseKeyUsage = baseKeyUsage;
             return this;
         }
-
         public Builder extendedKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-        public CertificateTemplatePredefinedValuesKeyUsage build() {
+        public Builder unknownExtendedKeyUsages(CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CertificateTemplatePredefinedValuesKeyUsage build() {
             return new CertificateTemplatePredefinedValuesKeyUsage(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

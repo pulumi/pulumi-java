@@ -105,22 +105,24 @@ public final class GuestPoliciesRecipeUpdateStepFileExec {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
-
+        public Builder allowedExitCodes(Integer... allowedExitCodes) {
+            return allowedExitCodes(List.of(allowedExitCodes));
+        }
         public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = artifactId;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepFileExec build() {
+        }        public GuestPoliciesRecipeUpdateStepFileExec build() {
             return new GuestPoliciesRecipeUpdateStepFileExec(allowedExitCodes, args, artifactId, localPath);
         }
     }

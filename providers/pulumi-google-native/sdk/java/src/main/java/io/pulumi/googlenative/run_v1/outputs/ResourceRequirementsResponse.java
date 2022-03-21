@@ -70,12 +70,10 @@ public final class ResourceRequirementsResponse {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
-
         public Builder requests(Map<String,String> requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
-        }
-        public ResourceRequirementsResponse build() {
+        }        public ResourceRequirementsResponse build() {
             return new ResourceRequirementsResponse(limits, requests);
         }
     }

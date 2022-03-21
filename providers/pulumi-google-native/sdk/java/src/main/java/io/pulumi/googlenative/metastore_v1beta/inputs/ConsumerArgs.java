@@ -61,12 +61,10 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public ConsumerArgs build() {
+        }        public ConsumerArgs build() {
             return new ConsumerArgs(subnetwork);
         }
     }

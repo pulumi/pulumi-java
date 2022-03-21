@@ -53,12 +53,10 @@ public final class DashboardTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DashboardTag build() {
+        }        public DashboardTag build() {
             return new DashboardTag(key, value);
         }
     }

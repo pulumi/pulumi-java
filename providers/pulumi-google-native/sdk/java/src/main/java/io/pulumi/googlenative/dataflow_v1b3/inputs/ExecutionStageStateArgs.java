@@ -95,32 +95,26 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
             this.currentStateTime = currentStateTime;
             return this;
         }
-
         public Builder currentStateTime(@Nullable String currentStateTime) {
             this.currentStateTime = Output.ofNullable(currentStateTime);
             return this;
         }
-
         public Builder executionStageName(@Nullable Output<String> executionStageName) {
             this.executionStageName = executionStageName;
             return this;
         }
-
         public Builder executionStageName(@Nullable String executionStageName) {
             this.executionStageName = Output.ofNullable(executionStageName);
             return this;
         }
-
         public Builder executionStageState(@Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
             this.executionStageState = executionStageState;
             return this;
         }
-
         public Builder executionStageState(@Nullable ExecutionStageStateExecutionStageState executionStageState) {
             this.executionStageState = Output.ofNullable(executionStageState);
             return this;
-        }
-        public ExecutionStageStateArgs build() {
+        }        public ExecutionStageStateArgs build() {
             return new ExecutionStageStateArgs(currentStateTime, executionStageName, executionStageState);
         }
     }

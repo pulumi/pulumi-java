@@ -45,8 +45,7 @@ public final class TaskDefinitionRepositoryCredentials {
         public Builder credentialsParameter(@Nullable String credentialsParameter) {
             this.credentialsParameter = credentialsParameter;
             return this;
-        }
-        public TaskDefinitionRepositoryCredentials build() {
+        }        public TaskDefinitionRepositoryCredentials build() {
             return new TaskDefinitionRepositoryCredentials(credentialsParameter);
         }
     }

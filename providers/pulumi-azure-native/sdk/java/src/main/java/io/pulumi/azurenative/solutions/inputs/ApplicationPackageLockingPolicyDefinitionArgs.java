@@ -79,22 +79,24 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
             this.allowedActions = allowedActions;
             return this;
         }
-
         public Builder allowedActions(@Nullable List<String> allowedActions) {
             this.allowedActions = Output.ofNullable(allowedActions);
             return this;
         }
-
+        public Builder allowedActions(String... allowedActions) {
+            return allowedActions(List.of(allowedActions));
+        }
         public Builder allowedDataActions(@Nullable Output<List<String>> allowedDataActions) {
             this.allowedDataActions = allowedDataActions;
             return this;
         }
-
         public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
             this.allowedDataActions = Output.ofNullable(allowedDataActions);
             return this;
         }
-        public ApplicationPackageLockingPolicyDefinitionArgs build() {
+        public Builder allowedDataActions(String... allowedDataActions) {
+            return allowedDataActions(List.of(allowedDataActions));
+        }        public ApplicationPackageLockingPolicyDefinitionArgs build() {
             return new ApplicationPackageLockingPolicyDefinitionArgs(allowedActions, allowedDataActions);
         }
     }

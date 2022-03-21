@@ -94,17 +94,14 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
             this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
             return this;
         }
-
         public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder sentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
             this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(allowMultiLabel, annotationSpecSet, sentimentConfig);
         }
     }

@@ -56,8 +56,7 @@ public final class AssetModelMetricWindow extends io.pulumi.resources.InvokeArgs
         public Builder tumbling(@Nullable AssetModelTumblingWindow tumbling) {
             this.tumbling = tumbling;
             return this;
-        }
-        public AssetModelMetricWindow build() {
+        }        public AssetModelMetricWindow build() {
             return new AssetModelMetricWindow(tumbling);
         }
     }

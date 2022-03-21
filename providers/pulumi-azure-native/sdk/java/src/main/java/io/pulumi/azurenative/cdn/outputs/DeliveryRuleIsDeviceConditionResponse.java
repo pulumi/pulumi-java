@@ -72,12 +72,10 @@ public final class DeliveryRuleIsDeviceConditionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(IsDeviceMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleIsDeviceConditionResponse build() {
+        }        public DeliveryRuleIsDeviceConditionResponse build() {
             return new DeliveryRuleIsDeviceConditionResponse(name, parameters);
         }
     }

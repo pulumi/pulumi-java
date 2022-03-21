@@ -85,17 +85,14 @@ public final class DiagnosticConditionResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder since(String since) {
             this.since = Objects.requireNonNull(since);
             return this;
-        }
-        public DiagnosticConditionResponse build() {
+        }        public DiagnosticConditionResponse build() {
             return new DiagnosticConditionResponse(code, message, since);
         }
     }

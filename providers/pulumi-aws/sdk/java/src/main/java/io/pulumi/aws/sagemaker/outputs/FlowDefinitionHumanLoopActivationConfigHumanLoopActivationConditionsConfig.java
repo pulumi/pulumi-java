@@ -51,8 +51,7 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
         public Builder humanLoopActivationConditions(String humanLoopActivationConditions) {
             this.humanLoopActivationConditions = Objects.requireNonNull(humanLoopActivationConditions);
             return this;
-        }
-        public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig build() {
+        }        public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig build() {
             return new FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig(humanLoopActivationConditions);
         }
     }

@@ -247,112 +247,93 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             this.createPolicy = createPolicy;
             return this;
         }
-
         public Builder createPolicy(@Nullable String createPolicy) {
             this.createPolicy = Output.ofNullable(createPolicy);
             return this;
         }
-
         public Builder deletePolicy(@Nullable Output<String> deletePolicy) {
             this.deletePolicy = deletePolicy;
             return this;
         }
-
         public Builder deletePolicy(@Nullable String deletePolicy) {
             this.deletePolicy = Output.ofNullable(deletePolicy);
             return this;
         }
-
         public Builder deploymentId(@Nullable Output<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
-
         public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Output.ofNullable(deploymentId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder labels(@Nullable Output<List<DeploymentLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<DeploymentLabelGetArgs> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(DeploymentLabelGetArgs... labels) {
+            return labels(List.of(labels));
+        }
         public Builder manifest(@Nullable Output<String> manifest) {
             this.manifest = manifest;
             return this;
         }
-
         public Builder manifest(@Nullable String manifest) {
             this.manifest = Output.ofNullable(manifest);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder preview(@Nullable Output<Boolean> preview) {
             this.preview = preview;
             return this;
         }
-
         public Builder preview(@Nullable Boolean preview) {
             this.preview = Output.ofNullable(preview);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder target(@Nullable Output<DeploymentTargetGetArgs> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable DeploymentTargetGetArgs target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public DeploymentState build() {
+        }        public DeploymentState build() {
             return new DeploymentState(createPolicy, deletePolicy, deploymentId, description, labels, manifest, name, preview, project, selfLink, target);
         }
     }

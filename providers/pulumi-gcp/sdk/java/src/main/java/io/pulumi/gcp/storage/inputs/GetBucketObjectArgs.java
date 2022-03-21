@@ -74,12 +74,10 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
             this.bucket = bucket;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetBucketObjectArgs build() {
+        }        public GetBucketObjectArgs build() {
             return new GetBucketObjectArgs(bucket, name);
         }
     }

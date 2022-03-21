@@ -54,8 +54,7 @@ public final class GetLogGroupsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder logGroupNamePrefix(String logGroupNamePrefix) {
             this.logGroupNamePrefix = Objects.requireNonNull(logGroupNamePrefix);
             return this;
-        }
-        public GetLogGroupsArgs build() {
+        }        public GetLogGroupsArgs build() {
             return new GetLogGroupsArgs(logGroupNamePrefix);
         }
     }

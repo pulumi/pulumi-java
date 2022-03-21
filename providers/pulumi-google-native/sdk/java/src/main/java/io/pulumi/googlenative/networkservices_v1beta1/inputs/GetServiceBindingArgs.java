@@ -78,17 +78,14 @@ public final class GetServiceBindingArgs extends io.pulumi.resources.InvokeArgs 
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceBindingId(String serviceBindingId) {
             this.serviceBindingId = Objects.requireNonNull(serviceBindingId);
             return this;
-        }
-        public GetServiceBindingArgs build() {
+        }        public GetServiceBindingArgs build() {
             return new GetServiceBindingArgs(location, project, serviceBindingId);
         }
     }

@@ -125,52 +125,45 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
-
         public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
             this.deadLetterQueueUrl = Output.ofNullable(deadLetterQueueUrl);
             return this;
         }
-
         public Builder defaultEncryptionKey(@Nullable Output<String> defaultEncryptionKey) {
             this.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
-
         public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
             this.defaultEncryptionKey = Output.ofNullable(defaultEncryptionKey);
             return this;
         }
-
         public Builder defaultExpirationDays(@Nullable Output<Integer> defaultExpirationDays) {
             this.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
-
         public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
             this.defaultExpirationDays = Output.ofNullable(defaultExpirationDays);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DomainArgs build() {
+        public Builder tags(DomainTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DomainArgs build() {
             return new DomainArgs(deadLetterQueueUrl, defaultEncryptionKey, defaultExpirationDays, domainName, tags);
         }
     }

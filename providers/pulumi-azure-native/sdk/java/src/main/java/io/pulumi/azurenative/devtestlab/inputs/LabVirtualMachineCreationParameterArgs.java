@@ -487,272 +487,227 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
             this.allowClaim = allowClaim;
             return this;
         }
-
         public Builder allowClaim(@Nullable Boolean allowClaim) {
             this.allowClaim = Output.ofNullable(allowClaim);
             return this;
         }
-
         public Builder artifacts(@Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder artifacts(@Nullable List<ArtifactInstallPropertiesArgs> artifacts) {
             this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
-
+        public Builder artifacts(ArtifactInstallPropertiesArgs... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder bulkCreationParameters(@Nullable Output<BulkCreationParametersArgs> bulkCreationParameters) {
             this.bulkCreationParameters = bulkCreationParameters;
             return this;
         }
-
         public Builder bulkCreationParameters(@Nullable BulkCreationParametersArgs bulkCreationParameters) {
             this.bulkCreationParameters = Output.ofNullable(bulkCreationParameters);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder customImageId(@Nullable Output<String> customImageId) {
             this.customImageId = customImageId;
             return this;
         }
-
         public Builder customImageId(@Nullable String customImageId) {
             this.customImageId = Output.ofNullable(customImageId);
             return this;
         }
-
         public Builder dataDiskParameters(@Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters) {
             this.dataDiskParameters = dataDiskParameters;
             return this;
         }
-
         public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesArgs> dataDiskParameters) {
             this.dataDiskParameters = Output.ofNullable(dataDiskParameters);
             return this;
         }
-
+        public Builder dataDiskParameters(DataDiskPropertiesArgs... dataDiskParameters) {
+            return dataDiskParameters(List.of(dataDiskParameters));
+        }
         public Builder disallowPublicIpAddress(@Nullable Output<Boolean> disallowPublicIpAddress) {
             this.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
-
         public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
             this.disallowPublicIpAddress = Output.ofNullable(disallowPublicIpAddress);
             return this;
         }
-
         public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder galleryImageReference(@Nullable Output<GalleryImageReferenceArgs> galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
-
         public Builder galleryImageReference(@Nullable GalleryImageReferenceArgs galleryImageReference) {
             this.galleryImageReference = Output.ofNullable(galleryImageReference);
             return this;
         }
-
         public Builder isAuthenticationWithSshKey(@Nullable Output<Boolean> isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
-
         public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = Output.ofNullable(isAuthenticationWithSshKey);
             return this;
         }
-
         public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
-
         public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = Output.ofNullable(labSubnetName);
             return this;
         }
-
         public Builder labVirtualNetworkId(@Nullable Output<String> labVirtualNetworkId) {
             this.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
-
         public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
             this.labVirtualNetworkId = Output.ofNullable(labVirtualNetworkId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkInterface(@Nullable Output<NetworkInterfacePropertiesArgs> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
-
         public Builder networkInterface(@Nullable NetworkInterfacePropertiesArgs networkInterface) {
             this.networkInterface = Output.ofNullable(networkInterface);
             return this;
         }
-
         public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = Output.ofNullable(notes);
             return this;
         }
-
         public Builder ownerObjectId(@Nullable Output<String> ownerObjectId) {
             this.ownerObjectId = ownerObjectId;
             return this;
         }
-
         public Builder ownerObjectId(@Nullable String ownerObjectId) {
             this.ownerObjectId = Output.ofNullable(ownerObjectId);
             return this;
         }
-
         public Builder ownerUserPrincipalName(@Nullable Output<String> ownerUserPrincipalName) {
             this.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
-
         public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
             this.ownerUserPrincipalName = Output.ofNullable(ownerUserPrincipalName);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder planId(@Nullable Output<String> planId) {
             this.planId = planId;
             return this;
         }
-
         public Builder planId(@Nullable String planId) {
             this.planId = Output.ofNullable(planId);
             return this;
         }
-
         public Builder scheduleParameters(@Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters) {
             this.scheduleParameters = scheduleParameters;
             return this;
         }
-
         public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterArgs> scheduleParameters) {
             this.scheduleParameters = Output.ofNullable(scheduleParameters);
             return this;
         }
-
+        public Builder scheduleParameters(ScheduleCreationParameterArgs... scheduleParameters) {
+            return scheduleParameters(List.of(scheduleParameters));
+        }
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder sshKey(@Nullable Output<String> sshKey) {
             this.sshKey = sshKey;
             return this;
         }
-
         public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = Output.ofNullable(sshKey);
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public LabVirtualMachineCreationParameterArgs build() {
+        }        public LabVirtualMachineCreationParameterArgs build() {
             return new LabVirtualMachineCreationParameterArgs(allowClaim, artifacts, bulkCreationParameters, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, scheduleParameters, size, sshKey, storageType, tags, userName);
         }
     }

@@ -93,17 +93,17 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
-
+        public Builder endpointNames(String... endpointNames) {
+            return endpointNames(List.of(endpointNames));
+        }
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EnrichmentPropertiesResponse build() {
+        }        public EnrichmentPropertiesResponse build() {
             return new EnrichmentPropertiesResponse(endpointNames, key, value);
         }
     }

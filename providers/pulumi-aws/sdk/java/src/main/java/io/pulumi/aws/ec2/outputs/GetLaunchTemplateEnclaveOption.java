@@ -51,8 +51,7 @@ public final class GetLaunchTemplateEnclaveOption {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetLaunchTemplateEnclaveOption build() {
+        }        public GetLaunchTemplateEnclaveOption build() {
             return new GetLaunchTemplateEnclaveOption(enabled);
         }
     }

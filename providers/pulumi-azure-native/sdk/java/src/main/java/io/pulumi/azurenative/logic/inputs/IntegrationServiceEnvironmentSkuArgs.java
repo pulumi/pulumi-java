@@ -81,22 +81,18 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder name(@Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,IntegrationServiceEnvironmentSkuName> name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public IntegrationServiceEnvironmentSkuArgs build() {
+        }        public IntegrationServiceEnvironmentSkuArgs build() {
             return new IntegrationServiceEnvironmentSkuArgs(capacity, name);
         }
     }

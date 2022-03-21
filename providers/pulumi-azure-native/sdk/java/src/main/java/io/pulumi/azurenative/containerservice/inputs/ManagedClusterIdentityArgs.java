@@ -81,22 +81,18 @@ public final class ManagedClusterIdentityArgs extends io.pulumi.resources.Resour
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
             return this;
-        }
-        public ManagedClusterIdentityArgs build() {
+        }        public ManagedClusterIdentityArgs build() {
             return new ManagedClusterIdentityArgs(type, userAssignedIdentities);
         }
     }

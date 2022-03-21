@@ -94,32 +94,26 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
             this.dataSize = dataSize;
             return this;
         }
-
         public Builder dataSize(@Nullable String dataSize) {
             this.dataSize = Output.ofNullable(dataSize);
             return this;
         }
-
         public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder quotedName(@Nullable Output<String> quotedName) {
             this.quotedName = quotedName;
             return this;
         }
-
         public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = Output.ofNullable(quotedName);
             return this;
-        }
-        public SyncGroupSchemaTableColumnArgs build() {
+        }        public SyncGroupSchemaTableColumnArgs build() {
             return new SyncGroupSchemaTableColumnArgs(dataSize, dataType, quotedName);
         }
     }

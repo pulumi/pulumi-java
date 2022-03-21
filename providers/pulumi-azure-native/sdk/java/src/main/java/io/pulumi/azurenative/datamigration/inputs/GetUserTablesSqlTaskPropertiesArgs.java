@@ -80,22 +80,18 @@ public final class GetUserTablesSqlTaskPropertiesArgs extends io.pulumi.resource
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable GetUserTablesSqlTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public GetUserTablesSqlTaskPropertiesArgs build() {
+        }        public GetUserTablesSqlTaskPropertiesArgs build() {
             return new GetUserTablesSqlTaskPropertiesArgs(input, taskType);
         }
     }

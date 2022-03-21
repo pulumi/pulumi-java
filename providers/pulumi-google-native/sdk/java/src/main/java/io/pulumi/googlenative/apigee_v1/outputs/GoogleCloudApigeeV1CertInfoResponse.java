@@ -215,57 +215,49 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
             this.basicConstraints = Objects.requireNonNull(basicConstraints);
             return this;
         }
-
         public Builder expiryDate(String expiryDate) {
             this.expiryDate = Objects.requireNonNull(expiryDate);
             return this;
         }
-
         public Builder isValid(String isValid) {
             this.isValid = Objects.requireNonNull(isValid);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder sigAlgName(String sigAlgName) {
             this.sigAlgName = Objects.requireNonNull(sigAlgName);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
             return this;
         }
-
+        public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }
         public Builder validFrom(String validFrom) {
             this.validFrom = Objects.requireNonNull(validFrom);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GoogleCloudApigeeV1CertInfoResponse build() {
+        }        public GoogleCloudApigeeV1CertInfoResponse build() {
             return new GoogleCloudApigeeV1CertInfoResponse(basicConstraints, expiryDate, isValid, issuer, publicKey, serialNumber, sigAlgName, subject, subjectAlternativeNames, validFrom, version);
         }
     }

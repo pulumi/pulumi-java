@@ -103,22 +103,18 @@ public final class FleetIpPermission {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
-
         public Builder protocol(FleetIpPermissionProtocol protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
-        }
-        public FleetIpPermission build() {
+        }        public FleetIpPermission build() {
             return new FleetIpPermission(fromPort, ipRange, protocol, toPort);
         }
     }

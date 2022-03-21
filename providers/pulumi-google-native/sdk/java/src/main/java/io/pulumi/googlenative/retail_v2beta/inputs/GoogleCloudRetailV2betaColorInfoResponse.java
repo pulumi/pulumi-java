@@ -77,12 +77,16 @@ public final class GoogleCloudRetailV2betaColorInfoResponse extends io.pulumi.re
             this.colorFamilies = Objects.requireNonNull(colorFamilies);
             return this;
         }
-
+        public Builder colorFamilies(String... colorFamilies) {
+            return colorFamilies(List.of(colorFamilies));
+        }
         public Builder colors(List<String> colors) {
             this.colors = Objects.requireNonNull(colors);
             return this;
         }
-        public GoogleCloudRetailV2betaColorInfoResponse build() {
+        public Builder colors(String... colors) {
+            return colors(List.of(colors));
+        }        public GoogleCloudRetailV2betaColorInfoResponse build() {
             return new GoogleCloudRetailV2betaColorInfoResponse(colorFamilies, colors);
         }
     }

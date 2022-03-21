@@ -124,52 +124,42 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
             this.authorizationConfig = authorizationConfig;
             return this;
         }
-
         public Builder authorizationConfig(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs authorizationConfig) {
             this.authorizationConfig = Output.ofNullable(authorizationConfig);
             return this;
         }
-
         public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
-
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
-
         public Builder rootDirectory(@Nullable Output<String> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
         }
-
         public Builder transitEncryption(@Nullable Output<String> transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
-
         public Builder transitEncryption(@Nullable String transitEncryption) {
             this.transitEncryption = Output.ofNullable(transitEncryption);
             return this;
         }
-
         public Builder transitEncryptionPort(@Nullable Output<Integer> transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }
-
         public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = Output.ofNullable(transitEncryptionPort);
             return this;
-        }
-        public TaskDefinitionVolumeEfsVolumeConfigurationGetArgs build() {
+        }        public TaskDefinitionVolumeEfsVolumeConfigurationGetArgs build() {
             return new TaskDefinitionVolumeEfsVolumeConfigurationGetArgs(authorizationConfig, fileSystemId, rootDirectory, transitEncryption, transitEncryptionPort);
         }
     }

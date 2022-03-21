@@ -81,22 +81,18 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
-
         public Builder recurrenceType(Either<String,SuppressionType> recurrenceType) {
             this.recurrenceType = Output.of(Objects.requireNonNull(recurrenceType));
             return this;
         }
-
         public Builder schedule(@Nullable Output<SuppressionScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable SuppressionScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
-        }
-        public SuppressionConfigArgs build() {
+        }        public SuppressionConfigArgs build() {
             return new SuppressionConfigArgs(recurrenceType, schedule);
         }
     }

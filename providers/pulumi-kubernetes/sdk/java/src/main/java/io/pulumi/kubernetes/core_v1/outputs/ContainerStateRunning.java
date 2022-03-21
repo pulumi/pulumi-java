@@ -53,8 +53,7 @@ public final class ContainerStateRunning {
         public Builder startedAt(@Nullable String startedAt) {
             this.startedAt = startedAt;
             return this;
-        }
-        public ContainerStateRunning build() {
+        }        public ContainerStateRunning build() {
             return new ContainerStateRunning(startedAt);
         }
     }

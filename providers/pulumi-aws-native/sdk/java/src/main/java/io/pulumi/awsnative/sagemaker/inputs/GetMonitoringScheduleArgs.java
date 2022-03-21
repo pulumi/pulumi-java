@@ -54,8 +54,7 @@ public final class GetMonitoringScheduleArgs extends io.pulumi.resources.InvokeA
         public Builder monitoringScheduleArn(String monitoringScheduleArn) {
             this.monitoringScheduleArn = Objects.requireNonNull(monitoringScheduleArn);
             return this;
-        }
-        public GetMonitoringScheduleArgs build() {
+        }        public GetMonitoringScheduleArgs build() {
             return new GetMonitoringScheduleArgs(monitoringScheduleArn);
         }
     }

@@ -61,12 +61,13 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
-
         public Builder dataSets(List<TableDataSetArgs> dataSets) {
             this.dataSets = Output.of(Objects.requireNonNull(dataSets));
             return this;
         }
-        public TimeSeriesTableArgs build() {
+        public Builder dataSets(TableDataSetArgs... dataSets) {
+            return dataSets(List.of(dataSets));
+        }        public TimeSeriesTableArgs build() {
             return new TimeSeriesTableArgs(dataSets);
         }
     }

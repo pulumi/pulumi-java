@@ -196,112 +196,93 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder dataSource(@Nullable Output<DetectorEventVariableDataSource> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-
         public Builder dataSource(@Nullable DetectorEventVariableDataSource dataSource) {
             this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
-
         public Builder dataType(@Nullable Output<DetectorEventVariableDataType> dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder dataType(@Nullable DetectorEventVariableDataType dataType) {
             this.dataType = Output.ofNullable(dataType);
             return this;
         }
-
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder inline(@Nullable Output<Boolean> inline) {
             this.inline = inline;
             return this;
         }
-
         public Builder inline(@Nullable Boolean inline) {
             this.inline = Output.ofNullable(inline);
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DetectorTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder variableType(@Nullable Output<DetectorEventVariableVariableType> variableType) {
             this.variableType = variableType;
             return this;
         }
-
         public Builder variableType(@Nullable DetectorEventVariableVariableType variableType) {
             this.variableType = Output.ofNullable(variableType);
             return this;
-        }
-        public DetectorEventVariableArgs build() {
+        }        public DetectorEventVariableArgs build() {
             return new DetectorEventVariableArgs(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }
     }

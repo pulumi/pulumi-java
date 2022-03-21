@@ -90,32 +90,26 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder contentSha256(@Nullable Output<String> contentSha256) {
             this.contentSha256 = contentSha256;
             return this;
         }
-
         public Builder contentSha256(@Nullable String contentSha256) {
             this.contentSha256 = Output.ofNullable(contentSha256);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public HumanTaskUIUiTemplateArgs build() {
+        }        public HumanTaskUIUiTemplateArgs build() {
             return new HumanTaskUIUiTemplateArgs(content, contentSha256, url);
         }
     }

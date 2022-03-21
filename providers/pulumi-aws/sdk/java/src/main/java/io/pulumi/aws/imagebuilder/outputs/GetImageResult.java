@@ -274,77 +274,68 @@ public final class GetImageResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder buildVersionArn(String buildVersionArn) {
             this.buildVersionArn = Objects.requireNonNull(buildVersionArn);
             return this;
         }
-
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder distributionConfigurationArn(String distributionConfigurationArn) {
             this.distributionConfigurationArn = Objects.requireNonNull(distributionConfigurationArn);
             return this;
         }
-
         public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Objects.requireNonNull(enhancedImageMetadataEnabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageRecipeArn(String imageRecipeArn) {
             this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
             return this;
         }
-
         public Builder imageTestsConfigurations(List<GetImageImageTestsConfiguration> imageTestsConfigurations) {
             this.imageTestsConfigurations = Objects.requireNonNull(imageTestsConfigurations);
             return this;
         }
-
+        public Builder imageTestsConfigurations(GetImageImageTestsConfiguration... imageTestsConfigurations) {
+            return imageTestsConfigurations(List.of(imageTestsConfigurations));
+        }
         public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public Builder outputResources(List<GetImageOutputResource> outputResources) {
             this.outputResources = Objects.requireNonNull(outputResources);
             return this;
         }
-
+        public Builder outputResources(GetImageOutputResource... outputResources) {
+            return outputResources(List.of(outputResources));
+        }
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetImageResult build() {
+        }        public GetImageResult build() {
             return new GetImageResult(arn, buildVersionArn, dateCreated, distributionConfigurationArn, enhancedImageMetadataEnabled, id, imageRecipeArn, imageTestsConfigurations, infrastructureConfigurationArn, name, osVersion, outputResources, platform, tags, version);
         }
     }

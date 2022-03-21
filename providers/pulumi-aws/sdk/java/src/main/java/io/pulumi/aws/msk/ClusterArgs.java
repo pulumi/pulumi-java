@@ -226,112 +226,90 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.brokerNodeGroupInfo = Objects.requireNonNull(brokerNodeGroupInfo);
             return this;
         }
-
         public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoArgs brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = Output.of(Objects.requireNonNull(brokerNodeGroupInfo));
             return this;
         }
-
         public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication) {
             this.clientAuthentication = clientAuthentication;
             return this;
         }
-
         public Builder clientAuthentication(@Nullable ClusterClientAuthenticationArgs clientAuthentication) {
             this.clientAuthentication = Output.ofNullable(clientAuthentication);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoArgs> configurationInfo) {
             this.configurationInfo = configurationInfo;
             return this;
         }
-
         public Builder configurationInfo(@Nullable ClusterConfigurationInfoArgs configurationInfo) {
             this.configurationInfo = Output.ofNullable(configurationInfo);
             return this;
         }
-
         public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo) {
             this.encryptionInfo = encryptionInfo;
             return this;
         }
-
         public Builder encryptionInfo(@Nullable ClusterEncryptionInfoArgs encryptionInfo) {
             this.encryptionInfo = Output.ofNullable(encryptionInfo);
             return this;
         }
-
         public Builder enhancedMonitoring(@Nullable Output<String> enhancedMonitoring) {
             this.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
-
         public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
             this.enhancedMonitoring = Output.ofNullable(enhancedMonitoring);
             return this;
         }
-
         public Builder kafkaVersion(Output<String> kafkaVersion) {
             this.kafkaVersion = Objects.requireNonNull(kafkaVersion);
             return this;
         }
-
         public Builder kafkaVersion(String kafkaVersion) {
             this.kafkaVersion = Output.of(Objects.requireNonNull(kafkaVersion));
             return this;
         }
-
         public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoArgs> loggingInfo) {
             this.loggingInfo = loggingInfo;
             return this;
         }
-
         public Builder loggingInfo(@Nullable ClusterLoggingInfoArgs loggingInfo) {
             this.loggingInfo = Output.ofNullable(loggingInfo);
             return this;
         }
-
         public Builder numberOfBrokerNodes(Output<Integer> numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes);
             return this;
         }
-
         public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Output.of(Objects.requireNonNull(numberOfBrokerNodes));
             return this;
         }
-
         public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringArgs> openMonitoring) {
             this.openMonitoring = openMonitoring;
             return this;
         }
-
         public Builder openMonitoring(@Nullable ClusterOpenMonitoringArgs openMonitoring) {
             this.openMonitoring = Output.ofNullable(openMonitoring);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(brokerNodeGroupInfo, clientAuthentication, clusterName, configurationInfo, encryptionInfo, enhancedMonitoring, kafkaVersion, loggingInfo, numberOfBrokerNodes, openMonitoring, tags);
         }
     }

@@ -91,32 +91,26 @@ public final class SpotInstanceRequestEphemeralBlockDeviceArgs extends io.pulumi
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
-
         public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Output.ofNullable(virtualName);
             return this;
-        }
-        public SpotInstanceRequestEphemeralBlockDeviceArgs build() {
+        }        public SpotInstanceRequestEphemeralBlockDeviceArgs build() {
             return new SpotInstanceRequestEphemeralBlockDeviceArgs(deviceName, noDevice, virtualName);
         }
     }

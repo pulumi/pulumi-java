@@ -74,22 +74,18 @@ public final class AppQuietTimeGetArgs extends io.pulumi.resources.ResourceArgs 
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public AppQuietTimeGetArgs build() {
+        }        public AppQuietTimeGetArgs build() {
             return new AppQuietTimeGetArgs(end, start);
         }
     }

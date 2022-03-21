@@ -106,42 +106,37 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable PackagingConfigurationCmafEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
-
         public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
             this.hlsManifests = Output.of(Objects.requireNonNull(hlsManifests));
             return this;
         }
-
+        public Builder hlsManifests(PackagingConfigurationHlsManifestArgs... hlsManifests) {
+            return hlsManifests(List.of(hlsManifests));
+        }
         public Builder includeEncoderConfigurationInSegments(@Nullable Output<Boolean> includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
-
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = Output.ofNullable(includeEncoderConfigurationInSegments);
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
-        }
-        public PackagingConfigurationCmafPackageArgs build() {
+        }        public PackagingConfigurationCmafPackageArgs build() {
             return new PackagingConfigurationCmafPackageArgs(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
         }
     }

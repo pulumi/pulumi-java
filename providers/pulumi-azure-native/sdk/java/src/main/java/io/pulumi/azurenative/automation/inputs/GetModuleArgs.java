@@ -88,17 +88,14 @@ public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder moduleName(String moduleName) {
             this.moduleName = Objects.requireNonNull(moduleName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetModuleArgs build() {
+        }        public GetModuleArgs build() {
             return new GetModuleArgs(automationAccountName, moduleName, resourceGroupName);
         }
     }

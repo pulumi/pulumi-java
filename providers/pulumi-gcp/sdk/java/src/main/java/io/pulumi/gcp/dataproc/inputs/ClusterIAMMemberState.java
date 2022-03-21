@@ -151,72 +151,58 @@ public final class ClusterIAMMemberState extends io.pulumi.resources.ResourceArg
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder condition(@Nullable Output<ClusterIAMMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable ClusterIAMMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public ClusterIAMMemberState build() {
+        }        public ClusterIAMMemberState build() {
             return new ClusterIAMMemberState(cluster, condition, etag, member, project, region, role);
         }
     }

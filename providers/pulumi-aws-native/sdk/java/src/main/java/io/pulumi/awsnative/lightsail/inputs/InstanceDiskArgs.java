@@ -160,72 +160,58 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.attachedTo = attachedTo;
             return this;
         }
-
         public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = Output.ofNullable(attachedTo);
             return this;
         }
-
         public Builder attachmentState(@Nullable Output<String> attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
-
         public Builder attachmentState(@Nullable String attachmentState) {
             this.attachmentState = Output.ofNullable(attachmentState);
             return this;
         }
-
         public Builder diskName(Output<String> diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Output.of(Objects.requireNonNull(diskName));
             return this;
         }
-
         public Builder iOPS(@Nullable Output<Integer> iOPS) {
             this.iOPS = iOPS;
             return this;
         }
-
         public Builder iOPS(@Nullable Integer iOPS) {
             this.iOPS = Output.ofNullable(iOPS);
             return this;
         }
-
         public Builder isSystemDisk(@Nullable Output<Boolean> isSystemDisk) {
             this.isSystemDisk = isSystemDisk;
             return this;
         }
-
         public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
             this.isSystemDisk = Output.ofNullable(isSystemDisk);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder sizeInGb(@Nullable Output<String> sizeInGb) {
             this.sizeInGb = sizeInGb;
             return this;
         }
-
         public Builder sizeInGb(@Nullable String sizeInGb) {
             this.sizeInGb = Output.ofNullable(sizeInGb);
             return this;
-        }
-        public InstanceDiskArgs build() {
+        }        public InstanceDiskArgs build() {
             return new InstanceDiskArgs(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);
         }
     }

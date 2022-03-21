@@ -94,17 +94,17 @@ public final class GetRouteTablesArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetRouteTablesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public GetRouteTablesArgs build() {
+        }        public GetRouteTablesArgs build() {
             return new GetRouteTablesArgs(filters, tags, vpcId);
         }
     }

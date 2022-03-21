@@ -260,67 +260,60 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends io.pulumi.
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-
         public Builder confidential(Boolean confidential) {
             this.confidential = Objects.requireNonNull(confidential);
             return this;
         }
-
         public Builder containerConcurrency(Integer containerConcurrency) {
             this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
             return this;
         }
-
         public Builder containers(List<GoogleCloudRunOpV2ContainerResponse> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
-
+        public Builder containers(GoogleCloudRunOpV2ContainerResponse... containers) {
+            return containers(List.of(containers));
+        }
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
-
         public Builder executionEnvironment(String executionEnvironment) {
             this.executionEnvironment = Objects.requireNonNull(executionEnvironment);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder scaling(GoogleCloudRunOpV2RevisionScalingResponse scaling) {
             this.scaling = Objects.requireNonNull(scaling);
             return this;
         }
-
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder volumes(List<GoogleCloudRunOpV2VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
+        public Builder volumes(GoogleCloudRunOpV2VolumeResponse... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder vpcAccess(GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
             this.vpcAccess = Objects.requireNonNull(vpcAccess);
             return this;
-        }
-        public GoogleCloudRunOpV2RevisionTemplateResponse build() {
+        }        public GoogleCloudRunOpV2RevisionTemplateResponse build() {
             return new GoogleCloudRunOpV2RevisionTemplateResponse(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
         }
     }

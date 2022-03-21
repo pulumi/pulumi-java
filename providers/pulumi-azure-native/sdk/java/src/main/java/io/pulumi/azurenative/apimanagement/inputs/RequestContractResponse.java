@@ -113,22 +113,27 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
             this.description = description;
             return this;
         }
-
         public Builder headers(@Nullable List<ParameterContractResponse> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(ParameterContractResponse... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryParameters(@Nullable List<ParameterContractResponse> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
-
+        public Builder queryParameters(ParameterContractResponse... queryParameters) {
+            return queryParameters(List.of(queryParameters));
+        }
         public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
             this.representations = representations;
             return this;
         }
-        public RequestContractResponse build() {
+        public Builder representations(RepresentationContractResponse... representations) {
+            return representations(List.of(representations));
+        }        public RequestContractResponse build() {
             return new RequestContractResponse(description, headers, queryParameters, representations);
         }
     }

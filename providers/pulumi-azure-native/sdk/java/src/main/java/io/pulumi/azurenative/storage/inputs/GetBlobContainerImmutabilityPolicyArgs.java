@@ -104,22 +104,18 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder immutabilityPolicyName(String immutabilityPolicyName) {
             this.immutabilityPolicyName = Objects.requireNonNull(immutabilityPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetBlobContainerImmutabilityPolicyArgs build() {
+        }        public GetBlobContainerImmutabilityPolicyArgs build() {
             return new GetBlobContainerImmutabilityPolicyArgs(accountName, containerName, immutabilityPolicyName, resourceGroupName);
         }
     }

@@ -77,12 +77,10 @@ public final class WorkspaceCustomObjectParameterResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WorkspaceCustomObjectParameterResponse build() {
+        }        public WorkspaceCustomObjectParameterResponse build() {
             return new WorkspaceCustomObjectParameterResponse(type, value);
         }
     }

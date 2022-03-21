@@ -89,17 +89,14 @@ public final class LifecycleHandler {
             this.exec = exec;
             return this;
         }
-
         public Builder httpGet(@Nullable HTTPGetAction httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-
         public Builder tcpSocket(@Nullable TCPSocketAction tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
-        }
-        public LifecycleHandler build() {
+        }        public LifecycleHandler build() {
             return new LifecycleHandler(exec, httpGet, tcpSocket);
         }
     }

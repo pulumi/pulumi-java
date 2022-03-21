@@ -59,12 +59,10 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
-
         public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
             this.ingressTrafficAllowed = Output.ofNullable(ingressTrafficAllowed);
             return this;
-        }
-        public ServiceNetworkSettingsNetworkSettingsArgs build() {
+        }        public ServiceNetworkSettingsNetworkSettingsArgs build() {
             return new ServiceNetworkSettingsNetworkSettingsArgs(ingressTrafficAllowed);
         }
     }

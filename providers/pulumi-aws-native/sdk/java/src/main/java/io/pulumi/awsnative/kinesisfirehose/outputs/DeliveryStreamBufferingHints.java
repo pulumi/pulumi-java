@@ -55,12 +55,10 @@ public final class DeliveryStreamBufferingHints {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
-
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
-        }
-        public DeliveryStreamBufferingHints build() {
+        }        public DeliveryStreamBufferingHints build() {
             return new DeliveryStreamBufferingHints(intervalInSeconds, sizeInMBs);
         }
     }

@@ -307,82 +307,72 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
             this.allowedScenarios = allowedScenarios;
             return this;
         }
-
+        public Builder allowedScenarios(String... allowedScenarios) {
+            return allowedScenarios(List.of(allowedScenarios));
+        }
         public Builder authenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
             this.authenticationIdentityDetails = authenticationIdentityDetails;
             return this;
         }
-
         public Builder connectionStatus(@Nullable String connectionStatus) {
             this.connectionStatus = connectionStatus;
             return this;
         }
-
         public Builder draIdentifier(@Nullable String draIdentifier) {
             this.draIdentifier = draIdentifier;
             return this;
         }
-
         public Builder fabricFriendlyName(@Nullable String fabricFriendlyName) {
             this.fabricFriendlyName = fabricFriendlyName;
             return this;
         }
-
         public Builder fabricType(@Nullable String fabricType) {
             this.fabricType = fabricType;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
-
+        public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
+            return healthErrorDetails(List.of(healthErrorDetails));
+        }
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
-
         public Builder protectedItemCount(@Nullable Integer protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
-
         public Builder providerVersion(@Nullable String providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
-
         public Builder providerVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
             this.providerVersionDetails = providerVersionDetails;
             return this;
         }
-
         public Builder providerVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
             this.providerVersionExpiryDate = providerVersionExpiryDate;
             return this;
         }
-
         public Builder providerVersionState(@Nullable String providerVersionState) {
             this.providerVersionState = providerVersionState;
             return this;
         }
-
         public Builder resourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
             this.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
             return this;
         }
-
         public Builder serverVersion(@Nullable String serverVersion) {
             this.serverVersion = serverVersion;
             return this;
-        }
-        public RecoveryServicesProviderPropertiesResponse build() {
+        }        public RecoveryServicesProviderPropertiesResponse build() {
             return new RecoveryServicesProviderPropertiesResponse(allowedScenarios, authenticationIdentityDetails, connectionStatus, draIdentifier, fabricFriendlyName, fabricType, friendlyName, healthErrorDetails, lastHeartBeat, protectedItemCount, providerVersion, providerVersionDetails, providerVersionExpiryDate, providerVersionState, resourceAccessIdentityDetails, serverVersion);
         }
     }

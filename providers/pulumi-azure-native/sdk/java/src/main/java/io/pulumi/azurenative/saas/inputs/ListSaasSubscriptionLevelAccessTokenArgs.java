@@ -72,12 +72,10 @@ public final class ListSaasSubscriptionLevelAccessTokenArgs extends io.pulumi.re
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListSaasSubscriptionLevelAccessTokenArgs build() {
+        }        public ListSaasSubscriptionLevelAccessTokenArgs build() {
             return new ListSaasSubscriptionLevelAccessTokenArgs(resourceGroupName, resourceName);
         }
     }

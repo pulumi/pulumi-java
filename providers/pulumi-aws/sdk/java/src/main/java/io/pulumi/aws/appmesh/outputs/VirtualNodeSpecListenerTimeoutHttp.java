@@ -72,12 +72,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp {
             this.idle = idle;
             return this;
         }
-
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest) {
             this.perRequest = perRequest;
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutHttp build() {
+        }        public VirtualNodeSpecListenerTimeoutHttp build() {
             return new VirtualNodeSpecListenerTimeoutHttp(idle, perRequest);
         }
     }

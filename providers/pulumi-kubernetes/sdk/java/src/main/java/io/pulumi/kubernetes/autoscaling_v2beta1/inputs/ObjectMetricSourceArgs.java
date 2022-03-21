@@ -128,52 +128,42 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
             this.averageValue = averageValue;
             return this;
         }
-
         public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = Output.ofNullable(averageValue);
             return this;
         }
-
         public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder target(Output<CrossVersionObjectReferenceArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder target(CrossVersionObjectReferenceArgs target) {
             this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
-
         public Builder targetValue(Output<String> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public Builder targetValue(String targetValue) {
             this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
-        }
-        public ObjectMetricSourceArgs build() {
+        }        public ObjectMetricSourceArgs build() {
             return new ObjectMetricSourceArgs(averageValue, metricName, selector, target, targetValue);
         }
     }

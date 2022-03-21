@@ -109,42 +109,34 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
             this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
             return this;
         }
-
         public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
             this.ignoreCertificateNameMismatch = Output.of(Objects.requireNonNull(ignoreCertificateNameMismatch));
             return this;
         }
-
         public Builder keepHttpConnectionAlive(Output<Boolean> keepHttpConnectionAlive) {
             this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
             return this;
         }
-
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
             this.keepHttpConnectionAlive = Output.of(Objects.requireNonNull(keepHttpConnectionAlive));
             return this;
         }
-
         public Builder supportHttpStatusCodeContinue(Output<Boolean> supportHttpStatusCodeContinue) {
             this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
             return this;
         }
-
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
             this.supportHttpStatusCodeContinue = Output.of(Objects.requireNonNull(supportHttpStatusCodeContinue));
             return this;
         }
-
         public Builder unfoldHttpHeaders(Output<Boolean> unfoldHttpHeaders) {
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
         }
-
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
             this.unfoldHttpHeaders = Output.of(Objects.requireNonNull(unfoldHttpHeaders));
             return this;
-        }
-        public AS2MessageConnectionSettingsArgs build() {
+        }        public AS2MessageConnectionSettingsArgs build() {
             return new AS2MessageConnectionSettingsArgs(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
         }
     }

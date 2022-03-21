@@ -74,22 +74,18 @@ public final class PodDNSConfigOptionArgs extends io.pulumi.resources.ResourceAr
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public PodDNSConfigOptionArgs build() {
+        }        public PodDNSConfigOptionArgs build() {
             return new PodDNSConfigOptionArgs(name, value);
         }
     }

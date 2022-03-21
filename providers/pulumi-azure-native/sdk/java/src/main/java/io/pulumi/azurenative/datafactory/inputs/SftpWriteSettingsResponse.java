@@ -144,32 +144,26 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
             this.copyBehavior = copyBehavior;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder operationTimeout(@Nullable Object operationTimeout) {
             this.operationTimeout = operationTimeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useTempFileRename(@Nullable Object useTempFileRename) {
             this.useTempFileRename = useTempFileRename;
             return this;
-        }
-        public SftpWriteSettingsResponse build() {
+        }        public SftpWriteSettingsResponse build() {
             return new SftpWriteSettingsResponse(copyBehavior, disableMetricsCollection, maxConcurrentConnections, operationTimeout, type, useTempFileRename);
         }
     }

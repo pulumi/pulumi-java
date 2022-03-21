@@ -129,27 +129,22 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
             this.contentHash = Objects.requireNonNull(contentHash);
             return this;
         }
-
         public Builder contentSize(Double contentSize) {
             this.contentSize = Objects.requireNonNull(contentSize);
             return this;
         }
-
         public Builder contentVersion(String contentVersion) {
             this.contentVersion = Objects.requireNonNull(contentVersion);
             return this;
         }
-
         public Builder metadata(Object metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
-        }
-        public ContentLinkResponse build() {
+        }        public ContentLinkResponse build() {
             return new ContentLinkResponse(contentHash, contentSize, contentVersion, metadata, uri);
         }
     }

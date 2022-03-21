@@ -78,22 +78,18 @@ public final class InfrastructureConfigurationS3LogsArgs extends io.pulumi.resou
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = Output.ofNullable(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
-        }
-        public InfrastructureConfigurationS3LogsArgs build() {
+        }        public InfrastructureConfigurationS3LogsArgs build() {
             return new InfrastructureConfigurationS3LogsArgs(s3BucketName, s3KeyPrefix);
         }
     }

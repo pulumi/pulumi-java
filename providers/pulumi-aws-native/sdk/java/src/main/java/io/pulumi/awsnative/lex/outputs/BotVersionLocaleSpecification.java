@@ -54,12 +54,10 @@ public final class BotVersionLocaleSpecification {
             this.botVersionLocaleDetails = Objects.requireNonNull(botVersionLocaleDetails);
             return this;
         }
-
         public Builder localeId(String localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
-        }
-        public BotVersionLocaleSpecification build() {
+        }        public BotVersionLocaleSpecification build() {
             return new BotVersionLocaleSpecification(botVersionLocaleDetails, localeId);
         }
     }

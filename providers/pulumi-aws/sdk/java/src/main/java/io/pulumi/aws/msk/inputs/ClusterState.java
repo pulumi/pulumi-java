@@ -371,202 +371,162 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder bootstrapBrokers(@Nullable Output<String> bootstrapBrokers) {
             this.bootstrapBrokers = bootstrapBrokers;
             return this;
         }
-
         public Builder bootstrapBrokers(@Nullable String bootstrapBrokers) {
             this.bootstrapBrokers = Output.ofNullable(bootstrapBrokers);
             return this;
         }
-
         public Builder bootstrapBrokersSaslIam(@Nullable Output<String> bootstrapBrokersSaslIam) {
             this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
             return this;
         }
-
         public Builder bootstrapBrokersSaslIam(@Nullable String bootstrapBrokersSaslIam) {
             this.bootstrapBrokersSaslIam = Output.ofNullable(bootstrapBrokersSaslIam);
             return this;
         }
-
         public Builder bootstrapBrokersSaslScram(@Nullable Output<String> bootstrapBrokersSaslScram) {
             this.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
             return this;
         }
-
         public Builder bootstrapBrokersSaslScram(@Nullable String bootstrapBrokersSaslScram) {
             this.bootstrapBrokersSaslScram = Output.ofNullable(bootstrapBrokersSaslScram);
             return this;
         }
-
         public Builder bootstrapBrokersTls(@Nullable Output<String> bootstrapBrokersTls) {
             this.bootstrapBrokersTls = bootstrapBrokersTls;
             return this;
         }
-
         public Builder bootstrapBrokersTls(@Nullable String bootstrapBrokersTls) {
             this.bootstrapBrokersTls = Output.ofNullable(bootstrapBrokersTls);
             return this;
         }
-
         public Builder brokerNodeGroupInfo(@Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = brokerNodeGroupInfo;
             return this;
         }
-
         public Builder brokerNodeGroupInfo(@Nullable ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = Output.ofNullable(brokerNodeGroupInfo);
             return this;
         }
-
         public Builder clientAuthentication(@Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication) {
             this.clientAuthentication = clientAuthentication;
             return this;
         }
-
         public Builder clientAuthentication(@Nullable ClusterClientAuthenticationGetArgs clientAuthentication) {
             this.clientAuthentication = Output.ofNullable(clientAuthentication);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo) {
             this.configurationInfo = configurationInfo;
             return this;
         }
-
         public Builder configurationInfo(@Nullable ClusterConfigurationInfoGetArgs configurationInfo) {
             this.configurationInfo = Output.ofNullable(configurationInfo);
             return this;
         }
-
         public Builder currentVersion(@Nullable Output<String> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
-
         public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = Output.ofNullable(currentVersion);
             return this;
         }
-
         public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo) {
             this.encryptionInfo = encryptionInfo;
             return this;
         }
-
         public Builder encryptionInfo(@Nullable ClusterEncryptionInfoGetArgs encryptionInfo) {
             this.encryptionInfo = Output.ofNullable(encryptionInfo);
             return this;
         }
-
         public Builder enhancedMonitoring(@Nullable Output<String> enhancedMonitoring) {
             this.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
-
         public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
             this.enhancedMonitoring = Output.ofNullable(enhancedMonitoring);
             return this;
         }
-
         public Builder kafkaVersion(@Nullable Output<String> kafkaVersion) {
             this.kafkaVersion = kafkaVersion;
             return this;
         }
-
         public Builder kafkaVersion(@Nullable String kafkaVersion) {
             this.kafkaVersion = Output.ofNullable(kafkaVersion);
             return this;
         }
-
         public Builder loggingInfo(@Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo) {
             this.loggingInfo = loggingInfo;
             return this;
         }
-
         public Builder loggingInfo(@Nullable ClusterLoggingInfoGetArgs loggingInfo) {
             this.loggingInfo = Output.ofNullable(loggingInfo);
             return this;
         }
-
         public Builder numberOfBrokerNodes(@Nullable Output<Integer> numberOfBrokerNodes) {
             this.numberOfBrokerNodes = numberOfBrokerNodes;
             return this;
         }
-
         public Builder numberOfBrokerNodes(@Nullable Integer numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Output.ofNullable(numberOfBrokerNodes);
             return this;
         }
-
         public Builder openMonitoring(@Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring) {
             this.openMonitoring = openMonitoring;
             return this;
         }
-
         public Builder openMonitoring(@Nullable ClusterOpenMonitoringGetArgs openMonitoring) {
             this.openMonitoring = Output.ofNullable(openMonitoring);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder zookeeperConnectString(@Nullable Output<String> zookeeperConnectString) {
             this.zookeeperConnectString = zookeeperConnectString;
             return this;
         }
-
         public Builder zookeeperConnectString(@Nullable String zookeeperConnectString) {
             this.zookeeperConnectString = Output.ofNullable(zookeeperConnectString);
             return this;
         }
-
         public Builder zookeeperConnectStringTls(@Nullable Output<String> zookeeperConnectStringTls) {
             this.zookeeperConnectStringTls = zookeeperConnectStringTls;
             return this;
         }
-
         public Builder zookeeperConnectStringTls(@Nullable String zookeeperConnectStringTls) {
             this.zookeeperConnectStringTls = Output.ofNullable(zookeeperConnectStringTls);
             return this;
-        }
-        public ClusterState build() {
+        }        public ClusterState build() {
             return new ClusterState(arn, bootstrapBrokers, bootstrapBrokersSaslIam, bootstrapBrokersSaslScram, bootstrapBrokersTls, brokerNodeGroupInfo, clientAuthentication, clusterName, configurationInfo, currentVersion, encryptionInfo, enhancedMonitoring, kafkaVersion, loggingInfo, numberOfBrokerNodes, openMonitoring, tags, tagsAll, zookeeperConnectString, zookeeperConnectStringTls);
         }
     }

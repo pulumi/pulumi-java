@@ -81,17 +81,17 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
             this.providerAuthentication = providerAuthentication;
             return this;
         }
-
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
-
+        public Builder providerAuthorizations(ResourceProviderAuthorizationResponse... providerAuthorizations) {
+            return providerAuthorizations(List.of(providerAuthorizations));
+        }
         public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
-        }
-        public ProviderRegistrationPropertiesResponseProviderHubMetadata build() {
+        }        public ProviderRegistrationPropertiesResponseProviderHubMetadata build() {
             return new ProviderRegistrationPropertiesResponseProviderHubMetadata(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
         }
     }

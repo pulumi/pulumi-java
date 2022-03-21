@@ -100,32 +100,26 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
-
         public Builder flag(Either<String,FeatureFlags> flag) {
             this.flag = Output.of(Objects.requireNonNull(flag));
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public WebPubSubFeatureArgs build() {
+        }        public WebPubSubFeatureArgs build() {
             return new WebPubSubFeatureArgs(flag, properties, value);
         }
     }

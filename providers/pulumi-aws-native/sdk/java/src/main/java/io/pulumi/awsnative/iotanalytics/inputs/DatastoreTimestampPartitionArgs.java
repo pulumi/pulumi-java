@@ -66,22 +66,18 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder attributeName(String attributeName) {
             this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
-
         public Builder timestampFormat(@Nullable Output<String> timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
         }
-
         public Builder timestampFormat(@Nullable String timestampFormat) {
             this.timestampFormat = Output.ofNullable(timestampFormat);
             return this;
-        }
-        public DatastoreTimestampPartitionArgs build() {
+        }        public DatastoreTimestampPartitionArgs build() {
             return new DatastoreTimestampPartitionArgs(attributeName, timestampFormat);
         }
     }

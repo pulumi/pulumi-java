@@ -79,22 +79,18 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             this.distributionCut = distributionCut;
             return this;
         }
-
         public Builder distributionCut(@Nullable DistributionCutArgs distributionCut) {
             this.distributionCut = Output.ofNullable(distributionCut);
             return this;
         }
-
         public Builder goodTotalRatio(@Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
-
         public Builder goodTotalRatio(@Nullable TimeSeriesRatioArgs goodTotalRatio) {
             this.goodTotalRatio = Output.ofNullable(goodTotalRatio);
             return this;
-        }
-        public RequestBasedSliArgs build() {
+        }        public RequestBasedSliArgs build() {
             return new RequestBasedSliArgs(distributionCut, goodTotalRatio);
         }
     }

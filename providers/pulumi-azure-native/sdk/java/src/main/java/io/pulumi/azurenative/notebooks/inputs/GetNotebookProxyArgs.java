@@ -72,12 +72,10 @@ public final class GetNotebookProxyArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetNotebookProxyArgs build() {
+        }        public GetNotebookProxyArgs build() {
             return new GetNotebookProxyArgs(resourceGroupName, resourceName);
         }
     }

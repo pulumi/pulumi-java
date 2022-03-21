@@ -90,32 +90,29 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder diskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs diskConfig) {
             this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
-
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
-
         public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = Output.ofNullable(instanceNames);
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
-
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Output.ofNullable(numInstances);
             return this;
-        }
-        public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {
+        }        public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {
             return new ClusterClusterConfigPreemptibleWorkerConfigArgs(diskConfig, instanceNames, numInstances);
         }
     }

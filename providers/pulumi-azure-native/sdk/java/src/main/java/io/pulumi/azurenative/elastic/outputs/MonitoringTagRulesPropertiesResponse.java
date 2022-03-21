@@ -72,12 +72,10 @@ public final class MonitoringTagRulesPropertiesResponse {
             this.logRules = logRules;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
-        }
-        public MonitoringTagRulesPropertiesResponse build() {
+        }        public MonitoringTagRulesPropertiesResponse build() {
             return new MonitoringTagRulesPropertiesResponse(logRules, provisioningState);
         }
     }

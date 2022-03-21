@@ -130,52 +130,42 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
             this.autoRenew = autoRenew;
             return this;
         }
-
         public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
-
         public Builder current(@Nullable Output<CommitmentPeriodArgs> current) {
             this.current = current;
             return this;
         }
-
         public Builder current(@Nullable CommitmentPeriodArgs current) {
             this.current = Output.ofNullable(current);
             return this;
         }
-
         public Builder hostingModel(@Nullable Output<Either<String,HostingModel>> hostingModel) {
             this.hostingModel = hostingModel;
             return this;
         }
-
         public Builder hostingModel(@Nullable Either<String,HostingModel> hostingModel) {
             this.hostingModel = Output.ofNullable(hostingModel);
             return this;
         }
-
         public Builder next(@Nullable Output<CommitmentPeriodArgs> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable CommitmentPeriodArgs next) {
             this.next = Output.ofNullable(next);
             return this;
         }
-
         public Builder planType(@Nullable Output<String> planType) {
             this.planType = planType;
             return this;
         }
-
         public Builder planType(@Nullable String planType) {
             this.planType = Output.ofNullable(planType);
             return this;
-        }
-        public CommitmentPlanPropertiesArgs build() {
+        }        public CommitmentPlanPropertiesArgs build() {
             return new CommitmentPlanPropertiesArgs(autoRenew, current, hostingModel, next, planType);
         }
     }

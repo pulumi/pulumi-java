@@ -56,12 +56,10 @@ public final class ContactTargets {
             this.channelTargetInfo = channelTargetInfo;
             return this;
         }
-
         public Builder contactTargetInfo(@Nullable ContactTargetInfo contactTargetInfo) {
             this.contactTargetInfo = contactTargetInfo;
             return this;
-        }
-        public ContactTargets build() {
+        }        public ContactTargets build() {
             return new ContactTargets(channelTargetInfo, contactTargetInfo);
         }
     }

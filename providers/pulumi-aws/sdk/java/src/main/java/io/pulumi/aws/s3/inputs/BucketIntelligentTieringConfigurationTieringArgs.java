@@ -74,22 +74,18 @@ public final class BucketIntelligentTieringConfigurationTieringArgs extends io.p
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
-
         public Builder accessTier(String accessTier) {
             this.accessTier = Output.of(Objects.requireNonNull(accessTier));
             return this;
         }
-
         public Builder days(Output<Integer> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
-
         public Builder days(Integer days) {
             this.days = Output.of(Objects.requireNonNull(days));
             return this;
-        }
-        public BucketIntelligentTieringConfigurationTieringArgs build() {
+        }        public BucketIntelligentTieringConfigurationTieringArgs build() {
             return new BucketIntelligentTieringConfigurationTieringArgs(accessTier, days);
         }
     }

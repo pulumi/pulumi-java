@@ -213,102 +213,85 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.databasesInfo = databasesInfo;
             return this;
         }
-
         public Builder databasesInfo(@Nullable List<DatabaseInfoArgs> databasesInfo) {
             this.databasesInfo = Output.ofNullable(databasesInfo);
             return this;
         }
-
+        public Builder databasesInfo(DatabaseInfoArgs... databasesInfo) {
+            return databasesInfo(List.of(databasesInfo));
+        }
         public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = Output.ofNullable(projectName);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder sourceConnectionInfo(@Nullable Output<Object> sourceConnectionInfo) {
             this.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
-
         public Builder sourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.ofNullable(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourcePlatform(Output<Either<String,ProjectSourcePlatform>> sourcePlatform) {
             this.sourcePlatform = Objects.requireNonNull(sourcePlatform);
             return this;
         }
-
         public Builder sourcePlatform(Either<String,ProjectSourcePlatform> sourcePlatform) {
             this.sourcePlatform = Output.of(Objects.requireNonNull(sourcePlatform));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetConnectionInfo(@Nullable Output<Object> targetConnectionInfo) {
             this.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
-
         public Builder targetConnectionInfo(@Nullable Object targetConnectionInfo) {
             this.targetConnectionInfo = Output.ofNullable(targetConnectionInfo);
             return this;
         }
-
         public Builder targetPlatform(Output<Either<String,ProjectTargetPlatform>> targetPlatform) {
             this.targetPlatform = Objects.requireNonNull(targetPlatform);
             return this;
         }
-
         public Builder targetPlatform(Either<String,ProjectTargetPlatform> targetPlatform) {
             this.targetPlatform = Output.of(Objects.requireNonNull(targetPlatform));
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(databasesInfo, groupName, location, projectName, serviceName, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform);
         }
     }

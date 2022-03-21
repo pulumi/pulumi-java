@@ -113,22 +113,18 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(@Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public InputResponse build() {
+        }        public InputResponse build() {
             return new InputResponse(id, name, properties, type);
         }
     }

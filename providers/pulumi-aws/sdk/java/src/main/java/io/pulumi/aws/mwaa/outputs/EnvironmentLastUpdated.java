@@ -83,17 +83,17 @@ public final class EnvironmentLastUpdated {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder errors(@Nullable List<EnvironmentLastUpdatedError> errors) {
             this.errors = errors;
             return this;
         }
-
+        public Builder errors(EnvironmentLastUpdatedError... errors) {
+            return errors(List.of(errors));
+        }
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public EnvironmentLastUpdated build() {
+        }        public EnvironmentLastUpdated build() {
             return new EnvironmentLastUpdated(createdAt, errors, status);
         }
     }

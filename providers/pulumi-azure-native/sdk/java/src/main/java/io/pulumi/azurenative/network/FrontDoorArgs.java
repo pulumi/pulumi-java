@@ -244,122 +244,113 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             this.backendPools = backendPools;
             return this;
         }
-
         public Builder backendPools(@Nullable List<BackendPoolArgs> backendPools) {
             this.backendPools = Output.ofNullable(backendPools);
             return this;
         }
-
+        public Builder backendPools(BackendPoolArgs... backendPools) {
+            return backendPools(List.of(backendPools));
+        }
         public Builder backendPoolsSettings(@Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings) {
             this.backendPoolsSettings = backendPoolsSettings;
             return this;
         }
-
         public Builder backendPoolsSettings(@Nullable BackendPoolsSettingsArgs backendPoolsSettings) {
             this.backendPoolsSettings = Output.ofNullable(backendPoolsSettings);
             return this;
         }
-
         public Builder enabledState(@Nullable Output<Either<String,FrontDoorEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
-
         public Builder enabledState(@Nullable Either<String,FrontDoorEnabledState> enabledState) {
             this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder frontDoorName(@Nullable Output<String> frontDoorName) {
             this.frontDoorName = frontDoorName;
             return this;
         }
-
         public Builder frontDoorName(@Nullable String frontDoorName) {
             this.frontDoorName = Output.ofNullable(frontDoorName);
             return this;
         }
-
         public Builder frontendEndpoints(@Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
-
         public Builder frontendEndpoints(@Nullable List<FrontendEndpointArgs> frontendEndpoints) {
             this.frontendEndpoints = Output.ofNullable(frontendEndpoints);
             return this;
         }
-
+        public Builder frontendEndpoints(FrontendEndpointArgs... frontendEndpoints) {
+            return frontendEndpoints(List.of(frontendEndpoints));
+        }
         public Builder healthProbeSettings(@Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
-
         public Builder healthProbeSettings(@Nullable List<HealthProbeSettingsModelArgs> healthProbeSettings) {
             this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
-
+        public Builder healthProbeSettings(HealthProbeSettingsModelArgs... healthProbeSettings) {
+            return healthProbeSettings(List.of(healthProbeSettings));
+        }
         public Builder loadBalancingSettings(@Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-
         public Builder loadBalancingSettings(@Nullable List<LoadBalancingSettingsModelArgs> loadBalancingSettings) {
             this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
             return this;
         }
-
+        public Builder loadBalancingSettings(LoadBalancingSettingsModelArgs... loadBalancingSettings) {
+            return loadBalancingSettings(List.of(loadBalancingSettings));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingRules(@Nullable Output<List<RoutingRuleArgs>> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
-
         public Builder routingRules(@Nullable List<RoutingRuleArgs> routingRules) {
             this.routingRules = Output.ofNullable(routingRules);
             return this;
         }
-
+        public Builder routingRules(RoutingRuleArgs... routingRules) {
+            return routingRules(List.of(routingRules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public FrontDoorArgs build() {
+        }        public FrontDoorArgs build() {
             return new FrontDoorArgs(backendPools, backendPoolsSettings, enabledState, friendlyName, frontDoorName, frontendEndpoints, healthProbeSettings, loadBalancingSettings, location, resourceGroupName, routingRules, tags);
         }
     }

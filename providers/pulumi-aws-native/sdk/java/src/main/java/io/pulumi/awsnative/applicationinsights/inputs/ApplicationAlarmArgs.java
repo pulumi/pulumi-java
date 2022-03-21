@@ -79,22 +79,18 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
-
         public Builder alarmName(String alarmName) {
             this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
-
         public Builder severity(@Nullable Output<ApplicationAlarmSeverity> severity) {
             this.severity = severity;
             return this;
         }
-
         public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
             this.severity = Output.ofNullable(severity);
             return this;
-        }
-        public ApplicationAlarmArgs build() {
+        }        public ApplicationAlarmArgs build() {
             return new ApplicationAlarmArgs(alarmName, severity);
         }
     }

@@ -58,12 +58,13 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactRule = artifactRule;
             return this;
         }
-
         public Builder artifactRule(@Nullable List<String> artifactRule) {
             this.artifactRule = Output.ofNullable(artifactRule);
             return this;
         }
-        public ArtifactRuleArgs build() {
+        public Builder artifactRule(String... artifactRule) {
+            return artifactRule(List.of(artifactRule));
+        }        public ArtifactRuleArgs build() {
             return new ArtifactRuleArgs(artifactRule);
         }
     }

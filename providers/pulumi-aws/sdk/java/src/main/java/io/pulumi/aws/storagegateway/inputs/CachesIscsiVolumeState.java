@@ -317,172 +317,138 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder chapEnabled(@Nullable Output<Boolean> chapEnabled) {
             this.chapEnabled = chapEnabled;
             return this;
         }
-
         public Builder chapEnabled(@Nullable Boolean chapEnabled) {
             this.chapEnabled = Output.ofNullable(chapEnabled);
             return this;
         }
-
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
-
         public Builder gatewayArn(@Nullable String gatewayArn) {
             this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
-
         public Builder lunNumber(@Nullable Output<Integer> lunNumber) {
             this.lunNumber = lunNumber;
             return this;
         }
-
         public Builder lunNumber(@Nullable Integer lunNumber) {
             this.lunNumber = Output.ofNullable(lunNumber);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfacePort(@Nullable Output<Integer> networkInterfacePort) {
             this.networkInterfacePort = networkInterfacePort;
             return this;
         }
-
         public Builder networkInterfacePort(@Nullable Integer networkInterfacePort) {
             this.networkInterfacePort = Output.ofNullable(networkInterfacePort);
             return this;
         }
-
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
-
         public Builder sourceVolumeArn(@Nullable Output<String> sourceVolumeArn) {
             this.sourceVolumeArn = sourceVolumeArn;
             return this;
         }
-
         public Builder sourceVolumeArn(@Nullable String sourceVolumeArn) {
             this.sourceVolumeArn = Output.ofNullable(sourceVolumeArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
-
         public Builder targetName(@Nullable Output<String> targetName) {
             this.targetName = targetName;
             return this;
         }
-
         public Builder targetName(@Nullable String targetName) {
             this.targetName = Output.ofNullable(targetName);
             return this;
         }
-
         public Builder volumeArn(@Nullable Output<String> volumeArn) {
             this.volumeArn = volumeArn;
             return this;
         }
-
         public Builder volumeArn(@Nullable String volumeArn) {
             this.volumeArn = Output.ofNullable(volumeArn);
             return this;
         }
-
         public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
-
         public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = Output.ofNullable(volumeId);
             return this;
         }
-
         public Builder volumeSizeInBytes(@Nullable Output<Integer> volumeSizeInBytes) {
             this.volumeSizeInBytes = volumeSizeInBytes;
             return this;
         }
-
         public Builder volumeSizeInBytes(@Nullable Integer volumeSizeInBytes) {
             this.volumeSizeInBytes = Output.ofNullable(volumeSizeInBytes);
             return this;
-        }
-        public CachesIscsiVolumeState build() {
+        }        public CachesIscsiVolumeState build() {
             return new CachesIscsiVolumeState(arn, chapEnabled, gatewayArn, kmsEncrypted, kmsKey, lunNumber, networkInterfaceId, networkInterfacePort, snapshotId, sourceVolumeArn, tags, tagsAll, targetArn, targetName, volumeArn, volumeId, volumeSizeInBytes);
         }
     }

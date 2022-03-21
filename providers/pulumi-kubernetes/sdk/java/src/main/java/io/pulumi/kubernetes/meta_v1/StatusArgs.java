@@ -157,72 +157,58 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder code(@Nullable Output<Integer> code) {
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable Integer code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder details(@Nullable Output<StatusDetailsArgs> details) {
             this.details = details;
             return this;
         }
-
         public Builder details(@Nullable StatusDetailsArgs details) {
             this.details = Output.ofNullable(details);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ListMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
-        }
-        public StatusArgs build() {
+        }        public StatusArgs build() {
             return new StatusArgs(apiVersion, code, details, kind, message, metadata, reason);
         }
     }

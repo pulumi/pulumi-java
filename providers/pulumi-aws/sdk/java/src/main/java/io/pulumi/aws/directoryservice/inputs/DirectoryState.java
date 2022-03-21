@@ -303,162 +303,133 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
             this.accessUrl = accessUrl;
             return this;
         }
-
         public Builder accessUrl(@Nullable String accessUrl) {
             this.accessUrl = Output.ofNullable(accessUrl);
             return this;
         }
-
         public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
-
         public Builder alias(@Nullable String alias) {
             this.alias = Output.ofNullable(alias);
             return this;
         }
-
         public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings) {
             this.connectSettings = connectSettings;
             return this;
         }
-
         public Builder connectSettings(@Nullable DirectoryConnectSettingsGetArgs connectSettings) {
             this.connectSettings = Output.ofNullable(connectSettings);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dnsIpAddresses(@Nullable Output<List<String>> dnsIpAddresses) {
             this.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
-
         public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Output.ofNullable(dnsIpAddresses);
             return this;
         }
-
+        public Builder dnsIpAddresses(String... dnsIpAddresses) {
+            return dnsIpAddresses(List.of(dnsIpAddresses));
+        }
         public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = Output.ofNullable(edition);
             return this;
         }
-
         public Builder enableSso(@Nullable Output<Boolean> enableSso) {
             this.enableSso = enableSso;
             return this;
         }
-
         public Builder enableSso(@Nullable Boolean enableSso) {
             this.enableSso = Output.ofNullable(enableSso);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings) {
             this.vpcSettings = vpcSettings;
             return this;
         }
-
         public Builder vpcSettings(@Nullable DirectoryVpcSettingsGetArgs vpcSettings) {
             this.vpcSettings = Output.ofNullable(vpcSettings);
             return this;
-        }
-        public DirectoryState build() {
+        }        public DirectoryState build() {
             return new DirectoryState(accessUrl, alias, connectSettings, description, dnsIpAddresses, edition, enableSso, name, password, securityGroupId, shortName, size, tags, tagsAll, type, vpcSettings);
         }
     }

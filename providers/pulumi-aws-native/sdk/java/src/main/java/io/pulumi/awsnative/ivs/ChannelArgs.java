@@ -143,62 +143,53 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.authorized = authorized;
             return this;
         }
-
         public Builder authorized(@Nullable Boolean authorized) {
             this.authorized = Output.ofNullable(authorized);
             return this;
         }
-
         public Builder latencyMode(@Nullable Output<ChannelLatencyMode> latencyMode) {
             this.latencyMode = latencyMode;
             return this;
         }
-
         public Builder latencyMode(@Nullable ChannelLatencyMode latencyMode) {
             this.latencyMode = Output.ofNullable(latencyMode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder recordingConfigurationArn(@Nullable Output<String> recordingConfigurationArn) {
             this.recordingConfigurationArn = recordingConfigurationArn;
             return this;
         }
-
         public Builder recordingConfigurationArn(@Nullable String recordingConfigurationArn) {
             this.recordingConfigurationArn = Output.ofNullable(recordingConfigurationArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ChannelTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(@Nullable Output<ChannelType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ChannelType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ChannelArgs build() {
+        }        public ChannelArgs build() {
             return new ChannelArgs(authorized, latencyMode, name, recordingConfigurationArn, tags, type);
         }
     }

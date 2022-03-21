@@ -70,12 +70,10 @@ public final class MaintenancePolicyResponse {
             this.resourceVersion = Objects.requireNonNull(resourceVersion);
             return this;
         }
-
         public Builder window(MaintenanceWindowResponse window) {
             this.window = Objects.requireNonNull(window);
             return this;
-        }
-        public MaintenancePolicyResponse build() {
+        }        public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(resourceVersion, window);
         }
     }

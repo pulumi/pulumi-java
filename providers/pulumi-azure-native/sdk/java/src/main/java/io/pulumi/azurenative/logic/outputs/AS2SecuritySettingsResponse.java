@@ -200,52 +200,42 @@ public final class AS2SecuritySettingsResponse {
             this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
             return this;
         }
-
         public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
             return this;
         }
-
         public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
             return this;
         }
-
         public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
             return this;
         }
-
         public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
             return this;
         }
-
         public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
             return this;
         }
-
         public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
             this.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
-
         public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
             return this;
         }
-
         public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
-
         public Builder signingCertificateName(@Nullable String signingCertificateName) {
             this.signingCertificateName = signingCertificateName;
             return this;
-        }
-        public AS2SecuritySettingsResponse build() {
+        }        public AS2SecuritySettingsResponse build() {
             return new AS2SecuritySettingsResponse(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);
         }
     }

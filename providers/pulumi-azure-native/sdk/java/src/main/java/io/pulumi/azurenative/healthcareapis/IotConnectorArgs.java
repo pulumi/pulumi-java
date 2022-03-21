@@ -174,82 +174,66 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.deviceMapping = deviceMapping;
             return this;
         }
-
         public Builder deviceMapping(@Nullable IotMappingPropertiesArgs deviceMapping) {
             this.deviceMapping = Output.ofNullable(deviceMapping);
             return this;
         }
-
         public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder ingestionEndpointConfiguration(@Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration) {
             this.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
             return this;
         }
-
         public Builder ingestionEndpointConfiguration(@Nullable IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
             this.ingestionEndpointConfiguration = Output.ofNullable(ingestionEndpointConfiguration);
             return this;
         }
-
         public Builder iotConnectorName(@Nullable Output<String> iotConnectorName) {
             this.iotConnectorName = iotConnectorName;
             return this;
         }
-
         public Builder iotConnectorName(@Nullable String iotConnectorName) {
             this.iotConnectorName = Output.ofNullable(iotConnectorName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public IotConnectorArgs build() {
+        }        public IotConnectorArgs build() {
             return new IotConnectorArgs(deviceMapping, identity, ingestionEndpointConfiguration, iotConnectorName, location, resourceGroupName, tags, workspaceName);
         }
     }

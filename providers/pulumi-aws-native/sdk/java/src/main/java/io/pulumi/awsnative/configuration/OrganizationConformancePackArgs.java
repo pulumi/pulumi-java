@@ -156,72 +156,64 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
-
         public Builder conformancePackInputParameters(@Nullable List<OrganizationConformancePackConformancePackInputParameterArgs> conformancePackInputParameters) {
             this.conformancePackInputParameters = Output.ofNullable(conformancePackInputParameters);
             return this;
         }
-
+        public Builder conformancePackInputParameters(OrganizationConformancePackConformancePackInputParameterArgs... conformancePackInputParameters) {
+            return conformancePackInputParameters(List.of(conformancePackInputParameters));
+        }
         public Builder deliveryS3Bucket(@Nullable Output<String> deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
-
         public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = Output.ofNullable(deliveryS3Bucket);
             return this;
         }
-
         public Builder deliveryS3KeyPrefix(@Nullable Output<String> deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
-
         public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = Output.ofNullable(deliveryS3KeyPrefix);
             return this;
         }
-
         public Builder excludedAccounts(@Nullable Output<List<String>> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
-
         public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
             this.excludedAccounts = Output.ofNullable(excludedAccounts);
             return this;
         }
-
+        public Builder excludedAccounts(String... excludedAccounts) {
+            return excludedAccounts(List.of(excludedAccounts));
+        }
         public Builder organizationConformancePackName(@Nullable Output<String> organizationConformancePackName) {
             this.organizationConformancePackName = organizationConformancePackName;
             return this;
         }
-
         public Builder organizationConformancePackName(@Nullable String organizationConformancePackName) {
             this.organizationConformancePackName = Output.ofNullable(organizationConformancePackName);
             return this;
         }
-
         public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
-
         public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
-
         public Builder templateS3Uri(@Nullable Output<String> templateS3Uri) {
             this.templateS3Uri = templateS3Uri;
             return this;
         }
-
         public Builder templateS3Uri(@Nullable String templateS3Uri) {
             this.templateS3Uri = Output.ofNullable(templateS3Uri);
             return this;
-        }
-        public OrganizationConformancePackArgs build() {
+        }        public OrganizationConformancePackArgs build() {
             return new OrganizationConformancePackArgs(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix, excludedAccounts, organizationConformancePackName, templateBody, templateS3Uri);
         }
     }

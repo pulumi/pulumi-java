@@ -178,82 +178,69 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
             return this;
         }
-
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
-
         public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
             this.inboundIpRules = Output.ofNullable(inboundIpRules);
             return this;
         }
-
+        public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
+            return inboundIpRules(List.of(inboundIpRules));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder partnerNamespaceName(@Nullable Output<String> partnerNamespaceName) {
             this.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
-
         public Builder partnerNamespaceName(@Nullable String partnerNamespaceName) {
             this.partnerNamespaceName = Output.ofNullable(partnerNamespaceName);
             return this;
         }
-
         public Builder partnerRegistrationFullyQualifiedId(@Nullable Output<String> partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
             return this;
         }
-
         public Builder partnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = Output.ofNullable(partnerRegistrationFullyQualifiedId);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PartnerNamespaceArgs build() {
+        }        public PartnerNamespaceArgs build() {
             return new PartnerNamespaceArgs(disableLocalAuth, inboundIpRules, location, partnerNamespaceName, partnerRegistrationFullyQualifiedId, publicNetworkAccess, resourceGroupName, tags);
         }
     }

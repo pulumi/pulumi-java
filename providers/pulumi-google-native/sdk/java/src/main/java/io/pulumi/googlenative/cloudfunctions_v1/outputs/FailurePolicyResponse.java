@@ -51,8 +51,7 @@ public final class FailurePolicyResponse {
         public Builder retry(RetryResponse retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
-        }
-        public FailurePolicyResponse build() {
+        }        public FailurePolicyResponse build() {
             return new FailurePolicyResponse(retry);
         }
     }

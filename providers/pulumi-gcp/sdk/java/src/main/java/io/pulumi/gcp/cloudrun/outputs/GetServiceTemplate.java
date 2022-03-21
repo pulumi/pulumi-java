@@ -55,12 +55,16 @@ public final class GetServiceTemplate {
             this.metadatas = Objects.requireNonNull(metadatas);
             return this;
         }
-
+        public Builder metadatas(GetServiceTemplateMetadata... metadatas) {
+            return metadatas(List.of(metadatas));
+        }
         public Builder specs(List<GetServiceTemplateSpec> specs) {
             this.specs = Objects.requireNonNull(specs);
             return this;
         }
-        public GetServiceTemplate build() {
+        public Builder specs(GetServiceTemplateSpec... specs) {
+            return specs(List.of(specs));
+        }        public GetServiceTemplate build() {
             return new GetServiceTemplate(metadatas, specs);
         }
     }

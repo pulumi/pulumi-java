@@ -101,22 +101,18 @@ public final class PlanResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder product(String product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
-
         public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public PlanResponse build() {
+        }        public PlanResponse build() {
             return new PlanResponse(name, product, publisher, version);
         }
     }

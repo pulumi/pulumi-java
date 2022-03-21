@@ -119,27 +119,22 @@ public final class OrganizationNonMasterAccount {
             this.arn = arn;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public OrganizationNonMasterAccount build() {
+        }        public OrganizationNonMasterAccount build() {
             return new OrganizationNonMasterAccount(arn, email, id, name, status);
         }
     }

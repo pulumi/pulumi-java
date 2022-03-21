@@ -70,12 +70,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
             this.dialogflowSource = Objects.requireNonNull(dialogflowSource);
             return this;
         }
-
         public Builder gcsSource(GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(dialogflowSource, gcsSource);
         }
     }

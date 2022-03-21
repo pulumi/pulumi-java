@@ -80,22 +80,21 @@ public final class ProjectedVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Output.ofNullable(defaultMode);
             return this;
         }
-
         public Builder sources(Output<List<VolumeProjectionArgs>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public Builder sources(List<VolumeProjectionArgs> sources) {
             this.sources = Output.of(Objects.requireNonNull(sources));
             return this;
         }
-        public ProjectedVolumeSourceArgs build() {
+        public Builder sources(VolumeProjectionArgs... sources) {
+            return sources(List.of(sources));
+        }        public ProjectedVolumeSourceArgs build() {
             return new ProjectedVolumeSourceArgs(defaultMode, sources);
         }
     }

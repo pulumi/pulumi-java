@@ -165,72 +165,58 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
             this.authFailAction = authFailAction;
             return this;
         }
-
         public Builder authFailAction(@Nullable String authFailAction) {
             this.authFailAction = Output.ofNullable(authFailAction);
             return this;
         }
-
         public Builder login(@Nullable Output<String> login) {
             this.login = login;
             return this;
         }
-
         public Builder login(@Nullable String login) {
             this.login = Output.ofNullable(login);
             return this;
         }
-
         public Builder redirectHttpResponseCode(@Nullable Output<String> redirectHttpResponseCode) {
             this.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
-
         public Builder redirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
             this.redirectHttpResponseCode = Output.ofNullable(redirectHttpResponseCode);
             return this;
         }
-
         public Builder script(@Nullable Output<FlexibleAppVersionHandlerScriptArgs> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable FlexibleAppVersionHandlerScriptArgs script) {
             this.script = Output.ofNullable(script);
             return this;
         }
-
         public Builder securityLevel(@Nullable Output<String> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
-
         public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = Output.ofNullable(securityLevel);
             return this;
         }
-
         public Builder staticFiles(@Nullable Output<FlexibleAppVersionHandlerStaticFilesArgs> staticFiles) {
             this.staticFiles = staticFiles;
             return this;
         }
-
         public Builder staticFiles(@Nullable FlexibleAppVersionHandlerStaticFilesArgs staticFiles) {
             this.staticFiles = Output.ofNullable(staticFiles);
             return this;
         }
-
         public Builder urlRegex(@Nullable Output<String> urlRegex) {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public Builder urlRegex(@Nullable String urlRegex) {
             this.urlRegex = Output.ofNullable(urlRegex);
             return this;
-        }
-        public FlexibleAppVersionHandlerArgs build() {
+        }        public FlexibleAppVersionHandlerArgs build() {
             return new FlexibleAppVersionHandlerArgs(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }
     }

@@ -239,122 +239,98 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
             this.apiServerEndpoint = apiServerEndpoint;
             return this;
         }
-
         public Builder apiServerEndpoint(@Nullable String apiServerEndpoint) {
             this.apiServerEndpoint = Output.ofNullable(apiServerEndpoint);
             return this;
         }
-
         public Builder clusterRootCA(@Nullable Output<String> clusterRootCA) {
             this.clusterRootCA = clusterRootCA;
             return this;
         }
-
         public Builder clusterRootCA(@Nullable String clusterRootCA) {
             this.clusterRootCA = Output.ofNullable(clusterRootCA);
             return this;
         }
-
         public Builder controllerDetails(Output<ControllerDetailsArgs> controllerDetails) {
             this.controllerDetails = Objects.requireNonNull(controllerDetails);
             return this;
         }
-
         public Builder controllerDetails(ControllerDetailsArgs controllerDetails) {
             this.controllerDetails = Output.of(Objects.requireNonNull(controllerDetails));
             return this;
         }
-
         public Builder identity(@Nullable Output<OrchestratorIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable OrchestratorIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(Output<Either<String,OrchestratorKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,OrchestratorKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder orchestratorAppId(@Nullable Output<String> orchestratorAppId) {
             this.orchestratorAppId = orchestratorAppId;
             return this;
         }
-
         public Builder orchestratorAppId(@Nullable String orchestratorAppId) {
             this.orchestratorAppId = Output.ofNullable(orchestratorAppId);
             return this;
         }
-
         public Builder orchestratorTenantId(@Nullable Output<String> orchestratorTenantId) {
             this.orchestratorTenantId = orchestratorTenantId;
             return this;
         }
-
         public Builder orchestratorTenantId(@Nullable String orchestratorTenantId) {
             this.orchestratorTenantId = Output.ofNullable(orchestratorTenantId);
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public OrchestratorInstanceServiceDetailsArgs build() {
+        }        public OrchestratorInstanceServiceDetailsArgs build() {
             return new OrchestratorInstanceServiceDetailsArgs(apiServerEndpoint, clusterRootCA, controllerDetails, identity, kind, location, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, resourceGroupName, resourceName, tags);
         }
     }

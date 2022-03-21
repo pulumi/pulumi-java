@@ -51,8 +51,7 @@ public final class ShareInfoElementResponse {
         public Builder vmUri(String vmUri) {
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
-        }
-        public ShareInfoElementResponse build() {
+        }        public ShareInfoElementResponse build() {
             return new ShareInfoElementResponse(vmUri);
         }
     }

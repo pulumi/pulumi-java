@@ -120,27 +120,25 @@ public final class BigtableColumnFamilyResponse {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
+        public Builder columns(BigtableColumnResponse... columns) {
+            return columns(List.of(columns));
+        }
         public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder familyId(String familyId) {
             this.familyId = Objects.requireNonNull(familyId);
             return this;
         }
-
         public Builder onlyReadLatest(Boolean onlyReadLatest) {
             this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BigtableColumnFamilyResponse build() {
+        }        public BigtableColumnFamilyResponse build() {
             return new BigtableColumnFamilyResponse(columns, encoding, familyId, onlyReadLatest, type);
         }
     }

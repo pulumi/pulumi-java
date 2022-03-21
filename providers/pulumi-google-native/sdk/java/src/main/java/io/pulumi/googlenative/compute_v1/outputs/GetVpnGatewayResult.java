@@ -216,57 +216,49 @@ public final class GetVpnGatewayResult {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
-
         public Builder vpnInterfaces(List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces) {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }
-        public GetVpnGatewayResult build() {
+        public Builder vpnInterfaces(VpnGatewayVpnGatewayInterfaceResponse... vpnInterfaces) {
+            return vpnInterfaces(List.of(vpnInterfaces));
+        }        public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(creationTimestamp, description, kind, labelFingerprint, labels, name, network, region, selfLink, stackType, vpnInterfaces);
         }
     }

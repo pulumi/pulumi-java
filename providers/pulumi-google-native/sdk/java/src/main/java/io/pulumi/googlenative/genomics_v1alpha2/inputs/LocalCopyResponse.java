@@ -76,12 +76,10 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public LocalCopyResponse build() {
+        }        public LocalCopyResponse build() {
             return new LocalCopyResponse(disk, path);
         }
     }

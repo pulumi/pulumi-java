@@ -50,8 +50,7 @@ public final class GetKeyGroupArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetKeyGroupArgs build() {
+        }        public GetKeyGroupArgs build() {
             return new GetKeyGroupArgs(id);
         }
     }

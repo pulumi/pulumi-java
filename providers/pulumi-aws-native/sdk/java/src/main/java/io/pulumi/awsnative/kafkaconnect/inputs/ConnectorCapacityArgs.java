@@ -71,22 +71,18 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
             this.autoScaling = autoScaling;
             return this;
         }
-
         public Builder autoScaling(@Nullable ConnectorAutoScalingArgs autoScaling) {
             this.autoScaling = Output.ofNullable(autoScaling);
             return this;
         }
-
         public Builder provisionedCapacity(@Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
             this.provisionedCapacity = provisionedCapacity;
             return this;
         }
-
         public Builder provisionedCapacity(@Nullable ConnectorProvisionedCapacityArgs provisionedCapacity) {
             this.provisionedCapacity = Output.ofNullable(provisionedCapacity);
             return this;
-        }
-        public ConnectorCapacityArgs build() {
+        }        public ConnectorCapacityArgs build() {
             return new ConnectorCapacityArgs(autoScaling, provisionedCapacity);
         }
     }

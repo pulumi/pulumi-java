@@ -241,122 +241,98 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
-
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
-
         public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder endDateType(@Nullable Output<String> endDateType) {
             this.endDateType = endDateType;
             return this;
         }
-
         public Builder endDateType(@Nullable String endDateType) {
             this.endDateType = Output.ofNullable(endDateType);
             return this;
         }
-
         public Builder ephemeralStorage(@Nullable Output<Boolean> ephemeralStorage) {
             this.ephemeralStorage = ephemeralStorage;
             return this;
         }
-
         public Builder ephemeralStorage(@Nullable Boolean ephemeralStorage) {
             this.ephemeralStorage = Output.ofNullable(ephemeralStorage);
             return this;
         }
-
         public Builder instanceCount(Output<Integer> instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Output.of(Objects.requireNonNull(instanceCount));
             return this;
         }
-
         public Builder instanceMatchCriteria(@Nullable Output<String> instanceMatchCriteria) {
             this.instanceMatchCriteria = instanceMatchCriteria;
             return this;
         }
-
         public Builder instanceMatchCriteria(@Nullable String instanceMatchCriteria) {
             this.instanceMatchCriteria = Output.ofNullable(instanceMatchCriteria);
             return this;
         }
-
         public Builder instancePlatform(Output<Either<String,InstancePlatform>> instancePlatform) {
             this.instancePlatform = Objects.requireNonNull(instancePlatform);
             return this;
         }
-
         public Builder instancePlatform(Either<String,InstancePlatform> instancePlatform) {
             this.instancePlatform = Output.of(Objects.requireNonNull(instancePlatform));
             return this;
         }
-
         public Builder instanceType(Output<Either<String,InstanceType>> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(Either<String,InstanceType> instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
-
         public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tenancy(@Nullable Output<Either<String,Tenancy>> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
-
         public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
             this.tenancy = Output.ofNullable(tenancy);
             return this;
-        }
-        public CapacityReservationArgs build() {
+        }        public CapacityReservationArgs build() {
             return new CapacityReservationArgs(availabilityZone, ebsOptimized, endDate, endDateType, ephemeralStorage, instanceCount, instanceMatchCriteria, instancePlatform, instanceType, outpostArn, tags, tenancy);
         }
     }

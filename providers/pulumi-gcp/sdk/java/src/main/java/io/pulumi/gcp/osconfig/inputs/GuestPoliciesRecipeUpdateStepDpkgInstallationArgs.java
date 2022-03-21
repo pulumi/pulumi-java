@@ -56,12 +56,10 @@ public final class GuestPoliciesRecipeUpdateStepDpkgInstallationArgs extends io.
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public Builder artifactId(String artifactId) {
             this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
-        }
-        public GuestPoliciesRecipeUpdateStepDpkgInstallationArgs build() {
+        }        public GuestPoliciesRecipeUpdateStepDpkgInstallationArgs build() {
             return new GuestPoliciesRecipeUpdateStepDpkgInstallationArgs(artifactId);
         }
     }

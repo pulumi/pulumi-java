@@ -77,12 +77,10 @@ public final class ImageTemplateManagedImageSourceResponse extends io.pulumi.res
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateManagedImageSourceResponse build() {
+        }        public ImageTemplateManagedImageSourceResponse build() {
             return new ImageTemplateManagedImageSourceResponse(imageId, type);
         }
     }

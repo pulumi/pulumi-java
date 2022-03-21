@@ -1141,337 +1141,291 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
             return this;
         }
-
         public Builder acrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
             this.acrUserManagedIdentityID = acrUserManagedIdentityID;
             return this;
         }
-
         public Builder alwaysOn(@Nullable Boolean alwaysOn) {
             this.alwaysOn = alwaysOn;
             return this;
         }
-
         public Builder apiDefinition(@Nullable ApiDefinitionInfoResponse apiDefinition) {
             this.apiDefinition = apiDefinition;
             return this;
         }
-
         public Builder apiManagementConfig(@Nullable ApiManagementConfigResponse apiManagementConfig) {
             this.apiManagementConfig = apiManagementConfig;
             return this;
         }
-
         public Builder appCommandLine(@Nullable String appCommandLine) {
             this.appCommandLine = appCommandLine;
             return this;
         }
-
         public Builder appSettings(@Nullable List<NameValuePairResponse> appSettings) {
             this.appSettings = appSettings;
             return this;
         }
-
+        public Builder appSettings(NameValuePairResponse... appSettings) {
+            return appSettings(List.of(appSettings));
+        }
         public Builder autoHealEnabled(@Nullable Boolean autoHealEnabled) {
             this.autoHealEnabled = autoHealEnabled;
             return this;
         }
-
         public Builder autoHealRules(@Nullable AutoHealRulesResponse autoHealRules) {
             this.autoHealRules = autoHealRules;
             return this;
         }
-
         public Builder autoSwapSlotName(@Nullable String autoSwapSlotName) {
             this.autoSwapSlotName = autoSwapSlotName;
             return this;
         }
-
         public Builder azureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueResponse> azureStorageAccounts) {
             this.azureStorageAccounts = azureStorageAccounts;
             return this;
         }
-
         public Builder connectionStrings(@Nullable List<ConnStringInfoResponse> connectionStrings) {
             this.connectionStrings = connectionStrings;
             return this;
         }
-
+        public Builder connectionStrings(ConnStringInfoResponse... connectionStrings) {
+            return connectionStrings(List.of(connectionStrings));
+        }
         public Builder cors(@Nullable CorsSettingsResponse cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder defaultDocuments(@Nullable List<String> defaultDocuments) {
             this.defaultDocuments = defaultDocuments;
             return this;
         }
-
+        public Builder defaultDocuments(String... defaultDocuments) {
+            return defaultDocuments(List.of(defaultDocuments));
+        }
         public Builder detailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
             this.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
             return this;
         }
-
         public Builder documentRoot(@Nullable String documentRoot) {
             this.documentRoot = documentRoot;
             return this;
         }
-
         public Builder experiments(@Nullable ExperimentsResponse experiments) {
             this.experiments = experiments;
             return this;
         }
-
         public Builder ftpsState(@Nullable String ftpsState) {
             this.ftpsState = ftpsState;
             return this;
         }
-
         public Builder functionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
             this.functionAppScaleLimit = functionAppScaleLimit;
             return this;
         }
-
         public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
             this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
             return this;
         }
-
         public Builder handlerMappings(@Nullable List<HandlerMappingResponse> handlerMappings) {
             this.handlerMappings = handlerMappings;
             return this;
         }
-
+        public Builder handlerMappings(HandlerMappingResponse... handlerMappings) {
+            return handlerMappings(List.of(handlerMappings));
+        }
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
-
         public Builder http20Enabled(@Nullable Boolean http20Enabled) {
             this.http20Enabled = http20Enabled;
             return this;
         }
-
         public Builder httpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
             this.httpLoggingEnabled = httpLoggingEnabled;
             return this;
         }
-
         public Builder ipSecurityRestrictions(@Nullable List<IpSecurityRestrictionResponse> ipSecurityRestrictions) {
             this.ipSecurityRestrictions = ipSecurityRestrictions;
             return this;
         }
-
+        public Builder ipSecurityRestrictions(IpSecurityRestrictionResponse... ipSecurityRestrictions) {
+            return ipSecurityRestrictions(List.of(ipSecurityRestrictions));
+        }
         public Builder javaContainer(@Nullable String javaContainer) {
             this.javaContainer = javaContainer;
             return this;
         }
-
         public Builder javaContainerVersion(@Nullable String javaContainerVersion) {
             this.javaContainerVersion = javaContainerVersion;
             return this;
         }
-
         public Builder javaVersion(@Nullable String javaVersion) {
             this.javaVersion = javaVersion;
             return this;
         }
-
         public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
-
         public Builder limits(@Nullable SiteLimitsResponse limits) {
             this.limits = limits;
             return this;
         }
-
         public Builder linuxFxVersion(@Nullable String linuxFxVersion) {
             this.linuxFxVersion = linuxFxVersion;
             return this;
         }
-
         public Builder loadBalancing(@Nullable String loadBalancing) {
             this.loadBalancing = loadBalancing;
             return this;
         }
-
         public Builder localMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
             this.localMySqlEnabled = localMySqlEnabled;
             return this;
         }
-
         public Builder logsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
             this.logsDirectorySizeLimit = logsDirectorySizeLimit;
             return this;
         }
-
         public Builder machineKey(SiteMachineKeyResponse machineKey) {
             this.machineKey = Objects.requireNonNull(machineKey);
             return this;
         }
-
         public Builder managedPipelineMode(@Nullable String managedPipelineMode) {
             this.managedPipelineMode = managedPipelineMode;
             return this;
         }
-
         public Builder managedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
             this.managedServiceIdentityId = managedServiceIdentityId;
             return this;
         }
-
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
-
         public Builder minimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
             this.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
         }
-
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
-
         public Builder nodeVersion(@Nullable String nodeVersion) {
             this.nodeVersion = nodeVersion;
             return this;
         }
-
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
-
         public Builder phpVersion(@Nullable String phpVersion) {
             this.phpVersion = phpVersion;
             return this;
         }
-
         public Builder powerShellVersion(@Nullable String powerShellVersion) {
             this.powerShellVersion = powerShellVersion;
             return this;
         }
-
         public Builder preWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
             this.preWarmedInstanceCount = preWarmedInstanceCount;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publishingUsername(@Nullable String publishingUsername) {
             this.publishingUsername = publishingUsername;
             return this;
         }
-
         public Builder push(@Nullable PushSettingsResponse push) {
             this.push = push;
             return this;
         }
-
         public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
-
         public Builder remoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
             this.remoteDebuggingEnabled = remoteDebuggingEnabled;
             return this;
         }
-
         public Builder remoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
             this.remoteDebuggingVersion = remoteDebuggingVersion;
             return this;
         }
-
         public Builder requestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
             this.requestTracingEnabled = requestTracingEnabled;
             return this;
         }
-
         public Builder requestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
             this.requestTracingExpirationTime = requestTracingExpirationTime;
             return this;
         }
-
         public Builder scmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionResponse> scmIpSecurityRestrictions) {
             this.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
             return this;
         }
-
+        public Builder scmIpSecurityRestrictions(IpSecurityRestrictionResponse... scmIpSecurityRestrictions) {
+            return scmIpSecurityRestrictions(List.of(scmIpSecurityRestrictions));
+        }
         public Builder scmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
             this.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
             return this;
         }
-
         public Builder scmMinTlsVersion(@Nullable String scmMinTlsVersion) {
             this.scmMinTlsVersion = scmMinTlsVersion;
             return this;
         }
-
         public Builder scmType(@Nullable String scmType) {
             this.scmType = scmType;
             return this;
         }
-
         public Builder tracingOptions(@Nullable String tracingOptions) {
             this.tracingOptions = tracingOptions;
             return this;
         }
-
         public Builder use32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
             this.use32BitWorkerProcess = use32BitWorkerProcess;
             return this;
         }
-
         public Builder virtualApplications(@Nullable List<VirtualApplicationResponse> virtualApplications) {
             this.virtualApplications = virtualApplications;
             return this;
         }
-
+        public Builder virtualApplications(VirtualApplicationResponse... virtualApplications) {
+            return virtualApplications(List.of(virtualApplications));
+        }
         public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = vnetName;
             return this;
         }
-
         public Builder vnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
             this.vnetPrivatePortsCount = vnetPrivatePortsCount;
             return this;
         }
-
         public Builder vnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
             this.vnetRouteAllEnabled = vnetRouteAllEnabled;
             return this;
         }
-
         public Builder webSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
             this.webSocketsEnabled = webSocketsEnabled;
             return this;
         }
-
         public Builder websiteTimeZone(@Nullable String websiteTimeZone) {
             this.websiteTimeZone = websiteTimeZone;
             return this;
         }
-
         public Builder windowsFxVersion(@Nullable String windowsFxVersion) {
             this.windowsFxVersion = windowsFxVersion;
             return this;
         }
-
         public Builder xManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
             this.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
-        }
-        public SiteConfigResponse build() {
+        }        public SiteConfigResponse build() {
             return new SiteConfigResponse(acrUseManagedIdentityCreds, acrUserManagedIdentityID, alwaysOn, apiDefinition, apiManagementConfig, appCommandLine, appSettings, autoHealEnabled, autoHealRules, autoSwapSlotName, azureStorageAccounts, connectionStrings, cors, defaultDocuments, detailedErrorLoggingEnabled, documentRoot, experiments, ftpsState, functionAppScaleLimit, functionsRuntimeScaleMonitoringEnabled, handlerMappings, healthCheckPath, http20Enabled, httpLoggingEnabled, ipSecurityRestrictions, javaContainer, javaContainerVersion, javaVersion, keyVaultReferenceIdentity, limits, linuxFxVersion, loadBalancing, localMySqlEnabled, logsDirectorySizeLimit, machineKey, managedPipelineMode, managedServiceIdentityId, minTlsVersion, minimumElasticInstanceCount, netFrameworkVersion, nodeVersion, numberOfWorkers, phpVersion, powerShellVersion, preWarmedInstanceCount, publicNetworkAccess, publishingUsername, push, pythonVersion, remoteDebuggingEnabled, remoteDebuggingVersion, requestTracingEnabled, requestTracingExpirationTime, scmIpSecurityRestrictions, scmIpSecurityRestrictionsUseMain, scmMinTlsVersion, scmType, tracingOptions, use32BitWorkerProcess, virtualApplications, vnetName, vnetPrivatePortsCount, vnetRouteAllEnabled, webSocketsEnabled, websiteTimeZone, windowsFxVersion, xManagedServiceIdentityId);
         }
     }

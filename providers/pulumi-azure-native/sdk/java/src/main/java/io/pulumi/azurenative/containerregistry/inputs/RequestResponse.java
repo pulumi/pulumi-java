@@ -126,27 +126,22 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
             this.addr = addr;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
-
         public Builder useragent(@Nullable String useragent) {
             this.useragent = useragent;
             return this;
-        }
-        public RequestResponse build() {
+        }        public RequestResponse build() {
             return new RequestResponse(addr, host, id, method, useragent);
         }
     }

@@ -220,57 +220,52 @@ public final class GetLocalUserResult {
             this.hasSharedKey = hasSharedKey;
             return this;
         }
-
         public Builder hasSshKey(@Nullable Boolean hasSshKey) {
             this.hasSshKey = hasSshKey;
             return this;
         }
-
         public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
             this.hasSshPassword = hasSshPassword;
             return this;
         }
-
         public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder permissionScopes(@Nullable List<PermissionScopeResponse> permissionScopes) {
             this.permissionScopes = permissionScopes;
             return this;
         }
-
+        public Builder permissionScopes(PermissionScopeResponse... permissionScopes) {
+            return permissionScopes(List.of(permissionScopes));
+        }
         public Builder sid(String sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
-
         public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
-
+        public Builder sshAuthorizedKeys(SshPublicKeyResponse... sshAuthorizedKeys) {
+            return sshAuthorizedKeys(List.of(sshAuthorizedKeys));
+        }
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLocalUserResult build() {
+        }        public GetLocalUserResult build() {
             return new GetLocalUserResult(hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, id, name, permissionScopes, sid, sshAuthorizedKeys, systemData, type);
         }
     }

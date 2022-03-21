@@ -480,137 +480,122 @@ public final class GetVirtualMachineResult {
             this.amountOfRam = Objects.requireNonNull(amountOfRam);
             return this;
         }
-
         public Builder controllers(List<VirtualDiskControllerResponse> controllers) {
             this.controllers = Objects.requireNonNull(controllers);
             return this;
         }
-
+        public Builder controllers(VirtualDiskControllerResponse... controllers) {
+            return controllers(List.of(controllers));
+        }
         public Builder customization(@Nullable GuestOSCustomizationResponse customization) {
             this.customization = customization;
             return this;
         }
-
         public Builder disks(@Nullable List<VirtualDiskResponse> disks) {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(VirtualDiskResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder dnsname(String dnsname) {
             this.dnsname = Objects.requireNonNull(dnsname);
             return this;
         }
-
         public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
             this.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder guestOS(String guestOS) {
             this.guestOS = Objects.requireNonNull(guestOS);
             return this;
         }
-
         public Builder guestOSType(String guestOSType) {
             this.guestOSType = Objects.requireNonNull(guestOSType);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nics(@Nullable List<VirtualNicResponse> nics) {
             this.nics = nics;
             return this;
         }
-
+        public Builder nics(VirtualNicResponse... nics) {
+            return nics(List.of(nics));
+        }
         public Builder numberOfCores(Integer numberOfCores) {
             this.numberOfCores = Objects.requireNonNull(numberOfCores);
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIP(String publicIP) {
             this.publicIP = Objects.requireNonNull(publicIP);
             return this;
         }
-
         public Builder resourcePool(@Nullable ResourcePoolResponse resourcePool) {
             this.resourcePool = resourcePool;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }
-
         public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
             this.vSphereNetworks = vSphereNetworks;
             return this;
         }
-
+        public Builder vSphereNetworks(String... vSphereNetworks) {
+            return vSphereNetworks(List.of(vSphereNetworks));
+        }
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public Builder vmwaretools(String vmwaretools) {
             this.vmwaretools = Objects.requireNonNull(vmwaretools);
             return this;
-        }
-        public GetVirtualMachineResult build() {
+        }        public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(amountOfRam, controllers, customization, disks, dnsname, exposeToGuestVM, folder, guestOS, guestOSType, id, location, name, nics, numberOfCores, password, privateCloudId, provisioningState, publicIP, resourcePool, status, tags, templateId, type, username, vSphereNetworks, vmId, vmwaretools);
         }
     }

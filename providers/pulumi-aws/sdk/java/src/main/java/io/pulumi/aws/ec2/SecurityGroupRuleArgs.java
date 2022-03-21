@@ -224,112 +224,99 @@ public final class SecurityGroupRuleArgs extends io.pulumi.resources.ResourceArg
             this.cidrBlocks = cidrBlocks;
             return this;
         }
-
         public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
             this.cidrBlocks = Output.ofNullable(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(String... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fromPort(Output<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
-
         public Builder fromPort(Integer fromPort) {
             this.fromPort = Output.of(Objects.requireNonNull(fromPort));
             return this;
         }
-
         public Builder ipv6CidrBlocks(@Nullable Output<List<String>> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
-
         public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = Output.ofNullable(ipv6CidrBlocks);
             return this;
         }
-
+        public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
+            return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
+        }
         public Builder prefixListIds(@Nullable Output<List<String>> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
-
         public Builder prefixListIds(@Nullable List<String> prefixListIds) {
             this.prefixListIds = Output.ofNullable(prefixListIds);
             return this;
         }
-
+        public Builder prefixListIds(String... prefixListIds) {
+            return prefixListIds(List.of(prefixListIds));
+        }
         public Builder protocol(Output<Either<String,ProtocolType>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,ProtocolType> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder securityGroupId(Output<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
-
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
-
         public Builder self(@Nullable Output<Boolean> self) {
             this.self = self;
             return this;
         }
-
         public Builder self(@Nullable Boolean self) {
             this.self = Output.ofNullable(self);
             return this;
         }
-
         public Builder sourceSecurityGroupId(@Nullable Output<String> sourceSecurityGroupId) {
             this.sourceSecurityGroupId = sourceSecurityGroupId;
             return this;
         }
-
         public Builder sourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
             this.sourceSecurityGroupId = Output.ofNullable(sourceSecurityGroupId);
             return this;
         }
-
         public Builder toPort(Output<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public Builder toPort(Integer toPort) {
             this.toPort = Output.of(Objects.requireNonNull(toPort));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SecurityGroupRuleArgs build() {
+        }        public SecurityGroupRuleArgs build() {
             return new SecurityGroupRuleArgs(cidrBlocks, description, fromPort, ipv6CidrBlocks, prefixListIds, protocol, securityGroupId, self, sourceSecurityGroupId, toPort, type);
         }
     }

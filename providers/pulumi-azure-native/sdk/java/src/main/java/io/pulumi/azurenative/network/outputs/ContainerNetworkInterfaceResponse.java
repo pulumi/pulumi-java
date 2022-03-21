@@ -171,42 +171,37 @@ public final class ContainerNetworkInterfaceResponse {
             this.container = container;
             return this;
         }
-
         public Builder containerNetworkInterfaceConfiguration(ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration) {
             this.containerNetworkInterfaceConfiguration = Objects.requireNonNull(containerNetworkInterfaceConfiguration);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipConfigurations(List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(ContainerNetworkInterfaceIpConfigurationResponse... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ContainerNetworkInterfaceResponse build() {
+        }        public ContainerNetworkInterfaceResponse build() {
             return new ContainerNetworkInterfaceResponse(container, containerNetworkInterfaceConfiguration, etag, id, ipConfigurations, name, provisioningState, type);
         }
     }

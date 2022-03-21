@@ -78,12 +78,10 @@ public final class ServicePerimeterStatusEgressPolicy {
             this.egressFrom = egressFrom;
             return this;
         }
-
         public Builder egressTo(@Nullable ServicePerimeterStatusEgressPolicyEgressTo egressTo) {
             this.egressTo = egressTo;
             return this;
-        }
-        public ServicePerimeterStatusEgressPolicy build() {
+        }        public ServicePerimeterStatusEgressPolicy build() {
             return new ServicePerimeterStatusEgressPolicy(egressFrom, egressTo);
         }
     }

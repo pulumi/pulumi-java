@@ -56,12 +56,10 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Output.of(Objects.requireNonNull(targetValue));
             return this;
-        }
-        public GameServerGroupTargetTrackingConfigurationArgs build() {
+        }        public GameServerGroupTargetTrackingConfigurationArgs build() {
             return new GameServerGroupTargetTrackingConfigurationArgs(targetValue);
         }
     }

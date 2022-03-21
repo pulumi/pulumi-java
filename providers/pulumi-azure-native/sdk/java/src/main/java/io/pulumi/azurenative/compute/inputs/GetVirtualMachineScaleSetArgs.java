@@ -90,17 +90,14 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
             this.expand = expand;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
-        }
-        public GetVirtualMachineScaleSetArgs build() {
+        }        public GetVirtualMachineScaleSetArgs build() {
             return new GetVirtualMachineScaleSetArgs(expand, resourceGroupName, vmScaleSetName);
         }
     }

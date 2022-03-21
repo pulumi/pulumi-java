@@ -108,42 +108,34 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder permissionsMode(Output<String> permissionsMode) {
             this.permissionsMode = Objects.requireNonNull(permissionsMode);
             return this;
         }
-
         public Builder permissionsMode(String permissionsMode) {
             this.permissionsMode = Output.of(Objects.requireNonNull(permissionsMode));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public LedgerArgs build() {
+        }        public LedgerArgs build() {
             return new LedgerArgs(deletionProtection, name, permissionsMode, tags);
         }
     }

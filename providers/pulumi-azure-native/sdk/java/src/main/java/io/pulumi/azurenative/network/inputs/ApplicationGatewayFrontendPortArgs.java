@@ -95,32 +95,26 @@ public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resource
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public ApplicationGatewayFrontendPortArgs build() {
+        }        public ApplicationGatewayFrontendPortArgs build() {
             return new ApplicationGatewayFrontendPortArgs(id, name, port);
         }
     }

@@ -96,17 +96,17 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.r
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public StringNotBeginsWithAdvancedFilterResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public StringNotBeginsWithAdvancedFilterResponse build() {
             return new StringNotBeginsWithAdvancedFilterResponse(key, operatorType, values);
         }
     }

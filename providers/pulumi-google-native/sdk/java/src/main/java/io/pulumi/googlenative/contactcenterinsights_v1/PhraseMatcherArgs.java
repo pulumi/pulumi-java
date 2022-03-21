@@ -183,92 +183,77 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Boolean active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder phraseMatchRuleGroups(@Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = phraseMatchRuleGroups;
             return this;
         }
-
         public Builder phraseMatchRuleGroups(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = Output.ofNullable(phraseMatchRuleGroups);
             return this;
         }
-
+        public Builder phraseMatchRuleGroups(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs... phraseMatchRuleGroups) {
+            return phraseMatchRuleGroups(List.of(phraseMatchRuleGroups));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder roleMatch(@Nullable Output<PhraseMatcherRoleMatch> roleMatch) {
             this.roleMatch = roleMatch;
             return this;
         }
-
         public Builder roleMatch(@Nullable PhraseMatcherRoleMatch roleMatch) {
             this.roleMatch = Output.ofNullable(roleMatch);
             return this;
         }
-
         public Builder type(Output<PhraseMatcherType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(PhraseMatcherType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder versionTag(@Nullable Output<String> versionTag) {
             this.versionTag = versionTag;
             return this;
         }
-
         public Builder versionTag(@Nullable String versionTag) {
             this.versionTag = Output.ofNullable(versionTag);
             return this;
-        }
-        public PhraseMatcherArgs build() {
+        }        public PhraseMatcherArgs build() {
             return new PhraseMatcherArgs(active, displayName, location, name, phraseMatchRuleGroups, project, roleMatch, type, versionTag);
         }
     }

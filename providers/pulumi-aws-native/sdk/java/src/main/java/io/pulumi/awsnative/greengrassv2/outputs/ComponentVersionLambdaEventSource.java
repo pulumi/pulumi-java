@@ -56,12 +56,10 @@ public final class ComponentVersionLambdaEventSource {
             this.topic = topic;
             return this;
         }
-
         public Builder type(@Nullable ComponentVersionLambdaEventSourceType type) {
             this.type = type;
             return this;
-        }
-        public ComponentVersionLambdaEventSource build() {
+        }        public ComponentVersionLambdaEventSource build() {
             return new ComponentVersionLambdaEventSource(topic, type);
         }
     }

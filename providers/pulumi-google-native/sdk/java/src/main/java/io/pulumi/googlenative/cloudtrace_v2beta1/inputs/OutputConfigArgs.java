@@ -61,12 +61,10 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
-        }
-        public OutputConfigArgs build() {
+        }        public OutputConfigArgs build() {
             return new OutputConfigArgs(destination);
         }
     }

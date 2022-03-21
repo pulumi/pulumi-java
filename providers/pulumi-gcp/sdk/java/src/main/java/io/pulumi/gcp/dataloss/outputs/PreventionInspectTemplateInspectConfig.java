@@ -191,42 +191,46 @@ public final class PreventionInspectTemplateInspectConfig {
             this.contentOptions = contentOptions;
             return this;
         }
-
+        public Builder contentOptions(String... contentOptions) {
+            return contentOptions(List.of(contentOptions));
+        }
         public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
-
+        public Builder customInfoTypes(PreventionInspectTemplateInspectConfigCustomInfoType... customInfoTypes) {
+            return customInfoTypes(List.of(customInfoTypes));
+        }
         public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
-
         public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
-
+        public Builder infoTypes(PreventionInspectTemplateInspectConfigInfoType... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimits limits) {
             this.limits = limits;
             return this;
         }
-
         public Builder minLikelihood(@Nullable String minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-        public PreventionInspectTemplateInspectConfig build() {
+        public Builder ruleSets(PreventionInspectTemplateInspectConfigRuleSet... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }        public PreventionInspectTemplateInspectConfig build() {
             return new PreventionInspectTemplateInspectConfig(contentOptions, customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSets);
         }
     }

@@ -117,27 +117,22 @@ public final class GetDataCollectorResult {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDataCollectorResult build() {
+        }        public GetDataCollectorResult build() {
             return new GetDataCollectorResult(createdAt, description, lastModifiedAt, name, type);
         }
     }

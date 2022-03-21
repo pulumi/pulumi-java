@@ -80,22 +80,18 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.family = Objects.requireNonNull(family);
             return this;
         }
-
         public Builder family(Either<String,SkuFamily> family) {
             this.family = Output.of(Objects.requireNonNull(family));
             return this;
         }
-
         public Builder name(Output<SkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(SkuName name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public SkuArgs build() {
+        }        public SkuArgs build() {
             return new SkuArgs(family, name);
         }
     }

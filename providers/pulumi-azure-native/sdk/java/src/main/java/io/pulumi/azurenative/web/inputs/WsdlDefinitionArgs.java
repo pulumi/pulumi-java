@@ -113,42 +113,34 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder importMethod(@Nullable Output<Either<String,WsdlImportMethod>> importMethod) {
             this.importMethod = importMethod;
             return this;
         }
-
         public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
             this.importMethod = Output.ofNullable(importMethod);
             return this;
         }
-
         public Builder service(@Nullable Output<WsdlServiceArgs> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable WsdlServiceArgs service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public WsdlDefinitionArgs build() {
+        }        public WsdlDefinitionArgs build() {
             return new WsdlDefinitionArgs(content, importMethod, service, url);
         }
     }

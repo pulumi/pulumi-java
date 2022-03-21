@@ -114,42 +114,43 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
             this.egress = egress;
             return this;
         }
-
         public Builder egress(@Nullable List<NetworkPolicyEgressRuleArgs> egress) {
             this.egress = Output.ofNullable(egress);
             return this;
         }
-
+        public Builder egress(NetworkPolicyEgressRuleArgs... egress) {
+            return egress(List.of(egress));
+        }
         public Builder ingress(@Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
-
         public Builder ingress(@Nullable List<NetworkPolicyIngressRuleArgs> ingress) {
             this.ingress = Output.ofNullable(ingress);
             return this;
         }
-
+        public Builder ingress(NetworkPolicyIngressRuleArgs... ingress) {
+            return ingress(List.of(ingress));
+        }
         public Builder podSelector(Output<LabelSelectorArgs> podSelector) {
             this.podSelector = Objects.requireNonNull(podSelector);
             return this;
         }
-
         public Builder podSelector(LabelSelectorArgs podSelector) {
             this.podSelector = Output.of(Objects.requireNonNull(podSelector));
             return this;
         }
-
         public Builder policyTypes(@Nullable Output<List<String>> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
-
         public Builder policyTypes(@Nullable List<String> policyTypes) {
             this.policyTypes = Output.ofNullable(policyTypes);
             return this;
         }
-        public NetworkPolicySpecArgs build() {
+        public Builder policyTypes(String... policyTypes) {
+            return policyTypes(List.of(policyTypes));
+        }        public NetworkPolicySpecArgs build() {
             return new NetworkPolicySpecArgs(egress, ingress, podSelector, policyTypes);
         }
     }

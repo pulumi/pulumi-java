@@ -159,72 +159,58 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
             this.containerID = containerID;
             return this;
         }
-
         public Builder containerID(@Nullable String containerID) {
             this.containerID = Output.ofNullable(containerID);
             return this;
         }
-
         public Builder exitCode(Output<Integer> exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
-
         public Builder exitCode(Integer exitCode) {
             this.exitCode = Output.of(Objects.requireNonNull(exitCode));
             return this;
         }
-
         public Builder finishedAt(@Nullable Output<String> finishedAt) {
             this.finishedAt = finishedAt;
             return this;
         }
-
         public Builder finishedAt(@Nullable String finishedAt) {
             this.finishedAt = Output.ofNullable(finishedAt);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder signal(@Nullable Output<Integer> signal) {
             this.signal = signal;
             return this;
         }
-
         public Builder signal(@Nullable Integer signal) {
             this.signal = Output.ofNullable(signal);
             return this;
         }
-
         public Builder startedAt(@Nullable Output<String> startedAt) {
             this.startedAt = startedAt;
             return this;
         }
-
         public Builder startedAt(@Nullable String startedAt) {
             this.startedAt = Output.ofNullable(startedAt);
             return this;
-        }
-        public ContainerStateTerminatedArgs build() {
+        }        public ContainerStateTerminatedArgs build() {
             return new ContainerStateTerminatedArgs(containerID, exitCode, finishedAt, message, reason, signal, startedAt);
         }
     }

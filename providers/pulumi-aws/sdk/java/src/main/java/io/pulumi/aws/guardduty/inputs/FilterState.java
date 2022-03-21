@@ -189,92 +189,74 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
-
         public Builder findingCriteria(@Nullable Output<FilterFindingCriteriaGetArgs> findingCriteria) {
             this.findingCriteria = findingCriteria;
             return this;
         }
-
         public Builder findingCriteria(@Nullable FilterFindingCriteriaGetArgs findingCriteria) {
             this.findingCriteria = Output.ofNullable(findingCriteria);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rank(@Nullable Output<Integer> rank) {
             this.rank = rank;
             return this;
         }
-
         public Builder rank(@Nullable Integer rank) {
             this.rank = Output.ofNullable(rank);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public FilterState build() {
+        }        public FilterState build() {
             return new FilterState(action, arn, description, detectorId, findingCriteria, name, rank, tags, tagsAll);
         }
     }

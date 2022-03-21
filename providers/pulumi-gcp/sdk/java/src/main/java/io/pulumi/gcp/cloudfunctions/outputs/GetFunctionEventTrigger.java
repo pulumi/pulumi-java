@@ -91,17 +91,17 @@ public final class GetFunctionEventTrigger {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public Builder failurePolicies(List<GetFunctionEventTriggerFailurePolicy> failurePolicies) {
             this.failurePolicies = Objects.requireNonNull(failurePolicies);
             return this;
         }
-
+        public Builder failurePolicies(GetFunctionEventTriggerFailurePolicy... failurePolicies) {
+            return failurePolicies(List.of(failurePolicies));
+        }
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
-        }
-        public GetFunctionEventTrigger build() {
+        }        public GetFunctionEventTrigger build() {
             return new GetFunctionEventTrigger(eventType, failurePolicies, resource);
         }
     }

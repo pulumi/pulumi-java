@@ -76,12 +76,10 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
             this.targetConcurrentRequests = Objects.requireNonNull(targetConcurrentRequests);
             return this;
         }
-
         public Builder targetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond);
             return this;
-        }
-        public RequestUtilizationResponse build() {
+        }        public RequestUtilizationResponse build() {
             return new RequestUtilizationResponse(targetConcurrentRequests, targetRequestCountPerSecond);
         }
     }

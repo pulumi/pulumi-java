@@ -207,52 +207,42 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
             this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
             return this;
         }
-
         public Builder diskId(String diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder diskPath(String diskPath) {
             this.diskPath = Objects.requireNonNull(diskPath);
             return this;
         }
-
         public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
-
         public Builder logStorageAccountId(String logStorageAccountId) {
             this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
             return this;
         }
-
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
             return this;
         }
-
         public Builder seedManagedDiskId(String seedManagedDiskId) {
             this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
             return this;
         }
-
         public Builder targetManagedDiskId(String targetManagedDiskId) {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
-        }
-        public VMwareCbtProtectedDiskDetailsResponse build() {
+        }        public VMwareCbtProtectedDiskDetailsResponse build() {
             return new VMwareCbtProtectedDiskDetailsResponse(capacityInBytes, diskId, diskName, diskPath, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName, seedManagedDiskId, targetManagedDiskId);
         }
     }

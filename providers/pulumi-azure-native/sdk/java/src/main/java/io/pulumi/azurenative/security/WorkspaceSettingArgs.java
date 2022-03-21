@@ -90,32 +90,26 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
-
         public Builder workspaceSettingName(@Nullable Output<String> workspaceSettingName) {
             this.workspaceSettingName = workspaceSettingName;
             return this;
         }
-
         public Builder workspaceSettingName(@Nullable String workspaceSettingName) {
             this.workspaceSettingName = Output.ofNullable(workspaceSettingName);
             return this;
-        }
-        public WorkspaceSettingArgs build() {
+        }        public WorkspaceSettingArgs build() {
             return new WorkspaceSettingArgs(scope, workspaceId, workspaceSettingName);
         }
     }

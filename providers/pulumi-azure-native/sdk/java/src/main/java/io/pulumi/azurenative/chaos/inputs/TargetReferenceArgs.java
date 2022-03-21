@@ -78,22 +78,18 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder type(Output<TargetReferenceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(TargetReferenceType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TargetReferenceArgs build() {
+        }        public TargetReferenceArgs build() {
             return new TargetReferenceArgs(id, type);
         }
     }

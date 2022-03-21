@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs exten
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs(title);
         }
     }

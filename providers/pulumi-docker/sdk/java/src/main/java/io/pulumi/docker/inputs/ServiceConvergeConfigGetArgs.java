@@ -66,22 +66,18 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
             this.delay = delay;
             return this;
         }
-
         public Builder delay(@Nullable String delay) {
             this.delay = Output.ofNullable(delay);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ServiceConvergeConfigGetArgs build() {
+        }        public ServiceConvergeConfigGetArgs build() {
             return new ServiceConvergeConfigGetArgs(delay, timeout);
         }
     }

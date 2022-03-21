@@ -51,8 +51,7 @@ public final class ListAccountSasResult {
         public Builder accountSasToken(String accountSasToken) {
             this.accountSasToken = Objects.requireNonNull(accountSasToken);
             return this;
-        }
-        public ListAccountSasResult build() {
+        }        public ListAccountSasResult build() {
             return new ListAccountSasResult(accountSasToken);
         }
     }

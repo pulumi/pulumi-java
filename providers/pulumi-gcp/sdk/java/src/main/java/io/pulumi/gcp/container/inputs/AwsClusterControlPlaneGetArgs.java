@@ -259,132 +259,112 @@ public final class AwsClusterControlPlaneGetArgs extends io.pulumi.resources.Res
             this.awsServicesAuthentication = Objects.requireNonNull(awsServicesAuthentication);
             return this;
         }
-
         public Builder awsServicesAuthentication(AwsClusterControlPlaneAwsServicesAuthenticationGetArgs awsServicesAuthentication) {
             this.awsServicesAuthentication = Output.of(Objects.requireNonNull(awsServicesAuthentication));
             return this;
         }
-
         public Builder configEncryption(Output<AwsClusterControlPlaneConfigEncryptionGetArgs> configEncryption) {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
-
         public Builder configEncryption(AwsClusterControlPlaneConfigEncryptionGetArgs configEncryption) {
             this.configEncryption = Output.of(Objects.requireNonNull(configEncryption));
             return this;
         }
-
         public Builder databaseEncryption(Output<AwsClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption) {
             this.databaseEncryption = Objects.requireNonNull(databaseEncryption);
             return this;
         }
-
         public Builder databaseEncryption(AwsClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
             this.databaseEncryption = Output.of(Objects.requireNonNull(databaseEncryption));
             return this;
         }
-
         public Builder iamInstanceProfile(Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
-
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Output.of(Objects.requireNonNull(iamInstanceProfile));
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder mainVolume(@Nullable Output<AwsClusterControlPlaneMainVolumeGetArgs> mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
-
         public Builder mainVolume(@Nullable AwsClusterControlPlaneMainVolumeGetArgs mainVolume) {
             this.mainVolume = Output.ofNullable(mainVolume);
             return this;
         }
-
         public Builder proxyConfig(@Nullable Output<AwsClusterControlPlaneProxyConfigGetArgs> proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
-
         public Builder proxyConfig(@Nullable AwsClusterControlPlaneProxyConfigGetArgs proxyConfig) {
             this.proxyConfig = Output.ofNullable(proxyConfig);
             return this;
         }
-
         public Builder rootVolume(@Nullable Output<AwsClusterControlPlaneRootVolumeGetArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder rootVolume(@Nullable AwsClusterControlPlaneRootVolumeGetArgs rootVolume) {
             this.rootVolume = Output.ofNullable(rootVolume);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder sshConfig(@Nullable Output<AwsClusterControlPlaneSshConfigGetArgs> sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
-
         public Builder sshConfig(@Nullable AwsClusterControlPlaneSshConfigGetArgs sshConfig) {
             this.sshConfig = Output.ofNullable(sshConfig);
             return this;
         }
-
         public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public AwsClusterControlPlaneGetArgs build() {
+        }        public AwsClusterControlPlaneGetArgs build() {
             return new AwsClusterControlPlaneGetArgs(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
         }
     }

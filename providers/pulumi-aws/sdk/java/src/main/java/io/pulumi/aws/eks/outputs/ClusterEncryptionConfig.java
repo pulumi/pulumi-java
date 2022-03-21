@@ -71,12 +71,13 @@ public final class ClusterEncryptionConfig {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-        public ClusterEncryptionConfig build() {
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }        public ClusterEncryptionConfig build() {
             return new ClusterEncryptionConfig(provider, resources);
         }
     }

@@ -104,22 +104,18 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public Builder testResultName(String testResultName) {
             this.testResultName = Objects.requireNonNull(testResultName);
             return this;
-        }
-        public GetTestResultDownloadURLArgs build() {
+        }        public GetTestResultDownloadURLArgs build() {
             return new GetTestResultDownloadURLArgs(packageName, resourceGroupName, testBaseAccountName, testResultName);
         }
     }

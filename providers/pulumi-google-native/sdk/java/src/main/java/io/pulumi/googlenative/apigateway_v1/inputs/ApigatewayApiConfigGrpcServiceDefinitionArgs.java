@@ -79,22 +79,21 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
             this.fileDescriptorSet = fileDescriptorSet;
             return this;
         }
-
         public Builder fileDescriptorSet(@Nullable ApigatewayApiConfigFileArgs fileDescriptorSet) {
             this.fileDescriptorSet = Output.ofNullable(fileDescriptorSet);
             return this;
         }
-
         public Builder source(@Nullable Output<List<ApigatewayApiConfigFileArgs>> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable List<ApigatewayApiConfigFileArgs> source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-        public ApigatewayApiConfigGrpcServiceDefinitionArgs build() {
+        public Builder source(ApigatewayApiConfigFileArgs... source) {
+            return source(List.of(source));
+        }        public ApigatewayApiConfigGrpcServiceDefinitionArgs build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionArgs(fileDescriptorSet, source);
         }
     }

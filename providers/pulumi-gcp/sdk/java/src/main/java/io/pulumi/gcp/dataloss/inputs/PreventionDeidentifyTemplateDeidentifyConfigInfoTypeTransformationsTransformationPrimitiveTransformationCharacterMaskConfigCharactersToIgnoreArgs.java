@@ -75,22 +75,18 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.charactersToSkip = charactersToSkip;
             return this;
         }
-
         public Builder charactersToSkip(@Nullable String charactersToSkip) {
             this.charactersToSkip = Output.ofNullable(charactersToSkip);
             return this;
         }
-
         public Builder commonCharactersToIgnore(@Nullable Output<String> commonCharactersToIgnore) {
             this.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
-
         public Builder commonCharactersToIgnore(@Nullable String commonCharactersToIgnore) {
             this.commonCharactersToIgnore = Output.ofNullable(commonCharactersToIgnore);
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs(charactersToSkip, commonCharactersToIgnore);
         }
     }

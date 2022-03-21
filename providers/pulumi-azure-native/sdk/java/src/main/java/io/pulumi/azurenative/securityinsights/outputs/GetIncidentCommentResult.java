@@ -185,47 +185,38 @@ public final class GetIncidentCommentResult {
             this.author = Objects.requireNonNull(author);
             return this;
         }
-
         public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIncidentCommentResult build() {
+        }        public GetIncidentCommentResult build() {
             return new GetIncidentCommentResult(author, createdTimeUtc, etag, id, lastModifiedTimeUtc, message, name, systemData, type);
         }
     }

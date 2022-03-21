@@ -161,37 +161,39 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
             this.dataDiskIds = dataDiskIds;
             return this;
         }
-
+        public Builder dataDiskIds(String... dataDiskIds) {
+            return dataDiskIds(List.of(dataDiskIds));
+        }
         public Builder dataDisks(@Nullable List<ComputeDataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-
+        public Builder dataDisks(ComputeDataDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder osDiskId(@Nullable String osDiskId) {
             this.osDiskId = osDiskId;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder statuses(@Nullable List<ComputeVmInstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
-
+        public Builder statuses(ComputeVmInstanceViewStatusResponse... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public ComputeVmPropertiesResponse build() {
+        }        public ComputeVmPropertiesResponse build() {
             return new ComputeVmPropertiesResponse(dataDiskIds, dataDisks, networkInterfaceId, osDiskId, osType, statuses, vmSize);
         }
     }

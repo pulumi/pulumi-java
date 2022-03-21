@@ -96,32 +96,26 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
             this.basicSli = basicSli;
             return this;
         }
-
         public Builder basicSli(@Nullable BasicSliArgs basicSli) {
             this.basicSli = Output.ofNullable(basicSli);
             return this;
         }
-
         public Builder requestBased(@Nullable Output<RequestBasedSliArgs> requestBased) {
             this.requestBased = requestBased;
             return this;
         }
-
         public Builder requestBased(@Nullable RequestBasedSliArgs requestBased) {
             this.requestBased = Output.ofNullable(requestBased);
             return this;
         }
-
         public Builder windowsBased(@Nullable Output<WindowsBasedSliArgs> windowsBased) {
             this.windowsBased = windowsBased;
             return this;
         }
-
         public Builder windowsBased(@Nullable WindowsBasedSliArgs windowsBased) {
             this.windowsBased = Output.ofNullable(windowsBased);
             return this;
-        }
-        public ServiceLevelIndicatorArgs build() {
+        }        public ServiceLevelIndicatorArgs build() {
             return new ServiceLevelIndicatorArgs(basicSli, requestBased, windowsBased);
         }
     }

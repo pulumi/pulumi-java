@@ -72,12 +72,10 @@ public final class ElasticPropertiesResponse {
             this.elasticCloudDeployment = elasticCloudDeployment;
             return this;
         }
-
         public Builder elasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
             this.elasticCloudUser = elasticCloudUser;
             return this;
-        }
-        public ElasticPropertiesResponse build() {
+        }        public ElasticPropertiesResponse build() {
             return new ElasticPropertiesResponse(elasticCloudDeployment, elasticCloudUser);
         }
     }

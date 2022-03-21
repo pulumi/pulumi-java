@@ -109,22 +109,18 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
-
         public Builder subPath(String subPath) {
             this.subPath = Objects.requireNonNull(subPath);
             return this;
-        }
-        public VolumeMountResponse build() {
+        }        public VolumeMountResponse build() {
             return new VolumeMountResponse(mountPath, name, readOnly, subPath);
         }
     }

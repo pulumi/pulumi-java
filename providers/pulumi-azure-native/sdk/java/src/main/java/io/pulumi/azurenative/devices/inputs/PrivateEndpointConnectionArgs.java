@@ -60,12 +60,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(properties);
         }
     }

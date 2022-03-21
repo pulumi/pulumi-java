@@ -95,32 +95,29 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
-
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
-
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = Output.ofNullable(nextHopIpAddress);
             return this;
-        }
-        public StaticRouteArgs build() {
+        }        public StaticRouteArgs build() {
             return new StaticRouteArgs(addressPrefixes, name, nextHopIpAddress);
         }
     }

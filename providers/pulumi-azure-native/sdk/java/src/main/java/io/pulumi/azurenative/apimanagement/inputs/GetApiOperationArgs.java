@@ -104,22 +104,18 @@ public final class GetApiOperationArgs extends io.pulumi.resources.InvokeArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder operationId(String operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiOperationArgs build() {
+        }        public GetApiOperationArgs build() {
             return new GetApiOperationArgs(apiId, operationId, resourceGroupName, serviceName);
         }
     }

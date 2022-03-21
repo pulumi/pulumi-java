@@ -65,12 +65,10 @@ public final class GetJobQueueComputeEnvironmentOrder extends io.pulumi.resource
             this.computeEnvironment = Objects.requireNonNull(computeEnvironment);
             return this;
         }
-
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
-        }
-        public GetJobQueueComputeEnvironmentOrder build() {
+        }        public GetJobQueueComputeEnvironmentOrder build() {
             return new GetJobQueueComputeEnvironmentOrder(computeEnvironment, order);
         }
     }

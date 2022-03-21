@@ -331,92 +331,74 @@ public final class GetExpressRouteCrossConnectionPeeringResult {
             this.azureASN = Objects.requireNonNull(azureASN);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig) {
             this.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
-
         public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder peerASN(@Nullable Double peerASN) {
             this.peerASN = peerASN;
             return this;
         }
-
         public Builder peeringType(@Nullable String peeringType) {
             this.peeringType = peeringType;
             return this;
         }
-
         public Builder primaryAzurePort(String primaryAzurePort) {
             this.primaryAzurePort = Objects.requireNonNull(primaryAzurePort);
             return this;
         }
-
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder secondaryAzurePort(String secondaryAzurePort) {
             this.secondaryAzurePort = Objects.requireNonNull(secondaryAzurePort);
             return this;
         }
-
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder vlanId(@Nullable Integer vlanId) {
             this.vlanId = vlanId;
             return this;
-        }
-        public GetExpressRouteCrossConnectionPeeringResult build() {
+        }        public GetExpressRouteCrossConnectionPeeringResult build() {
             return new GetExpressRouteCrossConnectionPeeringResult(azureASN, etag, gatewayManagerEtag, id, ipv6PeeringConfig, lastModifiedBy, microsoftPeeringConfig, name, peerASN, peeringType, primaryAzurePort, primaryPeerAddressPrefix, provisioningState, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, vlanId);
         }
     }

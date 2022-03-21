@@ -207,52 +207,45 @@ public final class AzureClusterControlPlane {
             this.databaseEncryption = databaseEncryption;
             return this;
         }
-
         public Builder mainVolume(@Nullable AzureClusterControlPlaneMainVolume mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
-
         public Builder proxyConfig(@Nullable AzureClusterControlPlaneProxyConfig proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
-
         public Builder replicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements) {
             this.replicaPlacements = replicaPlacements;
             return this;
         }
-
+        public Builder replicaPlacements(AzureClusterControlPlaneReplicaPlacement... replicaPlacements) {
+            return replicaPlacements(List.of(replicaPlacements));
+        }
         public Builder rootVolume(@Nullable AzureClusterControlPlaneRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder sshConfig(AzureClusterControlPlaneSshConfig sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
-        }
-        public AzureClusterControlPlane build() {
+        }        public AzureClusterControlPlane build() {
             return new AzureClusterControlPlane(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);
         }
     }

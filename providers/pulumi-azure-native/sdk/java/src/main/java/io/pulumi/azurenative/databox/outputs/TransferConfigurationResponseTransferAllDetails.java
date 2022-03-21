@@ -53,8 +53,7 @@ public final class TransferConfigurationResponseTransferAllDetails {
         public Builder include(@Nullable TransferAllDetailsResponse include) {
             this.include = include;
             return this;
-        }
-        public TransferConfigurationResponseTransferAllDetails build() {
+        }        public TransferConfigurationResponseTransferAllDetails build() {
             return new TransferConfigurationResponseTransferAllDetails(include);
         }
     }

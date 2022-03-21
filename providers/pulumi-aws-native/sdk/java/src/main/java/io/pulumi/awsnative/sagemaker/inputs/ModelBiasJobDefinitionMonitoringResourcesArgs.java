@@ -56,12 +56,10 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public Builder clusterConfig(ModelBiasJobDefinitionClusterConfigArgs clusterConfig) {
             this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
-        }
-        public ModelBiasJobDefinitionMonitoringResourcesArgs build() {
+        }        public ModelBiasJobDefinitionMonitoringResourcesArgs build() {
             return new ModelBiasJobDefinitionMonitoringResourcesArgs(clusterConfig);
         }
     }

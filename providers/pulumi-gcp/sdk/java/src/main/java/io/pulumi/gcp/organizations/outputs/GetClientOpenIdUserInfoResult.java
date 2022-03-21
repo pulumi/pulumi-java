@@ -69,12 +69,10 @@ public final class GetClientOpenIdUserInfoResult {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetClientOpenIdUserInfoResult build() {
+        }        public GetClientOpenIdUserInfoResult build() {
             return new GetClientOpenIdUserInfoResult(email, id);
         }
     }

@@ -79,22 +79,18 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable Map<String,String> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
-        }
-        public VertexAIParametersArgs build() {
+        }        public VertexAIParametersArgs build() {
             return new VertexAIParametersArgs(env, network);
         }
     }

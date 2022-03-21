@@ -72,12 +72,10 @@ public final class GetIntegrationAccountArgs extends io.pulumi.resources.InvokeA
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetIntegrationAccountArgs build() {
+        }        public GetIntegrationAccountArgs build() {
             return new GetIntegrationAccountArgs(integrationAccountName, resourceGroupName);
         }
     }

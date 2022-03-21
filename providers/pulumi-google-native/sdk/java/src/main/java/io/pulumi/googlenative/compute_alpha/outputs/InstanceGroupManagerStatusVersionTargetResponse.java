@@ -51,8 +51,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse {
         public Builder isReached(Boolean isReached) {
             this.isReached = Objects.requireNonNull(isReached);
             return this;
-        }
-        public InstanceGroupManagerStatusVersionTargetResponse build() {
+        }        public InstanceGroupManagerStatusVersionTargetResponse build() {
             return new InstanceGroupManagerStatusVersionTargetResponse(isReached);
         }
     }

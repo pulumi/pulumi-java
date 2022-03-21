@@ -58,12 +58,13 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
             this.ec2TagFilters = ec2TagFilters;
             return this;
         }
-
         public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilterArgs> ec2TagFilters) {
             this.ec2TagFilters = Output.ofNullable(ec2TagFilters);
             return this;
         }
-        public DeploymentGroupEc2TagSetArgs build() {
+        public Builder ec2TagFilters(DeploymentGroupEc2TagSetEc2TagFilterArgs... ec2TagFilters) {
+            return ec2TagFilters(List.of(ec2TagFilters));
+        }        public DeploymentGroupEc2TagSetArgs build() {
             return new DeploymentGroupEc2TagSetArgs(ec2TagFilters);
         }
     }

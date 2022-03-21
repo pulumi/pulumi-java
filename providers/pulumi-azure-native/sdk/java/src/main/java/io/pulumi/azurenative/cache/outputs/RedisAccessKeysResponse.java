@@ -69,12 +69,10 @@ public final class RedisAccessKeysResponse {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public RedisAccessKeysResponse build() {
+        }        public RedisAccessKeysResponse build() {
             return new RedisAccessKeysResponse(primaryKey, secondaryKey);
         }
     }

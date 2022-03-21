@@ -69,12 +69,10 @@ public final class FirewallRuleGroupAssociationTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FirewallRuleGroupAssociationTag build() {
+        }        public FirewallRuleGroupAssociationTag build() {
             return new FirewallRuleGroupAssociationTag(key, value);
         }
     }

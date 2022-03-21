@@ -77,12 +77,10 @@ public final class AnalysisTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AnalysisTag build() {
+        }        public AnalysisTag build() {
             return new AnalysisTag(key, value);
         }
     }

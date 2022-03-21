@@ -102,27 +102,22 @@ public final class GetServiceBackupIamPolicyArgs extends io.pulumi.resources.Inv
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
-        }
-        public GetServiceBackupIamPolicyArgs build() {
+        }        public GetServiceBackupIamPolicyArgs build() {
             return new GetServiceBackupIamPolicyArgs(backupId, location, optionsRequestedPolicyVersion, project, serviceId);
         }
     }

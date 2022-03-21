@@ -121,27 +121,22 @@ public final class ForwardingConfigurationResponse {
             this.backendPool = backendPool;
             return this;
         }
-
         public Builder cacheConfiguration(@Nullable CacheConfigurationResponse cacheConfiguration) {
             this.cacheConfiguration = cacheConfiguration;
             return this;
         }
-
         public Builder customForwardingPath(@Nullable String customForwardingPath) {
             this.customForwardingPath = customForwardingPath;
             return this;
         }
-
         public Builder forwardingProtocol(@Nullable String forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public ForwardingConfigurationResponse build() {
+        }        public ForwardingConfigurationResponse build() {
             return new ForwardingConfigurationResponse(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
         }
     }

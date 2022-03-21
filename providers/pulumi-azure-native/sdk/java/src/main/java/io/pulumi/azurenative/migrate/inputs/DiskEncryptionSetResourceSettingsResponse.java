@@ -77,12 +77,10 @@ public final class DiskEncryptionSetResourceSettingsResponse extends io.pulumi.r
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
-        }
-        public DiskEncryptionSetResourceSettingsResponse build() {
+        }        public DiskEncryptionSetResourceSettingsResponse build() {
             return new DiskEncryptionSetResourceSettingsResponse(resourceType, targetResourceName);
         }
     }

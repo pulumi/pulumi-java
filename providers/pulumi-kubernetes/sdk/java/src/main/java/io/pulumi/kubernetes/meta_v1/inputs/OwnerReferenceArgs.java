@@ -143,62 +143,50 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
-
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = Output.of(Objects.requireNonNull(apiVersion));
             return this;
         }
-
         public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
-
         public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = Output.ofNullable(blockOwnerDeletion);
             return this;
         }
-
         public Builder controller(@Nullable Output<Boolean> controller) {
             this.controller = controller;
             return this;
         }
-
         public Builder controller(@Nullable Boolean controller) {
             this.controller = Output.ofNullable(controller);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder uid(Output<String> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Output.of(Objects.requireNonNull(uid));
             return this;
-        }
-        public OwnerReferenceArgs build() {
+        }        public OwnerReferenceArgs build() {
             return new OwnerReferenceArgs(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }
     }

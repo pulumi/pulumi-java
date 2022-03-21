@@ -208,102 +208,85 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
-
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = Output.ofNullable(resolverEndpointId);
             return this;
         }
-
         public Builder ruleType(@Nullable Output<String> ruleType) {
             this.ruleType = ruleType;
             return this;
         }
-
         public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = Output.ofNullable(ruleType);
             return this;
         }
-
         public Builder shareStatus(@Nullable Output<String> shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
-
         public Builder shareStatus(@Nullable String shareStatus) {
             this.shareStatus = Output.ofNullable(shareStatus);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
             this.targetIps = targetIps;
             return this;
         }
-
         public Builder targetIps(@Nullable List<ResolverRuleTargetIpGetArgs> targetIps) {
             this.targetIps = Output.ofNullable(targetIps);
             return this;
         }
-        public ResolverRuleState build() {
+        public Builder targetIps(ResolverRuleTargetIpGetArgs... targetIps) {
+            return targetIps(List.of(targetIps));
+        }        public ResolverRuleState build() {
             return new ResolverRuleState(arn, domainName, name, ownerId, resolverEndpointId, ruleType, shareStatus, tags, tagsAll, targetIps);
         }
     }

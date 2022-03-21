@@ -173,47 +173,44 @@ public final class GetEndpointGroupResult {
             this.endpointConfigurations = endpointConfigurations;
             return this;
         }
-
+        public Builder endpointConfigurations(EndpointGroupEndpointConfiguration... endpointConfigurations) {
+            return endpointConfigurations(List.of(endpointConfigurations));
+        }
         public Builder endpointGroupArn(@Nullable String endpointGroupArn) {
             this.endpointGroupArn = endpointGroupArn;
             return this;
         }
-
         public Builder healthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
             this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
             return this;
         }
-
         public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
-
         public Builder healthCheckPort(@Nullable Integer healthCheckPort) {
             this.healthCheckPort = healthCheckPort;
             return this;
         }
-
         public Builder healthCheckProtocol(@Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol) {
             this.healthCheckProtocol = healthCheckProtocol;
             return this;
         }
-
         public Builder portOverrides(@Nullable List<EndpointGroupPortOverride> portOverrides) {
             this.portOverrides = portOverrides;
             return this;
         }
-
+        public Builder portOverrides(EndpointGroupPortOverride... portOverrides) {
+            return portOverrides(List.of(portOverrides));
+        }
         public Builder thresholdCount(@Nullable Integer thresholdCount) {
             this.thresholdCount = thresholdCount;
             return this;
         }
-
         public Builder trafficDialPercentage(@Nullable Double trafficDialPercentage) {
             this.trafficDialPercentage = trafficDialPercentage;
             return this;
-        }
-        public GetEndpointGroupResult build() {
+        }        public GetEndpointGroupResult build() {
             return new GetEndpointGroupResult(endpointConfigurations, endpointGroupArn, healthCheckIntervalSeconds, healthCheckPath, healthCheckPort, healthCheckProtocol, portOverrides, thresholdCount, trafficDialPercentage);
         }
     }

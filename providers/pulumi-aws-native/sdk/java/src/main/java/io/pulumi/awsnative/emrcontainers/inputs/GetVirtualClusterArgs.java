@@ -54,8 +54,7 @@ public final class GetVirtualClusterArgs extends io.pulumi.resources.InvokeArgs 
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetVirtualClusterArgs build() {
+        }        public GetVirtualClusterArgs build() {
             return new GetVirtualClusterArgs(id);
         }
     }

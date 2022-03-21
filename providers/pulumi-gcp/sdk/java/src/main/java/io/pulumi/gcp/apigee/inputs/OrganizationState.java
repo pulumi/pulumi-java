@@ -211,102 +211,82 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             this.analyticsRegion = analyticsRegion;
             return this;
         }
-
         public Builder analyticsRegion(@Nullable String analyticsRegion) {
             this.analyticsRegion = Output.ofNullable(analyticsRegion);
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
-
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
-
         public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = Output.ofNullable(caCertificate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = Output.ofNullable(projectId);
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
-
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
             this.runtimeType = runtimeType;
             return this;
         }
-
         public Builder runtimeType(@Nullable String runtimeType) {
             this.runtimeType = Output.ofNullable(runtimeType);
             return this;
         }
-
         public Builder subscriptionType(@Nullable Output<String> subscriptionType) {
             this.subscriptionType = subscriptionType;
             return this;
         }
-
         public Builder subscriptionType(@Nullable String subscriptionType) {
             this.subscriptionType = Output.ofNullable(subscriptionType);
             return this;
-        }
-        public OrganizationState build() {
+        }        public OrganizationState build() {
             return new OrganizationState(analyticsRegion, authorizedNetwork, caCertificate, description, displayName, name, projectId, runtimeDatabaseEncryptionKeyName, runtimeType, subscriptionType);
         }
     }

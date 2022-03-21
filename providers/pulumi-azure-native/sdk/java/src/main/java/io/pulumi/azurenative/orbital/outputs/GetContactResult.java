@@ -360,102 +360,82 @@ public final class GetContactResult {
             this.contactProfile = Objects.requireNonNull(contactProfile);
             return this;
         }
-
         public Builder endAzimuthDegrees(Double endAzimuthDegrees) {
             this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
             return this;
         }
-
         public Builder endElevationDegrees(Double endElevationDegrees) {
             this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
             return this;
         }
-
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder groundStationName(String groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder maximumElevationDegrees(Double maximumElevationDegrees) {
             this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reservationEndTime(String reservationEndTime) {
             this.reservationEndTime = Objects.requireNonNull(reservationEndTime);
             return this;
         }
-
         public Builder reservationStartTime(String reservationStartTime) {
             this.reservationStartTime = Objects.requireNonNull(reservationStartTime);
             return this;
         }
-
         public Builder rxEndTime(String rxEndTime) {
             this.rxEndTime = Objects.requireNonNull(rxEndTime);
             return this;
         }
-
         public Builder rxStartTime(String rxStartTime) {
             this.rxStartTime = Objects.requireNonNull(rxStartTime);
             return this;
         }
-
         public Builder startAzimuthDegrees(Double startAzimuthDegrees) {
             this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
             return this;
         }
-
         public Builder startElevationDegrees(Double startElevationDegrees) {
             this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder txEndTime(String txEndTime) {
             this.txEndTime = Objects.requireNonNull(txEndTime);
             return this;
         }
-
         public Builder txStartTime(String txStartTime) {
             this.txStartTime = Objects.requireNonNull(txStartTime);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetContactResult build() {
+        }        public GetContactResult build() {
             return new GetContactResult(contactProfile, endAzimuthDegrees, endElevationDegrees, errorMessage, etag, groundStationName, id, maximumElevationDegrees, name, reservationEndTime, reservationStartTime, rxEndTime, rxStartTime, startAzimuthDegrees, startElevationDegrees, status, systemData, txEndTime, txStartTime, type);
         }
     }

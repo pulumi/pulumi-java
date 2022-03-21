@@ -151,37 +151,30 @@ public final class GetWebAppPublicCertificateResult {
             this.blob = blob;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder publicCertificateLocation(@Nullable String publicCertificateLocation) {
             this.publicCertificateLocation = publicCertificateLocation;
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppPublicCertificateResult build() {
+        }        public GetWebAppPublicCertificateResult build() {
             return new GetWebAppPublicCertificateResult(blob, id, kind, name, publicCertificateLocation, thumbprint, type);
         }
     }

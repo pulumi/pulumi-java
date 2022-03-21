@@ -78,12 +78,10 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder definitionVersion(@Nullable String definitionVersion) {
             this.definitionVersion = definitionVersion;
             return this;
-        }
-        public DatasetStateResponseDeprecatedBy build() {
+        }        public DatasetStateResponseDeprecatedBy build() {
             return new DatasetStateResponseDeprecatedBy(datasetId, definitionVersion);
         }
     }

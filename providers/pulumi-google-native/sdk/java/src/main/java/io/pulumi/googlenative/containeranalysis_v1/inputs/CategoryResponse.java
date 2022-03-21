@@ -76,12 +76,10 @@ public final class CategoryResponse extends io.pulumi.resources.InvokeArgs {
             this.categoryId = Objects.requireNonNull(categoryId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public CategoryResponse build() {
+        }        public CategoryResponse build() {
             return new CategoryResponse(categoryId, name);
         }
     }

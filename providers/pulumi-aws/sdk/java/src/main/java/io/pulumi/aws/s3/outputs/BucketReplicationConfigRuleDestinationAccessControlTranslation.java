@@ -51,8 +51,7 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
         public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
-        }
-        public BucketReplicationConfigRuleDestinationAccessControlTranslation build() {
+        }        public BucketReplicationConfigRuleDestinationAccessControlTranslation build() {
             return new BucketReplicationConfigRuleDestinationAccessControlTranslation(owner);
         }
     }

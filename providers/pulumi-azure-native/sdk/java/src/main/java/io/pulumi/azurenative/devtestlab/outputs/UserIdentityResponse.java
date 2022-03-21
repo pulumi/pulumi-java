@@ -119,27 +119,22 @@ public final class UserIdentityResponse {
             this.appId = appId;
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalName(@Nullable String principalName) {
             this.principalName = principalName;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public UserIdentityResponse build() {
+        }        public UserIdentityResponse build() {
             return new UserIdentityResponse(appId, objectId, principalId, principalName, tenantId);
         }
     }

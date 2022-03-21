@@ -74,22 +74,24 @@ public final class GetDataflowEndpointGroupResult {
             this.arn = arn;
             return this;
         }
-
         public Builder endpointDetails(@Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails) {
             this.endpointDetails = endpointDetails;
             return this;
         }
-
+        public Builder endpointDetails(DataflowEndpointGroupEndpointDetails... endpointDetails) {
+            return endpointDetails(List.of(endpointDetails));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder tags(@Nullable List<DataflowEndpointGroupTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDataflowEndpointGroupResult build() {
+        public Builder tags(DataflowEndpointGroupTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDataflowEndpointGroupResult build() {
             return new GetDataflowEndpointGroupResult(arn, endpointDetails, id, tags);
         }
     }

@@ -79,12 +79,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch {
             this.data = data;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch build() {
+        }        public SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch build() {
             return new SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch(data, type);
         }
     }

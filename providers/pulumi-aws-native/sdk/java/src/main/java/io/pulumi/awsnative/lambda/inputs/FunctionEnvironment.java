@@ -60,8 +60,7 @@ public final class FunctionEnvironment extends io.pulumi.resources.InvokeArgs {
         public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
-        }
-        public FunctionEnvironment build() {
+        }        public FunctionEnvironment build() {
             return new FunctionEnvironment(variables);
         }
     }

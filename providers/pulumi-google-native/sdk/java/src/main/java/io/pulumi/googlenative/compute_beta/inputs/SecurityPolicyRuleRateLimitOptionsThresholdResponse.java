@@ -72,12 +72,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder intervalSec(Integer intervalSec) {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
-        }
-        public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
+        }        public SecurityPolicyRuleRateLimitOptionsThresholdResponse build() {
             return new SecurityPolicyRuleRateLimitOptionsThresholdResponse(count, intervalSec);
         }
     }

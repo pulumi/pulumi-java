@@ -93,42 +93,34 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
-
         public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfigurationArgs dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = Output.ofNullable(dockerVolumeConfiguration);
             return this;
         }
-
         public Builder eFSVolumeConfiguration(@Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = eFSVolumeConfiguration;
             return this;
         }
-
         public Builder eFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfigurationArgs eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = Output.ofNullable(eFSVolumeConfiguration);
             return this;
         }
-
         public Builder host(@Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable TaskDefinitionHostVolumePropertiesArgs host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public TaskDefinitionVolumeArgs build() {
+        }        public TaskDefinitionVolumeArgs build() {
             return new TaskDefinitionVolumeArgs(dockerVolumeConfiguration, eFSVolumeConfiguration, host, name);
         }
     }

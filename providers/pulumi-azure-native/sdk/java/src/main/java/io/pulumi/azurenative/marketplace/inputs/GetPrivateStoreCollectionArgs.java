@@ -72,12 +72,10 @@ public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.Inv
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
-
         public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
-        }
-        public GetPrivateStoreCollectionArgs build() {
+        }        public GetPrivateStoreCollectionArgs build() {
             return new GetPrivateStoreCollectionArgs(collectionId, privateStoreId);
         }
     }

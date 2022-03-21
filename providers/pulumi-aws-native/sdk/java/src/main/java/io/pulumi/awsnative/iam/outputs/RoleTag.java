@@ -69,12 +69,10 @@ public final class RoleTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public RoleTag build() {
+        }        public RoleTag build() {
             return new RoleTag(key, value);
         }
     }

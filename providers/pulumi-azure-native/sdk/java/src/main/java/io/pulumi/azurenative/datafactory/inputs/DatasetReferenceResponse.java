@@ -96,17 +96,14 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
             this.parameters = parameters;
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DatasetReferenceResponse build() {
+        }        public DatasetReferenceResponse build() {
             return new DatasetReferenceResponse(parameters, referenceName, type);
         }
     }

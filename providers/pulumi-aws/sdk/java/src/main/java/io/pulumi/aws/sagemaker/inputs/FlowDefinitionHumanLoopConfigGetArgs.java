@@ -189,92 +189,77 @@ public final class FlowDefinitionHumanLoopConfigGetArgs extends io.pulumi.resour
             this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn);
             return this;
         }
-
         public Builder humanTaskUiArn(String humanTaskUiArn) {
             this.humanTaskUiArn = Output.of(Objects.requireNonNull(humanTaskUiArn));
             return this;
         }
-
         public Builder publicWorkforceTaskPrice(@Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs> publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
             return this;
         }
-
         public Builder publicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = Output.ofNullable(publicWorkforceTaskPrice);
             return this;
         }
-
         public Builder taskAvailabilityLifetimeInSeconds(@Nullable Output<Integer> taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
             return this;
         }
-
         public Builder taskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = Output.ofNullable(taskAvailabilityLifetimeInSeconds);
             return this;
         }
-
         public Builder taskCount(Output<Integer> taskCount) {
             this.taskCount = Objects.requireNonNull(taskCount);
             return this;
         }
-
         public Builder taskCount(Integer taskCount) {
             this.taskCount = Output.of(Objects.requireNonNull(taskCount));
             return this;
         }
-
         public Builder taskDescription(Output<String> taskDescription) {
             this.taskDescription = Objects.requireNonNull(taskDescription);
             return this;
         }
-
         public Builder taskDescription(String taskDescription) {
             this.taskDescription = Output.of(Objects.requireNonNull(taskDescription));
             return this;
         }
-
         public Builder taskKeywords(@Nullable Output<List<String>> taskKeywords) {
             this.taskKeywords = taskKeywords;
             return this;
         }
-
         public Builder taskKeywords(@Nullable List<String> taskKeywords) {
             this.taskKeywords = Output.ofNullable(taskKeywords);
             return this;
         }
-
+        public Builder taskKeywords(String... taskKeywords) {
+            return taskKeywords(List.of(taskKeywords));
+        }
         public Builder taskTimeLimitInSeconds(@Nullable Output<Integer> taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
             return this;
         }
-
         public Builder taskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = Output.ofNullable(taskTimeLimitInSeconds);
             return this;
         }
-
         public Builder taskTitle(Output<String> taskTitle) {
             this.taskTitle = Objects.requireNonNull(taskTitle);
             return this;
         }
-
         public Builder taskTitle(String taskTitle) {
             this.taskTitle = Output.of(Objects.requireNonNull(taskTitle));
             return this;
         }
-
         public Builder workteamArn(Output<String> workteamArn) {
             this.workteamArn = Objects.requireNonNull(workteamArn);
             return this;
         }
-
         public Builder workteamArn(String workteamArn) {
             this.workteamArn = Output.of(Objects.requireNonNull(workteamArn));
             return this;
-        }
-        public FlowDefinitionHumanLoopConfigGetArgs build() {
+        }        public FlowDefinitionHumanLoopConfigGetArgs build() {
             return new FlowDefinitionHumanLoopConfigGetArgs(humanTaskUiArn, publicWorkforceTaskPrice, taskAvailabilityLifetimeInSeconds, taskCount, taskDescription, taskKeywords, taskTimeLimitInSeconds, taskTitle, workteamArn);
         }
     }

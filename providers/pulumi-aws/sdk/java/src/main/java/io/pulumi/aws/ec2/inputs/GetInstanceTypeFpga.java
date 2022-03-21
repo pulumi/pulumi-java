@@ -93,22 +93,18 @@ public final class GetInstanceTypeFpga extends io.pulumi.resources.InvokeArgs {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
-
         public Builder memorySize(Integer memorySize) {
             this.memorySize = Objects.requireNonNull(memorySize);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetInstanceTypeFpga build() {
+        }        public GetInstanceTypeFpga build() {
             return new GetInstanceTypeFpga(count, manufacturer, memorySize, name);
         }
     }

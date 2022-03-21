@@ -91,32 +91,26 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.awsRegion = awsRegion;
             return this;
         }
-
         public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder requireEncryption(Output<Boolean> requireEncryption) {
             this.requireEncryption = Objects.requireNonNull(requireEncryption);
             return this;
         }
-
         public Builder requireEncryption(Boolean requireEncryption) {
             this.requireEncryption = Output.of(Objects.requireNonNull(requireEncryption));
             return this;
-        }
-        public VoiceConnectorArgs build() {
+        }        public VoiceConnectorArgs build() {
             return new VoiceConnectorArgs(awsRegion, name, requireEncryption);
         }
     }

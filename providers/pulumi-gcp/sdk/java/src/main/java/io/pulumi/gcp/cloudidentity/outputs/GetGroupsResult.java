@@ -79,17 +79,17 @@ public final class GetGroupsResult {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
+        public Builder groups(GetGroupsGroup... groups) {
+            return groups(List.of(groups));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
-        }
-        public GetGroupsResult build() {
+        }        public GetGroupsResult build() {
             return new GetGroupsResult(groups, id, parent);
         }
     }

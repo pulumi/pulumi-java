@@ -69,12 +69,10 @@ public final class TableRetentionProperties {
             this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays);
             return this;
         }
-
         public Builder memoryStoreRetentionPeriodInHours(Integer memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours);
             return this;
-        }
-        public TableRetentionProperties build() {
+        }        public TableRetentionProperties build() {
             return new TableRetentionProperties(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
         }
     }

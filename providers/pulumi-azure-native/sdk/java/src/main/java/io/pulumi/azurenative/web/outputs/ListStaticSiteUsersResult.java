@@ -71,12 +71,13 @@ public final class ListStaticSiteUsersResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<StaticSiteUserARMResourceResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListStaticSiteUsersResult build() {
+        public Builder value(StaticSiteUserARMResourceResponse... value) {
+            return value(List.of(value));
+        }        public ListStaticSiteUsersResult build() {
             return new ListStaticSiteUsersResult(nextLink, value);
         }
     }

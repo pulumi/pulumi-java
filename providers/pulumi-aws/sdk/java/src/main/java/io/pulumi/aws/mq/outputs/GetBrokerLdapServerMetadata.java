@@ -127,57 +127,49 @@ public final class GetBrokerLdapServerMetadata {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder roleBase(String roleBase) {
             this.roleBase = Objects.requireNonNull(roleBase);
             return this;
         }
-
         public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
-
         public Builder roleSearchMatching(String roleSearchMatching) {
             this.roleSearchMatching = Objects.requireNonNull(roleSearchMatching);
             return this;
         }
-
         public Builder roleSearchSubtree(Boolean roleSearchSubtree) {
             this.roleSearchSubtree = Objects.requireNonNull(roleSearchSubtree);
             return this;
         }
-
         public Builder serviceAccountPassword(String serviceAccountPassword) {
             this.serviceAccountPassword = Objects.requireNonNull(serviceAccountPassword);
             return this;
         }
-
         public Builder serviceAccountUsername(String serviceAccountUsername) {
             this.serviceAccountUsername = Objects.requireNonNull(serviceAccountUsername);
             return this;
         }
-
         public Builder userBase(String userBase) {
             this.userBase = Objects.requireNonNull(userBase);
             return this;
         }
-
         public Builder userRoleName(String userRoleName) {
             this.userRoleName = Objects.requireNonNull(userRoleName);
             return this;
         }
-
         public Builder userSearchMatching(String userSearchMatching) {
             this.userSearchMatching = Objects.requireNonNull(userSearchMatching);
             return this;
         }
-
         public Builder userSearchSubtree(Boolean userSearchSubtree) {
             this.userSearchSubtree = Objects.requireNonNull(userSearchSubtree);
             return this;
-        }
-        public GetBrokerLdapServerMetadata build() {
+        }        public GetBrokerLdapServerMetadata build() {
             return new GetBrokerLdapServerMetadata(hosts, roleBase, roleName, roleSearchMatching, roleSearchSubtree, serviceAccountPassword, serviceAccountUsername, userBase, userRoleName, userSearchMatching, userSearchSubtree);
         }
     }

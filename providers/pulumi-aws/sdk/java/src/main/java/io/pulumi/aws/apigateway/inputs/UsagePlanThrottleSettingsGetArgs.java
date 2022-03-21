@@ -75,22 +75,18 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
             this.burstLimit = burstLimit;
             return this;
         }
-
         public Builder burstLimit(@Nullable Integer burstLimit) {
             this.burstLimit = Output.ofNullable(burstLimit);
             return this;
         }
-
         public Builder rateLimit(@Nullable Output<Double> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
-
         public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = Output.ofNullable(rateLimit);
             return this;
-        }
-        public UsagePlanThrottleSettingsGetArgs build() {
+        }        public UsagePlanThrottleSettingsGetArgs build() {
             return new UsagePlanThrottleSettingsGetArgs(burstLimit, rateLimit);
         }
     }

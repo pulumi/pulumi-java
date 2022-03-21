@@ -234,132 +234,106 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.cryptoKeyBackend = cryptoKeyBackend;
             return this;
         }
-
         public Builder cryptoKeyBackend(@Nullable String cryptoKeyBackend) {
             this.cryptoKeyBackend = Output.ofNullable(cryptoKeyBackend);
             return this;
         }
-
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
-
         public Builder cryptoKeyId(String cryptoKeyId) {
             this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
-
         public Builder destroyScheduledDuration(@Nullable Output<String> destroyScheduledDuration) {
             this.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
-
         public Builder destroyScheduledDuration(@Nullable String destroyScheduledDuration) {
             this.destroyScheduledDuration = Output.ofNullable(destroyScheduledDuration);
             return this;
         }
-
         public Builder importOnly(@Nullable Output<Boolean> importOnly) {
             this.importOnly = importOnly;
             return this;
         }
-
         public Builder importOnly(@Nullable Boolean importOnly) {
             this.importOnly = Output.ofNullable(importOnly);
             return this;
         }
-
         public Builder keyRingId(Output<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder nextRotationTime(@Nullable Output<String> nextRotationTime) {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
-
         public Builder nextRotationTime(@Nullable String nextRotationTime) {
             this.nextRotationTime = Output.ofNullable(nextRotationTime);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder purpose(@Nullable Output<CryptoKeyPurpose> purpose) {
             this.purpose = purpose;
             return this;
         }
-
         public Builder purpose(@Nullable CryptoKeyPurpose purpose) {
             this.purpose = Output.ofNullable(purpose);
             return this;
         }
-
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
-
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = Output.ofNullable(rotationPeriod);
             return this;
         }
-
         public Builder skipInitialVersionCreation(@Nullable Output<String> skipInitialVersionCreation) {
             this.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
-
         public Builder skipInitialVersionCreation(@Nullable String skipInitialVersionCreation) {
             this.skipInitialVersionCreation = Output.ofNullable(skipInitialVersionCreation);
             return this;
         }
-
         public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate) {
             this.versionTemplate = versionTemplate;
             return this;
         }
-
         public Builder versionTemplate(@Nullable CryptoKeyVersionTemplateArgs versionTemplate) {
             this.versionTemplate = Output.ofNullable(versionTemplate);
             return this;
-        }
-        public CryptoKeyArgs build() {
+        }        public CryptoKeyArgs build() {
             return new CryptoKeyArgs(cryptoKeyBackend, cryptoKeyId, destroyScheduledDuration, importOnly, keyRingId, labels, location, nextRotationTime, project, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplate);
         }
     }

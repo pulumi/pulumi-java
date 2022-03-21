@@ -148,62 +148,53 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
-
         public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
             this.azureApp = Output.of(Objects.requireNonNull(azureApp));
             return this;
         }
-
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
-
         public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
             this.backupFileShare = Output.ofNullable(backupFileShare);
             return this;
         }
-
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
-
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
-
+        public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputArgs... selectedDatabases) {
+            return selectedDatabases(List.of(selectedDatabases));
+        }
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
-
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
-
         public Builder storageResourceId(Output<String> storageResourceId) {
             this.storageResourceId = Objects.requireNonNull(storageResourceId);
             return this;
         }
-
         public Builder storageResourceId(String storageResourceId) {
             this.storageResourceId = Output.of(Objects.requireNonNull(storageResourceId));
             return this;
         }
-
         public Builder targetConnectionInfo(Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
-        }
-        public ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs build() {
+        }        public ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs build() {
             return new ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs(azureApp, backupFileShare, selectedDatabases, sourceConnectionInfo, storageResourceId, targetConnectionInfo);
         }
     }

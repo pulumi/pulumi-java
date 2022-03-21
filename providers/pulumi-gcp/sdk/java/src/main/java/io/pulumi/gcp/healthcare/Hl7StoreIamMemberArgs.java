@@ -104,42 +104,34 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable Hl7StoreIamMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
-
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public Hl7StoreIamMemberArgs build() {
+        }        public Hl7StoreIamMemberArgs build() {
             return new Hl7StoreIamMemberArgs(condition, hl7V2StoreId, member, role);
         }
     }

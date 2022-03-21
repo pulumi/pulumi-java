@@ -58,8 +58,7 @@ public final class RedisLinkedServerResponse extends io.pulumi.resources.InvokeA
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public RedisLinkedServerResponse build() {
+        }        public RedisLinkedServerResponse build() {
             return new RedisLinkedServerResponse(id);
         }
     }

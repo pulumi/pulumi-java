@@ -141,62 +141,53 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             this.amiTags = amiTags;
             return this;
         }
-
         public Builder amiTags(@Nullable Map<String,String> amiTags) {
             this.amiTags = Output.ofNullable(amiTags);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder launchPermission(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs> launchPermission) {
             this.launchPermission = launchPermission;
             return this;
         }
-
         public Builder launchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs launchPermission) {
             this.launchPermission = Output.ofNullable(launchPermission);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder targetAccountIds(@Nullable Output<List<String>> targetAccountIds) {
             this.targetAccountIds = targetAccountIds;
             return this;
         }
-
         public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
             this.targetAccountIds = Output.ofNullable(targetAccountIds);
             return this;
         }
-        public DistributionConfigurationDistributionAmiDistributionConfigurationArgs build() {
+        public Builder targetAccountIds(String... targetAccountIds) {
+            return targetAccountIds(List.of(targetAccountIds));
+        }        public DistributionConfigurationDistributionAmiDistributionConfigurationArgs build() {
             return new DistributionConfigurationDistributionAmiDistributionConfigurationArgs(amiTags, description, kmsKeyId, launchPermission, name, targetAccountIds);
         }
     }

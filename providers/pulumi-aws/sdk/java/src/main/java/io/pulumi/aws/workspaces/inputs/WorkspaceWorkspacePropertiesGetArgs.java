@@ -123,52 +123,42 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
             this.computeTypeName = computeTypeName;
             return this;
         }
-
         public Builder computeTypeName(@Nullable String computeTypeName) {
             this.computeTypeName = Output.ofNullable(computeTypeName);
             return this;
         }
-
         public Builder rootVolumeSizeGib(@Nullable Output<Integer> rootVolumeSizeGib) {
             this.rootVolumeSizeGib = rootVolumeSizeGib;
             return this;
         }
-
         public Builder rootVolumeSizeGib(@Nullable Integer rootVolumeSizeGib) {
             this.rootVolumeSizeGib = Output.ofNullable(rootVolumeSizeGib);
             return this;
         }
-
         public Builder runningMode(@Nullable Output<String> runningMode) {
             this.runningMode = runningMode;
             return this;
         }
-
         public Builder runningMode(@Nullable String runningMode) {
             this.runningMode = Output.ofNullable(runningMode);
             return this;
         }
-
         public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
             return this;
         }
-
         public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Integer runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = Output.ofNullable(runningModeAutoStopTimeoutInMinutes);
             return this;
         }
-
         public Builder userVolumeSizeGib(@Nullable Output<Integer> userVolumeSizeGib) {
             this.userVolumeSizeGib = userVolumeSizeGib;
             return this;
         }
-
         public Builder userVolumeSizeGib(@Nullable Integer userVolumeSizeGib) {
             this.userVolumeSizeGib = Output.ofNullable(userVolumeSizeGib);
             return this;
-        }
-        public WorkspaceWorkspacePropertiesGetArgs build() {
+        }        public WorkspaceWorkspacePropertiesGetArgs build() {
             return new WorkspaceWorkspacePropertiesGetArgs(computeTypeName, rootVolumeSizeGib, runningMode, runningModeAutoStopTimeoutInMinutes, userVolumeSizeGib);
         }
     }

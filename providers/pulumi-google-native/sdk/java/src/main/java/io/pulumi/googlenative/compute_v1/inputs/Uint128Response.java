@@ -64,12 +64,10 @@ public final class Uint128Response extends io.pulumi.resources.InvokeArgs {
             this.high = Objects.requireNonNull(high);
             return this;
         }
-
         public Builder low(String low) {
             this.low = Objects.requireNonNull(low);
             return this;
-        }
-        public Uint128Response build() {
+        }        public Uint128Response build() {
             return new Uint128Response(high, low);
         }
     }

@@ -73,22 +73,18 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs build() {
+        }        public ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs build() {
             return new ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(description, status);
         }
     }

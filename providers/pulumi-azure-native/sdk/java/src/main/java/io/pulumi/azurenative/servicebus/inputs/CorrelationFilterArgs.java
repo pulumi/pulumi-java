@@ -208,102 +208,82 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder correlationId(@Nullable Output<String> correlationId) {
             this.correlationId = correlationId;
             return this;
         }
-
         public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = Output.ofNullable(correlationId);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = Output.ofNullable(messageId);
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder replyTo(@Nullable Output<String> replyTo) {
             this.replyTo = replyTo;
             return this;
         }
-
         public Builder replyTo(@Nullable String replyTo) {
             this.replyTo = Output.ofNullable(replyTo);
             return this;
         }
-
         public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
-
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
             this.replyToSessionId = Output.ofNullable(replyToSessionId);
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = Output.ofNullable(requiresPreprocessing);
             return this;
         }
-
         public Builder sessionId(@Nullable Output<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
-
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = Output.ofNullable(sessionId);
             return this;
         }
-
         public Builder to(@Nullable Output<String> to) {
             this.to = to;
             return this;
         }
-
         public Builder to(@Nullable String to) {
             this.to = Output.ofNullable(to);
             return this;
-        }
-        public CorrelationFilterArgs build() {
+        }        public CorrelationFilterArgs build() {
             return new CorrelationFilterArgs(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
         }
     }

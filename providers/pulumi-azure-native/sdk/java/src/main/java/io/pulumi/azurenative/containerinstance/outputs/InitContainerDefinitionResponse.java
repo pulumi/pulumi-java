@@ -139,32 +139,35 @@ public final class InitContainerDefinitionResponse {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
+        public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
+            return environmentVariables(List.of(environmentVariables));
+        }
         public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
-
         public Builder instanceView(InitContainerPropertiesDefinitionResponseInstanceView instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-        public InitContainerDefinitionResponse build() {
+        public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }        public InitContainerDefinitionResponse build() {
             return new InitContainerDefinitionResponse(command, environmentVariables, image, instanceView, name, volumeMounts);
         }
     }

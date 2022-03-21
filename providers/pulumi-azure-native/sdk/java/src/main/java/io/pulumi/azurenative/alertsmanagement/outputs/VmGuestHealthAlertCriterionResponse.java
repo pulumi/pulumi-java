@@ -106,22 +106,27 @@ public final class VmGuestHealthAlertCriterionResponse {
             this.healthStates = Objects.requireNonNull(healthStates);
             return this;
         }
-
+        public Builder healthStates(HealthStateResponse... healthStates) {
+            return healthStates(List.of(healthStates));
+        }
         public Builder monitorNames(@Nullable List<String> monitorNames) {
             this.monitorNames = monitorNames;
             return this;
         }
-
+        public Builder monitorNames(String... monitorNames) {
+            return monitorNames(List.of(monitorNames));
+        }
         public Builder monitorTypes(@Nullable List<String> monitorTypes) {
             this.monitorTypes = monitorTypes;
             return this;
         }
-
+        public Builder monitorTypes(String... monitorTypes) {
+            return monitorTypes(List.of(monitorTypes));
+        }
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public VmGuestHealthAlertCriterionResponse build() {
+        }        public VmGuestHealthAlertCriterionResponse build() {
             return new VmGuestHealthAlertCriterionResponse(healthStates, monitorNames, monitorTypes, namespace);
         }
     }

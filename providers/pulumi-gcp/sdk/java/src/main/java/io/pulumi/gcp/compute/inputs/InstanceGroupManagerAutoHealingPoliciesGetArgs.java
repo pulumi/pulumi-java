@@ -75,22 +75,18 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends io.pul
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = Output.of(Objects.requireNonNull(healthCheck));
             return this;
         }
-
         public Builder initialDelaySec(Output<Integer> initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Output.of(Objects.requireNonNull(initialDelaySec));
             return this;
-        }
-        public InstanceGroupManagerAutoHealingPoliciesGetArgs build() {
+        }        public InstanceGroupManagerAutoHealingPoliciesGetArgs build() {
             return new InstanceGroupManagerAutoHealingPoliciesGetArgs(healthCheck, initialDelaySec);
         }
     }

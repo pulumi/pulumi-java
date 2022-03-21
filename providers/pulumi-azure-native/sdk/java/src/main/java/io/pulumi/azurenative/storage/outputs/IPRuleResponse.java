@@ -71,12 +71,10 @@ public final class IPRuleResponse {
             this.action = action;
             return this;
         }
-
         public Builder iPAddressOrRange(String iPAddressOrRange) {
             this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
             return this;
-        }
-        public IPRuleResponse build() {
+        }        public IPRuleResponse build() {
             return new IPRuleResponse(action, iPAddressOrRange);
         }
     }

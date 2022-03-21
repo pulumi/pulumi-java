@@ -141,62 +141,53 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder kmsKey(Output<String> kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
-
         public Builder kmsKey(String kmsKey) {
             this.kmsKey = Output.of(Objects.requireNonNull(kmsKey));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scheduleConfig(Output<DataIntegrationScheduleConfigArgs> scheduleConfig) {
             this.scheduleConfig = Objects.requireNonNull(scheduleConfig);
             return this;
         }
-
         public Builder scheduleConfig(DataIntegrationScheduleConfigArgs scheduleConfig) {
             this.scheduleConfig = Output.of(Objects.requireNonNull(scheduleConfig));
             return this;
         }
-
         public Builder sourceURI(Output<String> sourceURI) {
             this.sourceURI = Objects.requireNonNull(sourceURI);
             return this;
         }
-
         public Builder sourceURI(String sourceURI) {
             this.sourceURI = Output.of(Objects.requireNonNull(sourceURI));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DataIntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DataIntegrationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DataIntegrationArgs build() {
+        public Builder tags(DataIntegrationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DataIntegrationArgs build() {
             return new DataIntegrationArgs(description, kmsKey, name, scheduleConfig, sourceURI, tags);
         }
     }

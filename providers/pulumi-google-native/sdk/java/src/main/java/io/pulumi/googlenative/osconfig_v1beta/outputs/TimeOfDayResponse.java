@@ -101,22 +101,18 @@ public final class TimeOfDayResponse {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
-
         public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public TimeOfDayResponse build() {
+        }        public TimeOfDayResponse build() {
             return new TimeOfDayResponse(hours, minutes, nanos, seconds);
         }
     }

@@ -54,8 +54,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
         public Builder connectorName(String connectorName) {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
-        }
-        public GetConnectorArgs build() {
+        }        public GetConnectorArgs build() {
             return new GetConnectorArgs(connectorName);
         }
     }

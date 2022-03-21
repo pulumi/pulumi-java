@@ -72,12 +72,10 @@ public final class GremlinGraphGetPropertiesResponseOptions {
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
-
         public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
-        }
-        public GremlinGraphGetPropertiesResponseOptions build() {
+        }        public GremlinGraphGetPropertiesResponseOptions build() {
             return new GremlinGraphGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }
     }

@@ -61,12 +61,13 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
             this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRuleArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Output.of(Objects.requireNonNull(serverSideEncryptionConfiguration));
             return this;
         }
-        public BucketEncryptionArgs build() {
+        public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionRuleArgs... serverSideEncryptionConfiguration) {
+            return serverSideEncryptionConfiguration(List.of(serverSideEncryptionConfiguration));
+        }        public BucketEncryptionArgs build() {
             return new BucketEncryptionArgs(serverSideEncryptionConfiguration);
         }
     }

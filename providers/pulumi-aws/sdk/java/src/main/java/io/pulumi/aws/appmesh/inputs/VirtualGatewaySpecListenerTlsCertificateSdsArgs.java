@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateSdsArgs extends io.pu
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public VirtualGatewaySpecListenerTlsCertificateSdsArgs build() {
+        }        public VirtualGatewaySpecListenerTlsCertificateSdsArgs build() {
             return new VirtualGatewaySpecListenerTlsCertificateSdsArgs(secretName);
         }
     }

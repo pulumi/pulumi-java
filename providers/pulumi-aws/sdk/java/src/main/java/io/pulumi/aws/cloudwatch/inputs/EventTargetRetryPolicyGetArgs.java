@@ -74,22 +74,18 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
-
         public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = Output.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
             return this;
-        }
-        public EventTargetRetryPolicyGetArgs build() {
+        }        public EventTargetRetryPolicyGetArgs build() {
             return new EventTargetRetryPolicyGetArgs(maximumEventAgeInSeconds, maximumRetryAttempts);
         }
     }

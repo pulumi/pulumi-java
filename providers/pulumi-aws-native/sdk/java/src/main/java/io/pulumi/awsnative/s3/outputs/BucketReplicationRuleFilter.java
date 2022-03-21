@@ -65,17 +65,14 @@ public final class BucketReplicationRuleFilter {
             this.and = and;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tagFilter(@Nullable BucketTagFilter tagFilter) {
             this.tagFilter = tagFilter;
             return this;
-        }
-        public BucketReplicationRuleFilter build() {
+        }        public BucketReplicationRuleFilter build() {
             return new BucketReplicationRuleFilter(and, prefix, tagFilter);
         }
     }

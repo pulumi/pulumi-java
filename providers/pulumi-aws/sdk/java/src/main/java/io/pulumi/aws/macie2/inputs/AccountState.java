@@ -122,52 +122,42 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
-
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
-
         public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
-
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = Output.ofNullable(updatedAt);
             return this;
-        }
-        public AccountState build() {
+        }        public AccountState build() {
             return new AccountState(createdAt, findingPublishingFrequency, serviceRole, status, updatedAt);
         }
     }

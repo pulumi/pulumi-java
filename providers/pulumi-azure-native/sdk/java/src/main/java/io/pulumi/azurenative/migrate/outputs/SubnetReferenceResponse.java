@@ -71,12 +71,10 @@ public final class SubnetReferenceResponse {
             this.name = name;
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
-        }
-        public SubnetReferenceResponse build() {
+        }        public SubnetReferenceResponse build() {
             return new SubnetReferenceResponse(name, sourceArmResourceId);
         }
     }

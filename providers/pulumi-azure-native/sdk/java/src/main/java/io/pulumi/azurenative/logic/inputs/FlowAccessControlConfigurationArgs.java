@@ -110,42 +110,34 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable FlowAccessControlConfigurationPolicyArgs actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
         public Builder contents(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents) {
             this.contents = contents;
             return this;
         }
-
         public Builder contents(@Nullable FlowAccessControlConfigurationPolicyArgs contents) {
             this.contents = Output.ofNullable(contents);
             return this;
         }
-
         public Builder triggers(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyArgs triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
         }
-
         public Builder workflowManagement(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
             this.workflowManagement = workflowManagement;
             return this;
         }
-
         public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyArgs workflowManagement) {
             this.workflowManagement = Output.ofNullable(workflowManagement);
             return this;
-        }
-        public FlowAccessControlConfigurationArgs build() {
+        }        public FlowAccessControlConfigurationArgs build() {
             return new FlowAccessControlConfigurationArgs(actions, contents, triggers, workflowManagement);
         }
     }

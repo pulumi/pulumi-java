@@ -281,77 +281,62 @@ public final class GetLinkedSubscriptionResult {
             this.deviceConnectionStatus = Objects.requireNonNull(deviceConnectionStatus);
             return this;
         }
-
         public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public Builder deviceLinkState(String deviceLinkState) {
             this.deviceLinkState = Objects.requireNonNull(deviceLinkState);
             return this;
         }
-
         public Builder deviceObjectId(String deviceObjectId) {
             this.deviceObjectId = Objects.requireNonNull(deviceObjectId);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder lastConnectedTime(String lastConnectedTime) {
             this.lastConnectedTime = Objects.requireNonNull(lastConnectedTime);
             return this;
         }
-
         public Builder linkedSubscriptionId(@Nullable String linkedSubscriptionId) {
             this.linkedSubscriptionId = linkedSubscriptionId;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder registrationResourceId(@Nullable String registrationResourceId) {
             this.registrationResourceId = registrationResourceId;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkedSubscriptionResult build() {
+        }        public GetLinkedSubscriptionResult build() {
             return new GetLinkedSubscriptionResult(deviceConnectionStatus, deviceId, deviceLinkState, deviceObjectId, etag, id, kind, lastConnectedTime, linkedSubscriptionId, location, name, registrationResourceId, systemData, tags, type);
         }
     }

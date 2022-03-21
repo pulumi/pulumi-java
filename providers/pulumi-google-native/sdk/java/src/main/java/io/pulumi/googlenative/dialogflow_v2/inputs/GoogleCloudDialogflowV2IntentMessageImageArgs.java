@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulu
             this.accessibilityText = accessibilityText;
             return this;
         }
-
         public Builder accessibilityText(@Nullable String accessibilityText) {
             this.accessibilityText = Output.ofNullable(accessibilityText);
             return this;
         }
-
         public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
-
         public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Output.ofNullable(imageUri);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageImageArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageImageArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageImageArgs(accessibilityText, imageUri);
         }
     }

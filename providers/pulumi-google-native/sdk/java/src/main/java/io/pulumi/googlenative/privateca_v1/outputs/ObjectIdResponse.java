@@ -53,7 +53,9 @@ public final class ObjectIdResponse {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
-        public ObjectIdResponse build() {
+        public Builder objectIdPath(Integer... objectIdPath) {
+            return objectIdPath(List.of(objectIdPath));
+        }        public ObjectIdResponse build() {
             return new ObjectIdResponse(objectIdPath);
         }
     }

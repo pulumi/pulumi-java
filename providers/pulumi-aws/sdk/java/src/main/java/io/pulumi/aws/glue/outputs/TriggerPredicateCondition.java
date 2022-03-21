@@ -119,27 +119,22 @@ public final class TriggerPredicateCondition {
             this.crawlState = crawlState;
             return this;
         }
-
         public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = jobName;
             return this;
         }
-
         public Builder logicalOperator(@Nullable String logicalOperator) {
             this.logicalOperator = logicalOperator;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public TriggerPredicateCondition build() {
+        }        public TriggerPredicateCondition build() {
             return new TriggerPredicateCondition(crawlState, crawlerName, jobName, logicalOperator, state);
         }
     }

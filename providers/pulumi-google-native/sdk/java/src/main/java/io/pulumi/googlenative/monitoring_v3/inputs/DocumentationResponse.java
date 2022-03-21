@@ -76,12 +76,10 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
-        }
-        public DocumentationResponse build() {
+        }        public DocumentationResponse build() {
             return new DocumentationResponse(content, mimeType);
         }
     }

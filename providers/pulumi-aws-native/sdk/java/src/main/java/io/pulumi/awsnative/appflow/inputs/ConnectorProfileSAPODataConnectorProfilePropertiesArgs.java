@@ -128,72 +128,58 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
             this.applicationHostUrl = applicationHostUrl;
             return this;
         }
-
         public Builder applicationHostUrl(@Nullable String applicationHostUrl) {
             this.applicationHostUrl = Output.ofNullable(applicationHostUrl);
             return this;
         }
-
         public Builder applicationServicePath(@Nullable Output<String> applicationServicePath) {
             this.applicationServicePath = applicationServicePath;
             return this;
         }
-
         public Builder applicationServicePath(@Nullable String applicationServicePath) {
             this.applicationServicePath = Output.ofNullable(applicationServicePath);
             return this;
         }
-
         public Builder clientNumber(@Nullable Output<String> clientNumber) {
             this.clientNumber = clientNumber;
             return this;
         }
-
         public Builder clientNumber(@Nullable String clientNumber) {
             this.clientNumber = Output.ofNullable(clientNumber);
             return this;
         }
-
         public Builder logonLanguage(@Nullable Output<String> logonLanguage) {
             this.logonLanguage = logonLanguage;
             return this;
         }
-
         public Builder logonLanguage(@Nullable String logonLanguage) {
             this.logonLanguage = Output.ofNullable(logonLanguage);
             return this;
         }
-
         public Builder oAuthProperties(@Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties) {
             this.oAuthProperties = oAuthProperties;
             return this;
         }
-
         public Builder oAuthProperties(@Nullable ConnectorProfileOAuthPropertiesArgs oAuthProperties) {
             this.oAuthProperties = Output.ofNullable(oAuthProperties);
             return this;
         }
-
         public Builder portNumber(@Nullable Output<Integer> portNumber) {
             this.portNumber = portNumber;
             return this;
         }
-
         public Builder portNumber(@Nullable Integer portNumber) {
             this.portNumber = Output.ofNullable(portNumber);
             return this;
         }
-
         public Builder privateLinkServiceName(@Nullable Output<String> privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
-
         public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
             this.privateLinkServiceName = Output.ofNullable(privateLinkServiceName);
             return this;
-        }
-        public ConnectorProfileSAPODataConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileSAPODataConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSAPODataConnectorProfilePropertiesArgs(applicationHostUrl, applicationServicePath, clientNumber, logonLanguage, oAuthProperties, portNumber, privateLinkServiceName);
         }
     }

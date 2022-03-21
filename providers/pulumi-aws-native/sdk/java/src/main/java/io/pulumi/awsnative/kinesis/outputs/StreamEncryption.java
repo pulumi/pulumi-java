@@ -70,12 +70,10 @@ public final class StreamEncryption {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
-        }
-        public StreamEncryption build() {
+        }        public StreamEncryption build() {
             return new StreamEncryption(encryptionType, keyId);
         }
     }

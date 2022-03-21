@@ -138,32 +138,26 @@ public final class InMageAzureV2PolicyDetailsResponse {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
-
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
-
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
-        }
-        public InMageAzureV2PolicyDetailsResponse build() {
+        }        public InMageAzureV2PolicyDetailsResponse build() {
             return new InMageAzureV2PolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }
     }

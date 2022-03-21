@@ -123,32 +123,29 @@ public final class GetReplicaKeyResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyPolicy(@Nullable Object keyPolicy) {
             this.keyPolicy = keyPolicy;
             return this;
         }
-
         public Builder tags(@Nullable List<ReplicaKeyTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetReplicaKeyResult build() {
+        public Builder tags(ReplicaKeyTag... tags) {
+            return tags(List.of(tags));
+        }        public GetReplicaKeyResult build() {
             return new GetReplicaKeyResult(arn, description, enabled, keyId, keyPolicy, tags);
         }
     }

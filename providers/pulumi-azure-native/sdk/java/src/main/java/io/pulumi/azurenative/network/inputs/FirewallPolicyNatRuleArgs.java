@@ -165,72 +165,58 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable FirewallPolicyNatRuleActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder ruleCondition(@Nullable Output<Object> ruleCondition) {
             this.ruleCondition = ruleCondition;
             return this;
         }
-
         public Builder ruleCondition(@Nullable Object ruleCondition) {
             this.ruleCondition = Output.ofNullable(ruleCondition);
             return this;
         }
-
         public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public Builder translatedAddress(@Nullable Output<String> translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
-
         public Builder translatedAddress(@Nullable String translatedAddress) {
             this.translatedAddress = Output.ofNullable(translatedAddress);
             return this;
         }
-
         public Builder translatedPort(@Nullable Output<String> translatedPort) {
             this.translatedPort = translatedPort;
             return this;
         }
-
         public Builder translatedPort(@Nullable String translatedPort) {
             this.translatedPort = Output.ofNullable(translatedPort);
             return this;
-        }
-        public FirewallPolicyNatRuleArgs build() {
+        }        public FirewallPolicyNatRuleArgs build() {
             return new FirewallPolicyNatRuleArgs(action, name, priority, ruleCondition, ruleType, translatedAddress, translatedPort);
         }
     }

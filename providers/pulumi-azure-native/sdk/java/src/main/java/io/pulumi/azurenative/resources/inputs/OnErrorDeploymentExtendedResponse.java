@@ -94,17 +94,14 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
             this.deploymentName = deploymentName;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public OnErrorDeploymentExtendedResponse build() {
+        }        public OnErrorDeploymentExtendedResponse build() {
             return new OnErrorDeploymentExtendedResponse(deploymentName, provisioningState, type);
         }
     }

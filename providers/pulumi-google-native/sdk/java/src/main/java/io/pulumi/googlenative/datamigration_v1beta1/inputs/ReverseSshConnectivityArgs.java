@@ -111,42 +111,34 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
             this.vm = vm;
             return this;
         }
-
         public Builder vm(@Nullable String vm) {
             this.vm = Output.ofNullable(vm);
             return this;
         }
-
         public Builder vmIp(Output<String> vmIp) {
             this.vmIp = Objects.requireNonNull(vmIp);
             return this;
         }
-
         public Builder vmIp(String vmIp) {
             this.vmIp = Output.of(Objects.requireNonNull(vmIp));
             return this;
         }
-
         public Builder vmPort(Output<Integer> vmPort) {
             this.vmPort = Objects.requireNonNull(vmPort);
             return this;
         }
-
         public Builder vmPort(Integer vmPort) {
             this.vmPort = Output.of(Objects.requireNonNull(vmPort));
             return this;
         }
-
         public Builder vpc(@Nullable Output<String> vpc) {
             this.vpc = vpc;
             return this;
         }
-
         public Builder vpc(@Nullable String vpc) {
             this.vpc = Output.ofNullable(vpc);
             return this;
-        }
-        public ReverseSshConnectivityArgs build() {
+        }        public ReverseSshConnectivityArgs build() {
             return new ReverseSshConnectivityArgs(vm, vmIp, vmPort, vpc);
         }
     }

@@ -88,17 +88,14 @@ public final class VolumeMountResponse {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
-        }
-        public VolumeMountResponse build() {
+        }        public VolumeMountResponse build() {
             return new VolumeMountResponse(mountPath, name, readOnly);
         }
     }

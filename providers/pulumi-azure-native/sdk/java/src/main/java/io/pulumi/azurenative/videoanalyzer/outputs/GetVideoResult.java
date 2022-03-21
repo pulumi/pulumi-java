@@ -187,47 +187,38 @@ public final class GetVideoResult {
             this.description = description;
             return this;
         }
-
         public Builder flags(VideoFlagsResponse flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder mediaInfo(VideoMediaInfoResponse mediaInfo) {
             this.mediaInfo = Objects.requireNonNull(mediaInfo);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder streaming(VideoStreamingResponse streaming) {
             this.streaming = Objects.requireNonNull(streaming);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetVideoResult build() {
+        }        public GetVideoResult build() {
             return new GetVideoResult(description, flags, id, mediaInfo, name, streaming, systemData, title, type);
         }
     }

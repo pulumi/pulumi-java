@@ -185,52 +185,42 @@ public final class AssemblyPropertiesResponse {
             this.assemblyCulture = assemblyCulture;
             return this;
         }
-
         public Builder assemblyName(String assemblyName) {
             this.assemblyName = Objects.requireNonNull(assemblyName);
             return this;
         }
-
         public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
             this.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
-
         public Builder assemblyVersion(@Nullable String assemblyVersion) {
             this.assemblyVersion = assemblyVersion;
             return this;
         }
-
         public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
-
         public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
         }
-
         public Builder contentLink(@Nullable ContentLinkResponse contentLink) {
             this.contentLink = contentLink;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
-        }
-        public AssemblyPropertiesResponse build() {
+        }        public AssemblyPropertiesResponse build() {
             return new AssemblyPropertiesResponse(assemblyCulture, assemblyName, assemblyPublicKeyToken, assemblyVersion, changedTime, content, contentLink, contentType, createdTime, metadata);
         }
     }

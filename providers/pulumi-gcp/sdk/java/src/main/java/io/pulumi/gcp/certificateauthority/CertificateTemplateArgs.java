@@ -174,82 +174,66 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder identityConstraints(@Nullable Output<CertificateTemplateIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
-
         public Builder identityConstraints(@Nullable CertificateTemplateIdentityConstraintsArgs identityConstraints) {
             this.identityConstraints = Output.ofNullable(identityConstraints);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder passthroughExtensions(@Nullable Output<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
-
         public Builder passthroughExtensions(@Nullable CertificateTemplatePassthroughExtensionsArgs passthroughExtensions) {
             this.passthroughExtensions = Output.ofNullable(passthroughExtensions);
             return this;
         }
-
         public Builder predefinedValues(@Nullable Output<CertificateTemplatePredefinedValuesArgs> predefinedValues) {
             this.predefinedValues = predefinedValues;
             return this;
         }
-
         public Builder predefinedValues(@Nullable CertificateTemplatePredefinedValuesArgs predefinedValues) {
             this.predefinedValues = Output.ofNullable(predefinedValues);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public CertificateTemplateArgs build() {
+        }        public CertificateTemplateArgs build() {
             return new CertificateTemplateArgs(description, identityConstraints, labels, location, name, passthroughExtensions, predefinedValues, project);
         }
     }

@@ -216,52 +216,45 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse extends io.pulumi.
             this.alwaysEncryptedSettings = alwaysEncryptedSettings;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionString(Object connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
-        }
-        public AmazonRdsForSqlServerLinkedServiceResponse build() {
+        }        public AmazonRdsForSqlServerLinkedServiceResponse build() {
             return new AmazonRdsForSqlServerLinkedServiceResponse(alwaysEncryptedSettings, annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type, userName);
         }
     }

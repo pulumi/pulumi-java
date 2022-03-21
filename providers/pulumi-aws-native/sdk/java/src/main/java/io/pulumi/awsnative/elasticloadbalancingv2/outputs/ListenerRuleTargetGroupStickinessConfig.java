@@ -56,12 +56,10 @@ public final class ListenerRuleTargetGroupStickinessConfig {
             this.durationSeconds = durationSeconds;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public ListenerRuleTargetGroupStickinessConfig build() {
+        }        public ListenerRuleTargetGroupStickinessConfig build() {
             return new ListenerRuleTargetGroupStickinessConfig(durationSeconds, enabled);
         }
     }

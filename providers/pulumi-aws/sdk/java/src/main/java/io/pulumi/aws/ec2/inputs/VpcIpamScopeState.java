@@ -173,92 +173,74 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipamArn(@Nullable Output<String> ipamArn) {
             this.ipamArn = ipamArn;
             return this;
         }
-
         public Builder ipamArn(@Nullable String ipamArn) {
             this.ipamArn = Output.ofNullable(ipamArn);
             return this;
         }
-
         public Builder ipamId(@Nullable Output<String> ipamId) {
             this.ipamId = ipamId;
             return this;
         }
-
         public Builder ipamId(@Nullable String ipamId) {
             this.ipamId = Output.ofNullable(ipamId);
             return this;
         }
-
         public Builder ipamScopeType(@Nullable Output<String> ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
-
         public Builder ipamScopeType(@Nullable String ipamScopeType) {
             this.ipamScopeType = Output.ofNullable(ipamScopeType);
             return this;
         }
-
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
-
         public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Output.ofNullable(isDefault);
             return this;
         }
-
         public Builder poolCount(@Nullable Output<Integer> poolCount) {
             this.poolCount = poolCount;
             return this;
         }
-
         public Builder poolCount(@Nullable Integer poolCount) {
             this.poolCount = Output.ofNullable(poolCount);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public VpcIpamScopeState build() {
+        }        public VpcIpamScopeState build() {
             return new VpcIpamScopeState(arn, description, ipamArn, ipamId, ipamScopeType, isDefault, poolCount, tags, tagsAll);
         }
     }

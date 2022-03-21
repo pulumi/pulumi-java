@@ -54,7 +54,9 @@ public final class ClassificationJobS3JobDefinitionScopingExcludes {
             this.ands = ands;
             return this;
         }
-        public ClassificationJobS3JobDefinitionScopingExcludes build() {
+        public Builder ands(ClassificationJobS3JobDefinitionScopingExcludesAnd... ands) {
+            return ands(List.of(ands));
+        }        public ClassificationJobS3JobDefinitionScopingExcludes build() {
             return new ClassificationJobS3JobDefinitionScopingExcludes(ands);
         }
     }

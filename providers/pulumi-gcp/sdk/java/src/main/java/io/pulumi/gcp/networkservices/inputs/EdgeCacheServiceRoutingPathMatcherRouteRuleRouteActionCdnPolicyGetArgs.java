@@ -226,92 +226,74 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
-
         public Builder cacheKeyPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyGetArgs cacheKeyPolicy) {
             this.cacheKeyPolicy = Output.ofNullable(cacheKeyPolicy);
             return this;
         }
-
         public Builder cacheMode(@Nullable Output<String> cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
-
         public Builder cacheMode(@Nullable String cacheMode) {
             this.cacheMode = Output.ofNullable(cacheMode);
             return this;
         }
-
         public Builder clientTtl(@Nullable Output<String> clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
-
         public Builder clientTtl(@Nullable String clientTtl) {
             this.clientTtl = Output.ofNullable(clientTtl);
             return this;
         }
-
         public Builder defaultTtl(@Nullable Output<String> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
-
         public Builder defaultTtl(@Nullable String defaultTtl) {
             this.defaultTtl = Output.ofNullable(defaultTtl);
             return this;
         }
-
         public Builder maxTtl(@Nullable Output<String> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
-
         public Builder maxTtl(@Nullable String maxTtl) {
             this.maxTtl = Output.ofNullable(maxTtl);
             return this;
         }
-
         public Builder negativeCaching(@Nullable Output<Boolean> negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
-
         public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = Output.ofNullable(negativeCaching);
             return this;
         }
-
         public Builder negativeCachingPolicy(@Nullable Output<Map<String,String>> negativeCachingPolicy) {
             this.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
-
         public Builder negativeCachingPolicy(@Nullable Map<String,String> negativeCachingPolicy) {
             this.negativeCachingPolicy = Output.ofNullable(negativeCachingPolicy);
             return this;
         }
-
         public Builder signedRequestKeyset(@Nullable Output<String> signedRequestKeyset) {
             this.signedRequestKeyset = signedRequestKeyset;
             return this;
         }
-
         public Builder signedRequestKeyset(@Nullable String signedRequestKeyset) {
             this.signedRequestKeyset = Output.ofNullable(signedRequestKeyset);
             return this;
         }
-
         public Builder signedRequestMode(@Nullable Output<String> signedRequestMode) {
             this.signedRequestMode = signedRequestMode;
             return this;
         }
-
         public Builder signedRequestMode(@Nullable String signedRequestMode) {
             this.signedRequestMode = Output.ofNullable(signedRequestMode);
             return this;
-        }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs build() {
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, signedRequestKeyset, signedRequestMode);
         }
     }

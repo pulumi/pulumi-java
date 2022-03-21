@@ -141,32 +141,26 @@ public final class ApiKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ApiKeyResponse build() {
+        }        public ApiKeyResponse build() {
             return new ApiKeyResponse(connectionString, id, lastModified, name, readOnly, value);
         }
     }

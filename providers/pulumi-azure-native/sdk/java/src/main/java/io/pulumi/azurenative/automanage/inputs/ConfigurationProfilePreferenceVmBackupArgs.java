@@ -111,42 +111,34 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
             this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
-
         public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = Output.ofNullable(instantRpRetentionRangeInDays);
             return this;
         }
-
         public Builder retentionPolicy(@Nullable Output<String> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public Builder retentionPolicy(@Nullable String retentionPolicy) {
             this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
-
         public Builder schedulePolicy(@Nullable Output<String> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public Builder schedulePolicy(@Nullable String schedulePolicy) {
             this.schedulePolicy = Output.ofNullable(schedulePolicy);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public ConfigurationProfilePreferenceVmBackupArgs build() {
+        }        public ConfigurationProfilePreferenceVmBackupArgs build() {
             return new ConfigurationProfilePreferenceVmBackupArgs(instantRpRetentionRangeInDays, retentionPolicy, schedulePolicy, timeZone);
         }
     }

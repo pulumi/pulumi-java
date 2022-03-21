@@ -125,52 +125,42 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schedule(@Nullable Output<TransferJobScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable TransferJobScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder transferSpec(Output<TransferJobTransferSpecArgs> transferSpec) {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
         }
-
         public Builder transferSpec(TransferJobTransferSpecArgs transferSpec) {
             this.transferSpec = Output.of(Objects.requireNonNull(transferSpec));
             return this;
-        }
-        public TransferJobArgs build() {
+        }        public TransferJobArgs build() {
             return new TransferJobArgs(description, project, schedule, status, transferSpec);
         }
     }

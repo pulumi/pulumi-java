@@ -56,12 +56,10 @@ public final class ConfigEirp {
             this.units = units;
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
-        }
-        public ConfigEirp build() {
+        }        public ConfigEirp build() {
             return new ConfigEirp(units, value);
         }
     }

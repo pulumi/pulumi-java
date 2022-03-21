@@ -85,17 +85,14 @@ public final class ComponentTransformResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originalTransform(String originalTransform) {
             this.originalTransform = Objects.requireNonNull(originalTransform);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public ComponentTransformResponse build() {
+        }        public ComponentTransformResponse build() {
             return new ComponentTransformResponse(name, originalTransform, userName);
         }
     }

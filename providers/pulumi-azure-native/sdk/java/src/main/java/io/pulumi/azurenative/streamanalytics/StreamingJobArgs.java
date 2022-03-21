@@ -327,172 +327,147 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
-
         public Builder compatibilityLevel(@Nullable Either<String,CompatibilityLevel> compatibilityLevel) {
             this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
             return this;
         }
-
         public Builder dataLocale(@Nullable Output<String> dataLocale) {
             this.dataLocale = dataLocale;
             return this;
         }
-
         public Builder dataLocale(@Nullable String dataLocale) {
             this.dataLocale = Output.ofNullable(dataLocale);
             return this;
         }
-
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
-
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = Output.ofNullable(eventsLateArrivalMaxDelayInSeconds);
             return this;
         }
-
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
-
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = Output.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
             return this;
         }
-
         public Builder eventsOutOfOrderPolicy(@Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
-
         public Builder eventsOutOfOrderPolicy(@Nullable Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = Output.ofNullable(eventsOutOfOrderPolicy);
             return this;
         }
-
         public Builder functions(@Nullable Output<List<FunctionArgs>> functions) {
             this.functions = functions;
             return this;
         }
-
         public Builder functions(@Nullable List<FunctionArgs> functions) {
             this.functions = Output.ofNullable(functions);
             return this;
         }
-
+        public Builder functions(FunctionArgs... functions) {
+            return functions(List.of(functions));
+        }
         public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<InputArgs> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(InputArgs... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
-
         public Builder jobName(@Nullable String jobName) {
             this.jobName = Output.ofNullable(jobName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder outputErrorPolicy(@Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
             this.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
-
         public Builder outputErrorPolicy(@Nullable Either<String,OutputErrorPolicy> outputErrorPolicy) {
             this.outputErrorPolicy = Output.ofNullable(outputErrorPolicy);
             return this;
         }
-
         public Builder outputStartMode(@Nullable Output<Either<String,OutputStartMode>> outputStartMode) {
             this.outputStartMode = outputStartMode;
             return this;
         }
-
         public Builder outputStartMode(@Nullable Either<String,OutputStartMode> outputStartMode) {
             this.outputStartMode = Output.ofNullable(outputStartMode);
             return this;
         }
-
         public Builder outputStartTime(@Nullable Output<String> outputStartTime) {
             this.outputStartTime = outputStartTime;
             return this;
         }
-
         public Builder outputStartTime(@Nullable String outputStartTime) {
             this.outputStartTime = Output.ofNullable(outputStartTime);
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<OutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<OutputArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(OutputArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transformation(@Nullable Output<TransformationArgs> transformation) {
             this.transformation = transformation;
             return this;
         }
-
         public Builder transformation(@Nullable TransformationArgs transformation) {
             this.transformation = Output.ofNullable(transformation);
             return this;
-        }
-        public StreamingJobArgs build() {
+        }        public StreamingJobArgs build() {
             return new StreamingJobArgs(compatibilityLevel, dataLocale, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, inputs, jobName, location, outputErrorPolicy, outputStartMode, outputStartTime, outputs, resourceGroupName, sku, tags, transformation);
         }
     }

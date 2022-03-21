@@ -114,42 +114,34 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.backupRetentionDays = backupRetentionDays;
             return this;
         }
-
         public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
             this.backupRetentionDays = Output.ofNullable(backupRetentionDays);
             return this;
         }
-
         public Builder geoRedundantBackup(@Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup) {
             this.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
-
         public Builder geoRedundantBackup(@Nullable Either<String,GeoRedundantBackup> geoRedundantBackup) {
             this.geoRedundantBackup = Output.ofNullable(geoRedundantBackup);
             return this;
         }
-
         public Builder storageAutogrow(@Nullable Output<Either<String,StorageAutogrow>> storageAutogrow) {
             this.storageAutogrow = storageAutogrow;
             return this;
         }
-
         public Builder storageAutogrow(@Nullable Either<String,StorageAutogrow> storageAutogrow) {
             this.storageAutogrow = Output.ofNullable(storageAutogrow);
             return this;
         }
-
         public Builder storageMB(@Nullable Output<Integer> storageMB) {
             this.storageMB = storageMB;
             return this;
         }
-
         public Builder storageMB(@Nullable Integer storageMB) {
             this.storageMB = Output.ofNullable(storageMB);
             return this;
-        }
-        public StorageProfileArgs build() {
+        }        public StorageProfileArgs build() {
             return new StorageProfileArgs(backupRetentionDays, geoRedundantBackup, storageAutogrow, storageMB);
         }
     }

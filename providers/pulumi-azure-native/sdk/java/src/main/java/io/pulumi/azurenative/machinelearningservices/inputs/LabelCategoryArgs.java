@@ -97,32 +97,26 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
             this.allowMultiSelect = allowMultiSelect;
             return this;
         }
-
         public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
             this.allowMultiSelect = Output.ofNullable(allowMultiSelect);
             return this;
         }
-
         public Builder classes(Output<Map<String,LabelClassArgs>> classes) {
             this.classes = Objects.requireNonNull(classes);
             return this;
         }
-
         public Builder classes(Map<String,LabelClassArgs> classes) {
             this.classes = Output.of(Objects.requireNonNull(classes));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
-        }
-        public LabelCategoryArgs build() {
+        }        public LabelCategoryArgs build() {
             return new LabelCategoryArgs(allowMultiSelect, classes, displayName);
         }
     }

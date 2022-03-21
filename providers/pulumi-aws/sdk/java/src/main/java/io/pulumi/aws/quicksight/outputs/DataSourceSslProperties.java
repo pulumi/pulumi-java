@@ -51,8 +51,7 @@ public final class DataSourceSslProperties {
         public Builder disableSsl(Boolean disableSsl) {
             this.disableSsl = Objects.requireNonNull(disableSsl);
             return this;
-        }
-        public DataSourceSslProperties build() {
+        }        public DataSourceSslProperties build() {
             return new DataSourceSslProperties(disableSsl);
         }
     }

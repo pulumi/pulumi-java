@@ -112,42 +112,34 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
             this.assetId = assetId;
             return this;
         }
-
         public Builder assetId(@Nullable String assetId) {
             this.assetId = Output.ofNullable(assetId);
             return this;
         }
-
         public Builder inputId(@Nullable Output<String> inputId) {
             this.inputId = inputId;
             return this;
         }
-
         public Builder inputId(@Nullable String inputId) {
             this.inputId = Output.ofNullable(inputId);
             return this;
         }
-
         public Builder outputId(@Nullable Output<String> outputId) {
             this.outputId = outputId;
             return this;
         }
-
         public Builder outputId(@Nullable String outputId) {
             this.outputId = Output.ofNullable(outputId);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
-        }
-        public GraphNodeArgs build() {
+        }        public GraphNodeArgs build() {
             return new GraphNodeArgs(assetId, inputId, outputId, parameters);
         }
     }

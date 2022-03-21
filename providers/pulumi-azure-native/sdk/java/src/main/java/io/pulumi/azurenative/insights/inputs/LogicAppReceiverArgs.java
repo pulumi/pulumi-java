@@ -111,42 +111,34 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
-
         public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Output.of(Objects.requireNonNull(callbackUrl));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
-        }
-        public LogicAppReceiverArgs build() {
+        }        public LogicAppReceiverArgs build() {
             return new LogicAppReceiverArgs(callbackUrl, name, resourceId, useCommonAlertSchema);
         }
     }

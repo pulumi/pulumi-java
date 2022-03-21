@@ -101,42 +101,37 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.filterExpression = filterExpression;
             return this;
         }
-
         public Builder filterExpression(@Nullable String filterExpression) {
             this.filterExpression = Output.ofNullable(filterExpression);
             return this;
         }
-
         public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
         }
-
         public Builder insightsConfiguration(@Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration) {
             this.insightsConfiguration = insightsConfiguration;
             return this;
         }
-
         public Builder insightsConfiguration(@Nullable GroupInsightsConfigurationArgs insightsConfiguration) {
             this.insightsConfiguration = Output.ofNullable(insightsConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public GroupArgs build() {
+        public Builder tags(TagsItemPropertiesArgs... tags) {
+            return tags(List.of(tags));
+        }        public GroupArgs build() {
             return new GroupArgs(filterExpression, groupName, insightsConfiguration, tags);
         }
     }

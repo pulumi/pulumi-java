@@ -73,12 +73,13 @@ public final class GetBastionShareableLinkResult {
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(@Nullable List<BastionShareableLinkResponse> value) {
             this.value = value;
             return this;
         }
-        public GetBastionShareableLinkResult build() {
+        public Builder value(BastionShareableLinkResponse... value) {
+            return value(List.of(value));
+        }        public GetBastionShareableLinkResult build() {
             return new GetBastionShareableLinkResult(nextLink, value);
         }
     }

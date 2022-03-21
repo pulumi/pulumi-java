@@ -86,17 +86,20 @@ public final class GetLBIPRangesResult {
             this.httpSslTcpInternals = Objects.requireNonNull(httpSslTcpInternals);
             return this;
         }
-
+        public Builder httpSslTcpInternals(String... httpSslTcpInternals) {
+            return httpSslTcpInternals(List.of(httpSslTcpInternals));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder networks(List<String> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-        public GetLBIPRangesResult build() {
+        public Builder networks(String... networks) {
+            return networks(List.of(networks));
+        }        public GetLBIPRangesResult build() {
             return new GetLBIPRangesResult(httpSslTcpInternals, id, networks);
         }
     }

@@ -87,17 +87,14 @@ public final class LogConfigResponse {
             this.cloudAudit = Objects.requireNonNull(cloudAudit);
             return this;
         }
-
         public Builder counter(CounterOptionsResponse counter) {
             this.counter = Objects.requireNonNull(counter);
             return this;
         }
-
         public Builder dataAccess(DataAccessOptionsResponse dataAccess) {
             this.dataAccess = Objects.requireNonNull(dataAccess);
             return this;
-        }
-        public LogConfigResponse build() {
+        }        public LogConfigResponse build() {
             return new LogConfigResponse(cloudAudit, counter, dataAccess);
         }
     }

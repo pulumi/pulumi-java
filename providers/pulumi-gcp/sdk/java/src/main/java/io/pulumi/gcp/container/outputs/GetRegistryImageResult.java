@@ -103,37 +103,30 @@ public final class GetRegistryImageResult {
             this.digest = digest;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
-        }
-        public GetRegistryImageResult build() {
+        }        public GetRegistryImageResult build() {
             return new GetRegistryImageResult(digest, id, imageUrl, name, project, region, tag);
         }
     }

@@ -121,27 +121,22 @@ public final class StorageOSPersistentVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder secretRef(@Nullable ObjectReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }
-
         public Builder volumeNamespace(@Nullable String volumeNamespace) {
             this.volumeNamespace = volumeNamespace;
             return this;
-        }
-        public StorageOSPersistentVolumeSource build() {
+        }        public StorageOSPersistentVolumeSource build() {
             return new StorageOSPersistentVolumeSource(fsType, readOnly, secretRef, volumeName, volumeNamespace);
         }
     }

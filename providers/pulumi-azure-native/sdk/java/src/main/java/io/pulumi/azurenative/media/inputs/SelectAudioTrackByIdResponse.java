@@ -96,17 +96,14 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
             this.channelMapping = channelMapping;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder trackId(Double trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
-        }
-        public SelectAudioTrackByIdResponse build() {
+        }        public SelectAudioTrackByIdResponse build() {
             return new SelectAudioTrackByIdResponse(channelMapping, odataType, trackId);
         }
     }

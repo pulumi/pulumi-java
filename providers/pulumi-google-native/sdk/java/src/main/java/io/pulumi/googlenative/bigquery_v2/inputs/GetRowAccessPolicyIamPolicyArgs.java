@@ -90,22 +90,18 @@ public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.I
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder rowAccessPolicyId(String rowAccessPolicyId) {
             this.rowAccessPolicyId = Objects.requireNonNull(rowAccessPolicyId);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public GetRowAccessPolicyIamPolicyArgs build() {
+        }        public GetRowAccessPolicyIamPolicyArgs build() {
             return new GetRowAccessPolicyIamPolicyArgs(datasetId, project, rowAccessPolicyId, tableId);
         }
     }

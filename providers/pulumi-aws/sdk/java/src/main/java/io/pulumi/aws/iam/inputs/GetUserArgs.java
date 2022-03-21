@@ -75,12 +75,10 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetUserArgs build() {
+        }        public GetUserArgs build() {
             return new GetUserArgs(tags, userName);
         }
     }

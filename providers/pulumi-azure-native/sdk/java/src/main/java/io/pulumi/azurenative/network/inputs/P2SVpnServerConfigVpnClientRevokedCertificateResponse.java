@@ -126,27 +126,22 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
             this.etag = etag;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public P2SVpnServerConfigVpnClientRevokedCertificateResponse build() {
+        }        public P2SVpnServerConfigVpnClientRevokedCertificateResponse build() {
             return new P2SVpnServerConfigVpnClientRevokedCertificateResponse(etag, id, name, provisioningState, thumbprint);
         }
     }

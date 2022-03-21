@@ -88,17 +88,14 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.accessPolicyName = Objects.requireNonNull(accessPolicyName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAccessPolicyArgs build() {
+        }        public GetAccessPolicyArgs build() {
             return new GetAccessPolicyArgs(accessPolicyName, environmentName, resourceGroupName);
         }
     }

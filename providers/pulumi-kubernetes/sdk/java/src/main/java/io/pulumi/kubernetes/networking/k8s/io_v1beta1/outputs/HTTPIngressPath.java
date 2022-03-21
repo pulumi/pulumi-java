@@ -108,17 +108,14 @@ public final class HTTPIngressPath {
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder pathType(@Nullable String pathType) {
             this.pathType = pathType;
             return this;
-        }
-        public HTTPIngressPath build() {
+        }        public HTTPIngressPath build() {
             return new HTTPIngressPath(backend, path, pathType);
         }
     }

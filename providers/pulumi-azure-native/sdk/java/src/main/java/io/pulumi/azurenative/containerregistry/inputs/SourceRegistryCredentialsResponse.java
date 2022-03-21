@@ -62,8 +62,7 @@ public final class SourceRegistryCredentialsResponse extends io.pulumi.resources
         public Builder loginMode(@Nullable String loginMode) {
             this.loginMode = loginMode;
             return this;
-        }
-        public SourceRegistryCredentialsResponse build() {
+        }        public SourceRegistryCredentialsResponse build() {
             return new SourceRegistryCredentialsResponse(loginMode);
         }
     }

@@ -78,22 +78,18 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
-
         public Builder filename(@Nullable String filename) {
             this.filename = Output.ofNullable(filename);
             return this;
-        }
-        public LibraryRequirementsArgs build() {
+        }        public LibraryRequirementsArgs build() {
             return new LibraryRequirementsArgs(content, filename);
         }
     }

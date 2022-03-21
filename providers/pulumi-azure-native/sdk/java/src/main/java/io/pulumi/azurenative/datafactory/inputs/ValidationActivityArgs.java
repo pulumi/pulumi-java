@@ -212,102 +212,88 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             this.childItems = childItems;
             return this;
         }
-
         public Builder childItems(@Nullable Object childItems) {
             this.childItems = Output.ofNullable(childItems);
             return this;
         }
-
         public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder dataset(DatasetReferenceArgs dataset) {
             this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder minimumSize(@Nullable Output<Object> minimumSize) {
             this.minimumSize = minimumSize;
             return this;
         }
-
         public Builder minimumSize(@Nullable Object minimumSize) {
             this.minimumSize = Output.ofNullable(minimumSize);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder sleep(@Nullable Output<Object> sleep) {
             this.sleep = sleep;
             return this;
         }
-
         public Builder sleep(@Nullable Object sleep) {
             this.sleep = Output.ofNullable(sleep);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Object timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public ValidationActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public ValidationActivityArgs build() {
             return new ValidationActivityArgs(childItems, dataset, dependsOn, description, minimumSize, name, sleep, timeout, type, userProperties);
         }
     }

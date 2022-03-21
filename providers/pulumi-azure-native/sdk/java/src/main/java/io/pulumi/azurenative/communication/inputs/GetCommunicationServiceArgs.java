@@ -72,12 +72,10 @@ public final class GetCommunicationServiceArgs extends io.pulumi.resources.Invok
             this.communicationServiceName = Objects.requireNonNull(communicationServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetCommunicationServiceArgs build() {
+        }        public GetCommunicationServiceArgs build() {
             return new GetCommunicationServiceArgs(communicationServiceName, resourceGroupName);
         }
     }

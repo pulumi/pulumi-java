@@ -76,12 +76,10 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public ErrorDefinitionResponse build() {
+        }        public ErrorDefinitionResponse build() {
             return new ErrorDefinitionResponse(code, message);
         }
     }

@@ -95,17 +95,14 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
             this.address = address;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public ConnectionMonitorDestinationResponse build() {
+        }        public ConnectionMonitorDestinationResponse build() {
             return new ConnectionMonitorDestinationResponse(address, port, resourceId);
         }
     }

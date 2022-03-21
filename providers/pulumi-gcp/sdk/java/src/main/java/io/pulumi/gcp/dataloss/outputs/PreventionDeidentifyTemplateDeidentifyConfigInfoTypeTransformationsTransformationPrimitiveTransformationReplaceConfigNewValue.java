@@ -180,42 +180,34 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.booleanValue = booleanValue;
             return this;
         }
-
         public Builder dateValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue) {
             this.dateValue = dateValue;
             return this;
         }
-
         public Builder dayOfWeekValue(@Nullable String dayOfWeekValue) {
             this.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
-
         public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = floatValue;
             return this;
         }
-
         public Builder integerValue(@Nullable Integer integerValue) {
             this.integerValue = integerValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-
         public Builder timeValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue) {
             this.timeValue = timeValue;
             return this;
         }
-
         public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = timestampValue;
             return this;
-        }
-        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue build() {
+        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }
     }

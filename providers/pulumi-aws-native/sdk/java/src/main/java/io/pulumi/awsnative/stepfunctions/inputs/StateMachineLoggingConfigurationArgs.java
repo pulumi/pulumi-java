@@ -81,32 +81,29 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable List<StateMachineLogDestinationArgs> destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
+        public Builder destinations(StateMachineLogDestinationArgs... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder includeExecutionData(@Nullable Output<Boolean> includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
-
         public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = Output.ofNullable(includeExecutionData);
             return this;
         }
-
         public Builder level(@Nullable Output<StateMachineLoggingConfigurationLevel> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
             this.level = Output.ofNullable(level);
             return this;
-        }
-        public StateMachineLoggingConfigurationArgs build() {
+        }        public StateMachineLoggingConfigurationArgs build() {
             return new StateMachineLoggingConfigurationArgs(destinations, includeExecutionData, level);
         }
     }

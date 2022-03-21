@@ -134,62 +134,56 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
-
         public Builder ascLocation(String ascLocation) {
             this.ascLocation = Output.of(Objects.requireNonNull(ascLocation));
             return this;
         }
-
         public Builder enforcementMode(@Nullable Output<String> enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
-
         public Builder enforcementMode(@Nullable String enforcementMode) {
             this.enforcementMode = Output.ofNullable(enforcementMode);
             return this;
         }
-
         public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
         }
-
         public Builder pathRecommendations(@Nullable Output<List<PathRecommendationArgs>> pathRecommendations) {
             this.pathRecommendations = pathRecommendations;
             return this;
         }
-
         public Builder pathRecommendations(@Nullable List<PathRecommendationArgs> pathRecommendations) {
             this.pathRecommendations = Output.ofNullable(pathRecommendations);
             return this;
         }
-
+        public Builder pathRecommendations(PathRecommendationArgs... pathRecommendations) {
+            return pathRecommendations(List.of(pathRecommendations));
+        }
         public Builder protectionMode(@Nullable Output<ProtectionModeArgs> protectionMode) {
             this.protectionMode = protectionMode;
             return this;
         }
-
         public Builder protectionMode(@Nullable ProtectionModeArgs protectionMode) {
             this.protectionMode = Output.ofNullable(protectionMode);
             return this;
         }
-
         public Builder vmRecommendations(@Nullable Output<List<VmRecommendationArgs>> vmRecommendations) {
             this.vmRecommendations = vmRecommendations;
             return this;
         }
-
         public Builder vmRecommendations(@Nullable List<VmRecommendationArgs> vmRecommendations) {
             this.vmRecommendations = Output.ofNullable(vmRecommendations);
             return this;
         }
-        public AdaptiveApplicationControlArgs build() {
+        public Builder vmRecommendations(VmRecommendationArgs... vmRecommendations) {
+            return vmRecommendations(List.of(vmRecommendations));
+        }        public AdaptiveApplicationControlArgs build() {
             return new AdaptiveApplicationControlArgs(ascLocation, enforcementMode, groupName, pathRecommendations, protectionMode, vmRecommendations);
         }
     }

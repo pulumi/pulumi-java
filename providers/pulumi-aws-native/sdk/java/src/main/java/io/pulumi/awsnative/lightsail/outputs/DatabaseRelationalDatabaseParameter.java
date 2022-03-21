@@ -168,42 +168,34 @@ public final class DatabaseRelationalDatabaseParameter {
             this.allowedValues = allowedValues;
             return this;
         }
-
         public Builder applyMethod(@Nullable String applyMethod) {
             this.applyMethod = applyMethod;
             return this;
         }
-
         public Builder applyType(@Nullable String applyType) {
             this.applyType = applyType;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder isModifiable(@Nullable Boolean isModifiable) {
             this.isModifiable = isModifiable;
             return this;
         }
-
         public Builder parameterName(@Nullable String parameterName) {
             this.parameterName = parameterName;
             return this;
         }
-
         public Builder parameterValue(@Nullable String parameterValue) {
             this.parameterValue = parameterValue;
             return this;
-        }
-        public DatabaseRelationalDatabaseParameter build() {
+        }        public DatabaseRelationalDatabaseParameter build() {
             return new DatabaseRelationalDatabaseParameter(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);
         }
     }

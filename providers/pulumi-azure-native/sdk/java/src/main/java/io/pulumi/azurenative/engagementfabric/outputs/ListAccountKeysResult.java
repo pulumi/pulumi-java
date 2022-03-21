@@ -53,7 +53,9 @@ public final class ListAccountKeysResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListAccountKeysResult build() {
+        public Builder value(KeyDescriptionResponse... value) {
+            return value(List.of(value));
+        }        public ListAccountKeysResult build() {
             return new ListAccountKeysResult(value);
         }
     }

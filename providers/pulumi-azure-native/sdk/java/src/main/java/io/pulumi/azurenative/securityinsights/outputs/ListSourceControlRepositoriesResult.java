@@ -71,12 +71,13 @@ public final class ListSourceControlRepositoriesResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<RepoResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListSourceControlRepositoriesResult build() {
+        public Builder value(RepoResponse... value) {
+            return value(List.of(value));
+        }        public ListSourceControlRepositoriesResult build() {
             return new ListSourceControlRepositoriesResult(nextLink, value);
         }
     }

@@ -52,12 +52,10 @@ public final class FlowDynatraceSourcePropertiesArgs extends io.pulumi.resources
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowDynatraceSourcePropertiesArgs build() {
+        }        public FlowDynatraceSourcePropertiesArgs build() {
             return new FlowDynatraceSourcePropertiesArgs(object);
         }
     }

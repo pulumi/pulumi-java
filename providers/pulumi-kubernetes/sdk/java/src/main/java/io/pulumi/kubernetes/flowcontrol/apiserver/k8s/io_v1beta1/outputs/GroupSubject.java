@@ -51,8 +51,7 @@ public final class GroupSubject {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GroupSubject build() {
+        }        public GroupSubject build() {
             return new GroupSubject(name);
         }
     }

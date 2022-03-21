@@ -93,22 +93,18 @@ public final class GetDetectorResult {
             this.findingPublishingFrequency = Objects.requireNonNull(findingPublishingFrequency);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder serviceRoleArn(String serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetDetectorResult build() {
+        }        public GetDetectorResult build() {
             return new GetDetectorResult(findingPublishingFrequency, id, serviceRoleArn, status);
         }
     }

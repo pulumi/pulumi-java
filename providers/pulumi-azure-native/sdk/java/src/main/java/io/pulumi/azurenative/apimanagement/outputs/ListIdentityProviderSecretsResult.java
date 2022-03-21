@@ -53,8 +53,7 @@ public final class ListIdentityProviderSecretsResult {
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
-        }
-        public ListIdentityProviderSecretsResult build() {
+        }        public ListIdentityProviderSecretsResult build() {
             return new ListIdentityProviderSecretsResult(clientSecret);
         }
     }

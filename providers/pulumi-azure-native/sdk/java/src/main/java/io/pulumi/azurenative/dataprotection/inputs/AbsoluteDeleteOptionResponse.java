@@ -77,12 +77,10 @@ public final class AbsoluteDeleteOptionResponse extends io.pulumi.resources.Invo
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
-        }
-        public AbsoluteDeleteOptionResponse build() {
+        }        public AbsoluteDeleteOptionResponse build() {
             return new AbsoluteDeleteOptionResponse(duration, objectType);
         }
     }

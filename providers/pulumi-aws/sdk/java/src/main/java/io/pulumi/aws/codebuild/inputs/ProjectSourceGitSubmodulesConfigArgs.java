@@ -56,12 +56,10 @@ public final class ProjectSourceGitSubmodulesConfigArgs extends io.pulumi.resour
             this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
             return this;
         }
-
         public Builder fetchSubmodules(Boolean fetchSubmodules) {
             this.fetchSubmodules = Output.of(Objects.requireNonNull(fetchSubmodules));
             return this;
-        }
-        public ProjectSourceGitSubmodulesConfigArgs build() {
+        }        public ProjectSourceGitSubmodulesConfigArgs build() {
             return new ProjectSourceGitSubmodulesConfigArgs(fetchSubmodules);
         }
     }

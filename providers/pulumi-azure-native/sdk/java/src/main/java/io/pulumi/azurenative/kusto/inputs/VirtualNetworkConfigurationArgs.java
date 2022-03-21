@@ -93,32 +93,26 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
             this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
             return this;
         }
-
         public Builder dataManagementPublicIpId(String dataManagementPublicIpId) {
             this.dataManagementPublicIpId = Output.of(Objects.requireNonNull(dataManagementPublicIpId));
             return this;
         }
-
         public Builder enginePublicIpId(Output<String> enginePublicIpId) {
             this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
             return this;
         }
-
         public Builder enginePublicIpId(String enginePublicIpId) {
             this.enginePublicIpId = Output.of(Objects.requireNonNull(enginePublicIpId));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public VirtualNetworkConfigurationArgs build() {
+        }        public VirtualNetworkConfigurationArgs build() {
             return new VirtualNetworkConfigurationArgs(dataManagementPublicIpId, enginePublicIpId, subnetId);
         }
     }

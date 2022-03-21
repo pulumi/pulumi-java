@@ -72,12 +72,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
             this.lastRunStartTime = Objects.requireNonNull(lastRunStartTime);
             return this;
         }
-
         public Builder nextRunStartTime(String nextRunStartTime) {
             this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
             return this;
-        }
-        public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
+        }        public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse build() {
             return new ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(lastRunStartTime, nextRunStartTime);
         }
     }

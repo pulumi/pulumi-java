@@ -233,62 +233,50 @@ public final class DriveStatusResponse {
             this.bitLockerKey = bitLockerKey;
             return this;
         }
-
         public Builder bytesSucceeded(@Nullable Double bytesSucceeded) {
             this.bytesSucceeded = bytesSucceeded;
             return this;
         }
-
         public Builder copyStatus(@Nullable String copyStatus) {
             this.copyStatus = copyStatus;
             return this;
         }
-
         public Builder driveHeaderHash(@Nullable String driveHeaderHash) {
             this.driveHeaderHash = driveHeaderHash;
             return this;
         }
-
         public Builder driveId(@Nullable String driveId) {
             this.driveId = driveId;
             return this;
         }
-
         public Builder errorLogUri(@Nullable String errorLogUri) {
             this.errorLogUri = errorLogUri;
             return this;
         }
-
         public Builder manifestFile(@Nullable String manifestFile) {
             this.manifestFile = manifestFile;
             return this;
         }
-
         public Builder manifestHash(@Nullable String manifestHash) {
             this.manifestHash = manifestHash;
             return this;
         }
-
         public Builder manifestUri(@Nullable String manifestUri) {
             this.manifestUri = manifestUri;
             return this;
         }
-
         public Builder percentComplete(@Nullable Integer percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder verboseLogUri(@Nullable String verboseLogUri) {
             this.verboseLogUri = verboseLogUri;
             return this;
-        }
-        public DriveStatusResponse build() {
+        }        public DriveStatusResponse build() {
             return new DriveStatusResponse(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);
         }
     }

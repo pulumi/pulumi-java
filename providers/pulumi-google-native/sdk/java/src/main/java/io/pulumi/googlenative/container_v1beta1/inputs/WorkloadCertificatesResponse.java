@@ -58,8 +58,7 @@ public final class WorkloadCertificatesResponse extends io.pulumi.resources.Invo
         public Builder enableCertificates(Boolean enableCertificates) {
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
-        }
-        public WorkloadCertificatesResponse build() {
+        }        public WorkloadCertificatesResponse build() {
             return new WorkloadCertificatesResponse(enableCertificates);
         }
     }

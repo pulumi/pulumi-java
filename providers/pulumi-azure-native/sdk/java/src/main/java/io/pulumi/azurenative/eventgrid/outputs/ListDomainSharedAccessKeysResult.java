@@ -71,12 +71,10 @@ public final class ListDomainSharedAccessKeysResult {
             this.key1 = key1;
             return this;
         }
-
         public Builder key2(@Nullable String key2) {
             this.key2 = key2;
             return this;
-        }
-        public ListDomainSharedAccessKeysResult build() {
+        }        public ListDomainSharedAccessKeysResult build() {
             return new ListDomainSharedAccessKeysResult(key1, key2);
         }
     }

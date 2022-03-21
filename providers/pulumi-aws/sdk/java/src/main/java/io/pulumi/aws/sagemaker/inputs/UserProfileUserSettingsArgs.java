@@ -143,62 +143,53 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
             this.executionRole = Objects.requireNonNull(executionRole);
             return this;
         }
-
         public Builder executionRole(String executionRole) {
             this.executionRole = Output.of(Objects.requireNonNull(executionRole));
             return this;
         }
-
         public Builder jupyterServerAppSettings(@Nullable Output<UserProfileUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
-
         public Builder jupyterServerAppSettings(@Nullable UserProfileUserSettingsJupyterServerAppSettingsArgs jupyterServerAppSettings) {
             this.jupyterServerAppSettings = Output.ofNullable(jupyterServerAppSettings);
             return this;
         }
-
         public Builder kernelGatewayAppSettings(@Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
-
         public Builder kernelGatewayAppSettings(@Nullable UserProfileUserSettingsKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = Output.ofNullable(kernelGatewayAppSettings);
             return this;
         }
-
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
-
         public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
-
+        public Builder securityGroups(String... securityGroups) {
+            return securityGroups(List.of(securityGroups));
+        }
         public Builder sharingSettings(@Nullable Output<UserProfileUserSettingsSharingSettingsArgs> sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
-
         public Builder sharingSettings(@Nullable UserProfileUserSettingsSharingSettingsArgs sharingSettings) {
             this.sharingSettings = Output.ofNullable(sharingSettings);
             return this;
         }
-
         public Builder tensorBoardAppSettings(@Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
             this.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
         }
-
         public Builder tensorBoardAppSettings(@Nullable UserProfileUserSettingsTensorBoardAppSettingsArgs tensorBoardAppSettings) {
             this.tensorBoardAppSettings = Output.ofNullable(tensorBoardAppSettings);
             return this;
-        }
-        public UserProfileUserSettingsArgs build() {
+        }        public UserProfileUserSettingsArgs build() {
             return new UserProfileUserSettingsArgs(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings, tensorBoardAppSettings);
         }
     }

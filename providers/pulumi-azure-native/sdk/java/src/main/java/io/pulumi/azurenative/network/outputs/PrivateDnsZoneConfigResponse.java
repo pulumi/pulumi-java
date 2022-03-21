@@ -89,17 +89,17 @@ public final class PrivateDnsZoneConfigResponse {
             this.name = name;
             return this;
         }
-
         public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
             this.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
-
         public Builder recordSets(List<RecordSetResponse> recordSets) {
             this.recordSets = Objects.requireNonNull(recordSets);
             return this;
         }
-        public PrivateDnsZoneConfigResponse build() {
+        public Builder recordSets(RecordSetResponse... recordSets) {
+            return recordSets(List.of(recordSets));
+        }        public PrivateDnsZoneConfigResponse build() {
             return new PrivateDnsZoneConfigResponse(name, privateDnsZoneId, recordSets);
         }
     }

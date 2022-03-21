@@ -206,52 +206,45 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.additionalBindings = Objects.requireNonNull(additionalBindings);
             return this;
         }
-
+        public Builder additionalBindings(HttpRuleResponse... additionalBindings) {
+            return additionalBindings(List.of(additionalBindings));
+        }
         public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
-
         public Builder custom(CustomHttpPatternResponse custom) {
             this.custom = Objects.requireNonNull(custom);
             return this;
         }
-
         public Builder delete(String delete) {
             this.delete = Objects.requireNonNull(delete);
             return this;
         }
-
         public Builder get(String get) {
             this.get = Objects.requireNonNull(get);
             return this;
         }
-
         public Builder patch(String patch) {
             this.patch = Objects.requireNonNull(patch);
             return this;
         }
-
         public Builder post(String post) {
             this.post = Objects.requireNonNull(post);
             return this;
         }
-
         public Builder put(String put) {
             this.put = Objects.requireNonNull(put);
             return this;
         }
-
         public Builder responseBody(String responseBody) {
             this.responseBody = Objects.requireNonNull(responseBody);
             return this;
         }
-
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public HttpRuleResponse build() {
+        }        public HttpRuleResponse build() {
             return new HttpRuleResponse(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
         }
     }

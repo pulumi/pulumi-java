@@ -87,32 +87,26 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
             this.attachmentId = attachmentId;
             return this;
         }
-
         public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
-
         public Builder deviceIndex(Output<Integer> deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
-
         public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Output.of(Objects.requireNonNull(deviceIndex));
             return this;
         }
-
         public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
-        }
-        public NetworkInterfaceAttachmentArgs build() {
+        }        public NetworkInterfaceAttachmentArgs build() {
             return new NetworkInterfaceAttachmentArgs(attachmentId, deviceIndex, instance);
         }
     }

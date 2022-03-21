@@ -179,82 +179,81 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(@Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable List<GoogleCloudRunOpV2EnvVarArgs> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
+        public Builder env(GoogleCloudRunOpV2EnvVarArgs... env) {
+            return env(List.of(env));
+        }
         public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder image(String image) {
             this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<GoogleCloudRunOpV2ContainerPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(GoogleCloudRunOpV2ContainerPortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder resources(@Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable GoogleCloudRunOpV2ResourceRequirementsArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder volumeMounts(@Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<GoogleCloudRunOpV2VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
-        public GoogleCloudRunOpV2ContainerArgs build() {
+        public Builder volumeMounts(GoogleCloudRunOpV2VolumeMountArgs... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }        public GoogleCloudRunOpV2ContainerArgs build() {
             return new GoogleCloudRunOpV2ContainerArgs(args, command, env, image, name, ports, resources, volumeMounts);
         }
     }

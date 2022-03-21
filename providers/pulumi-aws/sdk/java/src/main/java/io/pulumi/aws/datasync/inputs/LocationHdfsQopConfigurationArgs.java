@@ -74,22 +74,18 @@ public final class LocationHdfsQopConfigurationArgs extends io.pulumi.resources.
             this.dataTransferProtection = dataTransferProtection;
             return this;
         }
-
         public Builder dataTransferProtection(@Nullable String dataTransferProtection) {
             this.dataTransferProtection = Output.ofNullable(dataTransferProtection);
             return this;
         }
-
         public Builder rpcProtection(@Nullable Output<String> rpcProtection) {
             this.rpcProtection = rpcProtection;
             return this;
         }
-
         public Builder rpcProtection(@Nullable String rpcProtection) {
             this.rpcProtection = Output.ofNullable(rpcProtection);
             return this;
-        }
-        public LocationHdfsQopConfigurationArgs build() {
+        }        public LocationHdfsQopConfigurationArgs build() {
             return new LocationHdfsQopConfigurationArgs(dataTransferProtection, rpcProtection);
         }
     }

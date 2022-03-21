@@ -197,57 +197,49 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
             this.categoricalValueSpec = Objects.requireNonNull(categoricalValueSpec);
             return this;
         }
-
         public Builder childParameterSpecs(List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs) {
             this.childParameterSpecs = Objects.requireNonNull(childParameterSpecs);
             return this;
         }
-
+        public Builder childParameterSpecs(GoogleCloudMlV1_StudyConfig_ParameterSpecResponse... childParameterSpecs) {
+            return childParameterSpecs(List.of(childParameterSpecs));
+        }
         public Builder discreteValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec) {
             this.discreteValueSpec = Objects.requireNonNull(discreteValueSpec);
             return this;
         }
-
         public Builder doubleValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec) {
             this.doubleValueSpec = Objects.requireNonNull(doubleValueSpec);
             return this;
         }
-
         public Builder integerValueSpec(GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec) {
             this.integerValueSpec = Objects.requireNonNull(integerValueSpec);
             return this;
         }
-
         public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
-
         public Builder parentCategoricalValues(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues) {
             this.parentCategoricalValues = Objects.requireNonNull(parentCategoricalValues);
             return this;
         }
-
         public Builder parentDiscreteValues(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues) {
             this.parentDiscreteValues = Objects.requireNonNull(parentDiscreteValues);
             return this;
         }
-
         public Builder parentIntValues(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues) {
             this.parentIntValues = Objects.requireNonNull(parentIntValues);
             return this;
         }
-
         public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudMlV1_StudyConfig_ParameterSpecResponse build() {
+        }        public GoogleCloudMlV1_StudyConfig_ParameterSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_ParameterSpecResponse(categoricalValueSpec, childParameterSpecs, discreteValueSpec, doubleValueSpec, integerValueSpec, parameter, parentCategoricalValues, parentDiscreteValues, parentIntValues, scaleType, type);
         }
     }

@@ -78,12 +78,10 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.keyData = keyData;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }
-        public SshPublicKeyResponse build() {
+        }        public SshPublicKeyResponse build() {
             return new SshPublicKeyResponse(keyData, path);
         }
     }

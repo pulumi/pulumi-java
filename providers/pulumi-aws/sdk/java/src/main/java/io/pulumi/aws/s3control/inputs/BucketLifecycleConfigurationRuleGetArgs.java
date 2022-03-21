@@ -125,52 +125,42 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-
         public Builder abortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Output.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
-
         public Builder expiration(@Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration) {
             this.expiration = expiration;
             return this;
         }
-
         public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpirationGetArgs expiration) {
             this.expiration = Output.ofNullable(expiration);
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilterGetArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public BucketLifecycleConfigurationRuleGetArgs build() {
+        }        public BucketLifecycleConfigurationRuleGetArgs build() {
             return new BucketLifecycleConfigurationRuleGetArgs(abortIncompleteMultipartUpload, expiration, filter, id, status);
         }
     }

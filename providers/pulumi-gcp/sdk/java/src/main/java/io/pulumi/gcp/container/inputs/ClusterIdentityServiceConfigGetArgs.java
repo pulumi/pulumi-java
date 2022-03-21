@@ -58,12 +58,10 @@ public final class ClusterIdentityServiceConfigGetArgs extends io.pulumi.resourc
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ClusterIdentityServiceConfigGetArgs build() {
+        }        public ClusterIdentityServiceConfigGetArgs build() {
             return new ClusterIdentityServiceConfigGetArgs(enabled);
         }
     }

@@ -85,17 +85,14 @@ public final class StorageAccountCredentialsResponse {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public StorageAccountCredentialsResponse build() {
+        }        public StorageAccountCredentialsResponse build() {
             return new StorageAccountCredentialsResponse(primaryKey, resourceId, secondaryKey);
         }
     }

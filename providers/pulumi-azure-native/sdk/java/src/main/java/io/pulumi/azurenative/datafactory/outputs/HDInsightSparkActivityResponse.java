@@ -288,77 +288,71 @@ public final class HDInsightSparkActivityResponse {
             this.arguments = arguments;
             return this;
         }
-
+        public Builder arguments(Object... arguments) {
+            return arguments(List.of(arguments));
+        }
         public Builder className(@Nullable String className) {
             this.className = className;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder entryFilePath(Object entryFilePath) {
             this.entryFilePath = Objects.requireNonNull(entryFilePath);
             return this;
         }
-
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder proxyUser(@Nullable Object proxyUser) {
             this.proxyUser = proxyUser;
             return this;
         }
-
         public Builder rootPath(Object rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }
-
         public Builder sparkConfig(@Nullable Map<String,Object> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
-
         public Builder sparkJobLinkedService(@Nullable LinkedServiceReferenceResponse sparkJobLinkedService) {
             this.sparkJobLinkedService = sparkJobLinkedService;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public HDInsightSparkActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public HDInsightSparkActivityResponse build() {
             return new HDInsightSparkActivityResponse(arguments, className, dependsOn, description, entryFilePath, getDebugInfo, linkedServiceName, name, policy, proxyUser, rootPath, sparkConfig, sparkJobLinkedService, type, userProperties);
         }
     }

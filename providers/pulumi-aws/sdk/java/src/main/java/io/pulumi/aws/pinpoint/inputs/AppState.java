@@ -190,92 +190,74 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder campaignHook(@Nullable Output<AppCampaignHookGetArgs> campaignHook) {
             this.campaignHook = campaignHook;
             return this;
         }
-
         public Builder campaignHook(@Nullable AppCampaignHookGetArgs campaignHook) {
             this.campaignHook = Output.ofNullable(campaignHook);
             return this;
         }
-
         public Builder limits(@Nullable Output<AppLimitsGetArgs> limits) {
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable AppLimitsGetArgs limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder quietTime(@Nullable Output<AppQuietTimeGetArgs> quietTime) {
             this.quietTime = quietTime;
             return this;
         }
-
         public Builder quietTime(@Nullable AppQuietTimeGetArgs quietTime) {
             this.quietTime = Output.ofNullable(quietTime);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public AppState build() {
+        }        public AppState build() {
             return new AppState(applicationId, arn, campaignHook, limits, name, namePrefix, quietTime, tags, tagsAll);
         }
     }

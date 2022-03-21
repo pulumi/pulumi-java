@@ -205,52 +205,51 @@ public final class BlobEventsTriggerResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
             this.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
-
         public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
             this.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
-
+        public Builder events(String... events) {
+            return events(List.of(events));
+        }
         public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
-
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
-
+        public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
+            return pipelines(List.of(pipelines));
+        }
         public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BlobEventsTriggerResponse build() {
+        }        public BlobEventsTriggerResponse build() {
             return new BlobEventsTriggerResponse(annotations, blobPathBeginsWith, blobPathEndsWith, description, events, ignoreEmptyBlobs, pipelines, runtimeState, scope, type);
         }
     }

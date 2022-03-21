@@ -93,32 +93,32 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
             this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
             return this;
         }
-
         public Builder deploymentTargets(StackSetDeploymentTargetsArgs deploymentTargets) {
             this.deploymentTargets = Output.of(Objects.requireNonNull(deploymentTargets));
             return this;
         }
-
         public Builder parameterOverrides(@Nullable Output<List<StackSetParameterArgs>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
-
         public Builder parameterOverrides(@Nullable List<StackSetParameterArgs> parameterOverrides) {
             this.parameterOverrides = Output.ofNullable(parameterOverrides);
             return this;
         }
-
+        public Builder parameterOverrides(StackSetParameterArgs... parameterOverrides) {
+            return parameterOverrides(List.of(parameterOverrides));
+        }
         public Builder regions(Output<List<String>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public Builder regions(List<String> regions) {
             this.regions = Output.of(Objects.requireNonNull(regions));
             return this;
         }
-        public StackSetStackInstancesArgs build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public StackSetStackInstancesArgs build() {
             return new StackSetStackInstancesArgs(deploymentTargets, parameterOverrides, regions);
         }
     }

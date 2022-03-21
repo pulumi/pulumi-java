@@ -72,12 +72,10 @@ public final class GetMultiRegionAccessPointPolicyResult {
             this.policy = policy;
             return this;
         }
-
         public Builder policyStatus(@Nullable PolicyStatusProperties policyStatus) {
             this.policyStatus = policyStatus;
             return this;
-        }
-        public GetMultiRegionAccessPointPolicyResult build() {
+        }        public GetMultiRegionAccessPointPolicyResult build() {
             return new GetMultiRegionAccessPointPolicyResult(policy, policyStatus);
         }
     }

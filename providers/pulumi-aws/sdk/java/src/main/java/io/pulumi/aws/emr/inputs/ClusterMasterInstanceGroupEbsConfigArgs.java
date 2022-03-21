@@ -107,42 +107,34 @@ public final class ClusterMasterInstanceGroupEbsConfigArgs extends io.pulumi.res
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder volumesPerInstance(@Nullable Output<Integer> volumesPerInstance) {
             this.volumesPerInstance = volumesPerInstance;
             return this;
         }
-
         public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
             this.volumesPerInstance = Output.ofNullable(volumesPerInstance);
             return this;
-        }
-        public ClusterMasterInstanceGroupEbsConfigArgs build() {
+        }        public ClusterMasterInstanceGroupEbsConfigArgs build() {
             return new ClusterMasterInstanceGroupEbsConfigArgs(iops, size, type, volumesPerInstance);
         }
     }

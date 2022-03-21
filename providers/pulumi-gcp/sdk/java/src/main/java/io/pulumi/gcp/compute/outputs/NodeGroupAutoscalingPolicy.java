@@ -104,17 +104,14 @@ public final class NodeGroupAutoscalingPolicy {
             this.maxNodes = maxNodes;
             return this;
         }
-
         public Builder minNodes(@Nullable Integer minNodes) {
             this.minNodes = minNodes;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public NodeGroupAutoscalingPolicy build() {
+        }        public NodeGroupAutoscalingPolicy build() {
             return new NodeGroupAutoscalingPolicy(maxNodes, minNodes, mode);
         }
     }

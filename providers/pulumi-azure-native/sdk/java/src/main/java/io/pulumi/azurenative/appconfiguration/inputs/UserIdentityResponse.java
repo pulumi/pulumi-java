@@ -76,12 +76,10 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
-        }
-        public UserIdentityResponse build() {
+        }        public UserIdentityResponse build() {
             return new UserIdentityResponse(clientId, principalId);
         }
     }

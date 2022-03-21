@@ -69,12 +69,10 @@ public final class ClusterSetting {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClusterSetting build() {
+        }        public ClusterSetting build() {
             return new ClusterSetting(name, value);
         }
     }

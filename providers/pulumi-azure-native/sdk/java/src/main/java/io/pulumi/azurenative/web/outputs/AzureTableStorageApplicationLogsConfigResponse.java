@@ -71,12 +71,10 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
             this.level = level;
             return this;
         }
-
         public Builder sasUrl(String sasUrl) {
             this.sasUrl = Objects.requireNonNull(sasUrl);
             return this;
-        }
-        public AzureTableStorageApplicationLogsConfigResponse build() {
+        }        public AzureTableStorageApplicationLogsConfigResponse build() {
             return new AzureTableStorageApplicationLogsConfigResponse(level, sasUrl);
         }
     }

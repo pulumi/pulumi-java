@@ -72,12 +72,10 @@ public final class UrlRedirectActionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(UrlRedirectActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public UrlRedirectActionResponse build() {
+        }        public UrlRedirectActionResponse build() {
             return new UrlRedirectActionResponse(name, parameters);
         }
     }

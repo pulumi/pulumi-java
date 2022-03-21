@@ -107,42 +107,34 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder managementPolicyName(@Nullable Output<String> managementPolicyName) {
             this.managementPolicyName = managementPolicyName;
             return this;
         }
-
         public Builder managementPolicyName(@Nullable String managementPolicyName) {
             this.managementPolicyName = Output.ofNullable(managementPolicyName);
             return this;
         }
-
         public Builder policy(Output<ManagementPolicySchemaArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(ManagementPolicySchemaArgs policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ManagementPolicyArgs build() {
+        }        public ManagementPolicyArgs build() {
             return new ManagementPolicyArgs(accountName, managementPolicyName, policy, resourceGroupName);
         }
     }

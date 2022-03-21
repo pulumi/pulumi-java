@@ -64,12 +64,10 @@ public final class GetSharedflowArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder sharedflowId(String sharedflowId) {
             this.sharedflowId = Objects.requireNonNull(sharedflowId);
             return this;
-        }
-        public GetSharedflowArgs build() {
+        }        public GetSharedflowArgs build() {
             return new GetSharedflowArgs(organizationId, sharedflowId);
         }
     }

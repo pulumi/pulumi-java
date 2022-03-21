@@ -76,12 +76,13 @@ public final class GetComponentsArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetComponentsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
-        }
-        public GetComponentsArgs build() {
+        }        public GetComponentsArgs build() {
             return new GetComponentsArgs(filters, owner);
         }
     }

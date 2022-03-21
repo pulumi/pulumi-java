@@ -102,27 +102,22 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
             this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId);
             return this;
         }
-
         public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder feedbackMessageId(String feedbackMessageId) {
             this.feedbackMessageId = Objects.requireNonNull(feedbackMessageId);
             return this;
         }
-
         public Builder feedbackThreadId(String feedbackThreadId) {
             this.feedbackThreadId = Objects.requireNonNull(feedbackThreadId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetFeedbackMessageArgs build() {
+        }        public GetFeedbackMessageArgs build() {
             return new GetFeedbackMessageArgs(annotatedDatasetId, datasetId, feedbackMessageId, feedbackThreadId, project);
         }
     }

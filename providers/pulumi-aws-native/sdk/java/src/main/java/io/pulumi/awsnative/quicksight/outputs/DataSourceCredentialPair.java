@@ -104,17 +104,17 @@ public final class DataSourceCredentialPair {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
-
+        public Builder alternateDataSourceParameters(DataSourceParameters... alternateDataSourceParameters) {
+            return alternateDataSourceParameters(List.of(alternateDataSourceParameters));
+        }
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public DataSourceCredentialPair build() {
+        }        public DataSourceCredentialPair build() {
             return new DataSourceCredentialPair(alternateDataSourceParameters, password, username);
         }
     }

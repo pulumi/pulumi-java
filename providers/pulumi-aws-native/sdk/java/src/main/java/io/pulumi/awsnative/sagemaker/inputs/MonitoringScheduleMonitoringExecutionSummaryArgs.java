@@ -167,82 +167,66 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Output.of(Objects.requireNonNull(creationTime));
             return this;
         }
-
         public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
-
         public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
-
         public Builder failureReason(@Nullable Output<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
-
         public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = Output.ofNullable(failureReason);
             return this;
         }
-
         public Builder lastModifiedTime(Output<String> lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Output.of(Objects.requireNonNull(lastModifiedTime));
             return this;
         }
-
         public Builder monitoringExecutionStatus(Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
             return this;
         }
-
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Output.of(Objects.requireNonNull(monitoringExecutionStatus));
             return this;
         }
-
         public Builder monitoringScheduleName(Output<String> monitoringScheduleName) {
             this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
             return this;
         }
-
         public Builder monitoringScheduleName(String monitoringScheduleName) {
             this.monitoringScheduleName = Output.of(Objects.requireNonNull(monitoringScheduleName));
             return this;
         }
-
         public Builder processingJobArn(@Nullable Output<String> processingJobArn) {
             this.processingJobArn = processingJobArn;
             return this;
         }
-
         public Builder processingJobArn(@Nullable String processingJobArn) {
             this.processingJobArn = Output.ofNullable(processingJobArn);
             return this;
         }
-
         public Builder scheduledTime(Output<String> scheduledTime) {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }
-
         public Builder scheduledTime(String scheduledTime) {
             this.scheduledTime = Output.of(Objects.requireNonNull(scheduledTime));
             return this;
-        }
-        public MonitoringScheduleMonitoringExecutionSummaryArgs build() {
+        }        public MonitoringScheduleMonitoringExecutionSummaryArgs build() {
             return new MonitoringScheduleMonitoringExecutionSummaryArgs(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
         }
     }

@@ -190,92 +190,74 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
             this.agentPublicKeyCertificate = Objects.requireNonNull(agentPublicKeyCertificate);
             return this;
         }
-
         public Builder agentPublicKeyCertificate(String agentPublicKeyCertificate) {
             this.agentPublicKeyCertificate = Output.of(Objects.requireNonNull(agentPublicKeyCertificate));
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder distribution(@Nullable Output<String> distribution) {
             this.distribution = distribution;
             return this;
         }
-
         public Builder distribution(@Nullable String distribution) {
             this.distribution = Output.ofNullable(distribution);
             return this;
         }
-
         public Builder identity(Output<ConnectedClusterIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder identity(ConnectedClusterIdentityArgs identity) {
             this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
-
         public Builder infrastructure(@Nullable Output<String> infrastructure) {
             this.infrastructure = infrastructure;
             return this;
         }
-
         public Builder infrastructure(@Nullable String infrastructure) {
             this.infrastructure = Output.ofNullable(infrastructure);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ConnectedClusterArgs build() {
+        }        public ConnectedClusterArgs build() {
             return new ConnectedClusterArgs(agentPublicKeyCertificate, clusterName, distribution, identity, infrastructure, location, provisioningState, resourceGroupName, tags);
         }
     }

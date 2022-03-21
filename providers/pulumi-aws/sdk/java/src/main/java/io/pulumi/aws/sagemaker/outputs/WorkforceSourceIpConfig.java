@@ -53,7 +53,9 @@ public final class WorkforceSourceIpConfig {
             this.cidrs = Objects.requireNonNull(cidrs);
             return this;
         }
-        public WorkforceSourceIpConfig build() {
+        public Builder cidrs(String... cidrs) {
+            return cidrs(List.of(cidrs));
+        }        public WorkforceSourceIpConfig build() {
             return new WorkforceSourceIpConfig(cidrs);
         }
     }

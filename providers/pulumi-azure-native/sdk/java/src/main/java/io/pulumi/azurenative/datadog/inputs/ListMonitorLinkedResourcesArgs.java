@@ -72,12 +72,10 @@ public final class ListMonitorLinkedResourcesArgs extends io.pulumi.resources.In
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListMonitorLinkedResourcesArgs build() {
+        }        public ListMonitorLinkedResourcesArgs build() {
             return new ListMonitorLinkedResourcesArgs(monitorName, resourceGroupName);
         }
     }

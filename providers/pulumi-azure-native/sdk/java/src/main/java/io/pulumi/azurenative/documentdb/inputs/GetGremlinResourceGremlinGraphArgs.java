@@ -104,22 +104,18 @@ public final class GetGremlinResourceGremlinGraphArgs extends io.pulumi.resource
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder graphName(String graphName) {
             this.graphName = Objects.requireNonNull(graphName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetGremlinResourceGremlinGraphArgs build() {
+        }        public GetGremlinResourceGremlinGraphArgs build() {
             return new GetGremlinResourceGremlinGraphArgs(accountName, databaseName, graphName, resourceGroupName);
         }
     }

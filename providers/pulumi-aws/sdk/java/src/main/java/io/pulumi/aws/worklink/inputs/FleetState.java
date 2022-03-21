@@ -221,112 +221,90 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder auditStreamArn(@Nullable Output<String> auditStreamArn) {
             this.auditStreamArn = auditStreamArn;
             return this;
         }
-
         public Builder auditStreamArn(@Nullable String auditStreamArn) {
             this.auditStreamArn = Output.ofNullable(auditStreamArn);
             return this;
         }
-
         public Builder companyCode(@Nullable Output<String> companyCode) {
             this.companyCode = companyCode;
             return this;
         }
-
         public Builder companyCode(@Nullable String companyCode) {
             this.companyCode = Output.ofNullable(companyCode);
             return this;
         }
-
         public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
-
         public Builder deviceCaCertificate(@Nullable Output<String> deviceCaCertificate) {
             this.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
-
         public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
             this.deviceCaCertificate = Output.ofNullable(deviceCaCertificate);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder identityProvider(@Nullable Output<FleetIdentityProviderGetArgs> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder identityProvider(@Nullable FleetIdentityProviderGetArgs identityProvider) {
             this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<FleetNetworkGetArgs> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable FleetNetworkGetArgs network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder optimizeForEndUserLocation(@Nullable Output<Boolean> optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
-
         public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = Output.ofNullable(optimizeForEndUserLocation);
             return this;
-        }
-        public FleetState build() {
+        }        public FleetState build() {
             return new FleetState(arn, auditStreamArn, companyCode, createdTime, deviceCaCertificate, displayName, identityProvider, lastUpdatedTime, name, network, optimizeForEndUserLocation);
         }
     }

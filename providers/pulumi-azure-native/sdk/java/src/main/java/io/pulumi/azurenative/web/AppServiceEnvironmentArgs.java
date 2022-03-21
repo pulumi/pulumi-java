@@ -257,132 +257,112 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             this.clusterSettings = clusterSettings;
             return this;
         }
-
         public Builder clusterSettings(@Nullable List<NameValuePairArgs> clusterSettings) {
             this.clusterSettings = Output.ofNullable(clusterSettings);
             return this;
         }
-
+        public Builder clusterSettings(NameValuePairArgs... clusterSettings) {
+            return clusterSettings(List.of(clusterSettings));
+        }
         public Builder dnsSuffix(@Nullable Output<String> dnsSuffix) {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
-
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = Output.ofNullable(dnsSuffix);
             return this;
         }
-
         public Builder frontEndScaleFactor(@Nullable Output<Integer> frontEndScaleFactor) {
             this.frontEndScaleFactor = frontEndScaleFactor;
             return this;
         }
-
         public Builder frontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
             this.frontEndScaleFactor = Output.ofNullable(frontEndScaleFactor);
             return this;
         }
-
         public Builder internalLoadBalancingMode(@Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode) {
             this.internalLoadBalancingMode = internalLoadBalancingMode;
             return this;
         }
-
         public Builder internalLoadBalancingMode(@Nullable Either<String,LoadBalancingMode> internalLoadBalancingMode) {
             this.internalLoadBalancingMode = Output.ofNullable(internalLoadBalancingMode);
             return this;
         }
-
         public Builder ipsslAddressCount(@Nullable Output<Integer> ipsslAddressCount) {
             this.ipsslAddressCount = ipsslAddressCount;
             return this;
         }
-
         public Builder ipsslAddressCount(@Nullable Integer ipsslAddressCount) {
             this.ipsslAddressCount = Output.ofNullable(ipsslAddressCount);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder multiSize(@Nullable Output<String> multiSize) {
             this.multiSize = multiSize;
             return this;
         }
-
         public Builder multiSize(@Nullable String multiSize) {
             this.multiSize = Output.ofNullable(multiSize);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userWhitelistedIpRanges(@Nullable Output<List<String>> userWhitelistedIpRanges) {
             this.userWhitelistedIpRanges = userWhitelistedIpRanges;
             return this;
         }
-
         public Builder userWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
             this.userWhitelistedIpRanges = Output.ofNullable(userWhitelistedIpRanges);
             return this;
         }
-
+        public Builder userWhitelistedIpRanges(String... userWhitelistedIpRanges) {
+            return userWhitelistedIpRanges(List.of(userWhitelistedIpRanges));
+        }
         public Builder virtualNetwork(Output<VirtualNetworkProfileArgs> virtualNetwork) {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
-
         public Builder virtualNetwork(VirtualNetworkProfileArgs virtualNetwork) {
             this.virtualNetwork = Output.of(Objects.requireNonNull(virtualNetwork));
             return this;
-        }
-        public AppServiceEnvironmentArgs build() {
+        }        public AppServiceEnvironmentArgs build() {
             return new AppServiceEnvironmentArgs(clusterSettings, dnsSuffix, frontEndScaleFactor, internalLoadBalancingMode, ipsslAddressCount, kind, location, multiSize, name, resourceGroupName, tags, userWhitelistedIpRanges, virtualNetwork);
         }
     }

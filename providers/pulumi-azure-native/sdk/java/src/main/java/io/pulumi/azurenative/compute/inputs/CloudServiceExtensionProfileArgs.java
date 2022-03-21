@@ -62,12 +62,13 @@ public final class CloudServiceExtensionProfileArgs extends io.pulumi.resources.
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<ExtensionArgs> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-        public CloudServiceExtensionProfileArgs build() {
+        public Builder extensions(ExtensionArgs... extensions) {
+            return extensions(List.of(extensions));
+        }        public CloudServiceExtensionProfileArgs build() {
             return new CloudServiceExtensionProfileArgs(extensions);
         }
     }

@@ -128,37 +128,33 @@ public final class GetRegionInstanceGroupResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instances(List<GetRegionInstanceGroupInstance> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(GetRegionInstanceGroupInstance... instances) {
+            return instances(List.of(instances));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
-        }
-        public GetRegionInstanceGroupResult build() {
+        }        public GetRegionInstanceGroupResult build() {
             return new GetRegionInstanceGroupResult(id, instances, name, project, region, selfLink, size);
         }
     }

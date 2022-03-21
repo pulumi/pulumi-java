@@ -142,37 +142,30 @@ public final class GetConnectionResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
-
         public Builder hostArn(String hostArn) {
             this.hostArn = Objects.requireNonNull(hostArn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder providerType(String providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetConnectionResult build() {
+        }        public GetConnectionResult build() {
             return new GetConnectionResult(arn, connectionStatus, hostArn, id, name, providerType, tags);
         }
     }

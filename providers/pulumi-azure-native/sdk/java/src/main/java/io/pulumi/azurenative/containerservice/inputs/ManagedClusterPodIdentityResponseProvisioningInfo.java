@@ -56,8 +56,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
         public Builder error(@Nullable CloudErrorResponse error) {
             this.error = error;
             return this;
-        }
-        public ManagedClusterPodIdentityResponseProvisioningInfo build() {
+        }        public ManagedClusterPodIdentityResponseProvisioningInfo build() {
             return new ManagedClusterPodIdentityResponseProvisioningInfo(error);
         }
     }

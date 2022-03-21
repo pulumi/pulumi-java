@@ -127,52 +127,48 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.agentPermissions = agentPermissions;
             return this;
         }
-
         public Builder agentPermissions(@Nullable AgentPermissionsPropertiesArgs agentPermissions) {
             this.agentPermissions = Output.ofNullable(agentPermissions);
             return this;
         }
-
         public Builder anomalyDetectionNotificationConfiguration(@Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
-
         public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = Output.ofNullable(anomalyDetectionNotificationConfiguration);
             return this;
         }
-
+        public Builder anomalyDetectionNotificationConfiguration(ProfilingGroupChannelArgs... anomalyDetectionNotificationConfiguration) {
+            return anomalyDetectionNotificationConfiguration(List.of(anomalyDetectionNotificationConfiguration));
+        }
         public Builder computePlatform(@Nullable Output<ProfilingGroupComputePlatform> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
-
         public Builder computePlatform(@Nullable ProfilingGroupComputePlatform computePlatform) {
             this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
-
         public Builder profilingGroupName(@Nullable Output<String> profilingGroupName) {
             this.profilingGroupName = profilingGroupName;
             return this;
         }
-
         public Builder profilingGroupName(@Nullable String profilingGroupName) {
             this.profilingGroupName = Output.ofNullable(profilingGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProfilingGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProfilingGroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ProfilingGroupArgs build() {
+        public Builder tags(ProfilingGroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ProfilingGroupArgs build() {
             return new ProfilingGroupArgs(agentPermissions, anomalyDetectionNotificationConfiguration, computePlatform, profilingGroupName, tags);
         }
     }

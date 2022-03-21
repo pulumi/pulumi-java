@@ -61,12 +61,10 @@ public final class DefenderForContainersAwsOfferingKinesisToS3Args extends io.pu
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = Output.ofNullable(cloudRoleArn);
             return this;
-        }
-        public DefenderForContainersAwsOfferingKinesisToS3Args build() {
+        }        public DefenderForContainersAwsOfferingKinesisToS3Args build() {
             return new DefenderForContainersAwsOfferingKinesisToS3Args(cloudRoleArn);
         }
     }

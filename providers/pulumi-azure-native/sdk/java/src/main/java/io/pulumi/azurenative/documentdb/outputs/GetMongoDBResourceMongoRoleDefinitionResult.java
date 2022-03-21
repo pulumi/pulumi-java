@@ -154,37 +154,36 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privileges(@Nullable List<PrivilegeResponse> privileges) {
             this.privileges = privileges;
             return this;
         }
-
+        public Builder privileges(PrivilegeResponse... privileges) {
+            return privileges(List.of(privileges));
+        }
         public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }
-
+        public Builder roles(RoleResponse... roles) {
+            return roles(List.of(roles));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMongoDBResourceMongoRoleDefinitionResult build() {
+        }        public GetMongoDBResourceMongoRoleDefinitionResult build() {
             return new GetMongoDBResourceMongoRoleDefinitionResult(databaseName, id, name, privileges, roleName, roles, type);
         }
     }

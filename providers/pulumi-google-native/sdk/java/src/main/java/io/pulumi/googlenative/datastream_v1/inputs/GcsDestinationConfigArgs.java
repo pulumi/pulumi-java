@@ -129,52 +129,42 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
             this.avroFileFormat = avroFileFormat;
             return this;
         }
-
         public Builder avroFileFormat(@Nullable AvroFileFormatArgs avroFileFormat) {
             this.avroFileFormat = Output.ofNullable(avroFileFormat);
             return this;
         }
-
         public Builder fileRotationInterval(@Nullable Output<String> fileRotationInterval) {
             this.fileRotationInterval = fileRotationInterval;
             return this;
         }
-
         public Builder fileRotationInterval(@Nullable String fileRotationInterval) {
             this.fileRotationInterval = Output.ofNullable(fileRotationInterval);
             return this;
         }
-
         public Builder fileRotationMb(@Nullable Output<Integer> fileRotationMb) {
             this.fileRotationMb = fileRotationMb;
             return this;
         }
-
         public Builder fileRotationMb(@Nullable Integer fileRotationMb) {
             this.fileRotationMb = Output.ofNullable(fileRotationMb);
             return this;
         }
-
         public Builder jsonFileFormat(@Nullable Output<JsonFileFormatArgs> jsonFileFormat) {
             this.jsonFileFormat = jsonFileFormat;
             return this;
         }
-
         public Builder jsonFileFormat(@Nullable JsonFileFormatArgs jsonFileFormat) {
             this.jsonFileFormat = Output.ofNullable(jsonFileFormat);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public GcsDestinationConfigArgs build() {
+        }        public GcsDestinationConfigArgs build() {
             return new GcsDestinationConfigArgs(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
         }
     }

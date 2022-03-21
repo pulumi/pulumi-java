@@ -140,32 +140,32 @@ public final class ServiceAccount {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
-
         public Builder imagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
-
+        public Builder imagePullSecrets(LocalObjectReference... imagePullSecrets) {
+            return imagePullSecrets(List.of(imagePullSecrets));
+        }
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder secrets(@Nullable List<ObjectReference> secrets) {
             this.secrets = secrets;
             return this;
         }
-        public ServiceAccount build() {
+        public Builder secrets(ObjectReference... secrets) {
+            return secrets(List.of(secrets));
+        }        public ServiceAccount build() {
             return new ServiceAccount(apiVersion, automountServiceAccountToken, imagePullSecrets, kind, metadata, secrets);
         }
     }

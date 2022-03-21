@@ -69,12 +69,10 @@ public final class DockerExecutorResponse {
             this.cmd = Objects.requireNonNull(cmd);
             return this;
         }
-
         public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
-        }
-        public DockerExecutorResponse build() {
+        }        public DockerExecutorResponse build() {
             return new DockerExecutorResponse(cmd, imageName);
         }
     }

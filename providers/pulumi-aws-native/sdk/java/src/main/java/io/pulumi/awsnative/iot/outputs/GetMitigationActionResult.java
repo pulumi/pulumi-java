@@ -90,27 +90,25 @@ public final class GetMitigationActionResult {
             this.actionParams = actionParams;
             return this;
         }
-
         public Builder mitigationActionArn(@Nullable String mitigationActionArn) {
             this.mitigationActionArn = mitigationActionArn;
             return this;
         }
-
         public Builder mitigationActionId(@Nullable String mitigationActionId) {
             this.mitigationActionId = mitigationActionId;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder tags(@Nullable List<MitigationActionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetMitigationActionResult build() {
+        public Builder tags(MitigationActionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetMitigationActionResult build() {
             return new GetMitigationActionResult(actionParams, mitigationActionArn, mitigationActionId, roleArn, tags);
         }
     }

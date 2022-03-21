@@ -76,12 +76,10 @@ public final class LibraryResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public LibraryResponse build() {
+        }        public LibraryResponse build() {
             return new LibraryResponse(name, version);
         }
     }

@@ -198,52 +198,42 @@ public final class QuotaLimitResponse {
             this.defaultLimit = Objects.requireNonNull(defaultLimit);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder freeTier(String freeTier) {
             this.freeTier = Objects.requireNonNull(freeTier);
             return this;
         }
-
         public Builder maxLimit(String maxLimit) {
             this.maxLimit = Objects.requireNonNull(maxLimit);
             return this;
         }
-
         public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder values(Map<String,String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
-        }
-        public QuotaLimitResponse build() {
+        }        public QuotaLimitResponse build() {
             return new QuotaLimitResponse(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);
         }
     }

@@ -56,8 +56,7 @@ public final class GetTransferProjectServieAccountArgs extends io.pulumi.resourc
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetTransferProjectServieAccountArgs build() {
+        }        public GetTransferProjectServieAccountArgs build() {
             return new GetTransferProjectServieAccountArgs(project);
         }
     }

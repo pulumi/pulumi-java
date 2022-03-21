@@ -95,17 +95,14 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
             this.imageName = imageName;
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder sysPrep(@Nullable Boolean sysPrep) {
             this.sysPrep = sysPrep;
             return this;
-        }
-        public CustomImagePropertiesCustomResponse build() {
+        }        public CustomImagePropertiesCustomResponse build() {
             return new CustomImagePropertiesCustomResponse(imageName, osType, sysPrep);
         }
     }

@@ -104,22 +104,18 @@ public final class DiskDetailsResponse {
             this.maxSizeMB = maxSizeMB;
             return this;
         }
-
         public Builder vhdId(@Nullable String vhdId) {
             this.vhdId = vhdId;
             return this;
         }
-
         public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }
-
         public Builder vhdType(@Nullable String vhdType) {
             this.vhdType = vhdType;
             return this;
-        }
-        public DiskDetailsResponse build() {
+        }        public DiskDetailsResponse build() {
             return new DiskDetailsResponse(maxSizeMB, vhdId, vhdName, vhdType);
         }
     }

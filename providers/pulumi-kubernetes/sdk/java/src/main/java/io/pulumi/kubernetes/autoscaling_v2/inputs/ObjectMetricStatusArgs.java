@@ -95,32 +95,26 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder current(MetricValueStatusArgs current) {
             this.current = Output.of(Objects.requireNonNull(current));
             return this;
         }
-
         public Builder describedObject(Output<CrossVersionObjectReferenceArgs> describedObject) {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
-
         public Builder describedObject(CrossVersionObjectReferenceArgs describedObject) {
             this.describedObject = Output.of(Objects.requireNonNull(describedObject));
             return this;
         }
-
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(MetricIdentifierArgs metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
-        }
-        public ObjectMetricStatusArgs build() {
+        }        public ObjectMetricStatusArgs build() {
             return new ObjectMetricStatusArgs(current, describedObject, metric);
         }
     }

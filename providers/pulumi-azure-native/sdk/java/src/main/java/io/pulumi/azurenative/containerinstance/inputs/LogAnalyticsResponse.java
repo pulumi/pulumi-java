@@ -127,27 +127,22 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
             this.logType = logType;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
-
         public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
-        }
-        public LogAnalyticsResponse build() {
+        }        public LogAnalyticsResponse build() {
             return new LogAnalyticsResponse(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
         }
     }

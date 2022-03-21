@@ -122,27 +122,25 @@ public final class ContactProfileLinkResponse {
             this.channels = Objects.requireNonNull(channels);
             return this;
         }
-
+        public Builder channels(ContactProfileLinkChannelResponse... channels) {
+            return channels(List.of(channels));
+        }
         public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder eirpdBW(@Nullable Double eirpdBW) {
             this.eirpdBW = eirpdBW;
             return this;
         }
-
         public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
             this.gainOverTemperature = gainOverTemperature;
             return this;
         }
-
         public Builder polarization(String polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
-        }
-        public ContactProfileLinkResponse build() {
+        }        public ContactProfileLinkResponse build() {
             return new ContactProfileLinkResponse(channels, direction, eirpdBW, gainOverTemperature, polarization);
         }
     }

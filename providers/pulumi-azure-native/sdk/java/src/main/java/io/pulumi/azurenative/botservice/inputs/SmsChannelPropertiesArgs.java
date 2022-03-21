@@ -127,52 +127,42 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
             this.accountSID = Objects.requireNonNull(accountSID);
             return this;
         }
-
         public Builder accountSID(String accountSID) {
             this.accountSID = Output.of(Objects.requireNonNull(accountSID));
             return this;
         }
-
         public Builder authToken(@Nullable Output<String> authToken) {
             this.authToken = authToken;
             return this;
         }
-
         public Builder authToken(@Nullable String authToken) {
             this.authToken = Output.ofNullable(authToken);
             return this;
         }
-
         public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
-
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
-
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = Output.ofNullable(isValidated);
             return this;
         }
-
         public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
-        }
-        public SmsChannelPropertiesArgs build() {
+        }        public SmsChannelPropertiesArgs build() {
             return new SmsChannelPropertiesArgs(accountSID, authToken, isEnabled, isValidated, phone);
         }
     }

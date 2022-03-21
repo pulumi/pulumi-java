@@ -57,12 +57,10 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
             this.concurrencyLimit = concurrencyLimit;
             return this;
         }
-
         public Builder concurrencyLimit(@Nullable Integer concurrencyLimit) {
             this.concurrencyLimit = Output.ofNullable(concurrencyLimit);
             return this;
-        }
-        public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {
+        }        public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {
             return new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(concurrencyLimit);
         }
     }

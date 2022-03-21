@@ -87,22 +87,18 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable Object destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
-        }
-        public DeliveryWithResourceIdentityArgs build() {
+        }        public DeliveryWithResourceIdentityArgs build() {
             return new DeliveryWithResourceIdentityArgs(destination, identity);
         }
     }

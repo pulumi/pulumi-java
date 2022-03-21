@@ -58,8 +58,7 @@ public final class TransportPreferencesResponse extends io.pulumi.resources.Invo
         public Builder preferredShipmentType(String preferredShipmentType) {
             this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
             return this;
-        }
-        public TransportPreferencesResponse build() {
+        }        public TransportPreferencesResponse build() {
             return new TransportPreferencesResponse(preferredShipmentType);
         }
     }

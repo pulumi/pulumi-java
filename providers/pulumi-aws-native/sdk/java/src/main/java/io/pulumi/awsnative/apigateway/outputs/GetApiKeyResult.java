@@ -139,32 +139,32 @@ public final class GetApiKeyResult {
             this.aPIKeyId = aPIKeyId;
             return this;
         }
-
         public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder stageKeys(@Nullable List<ApiKeyStageKey> stageKeys) {
             this.stageKeys = stageKeys;
             return this;
         }
-
+        public Builder stageKeys(ApiKeyStageKey... stageKeys) {
+            return stageKeys(List.of(stageKeys));
+        }
         public Builder tags(@Nullable List<ApiKeyTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetApiKeyResult build() {
+        public Builder tags(ApiKeyTag... tags) {
+            return tags(List.of(tags));
+        }        public GetApiKeyResult build() {
             return new GetApiKeyResult(aPIKeyId, customerId, description, enabled, stageKeys, tags);
         }
     }

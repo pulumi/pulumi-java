@@ -216,57 +216,46 @@ public final class ExpressRouteLinkResponse {
             this.adminState = adminState;
             return this;
         }
-
         public Builder connectorType(String connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder interfaceName(String interfaceName) {
             this.interfaceName = Objects.requireNonNull(interfaceName);
             return this;
         }
-
         public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig) {
             this.macSecConfig = macSecConfig;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder patchPanelId(String patchPanelId) {
             this.patchPanelId = Objects.requireNonNull(patchPanelId);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder rackId(String rackId) {
             this.rackId = Objects.requireNonNull(rackId);
             return this;
         }
-
         public Builder routerName(String routerName) {
             this.routerName = Objects.requireNonNull(routerName);
             return this;
-        }
-        public ExpressRouteLinkResponse build() {
+        }        public ExpressRouteLinkResponse build() {
             return new ExpressRouteLinkResponse(adminState, connectorType, etag, id, interfaceName, macSecConfig, name, patchPanelId, provisioningState, rackId, routerName);
         }
     }

@@ -51,8 +51,7 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv6Address {
         public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
-        }
-        public InsightFiltersResourceAwsEc2InstanceIpv6Address build() {
+        }        public InsightFiltersResourceAwsEc2InstanceIpv6Address build() {
             return new InsightFiltersResourceAwsEc2InstanceIpv6Address(cidr);
         }
     }

@@ -103,52 +103,42 @@ public final class DistributionViewerCertificateArgs extends io.pulumi.resources
             this.acmCertificateArn = acmCertificateArn;
             return this;
         }
-
         public Builder acmCertificateArn(@Nullable String acmCertificateArn) {
             this.acmCertificateArn = Output.ofNullable(acmCertificateArn);
             return this;
         }
-
         public Builder cloudFrontDefaultCertificate(@Nullable Output<Boolean> cloudFrontDefaultCertificate) {
             this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
             return this;
         }
-
         public Builder cloudFrontDefaultCertificate(@Nullable Boolean cloudFrontDefaultCertificate) {
             this.cloudFrontDefaultCertificate = Output.ofNullable(cloudFrontDefaultCertificate);
             return this;
         }
-
         public Builder iamCertificateId(@Nullable Output<String> iamCertificateId) {
             this.iamCertificateId = iamCertificateId;
             return this;
         }
-
         public Builder iamCertificateId(@Nullable String iamCertificateId) {
             this.iamCertificateId = Output.ofNullable(iamCertificateId);
             return this;
         }
-
         public Builder minimumProtocolVersion(@Nullable Output<String> minimumProtocolVersion) {
             this.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
-
         public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
             this.minimumProtocolVersion = Output.ofNullable(minimumProtocolVersion);
             return this;
         }
-
         public Builder sslSupportMethod(@Nullable Output<String> sslSupportMethod) {
             this.sslSupportMethod = sslSupportMethod;
             return this;
         }
-
         public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
             this.sslSupportMethod = Output.ofNullable(sslSupportMethod);
             return this;
-        }
-        public DistributionViewerCertificateArgs build() {
+        }        public DistributionViewerCertificateArgs build() {
             return new DistributionViewerCertificateArgs(acmCertificateArn, cloudFrontDefaultCertificate, iamCertificateId, minimumProtocolVersion, sslSupportMethod);
         }
     }

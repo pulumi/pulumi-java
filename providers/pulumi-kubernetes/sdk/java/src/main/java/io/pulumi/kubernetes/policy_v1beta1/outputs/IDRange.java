@@ -69,12 +69,10 @@ public final class IDRange {
             this.max = Objects.requireNonNull(max);
             return this;
         }
-
         public Builder min(Integer min) {
             this.min = Objects.requireNonNull(min);
             return this;
-        }
-        public IDRange build() {
+        }        public IDRange build() {
             return new IDRange(max, min);
         }
     }

@@ -87,17 +87,14 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder metricsLevel(@Nullable String metricsLevel) {
             this.metricsLevel = metricsLevel;
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration(configurationType, logLevel, metricsLevel);
         }
     }

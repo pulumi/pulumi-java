@@ -206,27 +206,22 @@ public final class AutoscalerAutoscalingPolicyMetric {
             this.filter = filter;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
-
         public Builder target(@Nullable Double target) {
             this.target = target;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AutoscalerAutoscalingPolicyMetric build() {
+        }        public AutoscalerAutoscalingPolicyMetric build() {
             return new AutoscalerAutoscalingPolicyMetric(filter, name, singleInstanceAssignment, target, type);
         }
     }

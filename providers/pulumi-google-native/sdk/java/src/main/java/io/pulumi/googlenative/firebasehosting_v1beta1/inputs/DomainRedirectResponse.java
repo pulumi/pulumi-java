@@ -76,12 +76,10 @@ public final class DomainRedirectResponse extends io.pulumi.resources.InvokeArgs
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DomainRedirectResponse build() {
+        }        public DomainRedirectResponse build() {
             return new DomainRedirectResponse(domainName, type);
         }
     }

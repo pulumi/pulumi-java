@@ -169,42 +169,34 @@ public final class GetServiceUnitResult {
             this.artifacts = artifacts;
             return this;
         }
-
         public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetServiceUnitResult build() {
+        }        public GetServiceUnitResult build() {
             return new GetServiceUnitResult(artifacts, deploymentMode, id, location, name, tags, targetResourceGroup, type);
         }
     }

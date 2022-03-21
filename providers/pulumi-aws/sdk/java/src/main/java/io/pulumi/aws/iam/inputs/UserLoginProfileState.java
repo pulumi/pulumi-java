@@ -140,62 +140,50 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
             this.encryptedPassword = encryptedPassword;
             return this;
         }
-
         public Builder encryptedPassword(@Nullable String encryptedPassword) {
             this.encryptedPassword = Output.ofNullable(encryptedPassword);
             return this;
         }
-
         public Builder keyFingerprint(@Nullable Output<String> keyFingerprint) {
             this.keyFingerprint = keyFingerprint;
             return this;
         }
-
         public Builder keyFingerprint(@Nullable String keyFingerprint) {
             this.keyFingerprint = Output.ofNullable(keyFingerprint);
             return this;
         }
-
         public Builder passwordLength(@Nullable Output<Integer> passwordLength) {
             this.passwordLength = passwordLength;
             return this;
         }
-
         public Builder passwordLength(@Nullable Integer passwordLength) {
             this.passwordLength = Output.ofNullable(passwordLength);
             return this;
         }
-
         public Builder passwordResetRequired(@Nullable Output<Boolean> passwordResetRequired) {
             this.passwordResetRequired = passwordResetRequired;
             return this;
         }
-
         public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
             this.passwordResetRequired = Output.ofNullable(passwordResetRequired);
             return this;
         }
-
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
-
         public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public UserLoginProfileState build() {
+        }        public UserLoginProfileState build() {
             return new UserLoginProfileState(encryptedPassword, keyFingerprint, passwordLength, passwordResetRequired, pgpKey, user);
         }
     }

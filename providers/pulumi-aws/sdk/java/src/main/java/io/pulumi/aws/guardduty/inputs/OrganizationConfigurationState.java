@@ -92,32 +92,26 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
             this.autoEnable = autoEnable;
             return this;
         }
-
         public Builder autoEnable(@Nullable Boolean autoEnable) {
             this.autoEnable = Output.ofNullable(autoEnable);
             return this;
         }
-
         public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
-
         public Builder datasources(@Nullable OrganizationConfigurationDatasourcesGetArgs datasources) {
             this.datasources = Output.ofNullable(datasources);
             return this;
         }
-
         public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Output.ofNullable(detectorId);
             return this;
-        }
-        public OrganizationConfigurationState build() {
+        }        public OrganizationConfigurationState build() {
             return new OrganizationConfigurationState(autoEnable, datasources, detectorId);
         }
     }

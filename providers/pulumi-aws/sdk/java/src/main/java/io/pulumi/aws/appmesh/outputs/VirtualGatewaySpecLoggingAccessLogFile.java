@@ -51,8 +51,7 @@ public final class VirtualGatewaySpecLoggingAccessLogFile {
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public VirtualGatewaySpecLoggingAccessLogFile build() {
+        }        public VirtualGatewaySpecLoggingAccessLogFile build() {
             return new VirtualGatewaySpecLoggingAccessLogFile(path);
         }
     }

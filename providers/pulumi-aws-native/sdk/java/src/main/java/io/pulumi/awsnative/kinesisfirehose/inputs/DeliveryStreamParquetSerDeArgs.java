@@ -116,62 +116,50 @@ public final class DeliveryStreamParquetSerDeArgs extends io.pulumi.resources.Re
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
-
         public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
             this.blockSizeBytes = Output.ofNullable(blockSizeBytes);
             return this;
         }
-
         public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable String compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder enableDictionaryCompression(@Nullable Output<Boolean> enableDictionaryCompression) {
             this.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
-
         public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
             this.enableDictionaryCompression = Output.ofNullable(enableDictionaryCompression);
             return this;
         }
-
         public Builder maxPaddingBytes(@Nullable Output<Integer> maxPaddingBytes) {
             this.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
-
         public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
             this.maxPaddingBytes = Output.ofNullable(maxPaddingBytes);
             return this;
         }
-
         public Builder pageSizeBytes(@Nullable Output<Integer> pageSizeBytes) {
             this.pageSizeBytes = pageSizeBytes;
             return this;
         }
-
         public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
             this.pageSizeBytes = Output.ofNullable(pageSizeBytes);
             return this;
         }
-
         public Builder writerVersion(@Nullable Output<String> writerVersion) {
             this.writerVersion = writerVersion;
             return this;
         }
-
         public Builder writerVersion(@Nullable String writerVersion) {
             this.writerVersion = Output.ofNullable(writerVersion);
             return this;
-        }
-        public DeliveryStreamParquetSerDeArgs build() {
+        }        public DeliveryStreamParquetSerDeArgs build() {
             return new DeliveryStreamParquetSerDeArgs(blockSizeBytes, compression, enableDictionaryCompression, maxPaddingBytes, pageSizeBytes, writerVersion);
         }
     }

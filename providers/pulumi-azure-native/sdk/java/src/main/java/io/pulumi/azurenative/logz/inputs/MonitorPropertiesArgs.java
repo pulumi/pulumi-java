@@ -120,52 +120,42 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
-
         public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesArgs logzOrganizationProperties) {
             this.logzOrganizationProperties = Output.ofNullable(logzOrganizationProperties);
             return this;
         }
-
         public Builder marketplaceSubscriptionStatus(@Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
-
         public Builder marketplaceSubscriptionStatus(@Nullable Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = Output.ofNullable(marketplaceSubscriptionStatus);
             return this;
         }
-
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
-
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Output.ofNullable(monitoringStatus);
             return this;
         }
-
         public Builder planData(@Nullable Output<PlanDataArgs> planData) {
             this.planData = planData;
             return this;
         }
-
         public Builder planData(@Nullable PlanDataArgs planData) {
             this.planData = Output.ofNullable(planData);
             return this;
         }
-
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
-
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
             this.userInfo = Output.ofNullable(userInfo);
             return this;
-        }
-        public MonitorPropertiesArgs build() {
+        }        public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, userInfo);
         }
     }

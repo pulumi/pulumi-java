@@ -110,42 +110,34 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
             this.bottomPixels = bottomPixels;
             return this;
         }
-
         public Builder bottomPixels(@Nullable Integer bottomPixels) {
             this.bottomPixels = Output.ofNullable(bottomPixels);
             return this;
         }
-
         public Builder leftPixels(@Nullable Output<Integer> leftPixels) {
             this.leftPixels = leftPixels;
             return this;
         }
-
         public Builder leftPixels(@Nullable Integer leftPixels) {
             this.leftPixels = Output.ofNullable(leftPixels);
             return this;
         }
-
         public Builder rightPixels(@Nullable Output<Integer> rightPixels) {
             this.rightPixels = rightPixels;
             return this;
         }
-
         public Builder rightPixels(@Nullable Integer rightPixels) {
             this.rightPixels = Output.ofNullable(rightPixels);
             return this;
         }
-
         public Builder topPixels(@Nullable Output<Integer> topPixels) {
             this.topPixels = topPixels;
             return this;
         }
-
         public Builder topPixels(@Nullable Integer topPixels) {
             this.topPixels = Output.ofNullable(topPixels);
             return this;
-        }
-        public CropArgs build() {
+        }        public CropArgs build() {
             return new CropArgs(bottomPixels, leftPixels, rightPixels, topPixels);
         }
     }

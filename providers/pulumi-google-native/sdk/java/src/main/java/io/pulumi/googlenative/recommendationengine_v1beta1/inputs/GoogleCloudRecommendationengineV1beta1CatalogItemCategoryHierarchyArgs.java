@@ -61,12 +61,13 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public Builder categories(List<String> categories) {
             this.categories = Output.of(Objects.requireNonNull(categories));
             return this;
         }
-        public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs build() {
+        public Builder categories(String... categories) {
+            return categories(List.of(categories));
+        }        public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs build() {
             return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(categories);
         }
     }

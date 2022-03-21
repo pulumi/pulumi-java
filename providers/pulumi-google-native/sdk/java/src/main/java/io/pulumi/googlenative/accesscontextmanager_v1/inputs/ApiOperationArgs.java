@@ -80,22 +80,21 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             this.methodSelectors = methodSelectors;
             return this;
         }
-
         public Builder methodSelectors(@Nullable List<MethodSelectorArgs> methodSelectors) {
             this.methodSelectors = Output.ofNullable(methodSelectors);
             return this;
         }
-
+        public Builder methodSelectors(MethodSelectorArgs... methodSelectors) {
+            return methodSelectors(List.of(methodSelectors));
+        }
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
-        }
-        public ApiOperationArgs build() {
+        }        public ApiOperationArgs build() {
             return new ApiOperationArgs(methodSelectors, serviceName);
         }
     }

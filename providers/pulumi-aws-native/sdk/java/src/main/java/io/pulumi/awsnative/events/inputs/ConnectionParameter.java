@@ -79,17 +79,14 @@ public final class ConnectionParameter extends io.pulumi.resources.InvokeArgs {
             this.isValueSecret = isValueSecret;
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ConnectionParameter build() {
+        }        public ConnectionParameter build() {
             return new ConnectionParameter(isValueSecret, key, value);
         }
     }

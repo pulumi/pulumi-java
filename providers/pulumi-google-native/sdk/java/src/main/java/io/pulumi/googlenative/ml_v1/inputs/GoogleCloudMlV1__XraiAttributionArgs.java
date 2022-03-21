@@ -61,12 +61,10 @@ public final class GoogleCloudMlV1__XraiAttributionArgs extends io.pulumi.resour
             this.numIntegralSteps = numIntegralSteps;
             return this;
         }
-
         public Builder numIntegralSteps(@Nullable Integer numIntegralSteps) {
             this.numIntegralSteps = Output.ofNullable(numIntegralSteps);
             return this;
-        }
-        public GoogleCloudMlV1__XraiAttributionArgs build() {
+        }        public GoogleCloudMlV1__XraiAttributionArgs build() {
             return new GoogleCloudMlV1__XraiAttributionArgs(numIntegralSteps);
         }
     }

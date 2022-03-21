@@ -87,17 +87,17 @@ public final class SslCertificateManagedSslCertificateResponse {
             this.domainStatus = Objects.requireNonNull(domainStatus);
             return this;
         }
-
         public Builder domains(List<String> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }
-
+        public Builder domains(String... domains) {
+            return domains(List.of(domains));
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public SslCertificateManagedSslCertificateResponse build() {
+        }        public SslCertificateManagedSslCertificateResponse build() {
             return new SslCertificateManagedSslCertificateResponse(domainStatus, domains, status);
         }
     }

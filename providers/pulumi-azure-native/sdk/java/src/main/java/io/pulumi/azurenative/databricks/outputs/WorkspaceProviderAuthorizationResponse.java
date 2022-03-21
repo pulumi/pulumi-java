@@ -69,12 +69,10 @@ public final class WorkspaceProviderAuthorizationResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
-        }
-        public WorkspaceProviderAuthorizationResponse build() {
+        }        public WorkspaceProviderAuthorizationResponse build() {
             return new WorkspaceProviderAuthorizationResponse(principalId, roleDefinitionId);
         }
     }

@@ -110,42 +110,34 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publicCertData(Output<String> publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public Builder publicCertData(String publicCertData) {
             this.publicCertData = Output.of(Objects.requireNonNull(publicCertData));
             return this;
-        }
-        public P2SVpnServerConfigVpnClientRootCertificateArgs build() {
+        }        public P2SVpnServerConfigVpnClientRootCertificateArgs build() {
             return new P2SVpnServerConfigVpnClientRootCertificateArgs(etag, id, name, publicCertData);
         }
     }

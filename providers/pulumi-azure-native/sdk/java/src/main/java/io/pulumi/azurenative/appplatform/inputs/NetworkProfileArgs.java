@@ -126,52 +126,42 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
-
         public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
             this.appNetworkResourceGroup = Output.ofNullable(appNetworkResourceGroup);
             return this;
         }
-
         public Builder appSubnetId(@Nullable Output<String> appSubnetId) {
             this.appSubnetId = appSubnetId;
             return this;
         }
-
         public Builder appSubnetId(@Nullable String appSubnetId) {
             this.appSubnetId = Output.ofNullable(appSubnetId);
             return this;
         }
-
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Output.ofNullable(serviceCidr);
             return this;
         }
-
         public Builder serviceRuntimeNetworkResourceGroup(@Nullable Output<String> serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
-
         public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = Output.ofNullable(serviceRuntimeNetworkResourceGroup);
             return this;
         }
-
         public Builder serviceRuntimeSubnetId(@Nullable Output<String> serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
         }
-
         public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = Output.ofNullable(serviceRuntimeSubnetId);
             return this;
-        }
-        public NetworkProfileArgs build() {
+        }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(appNetworkResourceGroup, appSubnetId, serviceCidr, serviceRuntimeNetworkResourceGroup, serviceRuntimeSubnetId);
         }
     }

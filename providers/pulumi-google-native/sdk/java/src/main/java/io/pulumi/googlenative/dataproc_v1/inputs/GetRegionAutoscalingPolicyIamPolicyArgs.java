@@ -78,17 +78,14 @@ public final class GetRegionAutoscalingPolicyIamPolicyArgs extends io.pulumi.res
             this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
-        }
-        public GetRegionAutoscalingPolicyIamPolicyArgs build() {
+        }        public GetRegionAutoscalingPolicyIamPolicyArgs build() {
             return new GetRegionAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, project, regionId);
         }
     }

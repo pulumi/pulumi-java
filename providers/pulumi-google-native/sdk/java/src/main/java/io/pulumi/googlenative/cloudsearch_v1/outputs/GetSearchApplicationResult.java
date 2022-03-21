@@ -221,57 +221,58 @@ public final class GetSearchApplicationResult {
             this.dataSourceRestrictions = Objects.requireNonNull(dataSourceRestrictions);
             return this;
         }
-
+        public Builder dataSourceRestrictions(DataSourceRestrictionResponse... dataSourceRestrictions) {
+            return dataSourceRestrictions(List.of(dataSourceRestrictions));
+        }
         public Builder defaultFacetOptions(List<FacetOptionsResponse> defaultFacetOptions) {
             this.defaultFacetOptions = Objects.requireNonNull(defaultFacetOptions);
             return this;
         }
-
+        public Builder defaultFacetOptions(FacetOptionsResponse... defaultFacetOptions) {
+            return defaultFacetOptions(List.of(defaultFacetOptions));
+        }
         public Builder defaultSortOptions(SortOptionsResponse defaultSortOptions) {
             this.defaultSortOptions = Objects.requireNonNull(defaultSortOptions);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enableAuditLog(Boolean enableAuditLog) {
             this.enableAuditLog = Objects.requireNonNull(enableAuditLog);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationIds(List<String> operationIds) {
             this.operationIds = Objects.requireNonNull(operationIds);
             return this;
         }
-
+        public Builder operationIds(String... operationIds) {
+            return operationIds(List.of(operationIds));
+        }
         public Builder queryInterpretationConfig(QueryInterpretationConfigResponse queryInterpretationConfig) {
             this.queryInterpretationConfig = Objects.requireNonNull(queryInterpretationConfig);
             return this;
         }
-
         public Builder returnResultThumbnailUrls(Boolean returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = Objects.requireNonNull(returnResultThumbnailUrls);
             return this;
         }
-
         public Builder scoringConfig(ScoringConfigResponse scoringConfig) {
             this.scoringConfig = Objects.requireNonNull(scoringConfig);
             return this;
         }
-
         public Builder sourceConfig(List<SourceConfigResponse> sourceConfig) {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
-        public GetSearchApplicationResult build() {
+        public Builder sourceConfig(SourceConfigResponse... sourceConfig) {
+            return sourceConfig(List.of(sourceConfig));
+        }        public GetSearchApplicationResult build() {
             return new GetSearchApplicationResult(dataSourceRestrictions, defaultFacetOptions, defaultSortOptions, displayName, enableAuditLog, name, operationIds, queryInterpretationConfig, returnResultThumbnailUrls, scoringConfig, sourceConfig);
         }
     }

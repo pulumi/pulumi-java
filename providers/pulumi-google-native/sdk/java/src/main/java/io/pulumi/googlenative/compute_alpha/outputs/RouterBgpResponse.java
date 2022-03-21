@@ -120,27 +120,28 @@ public final class RouterBgpResponse {
             this.advertiseMode = Objects.requireNonNull(advertiseMode);
             return this;
         }
-
         public Builder advertisedGroups(List<String> advertisedGroups) {
             this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
             return this;
         }
-
+        public Builder advertisedGroups(String... advertisedGroups) {
+            return advertisedGroups(List.of(advertisedGroups));
+        }
         public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
             this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
             return this;
         }
-
+        public Builder advertisedIpRanges(RouterAdvertisedIpRangeResponse... advertisedIpRanges) {
+            return advertisedIpRanges(List.of(advertisedIpRanges));
+        }
         public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
-
         public Builder keepaliveInterval(Integer keepaliveInterval) {
             this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
             return this;
-        }
-        public RouterBgpResponse build() {
+        }        public RouterBgpResponse build() {
             return new RouterBgpResponse(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }
     }

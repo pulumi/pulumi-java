@@ -105,22 +105,18 @@ public final class DeploymentResponse {
             this.cloudBuildOptions = Objects.requireNonNull(cloudBuildOptions);
             return this;
         }
-
         public Builder container(ContainerInfoResponse container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
-
         public Builder files(Map<String,String> files) {
             this.files = Objects.requireNonNull(files);
             return this;
         }
-
         public Builder zip(ZipInfoResponse zip) {
             this.zip = Objects.requireNonNull(zip);
             return this;
-        }
-        public DeploymentResponse build() {
+        }        public DeploymentResponse build() {
             return new DeploymentResponse(cloudBuildOptions, container, files, zip);
         }
     }

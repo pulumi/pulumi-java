@@ -71,12 +71,13 @@ public final class RuntimeMetadataResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(ParameterMetadataResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder sdkInfo(SDKInfoResponse sdkInfo) {
             this.sdkInfo = Objects.requireNonNull(sdkInfo);
             return this;
-        }
-        public RuntimeMetadataResponse build() {
+        }        public RuntimeMetadataResponse build() {
             return new RuntimeMetadataResponse(parameters, sdkInfo);
         }
     }

@@ -116,22 +116,30 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
             this.requestHeaderToAdds = requestHeaderToAdds;
             return this;
         }
-
+        public Builder requestHeaderToAdds(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd... requestHeaderToAdds) {
+            return requestHeaderToAdds(List.of(requestHeaderToAdds));
+        }
         public Builder requestHeaderToRemoves(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove> requestHeaderToRemoves) {
             this.requestHeaderToRemoves = requestHeaderToRemoves;
             return this;
         }
-
+        public Builder requestHeaderToRemoves(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove... requestHeaderToRemoves) {
+            return requestHeaderToRemoves(List.of(requestHeaderToRemoves));
+        }
         public Builder responseHeaderToAdds(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd> responseHeaderToAdds) {
             this.responseHeaderToAdds = responseHeaderToAdds;
             return this;
         }
-
+        public Builder responseHeaderToAdds(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd... responseHeaderToAdds) {
+            return responseHeaderToAdds(List.of(responseHeaderToAdds));
+        }
         public Builder responseHeaderToRemoves(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove> responseHeaderToRemoves) {
             this.responseHeaderToRemoves = responseHeaderToRemoves;
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction build() {
+        public Builder responseHeaderToRemoves(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove... responseHeaderToRemoves) {
+            return responseHeaderToRemoves(List.of(responseHeaderToRemoves));
+        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction(requestHeaderToAdds, requestHeaderToRemoves, responseHeaderToAdds, responseHeaderToRemoves);
         }
     }

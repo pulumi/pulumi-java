@@ -57,12 +57,10 @@ public final class SecretTopicGetArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public SecretTopicGetArgs build() {
+        }        public SecretTopicGetArgs build() {
             return new SecretTopicGetArgs(name);
         }
     }

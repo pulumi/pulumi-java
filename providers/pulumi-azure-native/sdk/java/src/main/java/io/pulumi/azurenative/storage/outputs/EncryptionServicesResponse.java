@@ -103,22 +103,18 @@ public final class EncryptionServicesResponse {
             this.blob = blob;
             return this;
         }
-
         public Builder file(@Nullable EncryptionServiceResponse file) {
             this.file = file;
             return this;
         }
-
         public Builder queue(@Nullable EncryptionServiceResponse queue) {
             this.queue = queue;
             return this;
         }
-
         public Builder table(@Nullable EncryptionServiceResponse table) {
             this.table = table;
             return this;
-        }
-        public EncryptionServicesResponse build() {
+        }        public EncryptionServicesResponse build() {
             return new EncryptionServicesResponse(blob, file, queue, table);
         }
     }

@@ -71,12 +71,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
-
         public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
             this.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
-        }
-        public VirtualMachineScaleSetVMProtectionPolicyResponse build() {
+        }        public VirtualMachineScaleSetVMProtectionPolicyResponse build() {
             return new VirtualMachineScaleSetVMProtectionPolicyResponse(protectFromScaleIn, protectFromScaleSetActions);
         }
     }

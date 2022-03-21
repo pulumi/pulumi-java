@@ -65,17 +65,20 @@ public final class GetVirtualMFADeviceResult {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder tags(@Nullable List<VirtualMFADeviceTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(VirtualMFADeviceTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder users(@Nullable List<String> users) {
             this.users = users;
             return this;
         }
-        public GetVirtualMFADeviceResult build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public GetVirtualMFADeviceResult build() {
             return new GetVirtualMFADeviceResult(serialNumber, tags, users);
         }
     }

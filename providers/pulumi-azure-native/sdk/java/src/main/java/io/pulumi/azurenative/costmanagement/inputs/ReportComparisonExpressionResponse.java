@@ -93,17 +93,17 @@ public final class ReportComparisonExpressionResponse extends io.pulumi.resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ReportComparisonExpressionResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ReportComparisonExpressionResponse build() {
             return new ReportComparisonExpressionResponse(name, operator, values);
         }
     }

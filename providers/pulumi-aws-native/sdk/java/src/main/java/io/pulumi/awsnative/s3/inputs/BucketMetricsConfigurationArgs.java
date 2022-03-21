@@ -92,42 +92,37 @@ public final class BucketMetricsConfigurationArgs extends io.pulumi.resources.Re
             this.accessPointArn = accessPointArn;
             return this;
         }
-
         public Builder accessPointArn(@Nullable String accessPointArn) {
             this.accessPointArn = Output.ofNullable(accessPointArn);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
             this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
-        public BucketMetricsConfigurationArgs build() {
+        public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public BucketMetricsConfigurationArgs build() {
             return new BucketMetricsConfigurationArgs(accessPointArn, id, prefix, tagFilters);
         }
     }

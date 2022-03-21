@@ -124,62 +124,50 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
-
         public Builder cryptoKeyId(String cryptoKeyId) {
             this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
-
         public Builder externalProtectionLevelOptions(@Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions) {
             this.externalProtectionLevelOptions = externalProtectionLevelOptions;
             return this;
         }
-
         public Builder externalProtectionLevelOptions(@Nullable ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
             this.externalProtectionLevelOptions = Output.ofNullable(externalProtectionLevelOptions);
             return this;
         }
-
         public Builder keyRingId(Output<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<CryptoKeyVersionState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable CryptoKeyVersionState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public CryptoKeyVersionArgs build() {
+        }        public CryptoKeyVersionArgs build() {
             return new CryptoKeyVersionArgs(cryptoKeyId, externalProtectionLevelOptions, keyRingId, location, project, state);
         }
     }

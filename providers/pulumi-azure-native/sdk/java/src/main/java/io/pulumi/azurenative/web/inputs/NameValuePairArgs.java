@@ -78,22 +78,18 @@ public final class NameValuePairArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public NameValuePairArgs build() {
+        }        public NameValuePairArgs build() {
             return new NameValuePairArgs(name, value);
         }
     }

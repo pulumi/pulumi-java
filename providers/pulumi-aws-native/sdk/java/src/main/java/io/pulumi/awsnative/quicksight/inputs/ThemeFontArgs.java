@@ -53,12 +53,10 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
             this.fontFamily = fontFamily;
             return this;
         }
-
         public Builder fontFamily(@Nullable String fontFamily) {
             this.fontFamily = Output.ofNullable(fontFamily);
             return this;
-        }
-        public ThemeFontArgs build() {
+        }        public ThemeFontArgs build() {
             return new ThemeFontArgs(fontFamily);
         }
     }

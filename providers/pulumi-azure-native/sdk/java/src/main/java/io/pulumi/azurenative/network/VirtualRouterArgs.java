@@ -190,92 +190,77 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             this.hostedGateway = hostedGateway;
             return this;
         }
-
         public Builder hostedGateway(@Nullable SubResourceArgs hostedGateway) {
             this.hostedGateway = Output.ofNullable(hostedGateway);
             return this;
         }
-
         public Builder hostedSubnet(@Nullable Output<SubResourceArgs> hostedSubnet) {
             this.hostedSubnet = hostedSubnet;
             return this;
         }
-
         public Builder hostedSubnet(@Nullable SubResourceArgs hostedSubnet) {
             this.hostedSubnet = Output.ofNullable(hostedSubnet);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
-
         public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = Output.ofNullable(virtualRouterAsn);
             return this;
         }
-
         public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
-
         public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = Output.ofNullable(virtualRouterIps);
             return this;
         }
-
+        public Builder virtualRouterIps(String... virtualRouterIps) {
+            return virtualRouterIps(List.of(virtualRouterIps));
+        }
         public Builder virtualRouterName(@Nullable Output<String> virtualRouterName) {
             this.virtualRouterName = virtualRouterName;
             return this;
         }
-
         public Builder virtualRouterName(@Nullable String virtualRouterName) {
             this.virtualRouterName = Output.ofNullable(virtualRouterName);
             return this;
-        }
-        public VirtualRouterArgs build() {
+        }        public VirtualRouterArgs build() {
             return new VirtualRouterArgs(hostedGateway, hostedSubnet, id, location, resourceGroupName, tags, virtualRouterAsn, virtualRouterIps, virtualRouterName);
         }
     }

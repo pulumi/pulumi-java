@@ -87,17 +87,14 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
             this.emailMessage = emailMessage;
             return this;
         }
-
         public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
-
         public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = smsMessage;
             return this;
-        }
-        public UserPoolAdminCreateUserConfigInviteMessageTemplate build() {
+        }        public UserPoolAdminCreateUserConfigInviteMessageTemplate build() {
             return new UserPoolAdminCreateUserConfigInviteMessageTemplate(emailMessage, emailSubject, smsMessage);
         }
     }

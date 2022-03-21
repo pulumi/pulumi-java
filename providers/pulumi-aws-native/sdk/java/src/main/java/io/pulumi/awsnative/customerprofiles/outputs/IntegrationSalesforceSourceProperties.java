@@ -64,17 +64,14 @@ public final class IntegrationSalesforceSourceProperties {
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
-
         public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
-
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public IntegrationSalesforceSourceProperties build() {
+        }        public IntegrationSalesforceSourceProperties build() {
             return new IntegrationSalesforceSourceProperties(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }
     }

@@ -122,27 +122,22 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder taskName(String taskName) {
             this.taskName = Objects.requireNonNull(taskName);
             return this;
-        }
-        public GetTaskArgs build() {
+        }        public GetTaskArgs build() {
             return new GetTaskArgs(expand, groupName, projectName, serviceName, taskName);
         }
     }

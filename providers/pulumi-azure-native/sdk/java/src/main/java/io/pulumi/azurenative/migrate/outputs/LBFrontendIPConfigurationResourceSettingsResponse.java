@@ -122,27 +122,22 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
             this.name = name;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder zones(@Nullable String zones) {
             this.zones = zones;
             return this;
-        }
-        public LBFrontendIPConfigurationResourceSettingsResponse build() {
+        }        public LBFrontendIPConfigurationResourceSettingsResponse build() {
             return new LBFrontendIPConfigurationResourceSettingsResponse(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);
         }
     }

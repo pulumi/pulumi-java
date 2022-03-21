@@ -80,12 +80,13 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
             this.columns = columns;
             return this;
         }
-
+        public Builder columns(SyncGroupSchemaTableColumnResponse... columns) {
+            return columns(List.of(columns));
+        }
         public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = quotedName;
             return this;
-        }
-        public SyncGroupSchemaTableResponse build() {
+        }        public SyncGroupSchemaTableResponse build() {
             return new SyncGroupSchemaTableResponse(columns, quotedName);
         }
     }

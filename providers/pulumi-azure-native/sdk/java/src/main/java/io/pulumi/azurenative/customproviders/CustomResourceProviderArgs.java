@@ -159,72 +159,67 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<CustomRPActionRouteDefinitionArgs> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(CustomRPActionRouteDefinitionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceProviderName(@Nullable Output<String> resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
-
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = Output.ofNullable(resourceProviderName);
             return this;
         }
-
         public Builder resourceTypes(@Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public Builder resourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
             this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
-
+        public Builder resourceTypes(CustomRPResourceTypeRouteDefinitionArgs... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validations(@Nullable Output<List<CustomRPValidationsArgs>> validations) {
             this.validations = validations;
             return this;
         }
-
         public Builder validations(@Nullable List<CustomRPValidationsArgs> validations) {
             this.validations = Output.ofNullable(validations);
             return this;
         }
-        public CustomResourceProviderArgs build() {
+        public Builder validations(CustomRPValidationsArgs... validations) {
+            return validations(List.of(validations));
+        }        public CustomResourceProviderArgs build() {
             return new CustomResourceProviderArgs(actions, location, resourceGroupName, resourceProviderName, resourceTypes, tags, validations);
         }
     }

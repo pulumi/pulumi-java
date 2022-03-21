@@ -73,22 +73,18 @@ public final class QuickConnectQuickConnectConfigQueueConfigArgs extends io.pulu
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
-
         public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Output.of(Objects.requireNonNull(contactFlowId));
             return this;
         }
-
         public Builder queueId(Output<String> queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
-
         public Builder queueId(String queueId) {
             this.queueId = Output.of(Objects.requireNonNull(queueId));
             return this;
-        }
-        public QuickConnectQuickConnectConfigQueueConfigArgs build() {
+        }        public QuickConnectQuickConnectConfigQueueConfigArgs build() {
             return new QuickConnectQuickConnectConfigQueueConfigArgs(contactFlowId, queueId);
         }
     }

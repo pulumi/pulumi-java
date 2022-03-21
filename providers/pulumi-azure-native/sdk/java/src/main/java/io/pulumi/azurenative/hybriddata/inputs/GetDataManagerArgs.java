@@ -72,12 +72,10 @@ public final class GetDataManagerArgs extends io.pulumi.resources.InvokeArgs {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDataManagerArgs build() {
+        }        public GetDataManagerArgs build() {
             return new GetDataManagerArgs(dataManagerName, resourceGroupName);
         }
     }

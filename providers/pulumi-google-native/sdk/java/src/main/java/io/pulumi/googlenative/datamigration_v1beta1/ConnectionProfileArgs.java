@@ -207,112 +207,90 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             this.cloudsql = cloudsql;
             return this;
         }
-
         public Builder cloudsql(@Nullable CloudSqlConnectionProfileArgs cloudsql) {
             this.cloudsql = Output.ofNullable(cloudsql);
             return this;
         }
-
         public Builder connectionProfileId(Output<String> connectionProfileId) {
             this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
             return this;
         }
-
         public Builder connectionProfileId(String connectionProfileId) {
             this.connectionProfileId = Output.of(Objects.requireNonNull(connectionProfileId));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mysql(@Nullable Output<MySqlConnectionProfileArgs> mysql) {
             this.mysql = mysql;
             return this;
         }
-
         public Builder mysql(@Nullable MySqlConnectionProfileArgs mysql) {
             this.mysql = Output.ofNullable(mysql);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder provider(@Nullable Output<ConnectionProfileProvider> provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable ConnectionProfileProvider provider) {
             this.provider = Output.ofNullable(provider);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder state(@Nullable Output<ConnectionProfileState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ConnectionProfileState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public ConnectionProfileArgs build() {
+        }        public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(cloudsql, connectionProfileId, displayName, labels, location, mysql, name, project, provider, requestId, state);
         }
     }

@@ -238,62 +238,53 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
             this.cidrBlock = cidrBlock;
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcPeeringConnectionFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder peerCidrBlock(@Nullable String peerCidrBlock) {
             this.peerCidrBlock = peerCidrBlock;
             return this;
         }
-
         public Builder peerOwnerId(@Nullable String peerOwnerId) {
             this.peerOwnerId = peerOwnerId;
             return this;
         }
-
         public Builder peerRegion(@Nullable String peerRegion) {
             this.peerRegion = peerRegion;
             return this;
         }
-
         public Builder peerVpcId(@Nullable String peerVpcId) {
             this.peerVpcId = peerVpcId;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public GetVpcPeeringConnectionArgs build() {
+        }        public GetVpcPeeringConnectionArgs build() {
             return new GetVpcPeeringConnectionArgs(cidrBlock, filters, id, ownerId, peerCidrBlock, peerOwnerId, peerRegion, peerVpcId, region, status, tags, vpcId);
         }
     }

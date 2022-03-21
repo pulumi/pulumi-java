@@ -51,8 +51,7 @@ public final class BucketVersioning {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public BucketVersioning build() {
+        }        public BucketVersioning build() {
             return new BucketVersioning(enabled);
         }
     }

@@ -122,27 +122,25 @@ public final class ResponsePlanIncidentTemplate {
             this.dedupeString = dedupeString;
             return this;
         }
-
         public Builder impact(Integer impact) {
             this.impact = Objects.requireNonNull(impact);
             return this;
         }
-
         public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItem> notificationTargets) {
             this.notificationTargets = notificationTargets;
             return this;
         }
-
+        public Builder notificationTargets(ResponsePlanNotificationTargetItem... notificationTargets) {
+            return notificationTargets(List.of(notificationTargets));
+        }
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public ResponsePlanIncidentTemplate build() {
+        }        public ResponsePlanIncidentTemplate build() {
             return new ResponsePlanIncidentTemplate(dedupeString, impact, notificationTargets, summary, title);
         }
     }

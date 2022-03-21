@@ -102,22 +102,18 @@ public final class DiscoveredResponse {
             this.analysisStatus = Objects.requireNonNull(analysisStatus);
             return this;
         }
-
         public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
-
         public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
-
         public Builder cpe(String cpe) {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
-        }
-        public DiscoveredResponse build() {
+        }        public DiscoveredResponse build() {
             return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
         }
     }

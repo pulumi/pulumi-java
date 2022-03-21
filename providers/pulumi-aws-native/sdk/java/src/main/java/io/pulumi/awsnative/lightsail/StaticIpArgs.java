@@ -74,22 +74,18 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
             this.attachedTo = attachedTo;
             return this;
         }
-
         public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = Output.ofNullable(attachedTo);
             return this;
         }
-
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
             this.staticIpName = staticIpName;
             return this;
         }
-
         public Builder staticIpName(@Nullable String staticIpName) {
             this.staticIpName = Output.ofNullable(staticIpName);
             return this;
-        }
-        public StaticIpArgs build() {
+        }        public StaticIpArgs build() {
             return new StaticIpArgs(attachedTo, staticIpName);
         }
     }

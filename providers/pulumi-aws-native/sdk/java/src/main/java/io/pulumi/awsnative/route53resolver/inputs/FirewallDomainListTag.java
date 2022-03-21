@@ -76,12 +76,10 @@ public final class FirewallDomainListTag extends io.pulumi.resources.InvokeArgs 
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FirewallDomainListTag build() {
+        }        public FirewallDomainListTag build() {
             return new FirewallDomainListTag(key, value);
         }
     }

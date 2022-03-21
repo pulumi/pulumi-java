@@ -117,62 +117,59 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             this.crawlComments = crawlComments;
             return this;
         }
-
         public Builder crawlComments(@Nullable Boolean crawlComments) {
             this.crawlComments = Output.ofNullable(crawlComments);
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
-
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
-
+        public Builder exclusionPatterns(String... exclusionPatterns) {
+            return exclusionPatterns(List.of(exclusionPatterns));
+        }
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
-
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Output.ofNullable(fieldMappings);
             return this;
         }
-
+        public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
+            return fieldMappings(List.of(fieldMappings));
+        }
         public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
-
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
-
+        public Builder inclusionPatterns(String... inclusionPatterns) {
+            return inclusionPatterns(List.of(inclusionPatterns));
+        }
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder useChangeLog(@Nullable Output<Boolean> useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
-
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = Output.ofNullable(useChangeLog);
             return this;
-        }
-        public DataSourceWorkDocsConfigurationArgs build() {
+        }        public DataSourceWorkDocsConfigurationArgs build() {
             return new DataSourceWorkDocsConfigurationArgs(crawlComments, exclusionPatterns, fieldMappings, inclusionPatterns, organizationId, useChangeLog);
         }
     }

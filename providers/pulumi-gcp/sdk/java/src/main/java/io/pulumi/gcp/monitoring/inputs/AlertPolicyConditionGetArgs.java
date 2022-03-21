@@ -159,62 +159,50 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
             this.conditionAbsent = conditionAbsent;
             return this;
         }
-
         public Builder conditionAbsent(@Nullable AlertPolicyConditionConditionAbsentGetArgs conditionAbsent) {
             this.conditionAbsent = Output.ofNullable(conditionAbsent);
             return this;
         }
-
         public Builder conditionMatchedLog(@Nullable Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
-
         public Builder conditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLogGetArgs conditionMatchedLog) {
             this.conditionMatchedLog = Output.ofNullable(conditionMatchedLog);
             return this;
         }
-
         public Builder conditionMonitoringQueryLanguage(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
-
         public Builder conditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = Output.ofNullable(conditionMonitoringQueryLanguage);
             return this;
         }
-
         public Builder conditionThreshold(@Nullable Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
-
         public Builder conditionThreshold(@Nullable AlertPolicyConditionConditionThresholdGetArgs conditionThreshold) {
             this.conditionThreshold = Output.ofNullable(conditionThreshold);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AlertPolicyConditionGetArgs build() {
+        }        public AlertPolicyConditionGetArgs build() {
             return new AlertPolicyConditionGetArgs(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }
     }

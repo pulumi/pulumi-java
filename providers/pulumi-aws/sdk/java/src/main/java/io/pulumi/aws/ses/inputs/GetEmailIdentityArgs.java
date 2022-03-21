@@ -54,8 +54,7 @@ public final class GetEmailIdentityArgs extends io.pulumi.resources.InvokeArgs {
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
-        }
-        public GetEmailIdentityArgs build() {
+        }        public GetEmailIdentityArgs build() {
             return new GetEmailIdentityArgs(email);
         }
     }

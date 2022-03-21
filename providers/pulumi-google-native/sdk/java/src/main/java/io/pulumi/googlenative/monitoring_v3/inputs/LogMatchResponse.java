@@ -77,12 +77,10 @@ public final class LogMatchResponse extends io.pulumi.resources.InvokeArgs {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder labelExtractors(Map<String,String> labelExtractors) {
             this.labelExtractors = Objects.requireNonNull(labelExtractors);
             return this;
-        }
-        public LogMatchResponse build() {
+        }        public LogMatchResponse build() {
             return new LogMatchResponse(filter, labelExtractors);
         }
     }

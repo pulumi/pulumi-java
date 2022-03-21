@@ -89,22 +89,18 @@ public final class DataSetRowLevelPermissionDataSet {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder formatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder permissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
-        }
-        public DataSetRowLevelPermissionDataSet build() {
+        }        public DataSetRowLevelPermissionDataSet build() {
             return new DataSetRowLevelPermissionDataSet(arn, formatVersion, namespace, permissionPolicy);
         }
     }

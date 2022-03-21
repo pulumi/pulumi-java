@@ -66,12 +66,10 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetPolicyArgs build() {
+        }        public GetPolicyArgs build() {
             return new GetPolicyArgs(policyId, project);
         }
     }

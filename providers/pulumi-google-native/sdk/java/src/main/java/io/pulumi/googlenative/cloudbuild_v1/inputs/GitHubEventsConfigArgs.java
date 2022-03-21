@@ -144,62 +144,50 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             this.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
-
         public Builder enterpriseConfigResourceName(@Nullable String enterpriseConfigResourceName) {
             this.enterpriseConfigResourceName = Output.ofNullable(enterpriseConfigResourceName);
             return this;
         }
-
         public Builder installationId(@Nullable Output<String> installationId) {
             this.installationId = installationId;
             return this;
         }
-
         public Builder installationId(@Nullable String installationId) {
             this.installationId = Output.ofNullable(installationId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
-
         public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
             this.pullRequest = Output.ofNullable(pullRequest);
             return this;
         }
-
         public Builder push(@Nullable Output<PushFilterArgs> push) {
             this.push = push;
             return this;
         }
-
         public Builder push(@Nullable PushFilterArgs push) {
             this.push = Output.ofNullable(push);
             return this;
-        }
-        public GitHubEventsConfigArgs build() {
+        }        public GitHubEventsConfigArgs build() {
             return new GitHubEventsConfigArgs(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
         }
     }

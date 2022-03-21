@@ -102,52 +102,42 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
-
         public Builder handler(String handler) {
             this.handler = Output.of(Objects.requireNonNull(handler));
             return this;
         }
-
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
-
         public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
-
         public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
-        }
-        public CanaryCodeArgs build() {
+        }        public CanaryCodeArgs build() {
             return new CanaryCodeArgs(handler, s3Bucket, s3Key, s3ObjectVersion, script);
         }
     }

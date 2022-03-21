@@ -58,12 +58,10 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificateArgs extends io
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = Output.ofNullable(x509Certificate);
             return this;
-        }
-        public TenantInboundSamlConfigIdpConfigIdpCertificateArgs build() {
+        }        public TenantInboundSamlConfigIdpConfigIdpCertificateArgs build() {
             return new TenantInboundSamlConfigIdpConfigIdpCertificateArgs(x509Certificate);
         }
     }

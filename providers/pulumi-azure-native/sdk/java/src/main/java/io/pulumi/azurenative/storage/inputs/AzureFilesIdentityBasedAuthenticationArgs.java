@@ -81,22 +81,18 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
             this.activeDirectoryProperties = activeDirectoryProperties;
             return this;
         }
-
         public Builder activeDirectoryProperties(@Nullable ActiveDirectoryPropertiesArgs activeDirectoryProperties) {
             this.activeDirectoryProperties = Output.ofNullable(activeDirectoryProperties);
             return this;
         }
-
         public Builder directoryServiceOptions(Output<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
         }
-
         public Builder directoryServiceOptions(Either<String,DirectoryServiceOptions> directoryServiceOptions) {
             this.directoryServiceOptions = Output.of(Objects.requireNonNull(directoryServiceOptions));
             return this;
-        }
-        public AzureFilesIdentityBasedAuthenticationArgs build() {
+        }        public AzureFilesIdentityBasedAuthenticationArgs build() {
             return new AzureFilesIdentityBasedAuthenticationArgs(activeDirectoryProperties, directoryServiceOptions);
         }
     }

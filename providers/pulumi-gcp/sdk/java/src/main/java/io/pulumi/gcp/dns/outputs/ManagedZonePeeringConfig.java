@@ -53,8 +53,7 @@ public final class ManagedZonePeeringConfig {
         public Builder targetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
-        }
-        public ManagedZonePeeringConfig build() {
+        }        public ManagedZonePeeringConfig build() {
             return new ManagedZonePeeringConfig(targetNetwork);
         }
     }

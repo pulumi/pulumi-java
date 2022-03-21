@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends io.pulumi.resou
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public GooglePrivacyDlpV2PublishToPubSubArgs build() {
+        }        public GooglePrivacyDlpV2PublishToPubSubArgs build() {
             return new GooglePrivacyDlpV2PublishToPubSubArgs(topic);
         }
     }

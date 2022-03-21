@@ -105,22 +105,24 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
-
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder operations(List<GoogleCloudApigeeV1OperationResponse> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
-
+        public Builder operations(GoogleCloudApigeeV1OperationResponse... operations) {
+            return operations(List.of(operations));
+        }
         public Builder quota(GoogleCloudApigeeV1QuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
-        }
-        public GoogleCloudApigeeV1OperationConfigResponse build() {
+        }        public GoogleCloudApigeeV1OperationConfigResponse build() {
             return new GoogleCloudApigeeV1OperationConfigResponse(apiSource, attributes, operations, quota);
         }
     }

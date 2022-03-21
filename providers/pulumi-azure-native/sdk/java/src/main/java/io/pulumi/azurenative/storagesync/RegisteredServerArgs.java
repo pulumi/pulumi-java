@@ -218,112 +218,90 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
-
         public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
-
         public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder lastHeartBeat(@Nullable Output<String> lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
-
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = Output.ofNullable(lastHeartBeat);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverCertificate(@Nullable Output<String> serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
-
         public Builder serverCertificate(@Nullable String serverCertificate) {
             this.serverCertificate = Output.ofNullable(serverCertificate);
             return this;
         }
-
         public Builder serverId(@Nullable Output<String> serverId) {
             this.serverId = serverId;
             return this;
         }
-
         public Builder serverId(@Nullable String serverId) {
             this.serverId = Output.ofNullable(serverId);
             return this;
         }
-
         public Builder serverOSVersion(@Nullable Output<String> serverOSVersion) {
             this.serverOSVersion = serverOSVersion;
             return this;
         }
-
         public Builder serverOSVersion(@Nullable String serverOSVersion) {
             this.serverOSVersion = Output.ofNullable(serverOSVersion);
             return this;
         }
-
         public Builder serverRole(@Nullable Output<String> serverRole) {
             this.serverRole = serverRole;
             return this;
         }
-
         public Builder serverRole(@Nullable String serverRole) {
             this.serverRole = Output.ofNullable(serverRole);
             return this;
         }
-
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
-
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
-        }
-        public RegisteredServerArgs build() {
+        }        public RegisteredServerArgs build() {
             return new RegisteredServerArgs(agentVersion, clusterId, clusterName, friendlyName, lastHeartBeat, resourceGroupName, serverCertificate, serverId, serverOSVersion, serverRole, storageSyncServiceName);
         }
     }

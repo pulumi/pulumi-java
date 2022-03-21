@@ -65,22 +65,18 @@ public final class DetectorTagArgs extends io.pulumi.resources.ResourceArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public DetectorTagArgs build() {
+        }        public DetectorTagArgs build() {
             return new DetectorTagArgs(key, value);
         }
     }

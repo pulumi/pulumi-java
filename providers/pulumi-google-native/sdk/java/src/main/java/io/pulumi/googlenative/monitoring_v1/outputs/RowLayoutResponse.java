@@ -53,7 +53,9 @@ public final class RowLayoutResponse {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }
-        public RowLayoutResponse build() {
+        public Builder rows(RowResponse... rows) {
+            return rows(List.of(rows));
+        }        public RowLayoutResponse build() {
             return new RowLayoutResponse(rows);
         }
     }

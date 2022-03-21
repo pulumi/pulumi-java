@@ -66,12 +66,13 @@ public final class GetLaunchTemplateInstanceMarketOption extends io.pulumi.resou
             this.marketType = Objects.requireNonNull(marketType);
             return this;
         }
-
         public Builder spotOptions(List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
             this.spotOptions = Objects.requireNonNull(spotOptions);
             return this;
         }
-        public GetLaunchTemplateInstanceMarketOption build() {
+        public Builder spotOptions(GetLaunchTemplateInstanceMarketOptionSpotOption... spotOptions) {
+            return spotOptions(List.of(spotOptions));
+        }        public GetLaunchTemplateInstanceMarketOption build() {
             return new GetLaunchTemplateInstanceMarketOption(marketType, spotOptions);
         }
     }

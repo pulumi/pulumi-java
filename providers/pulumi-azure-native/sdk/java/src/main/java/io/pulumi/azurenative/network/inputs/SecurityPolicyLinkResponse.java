@@ -60,8 +60,7 @@ public final class SecurityPolicyLinkResponse extends io.pulumi.resources.Invoke
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public SecurityPolicyLinkResponse build() {
+        }        public SecurityPolicyLinkResponse build() {
             return new SecurityPolicyLinkResponse(id);
         }
     }

@@ -108,42 +108,37 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
             this.pathId = pathId;
             return this;
         }
-
         public Builder pathId(@Nullable String pathId) {
             this.pathId = Output.ofNullable(pathId);
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
             return this;
         }
-
         public Builder provisioningParameters(@Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-
         public Builder provisioningParameters(@Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs> provisioningParameters) {
             this.provisioningParameters = Output.ofNullable(provisioningParameters);
             return this;
         }
-        public ProjectServiceCatalogProvisioningDetailsArgs build() {
+        public Builder provisioningParameters(ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs... provisioningParameters) {
+            return provisioningParameters(List.of(provisioningParameters));
+        }        public ProjectServiceCatalogProvisioningDetailsArgs build() {
             return new ProjectServiceCatalogProvisioningDetailsArgs(pathId, productId, provisioningArtifactId, provisioningParameters);
         }
     }

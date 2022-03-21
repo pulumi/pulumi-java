@@ -137,42 +137,37 @@ public final class GetImageResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageDigest(String imageDigest) {
             this.imageDigest = Objects.requireNonNull(imageDigest);
             return this;
         }
-
         public Builder imagePushedAt(Integer imagePushedAt) {
             this.imagePushedAt = Objects.requireNonNull(imagePushedAt);
             return this;
         }
-
         public Builder imageSizeInBytes(Integer imageSizeInBytes) {
             this.imageSizeInBytes = Objects.requireNonNull(imageSizeInBytes);
             return this;
         }
-
         public Builder imageTag(@Nullable String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
-
         public Builder imageTags(List<String> imageTags) {
             this.imageTags = Objects.requireNonNull(imageTags);
             return this;
         }
-
+        public Builder imageTags(String... imageTags) {
+            return imageTags(List.of(imageTags));
+        }
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
-        }
-        public GetImageResult build() {
+        }        public GetImageResult build() {
             return new GetImageResult(id, imageDigest, imagePushedAt, imageSizeInBytes, imageTag, imageTags, registryId, repositoryName);
         }
     }

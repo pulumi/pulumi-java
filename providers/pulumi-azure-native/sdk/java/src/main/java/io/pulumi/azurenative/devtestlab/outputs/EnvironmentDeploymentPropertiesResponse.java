@@ -73,12 +73,13 @@ public final class EnvironmentDeploymentPropertiesResponse {
             this.armTemplateId = armTemplateId;
             return this;
         }
-
         public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-        public EnvironmentDeploymentPropertiesResponse build() {
+        public Builder parameters(ArmTemplateParameterPropertiesResponse... parameters) {
+            return parameters(List.of(parameters));
+        }        public EnvironmentDeploymentPropertiesResponse build() {
             return new EnvironmentDeploymentPropertiesResponse(armTemplateId, parameters);
         }
     }

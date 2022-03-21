@@ -105,42 +105,37 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
             this.errorDocument = errorDocument;
             return this;
         }
-
         public Builder errorDocument(@Nullable String errorDocument) {
             this.errorDocument = Output.ofNullable(errorDocument);
             return this;
         }
-
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
-
         public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = Output.ofNullable(indexDocument);
             return this;
         }
-
         public Builder redirectAllRequestsTo(@Nullable Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo) {
             this.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
-
         public Builder redirectAllRequestsTo(@Nullable BucketRedirectAllRequestsToArgs redirectAllRequestsTo) {
             this.redirectAllRequestsTo = Output.ofNullable(redirectAllRequestsTo);
             return this;
         }
-
         public Builder routingRules(@Nullable Output<List<BucketRoutingRuleArgs>> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
-
         public Builder routingRules(@Nullable List<BucketRoutingRuleArgs> routingRules) {
             this.routingRules = Output.ofNullable(routingRules);
             return this;
         }
-        public BucketWebsiteConfigurationArgs build() {
+        public Builder routingRules(BucketRoutingRuleArgs... routingRules) {
+            return routingRules(List.of(routingRules));
+        }        public BucketWebsiteConfigurationArgs build() {
             return new BucketWebsiteConfigurationArgs(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }
     }

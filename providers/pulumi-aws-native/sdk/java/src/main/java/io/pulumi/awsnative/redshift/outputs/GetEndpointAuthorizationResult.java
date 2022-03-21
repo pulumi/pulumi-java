@@ -186,47 +186,44 @@ public final class GetEndpointAuthorizationResult {
             this.allowedAllVPCs = allowedAllVPCs;
             return this;
         }
-
         public Builder allowedVPCs(@Nullable List<String> allowedVPCs) {
             this.allowedVPCs = allowedVPCs;
             return this;
         }
-
+        public Builder allowedVPCs(String... allowedVPCs) {
+            return allowedVPCs(List.of(allowedVPCs));
+        }
         public Builder authorizeTime(@Nullable String authorizeTime) {
             this.authorizeTime = authorizeTime;
             return this;
         }
-
         public Builder clusterStatus(@Nullable String clusterStatus) {
             this.clusterStatus = clusterStatus;
             return this;
         }
-
         public Builder endpointCount(@Nullable Integer endpointCount) {
             this.endpointCount = endpointCount;
             return this;
         }
-
         public Builder grantee(@Nullable String grantee) {
             this.grantee = grantee;
             return this;
         }
-
         public Builder grantor(@Nullable String grantor) {
             this.grantor = grantor;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder vpcIds(@Nullable List<String> vpcIds) {
             this.vpcIds = vpcIds;
             return this;
         }
-        public GetEndpointAuthorizationResult build() {
+        public Builder vpcIds(String... vpcIds) {
+            return vpcIds(List.of(vpcIds));
+        }        public GetEndpointAuthorizationResult build() {
             return new GetEndpointAuthorizationResult(allowedAllVPCs, allowedVPCs, authorizeTime, clusterStatus, endpointCount, grantee, grantor, status, vpcIds);
         }
     }

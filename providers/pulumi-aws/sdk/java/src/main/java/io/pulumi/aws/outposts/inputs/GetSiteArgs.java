@@ -74,12 +74,10 @@ public final class GetSiteArgs extends io.pulumi.resources.InvokeArgs {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public GetSiteArgs build() {
+        }        public GetSiteArgs build() {
             return new GetSiteArgs(id, name);
         }
     }

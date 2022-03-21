@@ -188,92 +188,74 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
-
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
-
         public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable Integer interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder matcher(@Nullable Output<String> matcher) {
             this.matcher = matcher;
             return this;
         }
-
         public Builder matcher(@Nullable String matcher) {
             this.matcher = Output.ofNullable(matcher);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
-        }
-        public TargetGroupHealthCheckGetArgs build() {
+        }        public TargetGroupHealthCheckGetArgs build() {
             return new TargetGroupHealthCheckGetArgs(enabled, healthyThreshold, interval, matcher, path, port, protocol, timeout, unhealthyThreshold);
         }
     }

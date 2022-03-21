@@ -204,52 +204,45 @@ public final class GetActivityLogAlertResult {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder condition(AlertRuleAllOfConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetActivityLogAlertResult build() {
+        }        public GetActivityLogAlertResult build() {
             return new GetActivityLogAlertResult(actions, condition, description, enabled, id, location, name, scopes, tags, type);
         }
     }

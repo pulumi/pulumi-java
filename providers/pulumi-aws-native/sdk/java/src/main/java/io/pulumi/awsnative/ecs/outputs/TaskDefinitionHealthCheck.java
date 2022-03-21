@@ -121,27 +121,25 @@ public final class TaskDefinitionHealthCheck {
             this.command = command;
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder retries(@Nullable Integer retries) {
             this.retries = retries;
             return this;
         }
-
         public Builder startPeriod(@Nullable Integer startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
-
         public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public TaskDefinitionHealthCheck build() {
+        }        public TaskDefinitionHealthCheck build() {
             return new TaskDefinitionHealthCheck(command, interval, retries, startPeriod, timeout);
         }
     }

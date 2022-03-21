@@ -76,12 +76,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder urlTypeHint(String urlTypeHint) {
             this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(url, urlTypeHint);
         }
     }

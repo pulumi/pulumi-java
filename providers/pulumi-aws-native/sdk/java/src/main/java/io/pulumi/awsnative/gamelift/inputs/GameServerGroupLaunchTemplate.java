@@ -82,17 +82,14 @@ public final class GameServerGroupLaunchTemplate extends io.pulumi.resources.Inv
             this.launchTemplateId = launchTemplateId;
             return this;
         }
-
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GameServerGroupLaunchTemplate build() {
+        }        public GameServerGroupLaunchTemplate build() {
             return new GameServerGroupLaunchTemplate(launchTemplateId, launchTemplateName, version);
         }
     }

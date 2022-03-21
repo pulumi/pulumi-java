@@ -70,12 +70,13 @@ public final class ActivityDependencyResponse {
             this.activity = Objects.requireNonNull(activity);
             return this;
         }
-
         public Builder dependencyConditions(List<String> dependencyConditions) {
             this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
             return this;
         }
-        public ActivityDependencyResponse build() {
+        public Builder dependencyConditions(String... dependencyConditions) {
+            return dependencyConditions(List.of(dependencyConditions));
+        }        public ActivityDependencyResponse build() {
             return new ActivityDependencyResponse(activity, dependencyConditions);
         }
     }

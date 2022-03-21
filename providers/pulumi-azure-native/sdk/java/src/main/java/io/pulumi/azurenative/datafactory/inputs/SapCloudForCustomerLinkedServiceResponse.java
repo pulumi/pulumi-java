@@ -199,47 +199,41 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
-        }
-        public SapCloudForCustomerLinkedServiceResponse build() {
+        }        public SapCloudForCustomerLinkedServiceResponse build() {
             return new SapCloudForCustomerLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, password, type, url, username);
         }
     }

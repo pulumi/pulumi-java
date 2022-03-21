@@ -130,72 +130,70 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             this.apiVersions = apiVersions;
             return this;
         }
-
         public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = Output.ofNullable(apiVersions);
             return this;
         }
-
+        public Builder apiVersions(String... apiVersions) {
+            return apiVersions(List.of(apiVersions));
+        }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder extensions(@Nullable Output<List<ResourceTypeExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable List<ResourceTypeExtensionArgs> extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
+        public Builder extensions(ResourceTypeExtensionArgs... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder featuresRule(@Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
-
         public Builder featuresRule(@Nullable ResourceTypeEndpointFeaturesRuleArgs featuresRule) {
             this.featuresRule = Output.ofNullable(featuresRule);
             return this;
         }
-
         public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
-
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ResourceTypeEndpointArgs build() {
+        }        public ResourceTypeEndpointArgs build() {
             return new ResourceTypeEndpointArgs(apiVersions, enabled, extensions, featuresRule, locations, requiredFeatures, timeout);
         }
     }

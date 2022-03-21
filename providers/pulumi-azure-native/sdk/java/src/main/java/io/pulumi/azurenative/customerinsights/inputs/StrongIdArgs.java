@@ -112,42 +112,37 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder keyPropertyNames(Output<List<String>> keyPropertyNames) {
             this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
             return this;
         }
-
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
             this.keyPropertyNames = Output.of(Objects.requireNonNull(keyPropertyNames));
             return this;
         }
-
+        public Builder keyPropertyNames(String... keyPropertyNames) {
+            return keyPropertyNames(List.of(keyPropertyNames));
+        }
         public Builder strongIdName(Output<String> strongIdName) {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }
-
         public Builder strongIdName(String strongIdName) {
             this.strongIdName = Output.of(Objects.requireNonNull(strongIdName));
             return this;
-        }
-        public StrongIdArgs build() {
+        }        public StrongIdArgs build() {
             return new StrongIdArgs(description, displayName, keyPropertyNames, strongIdName);
         }
     }

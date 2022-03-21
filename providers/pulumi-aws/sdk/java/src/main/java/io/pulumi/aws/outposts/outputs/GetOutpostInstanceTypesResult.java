@@ -78,17 +78,17 @@ public final class GetOutpostInstanceTypesResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
-        public GetOutpostInstanceTypesResult build() {
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }        public GetOutpostInstanceTypesResult build() {
             return new GetOutpostInstanceTypesResult(arn, id, instanceTypes);
         }
     }

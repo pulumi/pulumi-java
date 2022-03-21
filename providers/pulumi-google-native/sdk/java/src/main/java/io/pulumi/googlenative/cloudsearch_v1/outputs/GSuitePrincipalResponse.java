@@ -86,17 +86,14 @@ public final class GSuitePrincipalResponse {
             this.gsuiteDomain = Objects.requireNonNull(gsuiteDomain);
             return this;
         }
-
         public Builder gsuiteGroupEmail(String gsuiteGroupEmail) {
             this.gsuiteGroupEmail = Objects.requireNonNull(gsuiteGroupEmail);
             return this;
         }
-
         public Builder gsuiteUserEmail(String gsuiteUserEmail) {
             this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail);
             return this;
-        }
-        public GSuitePrincipalResponse build() {
+        }        public GSuitePrincipalResponse build() {
             return new GSuitePrincipalResponse(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);
         }
     }

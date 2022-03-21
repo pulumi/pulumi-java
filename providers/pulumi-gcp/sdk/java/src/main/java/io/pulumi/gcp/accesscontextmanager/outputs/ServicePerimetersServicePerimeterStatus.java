@@ -191,32 +191,41 @@ public final class ServicePerimetersServicePerimeterStatus {
             this.accessLevels = accessLevels;
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder egressPolicies(@Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicy> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
-
+        public Builder egressPolicies(ServicePerimetersServicePerimeterStatusEgressPolicy... egressPolicies) {
+            return egressPolicies(List.of(egressPolicies));
+        }
         public Builder ingressPolicies(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicy> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
-
+        public Builder ingressPolicies(ServicePerimetersServicePerimeterStatusIngressPolicy... ingressPolicies) {
+            return ingressPolicies(List.of(ingressPolicies));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
-
+        public Builder restrictedServices(String... restrictedServices) {
+            return restrictedServices(List.of(restrictedServices));
+        }
         public Builder vpcAccessibleServices(@Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
-        }
-        public ServicePerimetersServicePerimeterStatus build() {
+        }        public ServicePerimetersServicePerimeterStatus build() {
             return new ServicePerimetersServicePerimeterStatus(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }
     }

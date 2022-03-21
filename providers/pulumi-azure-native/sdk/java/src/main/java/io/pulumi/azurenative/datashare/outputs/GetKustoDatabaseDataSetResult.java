@@ -184,47 +184,38 @@ public final class GetKustoDatabaseDataSetResult {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kustoDatabaseResourceId(String kustoDatabaseResourceId) {
             this.kustoDatabaseResourceId = Objects.requireNonNull(kustoDatabaseResourceId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetKustoDatabaseDataSetResult build() {
+        }        public GetKustoDatabaseDataSetResult build() {
             return new GetKustoDatabaseDataSetResult(dataSetId, id, kind, kustoDatabaseResourceId, location, name, provisioningState, systemData, type);
         }
     }

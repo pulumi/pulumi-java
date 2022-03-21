@@ -72,12 +72,10 @@ public final class GetKeySigningKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetKeySigningKeyArgs build() {
+        }        public GetKeySigningKeyArgs build() {
             return new GetKeySigningKeyArgs(hostedZoneId, name);
         }
     }

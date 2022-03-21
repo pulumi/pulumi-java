@@ -130,62 +130,50 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             this.desiredState = desiredState;
             return this;
         }
-
         public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = Output.ofNullable(desiredState);
             return this;
         }
-
         public Builder properties(@Nullable Output<String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable String properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable String schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
         }
-
         public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = Output.ofNullable(typeVersionId);
             return this;
-        }
-        public ResourceState build() {
+        }        public ResourceState build() {
             return new ResourceState(desiredState, properties, roleArn, schema, typeName, typeVersionId);
         }
     }

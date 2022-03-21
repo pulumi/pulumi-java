@@ -122,47 +122,47 @@ public final class GetOrganizationPolicyResult {
             this.booleanPolicies = Objects.requireNonNull(booleanPolicies);
             return this;
         }
-
+        public Builder booleanPolicies(GetOrganizationPolicyBooleanPolicy... booleanPolicies) {
+            return booleanPolicies(List.of(booleanPolicies));
+        }
         public Builder constraint(String constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder listPolicies(List<GetOrganizationPolicyListPolicy> listPolicies) {
             this.listPolicies = Objects.requireNonNull(listPolicies);
             return this;
         }
-
+        public Builder listPolicies(GetOrganizationPolicyListPolicy... listPolicies) {
+            return listPolicies(List.of(listPolicies));
+        }
         public Builder restorePolicies(List<GetOrganizationPolicyRestorePolicy> restorePolicies) {
             this.restorePolicies = Objects.requireNonNull(restorePolicies);
             return this;
         }
-
+        public Builder restorePolicies(GetOrganizationPolicyRestorePolicy... restorePolicies) {
+            return restorePolicies(List.of(restorePolicies));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetOrganizationPolicyResult build() {
+        }        public GetOrganizationPolicyResult build() {
             return new GetOrganizationPolicyResult(booleanPolicies, constraint, etag, folder, id, listPolicies, restorePolicies, updateTime, version);
         }
     }

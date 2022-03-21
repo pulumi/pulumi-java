@@ -58,8 +58,7 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
         public Builder labelName(String labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
-        }
-        public LoggingConfigurationConditionLabelNameConditionProperties build() {
+        }        public LoggingConfigurationConditionLabelNameConditionProperties build() {
             return new LoggingConfigurationConditionLabelNameConditionProperties(labelName);
         }
     }

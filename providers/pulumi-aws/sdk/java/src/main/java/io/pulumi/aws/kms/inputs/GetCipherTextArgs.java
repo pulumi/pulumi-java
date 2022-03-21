@@ -91,17 +91,14 @@ public final class GetCipherTextArgs extends io.pulumi.resources.InvokeArgs {
             this.context = context;
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
-        }
-        public GetCipherTextArgs build() {
+        }        public GetCipherTextArgs build() {
             return new GetCipherTextArgs(context, keyId, plaintext);
         }
     }

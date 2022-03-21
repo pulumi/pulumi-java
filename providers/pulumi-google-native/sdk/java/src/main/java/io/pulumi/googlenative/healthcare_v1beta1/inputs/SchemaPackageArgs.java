@@ -131,52 +131,48 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.ignoreMinOccurs = ignoreMinOccurs;
             return this;
         }
-
         public Builder ignoreMinOccurs(@Nullable Boolean ignoreMinOccurs) {
             this.ignoreMinOccurs = Output.ofNullable(ignoreMinOccurs);
             return this;
         }
-
         public Builder schemas(@Nullable Output<List<Hl7SchemaConfigArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
-
         public Builder schemas(@Nullable List<Hl7SchemaConfigArgs> schemas) {
             this.schemas = Output.ofNullable(schemas);
             return this;
         }
-
+        public Builder schemas(Hl7SchemaConfigArgs... schemas) {
+            return schemas(List.of(schemas));
+        }
         public Builder schematizedParsingType(@Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType) {
             this.schematizedParsingType = schematizedParsingType;
             return this;
         }
-
         public Builder schematizedParsingType(@Nullable SchemaPackageSchematizedParsingType schematizedParsingType) {
             this.schematizedParsingType = Output.ofNullable(schematizedParsingType);
             return this;
         }
-
         public Builder types(@Nullable Output<List<Hl7TypesConfigArgs>> types) {
             this.types = types;
             return this;
         }
-
         public Builder types(@Nullable List<Hl7TypesConfigArgs> types) {
             this.types = Output.ofNullable(types);
             return this;
         }
-
+        public Builder types(Hl7TypesConfigArgs... types) {
+            return types(List.of(types));
+        }
         public Builder unexpectedSegmentHandling(@Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling) {
             this.unexpectedSegmentHandling = unexpectedSegmentHandling;
             return this;
         }
-
         public Builder unexpectedSegmentHandling(@Nullable SchemaPackageUnexpectedSegmentHandling unexpectedSegmentHandling) {
             this.unexpectedSegmentHandling = Output.ofNullable(unexpectedSegmentHandling);
             return this;
-        }
-        public SchemaPackageArgs build() {
+        }        public SchemaPackageArgs build() {
             return new SchemaPackageArgs(ignoreMinOccurs, schemas, schematizedParsingType, types, unexpectedSegmentHandling);
         }
     }

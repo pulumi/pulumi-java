@@ -217,57 +217,49 @@ public final class ListProductDetailsResult {
             this.computeRole = Objects.requireNonNull(computeRole);
             return this;
         }
-
         public Builder dataDiskImages(List<DataDiskImageResponse> dataDiskImages) {
             this.dataDiskImages = Objects.requireNonNull(dataDiskImages);
             return this;
         }
-
+        public Builder dataDiskImages(DataDiskImageResponse... dataDiskImages) {
+            return dataDiskImages(List.of(dataDiskImages));
+        }
         public Builder galleryPackageBlobSasUri(String galleryPackageBlobSasUri) {
             this.galleryPackageBlobSasUri = Objects.requireNonNull(galleryPackageBlobSasUri);
             return this;
         }
-
         public Builder isSystemExtension(Boolean isSystemExtension) {
             this.isSystemExtension = Objects.requireNonNull(isSystemExtension);
             return this;
         }
-
         public Builder osDiskImage(OsDiskImageResponse osDiskImage) {
             this.osDiskImage = Objects.requireNonNull(osDiskImage);
             return this;
         }
-
         public Builder productKind(String productKind) {
             this.productKind = Objects.requireNonNull(productKind);
             return this;
         }
-
         public Builder supportMultipleExtensions(Boolean supportMultipleExtensions) {
             this.supportMultipleExtensions = Objects.requireNonNull(supportMultipleExtensions);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder vmOsType(String vmOsType) {
             this.vmOsType = Objects.requireNonNull(vmOsType);
             return this;
         }
-
         public Builder vmScaleSetEnabled(Boolean vmScaleSetEnabled) {
             this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
             return this;
-        }
-        public ListProductDetailsResult build() {
+        }        public ListProductDetailsResult build() {
             return new ListProductDetailsResult(computeRole, dataDiskImages, galleryPackageBlobSasUri, isSystemExtension, osDiskImage, productKind, supportMultipleExtensions, uri, version, vmOsType, vmScaleSetEnabled);
         }
     }

@@ -156,72 +156,58 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder outpostId(@Nullable Output<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
-
         public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = Output.ofNullable(outpostId);
             return this;
         }
-
         public Builder publicAccessBlockEnabled(@Nullable Output<Boolean> publicAccessBlockEnabled) {
             this.publicAccessBlockEnabled = publicAccessBlockEnabled;
             return this;
         }
-
         public Builder publicAccessBlockEnabled(@Nullable Boolean publicAccessBlockEnabled) {
             this.publicAccessBlockEnabled = Output.ofNullable(publicAccessBlockEnabled);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public BucketState build() {
+        }        public BucketState build() {
             return new BucketState(arn, bucket, creationDate, outpostId, publicAccessBlockEnabled, tags, tagsAll);
         }
     }

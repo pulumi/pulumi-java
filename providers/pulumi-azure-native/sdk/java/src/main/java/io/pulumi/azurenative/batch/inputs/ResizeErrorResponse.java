@@ -87,17 +87,17 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder details(@Nullable List<ResizeErrorResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(ResizeErrorResponse... details) {
+            return details(List.of(details));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public ResizeErrorResponse build() {
+        }        public ResizeErrorResponse build() {
             return new ResizeErrorResponse(code, details, message);
         }
     }

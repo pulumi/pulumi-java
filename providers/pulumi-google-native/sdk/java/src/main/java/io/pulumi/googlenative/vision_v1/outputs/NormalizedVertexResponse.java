@@ -69,12 +69,10 @@ public final class NormalizedVertexResponse {
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder y(Double y) {
             this.y = Objects.requireNonNull(y);
             return this;
-        }
-        public NormalizedVertexResponse build() {
+        }        public NormalizedVertexResponse build() {
             return new NormalizedVertexResponse(x, y);
         }
     }

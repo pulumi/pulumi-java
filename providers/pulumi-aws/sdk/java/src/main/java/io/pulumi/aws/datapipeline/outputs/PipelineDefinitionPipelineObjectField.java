@@ -87,17 +87,14 @@ public final class PipelineDefinitionPipelineObjectField {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder refValue(@Nullable String refValue) {
             this.refValue = refValue;
             return this;
         }
-
         public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
-        }
-        public PipelineDefinitionPipelineObjectField build() {
+        }        public PipelineDefinitionPipelineObjectField build() {
             return new PipelineDefinitionPipelineObjectField(key, refValue, stringValue);
         }
     }

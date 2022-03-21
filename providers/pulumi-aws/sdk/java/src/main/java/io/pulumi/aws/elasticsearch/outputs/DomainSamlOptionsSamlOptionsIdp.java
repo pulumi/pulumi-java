@@ -69,12 +69,10 @@ public final class DomainSamlOptionsSamlOptionsIdp {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public Builder metadataContent(String metadataContent) {
             this.metadataContent = Objects.requireNonNull(metadataContent);
             return this;
-        }
-        public DomainSamlOptionsSamlOptionsIdp build() {
+        }        public DomainSamlOptionsSamlOptionsIdp build() {
             return new DomainSamlOptionsSamlOptionsIdp(entityId, metadataContent);
         }
     }

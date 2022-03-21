@@ -86,17 +86,14 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder issue(String issue) {
             this.issue = Objects.requireNonNull(issue);
             return this;
         }
-
         public Builder score(Double score) {
             this.score = Objects.requireNonNull(score);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(displayName, issue, score);
         }
     }

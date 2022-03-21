@@ -77,12 +77,10 @@ public final class StandardSqlFieldResponse extends io.pulumi.resources.InvokeAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(StandardSqlDataTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public StandardSqlFieldResponse build() {
+        }        public StandardSqlFieldResponse build() {
             return new StandardSqlFieldResponse(name, type);
         }
     }

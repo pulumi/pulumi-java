@@ -201,52 +201,45 @@ public final class GetNotificationChannelResult {
             this.creationRecord = Objects.requireNonNull(creationRecord);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder mutationRecords(List<MutationRecordResponse> mutationRecords) {
             this.mutationRecords = Objects.requireNonNull(mutationRecords);
             return this;
         }
-
+        public Builder mutationRecords(MutationRecordResponse... mutationRecords) {
+            return mutationRecords(List.of(mutationRecords));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public Builder verificationStatus(String verificationStatus) {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
-        }
-        public GetNotificationChannelResult build() {
+        }        public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(creationRecord, description, displayName, enabled, labels, mutationRecords, name, type, userLabels, verificationStatus);
         }
     }

@@ -120,27 +120,22 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder attachmentId(String attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
-
         public Builder issueId(String issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiIssueAttachmentArgs build() {
+        }        public GetApiIssueAttachmentArgs build() {
             return new GetApiIssueAttachmentArgs(apiId, attachmentId, issueId, resourceGroupName, serviceName);
         }
     }

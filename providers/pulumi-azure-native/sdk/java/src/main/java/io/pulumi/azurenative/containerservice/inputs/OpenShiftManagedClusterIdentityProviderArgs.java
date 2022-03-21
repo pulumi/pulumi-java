@@ -79,22 +79,18 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder provider(@Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider) {
             this.provider = provider;
             return this;
         }
-
         public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderArgs provider) {
             this.provider = Output.ofNullable(provider);
             return this;
-        }
-        public OpenShiftManagedClusterIdentityProviderArgs build() {
+        }        public OpenShiftManagedClusterIdentityProviderArgs build() {
             return new OpenShiftManagedClusterIdentityProviderArgs(name, provider);
         }
     }

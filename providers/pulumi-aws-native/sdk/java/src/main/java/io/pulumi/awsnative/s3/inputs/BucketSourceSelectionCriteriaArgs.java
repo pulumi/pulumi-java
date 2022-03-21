@@ -79,22 +79,18 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
             this.replicaModifications = replicaModifications;
             return this;
         }
-
         public Builder replicaModifications(@Nullable BucketReplicaModificationsArgs replicaModifications) {
             this.replicaModifications = Output.ofNullable(replicaModifications);
             return this;
         }
-
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-
         public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
             return this;
-        }
-        public BucketSourceSelectionCriteriaArgs build() {
+        }        public BucketSourceSelectionCriteriaArgs build() {
             return new BucketSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);
         }
     }

@@ -61,12 +61,10 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
             this.keyArn = keyArn;
             return this;
         }
-
         public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = Output.ofNullable(keyArn);
             return this;
-        }
-        public ClusterEncryptionConfigProviderPropertiesArgs build() {
+        }        public ClusterEncryptionConfigProviderPropertiesArgs build() {
             return new ClusterEncryptionConfigProviderPropertiesArgs(keyArn);
         }
     }

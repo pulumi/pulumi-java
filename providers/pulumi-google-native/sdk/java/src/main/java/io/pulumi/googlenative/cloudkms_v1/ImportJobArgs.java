@@ -124,62 +124,50 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
             this.importJobId = Objects.requireNonNull(importJobId);
             return this;
         }
-
         public Builder importJobId(String importJobId) {
             this.importJobId = Output.of(Objects.requireNonNull(importJobId));
             return this;
         }
-
         public Builder importMethod(Output<ImportJobImportMethod> importMethod) {
             this.importMethod = Objects.requireNonNull(importMethod);
             return this;
         }
-
         public Builder importMethod(ImportJobImportMethod importMethod) {
             this.importMethod = Output.of(Objects.requireNonNull(importMethod));
             return this;
         }
-
         public Builder keyRingId(Output<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
-
         public Builder keyRingId(String keyRingId) {
             this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder protectionLevel(Output<ImportJobProtectionLevel> protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public Builder protectionLevel(ImportJobProtectionLevel protectionLevel) {
             this.protectionLevel = Output.of(Objects.requireNonNull(protectionLevel));
             return this;
-        }
-        public ImportJobArgs build() {
+        }        public ImportJobArgs build() {
             return new ImportJobArgs(importJobId, importMethod, keyRingId, location, project, protectionLevel);
         }
     }

@@ -129,52 +129,42 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sourceRange(Output<String> sourceRange) {
             this.sourceRange = Objects.requireNonNull(sourceRange);
             return this;
         }
-
         public Builder sourceRange(String sourceRange) {
             this.sourceRange = Output.of(Objects.requireNonNull(sourceRange));
             return this;
-        }
-        public FirewallRuleArgs build() {
+        }        public FirewallRuleArgs build() {
             return new FirewallRuleArgs(action, description, priority, project, sourceRange);
         }
     }

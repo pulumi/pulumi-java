@@ -98,17 +98,20 @@ public final class RulesEngineActionResponse extends io.pulumi.resources.InvokeA
             this.requestHeaderActions = requestHeaderActions;
             return this;
         }
-
+        public Builder requestHeaderActions(HeaderActionResponse... requestHeaderActions) {
+            return requestHeaderActions(List.of(requestHeaderActions));
+        }
         public Builder responseHeaderActions(@Nullable List<HeaderActionResponse> responseHeaderActions) {
             this.responseHeaderActions = responseHeaderActions;
             return this;
         }
-
+        public Builder responseHeaderActions(HeaderActionResponse... responseHeaderActions) {
+            return responseHeaderActions(List.of(responseHeaderActions));
+        }
         public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
-        }
-        public RulesEngineActionResponse build() {
+        }        public RulesEngineActionResponse build() {
             return new RulesEngineActionResponse(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
         }
     }

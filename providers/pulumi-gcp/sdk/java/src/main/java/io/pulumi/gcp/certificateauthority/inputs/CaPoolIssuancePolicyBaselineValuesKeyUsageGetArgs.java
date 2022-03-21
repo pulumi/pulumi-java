@@ -96,32 +96,29 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
-
         public Builder baseKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs baseKeyUsage) {
             this.baseKeyUsage = Output.of(Objects.requireNonNull(baseKeyUsage));
             return this;
         }
-
         public Builder extendedKeyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs extendedKeyUsage) {
             this.extendedKeyUsage = Output.of(Objects.requireNonNull(extendedKeyUsage));
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-        public CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs build() {
+        public Builder unknownExtendedKeyUsages(CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

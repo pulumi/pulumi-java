@@ -54,8 +54,7 @@ public final class GetGroupMembershipsMembershipRole extends io.pulumi.resources
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetGroupMembershipsMembershipRole build() {
+        }        public GetGroupMembershipsMembershipRole build() {
             return new GetGroupMembershipsMembershipRole(name);
         }
     }

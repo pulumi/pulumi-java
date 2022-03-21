@@ -195,47 +195,41 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
             this.additionalProperties = additionalProperties;
             return this;
         }
-
         public Builder azureFilePath(String azureFilePath) {
             this.azureFilePath = Objects.requireNonNull(azureFilePath);
             return this;
         }
-
         public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
-
         public Builder httpUrl(String httpUrl) {
             this.httpUrl = Objects.requireNonNull(httpUrl);
             return this;
         }
-
         public Builder partitionFormat(String partitionFormat) {
             this.partitionFormat = Objects.requireNonNull(partitionFormat);
             return this;
         }
-
         public Builder partitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
             this.partitionFormatIgnoreError = Objects.requireNonNull(partitionFormatIgnoreError);
             return this;
         }
-
         public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public Builder sqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
             this.sqlDataPath = sqlDataPath;
             return this;
-        }
-        public DatasetResponseDataPath build() {
+        }        public DatasetResponseDataPath build() {
             return new DatasetResponseDataPath(additionalProperties, azureFilePath, datastoreName, httpUrl, partitionFormat, partitionFormatIgnoreError, paths, relativePath, sqlDataPath);
         }
     }

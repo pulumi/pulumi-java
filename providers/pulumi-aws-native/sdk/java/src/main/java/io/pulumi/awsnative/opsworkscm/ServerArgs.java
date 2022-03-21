@@ -299,212 +299,182 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
             return this;
         }
-
         public Builder backupId(@Nullable Output<String> backupId) {
             this.backupId = backupId;
             return this;
         }
-
         public Builder backupId(@Nullable String backupId) {
             this.backupId = Output.ofNullable(backupId);
             return this;
         }
-
         public Builder backupRetentionCount(@Nullable Output<Integer> backupRetentionCount) {
             this.backupRetentionCount = backupRetentionCount;
             return this;
         }
-
         public Builder backupRetentionCount(@Nullable Integer backupRetentionCount) {
             this.backupRetentionCount = Output.ofNullable(backupRetentionCount);
             return this;
         }
-
         public Builder customCertificate(@Nullable Output<String> customCertificate) {
             this.customCertificate = customCertificate;
             return this;
         }
-
         public Builder customCertificate(@Nullable String customCertificate) {
             this.customCertificate = Output.ofNullable(customCertificate);
             return this;
         }
-
         public Builder customDomain(@Nullable Output<String> customDomain) {
             this.customDomain = customDomain;
             return this;
         }
-
         public Builder customDomain(@Nullable String customDomain) {
             this.customDomain = Output.ofNullable(customDomain);
             return this;
         }
-
         public Builder customPrivateKey(@Nullable Output<String> customPrivateKey) {
             this.customPrivateKey = customPrivateKey;
             return this;
         }
-
         public Builder customPrivateKey(@Nullable String customPrivateKey) {
             this.customPrivateKey = Output.ofNullable(customPrivateKey);
             return this;
         }
-
         public Builder disableAutomatedBackup(@Nullable Output<Boolean> disableAutomatedBackup) {
             this.disableAutomatedBackup = disableAutomatedBackup;
             return this;
         }
-
         public Builder disableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
             this.disableAutomatedBackup = Output.ofNullable(disableAutomatedBackup);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineAttributes(@Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes) {
             this.engineAttributes = engineAttributes;
             return this;
         }
-
         public Builder engineAttributes(@Nullable List<ServerEngineAttributeArgs> engineAttributes) {
             this.engineAttributes = Output.ofNullable(engineAttributes);
             return this;
         }
-
+        public Builder engineAttributes(ServerEngineAttributeArgs... engineAttributes) {
+            return engineAttributes(List.of(engineAttributes));
+        }
         public Builder engineModel(@Nullable Output<String> engineModel) {
             this.engineModel = engineModel;
             return this;
         }
-
         public Builder engineModel(@Nullable String engineModel) {
             this.engineModel = Output.ofNullable(engineModel);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder instanceProfileArn(Output<String> instanceProfileArn) {
             this.instanceProfileArn = Objects.requireNonNull(instanceProfileArn);
             return this;
         }
-
         public Builder instanceProfileArn(String instanceProfileArn) {
             this.instanceProfileArn = Output.of(Objects.requireNonNull(instanceProfileArn));
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder keyPair(@Nullable Output<String> keyPair) {
             this.keyPair = keyPair;
             return this;
         }
-
         public Builder keyPair(@Nullable String keyPair) {
             this.keyPair = Output.ofNullable(keyPair);
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
-
         public Builder serverName(@Nullable String serverName) {
             this.serverName = Output.ofNullable(serverName);
             return this;
         }
-
         public Builder serviceRoleArn(Output<String> serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
-
         public Builder serviceRoleArn(String serviceRoleArn) {
             this.serviceRoleArn = Output.of(Objects.requireNonNull(serviceRoleArn));
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<List<ServerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ServerTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ServerArgs build() {
+        public Builder tags(ServerTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ServerArgs build() {
             return new ServerArgs(associatePublicIpAddress, backupId, backupRetentionCount, customCertificate, customDomain, customPrivateKey, disableAutomatedBackup, engine, engineAttributes, engineModel, engineVersion, instanceProfileArn, instanceType, keyPair, preferredBackupWindow, preferredMaintenanceWindow, securityGroupIds, serverName, serviceRoleArn, subnetIds, tags);
         }
     }

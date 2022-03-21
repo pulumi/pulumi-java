@@ -79,32 +79,29 @@ public final class PipelineRemoveAttributesArgs extends io.pulumi.resources.Reso
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(List<String> attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
+        public Builder attributes(String... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = Output.ofNullable(next);
             return this;
-        }
-        public PipelineRemoveAttributesArgs build() {
+        }        public PipelineRemoveAttributesArgs build() {
             return new PipelineRemoveAttributesArgs(attributes, name, next);
         }
     }

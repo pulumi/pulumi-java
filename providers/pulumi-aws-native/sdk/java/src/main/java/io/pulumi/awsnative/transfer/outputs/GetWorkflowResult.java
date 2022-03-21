@@ -89,17 +89,17 @@ public final class GetWorkflowResult {
             this.arn = arn;
             return this;
         }
-
         public Builder tags(@Nullable List<WorkflowTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(WorkflowTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder workflowId(@Nullable String workflowId) {
             this.workflowId = workflowId;
             return this;
-        }
-        public GetWorkflowResult build() {
+        }        public GetWorkflowResult build() {
             return new GetWorkflowResult(arn, tags, workflowId);
         }
     }

@@ -476,272 +476,218 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.customRdpProperty = customRdpProperty;
             return this;
         }
-
         public Builder customRdpProperty(@Nullable String customRdpProperty) {
             this.customRdpProperty = Output.ofNullable(customRdpProperty);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder hostPoolName(@Nullable Output<String> hostPoolName) {
             this.hostPoolName = hostPoolName;
             return this;
         }
-
         public Builder hostPoolName(@Nullable String hostPoolName) {
             this.hostPoolName = Output.ofNullable(hostPoolName);
             return this;
         }
-
         public Builder hostPoolType(Output<Either<String,HostPoolType>> hostPoolType) {
             this.hostPoolType = Objects.requireNonNull(hostPoolType);
             return this;
         }
-
         public Builder hostPoolType(Either<String,HostPoolType> hostPoolType) {
             this.hostPoolType = Output.of(Objects.requireNonNull(hostPoolType));
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder loadBalancerType(Output<Either<String,LoadBalancerType>> loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public Builder loadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
             this.loadBalancerType = Output.of(Objects.requireNonNull(loadBalancerType));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
-
         public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
-
         public Builder maxSessionLimit(@Nullable Output<Integer> maxSessionLimit) {
             this.maxSessionLimit = maxSessionLimit;
             return this;
         }
-
         public Builder maxSessionLimit(@Nullable Integer maxSessionLimit) {
             this.maxSessionLimit = Output.ofNullable(maxSessionLimit);
             return this;
         }
-
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
-
         public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
             this.migrationRequest = Output.ofNullable(migrationRequest);
             return this;
         }
-
         public Builder personalDesktopAssignmentType(@Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
-
         public Builder personalDesktopAssignmentType(@Nullable Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = Output.ofNullable(personalDesktopAssignmentType);
             return this;
         }
-
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder preferredAppGroupType(Output<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
             this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
             return this;
         }
-
         public Builder preferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
             this.preferredAppGroupType = Output.of(Objects.requireNonNull(preferredAppGroupType));
             return this;
         }
-
         public Builder registrationInfo(@Nullable Output<RegistrationInfoArgs> registrationInfo) {
             this.registrationInfo = registrationInfo;
             return this;
         }
-
         public Builder registrationInfo(@Nullable RegistrationInfoArgs registrationInfo) {
             this.registrationInfo = Output.ofNullable(registrationInfo);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ring(@Nullable Output<Integer> ring) {
             this.ring = ring;
             return this;
         }
-
         public Builder ring(@Nullable Integer ring) {
             this.ring = Output.ofNullable(ring);
             return this;
         }
-
         public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder ssoClientId(@Nullable Output<String> ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
-
         public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = Output.ofNullable(ssoClientId);
             return this;
         }
-
         public Builder ssoClientSecretKeyVaultPath(@Nullable Output<String> ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
-
         public Builder ssoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = Output.ofNullable(ssoClientSecretKeyVaultPath);
             return this;
         }
-
         public Builder ssoSecretType(@Nullable Output<Either<String,SSOSecretType>> ssoSecretType) {
             this.ssoSecretType = ssoSecretType;
             return this;
         }
-
         public Builder ssoSecretType(@Nullable Either<String,SSOSecretType> ssoSecretType) {
             this.ssoSecretType = Output.ofNullable(ssoSecretType);
             return this;
         }
-
         public Builder ssoadfsAuthority(@Nullable Output<String> ssoadfsAuthority) {
             this.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
-
         public Builder ssoadfsAuthority(@Nullable String ssoadfsAuthority) {
             this.ssoadfsAuthority = Output.ofNullable(ssoadfsAuthority);
             return this;
         }
-
         public Builder startVMOnConnect(@Nullable Output<Boolean> startVMOnConnect) {
             this.startVMOnConnect = startVMOnConnect;
             return this;
         }
-
         public Builder startVMOnConnect(@Nullable Boolean startVMOnConnect) {
             this.startVMOnConnect = Output.ofNullable(startVMOnConnect);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder validationEnvironment(@Nullable Output<Boolean> validationEnvironment) {
             this.validationEnvironment = validationEnvironment;
             return this;
         }
-
         public Builder validationEnvironment(@Nullable Boolean validationEnvironment) {
             this.validationEnvironment = Output.ofNullable(validationEnvironment);
             return this;
         }
-
         public Builder vmTemplate(@Nullable Output<String> vmTemplate) {
             this.vmTemplate = vmTemplate;
             return this;
         }
-
         public Builder vmTemplate(@Nullable String vmTemplate) {
             this.vmTemplate = Output.ofNullable(vmTemplate);
             return this;
-        }
-        public HostPoolArgs build() {
+        }        public HostPoolArgs build() {
             return new HostPoolArgs(customRdpProperty, description, friendlyName, hostPoolName, hostPoolType, identity, kind, loadBalancerType, location, managedBy, maxSessionLimit, migrationRequest, personalDesktopAssignmentType, plan, preferredAppGroupType, registrationInfo, resourceGroupName, ring, sku, ssoClientId, ssoClientSecretKeyVaultPath, ssoSecretType, ssoadfsAuthority, startVMOnConnect, tags, validationEnvironment, vmTemplate);
         }
     }

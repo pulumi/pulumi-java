@@ -54,8 +54,7 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetSchemaArgs build() {
+        }        public GetSchemaArgs build() {
             return new GetSchemaArgs(arn);
         }
     }

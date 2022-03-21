@@ -107,42 +107,34 @@ public final class EventConnectionArgs extends io.pulumi.resources.ResourceArgs 
             this.authParameters = Objects.requireNonNull(authParameters);
             return this;
         }
-
         public Builder authParameters(EventConnectionAuthParametersArgs authParameters) {
             this.authParameters = Output.of(Objects.requireNonNull(authParameters));
             return this;
         }
-
         public Builder authorizationType(Output<String> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder authorizationType(String authorizationType) {
             this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public EventConnectionArgs build() {
+        }        public EventConnectionArgs build() {
             return new EventConnectionArgs(authParameters, authorizationType, description, name);
         }
     }

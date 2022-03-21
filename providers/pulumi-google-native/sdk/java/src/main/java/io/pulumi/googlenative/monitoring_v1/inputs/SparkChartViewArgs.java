@@ -79,22 +79,18 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
-
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
             this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
             return this;
         }
-
         public Builder sparkChartType(Output<SparkChartViewSparkChartType> sparkChartType) {
             this.sparkChartType = Objects.requireNonNull(sparkChartType);
             return this;
         }
-
         public Builder sparkChartType(SparkChartViewSparkChartType sparkChartType) {
             this.sparkChartType = Output.of(Objects.requireNonNull(sparkChartType));
             return this;
-        }
-        public SparkChartViewArgs build() {
+        }        public SparkChartViewArgs build() {
             return new SparkChartViewArgs(minAlignmentPeriod, sparkChartType);
         }
     }

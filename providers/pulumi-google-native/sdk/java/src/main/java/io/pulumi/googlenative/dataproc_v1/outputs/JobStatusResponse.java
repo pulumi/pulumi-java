@@ -101,22 +101,18 @@ public final class JobStatusResponse {
             this.details = Objects.requireNonNull(details);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder stateStartTime(String stateStartTime) {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
         }
-
         public Builder substate(String substate) {
             this.substate = Objects.requireNonNull(substate);
             return this;
-        }
-        public JobStatusResponse build() {
+        }        public JobStatusResponse build() {
             return new JobStatusResponse(details, state, stateStartTime, substate);
         }
     }

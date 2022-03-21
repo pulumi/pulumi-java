@@ -64,12 +64,10 @@ public final class GetConnectorResult {
             this.capacity = capacity;
             return this;
         }
-
         public Builder connectorArn(@Nullable String connectorArn) {
             this.connectorArn = connectorArn;
             return this;
-        }
-        public GetConnectorResult build() {
+        }        public GetConnectorResult build() {
             return new GetConnectorResult(capacity, connectorArn);
         }
     }

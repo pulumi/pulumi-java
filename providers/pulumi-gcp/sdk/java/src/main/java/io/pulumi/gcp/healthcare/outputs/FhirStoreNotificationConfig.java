@@ -61,8 +61,7 @@ public final class FhirStoreNotificationConfig {
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
-        }
-        public FhirStoreNotificationConfig build() {
+        }        public FhirStoreNotificationConfig build() {
             return new FhirStoreNotificationConfig(pubsubTopic);
         }
     }

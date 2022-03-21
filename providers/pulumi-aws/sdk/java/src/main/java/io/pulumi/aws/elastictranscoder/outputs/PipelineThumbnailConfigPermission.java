@@ -88,17 +88,17 @@ public final class PipelineThumbnailConfigPermission {
             this.accesses = accesses;
             return this;
         }
-
+        public Builder accesses(String... accesses) {
+            return accesses(List.of(accesses));
+        }
         public Builder grantee(@Nullable String grantee) {
             this.grantee = grantee;
             return this;
         }
-
         public Builder granteeType(@Nullable String granteeType) {
             this.granteeType = granteeType;
             return this;
-        }
-        public PipelineThumbnailConfigPermission build() {
+        }        public PipelineThumbnailConfigPermission build() {
             return new PipelineThumbnailConfigPermission(accesses, grantee, granteeType);
         }
     }

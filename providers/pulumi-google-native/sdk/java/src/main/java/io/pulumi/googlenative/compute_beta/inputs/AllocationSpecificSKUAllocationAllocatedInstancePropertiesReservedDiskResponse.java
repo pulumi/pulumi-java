@@ -72,12 +72,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
-
         public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
-        }
-        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
+        }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, $interface);
         }
     }

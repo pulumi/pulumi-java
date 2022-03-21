@@ -72,12 +72,10 @@ public final class WorkspaceEncryptionParameterResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(@Nullable EncryptionResponse value) {
             this.value = value;
             return this;
-        }
-        public WorkspaceEncryptionParameterResponse build() {
+        }        public WorkspaceEncryptionParameterResponse build() {
             return new WorkspaceEncryptionParameterResponse(type, value);
         }
     }

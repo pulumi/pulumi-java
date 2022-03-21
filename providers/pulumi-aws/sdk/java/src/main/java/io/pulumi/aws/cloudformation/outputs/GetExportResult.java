@@ -93,22 +93,18 @@ public final class GetExportResult {
             this.exportingStackId = Objects.requireNonNull(exportingStackId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetExportResult build() {
+        }        public GetExportResult build() {
             return new GetExportResult(exportingStackId, id, name, value);
         }
     }

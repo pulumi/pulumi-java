@@ -107,42 +107,34 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
-
         public Builder queueName(@Nullable String queueName) {
             this.queueName = Output.ofNullable(queueName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public QueueArgs build() {
+        }        public QueueArgs build() {
             return new QueueArgs(accountName, metadata, queueName, resourceGroupName);
         }
     }

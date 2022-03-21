@@ -57,12 +57,10 @@ public final class BotAliasTextLogDestinationArgs extends io.pulumi.resources.Re
             this.cloudWatch = cloudWatch;
             return this;
         }
-
         public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestinationArgs cloudWatch) {
             this.cloudWatch = Output.ofNullable(cloudWatch);
             return this;
-        }
-        public BotAliasTextLogDestinationArgs build() {
+        }        public BotAliasTextLogDestinationArgs build() {
             return new BotAliasTextLogDestinationArgs(cloudWatch);
         }
     }

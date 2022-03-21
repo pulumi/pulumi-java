@@ -75,12 +75,10 @@ public final class GetRestApiArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetRestApiArgs build() {
+        }        public GetRestApiArgs build() {
             return new GetRestApiArgs(name, tags);
         }
     }

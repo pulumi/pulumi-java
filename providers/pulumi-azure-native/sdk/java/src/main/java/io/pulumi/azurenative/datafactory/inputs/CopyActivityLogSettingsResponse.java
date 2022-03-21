@@ -78,12 +78,10 @@ public final class CopyActivityLogSettingsResponse extends io.pulumi.resources.I
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
-
         public Builder logLevel(@Nullable Object logLevel) {
             this.logLevel = logLevel;
             return this;
-        }
-        public CopyActivityLogSettingsResponse build() {
+        }        public CopyActivityLogSettingsResponse build() {
             return new CopyActivityLogSettingsResponse(enableReliableLogging, logLevel);
         }
     }

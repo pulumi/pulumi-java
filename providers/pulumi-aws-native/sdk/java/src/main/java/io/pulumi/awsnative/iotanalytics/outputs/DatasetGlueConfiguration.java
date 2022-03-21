@@ -53,12 +53,10 @@ public final class DatasetGlueConfiguration {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public DatasetGlueConfiguration build() {
+        }        public DatasetGlueConfiguration build() {
             return new DatasetGlueConfiguration(databaseName, tableName);
         }
     }

@@ -204,102 +204,82 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
-
         public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
             this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
             return this;
         }
-
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
-
         public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Output.ofNullable(buildSpec);
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
-
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
-
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
-
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
-
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
             return this;
         }
-
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
-
         public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
-
         public Builder framework(@Nullable String framework) {
             this.framework = Output.ofNullable(framework);
             return this;
         }
-
         public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
-
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
             return this;
         }
-
         public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = Output.ofNullable(stage);
             return this;
-        }
-        public AppAutoBranchCreationConfigArgs build() {
+        }        public AppAutoBranchCreationConfigArgs build() {
             return new AppAutoBranchCreationConfigArgs(basicAuthCredentials, buildSpec, enableAutoBuild, enableBasicAuth, enablePerformanceMode, enablePullRequestPreview, environmentVariables, framework, pullRequestEnvironmentName, stage);
         }
     }

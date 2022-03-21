@@ -84,12 +84,10 @@ public final class EphemeralVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder volumeClaimTemplate(@Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
             this.volumeClaimTemplate = volumeClaimTemplate;
             return this;
-        }
-        public EphemeralVolumeSource build() {
+        }        public EphemeralVolumeSource build() {
             return new EphemeralVolumeSource(readOnly, volumeClaimTemplate);
         }
     }

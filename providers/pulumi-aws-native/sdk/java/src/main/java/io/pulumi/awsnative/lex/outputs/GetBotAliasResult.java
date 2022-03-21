@@ -124,47 +124,41 @@ public final class GetBotAliasResult {
             this.arn = arn;
             return this;
         }
-
         public Builder botAliasId(@Nullable String botAliasId) {
             this.botAliasId = botAliasId;
             return this;
         }
-
         public Builder botAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings) {
             this.botAliasLocaleSettings = botAliasLocaleSettings;
             return this;
         }
-
+        public Builder botAliasLocaleSettings(BotAliasLocaleSettingsItem... botAliasLocaleSettings) {
+            return botAliasLocaleSettings(List.of(botAliasLocaleSettings));
+        }
         public Builder botAliasName(@Nullable String botAliasName) {
             this.botAliasName = botAliasName;
             return this;
         }
-
         public Builder botAliasStatus(@Nullable BotAliasStatus botAliasStatus) {
             this.botAliasStatus = botAliasStatus;
             return this;
         }
-
         public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = botVersion;
             return this;
         }
-
         public Builder conversationLogSettings(@Nullable BotAliasConversationLogSettings conversationLogSettings) {
             this.conversationLogSettings = conversationLogSettings;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder sentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
-        }
-        public GetBotAliasResult build() {
+        }        public GetBotAliasResult build() {
             return new GetBotAliasResult(arn, botAliasId, botAliasLocaleSettings, botAliasName, botAliasStatus, botVersion, conversationLogSettings, description, sentimentAnalysisSettings);
         }
     }

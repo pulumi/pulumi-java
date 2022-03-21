@@ -142,32 +142,29 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpcEndpointFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public GetVpcEndpointArgs build() {
+        }        public GetVpcEndpointArgs build() {
             return new GetVpcEndpointArgs(filters, id, serviceName, state, tags, vpcId);
         }
     }

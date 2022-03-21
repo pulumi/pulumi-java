@@ -50,8 +50,7 @@ public final class GetBackupPlanArgs extends io.pulumi.resources.InvokeArgs {
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = Objects.requireNonNull(backupPlanId);
             return this;
-        }
-        public GetBackupPlanArgs build() {
+        }        public GetBackupPlanArgs build() {
             return new GetBackupPlanArgs(backupPlanId);
         }
     }

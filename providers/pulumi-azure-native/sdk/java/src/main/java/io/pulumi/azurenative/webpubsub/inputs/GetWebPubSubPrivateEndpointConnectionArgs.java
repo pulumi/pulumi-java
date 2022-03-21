@@ -88,17 +88,14 @@ public final class GetWebPubSubPrivateEndpointConnectionArgs extends io.pulumi.r
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetWebPubSubPrivateEndpointConnectionArgs build() {
+        }        public GetWebPubSubPrivateEndpointConnectionArgs build() {
             return new GetWebPubSubPrivateEndpointConnectionArgs(privateEndpointConnectionName, resourceGroupName, resourceName);
         }
     }

@@ -145,32 +145,26 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.confidenceThreshold = Objects.requireNonNull(confidenceThreshold);
             return this;
         }
-
         public Builder contextFilterSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings) {
             this.contextFilterSettings = Objects.requireNonNull(contextFilterSettings);
             return this;
         }
-
         public Builder dialogflowQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource) {
             this.dialogflowQuerySource = Objects.requireNonNull(dialogflowQuerySource);
             return this;
         }
-
         public Builder documentQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource) {
             this.documentQuerySource = Objects.requireNonNull(documentQuerySource);
             return this;
         }
-
         public Builder knowledgeBaseQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource) {
             this.knowledgeBaseQuerySource = Objects.requireNonNull(knowledgeBaseQuerySource);
             return this;
         }
-
         public Builder maxResults(Integer maxResults) {
             this.maxResults = Objects.requireNonNull(maxResults);
             return this;
-        }
-        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse build() {
+        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse(confidenceThreshold, contextFilterSettings, dialogflowQuerySource, documentQuerySource, knowledgeBaseQuerySource, maxResults);
         }
     }

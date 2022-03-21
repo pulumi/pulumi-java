@@ -60,12 +60,10 @@ public final class VirtualMachineImageArgs extends io.pulumi.resources.ResourceA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public VirtualMachineImageArgs build() {
+        }        public VirtualMachineImageArgs build() {
             return new VirtualMachineImageArgs(id);
         }
     }

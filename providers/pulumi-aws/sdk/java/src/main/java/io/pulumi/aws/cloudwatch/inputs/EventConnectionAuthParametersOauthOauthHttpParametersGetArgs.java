@@ -93,32 +93,35 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersGetArgs 
             this.bodies = bodies;
             return this;
         }
-
         public Builder bodies(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBodyGetArgs> bodies) {
             this.bodies = Output.ofNullable(bodies);
             return this;
         }
-
+        public Builder bodies(EventConnectionAuthParametersOauthOauthHttpParametersBodyGetArgs... bodies) {
+            return bodies(List.of(bodies));
+        }
         public Builder headers(@Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryStrings(@Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs> queryStrings) {
             this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
-        public EventConnectionAuthParametersOauthOauthHttpParametersGetArgs build() {
+        public Builder queryStrings(EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs... queryStrings) {
+            return queryStrings(List.of(queryStrings));
+        }        public EventConnectionAuthParametersOauthOauthHttpParametersGetArgs build() {
             return new EventConnectionAuthParametersOauthOauthHttpParametersGetArgs(bodies, headers, queryStrings);
         }
     }

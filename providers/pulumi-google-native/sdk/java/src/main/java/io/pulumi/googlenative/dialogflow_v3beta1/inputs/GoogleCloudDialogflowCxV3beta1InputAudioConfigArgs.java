@@ -163,72 +163,61 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs extends io
             this.audioEncoding = Objects.requireNonNull(audioEncoding);
             return this;
         }
-
         public Builder audioEncoding(GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncoding audioEncoding) {
             this.audioEncoding = Output.of(Objects.requireNonNull(audioEncoding));
             return this;
         }
-
         public Builder enableWordInfo(@Nullable Output<Boolean> enableWordInfo) {
             this.enableWordInfo = enableWordInfo;
             return this;
         }
-
         public Builder enableWordInfo(@Nullable Boolean enableWordInfo) {
             this.enableWordInfo = Output.ofNullable(enableWordInfo);
             return this;
         }
-
         public Builder model(@Nullable Output<String> model) {
             this.model = model;
             return this;
         }
-
         public Builder model(@Nullable String model) {
             this.model = Output.ofNullable(model);
             return this;
         }
-
         public Builder modelVariant(@Nullable Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant> modelVariant) {
             this.modelVariant = modelVariant;
             return this;
         }
-
         public Builder modelVariant(@Nullable GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariant modelVariant) {
             this.modelVariant = Output.ofNullable(modelVariant);
             return this;
         }
-
         public Builder phraseHints(@Nullable Output<List<String>> phraseHints) {
             this.phraseHints = phraseHints;
             return this;
         }
-
         public Builder phraseHints(@Nullable List<String> phraseHints) {
             this.phraseHints = Output.ofNullable(phraseHints);
             return this;
         }
-
+        public Builder phraseHints(String... phraseHints) {
+            return phraseHints(List.of(phraseHints));
+        }
         public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
-
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
             this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
             return this;
         }
-
         public Builder singleUtterance(@Nullable Output<Boolean> singleUtterance) {
             this.singleUtterance = singleUtterance;
             return this;
         }
-
         public Builder singleUtterance(@Nullable Boolean singleUtterance) {
             this.singleUtterance = Output.ofNullable(singleUtterance);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs build() {
             return new GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs(audioEncoding, enableWordInfo, model, modelVariant, phraseHints, sampleRateHertz, singleUtterance);
         }
     }

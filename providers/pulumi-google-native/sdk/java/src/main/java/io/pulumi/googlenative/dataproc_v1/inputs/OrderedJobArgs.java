@@ -249,122 +249,101 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
             this.hadoopJob = hadoopJob;
             return this;
         }
-
         public Builder hadoopJob(@Nullable HadoopJobArgs hadoopJob) {
             this.hadoopJob = Output.ofNullable(hadoopJob);
             return this;
         }
-
         public Builder hiveJob(@Nullable Output<HiveJobArgs> hiveJob) {
             this.hiveJob = hiveJob;
             return this;
         }
-
         public Builder hiveJob(@Nullable HiveJobArgs hiveJob) {
             this.hiveJob = Output.ofNullable(hiveJob);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder pigJob(@Nullable Output<PigJobArgs> pigJob) {
             this.pigJob = pigJob;
             return this;
         }
-
         public Builder pigJob(@Nullable PigJobArgs pigJob) {
             this.pigJob = Output.ofNullable(pigJob);
             return this;
         }
-
         public Builder prerequisiteStepIds(@Nullable Output<List<String>> prerequisiteStepIds) {
             this.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
-
         public Builder prerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
             this.prerequisiteStepIds = Output.ofNullable(prerequisiteStepIds);
             return this;
         }
-
+        public Builder prerequisiteStepIds(String... prerequisiteStepIds) {
+            return prerequisiteStepIds(List.of(prerequisiteStepIds));
+        }
         public Builder prestoJob(@Nullable Output<PrestoJobArgs> prestoJob) {
             this.prestoJob = prestoJob;
             return this;
         }
-
         public Builder prestoJob(@Nullable PrestoJobArgs prestoJob) {
             this.prestoJob = Output.ofNullable(prestoJob);
             return this;
         }
-
         public Builder pysparkJob(@Nullable Output<PySparkJobArgs> pysparkJob) {
             this.pysparkJob = pysparkJob;
             return this;
         }
-
         public Builder pysparkJob(@Nullable PySparkJobArgs pysparkJob) {
             this.pysparkJob = Output.ofNullable(pysparkJob);
             return this;
         }
-
         public Builder scheduling(@Nullable Output<JobSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
-
         public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
             this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
-
         public Builder sparkJob(@Nullable Output<SparkJobArgs> sparkJob) {
             this.sparkJob = sparkJob;
             return this;
         }
-
         public Builder sparkJob(@Nullable SparkJobArgs sparkJob) {
             this.sparkJob = Output.ofNullable(sparkJob);
             return this;
         }
-
         public Builder sparkRJob(@Nullable Output<SparkRJobArgs> sparkRJob) {
             this.sparkRJob = sparkRJob;
             return this;
         }
-
         public Builder sparkRJob(@Nullable SparkRJobArgs sparkRJob) {
             this.sparkRJob = Output.ofNullable(sparkRJob);
             return this;
         }
-
         public Builder sparkSqlJob(@Nullable Output<SparkSqlJobArgs> sparkSqlJob) {
             this.sparkSqlJob = sparkSqlJob;
             return this;
         }
-
         public Builder sparkSqlJob(@Nullable SparkSqlJobArgs sparkSqlJob) {
             this.sparkSqlJob = Output.ofNullable(sparkSqlJob);
             return this;
         }
-
         public Builder stepId(Output<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Output.of(Objects.requireNonNull(stepId));
             return this;
-        }
-        public OrderedJobArgs build() {
+        }        public OrderedJobArgs build() {
             return new OrderedJobArgs(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }
     }

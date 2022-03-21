@@ -87,17 +87,14 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
-
         public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
-        }
-        public ClusterClusterConfigGceClusterConfigShieldedInstanceConfig build() {
+        }        public ClusterClusterConfigGceClusterConfigShieldedInstanceConfig build() {
             return new ClusterClusterConfigGceClusterConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }
     }

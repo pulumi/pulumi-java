@@ -120,27 +120,25 @@ public final class OriginEndpointSpekeKeyProvider {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder systemIds(List<String> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
-
+        public Builder systemIds(String... systemIds) {
+            return systemIds(List.of(systemIds));
+        }
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public OriginEndpointSpekeKeyProvider build() {
+        }        public OriginEndpointSpekeKeyProvider build() {
             return new OriginEndpointSpekeKeyProvider(certificateArn, resourceId, roleArn, systemIds, url);
         }
     }

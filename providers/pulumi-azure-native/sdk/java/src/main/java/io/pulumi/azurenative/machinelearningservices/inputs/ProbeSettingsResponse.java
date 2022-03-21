@@ -127,27 +127,22 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }
-
         public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public ProbeSettingsResponse build() {
+        }        public ProbeSettingsResponse build() {
             return new ProbeSettingsResponse(failureThreshold, initialDelay, period, successThreshold, timeout);
         }
     }

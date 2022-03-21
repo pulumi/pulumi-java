@@ -61,12 +61,10 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
             this.cpuUtilizationPercent = cpuUtilizationPercent;
             return this;
         }
-
         public Builder cpuUtilizationPercent(@Nullable Integer cpuUtilizationPercent) {
             this.cpuUtilizationPercent = Output.ofNullable(cpuUtilizationPercent);
             return this;
-        }
-        public AutoscalingTargetsArgs build() {
+        }        public AutoscalingTargetsArgs build() {
             return new AutoscalingTargetsArgs(cpuUtilizationPercent);
         }
     }

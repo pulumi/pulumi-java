@@ -72,12 +72,10 @@ public final class WebAclDefaultAction {
             this.allow = allow;
             return this;
         }
-
         public Builder block(@Nullable WebAclDefaultActionBlock block) {
             this.block = block;
             return this;
-        }
-        public WebAclDefaultAction build() {
+        }        public WebAclDefaultAction build() {
             return new WebAclDefaultAction(allow, block);
         }
     }

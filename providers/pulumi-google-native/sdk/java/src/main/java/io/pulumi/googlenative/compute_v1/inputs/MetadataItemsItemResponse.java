@@ -76,12 +76,10 @@ public final class MetadataItemsItemResponse extends io.pulumi.resources.InvokeA
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public MetadataItemsItemResponse build() {
+        }        public MetadataItemsItemResponse build() {
             return new MetadataItemsItemResponse(key, value);
         }
     }

@@ -70,12 +70,13 @@ public final class GetClustersResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public GetClustersResult build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public GetClustersResult build() {
             return new GetClustersResult(id, names);
         }
     }

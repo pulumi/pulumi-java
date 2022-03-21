@@ -88,17 +88,14 @@ public final class GetWorkloadNetworkPortMirroringArgs extends io.pulumi.resourc
             this.portMirroringId = Objects.requireNonNull(portMirroringId);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWorkloadNetworkPortMirroringArgs build() {
+        }        public GetWorkloadNetworkPortMirroringArgs build() {
             return new GetWorkloadNetworkPortMirroringArgs(portMirroringId, privateCloudName, resourceGroupName);
         }
     }

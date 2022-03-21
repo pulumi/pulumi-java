@@ -212,52 +212,42 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
             this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
             return this;
         }
-
         public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
             this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
             return this;
         }
-
         public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
             this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
             return this;
         }
-
         public Builder disablePerformanceMetrics(Boolean disablePerformanceMetrics) {
             this.disablePerformanceMetrics = Objects.requireNonNull(disablePerformanceMetrics);
             return this;
         }
-
         public Builder disableVideoRecording(Boolean disableVideoRecording) {
             this.disableVideoRecording = Objects.requireNonNull(disableVideoRecording);
             return this;
         }
-
         public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
             this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
             return this;
         }
-
         public Builder iosTestSetup(IosTestSetupResponse iosTestSetup) {
             this.iosTestSetup = Objects.requireNonNull(iosTestSetup);
             return this;
         }
-
         public Builder iosXcTest(IosXcTestResponse iosXcTest) {
             this.iosXcTest = Objects.requireNonNull(iosXcTest);
             return this;
         }
-
         public Builder testSetup(TestSetupResponse testSetup) {
             this.testSetup = Objects.requireNonNull(testSetup);
             return this;
         }
-
         public Builder testTimeout(String testTimeout) {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
-        }
-        public TestSpecificationResponse build() {
+        }        public TestSpecificationResponse build() {
             return new TestSpecificationResponse(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }
     }

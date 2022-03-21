@@ -155,72 +155,58 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder contentType(Output<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
-
         public Builder definitions(@Nullable Output<Object> definitions) {
             this.definitions = definitions;
             return this;
         }
-
         public Builder definitions(@Nullable Object definitions) {
             this.definitions = Output.ofNullable(definitions);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ApiSchemaArgs build() {
+        }        public ApiSchemaArgs build() {
             return new ApiSchemaArgs(apiId, contentType, definitions, resourceGroupName, schemaId, serviceName, value);
         }
     }

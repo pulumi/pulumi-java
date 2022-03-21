@@ -187,47 +187,38 @@ public final class ExpressRouteConnectionResponse {
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder expressRouteCircuitPeering(ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering);
             return this;
         }
-
         public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
-        }
-        public ExpressRouteConnectionResponse build() {
+        }        public ExpressRouteConnectionResponse build() {
             return new ExpressRouteConnectionResponse(authorizationKey, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, id, name, provisioningState, routingConfiguration, routingWeight);
         }
     }

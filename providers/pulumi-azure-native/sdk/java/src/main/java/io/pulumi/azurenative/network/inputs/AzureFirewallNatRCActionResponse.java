@@ -60,8 +60,7 @@ public final class AzureFirewallNatRCActionResponse extends io.pulumi.resources.
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public AzureFirewallNatRCActionResponse build() {
+        }        public AzureFirewallNatRCActionResponse build() {
             return new AzureFirewallNatRCActionResponse(type);
         }
     }

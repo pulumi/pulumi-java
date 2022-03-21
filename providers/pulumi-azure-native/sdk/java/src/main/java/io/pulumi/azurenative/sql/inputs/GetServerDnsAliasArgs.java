@@ -88,17 +88,14 @@ public final class GetServerDnsAliasArgs extends io.pulumi.resources.InvokeArgs 
             this.dnsAliasName = Objects.requireNonNull(dnsAliasName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerDnsAliasArgs build() {
+        }        public GetServerDnsAliasArgs build() {
             return new GetServerDnsAliasArgs(dnsAliasName, resourceGroupName, serverName);
         }
     }

@@ -78,12 +78,10 @@ public final class ConnectorProvisionedCapacity extends io.pulumi.resources.Invo
             this.mcuCount = mcuCount;
             return this;
         }
-
         public Builder workerCount(Integer workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
-        }
-        public ConnectorProvisionedCapacity build() {
+        }        public ConnectorProvisionedCapacity build() {
             return new ConnectorProvisionedCapacity(mcuCount, workerCount);
         }
     }

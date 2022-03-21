@@ -253,67 +253,54 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
             this.bootOption = Objects.requireNonNull(bootOption);
             return this;
         }
-
         public Builder committedStorage(String committedStorage) {
             this.committedStorage = Objects.requireNonNull(committedStorage);
             return this;
         }
-
         public Builder committedStorageMb(String committedStorageMb) {
             this.committedStorageMb = Objects.requireNonNull(committedStorageMb);
             return this;
         }
-
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
-
         public Builder datacenterDescription(String datacenterDescription) {
             this.datacenterDescription = Objects.requireNonNull(datacenterDescription);
             return this;
         }
-
         public Builder datacenterId(String datacenterId) {
             this.datacenterId = Objects.requireNonNull(datacenterId);
             return this;
         }
-
         public Builder diskCount(Integer diskCount) {
             this.diskCount = Objects.requireNonNull(diskCount);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder guestDescription(String guestDescription) {
             this.guestDescription = Objects.requireNonNull(guestDescription);
             return this;
         }
-
         public Builder memoryMb(Integer memoryMb) {
             this.memoryMb = Objects.requireNonNull(memoryMb);
             return this;
         }
-
         public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
-
         public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
-        }
-        public VmwareVmDetailsResponse build() {
+        }        public VmwareVmDetailsResponse build() {
             return new VmwareVmDetailsResponse(bootOption, committedStorage, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
         }
     }

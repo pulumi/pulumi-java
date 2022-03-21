@@ -65,12 +65,10 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends io.pulu
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
-
         public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
-        }
-        public NetworkInterfacePrivateIpAddressSpecification build() {
+        }        public NetworkInterfacePrivateIpAddressSpecification build() {
             return new NetworkInterfacePrivateIpAddressSpecification(primary, privateIpAddress);
         }
     }

@@ -93,42 +93,34 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder inputFormatConfiguration(@Nullable Output<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration) {
             this.inputFormatConfiguration = inputFormatConfiguration;
             return this;
         }
-
         public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfigurationArgs inputFormatConfiguration) {
             this.inputFormatConfiguration = Output.ofNullable(inputFormatConfiguration);
             return this;
         }
-
         public Builder outputFormatConfiguration(@Nullable Output<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration) {
             this.outputFormatConfiguration = outputFormatConfiguration;
             return this;
         }
-
         public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfigurationArgs outputFormatConfiguration) {
             this.outputFormatConfiguration = Output.ofNullable(outputFormatConfiguration);
             return this;
         }
-
         public Builder schemaConfiguration(@Nullable Output<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration) {
             this.schemaConfiguration = schemaConfiguration;
             return this;
         }
-
         public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfigurationArgs schemaConfiguration) {
             this.schemaConfiguration = Output.ofNullable(schemaConfiguration);
             return this;
-        }
-        public DeliveryStreamDataFormatConversionConfigurationArgs build() {
+        }        public DeliveryStreamDataFormatConversionConfigurationArgs build() {
             return new DeliveryStreamDataFormatConversionConfigurationArgs(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);
         }
     }

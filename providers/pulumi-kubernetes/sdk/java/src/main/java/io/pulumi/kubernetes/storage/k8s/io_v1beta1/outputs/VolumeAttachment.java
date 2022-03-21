@@ -122,27 +122,22 @@ public final class VolumeAttachment {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(VolumeAttachmentSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public Builder status(@Nullable VolumeAttachmentStatus status) {
             this.status = status;
             return this;
-        }
-        public VolumeAttachment build() {
+        }        public VolumeAttachment build() {
             return new VolumeAttachment(apiVersion, kind, metadata, spec, status);
         }
     }

@@ -51,8 +51,7 @@ public final class GetDomainSnapshotOption {
         public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
             return this;
-        }
-        public GetDomainSnapshotOption build() {
+        }        public GetDomainSnapshotOption build() {
             return new GetDomainSnapshotOption(automatedSnapshotStartHour);
         }
     }

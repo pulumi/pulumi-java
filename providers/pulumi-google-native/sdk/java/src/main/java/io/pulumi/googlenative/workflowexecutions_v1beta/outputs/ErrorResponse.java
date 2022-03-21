@@ -86,17 +86,14 @@ public final class ErrorResponse {
             this.context = Objects.requireNonNull(context);
             return this;
         }
-
         public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
-
         public Builder stackTrace(StackTraceResponse stackTrace) {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
-        }
-        public ErrorResponse build() {
+        }        public ErrorResponse build() {
             return new ErrorResponse(context, payload, stackTrace);
         }
     }

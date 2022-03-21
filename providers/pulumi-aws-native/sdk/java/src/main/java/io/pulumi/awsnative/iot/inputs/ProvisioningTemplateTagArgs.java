@@ -65,22 +65,18 @@ public final class ProvisioningTemplateTagArgs extends io.pulumi.resources.Resou
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ProvisioningTemplateTagArgs build() {
+        }        public ProvisioningTemplateTagArgs build() {
             return new ProvisioningTemplateTagArgs(key, value);
         }
     }

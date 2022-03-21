@@ -57,12 +57,13 @@ public final class JobEntityDetectorConfiguration {
             this.allowedStatistics = allowedStatistics;
             return this;
         }
-
         public Builder entityTypes(List<String> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }
-        public JobEntityDetectorConfiguration build() {
+        public Builder entityTypes(String... entityTypes) {
+            return entityTypes(List.of(entityTypes));
+        }        public JobEntityDetectorConfiguration build() {
             return new JobEntityDetectorConfiguration(allowedStatistics, entityTypes);
         }
     }

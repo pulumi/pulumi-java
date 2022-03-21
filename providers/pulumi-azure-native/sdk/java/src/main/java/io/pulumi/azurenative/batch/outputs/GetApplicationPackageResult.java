@@ -181,47 +181,38 @@ public final class GetApplicationPackageResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastActivationTime(String lastActivationTime) {
             this.lastActivationTime = Objects.requireNonNull(lastActivationTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder storageUrl(String storageUrl) {
             this.storageUrl = Objects.requireNonNull(storageUrl);
             return this;
         }
-
         public Builder storageUrlExpiry(String storageUrlExpiry) {
             this.storageUrlExpiry = Objects.requireNonNull(storageUrlExpiry);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationPackageResult build() {
+        }        public GetApplicationPackageResult build() {
             return new GetApplicationPackageResult(etag, format, id, lastActivationTime, name, state, storageUrl, storageUrlExpiry, type);
         }
     }

@@ -79,22 +79,18 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
             this.scale = scale;
             return this;
         }
-
         public Builder scale(@Nullable CustomResourceSubresourceScaleArgs scale) {
             this.scale = Output.ofNullable(scale);
             return this;
         }
-
         public Builder status(@Nullable Output<JsonElement> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable JsonElement status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public CustomResourceSubresourcesArgs build() {
+        }        public CustomResourceSubresourcesArgs build() {
             return new CustomResourceSubresourcesArgs(scale, status);
         }
     }

@@ -61,12 +61,10 @@ public final class CloudHealthcareSourceArgs extends io.pulumi.resources.Resourc
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public CloudHealthcareSourceArgs build() {
+        }        public CloudHealthcareSourceArgs build() {
             return new CloudHealthcareSourceArgs(name);
         }
     }

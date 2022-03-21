@@ -70,12 +70,10 @@ public final class EventSeries {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder lastObservedTime(String lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
-        }
-        public EventSeries build() {
+        }        public EventSeries build() {
             return new EventSeries(count, lastObservedTime);
         }
     }

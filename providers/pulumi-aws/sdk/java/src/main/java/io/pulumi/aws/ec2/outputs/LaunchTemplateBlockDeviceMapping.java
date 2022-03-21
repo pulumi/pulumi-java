@@ -108,22 +108,18 @@ public final class LaunchTemplateBlockDeviceMapping {
             this.deviceName = deviceName;
             return this;
         }
-
         public Builder ebs(@Nullable LaunchTemplateBlockDeviceMappingEbs ebs) {
             this.ebs = ebs;
             return this;
         }
-
         public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = noDevice;
             return this;
         }
-
         public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
-        }
-        public LaunchTemplateBlockDeviceMapping build() {
+        }        public LaunchTemplateBlockDeviceMapping build() {
             return new LaunchTemplateBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

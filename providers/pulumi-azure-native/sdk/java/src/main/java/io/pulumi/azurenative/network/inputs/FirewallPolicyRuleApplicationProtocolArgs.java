@@ -81,22 +81,18 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocolType(@Nullable Output<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType) {
             this.protocolType = protocolType;
             return this;
         }
-
         public Builder protocolType(@Nullable Either<String,FirewallPolicyRuleApplicationProtocolType> protocolType) {
             this.protocolType = Output.ofNullable(protocolType);
             return this;
-        }
-        public FirewallPolicyRuleApplicationProtocolArgs build() {
+        }        public FirewallPolicyRuleApplicationProtocolArgs build() {
             return new FirewallPolicyRuleApplicationProtocolArgs(port, protocolType);
         }
     }

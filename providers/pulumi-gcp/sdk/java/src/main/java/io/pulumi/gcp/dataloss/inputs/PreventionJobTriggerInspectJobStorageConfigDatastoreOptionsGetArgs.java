@@ -77,22 +77,18 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder partitionId(Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId) {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public Builder partitionId(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs partitionId) {
             this.partitionId = Output.of(Objects.requireNonNull(partitionId));
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs(kind, partitionId);
         }
     }

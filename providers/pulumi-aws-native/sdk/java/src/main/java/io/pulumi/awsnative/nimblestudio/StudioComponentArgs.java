@@ -193,102 +193,91 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable StudioComponentConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ec2SecurityGroupIds(@Nullable Output<List<String>> ec2SecurityGroupIds) {
             this.ec2SecurityGroupIds = ec2SecurityGroupIds;
             return this;
         }
-
         public Builder ec2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
             this.ec2SecurityGroupIds = Output.ofNullable(ec2SecurityGroupIds);
             return this;
         }
-
+        public Builder ec2SecurityGroupIds(String... ec2SecurityGroupIds) {
+            return ec2SecurityGroupIds(List.of(ec2SecurityGroupIds));
+        }
         public Builder initializationScripts(@Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts) {
             this.initializationScripts = initializationScripts;
             return this;
         }
-
         public Builder initializationScripts(@Nullable List<StudioComponentInitializationScriptArgs> initializationScripts) {
             this.initializationScripts = Output.ofNullable(initializationScripts);
             return this;
         }
-
+        public Builder initializationScripts(StudioComponentInitializationScriptArgs... initializationScripts) {
+            return initializationScripts(List.of(initializationScripts));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scriptParameters(@Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
-
         public Builder scriptParameters(@Nullable List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
             this.scriptParameters = Output.ofNullable(scriptParameters);
             return this;
         }
-
+        public Builder scriptParameters(StudioComponentScriptParameterKeyValueArgs... scriptParameters) {
+            return scriptParameters(List.of(scriptParameters));
+        }
         public Builder studioId(Output<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
-
         public Builder studioId(String studioId) {
             this.studioId = Output.of(Objects.requireNonNull(studioId));
             return this;
         }
-
         public Builder subtype(@Nullable Output<StudioComponentSubtype> subtype) {
             this.subtype = subtype;
             return this;
         }
-
         public Builder subtype(@Nullable StudioComponentSubtype subtype) {
             this.subtype = Output.ofNullable(subtype);
             return this;
         }
-
         public Builder tags(@Nullable Output<StudioComponentTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable StudioComponentTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<StudioComponentType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(StudioComponentType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public StudioComponentArgs build() {
+        }        public StudioComponentArgs build() {
             return new StudioComponentArgs(configuration, description, ec2SecurityGroupIds, initializationScripts, name, scriptParameters, studioId, subtype, tags, type);
         }
     }

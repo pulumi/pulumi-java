@@ -213,57 +213,46 @@ public final class GetDisasterRecoveryConfigurationResult {
             this.autoFailover = Objects.requireNonNull(autoFailover);
             return this;
         }
-
         public Builder failoverPolicy(String failoverPolicy) {
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder logicalServerName(String logicalServerName) {
             this.logicalServerName = Objects.requireNonNull(logicalServerName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder partnerLogicalServerName(String partnerLogicalServerName) {
             this.partnerLogicalServerName = Objects.requireNonNull(partnerLogicalServerName);
             return this;
         }
-
         public Builder partnerServerId(String partnerServerId) {
             this.partnerServerId = Objects.requireNonNull(partnerServerId);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDisasterRecoveryConfigurationResult build() {
+        }        public GetDisasterRecoveryConfigurationResult build() {
             return new GetDisasterRecoveryConfigurationResult(autoFailover, failoverPolicy, id, location, logicalServerName, name, partnerLogicalServerName, partnerServerId, role, status, type);
         }
     }

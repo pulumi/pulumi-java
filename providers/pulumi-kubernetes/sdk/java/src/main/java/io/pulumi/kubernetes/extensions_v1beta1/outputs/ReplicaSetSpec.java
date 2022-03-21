@@ -105,22 +105,18 @@ public final class ReplicaSetSpec {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
-
         public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder template(@Nullable PodTemplateSpec template) {
             this.template = template;
             return this;
-        }
-        public ReplicaSetSpec build() {
+        }        public ReplicaSetSpec build() {
             return new ReplicaSetSpec(minReadySeconds, replicas, selector, template);
         }
     }

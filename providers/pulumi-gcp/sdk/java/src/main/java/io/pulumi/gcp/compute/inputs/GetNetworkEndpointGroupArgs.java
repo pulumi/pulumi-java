@@ -108,22 +108,18 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
             this.name = name;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public GetNetworkEndpointGroupArgs build() {
+        }        public GetNetworkEndpointGroupArgs build() {
             return new GetNetworkEndpointGroupArgs(name, project, selfLink, zone);
         }
     }

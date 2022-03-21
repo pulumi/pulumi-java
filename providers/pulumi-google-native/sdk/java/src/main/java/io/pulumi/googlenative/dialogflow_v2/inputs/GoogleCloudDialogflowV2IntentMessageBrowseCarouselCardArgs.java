@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
             this.imageDisplayOptions = imageDisplayOptions;
             return this;
         }
-
         public Builder imageDisplayOptions(@Nullable GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions imageDisplayOptions) {
             this.imageDisplayOptions = Output.ofNullable(imageDisplayOptions);
             return this;
         }
-
         public Builder items(Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs> items) {
             this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
-        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs build() {
+        public Builder items(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs... items) {
+            return items(List.of(items));
+        }        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs(imageDisplayOptions, items);
         }
     }

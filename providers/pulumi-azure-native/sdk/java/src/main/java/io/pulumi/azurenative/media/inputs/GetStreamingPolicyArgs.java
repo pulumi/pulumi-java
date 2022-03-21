@@ -88,17 +88,14 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
-        }
-        public GetStreamingPolicyArgs build() {
+        }        public GetStreamingPolicyArgs build() {
             return new GetStreamingPolicyArgs(accountName, resourceGroupName, streamingPolicyName);
         }
     }

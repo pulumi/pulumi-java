@@ -150,37 +150,33 @@ public final class DeploymentResponse {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder config(String config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder deployTime(String deployTime) {
             this.deployTime = Objects.requireNonNull(deployTime);
             return this;
         }
-
         public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
-
         public Builder resourceUri(List<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
+        public Builder resourceUri(String... resourceUri) {
+            return resourceUri(List.of(resourceUri));
+        }
         public Builder undeployTime(String undeployTime) {
             this.undeployTime = Objects.requireNonNull(undeployTime);
             return this;
         }
-
         public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
-        }
-        public DeploymentResponse build() {
+        }        public DeploymentResponse build() {
             return new DeploymentResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
         }
     }

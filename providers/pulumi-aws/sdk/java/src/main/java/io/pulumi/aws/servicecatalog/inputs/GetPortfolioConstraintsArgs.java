@@ -90,17 +90,14 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder portfolioId(String portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
-        }
-        public GetPortfolioConstraintsArgs build() {
+        }        public GetPortfolioConstraintsArgs build() {
             return new GetPortfolioConstraintsArgs(acceptLanguage, portfolioId, productId);
         }
     }

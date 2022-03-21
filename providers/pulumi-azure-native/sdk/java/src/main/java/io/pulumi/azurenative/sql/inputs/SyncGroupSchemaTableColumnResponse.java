@@ -94,17 +94,14 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
             this.dataSize = dataSize;
             return this;
         }
-
         public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
-
         public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = quotedName;
             return this;
-        }
-        public SyncGroupSchemaTableColumnResponse build() {
+        }        public SyncGroupSchemaTableColumnResponse build() {
             return new SyncGroupSchemaTableColumnResponse(dataSize, dataType, quotedName);
         }
     }

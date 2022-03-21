@@ -141,62 +141,53 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
             this.agentArns = agentArns;
             return this;
         }
-
         public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = Output.ofNullable(agentArns);
             return this;
         }
-
+        public Builder agentArns(String... agentArns) {
+            return agentArns(List.of(agentArns));
+        }
         public Builder s3BucketArn(Output<String> s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
-
         public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Output.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
-
         public Builder s3Config(Output<S3LocationS3ConfigArgs> s3Config) {
             this.s3Config = Objects.requireNonNull(s3Config);
             return this;
         }
-
         public Builder s3Config(S3LocationS3ConfigArgs s3Config) {
             this.s3Config = Output.of(Objects.requireNonNull(s3Config));
             return this;
         }
-
         public Builder s3StorageClass(@Nullable Output<String> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
-
         public Builder s3StorageClass(@Nullable String s3StorageClass) {
             this.s3StorageClass = Output.ofNullable(s3StorageClass);
             return this;
         }
-
         public Builder subdirectory(Output<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
-
         public Builder subdirectory(String subdirectory) {
             this.subdirectory = Output.of(Objects.requireNonNull(subdirectory));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public S3LocationArgs build() {
+        }        public S3LocationArgs build() {
             return new S3LocationArgs(agentArns, s3BucketArn, s3Config, s3StorageClass, subdirectory, tags);
         }
     }

@@ -53,8 +53,7 @@ public final class GetUsagePlanKeyResult {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetUsagePlanKeyResult build() {
+        }        public GetUsagePlanKeyResult build() {
             return new GetUsagePlanKeyResult(id);
         }
     }

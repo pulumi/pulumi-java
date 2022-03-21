@@ -78,17 +78,14 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder router(String router) {
             this.router = Objects.requireNonNull(router);
             return this;
-        }
-        public GetRouterArgs build() {
+        }        public GetRouterArgs build() {
             return new GetRouterArgs(project, region, router);
         }
     }

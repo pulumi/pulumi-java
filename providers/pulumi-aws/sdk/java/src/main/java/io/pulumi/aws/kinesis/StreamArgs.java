@@ -208,102 +208,85 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder encryptionType(@Nullable Output<String> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
-
         public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = Output.ofNullable(encryptionType);
             return this;
         }
-
         public Builder enforceConsumerDeletion(@Nullable Output<Boolean> enforceConsumerDeletion) {
             this.enforceConsumerDeletion = enforceConsumerDeletion;
             return this;
         }
-
         public Builder enforceConsumerDeletion(@Nullable Boolean enforceConsumerDeletion) {
             this.enforceConsumerDeletion = Output.ofNullable(enforceConsumerDeletion);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
-
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
-
         public Builder shardLevelMetrics(@Nullable Output<List<String>> shardLevelMetrics) {
             this.shardLevelMetrics = shardLevelMetrics;
             return this;
         }
-
         public Builder shardLevelMetrics(@Nullable List<String> shardLevelMetrics) {
             this.shardLevelMetrics = Output.ofNullable(shardLevelMetrics);
             return this;
         }
-
+        public Builder shardLevelMetrics(String... shardLevelMetrics) {
+            return shardLevelMetrics(List.of(shardLevelMetrics));
+        }
         public Builder streamModeDetails(@Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
-
         public Builder streamModeDetails(@Nullable StreamStreamModeDetailsArgs streamModeDetails) {
             this.streamModeDetails = Output.ofNullable(streamModeDetails);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StreamArgs build() {
+        }        public StreamArgs build() {
             return new StreamArgs(arn, encryptionType, enforceConsumerDeletion, kmsKeyId, name, retentionPeriod, shardCount, shardLevelMetrics, streamModeDetails, tags);
         }
     }

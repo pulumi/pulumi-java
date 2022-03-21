@@ -76,12 +76,10 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse exten
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public OSPolicyResourceRepositoryResourceGooRepositoryResponse build() {
+        }        public OSPolicyResourceRepositoryResourceGooRepositoryResponse build() {
             return new OSPolicyResourceRepositoryResourceGooRepositoryResponse(name, url);
         }
     }

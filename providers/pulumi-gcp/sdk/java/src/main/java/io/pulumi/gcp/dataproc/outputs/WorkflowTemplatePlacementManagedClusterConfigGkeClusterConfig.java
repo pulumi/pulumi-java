@@ -53,8 +53,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
         public Builder namespacedGkeDeploymentTarget(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
-        }
-        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig build() {
+        }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig(namespacedGkeDeploymentTarget);
         }
     }

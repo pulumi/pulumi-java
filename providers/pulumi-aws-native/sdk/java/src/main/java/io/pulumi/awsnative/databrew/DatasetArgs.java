@@ -140,62 +140,53 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable DatasetFormat format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder formatOptions(@Nullable Output<DatasetFormatOptionsArgs> formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
-
         public Builder formatOptions(@Nullable DatasetFormatOptionsArgs formatOptions) {
             this.formatOptions = Output.ofNullable(formatOptions);
             return this;
         }
-
         public Builder input(Output<DatasetInputArgs> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder input(DatasetInputArgs input) {
             this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pathOptions(@Nullable Output<DatasetPathOptionsArgs> pathOptions) {
             this.pathOptions = pathOptions;
             return this;
         }
-
         public Builder pathOptions(@Nullable DatasetPathOptionsArgs pathOptions) {
             this.pathOptions = Output.ofNullable(pathOptions);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatasetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatasetTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatasetArgs build() {
+        public Builder tags(DatasetTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatasetArgs build() {
             return new DatasetArgs(format, formatOptions, input, name, pathOptions, tags);
         }
     }

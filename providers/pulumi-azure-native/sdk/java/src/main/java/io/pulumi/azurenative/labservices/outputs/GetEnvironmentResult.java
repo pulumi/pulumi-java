@@ -316,87 +316,70 @@ public final class GetEnvironmentResult {
             this.claimedByUserName = Objects.requireNonNull(claimedByUserName);
             return this;
         }
-
         public Builder claimedByUserObjectId(String claimedByUserObjectId) {
             this.claimedByUserObjectId = Objects.requireNonNull(claimedByUserObjectId);
             return this;
         }
-
         public Builder claimedByUserPrincipalId(String claimedByUserPrincipalId) {
             this.claimedByUserPrincipalId = Objects.requireNonNull(claimedByUserPrincipalId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isClaimed(Boolean isClaimed) {
             this.isClaimed = Objects.requireNonNull(isClaimed);
             return this;
         }
-
         public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
-
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder networkInterface(NetworkInterfaceResponse networkInterface) {
             this.networkInterface = Objects.requireNonNull(networkInterface);
             return this;
         }
-
         public Builder passwordLastReset(String passwordLastReset) {
             this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder resourceSets(@Nullable ResourceSetResponse resourceSets) {
             this.resourceSets = resourceSets;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder totalUsage(String totalUsage) {
             this.totalUsage = Objects.requireNonNull(totalUsage);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
-        }
-        public GetEnvironmentResult build() {
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(claimedByUserName, claimedByUserObjectId, claimedByUserPrincipalId, id, isClaimed, lastKnownPowerState, latestOperationResult, location, name, networkInterface, passwordLastReset, provisioningState, resourceSets, tags, totalUsage, type, uniqueIdentifier);
         }
     }

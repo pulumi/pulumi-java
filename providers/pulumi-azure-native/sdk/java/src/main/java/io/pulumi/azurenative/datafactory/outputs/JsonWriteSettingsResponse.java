@@ -74,12 +74,10 @@ public final class JsonWriteSettingsResponse {
             this.filePattern = filePattern;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public JsonWriteSettingsResponse build() {
+        }        public JsonWriteSettingsResponse build() {
             return new JsonWriteSettingsResponse(filePattern, type);
         }
     }

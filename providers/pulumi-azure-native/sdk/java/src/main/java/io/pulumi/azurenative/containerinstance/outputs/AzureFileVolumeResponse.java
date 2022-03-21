@@ -104,22 +104,18 @@ public final class AzureFileVolumeResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
-        }
-        public AzureFileVolumeResponse build() {
+        }        public AzureFileVolumeResponse build() {
             return new AzureFileVolumeResponse(readOnly, shareName, storageAccountKey, storageAccountName);
         }
     }

@@ -140,62 +140,53 @@ public final class CrawlerS3TargetArgs extends io.pulumi.resources.ResourceArgs 
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder dlqEventQueueArn(@Nullable Output<String> dlqEventQueueArn) {
             this.dlqEventQueueArn = dlqEventQueueArn;
             return this;
         }
-
         public Builder dlqEventQueueArn(@Nullable String dlqEventQueueArn) {
             this.dlqEventQueueArn = Output.ofNullable(dlqEventQueueArn);
             return this;
         }
-
         public Builder eventQueueArn(@Nullable Output<String> eventQueueArn) {
             this.eventQueueArn = eventQueueArn;
             return this;
         }
-
         public Builder eventQueueArn(@Nullable String eventQueueArn) {
             this.eventQueueArn = Output.ofNullable(eventQueueArn);
             return this;
         }
-
         public Builder exclusions(@Nullable Output<List<String>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
-
         public Builder exclusions(@Nullable List<String> exclusions) {
             this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
-
+        public Builder exclusions(String... exclusions) {
+            return exclusions(List.of(exclusions));
+        }
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
-
         public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = Output.ofNullable(sampleSize);
             return this;
-        }
-        public CrawlerS3TargetArgs build() {
+        }        public CrawlerS3TargetArgs build() {
             return new CrawlerS3TargetArgs(connectionName, dlqEventQueueArn, eventQueueArn, exclusions, path, sampleSize);
         }
     }

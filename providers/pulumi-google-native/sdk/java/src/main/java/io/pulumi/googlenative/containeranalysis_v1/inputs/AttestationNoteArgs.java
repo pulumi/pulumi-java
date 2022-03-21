@@ -61,12 +61,10 @@ public final class AttestationNoteArgs extends io.pulumi.resources.ResourceArgs 
             this.hint = hint;
             return this;
         }
-
         public Builder hint(@Nullable HintArgs hint) {
             this.hint = Output.ofNullable(hint);
             return this;
-        }
-        public AttestationNoteArgs build() {
+        }        public AttestationNoteArgs build() {
             return new AttestationNoteArgs(hint);
         }
     }

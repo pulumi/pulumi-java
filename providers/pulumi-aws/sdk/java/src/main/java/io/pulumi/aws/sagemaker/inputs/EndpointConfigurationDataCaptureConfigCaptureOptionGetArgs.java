@@ -56,12 +56,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
             this.captureMode = Objects.requireNonNull(captureMode);
             return this;
         }
-
         public Builder captureMode(String captureMode) {
             this.captureMode = Output.of(Objects.requireNonNull(captureMode));
             return this;
-        }
-        public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs build() {
+        }        public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs build() {
             return new EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(captureMode);
         }
     }

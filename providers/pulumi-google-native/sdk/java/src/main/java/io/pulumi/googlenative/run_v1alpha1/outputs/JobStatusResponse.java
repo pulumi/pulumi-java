@@ -185,47 +185,44 @@ public final class JobStatusResponse {
             this.active = Objects.requireNonNull(active);
             return this;
         }
-
         public Builder completionTime(String completionTime) {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
-
         public Builder conditions(List<JobConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
+        public Builder conditions(JobConditionResponse... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder failed(Integer failed) {
             this.failed = Objects.requireNonNull(failed);
             return this;
         }
-
         public Builder imageDigest(String imageDigest) {
             this.imageDigest = Objects.requireNonNull(imageDigest);
             return this;
         }
-
         public Builder instances(List<InstanceStatusResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
+        public Builder instances(InstanceStatusResponse... instances) {
+            return instances(List.of(instances));
+        }
         public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder succeeded(Integer succeeded) {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
-        }
-        public JobStatusResponse build() {
+        }        public JobStatusResponse build() {
             return new JobStatusResponse(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
         }
     }

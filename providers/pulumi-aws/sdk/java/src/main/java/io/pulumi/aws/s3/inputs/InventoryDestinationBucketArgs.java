@@ -123,52 +123,42 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder bucketArn(String bucketArn) {
             this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
-
         public Builder encryption(@Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable InventoryDestinationBucketEncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
-        }
-        public InventoryDestinationBucketArgs build() {
+        }        public InventoryDestinationBucketArgs build() {
             return new InventoryDestinationBucketArgs(accountId, bucketArn, encryption, format, prefix);
         }
     }

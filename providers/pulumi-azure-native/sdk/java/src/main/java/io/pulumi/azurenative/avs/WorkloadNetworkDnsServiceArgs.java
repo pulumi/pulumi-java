@@ -190,92 +190,77 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             this.defaultDnsZone = defaultDnsZone;
             return this;
         }
-
         public Builder defaultDnsZone(@Nullable String defaultDnsZone) {
             this.defaultDnsZone = Output.ofNullable(defaultDnsZone);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder dnsServiceId(@Nullable Output<String> dnsServiceId) {
             this.dnsServiceId = dnsServiceId;
             return this;
         }
-
         public Builder dnsServiceId(@Nullable String dnsServiceId) {
             this.dnsServiceId = Output.ofNullable(dnsServiceId);
             return this;
         }
-
         public Builder dnsServiceIp(@Nullable Output<String> dnsServiceIp) {
             this.dnsServiceIp = dnsServiceIp;
             return this;
         }
-
         public Builder dnsServiceIp(@Nullable String dnsServiceIp) {
             this.dnsServiceIp = Output.ofNullable(dnsServiceIp);
             return this;
         }
-
         public Builder fqdnZones(@Nullable Output<List<String>> fqdnZones) {
             this.fqdnZones = fqdnZones;
             return this;
         }
-
         public Builder fqdnZones(@Nullable List<String> fqdnZones) {
             this.fqdnZones = Output.ofNullable(fqdnZones);
             return this;
         }
-
+        public Builder fqdnZones(String... fqdnZones) {
+            return fqdnZones(List.of(fqdnZones));
+        }
         public Builder logLevel(@Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable Either<String,DnsServiceLogLevelEnum> logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = Output.ofNullable(revision);
             return this;
-        }
-        public WorkloadNetworkDnsServiceArgs build() {
+        }        public WorkloadNetworkDnsServiceArgs build() {
             return new WorkloadNetworkDnsServiceArgs(defaultDnsZone, displayName, dnsServiceId, dnsServiceIp, fqdnZones, logLevel, privateCloudName, resourceGroupName, revision);
         }
     }

@@ -72,12 +72,10 @@ public final class AutoPausePropertiesResponse {
             this.delayInMinutes = delayInMinutes;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
-        }
-        public AutoPausePropertiesResponse build() {
+        }        public AutoPausePropertiesResponse build() {
             return new AutoPausePropertiesResponse(delayInMinutes, enabled);
         }
     }

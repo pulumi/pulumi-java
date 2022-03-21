@@ -240,62 +240,50 @@ public final class DeepCreatedOriginResponse extends io.pulumi.resources.InvokeA
             this.enabled = enabled;
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
-
         public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
-
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
-
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public DeepCreatedOriginResponse build() {
+        }        public DeepCreatedOriginResponse build() {
             return new DeepCreatedOriginResponse(enabled, hostName, httpPort, httpsPort, name, originHostHeader, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }
     }

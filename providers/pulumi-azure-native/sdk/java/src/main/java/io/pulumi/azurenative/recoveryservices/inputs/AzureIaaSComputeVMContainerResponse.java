@@ -178,42 +178,34 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
-
         public Builder virtualMachineVersion(@Nullable String virtualMachineVersion) {
             this.virtualMachineVersion = virtualMachineVersion;
             return this;
-        }
-        public AzureIaaSComputeVMContainerResponse build() {
+        }        public AzureIaaSComputeVMContainerResponse build() {
             return new AzureIaaSComputeVMContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
         }
     }

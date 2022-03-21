@@ -90,12 +90,10 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
-        }
-        public PolicyPropertiesResponse build() {
+        }        public PolicyPropertiesResponse build() {
             return new PolicyPropertiesResponse(friendlyName, providerSpecificDetails);
         }
     }

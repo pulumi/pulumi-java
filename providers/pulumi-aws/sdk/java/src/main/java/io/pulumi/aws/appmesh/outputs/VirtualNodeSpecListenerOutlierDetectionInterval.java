@@ -70,12 +70,10 @@ public final class VirtualNodeSpecListenerOutlierDetectionInterval {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VirtualNodeSpecListenerOutlierDetectionInterval build() {
+        }        public VirtualNodeSpecListenerOutlierDetectionInterval build() {
             return new VirtualNodeSpecListenerOutlierDetectionInterval(unit, value);
         }
     }

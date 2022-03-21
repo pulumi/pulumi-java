@@ -104,22 +104,18 @@ public final class SnapshotImportClientData {
             this.comment = comment;
             return this;
         }
-
         public Builder uploadEnd(@Nullable String uploadEnd) {
             this.uploadEnd = uploadEnd;
             return this;
         }
-
         public Builder uploadSize(@Nullable Double uploadSize) {
             this.uploadSize = uploadSize;
             return this;
         }
-
         public Builder uploadStart(@Nullable String uploadStart) {
             this.uploadStart = uploadStart;
             return this;
-        }
-        public SnapshotImportClientData build() {
+        }        public SnapshotImportClientData build() {
             return new SnapshotImportClientData(comment, uploadEnd, uploadSize, uploadStart);
         }
     }

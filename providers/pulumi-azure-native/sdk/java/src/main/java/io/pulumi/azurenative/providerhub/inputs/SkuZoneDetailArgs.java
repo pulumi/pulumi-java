@@ -68,22 +68,24 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
             this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
-
+        public Builder capabilities(SkuCapabilityArgs... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder name(@Nullable Output<List<String>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable List<String> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-        public SkuZoneDetailArgs build() {
+        public Builder name(String... name) {
+            return name(List.of(name));
+        }        public SkuZoneDetailArgs build() {
             return new SkuZoneDetailArgs(capabilities, name);
         }
     }

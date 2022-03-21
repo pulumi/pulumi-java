@@ -173,82 +173,72 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder eventCategories(@Nullable Output<List<String>> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
-
         public Builder eventCategories(@Nullable List<String> eventCategories) {
             this.eventCategories = Output.ofNullable(eventCategories);
             return this;
         }
-
+        public Builder eventCategories(String... eventCategories) {
+            return eventCategories(List.of(eventCategories));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder snsTopic(Output<String> snsTopic) {
             this.snsTopic = Objects.requireNonNull(snsTopic);
             return this;
         }
-
         public Builder snsTopic(String snsTopic) {
             this.snsTopic = Output.of(Objects.requireNonNull(snsTopic));
             return this;
         }
-
         public Builder sourceIds(@Nullable Output<List<String>> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
-
         public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = Output.ofNullable(sourceIds);
             return this;
         }
-
+        public Builder sourceIds(String... sourceIds) {
+            return sourceIds(List.of(sourceIds));
+        }
         public Builder sourceType(@Nullable Output<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EventSubscriptionArgs build() {
+        }        public EventSubscriptionArgs build() {
             return new EventSubscriptionArgs(enabled, eventCategories, name, namePrefix, snsTopic, sourceIds, sourceType, tags);
         }
     }

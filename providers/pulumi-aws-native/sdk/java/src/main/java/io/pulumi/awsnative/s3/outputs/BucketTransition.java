@@ -65,17 +65,14 @@ public final class BucketTransition {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder transitionDate(@Nullable String transitionDate) {
             this.transitionDate = transitionDate;
             return this;
         }
-
         public Builder transitionInDays(@Nullable Integer transitionInDays) {
             this.transitionInDays = transitionInDays;
             return this;
-        }
-        public BucketTransition build() {
+        }        public BucketTransition build() {
             return new BucketTransition(storageClass, transitionDate, transitionInDays);
         }
     }

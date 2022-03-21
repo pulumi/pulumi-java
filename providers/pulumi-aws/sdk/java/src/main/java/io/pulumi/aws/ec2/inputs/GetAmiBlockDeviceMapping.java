@@ -105,22 +105,18 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder ebs(Map<String,String> ebs) {
             this.ebs = Objects.requireNonNull(ebs);
             return this;
         }
-
         public Builder noDevice(String noDevice) {
             this.noDevice = Objects.requireNonNull(noDevice);
             return this;
         }
-
         public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
-        }
-        public GetAmiBlockDeviceMapping build() {
+        }        public GetAmiBlockDeviceMapping build() {
             return new GetAmiBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }
     }

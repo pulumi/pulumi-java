@@ -69,12 +69,10 @@ public final class AddressDetailsResponse {
             this.forwardAddress = Objects.requireNonNull(forwardAddress);
             return this;
         }
-
         public Builder returnAddress(AddressPropertiesResponse returnAddress) {
             this.returnAddress = Objects.requireNonNull(returnAddress);
             return this;
-        }
-        public AddressDetailsResponse build() {
+        }        public AddressDetailsResponse build() {
             return new AddressDetailsResponse(forwardAddress, returnAddress);
         }
     }

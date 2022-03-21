@@ -272,142 +272,117 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder clusterResourceName(Output<String> clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
-
         public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Output.of(Objects.requireNonNull(clusterResourceName));
             return this;
         }
-
         public Builder clusterRp(Output<String> clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
-
         public Builder clusterRp(String clusterRp) {
             this.clusterRp = Output.of(Objects.requireNonNull(clusterRp));
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = Output.ofNullable(configurationProtectedSettings);
             return this;
         }
-
         public Builder configurationSettings(@Nullable Output<Map<String,String>> configurationSettings) {
             this.configurationSettings = configurationSettings;
             return this;
         }
-
         public Builder configurationSettings(@Nullable Map<String,String> configurationSettings) {
             this.configurationSettings = Output.ofNullable(configurationSettings);
             return this;
         }
-
         public Builder extensionInstanceName(@Nullable Output<String> extensionInstanceName) {
             this.extensionInstanceName = extensionInstanceName;
             return this;
         }
-
         public Builder extensionInstanceName(@Nullable String extensionInstanceName) {
             this.extensionInstanceName = Output.ofNullable(extensionInstanceName);
             return this;
         }
-
         public Builder extensionType(@Nullable Output<String> extensionType) {
             this.extensionType = extensionType;
             return this;
         }
-
         public Builder extensionType(@Nullable String extensionType) {
             this.extensionType = Output.ofNullable(extensionType);
             return this;
         }
-
         public Builder identity(@Nullable Output<ConfigurationIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ConfigurationIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder releaseTrain(@Nullable Output<String> releaseTrain) {
             this.releaseTrain = releaseTrain;
             return this;
         }
-
         public Builder releaseTrain(@Nullable String releaseTrain) {
             this.releaseTrain = Output.ofNullable(releaseTrain);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable ScopeArgs scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder statuses(@Nullable Output<List<ExtensionStatusArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
-
         public Builder statuses(@Nullable List<ExtensionStatusArgs> statuses) {
             this.statuses = Output.ofNullable(statuses);
             return this;
         }
-
+        public Builder statuses(ExtensionStatusArgs... statuses) {
+            return statuses(List.of(statuses));
+        }
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ExtensionArgs build() {
+        }        public ExtensionArgs build() {
             return new ExtensionArgs(autoUpgradeMinorVersion, clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, configurationSettings, extensionInstanceName, extensionType, identity, releaseTrain, resourceGroupName, scope, statuses, version);
         }
     }

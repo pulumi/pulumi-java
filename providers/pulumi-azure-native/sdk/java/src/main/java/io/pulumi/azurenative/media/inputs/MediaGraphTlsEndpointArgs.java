@@ -130,52 +130,42 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder trustedCertificates(@Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
-
         public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListArgs trustedCertificates) {
             this.trustedCertificates = Output.ofNullable(trustedCertificates);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
-
         public Builder validationOptions(@Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsArgs validationOptions) {
             this.validationOptions = Output.ofNullable(validationOptions);
             return this;
-        }
-        public MediaGraphTlsEndpointArgs build() {
+        }        public MediaGraphTlsEndpointArgs build() {
             return new MediaGraphTlsEndpointArgs(credentials, odataType, trustedCertificates, url, validationOptions);
         }
     }

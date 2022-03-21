@@ -76,12 +76,10 @@ public final class FlowTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FlowTag build() {
+        }        public FlowTag build() {
             return new FlowTag(key, value);
         }
     }

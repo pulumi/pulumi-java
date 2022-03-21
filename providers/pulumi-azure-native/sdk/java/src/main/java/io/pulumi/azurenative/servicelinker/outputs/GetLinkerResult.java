@@ -174,42 +174,34 @@ public final class GetLinkerResult {
             this.authInfo = authInfo;
             return this;
         }
-
         public Builder clientType(@Nullable String clientType) {
             this.clientType = clientType;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLinkerResult build() {
+        }        public GetLinkerResult build() {
             return new GetLinkerResult(authInfo, clientType, id, name, provisioningState, systemData, targetId, type);
         }
     }

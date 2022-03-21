@@ -102,22 +102,18 @@ public final class GetMoveResourceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(MoveResourcePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetMoveResourceResult build() {
+        }        public GetMoveResourceResult build() {
             return new GetMoveResourceResult(id, name, properties, type);
         }
     }

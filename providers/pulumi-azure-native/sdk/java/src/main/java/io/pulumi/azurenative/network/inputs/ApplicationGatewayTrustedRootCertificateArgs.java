@@ -110,42 +110,34 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
             this.data = data;
             return this;
         }
-
         public Builder data(@Nullable String data) {
             this.data = Output.ofNullable(data);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ApplicationGatewayTrustedRootCertificateArgs build() {
+        }        public ApplicationGatewayTrustedRootCertificateArgs build() {
             return new ApplicationGatewayTrustedRootCertificateArgs(data, id, keyVaultSecretId, name);
         }
     }

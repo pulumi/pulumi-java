@@ -53,8 +53,7 @@ public final class LaunchTemplateCreditSpecification {
         public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = cpuCredits;
             return this;
-        }
-        public LaunchTemplateCreditSpecification build() {
+        }        public LaunchTemplateCreditSpecification build() {
             return new LaunchTemplateCreditSpecification(cpuCredits);
         }
     }

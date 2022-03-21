@@ -53,12 +53,10 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
             this.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
         }
-
         public Builder automatedSnapshotStartHour(@Nullable Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Output.ofNullable(automatedSnapshotStartHour);
             return this;
-        }
-        public DomainSnapshotOptionsArgs build() {
+        }        public DomainSnapshotOptionsArgs build() {
             return new DomainSnapshotOptionsArgs(automatedSnapshotStartHour);
         }
     }

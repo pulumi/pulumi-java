@@ -57,12 +57,13 @@ public final class WorkflowTemplateJobSparkSqlJobQueryListGetArgs extends io.pul
             this.queries = Objects.requireNonNull(queries);
             return this;
         }
-
         public Builder queries(List<String> queries) {
             this.queries = Output.of(Objects.requireNonNull(queries));
             return this;
         }
-        public WorkflowTemplateJobSparkSqlJobQueryListGetArgs build() {
+        public Builder queries(String... queries) {
+            return queries(List.of(queries));
+        }        public WorkflowTemplateJobSparkSqlJobQueryListGetArgs build() {
             return new WorkflowTemplateJobSparkSqlJobQueryListGetArgs(queries);
         }
     }

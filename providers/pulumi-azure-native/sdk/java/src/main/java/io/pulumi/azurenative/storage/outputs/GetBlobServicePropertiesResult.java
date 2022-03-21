@@ -254,67 +254,54 @@ public final class GetBlobServicePropertiesResult {
             this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
             return this;
         }
-
         public Builder changeFeed(@Nullable ChangeFeedResponse changeFeed) {
             this.changeFeed = changeFeed;
             return this;
         }
-
         public Builder containerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy) {
             this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
             return this;
         }
-
         public Builder cors(@Nullable CorsRulesResponse cors) {
             this.cors = cors;
             return this;
         }
-
         public Builder defaultServiceVersion(@Nullable String defaultServiceVersion) {
             this.defaultServiceVersion = defaultServiceVersion;
             return this;
         }
-
         public Builder deleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy) {
             this.deleteRetentionPolicy = deleteRetentionPolicy;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
             this.isVersioningEnabled = isVersioningEnabled;
             return this;
         }
-
         public Builder lastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy) {
             this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restorePolicy(@Nullable RestorePolicyPropertiesResponse restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
-
         public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBlobServicePropertiesResult build() {
+        }        public GetBlobServicePropertiesResult build() {
             return new GetBlobServicePropertiesResult(automaticSnapshotPolicyEnabled, changeFeed, containerDeleteRetentionPolicy, cors, defaultServiceVersion, deleteRetentionPolicy, id, isVersioningEnabled, lastAccessTimeTrackingPolicy, name, restorePolicy, sku, type);
         }
     }

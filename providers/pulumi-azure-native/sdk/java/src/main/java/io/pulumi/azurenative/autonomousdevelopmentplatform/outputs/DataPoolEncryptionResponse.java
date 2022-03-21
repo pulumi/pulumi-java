@@ -103,22 +103,18 @@ public final class DataPoolEncryptionResponse {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
-
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
-        }
-        public DataPoolEncryptionResponse build() {
+        }        public DataPoolEncryptionResponse build() {
             return new DataPoolEncryptionResponse(keyName, keyVaultUri, keyVersion, userAssignedIdentity);
         }
     }

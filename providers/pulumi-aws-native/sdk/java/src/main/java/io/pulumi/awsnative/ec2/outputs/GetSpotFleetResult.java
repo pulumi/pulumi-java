@@ -56,12 +56,10 @@ public final class GetSpotFleetResult {
             this.id = id;
             return this;
         }
-
         public Builder spotFleetRequestConfigData(@Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
             this.spotFleetRequestConfigData = spotFleetRequestConfigData;
             return this;
-        }
-        public GetSpotFleetResult build() {
+        }        public GetSpotFleetResult build() {
             return new GetSpotFleetResult(id, spotFleetRequestConfigData);
         }
     }

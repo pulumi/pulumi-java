@@ -57,12 +57,10 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends io.pulumi.resources
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public CxEntityTypeExcludedPhraseGetArgs build() {
+        }        public CxEntityTypeExcludedPhraseGetArgs build() {
             return new CxEntityTypeExcludedPhraseGetArgs(value);
         }
     }

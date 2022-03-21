@@ -231,112 +231,96 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
-
         public Builder autoscaleConfiguration(@Nullable AutoscaleArgs autoscaleConfiguration) {
             this.autoscaleConfiguration = Output.ofNullable(autoscaleConfiguration);
             return this;
         }
-
         public Builder dataDisksGroups(@Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups) {
             this.dataDisksGroups = dataDisksGroups;
             return this;
         }
-
         public Builder dataDisksGroups(@Nullable List<DataDisksGroupsArgs> dataDisksGroups) {
             this.dataDisksGroups = Output.ofNullable(dataDisksGroups);
             return this;
         }
-
+        public Builder dataDisksGroups(DataDisksGroupsArgs... dataDisksGroups) {
+            return dataDisksGroups(List.of(dataDisksGroups));
+        }
         public Builder encryptDataDisks(@Nullable Output<Boolean> encryptDataDisks) {
             this.encryptDataDisks = encryptDataDisks;
             return this;
         }
-
         public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
             this.encryptDataDisks = Output.ofNullable(encryptDataDisks);
             return this;
         }
-
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
-
         public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
             this.hardwareProfile = Output.ofNullable(hardwareProfile);
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
-
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = Output.ofNullable(minInstanceCount);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OsProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder scriptActions(@Nullable Output<List<ScriptActionArgs>> scriptActions) {
             this.scriptActions = scriptActions;
             return this;
         }
-
         public Builder scriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
             this.scriptActions = Output.ofNullable(scriptActions);
             return this;
         }
-
+        public Builder scriptActions(ScriptActionArgs... scriptActions) {
+            return scriptActions(List.of(scriptActions));
+        }
         public Builder targetInstanceCount(@Nullable Output<Integer> targetInstanceCount) {
             this.targetInstanceCount = targetInstanceCount;
             return this;
         }
-
         public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
             this.targetInstanceCount = Output.ofNullable(targetInstanceCount);
             return this;
         }
-
         public Builder vMGroupName(@Nullable Output<String> vMGroupName) {
             this.vMGroupName = vMGroupName;
             return this;
         }
-
         public Builder vMGroupName(@Nullable String vMGroupName) {
             this.vMGroupName = Output.ofNullable(vMGroupName);
             return this;
         }
-
         public Builder virtualNetworkProfile(@Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
-
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
             this.virtualNetworkProfile = Output.ofNullable(virtualNetworkProfile);
             return this;
-        }
-        public RoleArgs build() {
+        }        public RoleArgs build() {
             return new RoleArgs(autoscaleConfiguration, dataDisksGroups, encryptDataDisks, hardwareProfile, minInstanceCount, name, osProfile, scriptActions, targetInstanceCount, vMGroupName, virtualNetworkProfile);
         }
     }

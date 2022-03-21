@@ -178,82 +178,66 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.externalIpv6 = externalIpv6;
             return this;
         }
-
         public Builder externalIpv6(@Nullable String externalIpv6) {
             this.externalIpv6 = Output.ofNullable(externalIpv6);
             return this;
         }
-
         public Builder externalIpv6PrefixLength(@Nullable Output<Integer> externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
-
         public Builder externalIpv6PrefixLength(@Nullable Integer externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = Output.ofNullable(externalIpv6PrefixLength);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder natIP(@Nullable Output<String> natIP) {
             this.natIP = natIP;
             return this;
         }
-
         public Builder natIP(@Nullable String natIP) {
             this.natIP = Output.ofNullable(natIP);
             return this;
         }
-
         public Builder networkTier(@Nullable Output<AccessConfigNetworkTier> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder networkTier(@Nullable AccessConfigNetworkTier networkTier) {
             this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
             return this;
         }
-
         public Builder setPublicPtr(@Nullable Output<Boolean> setPublicPtr) {
             this.setPublicPtr = setPublicPtr;
             return this;
         }
-
         public Builder setPublicPtr(@Nullable Boolean setPublicPtr) {
             this.setPublicPtr = Output.ofNullable(setPublicPtr);
             return this;
         }
-
         public Builder type(@Nullable Output<AccessConfigType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable AccessConfigType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public AccessConfigArgs build() {
+        }        public AccessConfigArgs build() {
             return new AccessConfigArgs(externalIpv6, externalIpv6PrefixLength, name, natIP, networkTier, publicPtrDomainName, setPublicPtr, type);
         }
     }

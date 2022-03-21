@@ -78,22 +78,18 @@ public final class MetricDescriptorMetadataArgs extends io.pulumi.resources.Reso
             this.ingestDelay = ingestDelay;
             return this;
         }
-
         public Builder ingestDelay(@Nullable String ingestDelay) {
             this.ingestDelay = Output.ofNullable(ingestDelay);
             return this;
         }
-
         public Builder samplePeriod(@Nullable Output<String> samplePeriod) {
             this.samplePeriod = samplePeriod;
             return this;
         }
-
         public Builder samplePeriod(@Nullable String samplePeriod) {
             this.samplePeriod = Output.ofNullable(samplePeriod);
             return this;
-        }
-        public MetricDescriptorMetadataArgs build() {
+        }        public MetricDescriptorMetadataArgs build() {
             return new MetricDescriptorMetadataArgs(ingestDelay, samplePeriod);
         }
     }

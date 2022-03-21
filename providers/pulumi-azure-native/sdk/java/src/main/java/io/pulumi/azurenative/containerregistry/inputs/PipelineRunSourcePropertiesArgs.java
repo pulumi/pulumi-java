@@ -76,22 +76,18 @@ public final class PipelineRunSourcePropertiesArgs extends io.pulumi.resources.R
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,PipelineRunSourceType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,PipelineRunSourceType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public PipelineRunSourcePropertiesArgs build() {
+        }        public PipelineRunSourcePropertiesArgs build() {
             return new PipelineRunSourcePropertiesArgs(name, type);
         }
     }

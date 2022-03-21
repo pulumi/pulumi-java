@@ -93,17 +93,14 @@ public final class WeekDayOfMonthResponse extends io.pulumi.resources.InvokeArgs
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder dayOffset(Integer dayOffset) {
             this.dayOffset = Objects.requireNonNull(dayOffset);
             return this;
         }
-
         public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
-        }
-        public WeekDayOfMonthResponse build() {
+        }        public WeekDayOfMonthResponse build() {
             return new WeekDayOfMonthResponse(dayOfWeek, dayOffset, weekOrdinal);
         }
     }

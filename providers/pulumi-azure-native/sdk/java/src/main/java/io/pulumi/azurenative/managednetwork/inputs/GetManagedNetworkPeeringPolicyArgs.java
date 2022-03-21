@@ -88,17 +88,14 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
             this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
             return this;
         }
-
         public Builder managedNetworkPeeringPolicyName(String managedNetworkPeeringPolicyName) {
             this.managedNetworkPeeringPolicyName = Objects.requireNonNull(managedNetworkPeeringPolicyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetManagedNetworkPeeringPolicyArgs build() {
+        }        public GetManagedNetworkPeeringPolicyArgs build() {
             return new GetManagedNetworkPeeringPolicyArgs(managedNetworkName, managedNetworkPeeringPolicyName, resourceGroupName);
         }
     }

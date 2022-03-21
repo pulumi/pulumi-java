@@ -91,32 +91,26 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
             this.base = base;
             return this;
         }
-
         public Builder base(@Nullable Integer base) {
             this.base = Output.ofNullable(base);
             return this;
         }
-
         public Builder capacityProvider(Output<String> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
-
         public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Output.of(Objects.requireNonNull(capacityProvider));
             return this;
         }
-
         public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
-        }
-        public TaskSetCapacityProviderStrategyGetArgs build() {
+        }        public TaskSetCapacityProviderStrategyGetArgs build() {
             return new TaskSetCapacityProviderStrategyGetArgs(base, capacityProvider, weight);
         }
     }

@@ -71,12 +71,13 @@ public final class GetAccessPointRootDirectory {
             this.creationInfos = Objects.requireNonNull(creationInfos);
             return this;
         }
-
+        public Builder creationInfos(GetAccessPointRootDirectoryCreationInfo... creationInfos) {
+            return creationInfos(List.of(creationInfos));
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public GetAccessPointRootDirectory build() {
+        }        public GetAccessPointRootDirectory build() {
             return new GetAccessPointRootDirectory(creationInfos, path);
         }
     }

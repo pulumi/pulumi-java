@@ -192,92 +192,74 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             this.direct = direct;
             return this;
         }
-
         public Builder direct(@Nullable PeeringPropertiesDirectArgs direct) {
             this.direct = Output.ofNullable(direct);
             return this;
         }
-
         public Builder exchange(@Nullable Output<PeeringPropertiesExchangeArgs> exchange) {
             this.exchange = exchange;
             return this;
         }
-
         public Builder exchange(@Nullable PeeringPropertiesExchangeArgs exchange) {
             this.exchange = Output.ofNullable(exchange);
             return this;
         }
-
         public Builder kind(Output<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,Kind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
-
         public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = Output.ofNullable(peeringLocation);
             return this;
         }
-
         public Builder peeringName(@Nullable Output<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
-
         public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Output.ofNullable(peeringName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<PeeringSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(PeeringSkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PeeringArgs build() {
+        }        public PeeringArgs build() {
             return new PeeringArgs(direct, exchange, kind, location, peeringLocation, peeringName, resourceGroupName, sku, tags);
         }
     }

@@ -88,17 +88,20 @@ public final class CanaryVpcConfig {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
-        }
-        public CanaryVpcConfig build() {
+        }        public CanaryVpcConfig build() {
             return new CanaryVpcConfig(securityGroupIds, subnetIds, vpcId);
         }
     }

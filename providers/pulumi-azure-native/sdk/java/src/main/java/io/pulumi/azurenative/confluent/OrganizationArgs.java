@@ -141,62 +141,50 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder offerDetail(@Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
             this.offerDetail = offerDetail;
             return this;
         }
-
         public Builder offerDetail(@Nullable OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
             this.offerDetail = Output.ofNullable(offerDetail);
             return this;
         }
-
         public Builder organizationName(@Nullable Output<String> organizationName) {
             this.organizationName = organizationName;
             return this;
         }
-
         public Builder organizationName(@Nullable String organizationName) {
             this.organizationName = Output.ofNullable(organizationName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userDetail(@Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
             this.userDetail = userDetail;
             return this;
         }
-
         public Builder userDetail(@Nullable OrganizationResourcePropertiesUserDetailArgs userDetail) {
             this.userDetail = Output.ofNullable(userDetail);
             return this;
-        }
-        public OrganizationArgs build() {
+        }        public OrganizationArgs build() {
             return new OrganizationArgs(location, offerDetail, organizationName, resourceGroupName, tags, userDetail);
         }
     }

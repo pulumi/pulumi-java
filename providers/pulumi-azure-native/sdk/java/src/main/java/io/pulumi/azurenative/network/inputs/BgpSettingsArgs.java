@@ -114,42 +114,37 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.asn = asn;
             return this;
         }
-
         public Builder asn(@Nullable Double asn) {
             this.asn = Output.ofNullable(asn);
             return this;
         }
-
         public Builder bgpPeeringAddress(@Nullable Output<String> bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
-
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = Output.ofNullable(bgpPeeringAddress);
             return this;
         }
-
         public Builder bgpPeeringAddresses(@Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
-
         public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressArgs> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = Output.ofNullable(bgpPeeringAddresses);
             return this;
         }
-
+        public Builder bgpPeeringAddresses(IPConfigurationBgpPeeringAddressArgs... bgpPeeringAddresses) {
+            return bgpPeeringAddresses(List.of(bgpPeeringAddresses));
+        }
         public Builder peerWeight(@Nullable Output<Integer> peerWeight) {
             this.peerWeight = peerWeight;
             return this;
         }
-
         public Builder peerWeight(@Nullable Integer peerWeight) {
             this.peerWeight = Output.ofNullable(peerWeight);
             return this;
-        }
-        public BgpSettingsArgs build() {
+        }        public BgpSettingsArgs build() {
             return new BgpSettingsArgs(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
         }
     }

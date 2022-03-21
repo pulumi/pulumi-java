@@ -173,82 +173,66 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
             this.apiConfig = apiConfig;
             return this;
         }
-
         public Builder apiConfig(@Nullable String apiConfig) {
             this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
-
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
             this.defaultHostname = defaultHostname;
             return this;
         }
-
         public Builder defaultHostname(@Nullable String defaultHostname) {
             this.defaultHostname = Output.ofNullable(defaultHostname);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
-
         public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Output.ofNullable(gatewayId);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public GatewayState build() {
+        }        public GatewayState build() {
             return new GatewayState(apiConfig, defaultHostname, displayName, gatewayId, labels, name, project, region);
         }
     }

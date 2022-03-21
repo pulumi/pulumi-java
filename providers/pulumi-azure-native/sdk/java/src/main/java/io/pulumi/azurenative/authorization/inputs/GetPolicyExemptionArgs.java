@@ -72,12 +72,10 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
             this.policyExemptionName = Objects.requireNonNull(policyExemptionName);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetPolicyExemptionArgs build() {
+        }        public GetPolicyExemptionArgs build() {
             return new GetPolicyExemptionArgs(policyExemptionName, scope);
         }
     }

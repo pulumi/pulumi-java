@@ -206,102 +206,85 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             this.alpnPolicy = alpnPolicy;
             return this;
         }
-
         public Builder alpnPolicy(@Nullable String alpnPolicy) {
             this.alpnPolicy = Output.ofNullable(alpnPolicy);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder defaultActions(@Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions) {
             this.defaultActions = defaultActions;
             return this;
         }
-
         public Builder defaultActions(@Nullable List<ListenerDefaultActionGetArgs> defaultActions) {
             this.defaultActions = Output.ofNullable(defaultActions);
             return this;
         }
-
+        public Builder defaultActions(ListenerDefaultActionGetArgs... defaultActions) {
+            return defaultActions(List.of(defaultActions));
+        }
         public Builder loadBalancerArn(@Nullable Output<String> loadBalancerArn) {
             this.loadBalancerArn = loadBalancerArn;
             return this;
         }
-
         public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
             this.loadBalancerArn = Output.ofNullable(loadBalancerArn);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
-
         public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ListenerState build() {
+        }        public ListenerState build() {
             return new ListenerState(alpnPolicy, arn, certificateArn, defaultActions, loadBalancerArn, port, protocol, sslPolicy, tags, tagsAll);
         }
     }

@@ -56,12 +56,10 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
-
         public Builder clusterConfig(ModelExplainabilityJobDefinitionClusterConfigArgs clusterConfig) {
             this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
-        }
-        public ModelExplainabilityJobDefinitionMonitoringResourcesArgs build() {
+        }        public ModelExplainabilityJobDefinitionMonitoringResourcesArgs build() {
             return new ModelExplainabilityJobDefinitionMonitoringResourcesArgs(clusterConfig);
         }
     }

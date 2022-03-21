@@ -159,72 +159,67 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
             this.excludedFields = excludedFields;
             return this;
         }
-
         public Builder excludedFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> excludedFields) {
             this.excludedFields = Output.ofNullable(excludedFields);
             return this;
         }
-
+        public Builder excludedFields(GooglePrivacyDlpV2FieldIdArgs... excludedFields) {
+            return excludedFields(List.of(excludedFields));
+        }
         public Builder identifyingFields(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
             this.identifyingFields = identifyingFields;
             return this;
         }
-
         public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
             this.identifyingFields = Output.ofNullable(identifyingFields);
             return this;
         }
-
+        public Builder identifyingFields(GooglePrivacyDlpV2FieldIdArgs... identifyingFields) {
+            return identifyingFields(List.of(identifyingFields));
+        }
         public Builder includedFields(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields) {
             this.includedFields = includedFields;
             return this;
         }
-
         public Builder includedFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> includedFields) {
             this.includedFields = Output.ofNullable(includedFields);
             return this;
         }
-
+        public Builder includedFields(GooglePrivacyDlpV2FieldIdArgs... includedFields) {
+            return includedFields(List.of(includedFields));
+        }
         public Builder rowsLimit(@Nullable Output<String> rowsLimit) {
             this.rowsLimit = rowsLimit;
             return this;
         }
-
         public Builder rowsLimit(@Nullable String rowsLimit) {
             this.rowsLimit = Output.ofNullable(rowsLimit);
             return this;
         }
-
         public Builder rowsLimitPercent(@Nullable Output<Integer> rowsLimitPercent) {
             this.rowsLimitPercent = rowsLimitPercent;
             return this;
         }
-
         public Builder rowsLimitPercent(@Nullable Integer rowsLimitPercent) {
             this.rowsLimitPercent = Output.ofNullable(rowsLimitPercent);
             return this;
         }
-
         public Builder sampleMethod(@Nullable Output<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod) {
             this.sampleMethod = sampleMethod;
             return this;
         }
-
         public Builder sampleMethod(@Nullable GooglePrivacyDlpV2BigQueryOptionsSampleMethod sampleMethod) {
             this.sampleMethod = Output.ofNullable(sampleMethod);
             return this;
         }
-
         public Builder tableReference(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> tableReference) {
             this.tableReference = tableReference;
             return this;
         }
-
         public Builder tableReference(@Nullable GooglePrivacyDlpV2BigQueryTableArgs tableReference) {
             this.tableReference = Output.ofNullable(tableReference);
             return this;
-        }
-        public GooglePrivacyDlpV2BigQueryOptionsArgs build() {
+        }        public GooglePrivacyDlpV2BigQueryOptionsArgs build() {
             return new GooglePrivacyDlpV2BigQueryOptionsArgs(excludedFields, identifyingFields, includedFields, rowsLimit, rowsLimitPercent, sampleMethod, tableReference);
         }
     }

@@ -105,22 +105,18 @@ public final class MLTransformParametersFindMatchesParameters {
             this.accuracyCostTradeOff = accuracyCostTradeOff;
             return this;
         }
-
         public Builder enforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
             this.enforceProvidedLabels = enforceProvidedLabels;
             return this;
         }
-
         public Builder precisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
             this.precisionRecallTradeOff = precisionRecallTradeOff;
             return this;
         }
-
         public Builder primaryKeyColumnName(@Nullable String primaryKeyColumnName) {
             this.primaryKeyColumnName = primaryKeyColumnName;
             return this;
-        }
-        public MLTransformParametersFindMatchesParameters build() {
+        }        public MLTransformParametersFindMatchesParameters build() {
             return new MLTransformParametersFindMatchesParameters(accuracyCostTradeOff, enforceProvidedLabels, precisionRecallTradeOff, primaryKeyColumnName);
         }
     }

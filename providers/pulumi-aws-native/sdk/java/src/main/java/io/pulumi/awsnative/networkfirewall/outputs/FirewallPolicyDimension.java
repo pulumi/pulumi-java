@@ -43,8 +43,7 @@ public final class FirewallPolicyDimension {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public FirewallPolicyDimension build() {
+        }        public FirewallPolicyDimension build() {
             return new FirewallPolicyDimension(value);
         }
     }

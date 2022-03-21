@@ -126,62 +126,59 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable List<GroupConfigurationItemArgs> configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
+        public Builder configuration(GroupConfigurationItemArgs... configuration) {
+            return configuration(List.of(configuration));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceQuery(@Nullable Output<GroupResourceQueryArgs> resourceQuery) {
             this.resourceQuery = resourceQuery;
             return this;
         }
-
         public Builder resourceQuery(@Nullable GroupResourceQueryArgs resourceQuery) {
             this.resourceQuery = Output.ofNullable(resourceQuery);
             return this;
         }
-
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder tags(@Nullable Output<List<GroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<GroupTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public GroupArgs build() {
+        public Builder tags(GroupTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public GroupArgs build() {
             return new GroupArgs(configuration, description, name, resourceQuery, resources, tags);
         }
     }

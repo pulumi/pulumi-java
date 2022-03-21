@@ -76,12 +76,10 @@ public final class NodeInitializationActionResponse extends io.pulumi.resources.
             this.executableFile = Objects.requireNonNull(executableFile);
             return this;
         }
-
         public Builder executionTimeout(String executionTimeout) {
             this.executionTimeout = Objects.requireNonNull(executionTimeout);
             return this;
-        }
-        public NodeInitializationActionResponse build() {
+        }        public NodeInitializationActionResponse build() {
             return new NodeInitializationActionResponse(executableFile, executionTimeout);
         }
     }

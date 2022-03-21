@@ -103,22 +103,18 @@ public final class IdentityPropertiesResponse {
             this.clientSecretUrl = clientSecretUrl;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public IdentityPropertiesResponse build() {
+        }        public IdentityPropertiesResponse build() {
             return new IdentityPropertiesResponse(clientSecretUrl, principalId, tenantId, type);
         }
     }

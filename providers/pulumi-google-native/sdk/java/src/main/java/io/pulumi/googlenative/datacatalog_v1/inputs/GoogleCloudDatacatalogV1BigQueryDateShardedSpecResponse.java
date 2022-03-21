@@ -108,22 +108,18 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
-
         public Builder latestShardResource(String latestShardResource) {
             this.latestShardResource = Objects.requireNonNull(latestShardResource);
             return this;
         }
-
         public Builder shardCount(String shardCount) {
             this.shardCount = Objects.requireNonNull(shardCount);
             return this;
         }
-
         public Builder tablePrefix(String tablePrefix) {
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(dataset, latestShardResource, shardCount, tablePrefix);
         }
     }

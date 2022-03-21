@@ -133,52 +133,54 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             this.apiGroups = apiGroups;
             return this;
         }
-
         public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = Output.ofNullable(apiGroups);
             return this;
         }
-
+        public Builder apiGroups(String... apiGroups) {
+            return apiGroups(List.of(apiGroups));
+        }
         public Builder apiVersions(@Nullable Output<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
-
         public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = Output.ofNullable(apiVersions);
             return this;
         }
-
+        public Builder apiVersions(String... apiVersions) {
+            return apiVersions(List.of(apiVersions));
+        }
         public Builder operations(@Nullable Output<List<String>> operations) {
             this.operations = operations;
             return this;
         }
-
         public Builder operations(@Nullable List<String> operations) {
             this.operations = Output.ofNullable(operations);
             return this;
         }
-
+        public Builder operations(String... operations) {
+            return operations(List.of(operations));
+        }
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public RuleWithOperationsArgs build() {
+        }        public RuleWithOperationsArgs build() {
             return new RuleWithOperationsArgs(apiGroups, apiVersions, operations, resources, scope);
         }
     }

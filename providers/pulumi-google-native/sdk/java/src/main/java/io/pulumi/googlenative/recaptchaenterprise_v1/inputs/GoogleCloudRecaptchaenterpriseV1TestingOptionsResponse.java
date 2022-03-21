@@ -77,12 +77,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
             this.testingChallenge = Objects.requireNonNull(testingChallenge);
             return this;
         }
-
         public Builder testingScore(Double testingScore) {
             this.testingScore = Objects.requireNonNull(testingScore);
             return this;
-        }
-        public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
+        }        public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(testingChallenge, testingScore);
         }
     }

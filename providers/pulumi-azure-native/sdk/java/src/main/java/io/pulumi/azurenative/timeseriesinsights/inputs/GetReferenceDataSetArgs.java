@@ -88,17 +88,14 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder referenceDataSetName(String referenceDataSetName) {
             this.referenceDataSetName = Objects.requireNonNull(referenceDataSetName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetReferenceDataSetArgs build() {
+        }        public GetReferenceDataSetArgs build() {
             return new GetReferenceDataSetArgs(environmentName, referenceDataSetName, resourceGroupName);
         }
     }

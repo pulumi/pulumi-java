@@ -87,17 +87,14 @@ public final class CustomResourceSubresourceScale {
             this.labelSelectorPath = labelSelectorPath;
             return this;
         }
-
         public Builder specReplicasPath(String specReplicasPath) {
             this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
             return this;
         }
-
         public Builder statusReplicasPath(String statusReplicasPath) {
             this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
             return this;
-        }
-        public CustomResourceSubresourceScale build() {
+        }        public CustomResourceSubresourceScale build() {
             return new CustomResourceSubresourceScale(labelSelectorPath, specReplicasPath, statusReplicasPath);
         }
     }

@@ -75,12 +75,10 @@ public final class JobHttpTargetOauthToken {
             this.scope = scope;
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
-        }
-        public JobHttpTargetOauthToken build() {
+        }        public JobHttpTargetOauthToken build() {
             return new JobHttpTargetOauthToken(scope, serviceAccountEmail);
         }
     }

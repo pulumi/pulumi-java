@@ -108,22 +108,21 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder parameters(@Nullable List<ConsentLinkParameterDefinition> parameters) {
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(ConsentLinkParameterDefinition... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public ListConnectionConsentLinksArgs build() {
+        }        public ListConnectionConsentLinksArgs build() {
             return new ListConnectionConsentLinksArgs(connectionName, parameters, resourceGroupName, subscriptionId);
         }
     }

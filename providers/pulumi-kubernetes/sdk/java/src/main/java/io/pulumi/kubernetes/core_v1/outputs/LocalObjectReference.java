@@ -53,8 +53,7 @@ public final class LocalObjectReference {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public LocalObjectReference build() {
+        }        public LocalObjectReference build() {
             return new LocalObjectReference(name);
         }
     }

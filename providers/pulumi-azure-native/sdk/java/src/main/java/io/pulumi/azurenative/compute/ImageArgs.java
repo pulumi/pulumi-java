@@ -176,82 +176,66 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGenerationTypes> hyperVGeneration) {
             this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
-
         public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceVirtualMachine(@Nullable Output<SubResourceArgs> sourceVirtualMachine) {
             this.sourceVirtualMachine = sourceVirtualMachine;
             return this;
         }
-
         public Builder sourceVirtualMachine(@Nullable SubResourceArgs sourceVirtualMachine) {
             this.sourceVirtualMachine = Output.ofNullable(sourceVirtualMachine);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<ImageStorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable ImageStorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ImageArgs build() {
+        }        public ImageArgs build() {
             return new ImageArgs(extendedLocation, hyperVGeneration, imageName, location, resourceGroupName, sourceVirtualMachine, storageProfile, tags);
         }
     }

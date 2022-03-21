@@ -68,22 +68,21 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
             this.softDeleteTTL = softDeleteTTL;
             return this;
         }
-
         public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
             this.softDeleteTTL = Output.ofNullable(softDeleteTTL);
             return this;
         }
-
         public Builder subscriptionStateOverrideActions(@Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
-
         public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = Output.ofNullable(subscriptionStateOverrideActions);
             return this;
         }
-        public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs build() {
+        public Builder subscriptionStateOverrideActions(SubscriptionStateOverrideActionArgs... subscriptionStateOverrideActions) {
+            return subscriptionStateOverrideActions(List.of(subscriptionStateOverrideActions));
+        }        public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs build() {
             return new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(softDeleteTTL, subscriptionStateOverrideActions);
         }
     }

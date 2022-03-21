@@ -52,12 +52,10 @@ public final class GlobalTableContributorInsightsSpecificationArgs extends io.pu
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public GlobalTableContributorInsightsSpecificationArgs build() {
+        }        public GlobalTableContributorInsightsSpecificationArgs build() {
             return new GlobalTableContributorInsightsSpecificationArgs(enabled);
         }
     }

@@ -72,12 +72,10 @@ public final class QueueTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public QueueTag build() {
+        }        public QueueTag build() {
             return new QueueTag(key, value);
         }
     }

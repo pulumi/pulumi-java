@@ -88,17 +88,14 @@ public final class ConfigMapKeySelector {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public ConfigMapKeySelector build() {
+        }        public ConfigMapKeySelector build() {
             return new ConfigMapKeySelector(key, name, optional);
         }
     }

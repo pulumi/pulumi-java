@@ -96,32 +96,29 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
             this.backupFileShare = Objects.requireNonNull(backupFileShare);
             return this;
         }
-
         public Builder backupFileShare(FileShareArgs backupFileShare) {
             this.backupFileShare = Output.of(Objects.requireNonNull(backupFileShare));
             return this;
         }
-
         public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
-
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
             this.connectionInfo = Output.of(Objects.requireNonNull(connectionInfo));
             return this;
         }
-
         public Builder selectedCertificates(Output<List<SelectedCertificateInputArgs>> selectedCertificates) {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
-
         public Builder selectedCertificates(List<SelectedCertificateInputArgs> selectedCertificates) {
             this.selectedCertificates = Output.of(Objects.requireNonNull(selectedCertificates));
             return this;
         }
-        public GetTdeCertificatesSqlTaskInputArgs build() {
+        public Builder selectedCertificates(SelectedCertificateInputArgs... selectedCertificates) {
+            return selectedCertificates(List.of(selectedCertificates));
+        }        public GetTdeCertificatesSqlTaskInputArgs build() {
             return new GetTdeCertificatesSqlTaskInputArgs(backupFileShare, connectionInfo, selectedCertificates);
         }
     }

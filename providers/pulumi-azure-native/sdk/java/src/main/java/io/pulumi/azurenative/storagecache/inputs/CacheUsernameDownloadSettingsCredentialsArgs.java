@@ -78,22 +78,18 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
             this.bindDn = bindDn;
             return this;
         }
-
         public Builder bindDn(@Nullable String bindDn) {
             this.bindDn = Output.ofNullable(bindDn);
             return this;
         }
-
         public Builder bindPassword(@Nullable Output<String> bindPassword) {
             this.bindPassword = bindPassword;
             return this;
         }
-
         public Builder bindPassword(@Nullable String bindPassword) {
             this.bindPassword = Output.ofNullable(bindPassword);
             return this;
-        }
-        public CacheUsernameDownloadSettingsCredentialsArgs build() {
+        }        public CacheUsernameDownloadSettingsCredentialsArgs build() {
             return new CacheUsernameDownloadSettingsCredentialsArgs(bindDn, bindPassword);
         }
     }

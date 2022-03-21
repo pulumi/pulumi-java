@@ -191,92 +191,74 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
             return this;
         }
-
         public Builder autoscalingGroupName(String autoscalingGroupName) {
             this.autoscalingGroupName = Output.of(Objects.requireNonNull(autoscalingGroupName));
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
-
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = Output.ofNullable(desiredCapacity);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
-
         public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
-
         public Builder minSize(@Nullable Output<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
-
         public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Output.ofNullable(minSize);
             return this;
         }
-
         public Builder recurrence(@Nullable Output<String> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder recurrence(@Nullable String recurrence) {
             this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
-
         public Builder scheduledActionName(Output<String> scheduledActionName) {
             this.scheduledActionName = Objects.requireNonNull(scheduledActionName);
             return this;
         }
-
         public Builder scheduledActionName(String scheduledActionName) {
             this.scheduledActionName = Output.of(Objects.requireNonNull(scheduledActionName));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(autoscalingGroupName, desiredCapacity, endTime, maxSize, minSize, recurrence, scheduledActionName, startTime, timeZone);
         }
     }

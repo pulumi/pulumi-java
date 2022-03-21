@@ -57,12 +57,10 @@ public final class ClusterDefaultSnatStatusArgs extends io.pulumi.resources.Reso
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
-        }
-        public ClusterDefaultSnatStatusArgs build() {
+        }        public ClusterDefaultSnatStatusArgs build() {
             return new ClusterDefaultSnatStatusArgs(disabled);
         }
     }

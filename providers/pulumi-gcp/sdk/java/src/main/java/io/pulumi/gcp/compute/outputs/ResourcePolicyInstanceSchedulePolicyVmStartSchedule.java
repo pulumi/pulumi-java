@@ -51,8 +51,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartSchedule {
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
-        }
-        public ResourcePolicyInstanceSchedulePolicyVmStartSchedule build() {
+        }        public ResourcePolicyInstanceSchedulePolicyVmStartSchedule build() {
             return new ResourcePolicyInstanceSchedulePolicyVmStartSchedule(schedule);
         }
     }

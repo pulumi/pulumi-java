@@ -85,12 +85,10 @@ public final class RegionNetworkEndpointGroupCloudFunction {
             this.function = function;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = urlMask;
             return this;
-        }
-        public RegionNetworkEndpointGroupCloudFunction build() {
+        }        public RegionNetworkEndpointGroupCloudFunction build() {
             return new RegionNetworkEndpointGroupCloudFunction(function, urlMask);
         }
     }

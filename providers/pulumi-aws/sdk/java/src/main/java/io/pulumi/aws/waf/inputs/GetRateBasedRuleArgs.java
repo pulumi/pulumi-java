@@ -54,8 +54,7 @@ public final class GetRateBasedRuleArgs extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetRateBasedRuleArgs build() {
+        }        public GetRateBasedRuleArgs build() {
             return new GetRateBasedRuleArgs(name);
         }
     }

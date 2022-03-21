@@ -353,192 +353,154 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
             this.freeOfferExpirationTime = freeOfferExpirationTime;
             return this;
         }
-
         public Builder freeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
             this.freeOfferExpirationTime = Output.ofNullable(freeOfferExpirationTime);
             return this;
         }
-
         public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
-
         public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = Output.ofNullable(hostingEnvironmentProfile);
             return this;
         }
-
         public Builder hyperV(@Nullable Output<Boolean> hyperV) {
             this.hyperV = hyperV;
             return this;
         }
-
         public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = Output.ofNullable(hyperV);
             return this;
         }
-
         public Builder isSpot(@Nullable Output<Boolean> isSpot) {
             this.isSpot = isSpot;
             return this;
         }
-
         public Builder isSpot(@Nullable Boolean isSpot) {
             this.isSpot = Output.ofNullable(isSpot);
             return this;
         }
-
         public Builder isXenon(@Nullable Output<Boolean> isXenon) {
             this.isXenon = isXenon;
             return this;
         }
-
         public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = Output.ofNullable(isXenon);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder kubeEnvironmentProfile(@Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = kubeEnvironmentProfile;
             return this;
         }
-
         public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = Output.ofNullable(kubeEnvironmentProfile);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maximumElasticWorkerCount(@Nullable Output<Integer> maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = maximumElasticWorkerCount;
             return this;
         }
-
         public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = Output.ofNullable(maximumElasticWorkerCount);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder perSiteScaling(@Nullable Output<Boolean> perSiteScaling) {
             this.perSiteScaling = perSiteScaling;
             return this;
         }
-
         public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
             this.perSiteScaling = Output.ofNullable(perSiteScaling);
             return this;
         }
-
         public Builder reserved(@Nullable Output<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
-
         public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = Output.ofNullable(reserved);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuDescriptionArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder spotExpirationTime(@Nullable Output<String> spotExpirationTime) {
             this.spotExpirationTime = spotExpirationTime;
             return this;
         }
-
         public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
             this.spotExpirationTime = Output.ofNullable(spotExpirationTime);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetWorkerCount(@Nullable Output<Integer> targetWorkerCount) {
             this.targetWorkerCount = targetWorkerCount;
             return this;
         }
-
         public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
             this.targetWorkerCount = Output.ofNullable(targetWorkerCount);
             return this;
         }
-
         public Builder targetWorkerSizeId(@Nullable Output<Integer> targetWorkerSizeId) {
             this.targetWorkerSizeId = targetWorkerSizeId;
             return this;
         }
-
         public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
             this.targetWorkerSizeId = Output.ofNullable(targetWorkerSizeId);
             return this;
         }
-
         public Builder workerTierName(@Nullable Output<String> workerTierName) {
             this.workerTierName = workerTierName;
             return this;
         }
-
         public Builder workerTierName(@Nullable String workerTierName) {
             this.workerTierName = Output.ofNullable(workerTierName);
             return this;
-        }
-        public AppServicePlanArgs build() {
+        }        public AppServicePlanArgs build() {
             return new AppServicePlanArgs(freeOfferExpirationTime, hostingEnvironmentProfile, hyperV, isSpot, isXenon, kind, kubeEnvironmentProfile, location, maximumElasticWorkerCount, name, perSiteScaling, reserved, resourceGroupName, sku, spotExpirationTime, tags, targetWorkerCount, targetWorkerSizeId, workerTierName);
         }
     }

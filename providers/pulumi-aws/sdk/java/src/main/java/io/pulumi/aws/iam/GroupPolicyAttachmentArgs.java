@@ -73,17 +73,14 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder policyArn(Output<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
-
         public Builder policyArn(String policyArn) {
             this.policyArn = Output.of(Objects.requireNonNull(policyArn));
             return this;
-        }
-        public GroupPolicyAttachmentArgs build() {
+        }        public GroupPolicyAttachmentArgs build() {
             return new GroupPolicyAttachmentArgs(group, policyArn);
         }
     }

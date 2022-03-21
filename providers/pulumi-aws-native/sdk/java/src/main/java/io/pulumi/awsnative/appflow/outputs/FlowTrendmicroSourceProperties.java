@@ -43,8 +43,7 @@ public final class FlowTrendmicroSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowTrendmicroSourceProperties build() {
+        }        public FlowTrendmicroSourceProperties build() {
             return new FlowTrendmicroSourceProperties(object);
         }
     }

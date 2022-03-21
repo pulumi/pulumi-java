@@ -69,12 +69,13 @@ public final class GetAmiFilter extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public GetAmiFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetAmiFilter build() {
             return new GetAmiFilter(name, values);
         }
     }

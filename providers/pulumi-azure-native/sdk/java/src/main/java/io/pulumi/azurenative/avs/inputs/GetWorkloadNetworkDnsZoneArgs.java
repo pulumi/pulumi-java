@@ -88,17 +88,14 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
             this.dnsZoneId = Objects.requireNonNull(dnsZoneId);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWorkloadNetworkDnsZoneArgs build() {
+        }        public GetWorkloadNetworkDnsZoneArgs build() {
             return new GetWorkloadNetworkDnsZoneArgs(dnsZoneId, privateCloudName, resourceGroupName);
         }
     }

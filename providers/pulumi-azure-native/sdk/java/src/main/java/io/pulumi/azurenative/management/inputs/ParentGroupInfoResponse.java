@@ -94,17 +94,14 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ParentGroupInfoResponse build() {
+        }        public ParentGroupInfoResponse build() {
             return new ParentGroupInfoResponse(displayName, id, name);
         }
     }

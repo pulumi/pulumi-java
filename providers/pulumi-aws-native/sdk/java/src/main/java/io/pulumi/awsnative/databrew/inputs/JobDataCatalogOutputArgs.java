@@ -117,62 +117,50 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder databaseOptions(@Nullable Output<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
             this.databaseOptions = databaseOptions;
             return this;
         }
-
         public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptionsArgs databaseOptions) {
             this.databaseOptions = Output.ofNullable(databaseOptions);
             return this;
         }
-
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
-
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
-
         public Builder s3Options(@Nullable Output<JobS3TableOutputOptionsArgs> s3Options) {
             this.s3Options = s3Options;
             return this;
         }
-
         public Builder s3Options(@Nullable JobS3TableOutputOptionsArgs s3Options) {
             this.s3Options = Output.ofNullable(s3Options);
             return this;
         }
-
         public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
-        }
-        public JobDataCatalogOutputArgs build() {
+        }        public JobDataCatalogOutputArgs build() {
             return new JobDataCatalogOutputArgs(catalogId, databaseName, databaseOptions, overwrite, s3Options, tableName);
         }
     }

@@ -218,57 +218,52 @@ public final class GetUserResult {
             this.email = email;
             return this;
         }
-
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
-
         public Builder groups(List<GroupContractPropertiesResponse> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
-
+        public Builder groups(GroupContractPropertiesResponse... groups) {
+            return groups(List.of(groups));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identities(@Nullable List<UserIdentityContractResponse> identities) {
             this.identities = identities;
             return this;
         }
-
+        public Builder identities(UserIdentityContractResponse... identities) {
+            return identities(List.of(identities));
+        }
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder note(@Nullable String note) {
             this.note = note;
             return this;
         }
-
         public Builder registrationDate(@Nullable String registrationDate) {
             this.registrationDate = registrationDate;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetUserResult build() {
+        }        public GetUserResult build() {
             return new GetUserResult(email, firstName, groups, id, identities, lastName, name, note, registrationDate, state, type);
         }
     }

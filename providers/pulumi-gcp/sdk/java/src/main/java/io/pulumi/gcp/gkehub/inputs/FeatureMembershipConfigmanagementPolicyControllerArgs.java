@@ -140,62 +140,53 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             this.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
-
         public Builder auditIntervalSeconds(@Nullable String auditIntervalSeconds) {
             this.auditIntervalSeconds = Output.ofNullable(auditIntervalSeconds);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder exemptableNamespaces(@Nullable Output<List<String>> exemptableNamespaces) {
             this.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
-
         public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
             this.exemptableNamespaces = Output.ofNullable(exemptableNamespaces);
             return this;
         }
-
+        public Builder exemptableNamespaces(String... exemptableNamespaces) {
+            return exemptableNamespaces(List.of(exemptableNamespaces));
+        }
         public Builder logDeniesEnabled(@Nullable Output<Boolean> logDeniesEnabled) {
             this.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
-
         public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
             this.logDeniesEnabled = Output.ofNullable(logDeniesEnabled);
             return this;
         }
-
         public Builder referentialRulesEnabled(@Nullable Output<Boolean> referentialRulesEnabled) {
             this.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
-
         public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
             this.referentialRulesEnabled = Output.ofNullable(referentialRulesEnabled);
             return this;
         }
-
         public Builder templateLibraryInstalled(@Nullable Output<Boolean> templateLibraryInstalled) {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
-
         public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
             this.templateLibraryInstalled = Output.ofNullable(templateLibraryInstalled);
             return this;
-        }
-        public FeatureMembershipConfigmanagementPolicyControllerArgs build() {
+        }        public FeatureMembershipConfigmanagementPolicyControllerArgs build() {
             return new FeatureMembershipConfigmanagementPolicyControllerArgs(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
         }
     }

@@ -79,12 +79,10 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public HybridConnectionEventSubscriptionDestinationResponse build() {
+        }        public HybridConnectionEventSubscriptionDestinationResponse build() {
             return new HybridConnectionEventSubscriptionDestinationResponse(endpointType, resourceId);
         }
     }

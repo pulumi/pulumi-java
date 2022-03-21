@@ -90,32 +90,26 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appId(String appId) {
             this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
-
         public Builder branchName(Output<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
-
         public Builder branchName(String branchName) {
             this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
-        }
-        public WebhookArgs build() {
+        }        public WebhookArgs build() {
             return new WebhookArgs(appId, branchName, description);
         }
     }

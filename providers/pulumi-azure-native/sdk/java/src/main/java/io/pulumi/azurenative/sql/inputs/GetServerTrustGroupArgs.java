@@ -88,17 +88,14 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverTrustGroupName(String serverTrustGroupName) {
             this.serverTrustGroupName = Objects.requireNonNull(serverTrustGroupName);
             return this;
-        }
-        public GetServerTrustGroupArgs build() {
+        }        public GetServerTrustGroupArgs build() {
             return new GetServerTrustGroupArgs(locationName, resourceGroupName, serverTrustGroupName);
         }
     }

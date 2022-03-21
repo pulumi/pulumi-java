@@ -86,17 +86,14 @@ public final class DiskResponse {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
-
         public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
-        }
-        public DiskResponse build() {
+        }        public DiskResponse build() {
             return new DiskResponse(diskType, mountPoint, sizeGb);
         }
     }

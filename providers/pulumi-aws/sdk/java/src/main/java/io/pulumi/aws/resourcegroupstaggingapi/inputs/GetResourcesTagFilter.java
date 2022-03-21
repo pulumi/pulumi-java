@@ -75,12 +75,13 @@ public final class GetResourcesTagFilter extends io.pulumi.resources.InvokeArgs 
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public GetResourcesTagFilter build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public GetResourcesTagFilter build() {
             return new GetResourcesTagFilter(key, values);
         }
     }

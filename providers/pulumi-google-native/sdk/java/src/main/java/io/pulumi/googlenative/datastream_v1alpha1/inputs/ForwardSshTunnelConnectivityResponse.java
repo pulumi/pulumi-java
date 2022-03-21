@@ -125,27 +125,22 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public ForwardSshTunnelConnectivityResponse build() {
+        }        public ForwardSshTunnelConnectivityResponse build() {
             return new ForwardSshTunnelConnectivityResponse(hostname, password, port, privateKey, username);
         }
     }

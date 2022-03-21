@@ -157,72 +157,61 @@ public final class LivePipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder bitrateKbps(Output<Integer> bitrateKbps) {
             this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
             return this;
         }
-
         public Builder bitrateKbps(Integer bitrateKbps) {
             this.bitrateKbps = Output.of(Objects.requireNonNull(bitrateKbps));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder livePipelineName(@Nullable Output<String> livePipelineName) {
             this.livePipelineName = livePipelineName;
             return this;
         }
-
         public Builder livePipelineName(@Nullable String livePipelineName) {
             this.livePipelineName = Output.ofNullable(livePipelineName);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(ParameterDefinitionArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder topologyName(Output<String> topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
-
         public Builder topologyName(String topologyName) {
             this.topologyName = Output.of(Objects.requireNonNull(topologyName));
             return this;
-        }
-        public LivePipelineArgs build() {
+        }        public LivePipelineArgs build() {
             return new LivePipelineArgs(accountName, bitrateKbps, description, livePipelineName, parameters, resourceGroupName, topologyName);
         }
     }

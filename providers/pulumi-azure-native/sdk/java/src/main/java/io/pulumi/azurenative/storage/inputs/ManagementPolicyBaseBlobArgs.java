@@ -111,42 +111,34 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
             this.delete = delete;
             return this;
         }
-
         public Builder delete(@Nullable DateAfterModificationArgs delete) {
             this.delete = Output.ofNullable(delete);
             return this;
         }
-
         public Builder enableAutoTierToHotFromCool(@Nullable Output<Boolean> enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
-
         public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = Output.ofNullable(enableAutoTierToHotFromCool);
             return this;
         }
-
         public Builder tierToArchive(@Nullable Output<DateAfterModificationArgs> tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
-
         public Builder tierToArchive(@Nullable DateAfterModificationArgs tierToArchive) {
             this.tierToArchive = Output.ofNullable(tierToArchive);
             return this;
         }
-
         public Builder tierToCool(@Nullable Output<DateAfterModificationArgs> tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }
-
         public Builder tierToCool(@Nullable DateAfterModificationArgs tierToCool) {
             this.tierToCool = Output.ofNullable(tierToCool);
             return this;
-        }
-        public ManagementPolicyBaseBlobArgs build() {
+        }        public ManagementPolicyBaseBlobArgs build() {
             return new ManagementPolicyBaseBlobArgs(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
         }
     }

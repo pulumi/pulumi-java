@@ -138,82 +138,66 @@ public final class RegistryImageBuildAuthConfigArgs extends io.pulumi.resources.
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable String auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
         }
-
         public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder hostName(String hostName) {
             this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
-
         public Builder identityToken(@Nullable Output<String> identityToken) {
             this.identityToken = identityToken;
             return this;
         }
-
         public Builder identityToken(@Nullable String identityToken) {
             this.identityToken = Output.ofNullable(identityToken);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder registryToken(@Nullable Output<String> registryToken) {
             this.registryToken = registryToken;
             return this;
         }
-
         public Builder registryToken(@Nullable String registryToken) {
             this.registryToken = Output.ofNullable(registryToken);
             return this;
         }
-
         public Builder serverAddress(@Nullable Output<String> serverAddress) {
             this.serverAddress = serverAddress;
             return this;
         }
-
         public Builder serverAddress(@Nullable String serverAddress) {
             this.serverAddress = Output.ofNullable(serverAddress);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public RegistryImageBuildAuthConfigArgs build() {
+        }        public RegistryImageBuildAuthConfigArgs build() {
             return new RegistryImageBuildAuthConfigArgs(auth, email, hostName, identityToken, password, registryToken, serverAddress, userName);
         }
     }

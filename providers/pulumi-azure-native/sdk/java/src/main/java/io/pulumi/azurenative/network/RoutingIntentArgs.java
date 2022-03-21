@@ -140,62 +140,53 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingIntentName(@Nullable Output<String> routingIntentName) {
             this.routingIntentName = routingIntentName;
             return this;
         }
-
         public Builder routingIntentName(@Nullable String routingIntentName) {
             this.routingIntentName = Output.ofNullable(routingIntentName);
             return this;
         }
-
         public Builder routingPolicies(@Nullable Output<List<RoutingPolicyArgs>> routingPolicies) {
             this.routingPolicies = routingPolicies;
             return this;
         }
-
         public Builder routingPolicies(@Nullable List<RoutingPolicyArgs> routingPolicies) {
             this.routingPolicies = Output.ofNullable(routingPolicies);
             return this;
         }
-
+        public Builder routingPolicies(RoutingPolicyArgs... routingPolicies) {
+            return routingPolicies(List.of(routingPolicies));
+        }
         public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
-        }
-        public RoutingIntentArgs build() {
+        }        public RoutingIntentArgs build() {
             return new RoutingIntentArgs(id, name, resourceGroupName, routingIntentName, routingPolicies, virtualHubName);
         }
     }

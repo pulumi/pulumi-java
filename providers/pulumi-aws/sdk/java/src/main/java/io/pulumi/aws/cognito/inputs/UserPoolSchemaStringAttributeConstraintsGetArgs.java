@@ -74,22 +74,18 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
             this.maxLength = maxLength;
             return this;
         }
-
         public Builder maxLength(@Nullable String maxLength) {
             this.maxLength = Output.ofNullable(maxLength);
             return this;
         }
-
         public Builder minLength(@Nullable Output<String> minLength) {
             this.minLength = minLength;
             return this;
         }
-
         public Builder minLength(@Nullable String minLength) {
             this.minLength = Output.ofNullable(minLength);
             return this;
-        }
-        public UserPoolSchemaStringAttributeConstraintsGetArgs build() {
+        }        public UserPoolSchemaStringAttributeConstraintsGetArgs build() {
             return new UserPoolSchemaStringAttributeConstraintsGetArgs(maxLength, minLength);
         }
     }

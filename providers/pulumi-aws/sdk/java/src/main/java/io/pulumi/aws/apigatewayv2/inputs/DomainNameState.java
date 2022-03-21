@@ -157,72 +157,58 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
             this.apiMappingSelectionExpression = apiMappingSelectionExpression;
             return this;
         }
-
         public Builder apiMappingSelectionExpression(@Nullable String apiMappingSelectionExpression) {
             this.apiMappingSelectionExpression = Output.ofNullable(apiMappingSelectionExpression);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder domainNameConfiguration(@Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
             this.domainNameConfiguration = domainNameConfiguration;
             return this;
         }
-
         public Builder domainNameConfiguration(@Nullable DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
             this.domainNameConfiguration = Output.ofNullable(domainNameConfiguration);
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DomainNameState build() {
+        }        public DomainNameState build() {
             return new DomainNameState(apiMappingSelectionExpression, arn, domainName, domainNameConfiguration, mutualTlsAuthentication, tags, tagsAll);
         }
     }

@@ -180,82 +180,69 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<DependsOnDefinitionArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(DependsOnDefinitionArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder prune(@Nullable Output<Boolean> prune) {
             this.prune = prune;
             return this;
         }
-
         public Builder prune(@Nullable Boolean prune) {
             this.prune = Output.ofNullable(prune);
             return this;
         }
-
         public Builder retryIntervalInSeconds(@Nullable Output<Double> retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
-
         public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
             this.retryIntervalInSeconds = Output.ofNullable(retryIntervalInSeconds);
             return this;
         }
-
         public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
-
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = Output.ofNullable(syncIntervalInSeconds);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public Builder validation(@Nullable Output<Either<String,KustomizationValidationType>> validation) {
             this.validation = validation;
             return this;
         }
-
         public Builder validation(@Nullable Either<String,KustomizationValidationType> validation) {
             this.validation = Output.ofNullable(validation);
             return this;
-        }
-        public KustomizationDefinitionArgs build() {
+        }        public KustomizationDefinitionArgs build() {
             return new KustomizationDefinitionArgs(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
         }
     }

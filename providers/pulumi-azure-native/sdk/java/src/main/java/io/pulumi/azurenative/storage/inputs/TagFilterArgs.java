@@ -93,32 +93,26 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder op(Output<String> op) {
             this.op = Objects.requireNonNull(op);
             return this;
         }
-
         public Builder op(String op) {
             this.op = Output.of(Objects.requireNonNull(op));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public TagFilterArgs build() {
+        }        public TagFilterArgs build() {
             return new TagFilterArgs(name, op, value);
         }
     }

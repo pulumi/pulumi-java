@@ -86,17 +86,14 @@ public final class TagTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder propagateAtLaunch(Boolean propagateAtLaunch) {
             this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public TagTag build() {
+        }        public TagTag build() {
             return new TagTag(key, propagateAtLaunch, value);
         }
     }

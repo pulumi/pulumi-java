@@ -88,17 +88,17 @@ public final class AzNsActionGroupResponse {
             this.actionGroup = actionGroup;
             return this;
         }
-
+        public Builder actionGroup(String... actionGroup) {
+            return actionGroup(List.of(actionGroup));
+        }
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
-
         public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
-        }
-        public AzNsActionGroupResponse build() {
+        }        public AzNsActionGroupResponse build() {
             return new AzNsActionGroupResponse(actionGroup, customWebhookPayload, emailSubject);
         }
     }

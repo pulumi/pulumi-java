@@ -53,8 +53,7 @@ public final class GetAccessPointPolicyResult {
         public Builder policyDocument(@Nullable Object policyDocument) {
             this.policyDocument = policyDocument;
             return this;
-        }
-        public GetAccessPointPolicyResult build() {
+        }        public GetAccessPointPolicyResult build() {
             return new GetAccessPointPolicyResult(policyDocument);
         }
     }

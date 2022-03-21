@@ -89,17 +89,17 @@ public final class GetRegistryResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder tags(@Nullable List<RegistryTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetRegistryResult build() {
+        public Builder tags(RegistryTag... tags) {
+            return tags(List.of(tags));
+        }        public GetRegistryResult build() {
             return new GetRegistryResult(arn, description, tags);
         }
     }

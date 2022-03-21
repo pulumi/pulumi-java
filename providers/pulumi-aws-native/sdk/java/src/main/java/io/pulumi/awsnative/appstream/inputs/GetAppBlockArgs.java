@@ -50,8 +50,7 @@ public final class GetAppBlockArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetAppBlockArgs build() {
+        }        public GetAppBlockArgs build() {
             return new GetAppBlockArgs(arn);
         }
     }

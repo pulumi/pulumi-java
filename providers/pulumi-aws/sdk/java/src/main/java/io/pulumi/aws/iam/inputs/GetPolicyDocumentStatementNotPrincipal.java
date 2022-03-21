@@ -73,12 +73,13 @@ public final class GetPolicyDocumentStatementNotPrincipal extends io.pulumi.reso
             this.identifiers = Objects.requireNonNull(identifiers);
             return this;
         }
-
+        public Builder identifiers(String... identifiers) {
+            return identifiers(List.of(identifiers));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetPolicyDocumentStatementNotPrincipal build() {
+        }        public GetPolicyDocumentStatementNotPrincipal build() {
             return new GetPolicyDocumentStatementNotPrincipal(identifiers, type);
         }
     }

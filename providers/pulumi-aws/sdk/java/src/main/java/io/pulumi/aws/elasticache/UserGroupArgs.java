@@ -116,52 +116,45 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder engine(Output<String> engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
-
         public Builder engine(String engine) {
             this.engine = Output.of(Objects.requireNonNull(engine));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder userGroupId(Output<String> userGroupId) {
             this.userGroupId = Objects.requireNonNull(userGroupId);
             return this;
         }
-
         public Builder userGroupId(String userGroupId) {
             this.userGroupId = Output.of(Objects.requireNonNull(userGroupId));
             return this;
         }
-
         public Builder userIds(@Nullable Output<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
-
         public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Output.ofNullable(userIds);
             return this;
         }
-        public UserGroupArgs build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public UserGroupArgs build() {
             return new UserGroupArgs(arn, engine, tags, userGroupId, userIds);
         }
     }

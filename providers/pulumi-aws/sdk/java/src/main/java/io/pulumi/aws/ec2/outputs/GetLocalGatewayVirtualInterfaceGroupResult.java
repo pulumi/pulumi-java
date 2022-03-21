@@ -89,27 +89,28 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetLocalGatewayVirtualInterfaceGroupFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
-
         public Builder localGatewayVirtualInterfaceIds(List<String> localGatewayVirtualInterfaceIds) {
             this.localGatewayVirtualInterfaceIds = Objects.requireNonNull(localGatewayVirtualInterfaceIds);
             return this;
         }
-
+        public Builder localGatewayVirtualInterfaceIds(String... localGatewayVirtualInterfaceIds) {
+            return localGatewayVirtualInterfaceIds(List.of(localGatewayVirtualInterfaceIds));
+        }
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetLocalGatewayVirtualInterfaceGroupResult build() {
+        }        public GetLocalGatewayVirtualInterfaceGroupResult build() {
             return new GetLocalGatewayVirtualInterfaceGroupResult(filters, id, localGatewayId, localGatewayVirtualInterfaceIds, tags);
         }
     }

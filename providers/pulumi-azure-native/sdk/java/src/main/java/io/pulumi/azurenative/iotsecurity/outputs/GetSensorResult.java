@@ -265,72 +265,58 @@ public final class GetSensorResult {
             this.connectivityTime = Objects.requireNonNull(connectivityTime);
             return this;
         }
-
         public Builder dynamicLearning(Boolean dynamicLearning) {
             this.dynamicLearning = Objects.requireNonNull(dynamicLearning);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder learningMode(Boolean learningMode) {
             this.learningMode = Objects.requireNonNull(learningMode);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sensorStatus(String sensorStatus) {
             this.sensorStatus = Objects.requireNonNull(sensorStatus);
             return this;
         }
-
         public Builder sensorType(@Nullable String sensorType) {
             this.sensorType = sensorType;
             return this;
         }
-
         public Builder sensorVersion(String sensorVersion) {
             this.sensorVersion = Objects.requireNonNull(sensorVersion);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder tiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
             this.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;
         }
-
         public Builder tiStatus(String tiStatus) {
             this.tiStatus = Objects.requireNonNull(tiStatus);
             return this;
         }
-
         public Builder tiVersion(String tiVersion) {
             this.tiVersion = Objects.requireNonNull(tiVersion);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
-        }
-        public GetSensorResult build() {
+        }        public GetSensorResult build() {
             return new GetSensorResult(connectivityTime, dynamicLearning, id, learningMode, name, sensorStatus, sensorType, sensorVersion, systemData, tiAutomaticUpdates, tiStatus, tiVersion, type, zone);
         }
     }

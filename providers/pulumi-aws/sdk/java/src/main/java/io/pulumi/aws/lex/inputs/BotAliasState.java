@@ -187,92 +187,74 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder botName(@Nullable Output<String> botName) {
             this.botName = botName;
             return this;
         }
-
         public Builder botName(@Nullable String botName) {
             this.botName = Output.ofNullable(botName);
             return this;
         }
-
         public Builder botVersion(@Nullable Output<String> botVersion) {
             this.botVersion = botVersion;
             return this;
         }
-
         public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = Output.ofNullable(botVersion);
             return this;
         }
-
         public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
-
         public Builder checksum(@Nullable String checksum) {
             this.checksum = Output.ofNullable(checksum);
             return this;
         }
-
         public Builder conversationLogs(@Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs) {
             this.conversationLogs = conversationLogs;
             return this;
         }
-
         public Builder conversationLogs(@Nullable BotAliasConversationLogsGetArgs conversationLogs) {
             this.conversationLogs = Output.ofNullable(conversationLogs);
             return this;
         }
-
         public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
-
         public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public BotAliasState build() {
+        }        public BotAliasState build() {
             return new BotAliasState(arn, botName, botVersion, checksum, conversationLogs, createdDate, description, lastUpdatedDate, name);
         }
     }

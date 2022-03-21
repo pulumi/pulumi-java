@@ -88,17 +88,14 @@ public final class InquiryValidationResponse {
             this.additionalDetail = Objects.requireNonNull(additionalDetail);
             return this;
         }
-
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public InquiryValidationResponse build() {
+        }        public InquiryValidationResponse build() {
             return new InquiryValidationResponse(additionalDetail, errorDetail, status);
         }
     }

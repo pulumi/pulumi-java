@@ -77,22 +77,24 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-
         public Builder flags(List<String> flags) {
             this.flags = Output.of(Objects.requireNonNull(flags));
             return this;
         }
-
+        public Builder flags(String... flags) {
+            return flags(List.of(flags));
+        }
         public Builder masks(@Nullable Output<List<String>> masks) {
             this.masks = masks;
             return this;
         }
-
         public Builder masks(@Nullable List<String> masks) {
             this.masks = Output.ofNullable(masks);
             return this;
         }
-        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs build() {
+        public Builder masks(String... masks) {
+            return masks(List.of(masks));
+        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs(flags, masks);
         }
     }

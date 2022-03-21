@@ -169,42 +169,40 @@ public final class MetricThresholdResponse {
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
-
+        public Builder aggregations(AggregationResponse... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder denominatorAggregations(List<AggregationResponse> denominatorAggregations) {
             this.denominatorAggregations = Objects.requireNonNull(denominatorAggregations);
             return this;
         }
-
+        public Builder denominatorAggregations(AggregationResponse... denominatorAggregations) {
+            return denominatorAggregations(List.of(denominatorAggregations));
+        }
         public Builder denominatorFilter(String denominatorFilter) {
             this.denominatorFilter = Objects.requireNonNull(denominatorFilter);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder thresholdValue(Double thresholdValue) {
             this.thresholdValue = Objects.requireNonNull(thresholdValue);
             return this;
         }
-
         public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
-        }
-        public MetricThresholdResponse build() {
+        }        public MetricThresholdResponse build() {
             return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }
     }

@@ -233,122 +233,104 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.access = access;
             return this;
         }
-
         public Builder access(@Nullable List<DatasetAccessItemArgs> access) {
             this.access = Output.ofNullable(access);
             return this;
         }
-
+        public Builder access(DatasetAccessItemArgs... access) {
+            return access(List.of(access));
+        }
         public Builder datasetReference(@Nullable Output<DatasetReferenceArgs> datasetReference) {
             this.datasetReference = datasetReference;
             return this;
         }
-
         public Builder datasetReference(@Nullable DatasetReferenceArgs datasetReference) {
             this.datasetReference = Output.ofNullable(datasetReference);
             return this;
         }
-
         public Builder defaultEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
-
         public Builder defaultEncryptionConfiguration(@Nullable EncryptionConfigurationArgs defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
-
         public Builder defaultPartitionExpirationMs(@Nullable Output<String> defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
-
         public Builder defaultPartitionExpirationMs(@Nullable String defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
-
         public Builder defaultTableExpirationMs(@Nullable Output<String> defaultTableExpirationMs) {
             this.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
-
         public Builder defaultTableExpirationMs(@Nullable String defaultTableExpirationMs) {
             this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder isCaseInsensitive(@Nullable Output<Boolean> isCaseInsensitive) {
             this.isCaseInsensitive = isCaseInsensitive;
             return this;
         }
-
         public Builder isCaseInsensitive(@Nullable Boolean isCaseInsensitive) {
             this.isCaseInsensitive = Output.ofNullable(isCaseInsensitive);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DatasetTagsItemArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DatasetTagsItemArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DatasetArgs build() {
+        public Builder tags(DatasetTagsItemArgs... tags) {
+            return tags(List.of(tags));
+        }        public DatasetArgs build() {
             return new DatasetArgs(access, datasetReference, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, friendlyName, isCaseInsensitive, labels, location, project, tags);
         }
     }

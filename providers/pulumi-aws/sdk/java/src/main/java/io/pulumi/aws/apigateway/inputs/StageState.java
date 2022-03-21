@@ -320,162 +320,130 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
-
         public Builder accessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
             this.accessLogSettings = Output.ofNullable(accessLogSettings);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
-
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
-
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
             return this;
         }
-
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
-
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
-
         public Builder deployment(@Nullable Output<String> deployment) {
             this.deployment = deployment;
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
-
         public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Output.ofNullable(documentationVersion);
             return this;
         }
-
         public Builder executionArn(@Nullable Output<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
-
         public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Output.ofNullable(executionArn);
             return this;
         }
-
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
-
         public Builder invokeUrl(@Nullable String invokeUrl) {
             this.invokeUrl = Output.ofNullable(invokeUrl);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
-
         public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = Output.ofNullable(stageName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
-
         public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Output.ofNullable(variables);
             return this;
         }
-
         public Builder webAclArn(@Nullable Output<String> webAclArn) {
             this.webAclArn = webAclArn;
             return this;
         }
-
         public Builder webAclArn(@Nullable String webAclArn) {
             this.webAclArn = Output.ofNullable(webAclArn);
             return this;
         }
-
         public Builder xrayTracingEnabled(@Nullable Output<Boolean> xrayTracingEnabled) {
             this.xrayTracingEnabled = xrayTracingEnabled;
             return this;
         }
-
         public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
             this.xrayTracingEnabled = Output.ofNullable(xrayTracingEnabled);
             return this;
-        }
-        public StageState build() {
+        }        public StageState build() {
             return new StageState(accessLogSettings, arn, cacheClusterEnabled, cacheClusterSize, clientCertificateId, deployment, description, documentationVersion, executionArn, invokeUrl, restApi, stageName, tags, tagsAll, variables, webAclArn, xrayTracingEnabled);
         }
     }

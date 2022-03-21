@@ -75,22 +75,21 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder ports(Output<List<JitNetworkAccessRequestPortArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public Builder ports(List<JitNetworkAccessRequestPortArgs> ports) {
             this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
-        public JitNetworkAccessRequestVirtualMachineArgs build() {
+        public Builder ports(JitNetworkAccessRequestPortArgs... ports) {
+            return ports(List.of(ports));
+        }        public JitNetworkAccessRequestVirtualMachineArgs build() {
             return new JitNetworkAccessRequestVirtualMachineArgs(id, ports);
         }
     }

@@ -168,62 +168,65 @@ public final class ServicePerimeterSpecArgs extends io.pulumi.resources.Resource
             this.accessLevels = accessLevels;
             return this;
         }
-
         public Builder accessLevels(@Nullable List<String> accessLevels) {
             this.accessLevels = Output.ofNullable(accessLevels);
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder egressPolicies(@Nullable Output<List<ServicePerimeterSpecEgressPolicyArgs>> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
-
         public Builder egressPolicies(@Nullable List<ServicePerimeterSpecEgressPolicyArgs> egressPolicies) {
             this.egressPolicies = Output.ofNullable(egressPolicies);
             return this;
         }
-
+        public Builder egressPolicies(ServicePerimeterSpecEgressPolicyArgs... egressPolicies) {
+            return egressPolicies(List.of(egressPolicies));
+        }
         public Builder ingressPolicies(@Nullable Output<List<ServicePerimeterSpecIngressPolicyArgs>> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
-
         public Builder ingressPolicies(@Nullable List<ServicePerimeterSpecIngressPolicyArgs> ingressPolicies) {
             this.ingressPolicies = Output.ofNullable(ingressPolicies);
             return this;
         }
-
+        public Builder ingressPolicies(ServicePerimeterSpecIngressPolicyArgs... ingressPolicies) {
+            return ingressPolicies(List.of(ingressPolicies));
+        }
         public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<String> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder restrictedServices(@Nullable Output<List<String>> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
-
         public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = Output.ofNullable(restrictedServices);
             return this;
         }
-
+        public Builder restrictedServices(String... restrictedServices) {
+            return restrictedServices(List.of(restrictedServices));
+        }
         public Builder vpcAccessibleServices(@Nullable Output<ServicePerimeterSpecVpcAccessibleServicesArgs> vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
-
         public Builder vpcAccessibleServices(@Nullable ServicePerimeterSpecVpcAccessibleServicesArgs vpcAccessibleServices) {
             this.vpcAccessibleServices = Output.ofNullable(vpcAccessibleServices);
             return this;
-        }
-        public ServicePerimeterSpecArgs build() {
+        }        public ServicePerimeterSpecArgs build() {
             return new ServicePerimeterSpecArgs(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }
     }

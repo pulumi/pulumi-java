@@ -165,37 +165,30 @@ public final class FirewallPolicyNatRuleResponse extends io.pulumi.resources.Inv
             this.action = action;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder ruleCondition(@Nullable Object ruleCondition) {
             this.ruleCondition = ruleCondition;
             return this;
         }
-
         public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder translatedAddress(@Nullable String translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
-
         public Builder translatedPort(@Nullable String translatedPort) {
             this.translatedPort = translatedPort;
             return this;
-        }
-        public FirewallPolicyNatRuleResponse build() {
+        }        public FirewallPolicyNatRuleResponse build() {
             return new FirewallPolicyNatRuleResponse(action, name, priority, ruleCondition, ruleType, translatedAddress, translatedPort);
         }
     }

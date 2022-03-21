@@ -75,12 +75,10 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetStreamArgs build() {
+        }        public GetStreamArgs build() {
             return new GetStreamArgs(name, tags);
         }
     }

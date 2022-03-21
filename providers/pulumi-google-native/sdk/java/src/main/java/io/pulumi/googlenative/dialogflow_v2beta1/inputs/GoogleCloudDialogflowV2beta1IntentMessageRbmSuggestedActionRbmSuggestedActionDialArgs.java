@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
-
         public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(phoneNumber);
         }
     }

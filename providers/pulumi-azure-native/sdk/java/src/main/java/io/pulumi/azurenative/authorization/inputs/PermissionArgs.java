@@ -111,42 +111,46 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<String> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder dataActions(@Nullable Output<List<String>> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
-
         public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = Output.ofNullable(dataActions);
             return this;
         }
-
+        public Builder dataActions(String... dataActions) {
+            return dataActions(List.of(dataActions));
+        }
         public Builder notActions(@Nullable Output<List<String>> notActions) {
             this.notActions = notActions;
             return this;
         }
-
         public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = Output.ofNullable(notActions);
             return this;
         }
-
+        public Builder notActions(String... notActions) {
+            return notActions(List.of(notActions));
+        }
         public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
-
         public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = Output.ofNullable(notDataActions);
             return this;
         }
-        public PermissionArgs build() {
+        public Builder notDataActions(String... notDataActions) {
+            return notDataActions(List.of(notDataActions));
+        }        public PermissionArgs build() {
             return new PermissionArgs(actions, dataActions, notActions, notDataActions);
         }
     }

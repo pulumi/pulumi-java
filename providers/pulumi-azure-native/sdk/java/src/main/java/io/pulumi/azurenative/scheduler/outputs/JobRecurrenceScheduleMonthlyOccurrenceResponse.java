@@ -72,12 +72,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse {
             this.day = day;
             return this;
         }
-
         public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = occurrence;
             return this;
-        }
-        public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
+        }        public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
             return new JobRecurrenceScheduleMonthlyOccurrenceResponse(day, occurrence);
         }
     }

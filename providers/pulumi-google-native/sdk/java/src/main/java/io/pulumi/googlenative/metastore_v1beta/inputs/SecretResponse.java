@@ -58,8 +58,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
         public Builder cloudSecret(String cloudSecret) {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
-        }
-        public SecretResponse build() {
+        }        public SecretResponse build() {
             return new SecretResponse(cloudSecret);
         }
     }

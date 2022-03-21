@@ -88,17 +88,14 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
             this.computeType = computeType;
             return this;
         }
-
         public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = coreCount;
             return this;
         }
-
         public Builder timeToLive(@Nullable Integer timeToLive) {
             this.timeToLive = timeToLive;
             return this;
-        }
-        public IntegrationRuntimeDataFlowPropertiesResponse build() {
+        }        public IntegrationRuntimeDataFlowPropertiesResponse build() {
             return new IntegrationRuntimeDataFlowPropertiesResponse(computeType, coreCount, timeToLive);
         }
     }

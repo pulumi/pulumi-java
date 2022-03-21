@@ -143,62 +143,50 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
             this.connectionPool = connectionPool;
             return this;
         }
-
         public Builder connectionPool(@Nullable VirtualNodeSpecListenerConnectionPoolGetArgs connectionPool) {
             this.connectionPool = Output.ofNullable(connectionPool);
             return this;
         }
-
         public Builder healthCheck(@Nullable Output<VirtualNodeSpecListenerHealthCheckGetArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
-
         public Builder healthCheck(@Nullable VirtualNodeSpecListenerHealthCheckGetArgs healthCheck) {
             this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
-
         public Builder outlierDetection(@Nullable Output<VirtualNodeSpecListenerOutlierDetectionGetArgs> outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
-
         public Builder outlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetectionGetArgs outlierDetection) {
             this.outlierDetection = Output.ofNullable(outlierDetection);
             return this;
         }
-
         public Builder portMapping(Output<VirtualNodeSpecListenerPortMappingGetArgs> portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
-
         public Builder portMapping(VirtualNodeSpecListenerPortMappingGetArgs portMapping) {
             this.portMapping = Output.of(Objects.requireNonNull(portMapping));
             return this;
         }
-
         public Builder timeout(@Nullable Output<VirtualNodeSpecListenerTimeoutGetArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable VirtualNodeSpecListenerTimeoutGetArgs timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder tls(@Nullable Output<VirtualNodeSpecListenerTlsGetArgs> tls) {
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable VirtualNodeSpecListenerTlsGetArgs tls) {
             this.tls = Output.ofNullable(tls);
             return this;
-        }
-        public VirtualNodeSpecListenerGetArgs build() {
+        }        public VirtualNodeSpecListenerGetArgs build() {
             return new VirtualNodeSpecListenerGetArgs(connectionPool, healthCheck, outlierDetection, portMapping, timeout, tls);
         }
     }

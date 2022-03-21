@@ -72,12 +72,10 @@ public final class TopicRuleDynamodbv2 {
             this.putItem = putItem;
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public TopicRuleDynamodbv2 build() {
+        }        public TopicRuleDynamodbv2 build() {
             return new TopicRuleDynamodbv2(putItem, roleArn);
         }
     }

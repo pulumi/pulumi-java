@@ -190,47 +190,38 @@ public final class ShippingInformationResponse extends io.pulumi.resources.Invok
             this.additionalInformation = Objects.requireNonNull(additionalInformation);
             return this;
         }
-
         public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
-
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
-
         public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
-
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
-
         public Builder recipientName(@Nullable String recipientName) {
             this.recipientName = recipientName;
             return this;
         }
-
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
-
         public Builder streetAddress1(@Nullable String streetAddress1) {
             this.streetAddress1 = streetAddress1;
             return this;
         }
-
         public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
-        }
-        public ShippingInformationResponse build() {
+        }        public ShippingInformationResponse build() {
             return new ShippingInformationResponse(additionalInformation, city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
         }
     }

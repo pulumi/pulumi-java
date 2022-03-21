@@ -107,42 +107,34 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayGetArgs extends io.p
             this.hours = hours;
             return this;
         }
-
         public Builder hours(@Nullable Integer hours) {
             this.hours = Output.ofNullable(hours);
             return this;
         }
-
         public Builder minutes(@Nullable Output<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
-
         public Builder minutes(@Nullable Integer minutes) {
             this.minutes = Output.ofNullable(minutes);
             return this;
         }
-
         public Builder nanos(@Nullable Output<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(@Nullable Output<Integer> seconds) {
             this.seconds = seconds;
             return this;
         }
-
         public Builder seconds(@Nullable Integer seconds) {
             this.seconds = Output.ofNullable(seconds);
             return this;
-        }
-        public PatchDeploymentRecurringScheduleTimeOfDayGetArgs build() {
+        }        public PatchDeploymentRecurringScheduleTimeOfDayGetArgs build() {
             return new PatchDeploymentRecurringScheduleTimeOfDayGetArgs(hours, minutes, nanos, seconds);
         }
     }

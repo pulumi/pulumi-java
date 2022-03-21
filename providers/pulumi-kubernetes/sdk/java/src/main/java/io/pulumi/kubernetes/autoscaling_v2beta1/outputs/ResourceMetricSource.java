@@ -88,17 +88,14 @@ public final class ResourceMetricSource {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
             this.targetAverageUtilization = targetAverageUtilization;
             return this;
         }
-
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
-        }
-        public ResourceMetricSource build() {
+        }        public ResourceMetricSource build() {
             return new ResourceMetricSource(name, targetAverageUtilization, targetAverageValue);
         }
     }

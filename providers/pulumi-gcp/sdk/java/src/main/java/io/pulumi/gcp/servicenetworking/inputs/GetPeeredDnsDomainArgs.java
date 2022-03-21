@@ -88,22 +88,18 @@ public final class GetPeeredDnsDomainArgs extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
-        }
-        public GetPeeredDnsDomainArgs build() {
+        }        public GetPeeredDnsDomainArgs build() {
             return new GetPeeredDnsDomainArgs(name, network, project, service);
         }
     }

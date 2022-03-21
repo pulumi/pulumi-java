@@ -121,27 +121,22 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
-
         public Builder properties(@Nullable RegistrationAssignmentPropertiesResponseProperties properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
+        }        public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
             return new RegistrationAssignmentPropertiesResponseRegistrationDefinition(id, name, plan, properties, type);
         }
     }

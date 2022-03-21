@@ -110,42 +110,34 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public AclEntryArgs build() {
+        }        public AclEntryArgs build() {
             return new AclEntryArgs(expirationTime, kind, name, value);
         }
     }

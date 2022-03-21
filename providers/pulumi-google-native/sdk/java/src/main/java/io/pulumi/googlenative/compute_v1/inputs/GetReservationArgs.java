@@ -78,17 +78,14 @@ public final class GetReservationArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder reservation(String reservation) {
             this.reservation = Objects.requireNonNull(reservation);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetReservationArgs build() {
+        }        public GetReservationArgs build() {
             return new GetReservationArgs(project, reservation, zone);
         }
     }

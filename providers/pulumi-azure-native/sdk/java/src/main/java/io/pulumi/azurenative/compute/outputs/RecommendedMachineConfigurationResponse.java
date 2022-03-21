@@ -71,12 +71,10 @@ public final class RecommendedMachineConfigurationResponse {
             this.memory = memory;
             return this;
         }
-
         public Builder vCPUs(@Nullable ResourceRangeResponse vCPUs) {
             this.vCPUs = vCPUs;
             return this;
-        }
-        public RecommendedMachineConfigurationResponse build() {
+        }        public RecommendedMachineConfigurationResponse build() {
             return new RecommendedMachineConfigurationResponse(memory, vCPUs);
         }
     }

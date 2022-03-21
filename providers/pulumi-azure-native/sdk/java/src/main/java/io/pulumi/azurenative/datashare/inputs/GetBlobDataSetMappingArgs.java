@@ -104,22 +104,18 @@ public final class GetBlobDataSetMappingArgs extends io.pulumi.resources.InvokeA
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder dataSetMappingName(String dataSetMappingName) {
             this.dataSetMappingName = Objects.requireNonNull(dataSetMappingName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
-        }
-        public GetBlobDataSetMappingArgs build() {
+        }        public GetBlobDataSetMappingArgs build() {
             return new GetBlobDataSetMappingArgs(accountName, dataSetMappingName, resourceGroupName, shareSubscriptionName);
         }
     }

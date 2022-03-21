@@ -90,27 +90,22 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
             this.policy = policy;
             return this;
         }
-
         public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
-
         public Builder registryId(@Nullable String registryId) {
             this.registryId = Output.ofNullable(registryId);
             return this;
         }
-
         public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
-
         public Builder repository(@Nullable String repository) {
             this.repository = Output.ofNullable(repository);
             return this;
-        }
-        public LifecyclePolicyState build() {
+        }        public LifecyclePolicyState build() {
             return new LifecyclePolicyState(policy, registryId, repository);
         }
     }

@@ -77,12 +77,13 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends io.pulumi
             this.flow = Objects.requireNonNull(flow);
             return this;
         }
-
         public Builder trackingParameters(List<String> trackingParameters) {
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }
-        public GoogleCloudDialogflowCxV3TestConfigResponse build() {
+        public Builder trackingParameters(String... trackingParameters) {
+            return trackingParameters(List.of(trackingParameters));
+        }        public GoogleCloudDialogflowCxV3TestConfigResponse build() {
             return new GoogleCloudDialogflowCxV3TestConfigResponse(flow, trackingParameters);
         }
     }

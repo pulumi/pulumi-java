@@ -104,22 +104,27 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
             this.all = Objects.requireNonNull(all);
             return this;
         }
-
         public Builder exclusionLabels(List<OSPolicyAssignmentLabelSetResponse> exclusionLabels) {
             this.exclusionLabels = Objects.requireNonNull(exclusionLabels);
             return this;
         }
-
+        public Builder exclusionLabels(OSPolicyAssignmentLabelSetResponse... exclusionLabels) {
+            return exclusionLabels(List.of(exclusionLabels));
+        }
         public Builder inclusionLabels(List<OSPolicyAssignmentLabelSetResponse> inclusionLabels) {
             this.inclusionLabels = Objects.requireNonNull(inclusionLabels);
             return this;
         }
-
+        public Builder inclusionLabels(OSPolicyAssignmentLabelSetResponse... inclusionLabels) {
+            return inclusionLabels(List.of(inclusionLabels));
+        }
         public Builder inventories(List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
             this.inventories = Objects.requireNonNull(inventories);
             return this;
         }
-        public OSPolicyAssignmentInstanceFilterResponse build() {
+        public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryResponse... inventories) {
+            return inventories(List.of(inventories));
+        }        public OSPolicyAssignmentInstanceFilterResponse build() {
             return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories);
         }
     }

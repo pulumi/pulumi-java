@@ -176,82 +176,66 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
-
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
             this.hostPlatform = Output.of(Objects.requireNonNull(hostPlatform));
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder kubernetesClusterInfo(Output<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
             this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo);
             return this;
         }
-
         public Builder kubernetesClusterInfo(KubernetesClusterInfoArgs kubernetesClusterInfo) {
             this.kubernetesClusterInfo = Output.of(Objects.requireNonNull(kubernetesClusterInfo));
             return this;
         }
-
         public Builder kubernetesRoleResources(Output<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
             this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources);
             return this;
         }
-
         public Builder kubernetesRoleResources(KubernetesRoleResourcesArgs kubernetesRoleResources) {
             this.kubernetesRoleResources = Output.of(Objects.requireNonNull(kubernetesRoleResources));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
-
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
             return this;
-        }
-        public KubernetesRoleArgs build() {
+        }        public KubernetesRoleArgs build() {
             return new KubernetesRoleArgs(deviceName, hostPlatform, kind, kubernetesClusterInfo, kubernetesRoleResources, name, resourceGroupName, roleStatus);
         }
     }

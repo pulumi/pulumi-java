@@ -110,22 +110,18 @@ public final class ConnectionGatewayReferenceResponse extends io.pulumi.resource
             this.id = id;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ConnectionGatewayReferenceResponse build() {
+        }        public ConnectionGatewayReferenceResponse build() {
             return new ConnectionGatewayReferenceResponse(id, location, name, type);
         }
     }

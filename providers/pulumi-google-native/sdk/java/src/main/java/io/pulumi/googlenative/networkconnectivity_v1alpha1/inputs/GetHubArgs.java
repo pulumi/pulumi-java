@@ -66,12 +66,10 @@ public final class GetHubArgs extends io.pulumi.resources.InvokeArgs {
             this.hubId = Objects.requireNonNull(hubId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetHubArgs build() {
+        }        public GetHubArgs build() {
             return new GetHubArgs(hubId, project);
         }
     }

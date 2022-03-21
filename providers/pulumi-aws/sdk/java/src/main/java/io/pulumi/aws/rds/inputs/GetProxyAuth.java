@@ -88,22 +88,18 @@ public final class GetProxyAuth extends io.pulumi.resources.InvokeArgs {
             this.authScheme = Objects.requireNonNull(authScheme);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder iamAuth(String iamAuth) {
             this.iamAuth = Objects.requireNonNull(iamAuth);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
-        }
-        public GetProxyAuth build() {
+        }        public GetProxyAuth build() {
             return new GetProxyAuth(authScheme, description, iamAuth, secretArn);
         }
     }

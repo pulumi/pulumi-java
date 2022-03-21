@@ -118,27 +118,22 @@ public final class DiscoveryOccurrenceResponse {
             this.analysisStatus = Objects.requireNonNull(analysisStatus);
             return this;
         }
-
         public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
-
         public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
-
         public Builder cpe(String cpe) {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }
-
         public Builder lastScanTime(String lastScanTime) {
             this.lastScanTime = Objects.requireNonNull(lastScanTime);
             return this;
-        }
-        public DiscoveryOccurrenceResponse build() {
+        }        public DiscoveryOccurrenceResponse build() {
             return new DiscoveryOccurrenceResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
         }
     }

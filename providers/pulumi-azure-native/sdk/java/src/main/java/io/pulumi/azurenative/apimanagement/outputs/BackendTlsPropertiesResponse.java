@@ -71,12 +71,10 @@ public final class BackendTlsPropertiesResponse {
             this.validateCertificateChain = validateCertificateChain;
             return this;
         }
-
         public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
             this.validateCertificateName = validateCertificateName;
             return this;
-        }
-        public BackendTlsPropertiesResponse build() {
+        }        public BackendTlsPropertiesResponse build() {
             return new BackendTlsPropertiesResponse(validateCertificateChain, validateCertificateName);
         }
     }

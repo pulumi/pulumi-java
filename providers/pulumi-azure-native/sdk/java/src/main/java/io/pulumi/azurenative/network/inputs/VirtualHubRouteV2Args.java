@@ -111,42 +111,40 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
             this.destinationType = destinationType;
             return this;
         }
-
         public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Output.ofNullable(destinationType);
             return this;
         }
-
         public Builder destinations(@Nullable Output<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
-
         public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = Output.ofNullable(destinations);
             return this;
         }
-
+        public Builder destinations(String... destinations) {
+            return destinations(List.of(destinations));
+        }
         public Builder nextHopType(@Nullable Output<String> nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
-
         public Builder nextHopType(@Nullable String nextHopType) {
             this.nextHopType = Output.ofNullable(nextHopType);
             return this;
         }
-
         public Builder nextHops(@Nullable Output<List<String>> nextHops) {
             this.nextHops = nextHops;
             return this;
         }
-
         public Builder nextHops(@Nullable List<String> nextHops) {
             this.nextHops = Output.ofNullable(nextHops);
             return this;
         }
-        public VirtualHubRouteV2Args build() {
+        public Builder nextHops(String... nextHops) {
+            return nextHops(List.of(nextHops));
+        }        public VirtualHubRouteV2Args build() {
             return new VirtualHubRouteV2Args(destinationType, destinations, nextHopType, nextHops);
         }
     }

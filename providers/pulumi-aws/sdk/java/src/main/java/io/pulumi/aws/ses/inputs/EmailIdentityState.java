@@ -74,22 +74,18 @@ public final class EmailIdentityState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
-
         public Builder email(@Nullable String email) {
             this.email = Output.ofNullable(email);
             return this;
-        }
-        public EmailIdentityState build() {
+        }        public EmailIdentityState build() {
             return new EmailIdentityState(arn, email);
         }
     }

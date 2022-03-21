@@ -81,17 +81,14 @@ public final class GetDatabaseInstanceRestoreBackupContext extends io.pulumi.res
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetDatabaseInstanceRestoreBackupContext build() {
+        }        public GetDatabaseInstanceRestoreBackupContext build() {
             return new GetDatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
         }
     }

@@ -61,12 +61,10 @@ public final class GoogleCloudApigeeV1IntegrationConfigArgs extends io.pulumi.re
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GoogleCloudApigeeV1IntegrationConfigArgs build() {
+        }        public GoogleCloudApigeeV1IntegrationConfigArgs build() {
             return new GoogleCloudApigeeV1IntegrationConfigArgs(enabled);
         }
     }

@@ -102,22 +102,18 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
-
         public Builder nodeHours(Double nodeHours) {
             this.nodeHours = Objects.requireNonNull(nodeHours);
             return this;
         }
-
         public Builder outputPath(String outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public Builder predictionCount(String predictionCount) {
             this.predictionCount = Objects.requireNonNull(predictionCount);
             return this;
-        }
-        public GoogleCloudMlV1__PredictionOutputResponse build() {
+        }        public GoogleCloudMlV1__PredictionOutputResponse build() {
             return new GoogleCloudMlV1__PredictionOutputResponse(errorCount, nodeHours, outputPath, predictionCount);
         }
     }

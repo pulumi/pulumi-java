@@ -117,22 +117,24 @@ public final class GameServerConfigScalingConfig {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedules(@Nullable List<GameServerConfigScalingConfigSchedule> schedules) {
             this.schedules = schedules;
             return this;
         }
-
+        public Builder schedules(GameServerConfigScalingConfigSchedule... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder selectors(@Nullable List<GameServerConfigScalingConfigSelector> selectors) {
             this.selectors = selectors;
             return this;
         }
-        public GameServerConfigScalingConfig build() {
+        public Builder selectors(GameServerConfigScalingConfigSelector... selectors) {
+            return selectors(List.of(selectors));
+        }        public GameServerConfigScalingConfig build() {
             return new GameServerConfigScalingConfig(fleetAutoscalerSpec, name, schedules, selectors);
         }
     }

@@ -78,12 +78,10 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
             this.code = code;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
-        }
-        public ErrorResponseResponse build() {
+        }        public ErrorResponseResponse build() {
             return new ErrorResponseResponse(code, message);
         }
     }

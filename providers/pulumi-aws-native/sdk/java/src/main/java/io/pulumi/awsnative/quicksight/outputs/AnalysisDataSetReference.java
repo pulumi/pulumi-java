@@ -69,12 +69,10 @@ public final class AnalysisDataSetReference {
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
-
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
-        }
-        public AnalysisDataSetReference build() {
+        }        public AnalysisDataSetReference build() {
             return new AnalysisDataSetReference(dataSetArn, dataSetPlaceholder);
         }
     }

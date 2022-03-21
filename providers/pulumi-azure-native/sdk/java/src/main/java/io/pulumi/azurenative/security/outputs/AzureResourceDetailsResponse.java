@@ -71,12 +71,10 @@ public final class AzureResourceDetailsResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public AzureResourceDetailsResponse build() {
+        }        public AzureResourceDetailsResponse build() {
             return new AzureResourceDetailsResponse(id, source);
         }
     }

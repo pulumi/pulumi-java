@@ -75,22 +75,27 @@ public final class BucketNotificationConfiguration {
             this.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
-
         public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfiguration> lambdaConfigurations) {
             this.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
-
+        public Builder lambdaConfigurations(BucketLambdaConfiguration... lambdaConfigurations) {
+            return lambdaConfigurations(List.of(lambdaConfigurations));
+        }
         public Builder queueConfigurations(@Nullable List<BucketQueueConfiguration> queueConfigurations) {
             this.queueConfigurations = queueConfigurations;
             return this;
         }
-
+        public Builder queueConfigurations(BucketQueueConfiguration... queueConfigurations) {
+            return queueConfigurations(List.of(queueConfigurations));
+        }
         public Builder topicConfigurations(@Nullable List<BucketTopicConfiguration> topicConfigurations) {
             this.topicConfigurations = topicConfigurations;
             return this;
         }
-        public BucketNotificationConfiguration build() {
+        public Builder topicConfigurations(BucketTopicConfiguration... topicConfigurations) {
+            return topicConfigurations(List.of(topicConfigurations));
+        }        public BucketNotificationConfiguration build() {
             return new BucketNotificationConfiguration(eventBridgeConfiguration, lambdaConfigurations, queueConfigurations, topicConfigurations);
         }
     }

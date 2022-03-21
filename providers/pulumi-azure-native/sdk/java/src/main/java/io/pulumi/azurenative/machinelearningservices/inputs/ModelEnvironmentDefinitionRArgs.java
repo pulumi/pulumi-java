@@ -179,82 +179,78 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
             this.bioConductorPackages = bioConductorPackages;
             return this;
         }
-
         public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
             this.bioConductorPackages = Output.ofNullable(bioConductorPackages);
             return this;
         }
-
+        public Builder bioConductorPackages(String... bioConductorPackages) {
+            return bioConductorPackages(List.of(bioConductorPackages));
+        }
         public Builder cranPackages(@Nullable Output<List<RCranPackageArgs>> cranPackages) {
             this.cranPackages = cranPackages;
             return this;
         }
-
         public Builder cranPackages(@Nullable List<RCranPackageArgs> cranPackages) {
             this.cranPackages = Output.ofNullable(cranPackages);
             return this;
         }
-
+        public Builder cranPackages(RCranPackageArgs... cranPackages) {
+            return cranPackages(List.of(cranPackages));
+        }
         public Builder customUrlPackages(@Nullable Output<List<String>> customUrlPackages) {
             this.customUrlPackages = customUrlPackages;
             return this;
         }
-
         public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
             this.customUrlPackages = Output.ofNullable(customUrlPackages);
             return this;
         }
-
+        public Builder customUrlPackages(String... customUrlPackages) {
+            return customUrlPackages(List.of(customUrlPackages));
+        }
         public Builder gitHubPackages(@Nullable Output<List<RGitHubPackageArgs>> gitHubPackages) {
             this.gitHubPackages = gitHubPackages;
             return this;
         }
-
         public Builder gitHubPackages(@Nullable List<RGitHubPackageArgs> gitHubPackages) {
             this.gitHubPackages = Output.ofNullable(gitHubPackages);
             return this;
         }
-
+        public Builder gitHubPackages(RGitHubPackageArgs... gitHubPackages) {
+            return gitHubPackages(List.of(gitHubPackages));
+        }
         public Builder rVersion(@Nullable Output<String> rVersion) {
             this.rVersion = rVersion;
             return this;
         }
-
         public Builder rVersion(@Nullable String rVersion) {
             this.rVersion = Output.ofNullable(rVersion);
             return this;
         }
-
         public Builder rscriptPath(@Nullable Output<String> rscriptPath) {
             this.rscriptPath = rscriptPath;
             return this;
         }
-
         public Builder rscriptPath(@Nullable String rscriptPath) {
             this.rscriptPath = Output.ofNullable(rscriptPath);
             return this;
         }
-
         public Builder snapshotDate(@Nullable Output<String> snapshotDate) {
             this.snapshotDate = snapshotDate;
             return this;
         }
-
         public Builder snapshotDate(@Nullable String snapshotDate) {
             this.snapshotDate = Output.ofNullable(snapshotDate);
             return this;
         }
-
         public Builder userManaged(@Nullable Output<Boolean> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
-
         public Builder userManaged(@Nullable Boolean userManaged) {
             this.userManaged = Output.ofNullable(userManaged);
             return this;
-        }
-        public ModelEnvironmentDefinitionRArgs build() {
+        }        public ModelEnvironmentDefinitionRArgs build() {
             return new ModelEnvironmentDefinitionRArgs(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
         }
     }

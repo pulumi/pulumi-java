@@ -230,112 +230,93 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             this.automaticRestart = automaticRestart;
             return this;
         }
-
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = Output.ofNullable(automaticRestart);
             return this;
         }
-
         public Builder hostErrorTimeoutSeconds(@Nullable Output<Integer> hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
             return this;
         }
-
         public Builder hostErrorTimeoutSeconds(@Nullable Integer hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = Output.ofNullable(hostErrorTimeoutSeconds);
             return this;
         }
-
         public Builder instanceTerminationAction(@Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction) {
             this.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
-
         public Builder instanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
             this.instanceTerminationAction = Output.ofNullable(instanceTerminationAction);
             return this;
         }
-
         public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
-
         public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
-
         public Builder maintenanceFreezeDurationHours(@Nullable Output<Integer> maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
-
         public Builder maintenanceFreezeDurationHours(@Nullable Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Output.ofNullable(maintenanceFreezeDurationHours);
             return this;
         }
-
         public Builder maintenanceInterval(@Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval) {
             this.maintenanceInterval = maintenanceInterval;
             return this;
         }
-
         public Builder maintenanceInterval(@Nullable SchedulingMaintenanceInterval maintenanceInterval) {
             this.maintenanceInterval = Output.ofNullable(maintenanceInterval);
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
-
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = Output.ofNullable(minNodeCpus);
             return this;
         }
-
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
-
         public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
             this.nodeAffinities = Output.ofNullable(nodeAffinities);
             return this;
         }
-
+        public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
+            return nodeAffinities(List.of(nodeAffinities));
+        }
         public Builder onHostMaintenance(@Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
-
         public Builder onHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
             this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
-
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
-
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
-
         public Builder provisioningModel(@Nullable Output<SchedulingProvisioningModel> provisioningModel) {
             this.provisioningModel = provisioningModel;
             return this;
         }
-
         public Builder provisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
             this.provisioningModel = Output.ofNullable(provisioningModel);
             return this;
-        }
-        public SchedulingArgs build() {
+        }        public SchedulingArgs build() {
             return new SchedulingArgs(automaticRestart, hostErrorTimeoutSeconds, instanceTerminationAction, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }
     }

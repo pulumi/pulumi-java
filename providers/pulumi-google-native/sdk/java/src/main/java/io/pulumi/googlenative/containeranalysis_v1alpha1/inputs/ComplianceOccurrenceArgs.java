@@ -80,22 +80,21 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
             this.nonComplianceReason = nonComplianceReason;
             return this;
         }
-
         public Builder nonComplianceReason(@Nullable String nonComplianceReason) {
             this.nonComplianceReason = Output.ofNullable(nonComplianceReason);
             return this;
         }
-
         public Builder nonCompliantFiles(@Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
             this.nonCompliantFiles = nonCompliantFiles;
             return this;
         }
-
         public Builder nonCompliantFiles(@Nullable List<NonCompliantFileArgs> nonCompliantFiles) {
             this.nonCompliantFiles = Output.ofNullable(nonCompliantFiles);
             return this;
         }
-        public ComplianceOccurrenceArgs build() {
+        public Builder nonCompliantFiles(NonCompliantFileArgs... nonCompliantFiles) {
+            return nonCompliantFiles(List.of(nonCompliantFiles));
+        }        public ComplianceOccurrenceArgs build() {
             return new ComplianceOccurrenceArgs(nonComplianceReason, nonCompliantFiles);
         }
     }

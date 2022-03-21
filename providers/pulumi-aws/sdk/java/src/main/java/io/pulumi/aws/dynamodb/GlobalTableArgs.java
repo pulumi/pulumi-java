@@ -76,22 +76,21 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder replicas(Output<List<GlobalTableReplicaArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public Builder replicas(List<GlobalTableReplicaArgs> replicas) {
             this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
-        public GlobalTableArgs build() {
+        public Builder replicas(GlobalTableReplicaArgs... replicas) {
+            return replicas(List.of(replicas));
+        }        public GlobalTableArgs build() {
             return new GlobalTableArgs(name, replicas);
         }
     }

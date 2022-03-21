@@ -57,12 +57,13 @@ public final class EC2FleetTagSpecification {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder tags(@Nullable List<EC2FleetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public EC2FleetTagSpecification build() {
+        public Builder tags(EC2FleetTag... tags) {
+            return tags(List.of(tags));
+        }        public EC2FleetTagSpecification build() {
             return new EC2FleetTagSpecification(resourceType, tags);
         }
     }

@@ -72,12 +72,10 @@ public final class ListManagedClusterMonitoringUserCredentialsArgs extends io.pu
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListManagedClusterMonitoringUserCredentialsArgs build() {
+        }        public ListManagedClusterMonitoringUserCredentialsArgs build() {
             return new ListManagedClusterMonitoringUserCredentialsArgs(resourceGroupName, resourceName);
         }
     }

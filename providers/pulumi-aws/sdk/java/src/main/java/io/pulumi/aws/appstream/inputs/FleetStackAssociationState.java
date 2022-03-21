@@ -74,22 +74,18 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
             this.fleetName = fleetName;
             return this;
         }
-
         public Builder fleetName(@Nullable String fleetName) {
             this.fleetName = Output.ofNullable(fleetName);
             return this;
         }
-
         public Builder stackName(@Nullable Output<String> stackName) {
             this.stackName = stackName;
             return this;
         }
-
         public Builder stackName(@Nullable String stackName) {
             this.stackName = Output.ofNullable(stackName);
             return this;
-        }
-        public FleetStackAssociationState build() {
+        }        public FleetStackAssociationState build() {
             return new FleetStackAssociationState(fleetName, stackName);
         }
     }

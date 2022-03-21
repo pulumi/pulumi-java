@@ -60,8 +60,7 @@ public final class UserAssignedPropertiesResponse extends io.pulumi.resources.In
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
-        }
-        public UserAssignedPropertiesResponse build() {
+        }        public UserAssignedPropertiesResponse build() {
             return new UserAssignedPropertiesResponse(resourceId);
         }
     }

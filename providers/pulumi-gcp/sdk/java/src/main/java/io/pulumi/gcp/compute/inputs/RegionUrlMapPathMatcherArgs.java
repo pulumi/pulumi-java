@@ -160,62 +160,56 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
             this.defaultService = defaultService;
             return this;
         }
-
         public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Output.ofNullable(defaultService);
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
-
         public Builder defaultUrlRedirect(@Nullable RegionUrlMapPathMatcherDefaultUrlRedirectArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder pathRules(@Nullable Output<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
-
         public Builder pathRules(@Nullable List<RegionUrlMapPathMatcherPathRuleArgs> pathRules) {
             this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
-
+        public Builder pathRules(RegionUrlMapPathMatcherPathRuleArgs... pathRules) {
+            return pathRules(List.of(pathRules));
+        }
         public Builder routeRules(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
-
         public Builder routeRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleArgs> routeRules) {
             this.routeRules = Output.ofNullable(routeRules);
             return this;
         }
-        public RegionUrlMapPathMatcherArgs build() {
+        public Builder routeRules(RegionUrlMapPathMatcherRouteRuleArgs... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public RegionUrlMapPathMatcherArgs build() {
             return new RegionUrlMapPathMatcherArgs(defaultService, defaultUrlRedirect, description, name, pathRules, routeRules);
         }
     }

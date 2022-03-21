@@ -61,12 +61,10 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
             this.toolExecution = toolExecution;
             return this;
         }
-
         public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
             this.toolExecution = Output.ofNullable(toolExecution);
             return this;
-        }
-        public ToolExecutionStepArgs build() {
+        }        public ToolExecutionStepArgs build() {
             return new ToolExecutionStepArgs(toolExecution);
         }
     }

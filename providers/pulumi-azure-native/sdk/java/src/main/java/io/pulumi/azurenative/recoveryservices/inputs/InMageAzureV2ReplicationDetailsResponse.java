@@ -935,277 +935,240 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder azureVMDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails) {
             this.azureVMDiskDetails = azureVMDiskDetails;
             return this;
         }
-
+        public Builder azureVMDiskDetails(AzureVmDiskDetailsResponse... azureVMDiskDetails) {
+            return azureVMDiskDetails(List.of(azureVMDiskDetails));
+        }
         public Builder compressedDataRateInMB(@Nullable Double compressedDataRateInMB) {
             this.compressedDataRateInMB = compressedDataRateInMB;
             return this;
         }
-
         public Builder datastores(@Nullable List<String> datastores) {
             this.datastores = datastores;
             return this;
         }
-
+        public Builder datastores(String... datastores) {
+            return datastores(List.of(datastores));
+        }
         public Builder discoveryType(@Nullable String discoveryType) {
             this.discoveryType = discoveryType;
             return this;
         }
-
         public Builder diskResized(@Nullable String diskResized) {
             this.diskResized = diskResized;
             return this;
         }
-
         public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
-
         public Builder infrastructureVmId(@Nullable String infrastructureVmId) {
             this.infrastructureVmId = infrastructureVmId;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder isAgentUpdateRequired(@Nullable String isAgentUpdateRequired) {
             this.isAgentUpdateRequired = isAgentUpdateRequired;
             return this;
         }
-
         public Builder isRebootAfterUpdateRequired(@Nullable String isRebootAfterUpdateRequired) {
             this.isRebootAfterUpdateRequired = isRebootAfterUpdateRequired;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
-
         public Builder lastUpdateReceivedTime(@Nullable String lastUpdateReceivedTime) {
             this.lastUpdateReceivedTime = lastUpdateReceivedTime;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder masterTargetId(@Nullable String masterTargetId) {
             this.masterTargetId = masterTargetId;
             return this;
         }
-
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             this.multiVmGroupId = multiVmGroupId;
             return this;
         }
-
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
-
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
-
         public Builder osDiskId(@Nullable String osDiskId) {
             this.osDiskId = osDiskId;
             return this;
         }
-
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = processServerId;
             return this;
         }
-
         public Builder processServerName(String processServerName) {
             this.processServerName = Objects.requireNonNull(processServerName);
             return this;
         }
-
         public Builder protectedDisks(@Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = protectedDisks;
             return this;
         }
-
+        public Builder protectedDisks(InMageAzureV2ProtectedDiskDetailsResponse... protectedDisks) {
+            return protectedDisks(List.of(protectedDisks));
+        }
         public Builder protectedManagedDisks(@Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks) {
             this.protectedManagedDisks = protectedManagedDisks;
             return this;
         }
-
+        public Builder protectedManagedDisks(InMageAzureV2ManagedDiskDetailsResponse... protectedManagedDisks) {
+            return protectedManagedDisks(List.of(protectedManagedDisks));
+        }
         public Builder protectionStage(@Nullable String protectionStage) {
             this.protectionStage = protectionStage;
             return this;
         }
-
         public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
-
         public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
             this.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
-
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
-
         public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
             this.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
-
         public Builder recoveryAzureVMName(@Nullable String recoveryAzureVMName) {
             this.recoveryAzureVMName = recoveryAzureVMName;
             return this;
         }
-
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             this.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
-
         public Builder replicaId(@Nullable String replicaId) {
             this.replicaId = replicaId;
             return this;
         }
-
         public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
-
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
-
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
-
         public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
             this.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
-
         public Builder selectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
             this.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
             return this;
         }
-
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             this.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
-
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
-
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
-
         public Builder targetVmId(@Nullable String targetVmId) {
             this.targetVmId = targetVmId;
             return this;
         }
-
         public Builder uncompressedDataRateInMB(@Nullable Double uncompressedDataRateInMB) {
             this.uncompressedDataRateInMB = uncompressedDataRateInMB;
             return this;
         }
-
         public Builder useManagedDisks(@Nullable String useManagedDisks) {
             this.useManagedDisks = useManagedDisks;
             return this;
         }
-
         public Builder vCenterInfrastructureId(@Nullable String vCenterInfrastructureId) {
             this.vCenterInfrastructureId = vCenterInfrastructureId;
             return this;
         }
-
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             this.validationErrors = validationErrors;
             return this;
         }
-
+        public Builder validationErrors(HealthErrorResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }
         public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
-
+        public Builder vmNics(VMNicDetailsResponse... vmNics) {
+            return vmNics(List.of(vmNics));
+        }
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
-
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }
-        public InMageAzureV2ReplicationDetailsResponse build() {
+        }        public InMageAzureV2ReplicationDetailsResponse build() {
             return new InMageAzureV2ReplicationDetailsResponse(agentExpiryDate, agentVersion, azureVMDiskDetails, compressedDataRateInMB, datastores, discoveryType, diskResized, enableRdpOnTargetOption, infrastructureVmId, instanceType, ipAddress, isAgentUpdateRequired, isRebootAfterUpdateRequired, lastHeartbeat, lastRpoCalculatedTime, lastUpdateReceivedTime, licenseType, masterTargetId, multiVmGroupId, multiVmGroupName, multiVmSyncStatus, osDiskId, osType, osVersion, processServerId, processServerName, protectedDisks, protectedManagedDisks, protectionStage, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMName, recoveryAzureVMSize, replicaId, resyncProgressPercentage, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, selectedTfoAzureNetworkId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, targetVmId, uncompressedDataRateInMB, useManagedDisks, vCenterInfrastructureId, validationErrors, vhdName, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }
     }

@@ -172,72 +172,58 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
-
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
             this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
             return this;
         }
-
         public Builder messageStoragePolicy(@Nullable Output<TopicMessageStoragePolicyGetArgs> messageStoragePolicy) {
             this.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
-
         public Builder messageStoragePolicy(@Nullable TopicMessageStoragePolicyGetArgs messageStoragePolicy) {
             this.messageStoragePolicy = Output.ofNullable(messageStoragePolicy);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder schemaSettings(@Nullable Output<TopicSchemaSettingsGetArgs> schemaSettings) {
             this.schemaSettings = schemaSettings;
             return this;
         }
-
         public Builder schemaSettings(@Nullable TopicSchemaSettingsGetArgs schemaSettings) {
             this.schemaSettings = Output.ofNullable(schemaSettings);
             return this;
-        }
-        public TopicState build() {
+        }        public TopicState build() {
             return new TopicState(kmsKeyName, labels, messageRetentionDuration, messageStoragePolicy, name, project, schemaSettings);
         }
     }

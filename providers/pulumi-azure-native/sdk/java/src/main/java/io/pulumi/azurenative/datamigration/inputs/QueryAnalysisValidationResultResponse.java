@@ -77,12 +77,10 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
             this.queryResults = Objects.requireNonNull(queryResults);
             return this;
         }
-
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
-        }
-        public QueryAnalysisValidationResultResponse build() {
+        }        public QueryAnalysisValidationResultResponse build() {
             return new QueryAnalysisValidationResultResponse(queryResults, validationErrors);
         }
     }

@@ -111,42 +111,34 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs extends io
             this.isCa = isCa;
             return this;
         }
-
         public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = Output.ofNullable(isCa);
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
             return this;
         }
-
         public Builder nonCa(@Nullable Output<Boolean> nonCa) {
             this.nonCa = nonCa;
             return this;
         }
-
         public Builder nonCa(@Nullable Boolean nonCa) {
             this.nonCa = Output.ofNullable(nonCa);
             return this;
         }
-
         public Builder zeroMaxIssuerPathLength(@Nullable Output<Boolean> zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
-
         public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = Output.ofNullable(zeroMaxIssuerPathLength);
             return this;
-        }
-        public CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs build() {
+        }        public CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);
         }
     }

@@ -72,12 +72,10 @@ public final class GetApplicationSecurityGroupArgs extends io.pulumi.resources.I
             this.applicationSecurityGroupName = Objects.requireNonNull(applicationSecurityGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetApplicationSecurityGroupArgs build() {
+        }        public GetApplicationSecurityGroupArgs build() {
             return new GetApplicationSecurityGroupArgs(applicationSecurityGroupName, resourceGroupName);
         }
     }

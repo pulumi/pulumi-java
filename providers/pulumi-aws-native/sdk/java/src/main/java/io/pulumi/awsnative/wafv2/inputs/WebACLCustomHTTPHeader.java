@@ -68,12 +68,10 @@ public final class WebACLCustomHTTPHeader extends io.pulumi.resources.InvokeArgs
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WebACLCustomHTTPHeader build() {
+        }        public WebACLCustomHTTPHeader build() {
             return new WebACLCustomHTTPHeader(name, value);
         }
     }

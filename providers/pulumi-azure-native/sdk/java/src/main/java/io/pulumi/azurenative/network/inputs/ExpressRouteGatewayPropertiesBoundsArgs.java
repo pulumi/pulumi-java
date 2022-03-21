@@ -78,22 +78,18 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Integer max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Integer> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public ExpressRouteGatewayPropertiesBoundsArgs build() {
+        }        public ExpressRouteGatewayPropertiesBoundsArgs build() {
             return new ExpressRouteGatewayPropertiesBoundsArgs(max, min);
         }
     }

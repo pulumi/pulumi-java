@@ -188,92 +188,74 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
-
         public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Output.ofNullable(eventBusName);
             return this;
         }
-
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
-
         public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
-
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
-
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
-
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = Output.ofNullable(scheduleExpression);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public EventRuleArgs build() {
+        }        public EventRuleArgs build() {
             return new EventRuleArgs(description, eventBusName, eventPattern, isEnabled, name, namePrefix, roleArn, scheduleExpression, tags);
         }
     }

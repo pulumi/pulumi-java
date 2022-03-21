@@ -61,12 +61,10 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public UserAssignedPropertiesArgs build() {
+        }        public UserAssignedPropertiesArgs build() {
             return new UserAssignedPropertiesArgs(resourceId);
         }
     }

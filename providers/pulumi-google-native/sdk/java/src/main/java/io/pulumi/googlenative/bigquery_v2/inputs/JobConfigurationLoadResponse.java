@@ -500,142 +500,126 @@ public final class JobConfigurationLoadResponse extends io.pulumi.resources.Invo
             this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
             return this;
         }
-
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
             return this;
         }
-
         public Builder autodetect(Boolean autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
-
         public Builder clustering(ClusteringResponse clustering) {
             this.clustering = Objects.requireNonNull(clustering);
             return this;
         }
-
         public Builder createDisposition(String createDisposition) {
             this.createDisposition = Objects.requireNonNull(createDisposition);
             return this;
         }
-
         public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
             this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
             return this;
         }
-
+        public Builder decimalTargetTypes(String... decimalTargetTypes) {
+            return decimalTargetTypes(List.of(decimalTargetTypes));
+        }
         public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
             return this;
         }
-
         public Builder destinationTable(TableReferenceResponse destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
-
         public Builder destinationTableProperties(DestinationTablePropertiesResponse destinationTableProperties) {
             this.destinationTableProperties = Objects.requireNonNull(destinationTableProperties);
             return this;
         }
-
         public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
-
         public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
-
         public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
             this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
             return this;
         }
-
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
             return this;
         }
-
         public Builder jsonExtension(String jsonExtension) {
             this.jsonExtension = Objects.requireNonNull(jsonExtension);
             return this;
         }
-
         public Builder maxBadRecords(Integer maxBadRecords) {
             this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
             return this;
         }
-
         public Builder nullMarker(String nullMarker) {
             this.nullMarker = Objects.requireNonNull(nullMarker);
             return this;
         }
-
         public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
             this.parquetOptions = Objects.requireNonNull(parquetOptions);
             return this;
         }
-
         public Builder projectionFields(List<String> projectionFields) {
             this.projectionFields = Objects.requireNonNull(projectionFields);
             return this;
         }
-
+        public Builder projectionFields(String... projectionFields) {
+            return projectionFields(List.of(projectionFields));
+        }
         public Builder quote(String quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
-
         public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
             this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
             return this;
         }
-
         public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
             return this;
         }
-
+        public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
+            return schemaUpdateOptions(List.of(schemaUpdateOptions));
+        }
         public Builder skipLeadingRows(Integer skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }
-
         public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
-
         public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
+        public Builder sourceUris(String... sourceUris) {
+            return sourceUris(List.of(sourceUris));
+        }
         public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
             this.timePartitioning = Objects.requireNonNull(timePartitioning);
             return this;
         }
-
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }
-
         public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
-        }
-        public JobConfigurationLoadResponse build() {
+        }        public JobConfigurationLoadResponse build() {
             return new JobConfigurationLoadResponse(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, projectionFields, quote, rangePartitioning, schema, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
         }
     }

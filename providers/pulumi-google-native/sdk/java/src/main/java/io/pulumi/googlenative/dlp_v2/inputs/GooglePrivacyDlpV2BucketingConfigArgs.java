@@ -62,12 +62,13 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
             this.buckets = buckets;
             return this;
         }
-
         public Builder buckets(@Nullable List<GooglePrivacyDlpV2BucketArgs> buckets) {
             this.buckets = Output.ofNullable(buckets);
             return this;
         }
-        public GooglePrivacyDlpV2BucketingConfigArgs build() {
+        public Builder buckets(GooglePrivacyDlpV2BucketArgs... buckets) {
+            return buckets(List.of(buckets));
+        }        public GooglePrivacyDlpV2BucketingConfigArgs build() {
             return new GooglePrivacyDlpV2BucketingConfigArgs(buckets);
         }
     }

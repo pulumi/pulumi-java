@@ -106,42 +106,34 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder projectArn(Output<String> projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
-
         public Builder projectArn(String projectArn) {
             this.projectArn = Output.of(Objects.requireNonNull(projectArn));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public UploadArgs build() {
+        }        public UploadArgs build() {
             return new UploadArgs(contentType, name, projectArn, type);
         }
     }

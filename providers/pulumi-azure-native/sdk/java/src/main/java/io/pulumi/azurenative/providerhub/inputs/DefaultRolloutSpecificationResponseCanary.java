@@ -67,12 +67,16 @@ public final class DefaultRolloutSpecificationResponseCanary extends io.pulumi.r
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder skipRegions(@Nullable List<String> skipRegions) {
             this.skipRegions = skipRegions;
             return this;
         }
-        public DefaultRolloutSpecificationResponseCanary build() {
+        public Builder skipRegions(String... skipRegions) {
+            return skipRegions(List.of(skipRegions));
+        }        public DefaultRolloutSpecificationResponseCanary build() {
             return new DefaultRolloutSpecificationResponseCanary(regions, skipRegions);
         }
     }

@@ -97,32 +97,29 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public Builder parts(List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs> parts) {
             this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
-
+        public Builder parts(GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs... parts) {
+            return parts(List.of(parts));
+        }
         public Builder timesAddedCount(@Nullable Output<Integer> timesAddedCount) {
             this.timesAddedCount = timesAddedCount;
             return this;
         }
-
         public Builder timesAddedCount(@Nullable Integer timesAddedCount) {
             this.timesAddedCount = Output.ofNullable(timesAddedCount);
             return this;
         }
-
         public Builder type(Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(GoogleCloudDialogflowV2beta1IntentTrainingPhraseType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs(parts, timesAddedCount, type);
         }
     }

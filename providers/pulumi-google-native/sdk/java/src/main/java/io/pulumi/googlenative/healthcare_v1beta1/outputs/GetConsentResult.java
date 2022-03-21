@@ -200,52 +200,45 @@ public final class GetConsentResult {
             this.consentArtifact = Objects.requireNonNull(consentArtifact);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policies(List<GoogleCloudHealthcareV1beta1ConsentPolicyResponse> policies) {
             this.policies = Objects.requireNonNull(policies);
             return this;
         }
-
+        public Builder policies(GoogleCloudHealthcareV1beta1ConsentPolicyResponse... policies) {
+            return policies(List.of(policies));
+        }
         public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetConsentResult build() {
+        }        public GetConsentResult build() {
             return new GetConsentResult(consentArtifact, expireTime, metadata, name, policies, revisionCreateTime, revisionId, state, ttl, userId);
         }
     }

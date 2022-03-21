@@ -95,42 +95,34 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs extends 
             this.externalIpv6 = externalIpv6;
             return this;
         }
-
         public Builder externalIpv6(@Nullable String externalIpv6) {
             this.externalIpv6 = Output.ofNullable(externalIpv6);
             return this;
         }
-
         public Builder externalIpv6PrefixLength(@Nullable Output<String> externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
-
         public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = Output.ofNullable(externalIpv6PrefixLength);
             return this;
         }
-
         public Builder networkTier(Output<String> networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Output.of(Objects.requireNonNull(networkTier));
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
             return this;
-        }
-        public InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs build() {
+        }        public InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs build() {
             return new InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
         }
     }

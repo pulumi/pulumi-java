@@ -129,52 +129,42 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.dataTypeHint = dataTypeHint;
             return this;
         }
-
         public Builder dataTypeHint(@Nullable Either<String,ColumnDataTypeHintEnum> dataTypeHint) {
             this.dataTypeHint = Output.ofNullable(dataTypeHint);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,ColumnTypeEnum>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ColumnTypeEnum> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ColumnArgs build() {
+        }        public ColumnArgs build() {
             return new ColumnArgs(dataTypeHint, description, displayName, name, type);
         }
     }

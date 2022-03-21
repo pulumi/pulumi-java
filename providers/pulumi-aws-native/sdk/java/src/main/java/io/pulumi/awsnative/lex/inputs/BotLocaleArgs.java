@@ -131,62 +131,56 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder intents(@Nullable Output<List<BotIntentArgs>> intents) {
             this.intents = intents;
             return this;
         }
-
         public Builder intents(@Nullable List<BotIntentArgs> intents) {
             this.intents = Output.ofNullable(intents);
             return this;
         }
-
+        public Builder intents(BotIntentArgs... intents) {
+            return intents(List.of(intents));
+        }
         public Builder localeId(Output<String> localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public Builder localeId(String localeId) {
             this.localeId = Output.of(Objects.requireNonNull(localeId));
             return this;
         }
-
         public Builder nluConfidenceThreshold(Output<Double> nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Objects.requireNonNull(nluConfidenceThreshold);
             return this;
         }
-
         public Builder nluConfidenceThreshold(Double nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Output.of(Objects.requireNonNull(nluConfidenceThreshold));
             return this;
         }
-
         public Builder slotTypes(@Nullable Output<List<BotSlotTypeArgs>> slotTypes) {
             this.slotTypes = slotTypes;
             return this;
         }
-
         public Builder slotTypes(@Nullable List<BotSlotTypeArgs> slotTypes) {
             this.slotTypes = Output.ofNullable(slotTypes);
             return this;
         }
-
+        public Builder slotTypes(BotSlotTypeArgs... slotTypes) {
+            return slotTypes(List.of(slotTypes));
+        }
         public Builder voiceSettings(@Nullable Output<BotVoiceSettingsArgs> voiceSettings) {
             this.voiceSettings = voiceSettings;
             return this;
         }
-
         public Builder voiceSettings(@Nullable BotVoiceSettingsArgs voiceSettings) {
             this.voiceSettings = Output.ofNullable(voiceSettings);
             return this;
-        }
-        public BotLocaleArgs build() {
+        }        public BotLocaleArgs build() {
             return new BotLocaleArgs(description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);
         }
     }

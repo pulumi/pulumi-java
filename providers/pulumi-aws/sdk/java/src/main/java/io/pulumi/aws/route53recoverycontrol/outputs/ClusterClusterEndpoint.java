@@ -71,12 +71,10 @@ public final class ClusterClusterEndpoint {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public ClusterClusterEndpoint build() {
+        }        public ClusterClusterEndpoint build() {
             return new ClusterClusterEndpoint(endpoint, region);
         }
     }

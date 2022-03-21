@@ -83,32 +83,26 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
             this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption);
             return this;
         }
-
         public Builder cloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs cloudwatchEncryption) {
             this.cloudwatchEncryption = Output.of(Objects.requireNonNull(cloudwatchEncryption));
             return this;
         }
-
         public Builder jobBookmarksEncryption(Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption) {
             this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption);
             return this;
         }
-
         public Builder jobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs jobBookmarksEncryption) {
             this.jobBookmarksEncryption = Output.of(Objects.requireNonNull(jobBookmarksEncryption));
             return this;
         }
-
         public Builder s3Encryption(Output<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption) {
             this.s3Encryption = Objects.requireNonNull(s3Encryption);
             return this;
         }
-
         public Builder s3Encryption(SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs s3Encryption) {
             this.s3Encryption = Output.of(Objects.requireNonNull(s3Encryption));
             return this;
-        }
-        public SecurityConfigurationEncryptionConfigurationGetArgs build() {
+        }        public SecurityConfigurationEncryptionConfigurationGetArgs build() {
             return new SecurityConfigurationEncryptionConfigurationGetArgs(cloudwatchEncryption, jobBookmarksEncryption, s3Encryption);
         }
     }

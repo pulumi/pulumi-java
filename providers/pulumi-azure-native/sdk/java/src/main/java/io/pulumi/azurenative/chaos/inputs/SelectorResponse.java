@@ -94,17 +94,17 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder targets(List<TargetReferenceResponse> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
+        public Builder targets(TargetReferenceResponse... targets) {
+            return targets(List.of(targets));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SelectorResponse build() {
+        }        public SelectorResponse build() {
             return new SelectorResponse(id, targets, type);
         }
     }

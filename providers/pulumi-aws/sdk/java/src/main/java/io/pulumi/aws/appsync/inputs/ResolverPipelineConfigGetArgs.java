@@ -58,12 +58,13 @@ public final class ResolverPipelineConfigGetArgs extends io.pulumi.resources.Res
             this.functions = functions;
             return this;
         }
-
         public Builder functions(@Nullable List<String> functions) {
             this.functions = Output.ofNullable(functions);
             return this;
         }
-        public ResolverPipelineConfigGetArgs build() {
+        public Builder functions(String... functions) {
+            return functions(List.of(functions));
+        }        public ResolverPipelineConfigGetArgs build() {
             return new ResolverPipelineConfigGetArgs(functions);
         }
     }

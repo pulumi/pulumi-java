@@ -153,37 +153,30 @@ public final class DocumentDbOutputDataSourceResponse {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
             this.collectionNamePattern = collectionNamePattern;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = database;
             return this;
         }
-
         public Builder documentId(@Nullable String documentId) {
             this.documentId = documentId;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DocumentDbOutputDataSourceResponse build() {
+        }        public DocumentDbOutputDataSourceResponse build() {
             return new DocumentDbOutputDataSourceResponse(accountId, accountKey, collectionNamePattern, database, documentId, partitionKey, type);
         }
     }

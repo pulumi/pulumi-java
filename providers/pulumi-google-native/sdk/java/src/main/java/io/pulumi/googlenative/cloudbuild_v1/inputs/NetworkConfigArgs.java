@@ -79,22 +79,18 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.egressOption = egressOption;
             return this;
         }
-
         public Builder egressOption(@Nullable NetworkConfigEgressOption egressOption) {
             this.egressOption = Output.ofNullable(egressOption);
             return this;
         }
-
         public Builder peeredNetwork(Output<String> peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
-
         public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
             return this;
-        }
-        public NetworkConfigArgs build() {
+        }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(egressOption, peeredNetwork);
         }
     }

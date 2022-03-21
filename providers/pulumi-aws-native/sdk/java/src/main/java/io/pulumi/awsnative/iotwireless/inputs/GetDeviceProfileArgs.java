@@ -54,8 +54,7 @@ public final class GetDeviceProfileArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetDeviceProfileArgs build() {
+        }        public GetDeviceProfileArgs build() {
             return new GetDeviceProfileArgs(id);
         }
     }

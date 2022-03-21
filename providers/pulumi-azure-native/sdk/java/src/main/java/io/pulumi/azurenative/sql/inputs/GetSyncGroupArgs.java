@@ -104,22 +104,18 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
-        }
-        public GetSyncGroupArgs build() {
+        }        public GetSyncGroupArgs build() {
             return new GetSyncGroupArgs(databaseName, resourceGroupName, serverName, syncGroupName);
         }
     }

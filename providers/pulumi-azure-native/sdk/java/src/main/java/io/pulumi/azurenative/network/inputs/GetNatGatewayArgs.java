@@ -90,17 +90,14 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
             this.expand = expand;
             return this;
         }
-
         public Builder natGatewayName(String natGatewayName) {
             this.natGatewayName = Objects.requireNonNull(natGatewayName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNatGatewayArgs build() {
+        }        public GetNatGatewayArgs build() {
             return new GetNatGatewayArgs(expand, natGatewayName, resourceGroupName);
         }
     }

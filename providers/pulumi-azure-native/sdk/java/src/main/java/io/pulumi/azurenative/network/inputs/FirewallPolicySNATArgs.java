@@ -62,12 +62,13 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
             this.privateRanges = privateRanges;
             return this;
         }
-
         public Builder privateRanges(@Nullable List<String> privateRanges) {
             this.privateRanges = Output.ofNullable(privateRanges);
             return this;
         }
-        public FirewallPolicySNATArgs build() {
+        public Builder privateRanges(String... privateRanges) {
+            return privateRanges(List.of(privateRanges));
+        }        public FirewallPolicySNATArgs build() {
             return new FirewallPolicySNATArgs(privateRanges);
         }
     }

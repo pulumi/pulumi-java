@@ -60,12 +60,10 @@ public final class PodOSArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PodOSArgs build() {
+        }        public PodOSArgs build() {
             return new PodOSArgs(name);
         }
     }

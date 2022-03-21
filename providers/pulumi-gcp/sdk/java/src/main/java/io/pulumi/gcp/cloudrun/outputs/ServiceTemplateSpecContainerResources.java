@@ -83,12 +83,10 @@ public final class ServiceTemplateSpecContainerResources {
             this.limits = limits;
             return this;
         }
-
         public Builder requests(@Nullable Map<String,String> requests) {
             this.requests = requests;
             return this;
-        }
-        public ServiceTemplateSpecContainerResources build() {
+        }        public ServiceTemplateSpecContainerResources build() {
             return new ServiceTemplateSpecContainerResources(limits, requests);
         }
     }

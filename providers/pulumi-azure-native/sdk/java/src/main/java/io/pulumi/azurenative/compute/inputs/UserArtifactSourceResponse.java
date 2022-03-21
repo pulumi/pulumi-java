@@ -78,12 +78,10 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
             this.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
-
         public Builder mediaLink(String mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
-        }
-        public UserArtifactSourceResponse build() {
+        }        public UserArtifactSourceResponse build() {
             return new UserArtifactSourceResponse(defaultConfigurationLink, mediaLink);
         }
     }

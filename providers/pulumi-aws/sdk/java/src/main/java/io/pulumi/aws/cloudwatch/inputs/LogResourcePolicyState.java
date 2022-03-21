@@ -74,22 +74,18 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
             this.policyDocument = policyDocument;
             return this;
         }
-
         public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = Output.ofNullable(policyDocument);
             return this;
         }
-
         public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = Output.ofNullable(policyName);
             return this;
-        }
-        public LogResourcePolicyState build() {
+        }        public LogResourcePolicyState build() {
             return new LogResourcePolicyState(policyDocument, policyName);
         }
     }

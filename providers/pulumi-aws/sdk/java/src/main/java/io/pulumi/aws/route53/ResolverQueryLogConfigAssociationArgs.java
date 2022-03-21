@@ -73,22 +73,18 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
             this.resolverQueryLogConfigId = Objects.requireNonNull(resolverQueryLogConfigId);
             return this;
         }
-
         public Builder resolverQueryLogConfigId(String resolverQueryLogConfigId) {
             this.resolverQueryLogConfigId = Output.of(Objects.requireNonNull(resolverQueryLogConfigId));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public ResolverQueryLogConfigAssociationArgs build() {
+        }        public ResolverQueryLogConfigAssociationArgs build() {
             return new ResolverQueryLogConfigAssociationArgs(resolverQueryLogConfigId, resourceId);
         }
     }

@@ -113,42 +113,34 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
             this.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
-
         public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
             this.probeIntervalInSeconds = Output.ofNullable(probeIntervalInSeconds);
             return this;
         }
-
         public Builder probePath(@Nullable Output<String> probePath) {
             this.probePath = probePath;
             return this;
         }
-
         public Builder probePath(@Nullable String probePath) {
             this.probePath = Output.ofNullable(probePath);
             return this;
         }
-
         public Builder probeProtocol(@Nullable Output<ProbeProtocol> probeProtocol) {
             this.probeProtocol = probeProtocol;
             return this;
         }
-
         public Builder probeProtocol(@Nullable ProbeProtocol probeProtocol) {
             this.probeProtocol = Output.ofNullable(probeProtocol);
             return this;
         }
-
         public Builder probeRequestType(@Nullable Output<HealthProbeRequestType> probeRequestType) {
             this.probeRequestType = probeRequestType;
             return this;
         }
-
         public Builder probeRequestType(@Nullable HealthProbeRequestType probeRequestType) {
             this.probeRequestType = Output.ofNullable(probeRequestType);
             return this;
-        }
-        public HealthProbeParametersArgs build() {
+        }        public HealthProbeParametersArgs build() {
             return new HealthProbeParametersArgs(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
         }
     }

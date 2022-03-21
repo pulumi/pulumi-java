@@ -78,22 +78,18 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
             this.ssml = ssml;
             return this;
         }
-
         public Builder ssml(@Nullable String ssml) {
             this.ssml = Output.ofNullable(ssml);
             return this;
         }
-
         public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
-
         public Builder text(@Nullable String text) {
             this.text = Output.ofNullable(text);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs(ssml, text);
         }
     }

@@ -79,22 +79,18 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder predefinedSource(@Nullable Output<SourcePredefinedSource> predefinedSource) {
             this.predefinedSource = predefinedSource;
             return this;
         }
-
         public Builder predefinedSource(@Nullable SourcePredefinedSource predefinedSource) {
             this.predefinedSource = Output.ofNullable(predefinedSource);
             return this;
-        }
-        public SourceArgs build() {
+        }        public SourceArgs build() {
             return new SourceArgs(name, predefinedSource);
         }
     }

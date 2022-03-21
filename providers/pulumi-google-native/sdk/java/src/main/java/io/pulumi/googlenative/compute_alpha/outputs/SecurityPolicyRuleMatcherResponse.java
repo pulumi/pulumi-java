@@ -87,17 +87,14 @@ public final class SecurityPolicyRuleMatcherResponse {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder expr(ExprResponse expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public Builder versionedExpr(String versionedExpr) {
             this.versionedExpr = Objects.requireNonNull(versionedExpr);
             return this;
-        }
-        public SecurityPolicyRuleMatcherResponse build() {
+        }        public SecurityPolicyRuleMatcherResponse build() {
             return new SecurityPolicyRuleMatcherResponse(config, expr, versionedExpr);
         }
     }

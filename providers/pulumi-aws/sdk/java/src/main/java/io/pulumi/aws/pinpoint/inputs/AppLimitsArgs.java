@@ -106,42 +106,34 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.daily = daily;
             return this;
         }
-
         public Builder daily(@Nullable Integer daily) {
             this.daily = Output.ofNullable(daily);
             return this;
         }
-
         public Builder maximumDuration(@Nullable Output<Integer> maximumDuration) {
             this.maximumDuration = maximumDuration;
             return this;
         }
-
         public Builder maximumDuration(@Nullable Integer maximumDuration) {
             this.maximumDuration = Output.ofNullable(maximumDuration);
             return this;
         }
-
         public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
-
         public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
             this.messagesPerSecond = Output.ofNullable(messagesPerSecond);
             return this;
         }
-
         public Builder total(@Nullable Output<Integer> total) {
             this.total = total;
             return this;
         }
-
         public Builder total(@Nullable Integer total) {
             this.total = Output.ofNullable(total);
             return this;
-        }
-        public AppLimitsArgs build() {
+        }        public AppLimitsArgs build() {
             return new AppLimitsArgs(daily, maximumDuration, messagesPerSecond, total);
         }
     }

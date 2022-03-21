@@ -275,142 +275,114 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationType = Objects.requireNonNull(applicationType);
             return this;
         }
-
         public Builder applicationType(Either<String,ApplicationType> applicationType) {
             this.applicationType = Output.of(Objects.requireNonNull(applicationType));
             return this;
         }
-
         public Builder disableIpMasking(@Nullable Output<Boolean> disableIpMasking) {
             this.disableIpMasking = disableIpMasking;
             return this;
         }
-
         public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
             this.disableIpMasking = Output.ofNullable(disableIpMasking);
             return this;
         }
-
         public Builder flowType(@Nullable Output<Either<String,FlowType>> flowType) {
             this.flowType = flowType;
             return this;
         }
-
         public Builder flowType(@Nullable Either<String,FlowType> flowType) {
             this.flowType = Output.ofNullable(flowType);
             return this;
         }
-
         public Builder hockeyAppId(@Nullable Output<String> hockeyAppId) {
             this.hockeyAppId = hockeyAppId;
             return this;
         }
-
         public Builder hockeyAppId(@Nullable String hockeyAppId) {
             this.hockeyAppId = Output.ofNullable(hockeyAppId);
             return this;
         }
-
         public Builder immediatePurgeDataOn30Days(@Nullable Output<Boolean> immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
-
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = Output.ofNullable(immediatePurgeDataOn30Days);
             return this;
         }
-
         public Builder ingestionMode(@Nullable Output<Either<String,IngestionMode>> ingestionMode) {
             this.ingestionMode = ingestionMode;
             return this;
         }
-
         public Builder ingestionMode(@Nullable Either<String,IngestionMode> ingestionMode) {
             this.ingestionMode = Output.ofNullable(ingestionMode);
             return this;
         }
-
         public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder requestSource(@Nullable Output<Either<String,RequestSource>> requestSource) {
             this.requestSource = requestSource;
             return this;
         }
-
         public Builder requestSource(@Nullable Either<String,RequestSource> requestSource) {
             this.requestSource = Output.ofNullable(requestSource);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Output<Double> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
             this.samplingPercentage = Output.ofNullable(samplingPercentage);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ComponentArgs build() {
+        }        public ComponentArgs build() {
             return new ComponentArgs(applicationType, disableIpMasking, flowType, hockeyAppId, immediatePurgeDataOn30Days, ingestionMode, kind, location, requestSource, resourceGroupName, resourceName, retentionInDays, samplingPercentage, tags);
         }
     }

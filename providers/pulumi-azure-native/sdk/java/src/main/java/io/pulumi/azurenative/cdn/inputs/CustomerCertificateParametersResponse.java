@@ -146,32 +146,29 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
             this.certificateAuthority = certificateAuthority;
             return this;
         }
-
         public Builder secretSource(ResourceReferenceResponse secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
-
         public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
+        public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
             this.useLatestVersion = useLatestVersion;
             return this;
-        }
-        public CustomerCertificateParametersResponse build() {
+        }        public CustomerCertificateParametersResponse build() {
             return new CustomerCertificateParametersResponse(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);
         }
     }

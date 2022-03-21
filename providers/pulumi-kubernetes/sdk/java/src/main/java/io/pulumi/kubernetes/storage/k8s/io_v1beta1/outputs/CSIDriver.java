@@ -105,22 +105,18 @@ public final class CSIDriver {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(CSIDriverSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public CSIDriver build() {
+        }        public CSIDriver build() {
             return new CSIDriver(apiVersion, kind, metadata, spec);
         }
     }

@@ -211,42 +211,46 @@ public final class IfConditionActivityResponse {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder expression(ExpressionResponse expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder ifFalseActivities(@Nullable List<Object> ifFalseActivities) {
             this.ifFalseActivities = ifFalseActivities;
             return this;
         }
-
+        public Builder ifFalseActivities(Object... ifFalseActivities) {
+            return ifFalseActivities(List.of(ifFalseActivities));
+        }
         public Builder ifTrueActivities(@Nullable List<Object> ifTrueActivities) {
             this.ifTrueActivities = ifTrueActivities;
             return this;
         }
-
+        public Builder ifTrueActivities(Object... ifTrueActivities) {
+            return ifTrueActivities(List.of(ifTrueActivities));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public IfConditionActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public IfConditionActivityResponse build() {
             return new IfConditionActivityResponse(dependsOn, description, expression, ifFalseActivities, ifTrueActivities, name, type, userProperties);
         }
     }

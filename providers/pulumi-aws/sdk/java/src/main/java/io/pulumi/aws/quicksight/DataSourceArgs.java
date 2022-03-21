@@ -209,102 +209,85 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
-
         public Builder credentials(@Nullable Output<DataSourceCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable DataSourceCredentialsArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(Output<DataSourceParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(DataSourceParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public Builder permissions(@Nullable Output<List<DataSourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable List<DataSourcePermissionArgs> permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
         }
-
+        public Builder permissions(DataSourcePermissionArgs... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesArgs> sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
-
         public Builder sslProperties(@Nullable DataSourceSslPropertiesArgs sslProperties) {
             this.sslProperties = Output.ofNullable(sslProperties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
-
         public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
             this.vpcConnectionProperties = Output.ofNullable(vpcConnectionProperties);
             return this;
-        }
-        public DataSourceArgs build() {
+        }        public DataSourceArgs build() {
             return new DataSourceArgs(awsAccountId, credentials, dataSourceId, name, parameters, permissions, sslProperties, tags, type, vpcConnectionProperties);
         }
     }

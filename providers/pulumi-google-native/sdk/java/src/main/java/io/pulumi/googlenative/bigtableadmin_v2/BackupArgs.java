@@ -138,72 +138,58 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder backupId(String backupId) {
             this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
-
         public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public Builder expireTime(Output<String> expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Output.of(Objects.requireNonNull(expireTime));
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder sourceTable(Output<String> sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
-
         public Builder sourceTable(String sourceTable) {
             this.sourceTable = Output.of(Objects.requireNonNull(sourceTable));
             return this;
-        }
-        public BackupArgs build() {
+        }        public BackupArgs build() {
             return new BackupArgs(backupId, clusterId, expireTime, instanceId, name, project, sourceTable);
         }
     }

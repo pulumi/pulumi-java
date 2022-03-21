@@ -170,82 +170,66 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
-
         public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
-        }
-        public AzureClientState build() {
+        }        public AzureClientState build() {
             return new AzureClientState(applicationId, certificate, createTime, location, name, project, tenantId, uid);
         }
     }

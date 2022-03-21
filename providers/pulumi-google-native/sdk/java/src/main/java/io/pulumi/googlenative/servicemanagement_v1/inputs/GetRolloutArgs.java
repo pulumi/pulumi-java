@@ -64,12 +64,10 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
             this.rolloutId = Objects.requireNonNull(rolloutId);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetRolloutArgs build() {
+        }        public GetRolloutArgs build() {
             return new GetRolloutArgs(rolloutId, serviceName);
         }
     }

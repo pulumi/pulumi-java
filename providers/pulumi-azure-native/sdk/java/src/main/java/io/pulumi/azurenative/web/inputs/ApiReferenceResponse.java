@@ -171,42 +171,34 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
             this.brandColor = brandColor;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = iconUri;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder swagger(@Nullable Object swagger) {
             this.swagger = swagger;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ApiReferenceResponse build() {
+        }        public ApiReferenceResponse build() {
             return new ApiReferenceResponse(brandColor, description, displayName, iconUri, id, name, swagger, type);
         }
     }

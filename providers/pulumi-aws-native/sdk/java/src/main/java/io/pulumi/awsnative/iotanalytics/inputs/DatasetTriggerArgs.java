@@ -67,22 +67,18 @@ public final class DatasetTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.schedule = schedule;
             return this;
         }
-
         public Builder schedule(@Nullable DatasetScheduleArgs schedule) {
             this.schedule = Output.ofNullable(schedule);
             return this;
         }
-
         public Builder triggeringDataset(@Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset) {
             this.triggeringDataset = triggeringDataset;
             return this;
         }
-
         public Builder triggeringDataset(@Nullable DatasetTriggeringDatasetArgs triggeringDataset) {
             this.triggeringDataset = Output.ofNullable(triggeringDataset);
             return this;
-        }
-        public DatasetTriggerArgs build() {
+        }        public DatasetTriggerArgs build() {
             return new DatasetTriggerArgs(schedule, triggeringDataset);
         }
     }

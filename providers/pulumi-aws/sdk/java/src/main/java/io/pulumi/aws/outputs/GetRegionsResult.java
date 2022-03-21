@@ -90,22 +90,24 @@ public final class GetRegionsResult {
             this.allRegions = allRegions;
             return this;
         }
-
         public Builder filters(@Nullable List<GetRegionsFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetRegionsFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-        public GetRegionsResult build() {
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }        public GetRegionsResult build() {
             return new GetRegionsResult(allRegions, filters, id, names);
         }
     }

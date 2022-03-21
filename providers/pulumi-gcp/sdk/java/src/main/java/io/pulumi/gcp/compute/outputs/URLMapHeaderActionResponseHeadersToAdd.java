@@ -88,17 +88,14 @@ public final class URLMapHeaderActionResponseHeadersToAdd {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
-
         public Builder replace(Boolean replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
-        }
-        public URLMapHeaderActionResponseHeadersToAdd build() {
+        }        public URLMapHeaderActionResponseHeadersToAdd build() {
             return new URLMapHeaderActionResponseHeadersToAdd(headerName, headerValue, replace);
         }
     }

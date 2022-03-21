@@ -51,8 +51,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettings {
         public Builder defaultResourceSpec(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
-        }
-        public UserProfileUserSettingsTensorBoardAppSettings build() {
+        }        public UserProfileUserSettingsTensorBoardAppSettings build() {
             return new UserProfileUserSettingsTensorBoardAppSettings(defaultResourceSpec);
         }
     }

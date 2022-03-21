@@ -76,12 +76,10 @@ public final class HashResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public HashResponse build() {
+        }        public HashResponse build() {
             return new HashResponse(type, value);
         }
     }

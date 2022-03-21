@@ -121,27 +121,22 @@ public final class DashboardPartsResponsePosition {
             this.colSpan = Objects.requireNonNull(colSpan);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder rowSpan(Integer rowSpan) {
             this.rowSpan = Objects.requireNonNull(rowSpan);
             return this;
         }
-
         public Builder x(Integer x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
-
         public Builder y(Integer y) {
             this.y = Objects.requireNonNull(y);
             return this;
-        }
-        public DashboardPartsResponsePosition build() {
+        }        public DashboardPartsResponsePosition build() {
             return new DashboardPartsResponsePosition(colSpan, metadata, rowSpan, x, y);
         }
     }

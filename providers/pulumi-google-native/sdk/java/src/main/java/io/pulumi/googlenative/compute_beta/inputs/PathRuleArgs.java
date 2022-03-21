@@ -113,42 +113,37 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.paths = paths;
             return this;
         }
-
         public Builder paths(@Nullable List<String> paths) {
             this.paths = Output.ofNullable(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder routeAction(@Nullable Output<HttpRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
             this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
         }
-
         public Builder urlRedirect(@Nullable Output<HttpRedirectActionArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
             this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
-        }
-        public PathRuleArgs build() {
+        }        public PathRuleArgs build() {
             return new PathRuleArgs(paths, routeAction, service, urlRedirect);
         }
     }

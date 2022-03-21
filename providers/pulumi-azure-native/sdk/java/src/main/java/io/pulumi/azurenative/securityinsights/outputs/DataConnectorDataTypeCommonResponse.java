@@ -53,8 +53,7 @@ public final class DataConnectorDataTypeCommonResponse {
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public DataConnectorDataTypeCommonResponse build() {
+        }        public DataConnectorDataTypeCommonResponse build() {
             return new DataConnectorDataTypeCommonResponse(state);
         }
     }

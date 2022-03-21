@@ -93,32 +93,32 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
             this.elbInfos = elbInfos;
             return this;
         }
-
         public Builder elbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfoArgs> elbInfos) {
             this.elbInfos = Output.ofNullable(elbInfos);
             return this;
         }
-
+        public Builder elbInfos(DeploymentGroupLoadBalancerInfoElbInfoArgs... elbInfos) {
+            return elbInfos(List.of(elbInfos));
+        }
         public Builder targetGroupInfos(@Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos) {
             this.targetGroupInfos = targetGroupInfos;
             return this;
         }
-
         public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs> targetGroupInfos) {
             this.targetGroupInfos = Output.ofNullable(targetGroupInfos);
             return this;
         }
-
+        public Builder targetGroupInfos(DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs... targetGroupInfos) {
+            return targetGroupInfos(List.of(targetGroupInfos));
+        }
         public Builder targetGroupPairInfo(@Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo) {
             this.targetGroupPairInfo = targetGroupPairInfo;
             return this;
         }
-
         public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs targetGroupPairInfo) {
             this.targetGroupPairInfo = Output.ofNullable(targetGroupPairInfo);
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoArgs build() {
+        }        public DeploymentGroupLoadBalancerInfoArgs build() {
             return new DeploymentGroupLoadBalancerInfoArgs(elbInfos, targetGroupInfos, targetGroupPairInfo);
         }
     }

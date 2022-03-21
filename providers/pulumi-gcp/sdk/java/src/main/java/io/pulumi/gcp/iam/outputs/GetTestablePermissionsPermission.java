@@ -118,27 +118,22 @@ public final class GetTestablePermissionsPermission {
             this.apiDisabled = Objects.requireNonNull(apiDisabled);
             return this;
         }
-
         public Builder customSupportLevel(String customSupportLevel) {
             this.customSupportLevel = Objects.requireNonNull(customSupportLevel);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GetTestablePermissionsPermission build() {
+        }        public GetTestablePermissionsPermission build() {
             return new GetTestablePermissionsPermission(apiDisabled, customSupportLevel, name, stage, title);
         }
     }

@@ -90,17 +90,14 @@ public final class PodDisruptionBudgetSpec {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder minAvailable(@Nullable Either<Integer,String> minAvailable) {
             this.minAvailable = minAvailable;
             return this;
         }
-
         public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
-        }
-        public PodDisruptionBudgetSpec build() {
+        }        public PodDisruptionBudgetSpec build() {
             return new PodDisruptionBudgetSpec(maxUnavailable, minAvailable, selector);
         }
     }

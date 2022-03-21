@@ -71,12 +71,10 @@ public final class CertificateAuthorityRevocationConfiguration extends io.pulumi
             this.crlConfiguration = crlConfiguration;
             return this;
         }
-
         public Builder ocspConfiguration(@Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
             this.ocspConfiguration = ocspConfiguration;
             return this;
-        }
-        public CertificateAuthorityRevocationConfiguration build() {
+        }        public CertificateAuthorityRevocationConfiguration build() {
             return new CertificateAuthorityRevocationConfiguration(crlConfiguration, ocspConfiguration);
         }
     }

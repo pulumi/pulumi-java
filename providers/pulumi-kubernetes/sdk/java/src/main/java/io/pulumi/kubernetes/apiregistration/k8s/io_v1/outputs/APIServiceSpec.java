@@ -154,37 +154,30 @@ public final class APIServiceSpec {
             this.caBundle = caBundle;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
-
         public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
             this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
             return this;
         }
-
         public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
-
         public Builder service(@Nullable ServiceReference service) {
             this.service = service;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
-
         public Builder versionPriority(Integer versionPriority) {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
-        }
-        public APIServiceSpec build() {
+        }        public APIServiceSpec build() {
             return new APIServiceSpec(caBundle, group, groupPriorityMinimum, insecureSkipTLSVerify, service, version, versionPriority);
         }
     }

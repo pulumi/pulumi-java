@@ -90,32 +90,26 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
             this.outboundCallerIdName = outboundCallerIdName;
             return this;
         }
-
         public Builder outboundCallerIdName(@Nullable String outboundCallerIdName) {
             this.outboundCallerIdName = Output.ofNullable(outboundCallerIdName);
             return this;
         }
-
         public Builder outboundCallerIdNumberId(@Nullable Output<String> outboundCallerIdNumberId) {
             this.outboundCallerIdNumberId = outboundCallerIdNumberId;
             return this;
         }
-
         public Builder outboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
             this.outboundCallerIdNumberId = Output.ofNullable(outboundCallerIdNumberId);
             return this;
         }
-
         public Builder outboundFlowId(@Nullable Output<String> outboundFlowId) {
             this.outboundFlowId = outboundFlowId;
             return this;
         }
-
         public Builder outboundFlowId(@Nullable String outboundFlowId) {
             this.outboundFlowId = Output.ofNullable(outboundFlowId);
             return this;
-        }
-        public QueueOutboundCallerConfigArgs build() {
+        }        public QueueOutboundCallerConfigArgs build() {
             return new QueueOutboundCallerConfigArgs(outboundCallerIdName, outboundCallerIdNumberId, outboundFlowId);
         }
     }

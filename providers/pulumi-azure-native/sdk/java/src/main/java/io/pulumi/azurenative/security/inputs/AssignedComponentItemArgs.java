@@ -61,12 +61,10 @@ public final class AssignedComponentItemArgs extends io.pulumi.resources.Resourc
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public AssignedComponentItemArgs build() {
+        }        public AssignedComponentItemArgs build() {
             return new AssignedComponentItemArgs(key);
         }
     }

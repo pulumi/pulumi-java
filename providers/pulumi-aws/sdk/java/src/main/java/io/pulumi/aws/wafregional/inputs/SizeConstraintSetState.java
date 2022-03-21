@@ -88,32 +88,29 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
             this.sizeConstraints = sizeConstraints;
             return this;
         }
-
         public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintGetArgs> sizeConstraints) {
             this.sizeConstraints = Output.ofNullable(sizeConstraints);
             return this;
         }
-        public SizeConstraintSetState build() {
+        public Builder sizeConstraints(SizeConstraintSetSizeConstraintGetArgs... sizeConstraints) {
+            return sizeConstraints(List.of(sizeConstraints));
+        }        public SizeConstraintSetState build() {
             return new SizeConstraintSetState(arn, name, sizeConstraints);
         }
     }

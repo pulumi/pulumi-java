@@ -74,12 +74,10 @@ public final class StackSetAutoDeployment extends io.pulumi.resources.InvokeArgs
             this.enabled = enabled;
             return this;
         }
-
         public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
-        }
-        public StackSetAutoDeployment build() {
+        }        public StackSetAutoDeployment build() {
             return new StackSetAutoDeployment(enabled, retainStacksOnAccountRemoval);
         }
     }

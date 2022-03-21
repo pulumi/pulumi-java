@@ -114,27 +114,25 @@ public final class GetSuiteDefinitionResult {
             this.suiteDefinitionArn = suiteDefinitionArn;
             return this;
         }
-
         public Builder suiteDefinitionConfiguration(@Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration) {
             this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
             return this;
         }
-
         public Builder suiteDefinitionId(@Nullable String suiteDefinitionId) {
             this.suiteDefinitionId = suiteDefinitionId;
             return this;
         }
-
         public Builder suiteDefinitionVersion(@Nullable String suiteDefinitionVersion) {
             this.suiteDefinitionVersion = suiteDefinitionVersion;
             return this;
         }
-
         public Builder tags(@Nullable List<SuiteDefinitionTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetSuiteDefinitionResult build() {
+        public Builder tags(SuiteDefinitionTag... tags) {
+            return tags(List.of(tags));
+        }        public GetSuiteDefinitionResult build() {
             return new GetSuiteDefinitionResult(suiteDefinitionArn, suiteDefinitionConfiguration, suiteDefinitionId, suiteDefinitionVersion, tags);
         }
     }

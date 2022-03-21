@@ -71,12 +71,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
             this.domainName = domainName;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = recordSetId;
             return this;
-        }
-        public ResourceSetResourceDnsTargetResourceTargetResourceR53Resource build() {
+        }        public ResourceSetResourceDnsTargetResourceTargetResourceR53Resource build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceR53Resource(domainName, recordSetId);
         }
     }

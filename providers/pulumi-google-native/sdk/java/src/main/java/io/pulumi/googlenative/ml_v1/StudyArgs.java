@@ -95,42 +95,34 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder studyConfig(Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig) {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
         }
-
         public Builder studyConfig(GoogleCloudMlV1__StudyConfigArgs studyConfig) {
             this.studyConfig = Output.of(Objects.requireNonNull(studyConfig));
             return this;
         }
-
         public Builder studyId(Output<String> studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
-
         public Builder studyId(String studyId) {
             this.studyId = Output.of(Objects.requireNonNull(studyId));
             return this;
-        }
-        public StudyArgs build() {
+        }        public StudyArgs build() {
             return new StudyArgs(location, project, studyConfig, studyId);
         }
     }

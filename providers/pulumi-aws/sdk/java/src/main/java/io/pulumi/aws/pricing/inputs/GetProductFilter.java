@@ -72,12 +72,10 @@ public final class GetProductFilter extends io.pulumi.resources.InvokeArgs {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetProductFilter build() {
+        }        public GetProductFilter build() {
             return new GetProductFilter(field, value);
         }
     }

@@ -78,17 +78,14 @@ public final class GetInstanceBackupIamPolicyArgs extends io.pulumi.resources.In
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInstanceBackupIamPolicyArgs build() {
+        }        public GetInstanceBackupIamPolicyArgs build() {
             return new GetInstanceBackupIamPolicyArgs(backupId, instanceId, project);
         }
     }

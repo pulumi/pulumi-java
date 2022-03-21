@@ -72,12 +72,10 @@ public final class FailoverGroupReadWriteEndpointResponse {
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
-
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
-        }
-        public FailoverGroupReadWriteEndpointResponse build() {
+        }        public FailoverGroupReadWriteEndpointResponse build() {
             return new FailoverGroupReadWriteEndpointResponse(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
         }
     }

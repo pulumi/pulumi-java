@@ -58,8 +58,7 @@ public final class CloudFunctionEndpointResponse extends io.pulumi.resources.Inv
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public CloudFunctionEndpointResponse build() {
+        }        public CloudFunctionEndpointResponse build() {
             return new CloudFunctionEndpointResponse(uri);
         }
     }

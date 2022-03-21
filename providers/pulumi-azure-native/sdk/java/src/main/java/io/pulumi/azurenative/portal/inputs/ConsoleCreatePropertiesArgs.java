@@ -97,32 +97,26 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(Either<String,OsType> osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ConsoleCreatePropertiesArgs build() {
+        }        public ConsoleCreatePropertiesArgs build() {
             return new ConsoleCreatePropertiesArgs(osType, provisioningState, uri);
         }
     }

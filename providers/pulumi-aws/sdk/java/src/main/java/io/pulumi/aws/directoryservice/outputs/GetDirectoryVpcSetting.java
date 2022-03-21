@@ -78,17 +78,20 @@ public final class GetDirectoryVpcSetting {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetDirectoryVpcSetting build() {
+        }        public GetDirectoryVpcSetting build() {
             return new GetDirectoryVpcSetting(availabilityZones, subnetIds, vpcId);
         }
     }

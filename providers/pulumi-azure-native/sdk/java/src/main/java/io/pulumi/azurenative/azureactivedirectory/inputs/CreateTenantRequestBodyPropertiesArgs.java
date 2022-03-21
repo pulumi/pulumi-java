@@ -74,22 +74,18 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
             this.countryCode = countryCode;
             return this;
         }
-
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
-        }
-        public CreateTenantRequestBodyPropertiesArgs build() {
+        }        public CreateTenantRequestBodyPropertiesArgs build() {
             return new CreateTenantRequestBodyPropertiesArgs(countryCode, displayName);
         }
     }

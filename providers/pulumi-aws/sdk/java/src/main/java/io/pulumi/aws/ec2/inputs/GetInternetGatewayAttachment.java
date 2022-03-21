@@ -72,12 +72,10 @@ public final class GetInternetGatewayAttachment extends io.pulumi.resources.Invo
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
-        }
-        public GetInternetGatewayAttachment build() {
+        }        public GetInternetGatewayAttachment build() {
             return new GetInternetGatewayAttachment(state, vpcId);
         }
     }

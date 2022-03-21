@@ -125,52 +125,42 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
-
         public Builder cookiesConfig(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs cookiesConfig) {
             this.cookiesConfig = Output.of(Objects.requireNonNull(cookiesConfig));
             return this;
         }
-
         public Builder enableAcceptEncodingBrotli(@Nullable Output<Boolean> enableAcceptEncodingBrotli) {
             this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
             return this;
         }
-
         public Builder enableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
             this.enableAcceptEncodingBrotli = Output.ofNullable(enableAcceptEncodingBrotli);
             return this;
         }
-
         public Builder enableAcceptEncodingGzip(@Nullable Output<Boolean> enableAcceptEncodingGzip) {
             this.enableAcceptEncodingGzip = enableAcceptEncodingGzip;
             return this;
         }
-
         public Builder enableAcceptEncodingGzip(@Nullable Boolean enableAcceptEncodingGzip) {
             this.enableAcceptEncodingGzip = Output.ofNullable(enableAcceptEncodingGzip);
             return this;
         }
-
         public Builder headersConfig(Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs> headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
-
         public Builder headersConfig(CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs headersConfig) {
             this.headersConfig = Output.of(Objects.requireNonNull(headersConfig));
             return this;
         }
-
         public Builder queryStringsConfig(Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs> queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
-
         public Builder queryStringsConfig(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs queryStringsConfig) {
             this.queryStringsConfig = Output.of(Objects.requireNonNull(queryStringsConfig));
             return this;
-        }
-        public CachePolicyParametersInCacheKeyAndForwardedToOriginArgs build() {
+        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginArgs build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginArgs(cookiesConfig, enableAcceptEncodingBrotli, enableAcceptEncodingGzip, headersConfig, queryStringsConfig);
         }
     }

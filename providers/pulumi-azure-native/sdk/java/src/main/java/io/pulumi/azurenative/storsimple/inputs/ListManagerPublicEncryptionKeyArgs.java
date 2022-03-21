@@ -72,12 +72,10 @@ public final class ListManagerPublicEncryptionKeyArgs extends io.pulumi.resource
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListManagerPublicEncryptionKeyArgs build() {
+        }        public ListManagerPublicEncryptionKeyArgs build() {
             return new ListManagerPublicEncryptionKeyArgs(managerName, resourceGroupName);
         }
     }

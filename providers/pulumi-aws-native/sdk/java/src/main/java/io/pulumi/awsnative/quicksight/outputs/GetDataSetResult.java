@@ -238,72 +238,73 @@ public final class GetDataSetResult {
             this.arn = arn;
             return this;
         }
-
         public Builder columnGroups(@Nullable List<DataSetColumnGroup> columnGroups) {
             this.columnGroups = columnGroups;
             return this;
         }
-
+        public Builder columnGroups(DataSetColumnGroup... columnGroups) {
+            return columnGroups(List.of(columnGroups));
+        }
         public Builder columnLevelPermissionRules(@Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules) {
             this.columnLevelPermissionRules = columnLevelPermissionRules;
             return this;
         }
-
+        public Builder columnLevelPermissionRules(DataSetColumnLevelPermissionRule... columnLevelPermissionRules) {
+            return columnLevelPermissionRules(List.of(columnLevelPermissionRules));
+        }
         public Builder consumedSpiceCapacityInBytes(@Nullable Double consumedSpiceCapacityInBytes) {
             this.consumedSpiceCapacityInBytes = consumedSpiceCapacityInBytes;
             return this;
         }
-
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder importMode(@Nullable DataSetImportMode importMode) {
             this.importMode = importMode;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder logicalTableMap(@Nullable DataSetLogicalTableMap logicalTableMap) {
             this.logicalTableMap = logicalTableMap;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder outputColumns(@Nullable List<DataSetOutputColumn> outputColumns) {
             this.outputColumns = outputColumns;
             return this;
         }
-
+        public Builder outputColumns(DataSetOutputColumn... outputColumns) {
+            return outputColumns(List.of(outputColumns));
+        }
         public Builder permissions(@Nullable List<DataSetResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
-
+        public Builder permissions(DataSetResourcePermission... permissions) {
+            return permissions(List.of(permissions));
+        }
         public Builder physicalTableMap(@Nullable DataSetPhysicalTableMap physicalTableMap) {
             this.physicalTableMap = physicalTableMap;
             return this;
         }
-
         public Builder rowLevelPermissionDataSet(@Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet) {
             this.rowLevelPermissionDataSet = rowLevelPermissionDataSet;
             return this;
         }
-
         public Builder tags(@Nullable List<DataSetTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDataSetResult build() {
+        public Builder tags(DataSetTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDataSetResult build() {
             return new GetDataSetResult(arn, columnGroups, columnLevelPermissionRules, consumedSpiceCapacityInBytes, createdTime, importMode, lastUpdatedTime, logicalTableMap, name, outputColumns, permissions, physicalTableMap, rowLevelPermissionDataSet, tags);
         }
     }

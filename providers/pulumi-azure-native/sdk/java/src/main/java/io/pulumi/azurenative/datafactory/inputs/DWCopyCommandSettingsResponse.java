@@ -81,12 +81,13 @@ public final class DWCopyCommandSettingsResponse extends io.pulumi.resources.Inv
             this.additionalOptions = additionalOptions;
             return this;
         }
-
         public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
             this.defaultValues = defaultValues;
             return this;
         }
-        public DWCopyCommandSettingsResponse build() {
+        public Builder defaultValues(DWCopyCommandDefaultValueResponse... defaultValues) {
+            return defaultValues(List.of(defaultValues));
+        }        public DWCopyCommandSettingsResponse build() {
             return new DWCopyCommandSettingsResponse(additionalOptions, defaultValues);
         }
     }

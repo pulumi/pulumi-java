@@ -107,42 +107,34 @@ public final class PrivateEndpointConnectionByHostPoolArgs extends io.pulumi.res
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
-
         public Builder hostPoolName(String hostPoolName) {
             this.hostPoolName = Output.of(Objects.requireNonNull(hostPoolName));
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateEndpointConnectionByHostPoolArgs build() {
+        }        public PrivateEndpointConnectionByHostPoolArgs build() {
             return new PrivateEndpointConnectionByHostPoolArgs(hostPoolName, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }
     }

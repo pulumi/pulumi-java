@@ -76,12 +76,10 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
             this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults);
             return this;
         }
-
         public Builder forceVerbatimMode(Boolean forceVerbatimMode) {
             this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
             return this;
-        }
-        public QueryInterpretationConfigResponse build() {
+        }        public QueryInterpretationConfigResponse build() {
             return new QueryInterpretationConfigResponse(forceDisableSupplementalResults, forceVerbatimMode);
         }
     }

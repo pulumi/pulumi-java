@@ -79,22 +79,24 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends io.pulumi.resourc
             this.ageGroups = ageGroups;
             return this;
         }
-
         public Builder ageGroups(@Nullable List<String> ageGroups) {
             this.ageGroups = Output.ofNullable(ageGroups);
             return this;
         }
-
+        public Builder ageGroups(String... ageGroups) {
+            return ageGroups(List.of(ageGroups));
+        }
         public Builder genders(@Nullable Output<List<String>> genders) {
             this.genders = genders;
             return this;
         }
-
         public Builder genders(@Nullable List<String> genders) {
             this.genders = Output.ofNullable(genders);
             return this;
         }
-        public GoogleCloudRetailV2betaAudienceArgs build() {
+        public Builder genders(String... genders) {
+            return genders(List.of(genders));
+        }        public GoogleCloudRetailV2betaAudienceArgs build() {
             return new GoogleCloudRetailV2betaAudienceArgs(ageGroups, genders);
         }
     }

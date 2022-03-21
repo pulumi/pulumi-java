@@ -85,17 +85,14 @@ public final class GetSchemaResult {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetSchemaResult build() {
+        }        public GetSchemaResult build() {
             return new GetSchemaResult(definition, name, type);
         }
     }

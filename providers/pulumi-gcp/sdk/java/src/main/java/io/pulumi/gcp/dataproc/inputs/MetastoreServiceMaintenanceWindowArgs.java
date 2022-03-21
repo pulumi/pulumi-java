@@ -75,22 +75,18 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
-
         public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
-
         public Builder hourOfDay(Output<Integer> hourOfDay) {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }
-
         public Builder hourOfDay(Integer hourOfDay) {
             this.hourOfDay = Output.of(Objects.requireNonNull(hourOfDay));
             return this;
-        }
-        public MetastoreServiceMaintenanceWindowArgs build() {
+        }        public MetastoreServiceMaintenanceWindowArgs build() {
             return new MetastoreServiceMaintenanceWindowArgs(dayOfWeek, hourOfDay);
         }
     }

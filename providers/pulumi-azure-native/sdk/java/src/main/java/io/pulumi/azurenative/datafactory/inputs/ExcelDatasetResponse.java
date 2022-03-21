@@ -307,77 +307,65 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
             this.compression = compression;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
-
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder location(Object location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = nullValue;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder range(@Nullable Object range) {
             this.range = range;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder sheetIndex(@Nullable Object sheetIndex) {
             this.sheetIndex = sheetIndex;
             return this;
         }
-
         public Builder sheetName(@Nullable Object sheetName) {
             this.sheetName = sheetName;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ExcelDatasetResponse build() {
+        }        public ExcelDatasetResponse build() {
             return new ExcelDatasetResponse(annotations, compression, description, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, range, schema, sheetIndex, sheetName, structure, type);
         }
     }

@@ -56,8 +56,7 @@ public final class ManagedExecutionProperties extends io.pulumi.resources.Invoke
         public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
-        }
-        public ManagedExecutionProperties build() {
+        }        public ManagedExecutionProperties build() {
             return new ManagedExecutionProperties(active);
         }
     }

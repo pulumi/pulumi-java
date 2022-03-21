@@ -51,8 +51,7 @@ public final class ResourceResponse {
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public ResourceResponse build() {
+        }        public ResourceResponse build() {
             return new ResourceResponse(uri);
         }
     }

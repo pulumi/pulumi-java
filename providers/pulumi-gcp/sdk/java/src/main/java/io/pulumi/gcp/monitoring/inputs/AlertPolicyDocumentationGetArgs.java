@@ -78,22 +78,18 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
-
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Output.ofNullable(mimeType);
             return this;
-        }
-        public AlertPolicyDocumentationGetArgs build() {
+        }        public AlertPolicyDocumentationGetArgs build() {
             return new AlertPolicyDocumentationGetArgs(content, mimeType);
         }
     }

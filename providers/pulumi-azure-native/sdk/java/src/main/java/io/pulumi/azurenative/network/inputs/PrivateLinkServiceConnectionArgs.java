@@ -144,62 +144,53 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
             this.groupIds = groupIds;
             return this;
         }
-
         public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = Output.ofNullable(groupIds);
             return this;
         }
-
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder privateLinkServiceId(@Nullable Output<String> privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
-
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             this.privateLinkServiceId = Output.ofNullable(privateLinkServiceId);
             return this;
         }
-
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Output.ofNullable(requestMessage);
             return this;
-        }
-        public PrivateLinkServiceConnectionArgs build() {
+        }        public PrivateLinkServiceConnectionArgs build() {
             return new PrivateLinkServiceConnectionArgs(groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, requestMessage);
         }
     }

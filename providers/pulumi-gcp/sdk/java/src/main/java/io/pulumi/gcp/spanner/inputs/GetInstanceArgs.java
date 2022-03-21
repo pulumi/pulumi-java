@@ -99,22 +99,18 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
             this.config = config;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetInstanceArgs build() {
+        }        public GetInstanceArgs build() {
             return new GetInstanceArgs(config, displayName, name, project);
         }
     }

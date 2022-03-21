@@ -156,37 +156,33 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
-
         public Builder instanceSize(@Nullable String instanceSize) {
             this.instanceSize = instanceSize;
             return this;
         }
-
         public Builder locations(List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(SqlDedicatedGatewayRegionalServiceResourceResponse... locations) {
+            return locations(List.of(locations));
+        }
         public Builder serviceType(String serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
-
         public Builder sqlDedicatedGatewayEndpoint(@Nullable String sqlDedicatedGatewayEndpoint) {
             this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public SqlDedicatedGatewayServiceResourcePropertiesResponse build() {
+        }        public SqlDedicatedGatewayServiceResourcePropertiesResponse build() {
             return new SqlDedicatedGatewayServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, sqlDedicatedGatewayEndpoint, status);
         }
     }

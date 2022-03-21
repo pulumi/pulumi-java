@@ -76,12 +76,13 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder subnet(@Nullable ApiEntityReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public NetworkProfileResponse build() {
+        }        public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkInterfaces, subnet);
         }
     }

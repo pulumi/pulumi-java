@@ -217,57 +217,46 @@ public final class GetRemediationAtManagementGroupResult {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
-
         public Builder deploymentStatus(RemediationDeploymentSummaryResponse deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
-
         public Builder filters(@Nullable RemediationFiltersResponse filters) {
             this.filters = filters;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedOn(String lastUpdatedOn) {
             this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
             this.policyAssignmentId = policyAssignmentId;
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceDiscoveryMode(@Nullable String resourceDiscoveryMode) {
             this.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetRemediationAtManagementGroupResult build() {
+        }        public GetRemediationAtManagementGroupResult build() {
             return new GetRemediationAtManagementGroupResult(createdOn, deploymentStatus, filters, id, lastUpdatedOn, name, policyAssignmentId, policyDefinitionReferenceId, provisioningState, resourceDiscoveryMode, type);
         }
     }

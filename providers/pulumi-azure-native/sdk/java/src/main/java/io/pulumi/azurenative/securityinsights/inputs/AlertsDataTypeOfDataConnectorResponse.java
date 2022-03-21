@@ -60,8 +60,7 @@ public final class AlertsDataTypeOfDataConnectorResponse extends io.pulumi.resou
         public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
             this.alerts = alerts;
             return this;
-        }
-        public AlertsDataTypeOfDataConnectorResponse build() {
+        }        public AlertsDataTypeOfDataConnectorResponse build() {
             return new AlertsDataTypeOfDataConnectorResponse(alerts);
         }
     }

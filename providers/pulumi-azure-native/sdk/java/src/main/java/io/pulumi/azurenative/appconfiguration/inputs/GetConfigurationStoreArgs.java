@@ -72,12 +72,10 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConfigurationStoreArgs build() {
+        }        public GetConfigurationStoreArgs build() {
             return new GetConfigurationStoreArgs(configStoreName, resourceGroupName);
         }
     }

@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigHttpLoadBalancingArgs extends io.pulumi.re
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public Builder disabled(Boolean disabled) {
             this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
-        }
-        public ClusterAddonsConfigHttpLoadBalancingArgs build() {
+        }        public ClusterAddonsConfigHttpLoadBalancingArgs build() {
             return new ClusterAddonsConfigHttpLoadBalancingArgs(disabled);
         }
     }

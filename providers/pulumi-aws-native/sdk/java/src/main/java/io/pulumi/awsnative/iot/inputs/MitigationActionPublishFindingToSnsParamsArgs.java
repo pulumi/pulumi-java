@@ -60,12 +60,10 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public Builder topicArn(String topicArn) {
             this.topicArn = Output.of(Objects.requireNonNull(topicArn));
             return this;
-        }
-        public MitigationActionPublishFindingToSnsParamsArgs build() {
+        }        public MitigationActionPublishFindingToSnsParamsArgs build() {
             return new MitigationActionPublishFindingToSnsParamsArgs(topicArn);
         }
     }

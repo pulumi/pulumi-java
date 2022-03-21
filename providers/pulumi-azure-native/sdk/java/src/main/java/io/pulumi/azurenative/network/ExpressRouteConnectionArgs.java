@@ -222,112 +222,90 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
             return this;
         }
-
         public Builder expressRouteCircuitPeering(Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering);
             return this;
         }
-
         public Builder expressRouteCircuitPeering(ExpressRouteCircuitPeeringIdArgs expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Output.of(Objects.requireNonNull(expressRouteCircuitPeering));
             return this;
         }
-
         public Builder expressRouteGatewayBypass(@Nullable Output<Boolean> expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
-
         public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = Output.ofNullable(expressRouteGatewayBypass);
             return this;
         }
-
         public Builder expressRouteGatewayName(Output<String> expressRouteGatewayName) {
             this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
             return this;
         }
-
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
             this.expressRouteGatewayName = Output.of(Objects.requireNonNull(expressRouteGatewayName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
             this.routingConfiguration = Output.ofNullable(routingConfiguration);
             return this;
         }
-
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = Output.ofNullable(routingWeight);
             return this;
-        }
-        public ExpressRouteConnectionArgs build() {
+        }        public ExpressRouteConnectionArgs build() {
             return new ExpressRouteConnectionArgs(authorizationKey, connectionName, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, expressRouteGatewayName, id, name, resourceGroupName, routingConfiguration, routingWeight);
         }
     }

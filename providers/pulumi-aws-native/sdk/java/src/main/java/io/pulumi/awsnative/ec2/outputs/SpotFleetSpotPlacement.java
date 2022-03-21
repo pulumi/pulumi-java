@@ -64,17 +64,14 @@ public final class SpotFleetSpotPlacement {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
-
         public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
             this.tenancy = tenancy;
             return this;
-        }
-        public SpotFleetSpotPlacement build() {
+        }        public SpotFleetSpotPlacement build() {
             return new SpotFleetSpotPlacement(availabilityZone, groupName, tenancy);
         }
     }

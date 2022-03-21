@@ -89,17 +89,17 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder systemIds(List<String> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
-
+        public Builder systemIds(String... systemIds) {
+            return systemIds(List.of(systemIds));
+        }
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public PackagingConfigurationSpekeKeyProvider build() {
+        }        public PackagingConfigurationSpekeKeyProvider build() {
             return new PackagingConfigurationSpekeKeyProvider(roleArn, systemIds, url);
         }
     }

@@ -121,27 +121,25 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder options(List<ContentKeyPolicyOptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
+        public Builder options(ContentKeyPolicyOptionResponse... options) {
+            return options(List.of(options));
+        }
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
-        }
-        public GetContentKeyPolicyPropertiesWithSecretsResult build() {
+        }        public GetContentKeyPolicyPropertiesWithSecretsResult build() {
             return new GetContentKeyPolicyPropertiesWithSecretsResult(created, description, lastModified, options, policyId);
         }
     }

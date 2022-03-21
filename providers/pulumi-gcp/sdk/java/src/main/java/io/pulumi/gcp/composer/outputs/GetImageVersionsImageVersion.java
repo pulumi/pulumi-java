@@ -70,12 +70,13 @@ public final class GetImageVersionsImageVersion {
             this.imageVersionId = Objects.requireNonNull(imageVersionId);
             return this;
         }
-
         public Builder supportedPythonVersions(List<String> supportedPythonVersions) {
             this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
             return this;
         }
-        public GetImageVersionsImageVersion build() {
+        public Builder supportedPythonVersions(String... supportedPythonVersions) {
+            return supportedPythonVersions(List.of(supportedPythonVersions));
+        }        public GetImageVersionsImageVersion build() {
             return new GetImageVersionsImageVersion(imageVersionId, supportedPythonVersions);
         }
     }

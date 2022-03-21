@@ -77,12 +77,10 @@ public final class CurrentSpendResponse extends io.pulumi.resources.InvokeArgs {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
-        }
-        public CurrentSpendResponse build() {
+        }        public CurrentSpendResponse build() {
             return new CurrentSpendResponse(amount, unit);
         }
     }

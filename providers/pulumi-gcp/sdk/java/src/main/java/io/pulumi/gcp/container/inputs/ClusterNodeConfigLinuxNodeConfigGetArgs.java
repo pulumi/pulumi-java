@@ -59,12 +59,10 @@ public final class ClusterNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.res
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Output.of(Objects.requireNonNull(sysctls));
             return this;
-        }
-        public ClusterNodeConfigLinuxNodeConfigGetArgs build() {
+        }        public ClusterNodeConfigLinuxNodeConfigGetArgs build() {
             return new ClusterNodeConfigLinuxNodeConfigGetArgs(sysctls);
         }
     }

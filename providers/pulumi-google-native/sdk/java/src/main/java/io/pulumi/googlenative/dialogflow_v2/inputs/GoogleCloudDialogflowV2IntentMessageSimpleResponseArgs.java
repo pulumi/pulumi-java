@@ -94,32 +94,26 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
             this.displayText = displayText;
             return this;
         }
-
         public Builder displayText(@Nullable String displayText) {
             this.displayText = Output.ofNullable(displayText);
             return this;
         }
-
         public Builder ssml(@Nullable Output<String> ssml) {
             this.ssml = ssml;
             return this;
         }
-
         public Builder ssml(@Nullable String ssml) {
             this.ssml = Output.ofNullable(ssml);
             return this;
         }
-
         public Builder textToSpeech(@Nullable Output<String> textToSpeech) {
             this.textToSpeech = textToSpeech;
             return this;
         }
-
         public Builder textToSpeech(@Nullable String textToSpeech) {
             this.textToSpeech = Output.ofNullable(textToSpeech);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs(displayText, ssml, textToSpeech);
         }
     }

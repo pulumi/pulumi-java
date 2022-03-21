@@ -53,8 +53,7 @@ public final class KeyVaultCertificateSourceParametersResponseVault {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public KeyVaultCertificateSourceParametersResponseVault build() {
+        }        public KeyVaultCertificateSourceParametersResponseVault build() {
             return new KeyVaultCertificateSourceParametersResponseVault(id);
         }
     }

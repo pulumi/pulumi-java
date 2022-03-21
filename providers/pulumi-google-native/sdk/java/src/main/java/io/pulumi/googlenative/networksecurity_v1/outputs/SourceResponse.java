@@ -70,12 +70,16 @@ public final class SourceResponse {
             this.ipBlocks = Objects.requireNonNull(ipBlocks);
             return this;
         }
-
+        public Builder ipBlocks(String... ipBlocks) {
+            return ipBlocks(List.of(ipBlocks));
+        }
         public Builder principals(List<String> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
-        public SourceResponse build() {
+        public Builder principals(String... principals) {
+            return principals(List.of(principals));
+        }        public SourceResponse build() {
             return new SourceResponse(ipBlocks, principals);
         }
     }

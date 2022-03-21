@@ -91,32 +91,26 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
             this.cloudwatchLogGroup = cloudwatchLogGroup;
             return this;
         }
-
         public Builder cloudwatchLogGroup(@Nullable String cloudwatchLogGroup) {
             this.cloudwatchLogGroup = Output.ofNullable(cloudwatchLogGroup);
             return this;
         }
-
         public Builder cloudwatchLogStream(@Nullable Output<String> cloudwatchLogStream) {
             this.cloudwatchLogStream = cloudwatchLogStream;
             return this;
         }
-
         public Builder cloudwatchLogStream(@Nullable String cloudwatchLogStream) {
             this.cloudwatchLogStream = Output.ofNullable(cloudwatchLogStream);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public EndpointConnectionLogOptionsGetArgs build() {
+        }        public EndpointConnectionLogOptionsGetArgs build() {
             return new EndpointConnectionLogOptionsGetArgs(cloudwatchLogGroup, cloudwatchLogStream, enabled);
         }
     }

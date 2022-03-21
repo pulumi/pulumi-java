@@ -53,8 +53,7 @@ public final class CrawlerRecrawlPolicy {
         public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
             this.recrawlBehavior = recrawlBehavior;
             return this;
-        }
-        public CrawlerRecrawlPolicy build() {
+        }        public CrawlerRecrawlPolicy build() {
             return new CrawlerRecrawlPolicy(recrawlBehavior);
         }
     }

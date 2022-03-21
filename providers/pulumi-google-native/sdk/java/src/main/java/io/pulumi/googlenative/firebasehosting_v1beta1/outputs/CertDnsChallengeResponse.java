@@ -69,12 +69,10 @@ public final class CertDnsChallengeResponse {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
-        }
-        public CertDnsChallengeResponse build() {
+        }        public CertDnsChallengeResponse build() {
             return new CertDnsChallengeResponse(domainName, token);
         }
     }

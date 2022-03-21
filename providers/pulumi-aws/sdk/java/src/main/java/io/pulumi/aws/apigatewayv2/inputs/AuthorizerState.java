@@ -218,102 +218,85 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder authorizerCredentialsArn(@Nullable Output<String> authorizerCredentialsArn) {
             this.authorizerCredentialsArn = authorizerCredentialsArn;
             return this;
         }
-
         public Builder authorizerCredentialsArn(@Nullable String authorizerCredentialsArn) {
             this.authorizerCredentialsArn = Output.ofNullable(authorizerCredentialsArn);
             return this;
         }
-
         public Builder authorizerPayloadFormatVersion(@Nullable Output<String> authorizerPayloadFormatVersion) {
             this.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
             return this;
         }
-
         public Builder authorizerPayloadFormatVersion(@Nullable String authorizerPayloadFormatVersion) {
             this.authorizerPayloadFormatVersion = Output.ofNullable(authorizerPayloadFormatVersion);
             return this;
         }
-
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
-
         public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = Output.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
-
         public Builder authorizerType(@Nullable Output<String> authorizerType) {
             this.authorizerType = authorizerType;
             return this;
         }
-
         public Builder authorizerType(@Nullable String authorizerType) {
             this.authorizerType = Output.ofNullable(authorizerType);
             return this;
         }
-
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
             this.authorizerUri = authorizerUri;
             return this;
         }
-
         public Builder authorizerUri(@Nullable String authorizerUri) {
             this.authorizerUri = Output.ofNullable(authorizerUri);
             return this;
         }
-
         public Builder enableSimpleResponses(@Nullable Output<Boolean> enableSimpleResponses) {
             this.enableSimpleResponses = enableSimpleResponses;
             return this;
         }
-
         public Builder enableSimpleResponses(@Nullable Boolean enableSimpleResponses) {
             this.enableSimpleResponses = Output.ofNullable(enableSimpleResponses);
             return this;
         }
-
         public Builder identitySources(@Nullable Output<List<String>> identitySources) {
             this.identitySources = identitySources;
             return this;
         }
-
         public Builder identitySources(@Nullable List<String> identitySources) {
             this.identitySources = Output.ofNullable(identitySources);
             return this;
         }
-
+        public Builder identitySources(String... identitySources) {
+            return identitySources(List.of(identitySources));
+        }
         public Builder jwtConfiguration(@Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration) {
             this.jwtConfiguration = jwtConfiguration;
             return this;
         }
-
         public Builder jwtConfiguration(@Nullable AuthorizerJwtConfigurationGetArgs jwtConfiguration) {
             this.jwtConfiguration = Output.ofNullable(jwtConfiguration);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public AuthorizerState build() {
+        }        public AuthorizerState build() {
             return new AuthorizerState(apiId, authorizerCredentialsArn, authorizerPayloadFormatVersion, authorizerResultTtlInSeconds, authorizerType, authorizerUri, enableSimpleResponses, identitySources, jwtConfiguration, name);
         }
     }

@@ -201,52 +201,48 @@ public final class GetWorkloadNetworkDnsZoneResult {
             this.displayName = displayName;
             return this;
         }
-
         public Builder dnsServerIps(@Nullable List<String> dnsServerIps) {
             this.dnsServerIps = dnsServerIps;
             return this;
         }
-
+        public Builder dnsServerIps(String... dnsServerIps) {
+            return dnsServerIps(List.of(dnsServerIps));
+        }
         public Builder dnsServices(@Nullable Double dnsServices) {
             this.dnsServices = dnsServices;
             return this;
         }
-
         public Builder domain(@Nullable List<String> domain) {
             this.domain = domain;
             return this;
         }
-
+        public Builder domain(String... domain) {
+            return domain(List.of(domain));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder revision(@Nullable Double revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder sourceIp(@Nullable String sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWorkloadNetworkDnsZoneResult build() {
+        }        public GetWorkloadNetworkDnsZoneResult build() {
             return new GetWorkloadNetworkDnsZoneResult(displayName, dnsServerIps, dnsServices, domain, id, name, provisioningState, revision, sourceIp, type);
         }
     }

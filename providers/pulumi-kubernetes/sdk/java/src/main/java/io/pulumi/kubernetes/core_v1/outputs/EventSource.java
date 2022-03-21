@@ -71,12 +71,10 @@ public final class EventSource {
             this.component = component;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
-        }
-        public EventSource build() {
+        }        public EventSource build() {
             return new EventSource(component, host);
         }
     }

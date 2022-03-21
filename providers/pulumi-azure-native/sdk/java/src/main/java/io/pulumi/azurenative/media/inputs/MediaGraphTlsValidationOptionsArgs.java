@@ -77,22 +77,18 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
             this.ignoreHostname = Objects.requireNonNull(ignoreHostname);
             return this;
         }
-
         public Builder ignoreHostname(Boolean ignoreHostname) {
             this.ignoreHostname = Output.of(Objects.requireNonNull(ignoreHostname));
             return this;
         }
-
         public Builder ignoreSignature(Output<Boolean> ignoreSignature) {
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }
-
         public Builder ignoreSignature(Boolean ignoreSignature) {
             this.ignoreSignature = Output.of(Objects.requireNonNull(ignoreSignature));
             return this;
-        }
-        public MediaGraphTlsValidationOptionsArgs build() {
+        }        public MediaGraphTlsValidationOptionsArgs build() {
             return new MediaGraphTlsValidationOptionsArgs(ignoreHostname, ignoreSignature);
         }
     }

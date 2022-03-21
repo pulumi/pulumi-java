@@ -104,22 +104,18 @@ public final class ClusterMasterInstanceGroupEbsConfig {
             this.iops = iops;
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
             this.volumesPerInstance = volumesPerInstance;
             return this;
-        }
-        public ClusterMasterInstanceGroupEbsConfig build() {
+        }        public ClusterMasterInstanceGroupEbsConfig build() {
             return new ClusterMasterInstanceGroupEbsConfig(iops, size, type, volumesPerInstance);
         }
     }

@@ -190,42 +190,34 @@ public final class PatchDeploymentPatchConfig {
             this.apt = apt;
             return this;
         }
-
         public Builder goo(@Nullable PatchDeploymentPatchConfigGoo goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder postStep(@Nullable PatchDeploymentPatchConfigPostStep postStep) {
             this.postStep = postStep;
             return this;
         }
-
         public Builder preStep(@Nullable PatchDeploymentPatchConfigPreStep preStep) {
             this.preStep = preStep;
             return this;
         }
-
         public Builder rebootConfig(@Nullable String rebootConfig) {
             this.rebootConfig = rebootConfig;
             return this;
         }
-
         public Builder windowsUpdate(@Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
-
         public Builder yum(@Nullable PatchDeploymentPatchConfigYum yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder zypper(@Nullable PatchDeploymentPatchConfigZypper zypper) {
             this.zypper = zypper;
             return this;
-        }
-        public PatchDeploymentPatchConfig build() {
+        }        public PatchDeploymentPatchConfig build() {
             return new PatchDeploymentPatchConfig(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }
     }

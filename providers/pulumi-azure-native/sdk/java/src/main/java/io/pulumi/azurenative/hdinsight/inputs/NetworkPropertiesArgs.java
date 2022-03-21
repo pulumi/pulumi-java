@@ -81,22 +81,18 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.privateLink = privateLink;
             return this;
         }
-
         public Builder privateLink(@Nullable Either<String,PrivateLink> privateLink) {
             this.privateLink = Output.ofNullable(privateLink);
             return this;
         }
-
         public Builder resourceProviderConnection(@Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
-
         public Builder resourceProviderConnection(@Nullable Either<String,ResourceProviderConnection> resourceProviderConnection) {
             this.resourceProviderConnection = Output.ofNullable(resourceProviderConnection);
             return this;
-        }
-        public NetworkPropertiesArgs build() {
+        }        public NetworkPropertiesArgs build() {
             return new NetworkPropertiesArgs(privateLink, resourceProviderConnection);
         }
     }

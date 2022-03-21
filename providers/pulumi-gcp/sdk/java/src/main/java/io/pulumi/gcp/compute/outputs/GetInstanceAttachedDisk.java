@@ -111,32 +111,26 @@ public final class GetInstanceAttachedDisk {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder diskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = Objects.requireNonNull(diskEncryptionKeyRaw);
             return this;
         }
-
         public Builder diskEncryptionKeySha256(String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = Objects.requireNonNull(diskEncryptionKeySha256);
             return this;
         }
-
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
-        }
-        public GetInstanceAttachedDisk build() {
+        }        public GetInstanceAttachedDisk build() {
             return new GetInstanceAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }
     }

@@ -75,22 +75,18 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
-
         public Builder ip(String ip) {
             this.ip = Output.of(Objects.requireNonNull(ip));
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
-        }
-        public ResolverRuleTargetIpGetArgs build() {
+        }        public ResolverRuleTargetIpGetArgs build() {
             return new ResolverRuleTargetIpGetArgs(ip, port);
         }
     }

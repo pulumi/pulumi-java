@@ -101,32 +101,26 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceArgs extends io
             this.backendService = backendService;
             return this;
         }
-
         public Builder backendService(@Nullable String backendService) {
             this.backendService = Output.ofNullable(backendService);
             return this;
         }
-
         public Builder headerAction(@Nullable Output<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs headerAction) {
             this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
-
         public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = Output.ofNullable(weight);
             return this;
-        }
-        public URLMapDefaultRouteActionWeightedBackendServiceArgs build() {
+        }        public URLMapDefaultRouteActionWeightedBackendServiceArgs build() {
             return new URLMapDefaultRouteActionWeightedBackendServiceArgs(backendService, headerAction, weight);
         }
     }

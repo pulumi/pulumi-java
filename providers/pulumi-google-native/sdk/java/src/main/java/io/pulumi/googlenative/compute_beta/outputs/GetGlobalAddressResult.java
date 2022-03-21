@@ -328,92 +328,77 @@ public final class GetGlobalAddressResult {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder addressType(String addressType) {
             this.addressType = Objects.requireNonNull(addressType);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder ipVersion(String ipVersion) {
             this.ipVersion = Objects.requireNonNull(ipVersion);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
-
         public Builder prefixLength(Integer prefixLength) {
             this.prefixLength = Objects.requireNonNull(prefixLength);
             return this;
         }
-
         public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public Builder users(List<String> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-        public GetGlobalAddressResult build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public GetGlobalAddressResult build() {
             return new GetGlobalAddressResult(address, addressType, creationTimestamp, description, ipVersion, kind, labelFingerprint, labels, name, network, networkTier, prefixLength, purpose, region, selfLink, status, subnetwork, users);
         }
     }

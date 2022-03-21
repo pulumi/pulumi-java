@@ -383,107 +383,92 @@ public final class GetAppServiceEnvironmentResult {
             this.clusterSettings = clusterSettings;
             return this;
         }
-
+        public Builder clusterSettings(NameValuePairResponse... clusterSettings) {
+            return clusterSettings(List.of(clusterSettings));
+        }
         public Builder dedicatedHostCount(Integer dedicatedHostCount) {
             this.dedicatedHostCount = Objects.requireNonNull(dedicatedHostCount);
             return this;
         }
-
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
-
         public Builder frontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
             this.frontEndScaleFactor = frontEndScaleFactor;
             return this;
         }
-
         public Builder hasLinuxWorkers(Boolean hasLinuxWorkers) {
             this.hasLinuxWorkers = Objects.requireNonNull(hasLinuxWorkers);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder internalLoadBalancingMode(@Nullable String internalLoadBalancingMode) {
             this.internalLoadBalancingMode = internalLoadBalancingMode;
             return this;
         }
-
         public Builder ipsslAddressCount(@Nullable Integer ipsslAddressCount) {
             this.ipsslAddressCount = ipsslAddressCount;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder maximumNumberOfMachines(Integer maximumNumberOfMachines) {
             this.maximumNumberOfMachines = Objects.requireNonNull(maximumNumberOfMachines);
             return this;
         }
-
         public Builder multiRoleCount(Integer multiRoleCount) {
             this.multiRoleCount = Objects.requireNonNull(multiRoleCount);
             return this;
         }
-
         public Builder multiSize(@Nullable String multiSize) {
             this.multiSize = multiSize;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder suspended(Boolean suspended) {
             this.suspended = Objects.requireNonNull(suspended);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
             this.userWhitelistedIpRanges = userWhitelistedIpRanges;
             return this;
         }
-
+        public Builder userWhitelistedIpRanges(String... userWhitelistedIpRanges) {
+            return userWhitelistedIpRanges(List.of(userWhitelistedIpRanges));
+        }
         public Builder virtualNetwork(VirtualNetworkProfileResponse virtualNetwork) {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
-        }
-        public GetAppServiceEnvironmentResult build() {
+        }        public GetAppServiceEnvironmentResult build() {
             return new GetAppServiceEnvironmentResult(clusterSettings, dedicatedHostCount, dnsSuffix, frontEndScaleFactor, hasLinuxWorkers, id, internalLoadBalancingMode, ipsslAddressCount, kind, location, maximumNumberOfMachines, multiRoleCount, multiSize, name, provisioningState, status, suspended, tags, type, userWhitelistedIpRanges, virtualNetwork);
         }
     }

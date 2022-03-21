@@ -71,12 +71,13 @@ public final class ListClusterStreamingJobsResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<ClusterJobResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListClusterStreamingJobsResult build() {
+        public Builder value(ClusterJobResponse... value) {
+            return value(List.of(value));
+        }        public ListClusterStreamingJobsResult build() {
             return new ListClusterStreamingJobsResult(nextLink, value);
         }
     }

@@ -67,22 +67,21 @@ public final class GlobalTableProjectionArgs extends io.pulumi.resources.Resourc
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
             return this;
         }
-
+        public Builder nonKeyAttributes(String... nonKeyAttributes) {
+            return nonKeyAttributes(List.of(nonKeyAttributes));
+        }
         public Builder projectionType(@Nullable Output<String> projectionType) {
             this.projectionType = projectionType;
             return this;
         }
-
         public Builder projectionType(@Nullable String projectionType) {
             this.projectionType = Output.ofNullable(projectionType);
             return this;
-        }
-        public GlobalTableProjectionArgs build() {
+        }        public GlobalTableProjectionArgs build() {
             return new GlobalTableProjectionArgs(nonKeyAttributes, projectionType);
         }
     }

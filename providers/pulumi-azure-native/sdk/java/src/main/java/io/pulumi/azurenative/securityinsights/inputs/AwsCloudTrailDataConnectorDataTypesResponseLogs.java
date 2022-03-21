@@ -60,8 +60,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponseLogs extends io.pu
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
+        }        public AwsCloudTrailDataConnectorDataTypesResponseLogs build() {
             return new AwsCloudTrailDataConnectorDataTypesResponseLogs(state);
         }
     }

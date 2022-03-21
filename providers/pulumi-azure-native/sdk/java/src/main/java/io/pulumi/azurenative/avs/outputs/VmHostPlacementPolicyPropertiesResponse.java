@@ -154,37 +154,36 @@ public final class VmHostPlacementPolicyPropertiesResponse {
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder hostMembers(List<String> hostMembers) {
             this.hostMembers = Objects.requireNonNull(hostMembers);
             return this;
         }
-
+        public Builder hostMembers(String... hostMembers) {
+            return hostMembers(List.of(hostMembers));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmMembers(List<String> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
-        public VmHostPlacementPolicyPropertiesResponse build() {
+        public Builder vmMembers(String... vmMembers) {
+            return vmMembers(List.of(vmMembers));
+        }        public VmHostPlacementPolicyPropertiesResponse build() {
             return new VmHostPlacementPolicyPropertiesResponse(affinityType, displayName, hostMembers, provisioningState, state, type, vmMembers);
         }
     }

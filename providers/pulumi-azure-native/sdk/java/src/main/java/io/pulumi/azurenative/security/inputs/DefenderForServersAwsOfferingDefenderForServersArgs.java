@@ -61,12 +61,10 @@ public final class DefenderForServersAwsOfferingDefenderForServersArgs extends i
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = Output.ofNullable(cloudRoleArn);
             return this;
-        }
-        public DefenderForServersAwsOfferingDefenderForServersArgs build() {
+        }        public DefenderForServersAwsOfferingDefenderForServersArgs build() {
             return new DefenderForServersAwsOfferingDefenderForServersArgs(cloudRoleArn);
         }
     }

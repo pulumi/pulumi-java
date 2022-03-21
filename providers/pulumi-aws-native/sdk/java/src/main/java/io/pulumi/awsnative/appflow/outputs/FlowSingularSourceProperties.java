@@ -43,8 +43,7 @@ public final class FlowSingularSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowSingularSourceProperties build() {
+        }        public FlowSingularSourceProperties build() {
             return new FlowSingularSourceProperties(object);
         }
     }

@@ -217,57 +217,61 @@ public final class GetOrganizationResult {
             this.accounts = Objects.requireNonNull(accounts);
             return this;
         }
-
+        public Builder accounts(GetOrganizationAccount... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder awsServiceAccessPrincipals(List<String> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = Objects.requireNonNull(awsServiceAccessPrincipals);
             return this;
         }
-
+        public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
+            return awsServiceAccessPrincipals(List.of(awsServiceAccessPrincipals));
+        }
         public Builder enabledPolicyTypes(List<String> enabledPolicyTypes) {
             this.enabledPolicyTypes = Objects.requireNonNull(enabledPolicyTypes);
             return this;
         }
-
+        public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
+            return enabledPolicyTypes(List.of(enabledPolicyTypes));
+        }
         public Builder featureSet(String featureSet) {
             this.featureSet = Objects.requireNonNull(featureSet);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder masterAccountArn(String masterAccountArn) {
             this.masterAccountArn = Objects.requireNonNull(masterAccountArn);
             return this;
         }
-
         public Builder masterAccountEmail(String masterAccountEmail) {
             this.masterAccountEmail = Objects.requireNonNull(masterAccountEmail);
             return this;
         }
-
         public Builder masterAccountId(String masterAccountId) {
             this.masterAccountId = Objects.requireNonNull(masterAccountId);
             return this;
         }
-
         public Builder nonMasterAccounts(List<GetOrganizationNonMasterAccount> nonMasterAccounts) {
             this.nonMasterAccounts = Objects.requireNonNull(nonMasterAccounts);
             return this;
         }
-
+        public Builder nonMasterAccounts(GetOrganizationNonMasterAccount... nonMasterAccounts) {
+            return nonMasterAccounts(List.of(nonMasterAccounts));
+        }
         public Builder roots(List<GetOrganizationRoot> roots) {
             this.roots = Objects.requireNonNull(roots);
             return this;
         }
-        public GetOrganizationResult build() {
+        public Builder roots(GetOrganizationRoot... roots) {
+            return roots(List.of(roots));
+        }        public GetOrganizationResult build() {
             return new GetOrganizationResult(accounts, arn, awsServiceAccessPrincipals, enabledPolicyTypes, featureSet, id, masterAccountArn, masterAccountEmail, masterAccountId, nonMasterAccounts, roots);
         }
     }

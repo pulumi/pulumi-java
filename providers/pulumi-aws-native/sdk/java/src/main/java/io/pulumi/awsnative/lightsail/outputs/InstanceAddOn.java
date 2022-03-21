@@ -81,17 +81,14 @@ public final class InstanceAddOn {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
-
         public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
-
         public Builder status(@Nullable InstanceAddOnStatus status) {
             this.status = status;
             return this;
-        }
-        public InstanceAddOn build() {
+        }        public InstanceAddOn build() {
             return new InstanceAddOn(addOnType, autoSnapshotAddOnRequest, status);
         }
     }

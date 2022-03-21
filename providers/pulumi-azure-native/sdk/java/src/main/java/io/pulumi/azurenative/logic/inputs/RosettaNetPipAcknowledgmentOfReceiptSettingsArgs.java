@@ -78,22 +78,18 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends io.p
             this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired);
             return this;
         }
-
         public Builder isNonRepudiationRequired(Boolean isNonRepudiationRequired) {
             this.isNonRepudiationRequired = Output.of(Objects.requireNonNull(isNonRepudiationRequired));
             return this;
         }
-
         public Builder timeToAcknowledgeInSeconds(Output<Integer> timeToAcknowledgeInSeconds) {
             this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
             return this;
         }
-
         public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
             this.timeToAcknowledgeInSeconds = Output.of(Objects.requireNonNull(timeToAcknowledgeInSeconds));
             return this;
-        }
-        public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs build() {
+        }        public RosettaNetPipAcknowledgmentOfReceiptSettingsArgs build() {
             return new RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(isNonRepudiationRequired, timeToAcknowledgeInSeconds);
         }
     }

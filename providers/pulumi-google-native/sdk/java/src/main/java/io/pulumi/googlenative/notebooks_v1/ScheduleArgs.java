@@ -156,82 +156,66 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.cronSchedule = cronSchedule;
             return this;
         }
-
         public Builder cronSchedule(@Nullable String cronSchedule) {
             this.cronSchedule = Output.ofNullable(cronSchedule);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionTemplate(@Nullable Output<ExecutionTemplateArgs> executionTemplate) {
             this.executionTemplate = executionTemplate;
             return this;
         }
-
         public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
             this.executionTemplate = Output.ofNullable(executionTemplate);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder scheduleId(Output<String> scheduleId) {
             this.scheduleId = Objects.requireNonNull(scheduleId);
             return this;
         }
-
         public Builder scheduleId(String scheduleId) {
             this.scheduleId = Output.of(Objects.requireNonNull(scheduleId));
             return this;
         }
-
         public Builder state(@Nullable Output<ScheduleState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ScheduleState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public ScheduleArgs build() {
+        }        public ScheduleArgs build() {
             return new ScheduleArgs(cronSchedule, description, executionTemplate, location, project, scheduleId, state, timeZone);
         }
     }

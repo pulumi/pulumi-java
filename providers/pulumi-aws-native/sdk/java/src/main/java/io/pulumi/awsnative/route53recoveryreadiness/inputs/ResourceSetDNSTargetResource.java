@@ -123,27 +123,22 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
             this.domainName = domainName;
             return this;
         }
-
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
-
         public Builder recordType(@Nullable String recordType) {
             this.recordType = recordType;
             return this;
         }
-
         public Builder targetResource(@Nullable ResourceSetTargetResource targetResource) {
             this.targetResource = targetResource;
             return this;
-        }
-        public ResourceSetDNSTargetResource build() {
+        }        public ResourceSetDNSTargetResource build() {
             return new ResourceSetDNSTargetResource(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }
     }

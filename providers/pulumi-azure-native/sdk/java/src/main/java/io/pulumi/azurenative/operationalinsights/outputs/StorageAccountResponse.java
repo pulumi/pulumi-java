@@ -69,12 +69,10 @@ public final class StorageAccountResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public StorageAccountResponse build() {
+        }        public StorageAccountResponse build() {
             return new StorageAccountResponse(id, key);
         }
     }

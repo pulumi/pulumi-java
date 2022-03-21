@@ -124,52 +124,42 @@ public final class ClusterScalingConfigurationGetArgs extends io.pulumi.resource
             this.autoPause = autoPause;
             return this;
         }
-
         public Builder autoPause(@Nullable Boolean autoPause) {
             this.autoPause = Output.ofNullable(autoPause);
             return this;
         }
-
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
-
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
-
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
-
         public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = Output.ofNullable(minCapacity);
             return this;
         }
-
         public Builder secondsUntilAutoPause(@Nullable Output<Integer> secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;
             return this;
         }
-
         public Builder secondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
             this.secondsUntilAutoPause = Output.ofNullable(secondsUntilAutoPause);
             return this;
         }
-
         public Builder timeoutAction(@Nullable Output<String> timeoutAction) {
             this.timeoutAction = timeoutAction;
             return this;
         }
-
         public Builder timeoutAction(@Nullable String timeoutAction) {
             this.timeoutAction = Output.ofNullable(timeoutAction);
             return this;
-        }
-        public ClusterScalingConfigurationGetArgs build() {
+        }        public ClusterScalingConfigurationGetArgs build() {
             return new ClusterScalingConfigurationGetArgs(autoPause, maxCapacity, minCapacity, secondsUntilAutoPause, timeoutAction);
         }
     }

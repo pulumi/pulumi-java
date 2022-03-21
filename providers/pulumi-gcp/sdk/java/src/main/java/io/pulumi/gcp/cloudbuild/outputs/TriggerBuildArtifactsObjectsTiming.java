@@ -79,12 +79,10 @@ public final class TriggerBuildArtifactsObjectsTiming {
             this.endTime = endTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public TriggerBuildArtifactsObjectsTiming build() {
+        }        public TriggerBuildArtifactsObjectsTiming build() {
             return new TriggerBuildArtifactsObjectsTiming(endTime, startTime);
         }
     }

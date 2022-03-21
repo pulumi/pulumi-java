@@ -75,22 +75,18 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder type(Output<ProjectSampleType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ProjectSampleType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ProjectSampleArgs build() {
+        }        public ProjectSampleArgs build() {
             return new ProjectSampleArgs(size, type);
         }
     }

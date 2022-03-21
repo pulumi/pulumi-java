@@ -53,8 +53,7 @@ public final class GetResourcePolicyResult {
         public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = policyDocument;
             return this;
-        }
-        public GetResourcePolicyResult build() {
+        }        public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(policyDocument);
         }
     }

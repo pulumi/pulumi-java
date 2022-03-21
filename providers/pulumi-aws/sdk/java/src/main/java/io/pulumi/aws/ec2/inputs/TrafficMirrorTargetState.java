@@ -155,72 +155,58 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
-
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
-
         public Builder networkLoadBalancerArn(@Nullable Output<String> networkLoadBalancerArn) {
             this.networkLoadBalancerArn = networkLoadBalancerArn;
             return this;
         }
-
         public Builder networkLoadBalancerArn(@Nullable String networkLoadBalancerArn) {
             this.networkLoadBalancerArn = Output.ofNullable(networkLoadBalancerArn);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public TrafficMirrorTargetState build() {
+        }        public TrafficMirrorTargetState build() {
             return new TrafficMirrorTargetState(arn, description, networkInterfaceId, networkLoadBalancerArn, ownerId, tags, tagsAll);
         }
     }

@@ -87,32 +87,29 @@ public final class PartitionIndexPartitionIndexArgs extends io.pulumi.resources.
             this.indexName = indexName;
             return this;
         }
-
         public Builder indexName(@Nullable String indexName) {
             this.indexName = Output.ofNullable(indexName);
             return this;
         }
-
         public Builder indexStatus(@Nullable Output<String> indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
-
         public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = Output.ofNullable(indexStatus);
             return this;
         }
-
         public Builder keys(@Nullable Output<List<String>> keys) {
             this.keys = keys;
             return this;
         }
-
         public Builder keys(@Nullable List<String> keys) {
             this.keys = Output.ofNullable(keys);
             return this;
         }
-        public PartitionIndexPartitionIndexArgs build() {
+        public Builder keys(String... keys) {
+            return keys(List.of(keys));
+        }        public PartitionIndexPartitionIndexArgs build() {
             return new PartitionIndexPartitionIndexArgs(indexName, indexStatus, keys);
         }
     }

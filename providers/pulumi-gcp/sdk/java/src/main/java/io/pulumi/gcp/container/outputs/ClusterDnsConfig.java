@@ -87,17 +87,14 @@ public final class ClusterDnsConfig {
             this.clusterDns = clusterDns;
             return this;
         }
-
         public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
             this.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
-
         public Builder clusterDnsScope(@Nullable String clusterDnsScope) {
             this.clusterDnsScope = clusterDnsScope;
             return this;
-        }
-        public ClusterDnsConfig build() {
+        }        public ClusterDnsConfig build() {
             return new ClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
         }
     }

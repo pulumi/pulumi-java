@@ -104,17 +104,17 @@ public final class CxIntentTrainingPhrase {
             this.id = id;
             return this;
         }
-
         public Builder parts(List<CxIntentTrainingPhrasePart> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
+        public Builder parts(CxIntentTrainingPhrasePart... parts) {
+            return parts(List.of(parts));
+        }
         public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = repeatCount;
             return this;
-        }
-        public CxIntentTrainingPhrase build() {
+        }        public CxIntentTrainingPhrase build() {
             return new CxIntentTrainingPhrase(id, parts, repeatCount);
         }
     }

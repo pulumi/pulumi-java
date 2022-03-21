@@ -70,12 +70,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMa
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformation build() {
+        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformation build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformation(priority, type);
         }
     }

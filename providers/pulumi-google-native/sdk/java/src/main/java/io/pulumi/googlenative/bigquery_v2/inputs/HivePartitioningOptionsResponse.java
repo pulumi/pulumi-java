@@ -89,17 +89,14 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
-
         public Builder sourceUriPrefix(String sourceUriPrefix) {
             this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
             return this;
-        }
-        public HivePartitioningOptionsResponse build() {
+        }        public HivePartitioningOptionsResponse build() {
             return new HivePartitioningOptionsResponse(mode, requirePartitionFilter, sourceUriPrefix);
         }
     }

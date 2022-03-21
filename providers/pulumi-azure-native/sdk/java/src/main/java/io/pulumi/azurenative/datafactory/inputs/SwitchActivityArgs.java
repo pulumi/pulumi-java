@@ -218,82 +218,78 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.cases = cases;
             return this;
         }
-
         public Builder cases(@Nullable List<SwitchCaseArgs> cases) {
             this.cases = Output.ofNullable(cases);
             return this;
         }
-
+        public Builder cases(SwitchCaseArgs... cases) {
+            return cases(List.of(cases));
+        }
         public Builder defaultActivities(@Nullable Output<List<Object>> defaultActivities) {
             this.defaultActivities = defaultActivities;
             return this;
         }
-
         public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
             this.defaultActivities = Output.ofNullable(defaultActivities);
             return this;
         }
-
+        public Builder defaultActivities(Object... defaultActivities) {
+            return defaultActivities(List.of(defaultActivities));
+        }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder on(Output<ExpressionArgs> on) {
             this.on = Objects.requireNonNull(on);
             return this;
         }
-
         public Builder on(ExpressionArgs on) {
             this.on = Output.of(Objects.requireNonNull(on));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public SwitchActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public SwitchActivityArgs build() {
             return new SwitchActivityArgs(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
         }
     }

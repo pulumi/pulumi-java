@@ -61,12 +61,10 @@ public final class GetFunctionFileSystemConfig {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder localMountPath(String localMountPath) {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
-        }
-        public GetFunctionFileSystemConfig build() {
+        }        public GetFunctionFileSystemConfig build() {
             return new GetFunctionFileSystemConfig(arn, localMountPath);
         }
     }

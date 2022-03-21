@@ -79,12 +79,10 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
-        }
-        public WebServiceParameterResponse build() {
+        }        public WebServiceParameterResponse build() {
             return new WebServiceParameterResponse(certificateThumbprint, value);
         }
     }

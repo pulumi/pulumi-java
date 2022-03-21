@@ -127,52 +127,54 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.allowedRequestExtensions = allowedRequestExtensions;
             return this;
         }
-
         public Builder allowedRequestExtensions(@Nullable List<String> allowedRequestExtensions) {
             this.allowedRequestExtensions = Output.ofNullable(allowedRequestExtensions);
             return this;
         }
-
+        public Builder allowedRequestExtensions(String... allowedRequestExtensions) {
+            return allowedRequestExtensions(List.of(allowedRequestExtensions));
+        }
         public Builder allowedResponseExtensions(@Nullable Output<List<String>> allowedResponseExtensions) {
             this.allowedResponseExtensions = allowedResponseExtensions;
             return this;
         }
-
         public Builder allowedResponseExtensions(@Nullable List<String> allowedResponseExtensions) {
             this.allowedResponseExtensions = Output.ofNullable(allowedResponseExtensions);
             return this;
         }
-
+        public Builder allowedResponseExtensions(String... allowedResponseExtensions) {
+            return allowedResponseExtensions(List.of(allowedResponseExtensions));
+        }
         public Builder provided(@Nullable Output<List<String>> provided) {
             this.provided = provided;
             return this;
         }
-
         public Builder provided(@Nullable List<String> provided) {
             this.provided = Output.ofNullable(provided);
             return this;
         }
-
+        public Builder provided(String... provided) {
+            return provided(List.of(provided));
+        }
         public Builder requested(@Nullable Output<List<String>> requested) {
             this.requested = requested;
             return this;
         }
-
         public Builder requested(@Nullable List<String> requested) {
             this.requested = Output.ofNullable(requested);
             return this;
         }
-
+        public Builder requested(String... requested) {
+            return requested(List.of(requested));
+        }
         public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable String selector) {
             this.selector = Output.ofNullable(selector);
             return this;
-        }
-        public ContextRuleArgs build() {
+        }        public ContextRuleArgs build() {
             return new ContextRuleArgs(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
         }
     }

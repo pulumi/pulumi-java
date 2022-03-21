@@ -77,12 +77,10 @@ public final class KubernetesRoleNetworkResponse extends io.pulumi.resources.Inv
             this.cniConfig = Objects.requireNonNull(cniConfig);
             return this;
         }
-
         public Builder loadBalancerConfig(LoadBalancerConfigResponse loadBalancerConfig) {
             this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig);
             return this;
-        }
-        public KubernetesRoleNetworkResponse build() {
+        }        public KubernetesRoleNetworkResponse build() {
             return new KubernetesRoleNetworkResponse(cniConfig, loadBalancerConfig);
         }
     }

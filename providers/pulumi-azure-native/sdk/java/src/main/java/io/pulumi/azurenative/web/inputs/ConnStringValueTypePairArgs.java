@@ -78,22 +78,18 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(ConnectionStringType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public ConnStringValueTypePairArgs build() {
+        }        public ConnStringValueTypePairArgs build() {
             return new ConnStringValueTypePairArgs(type, value);
         }
     }

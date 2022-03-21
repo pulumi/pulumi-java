@@ -79,17 +79,14 @@ public final class GetBasePathMappingResult {
             this.id = id;
             return this;
         }
-
         public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
-        }
-        public GetBasePathMappingResult build() {
+        }        public GetBasePathMappingResult build() {
             return new GetBasePathMappingResult(id, restApiId, stage);
         }
     }

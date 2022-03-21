@@ -51,8 +51,7 @@ public final class RecordWeightedRoutingPolicy {
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public RecordWeightedRoutingPolicy build() {
+        }        public RecordWeightedRoutingPolicy build() {
             return new RecordWeightedRoutingPolicy(weight);
         }
     }

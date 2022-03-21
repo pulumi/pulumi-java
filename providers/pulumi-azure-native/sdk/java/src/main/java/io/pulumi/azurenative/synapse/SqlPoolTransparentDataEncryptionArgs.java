@@ -124,52 +124,42 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
             this.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
-
         public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
             this.transparentDataEncryptionName = Output.ofNullable(transparentDataEncryptionName);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public SqlPoolTransparentDataEncryptionArgs build() {
+        }        public SqlPoolTransparentDataEncryptionArgs build() {
             return new SqlPoolTransparentDataEncryptionArgs(resourceGroupName, sqlPoolName, status, transparentDataEncryptionName, workspaceName);
         }
     }

@@ -180,82 +180,69 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder connectionString(Output<Object> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder connectionString(Object connectionString) {
             this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
-
         public Builder database(Output<Object> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder database(Object database) {
             this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder isServerVersionAbove32(@Nullable Output<Object> isServerVersionAbove32) {
             this.isServerVersionAbove32 = isServerVersionAbove32;
             return this;
         }
-
         public Builder isServerVersionAbove32(@Nullable Object isServerVersionAbove32) {
             this.isServerVersionAbove32 = Output.ofNullable(isServerVersionAbove32);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public CosmosDbMongoDbApiLinkedServiceArgs build() {
+        }        public CosmosDbMongoDbApiLinkedServiceArgs build() {
             return new CosmosDbMongoDbApiLinkedServiceArgs(annotations, connectVia, connectionString, database, description, isServerVersionAbove32, parameters, type);
         }
     }

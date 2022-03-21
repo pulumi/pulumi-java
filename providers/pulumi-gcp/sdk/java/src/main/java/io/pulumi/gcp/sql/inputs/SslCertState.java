@@ -207,102 +207,82 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
             this.cert = cert;
             return this;
         }
-
         public Builder cert(@Nullable String cert) {
             this.cert = Output.ofNullable(cert);
             return this;
         }
-
         public Builder certSerialNumber(@Nullable Output<String> certSerialNumber) {
             this.certSerialNumber = certSerialNumber;
             return this;
         }
-
         public Builder certSerialNumber(@Nullable String certSerialNumber) {
             this.certSerialNumber = Output.ofNullable(certSerialNumber);
             return this;
         }
-
         public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
-
         public Builder commonName(@Nullable String commonName) {
             this.commonName = Output.ofNullable(commonName);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
-
         public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = Output.ofNullable(instance);
             return this;
         }
-
         public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
-
         public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder serverCaCert(@Nullable Output<String> serverCaCert) {
             this.serverCaCert = serverCaCert;
             return this;
         }
-
         public Builder serverCaCert(@Nullable String serverCaCert) {
             this.serverCaCert = Output.ofNullable(serverCaCert);
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
-        }
-        public SslCertState build() {
+        }        public SslCertState build() {
             return new SslCertState(cert, certSerialNumber, commonName, createTime, expirationTime, instance, privateKey, project, serverCaCert, sha1Fingerprint);
         }
     }

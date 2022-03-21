@@ -72,12 +72,10 @@ public final class PodTemplateSpec {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable PodSpec spec) {
             this.spec = spec;
             return this;
-        }
-        public PodTemplateSpec build() {
+        }        public PodTemplateSpec build() {
             return new PodTemplateSpec(metadata, spec);
         }
     }

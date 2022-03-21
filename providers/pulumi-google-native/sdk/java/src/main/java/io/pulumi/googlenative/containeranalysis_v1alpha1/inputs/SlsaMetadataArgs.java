@@ -128,52 +128,42 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.buildFinishedOn = buildFinishedOn;
             return this;
         }
-
         public Builder buildFinishedOn(@Nullable String buildFinishedOn) {
             this.buildFinishedOn = Output.ofNullable(buildFinishedOn);
             return this;
         }
-
         public Builder buildInvocationId(@Nullable Output<String> buildInvocationId) {
             this.buildInvocationId = buildInvocationId;
             return this;
         }
-
         public Builder buildInvocationId(@Nullable String buildInvocationId) {
             this.buildInvocationId = Output.ofNullable(buildInvocationId);
             return this;
         }
-
         public Builder buildStartedOn(@Nullable Output<String> buildStartedOn) {
             this.buildStartedOn = buildStartedOn;
             return this;
         }
-
         public Builder buildStartedOn(@Nullable String buildStartedOn) {
             this.buildStartedOn = Output.ofNullable(buildStartedOn);
             return this;
         }
-
         public Builder completeness(@Nullable Output<SlsaCompletenessArgs> completeness) {
             this.completeness = completeness;
             return this;
         }
-
         public Builder completeness(@Nullable SlsaCompletenessArgs completeness) {
             this.completeness = Output.ofNullable(completeness);
             return this;
         }
-
         public Builder reproducible(@Nullable Output<Boolean> reproducible) {
             this.reproducible = reproducible;
             return this;
         }
-
         public Builder reproducible(@Nullable Boolean reproducible) {
             this.reproducible = Output.ofNullable(reproducible);
             return this;
-        }
-        public SlsaMetadataArgs build() {
+        }        public SlsaMetadataArgs build() {
             return new SlsaMetadataArgs(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }
     }

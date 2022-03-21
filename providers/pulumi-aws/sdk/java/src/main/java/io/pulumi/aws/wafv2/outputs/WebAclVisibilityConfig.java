@@ -86,17 +86,14 @@ public final class WebAclVisibilityConfig {
             this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
-        }
-        public WebAclVisibilityConfig build() {
+        }        public WebAclVisibilityConfig build() {
             return new WebAclVisibilityConfig(cloudwatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }
     }

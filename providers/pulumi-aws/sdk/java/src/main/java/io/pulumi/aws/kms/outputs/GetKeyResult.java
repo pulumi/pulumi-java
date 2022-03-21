@@ -193,92 +193,80 @@ public final class GetKeyResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder customerMasterKeySpec(String customerMasterKeySpec) {
             this.customerMasterKeySpec = Objects.requireNonNull(customerMasterKeySpec);
             return this;
         }
-
         public Builder deletionDate(String deletionDate) {
             this.deletionDate = Objects.requireNonNull(deletionDate);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder expirationModel(String expirationModel) {
             this.expirationModel = Objects.requireNonNull(expirationModel);
             return this;
         }
-
         public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
-
+        public Builder grantTokens(String... grantTokens) {
+            return grantTokens(List.of(grantTokens));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder keyManager(String keyManager) {
             this.keyManager = Objects.requireNonNull(keyManager);
             return this;
         }
-
         public Builder keyState(String keyState) {
             this.keyState = Objects.requireNonNull(keyState);
             return this;
         }
-
         public Builder keyUsage(String keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
-
         public Builder multiRegion(Boolean multiRegion) {
             this.multiRegion = Objects.requireNonNull(multiRegion);
             return this;
         }
-
         public Builder multiRegionConfigurations(List<GetKeyMultiRegionConfiguration> multiRegionConfigurations) {
             this.multiRegionConfigurations = Objects.requireNonNull(multiRegionConfigurations);
             return this;
         }
-
+        public Builder multiRegionConfigurations(GetKeyMultiRegionConfiguration... multiRegionConfigurations) {
+            return multiRegionConfigurations(List.of(multiRegionConfigurations));
+        }
         public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
-
         public Builder validTo(String validTo) {
             this.validTo = Objects.requireNonNull(validTo);
             return this;
-        }
-        public GetKeyResult build() {
+        }        public GetKeyResult build() {
             return new GetKeyResult(arn, awsAccountId, creationDate, customerMasterKeySpec, deletionDate, description, enabled, expirationModel, grantTokens, id, keyId, keyManager, keyState, keyUsage, multiRegion, multiRegionConfigurations, origin, validTo);
         }
     }

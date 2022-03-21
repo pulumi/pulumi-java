@@ -86,17 +86,14 @@ public final class RobotApplicationSourceConfig {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
-
         public Builder s3Key(String s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
-        }
-        public RobotApplicationSourceConfig build() {
+        }        public RobotApplicationSourceConfig build() {
             return new RobotApplicationSourceConfig(architecture, s3Bucket, s3Key);
         }
     }

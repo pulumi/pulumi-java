@@ -95,17 +95,14 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
-        }
-        public AzureOperationalStoreParametersResponse build() {
+        }        public AzureOperationalStoreParametersResponse build() {
             return new AzureOperationalStoreParametersResponse(dataStoreType, objectType, resourceGroupId);
         }
     }

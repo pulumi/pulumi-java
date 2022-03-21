@@ -54,7 +54,9 @@ public final class HealthAlertCriteriaResponse {
             this.allOf = allOf;
             return this;
         }
-        public HealthAlertCriteriaResponse build() {
+        public Builder allOf(VmGuestHealthAlertCriterionResponse... allOf) {
+            return allOf(List.of(allOf));
+        }        public HealthAlertCriteriaResponse build() {
             return new HealthAlertCriteriaResponse(allOf);
         }
     }

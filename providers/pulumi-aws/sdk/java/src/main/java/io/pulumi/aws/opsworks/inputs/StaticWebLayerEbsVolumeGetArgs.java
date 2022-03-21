@@ -152,72 +152,58 @@ public final class StaticWebLayerEbsVolumeGetArgs extends io.pulumi.resources.Re
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder mountPoint(Output<String> mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
-
         public Builder mountPoint(String mountPoint) {
             this.mountPoint = Output.of(Objects.requireNonNull(mountPoint));
             return this;
         }
-
         public Builder numberOfDisks(Output<Integer> numberOfDisks) {
             this.numberOfDisks = Objects.requireNonNull(numberOfDisks);
             return this;
         }
-
         public Builder numberOfDisks(Integer numberOfDisks) {
             this.numberOfDisks = Output.of(Objects.requireNonNull(numberOfDisks));
             return this;
         }
-
         public Builder raidLevel(@Nullable Output<String> raidLevel) {
             this.raidLevel = raidLevel;
             return this;
         }
-
         public Builder raidLevel(@Nullable String raidLevel) {
             this.raidLevel = Output.ofNullable(raidLevel);
             return this;
         }
-
         public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public StaticWebLayerEbsVolumeGetArgs build() {
+        }        public StaticWebLayerEbsVolumeGetArgs build() {
             return new StaticWebLayerEbsVolumeGetArgs(encrypted, iops, mountPoint, numberOfDisks, raidLevel, size, type);
         }
     }

@@ -139,62 +139,50 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
             this.defaultSenderId = defaultSenderId;
             return this;
         }
-
         public Builder defaultSenderId(@Nullable String defaultSenderId) {
             this.defaultSenderId = Output.ofNullable(defaultSenderId);
             return this;
         }
-
         public Builder defaultSmsType(@Nullable Output<String> defaultSmsType) {
             this.defaultSmsType = defaultSmsType;
             return this;
         }
-
         public Builder defaultSmsType(@Nullable String defaultSmsType) {
             this.defaultSmsType = Output.ofNullable(defaultSmsType);
             return this;
         }
-
         public Builder deliveryStatusIamRoleArn(@Nullable Output<String> deliveryStatusIamRoleArn) {
             this.deliveryStatusIamRoleArn = deliveryStatusIamRoleArn;
             return this;
         }
-
         public Builder deliveryStatusIamRoleArn(@Nullable String deliveryStatusIamRoleArn) {
             this.deliveryStatusIamRoleArn = Output.ofNullable(deliveryStatusIamRoleArn);
             return this;
         }
-
         public Builder deliveryStatusSuccessSamplingRate(@Nullable Output<String> deliveryStatusSuccessSamplingRate) {
             this.deliveryStatusSuccessSamplingRate = deliveryStatusSuccessSamplingRate;
             return this;
         }
-
         public Builder deliveryStatusSuccessSamplingRate(@Nullable String deliveryStatusSuccessSamplingRate) {
             this.deliveryStatusSuccessSamplingRate = Output.ofNullable(deliveryStatusSuccessSamplingRate);
             return this;
         }
-
         public Builder monthlySpendLimit(@Nullable Output<Integer> monthlySpendLimit) {
             this.monthlySpendLimit = monthlySpendLimit;
             return this;
         }
-
         public Builder monthlySpendLimit(@Nullable Integer monthlySpendLimit) {
             this.monthlySpendLimit = Output.ofNullable(monthlySpendLimit);
             return this;
         }
-
         public Builder usageReportS3Bucket(@Nullable Output<String> usageReportS3Bucket) {
             this.usageReportS3Bucket = usageReportS3Bucket;
             return this;
         }
-
         public Builder usageReportS3Bucket(@Nullable String usageReportS3Bucket) {
             this.usageReportS3Bucket = Output.ofNullable(usageReportS3Bucket);
             return this;
-        }
-        public SmsPreferencesState build() {
+        }        public SmsPreferencesState build() {
             return new SmsPreferencesState(defaultSenderId, defaultSmsType, deliveryStatusIamRoleArn, deliveryStatusSuccessSamplingRate, monthlySpendLimit, usageReportS3Bucket);
         }
     }

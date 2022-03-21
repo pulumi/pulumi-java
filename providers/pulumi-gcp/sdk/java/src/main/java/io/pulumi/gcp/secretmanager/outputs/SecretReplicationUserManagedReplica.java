@@ -74,12 +74,10 @@ public final class SecretReplicationUserManagedReplica {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public SecretReplicationUserManagedReplica build() {
+        }        public SecretReplicationUserManagedReplica build() {
             return new SecretReplicationUserManagedReplica(customerManagedEncryption, location);
         }
     }

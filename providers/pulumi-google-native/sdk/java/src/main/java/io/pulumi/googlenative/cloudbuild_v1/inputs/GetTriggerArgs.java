@@ -90,22 +90,18 @@ public final class GetTriggerArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder triggerId(String triggerId) {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
-        }
-        public GetTriggerArgs build() {
+        }        public GetTriggerArgs build() {
             return new GetTriggerArgs(location, project, projectId, triggerId);
         }
     }

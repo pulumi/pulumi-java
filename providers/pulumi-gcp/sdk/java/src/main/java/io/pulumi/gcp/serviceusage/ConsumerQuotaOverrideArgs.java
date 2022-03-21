@@ -158,72 +158,58 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder limit(Output<String> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public Builder limit(String limit) {
             this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
-
         public Builder metric(Output<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(String metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
         }
-
         public Builder overrideValue(Output<String> overrideValue) {
             this.overrideValue = Objects.requireNonNull(overrideValue);
             return this;
         }
-
         public Builder overrideValue(String overrideValue) {
             this.overrideValue = Output.of(Objects.requireNonNull(overrideValue));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public ConsumerQuotaOverrideArgs build() {
+        }        public ConsumerQuotaOverrideArgs build() {
             return new ConsumerQuotaOverrideArgs(dimensions, force, limit, metric, overrideValue, project, service);
         }
     }

@@ -61,12 +61,10 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
-        }
-        public ResourceAnnotationArgs build() {
+        }        public ResourceAnnotationArgs build() {
             return new ResourceAnnotationArgs(label);
         }
     }

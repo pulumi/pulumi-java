@@ -53,8 +53,7 @@ public final class SourceInfoResponse {
         public Builder sourceFiles(List<Map<String,String>> sourceFiles) {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
-        }
-        public SourceInfoResponse build() {
+        }        public SourceInfoResponse build() {
             return new SourceInfoResponse(sourceFiles);
         }
     }

@@ -60,12 +60,10 @@ public final class CustomerManagedEncryptionArgs extends io.pulumi.resources.Res
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
-        }
-        public CustomerManagedEncryptionArgs build() {
+        }        public CustomerManagedEncryptionArgs build() {
             return new CustomerManagedEncryptionArgs(kmsKeyName);
         }
     }

@@ -107,42 +107,37 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             this.inputDefinition = Objects.requireNonNull(inputDefinition);
             return this;
         }
-
         public Builder inputDefinition(InputDefinitionArgs inputDefinition) {
             this.inputDefinition = Output.of(Objects.requireNonNull(inputDefinition));
             return this;
         }
-
         public Builder inputDescription(@Nullable Output<String> inputDescription) {
             this.inputDescription = inputDescription;
             return this;
         }
-
         public Builder inputDescription(@Nullable String inputDescription) {
             this.inputDescription = Output.ofNullable(inputDescription);
             return this;
         }
-
         public Builder inputName(@Nullable Output<String> inputName) {
             this.inputName = inputName;
             return this;
         }
-
         public Builder inputName(@Nullable String inputName) {
             this.inputName = Output.ofNullable(inputName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<InputTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<InputTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public InputArgs build() {
+        public Builder tags(InputTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public InputArgs build() {
             return new InputArgs(inputDefinition, inputDescription, inputName, tags);
         }
     }

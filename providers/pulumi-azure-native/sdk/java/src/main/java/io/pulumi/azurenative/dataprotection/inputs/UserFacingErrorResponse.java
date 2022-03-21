@@ -190,47 +190,44 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
             this.code = code;
             return this;
         }
-
         public Builder details(@Nullable List<UserFacingErrorResponse> details) {
             this.details = details;
             return this;
         }
-
+        public Builder details(UserFacingErrorResponse... details) {
+            return details(List.of(details));
+        }
         public Builder innerError(@Nullable InnerErrorResponse innerError) {
             this.innerError = innerError;
             return this;
         }
-
         public Builder isRetryable(@Nullable Boolean isRetryable) {
             this.isRetryable = isRetryable;
             return this;
         }
-
         public Builder isUserError(@Nullable Boolean isUserError) {
             this.isUserError = isUserError;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder recommendedAction(@Nullable List<String> recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
-
+        public Builder recommendedAction(String... recommendedAction) {
+            return recommendedAction(List.of(recommendedAction));
+        }
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
-        }
-        public UserFacingErrorResponse build() {
+        }        public UserFacingErrorResponse build() {
             return new UserFacingErrorResponse(code, details, innerError, isRetryable, isUserError, message, properties, recommendedAction, target);
         }
     }

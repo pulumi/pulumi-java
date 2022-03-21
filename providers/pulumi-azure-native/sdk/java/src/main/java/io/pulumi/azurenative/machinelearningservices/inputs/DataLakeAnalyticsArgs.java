@@ -124,52 +124,42 @@ public final class DataLakeAnalyticsArgs extends io.pulumi.resources.ResourceArg
             this.computeLocation = computeLocation;
             return this;
         }
-
         public Builder computeLocation(@Nullable String computeLocation) {
             this.computeLocation = Output.ofNullable(computeLocation);
             return this;
         }
-
         public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
-
         public Builder computeType(String computeType) {
             this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder properties(@Nullable Output<DataLakeAnalyticsPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable DataLakeAnalyticsPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
-        }
-        public DataLakeAnalyticsArgs build() {
+        }        public DataLakeAnalyticsArgs build() {
             return new DataLakeAnalyticsArgs(computeLocation, computeType, description, properties, resourceId);
         }
     }

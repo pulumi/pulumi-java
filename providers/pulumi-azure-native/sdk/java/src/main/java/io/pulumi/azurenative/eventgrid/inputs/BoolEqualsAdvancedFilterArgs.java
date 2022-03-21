@@ -96,32 +96,26 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder operatorType(Output<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Output.of(Objects.requireNonNull(operatorType));
             return this;
         }
-
         public Builder value(@Nullable Output<Boolean> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Boolean value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public BoolEqualsAdvancedFilterArgs build() {
+        }        public BoolEqualsAdvancedFilterArgs build() {
             return new BoolEqualsAdvancedFilterArgs(key, operatorType, value);
         }
     }

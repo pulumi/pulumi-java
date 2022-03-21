@@ -182,42 +182,34 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
             this.codeId = codeId;
             return this;
         }
-
         public Builder command(String command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-
         public Builder distribution(@Nullable Object distribution) {
             this.distribution = distribution;
             return this;
         }
-
         public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
-
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
-
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
-
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public TrialComponentResponse build() {
+        }        public TrialComponentResponse build() {
             return new TrialComponentResponse(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
         }
     }

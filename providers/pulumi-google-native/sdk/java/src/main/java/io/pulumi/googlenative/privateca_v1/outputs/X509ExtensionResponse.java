@@ -87,17 +87,14 @@ public final class X509ExtensionResponse {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
-
         public Builder objectId(ObjectIdResponse objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public X509ExtensionResponse build() {
+        }        public X509ExtensionResponse build() {
             return new X509ExtensionResponse(critical, objectId, value);
         }
     }

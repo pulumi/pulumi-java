@@ -104,52 +104,45 @@ public final class ServiceTaskSpecContainerSpecHealthcheckArgs extends io.pulumi
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder retries(@Nullable Output<Integer> retries) {
             this.retries = retries;
             return this;
         }
-
         public Builder retries(@Nullable Integer retries) {
             this.retries = Output.ofNullable(retries);
             return this;
         }
-
         public Builder startPeriod(@Nullable Output<String> startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
-
         public Builder startPeriod(@Nullable String startPeriod) {
             this.startPeriod = Output.ofNullable(startPeriod);
             return this;
         }
-
         public Builder tests(Output<List<String>> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-
         public Builder tests(List<String> tests) {
             this.tests = Output.of(Objects.requireNonNull(tests));
             return this;
         }
-
+        public Builder tests(String... tests) {
+            return tests(List.of(tests));
+        }
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecHealthcheckArgs build() {
+        }        public ServiceTaskSpecContainerSpecHealthcheckArgs build() {
             return new ServiceTaskSpecContainerSpecHealthcheckArgs(interval, retries, startPeriod, tests, timeout);
         }
     }

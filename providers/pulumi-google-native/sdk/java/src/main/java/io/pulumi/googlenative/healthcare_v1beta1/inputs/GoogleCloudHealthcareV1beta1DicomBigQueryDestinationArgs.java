@@ -96,32 +96,26 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
             this.force = force;
             return this;
         }
-
         public Builder force(@Nullable Boolean force) {
             this.force = Output.ofNullable(force);
             return this;
         }
-
         public Builder tableUri(@Nullable Output<String> tableUri) {
             this.tableUri = tableUri;
             return this;
         }
-
         public Builder tableUri(@Nullable String tableUri) {
             this.tableUri = Output.ofNullable(tableUri);
             return this;
         }
-
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition writeDisposition) {
             this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
-        }
-        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {
+        }        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(force, tableUri, writeDisposition);
         }
     }

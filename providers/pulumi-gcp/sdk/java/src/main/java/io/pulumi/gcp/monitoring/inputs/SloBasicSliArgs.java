@@ -142,52 +142,51 @@ public final class SloBasicSliArgs extends io.pulumi.resources.ResourceArgs {
             this.availability = availability;
             return this;
         }
-
         public Builder availability(@Nullable SloBasicSliAvailabilityArgs availability) {
             this.availability = Output.ofNullable(availability);
             return this;
         }
-
         public Builder latency(@Nullable Output<SloBasicSliLatencyArgs> latency) {
             this.latency = latency;
             return this;
         }
-
         public Builder latency(@Nullable SloBasicSliLatencyArgs latency) {
             this.latency = Output.ofNullable(latency);
             return this;
         }
-
         public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
-
         public Builder locations(@Nullable List<String> locations) {
             this.locations = Output.ofNullable(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder versions(@Nullable Output<List<String>> versions) {
             this.versions = versions;
             return this;
         }
-
         public Builder versions(@Nullable List<String> versions) {
             this.versions = Output.ofNullable(versions);
             return this;
         }
-        public SloBasicSliArgs build() {
+        public Builder versions(String... versions) {
+            return versions(List.of(versions));
+        }        public SloBasicSliArgs build() {
             return new SloBasicSliArgs(availability, latency, locations, methods, versions);
         }
     }

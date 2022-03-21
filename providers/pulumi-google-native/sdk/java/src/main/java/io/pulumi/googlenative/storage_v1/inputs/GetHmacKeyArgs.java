@@ -78,17 +78,14 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.accessId = Objects.requireNonNull(accessId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetHmacKeyArgs build() {
+        }        public GetHmacKeyArgs build() {
             return new GetHmacKeyArgs(accessId, project, userProject);
         }
     }

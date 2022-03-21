@@ -71,12 +71,10 @@ public final class ArmTemplateParameterResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ArmTemplateParameterResponse build() {
+        }        public ArmTemplateParameterResponse build() {
             return new ArmTemplateParameterResponse(name, value);
         }
     }

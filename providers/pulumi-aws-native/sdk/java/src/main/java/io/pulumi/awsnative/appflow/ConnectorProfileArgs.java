@@ -125,52 +125,42 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
             this.connectionMode = Objects.requireNonNull(connectionMode);
             return this;
         }
-
         public Builder connectionMode(ConnectorProfileConnectionMode connectionMode) {
             this.connectionMode = Output.of(Objects.requireNonNull(connectionMode));
             return this;
         }
-
         public Builder connectorProfileConfig(@Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig) {
             this.connectorProfileConfig = connectorProfileConfig;
             return this;
         }
-
         public Builder connectorProfileConfig(@Nullable ConnectorProfileConfigArgs connectorProfileConfig) {
             this.connectorProfileConfig = Output.ofNullable(connectorProfileConfig);
             return this;
         }
-
         public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
-
         public Builder connectorType(Output<ConnectorProfileConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder connectorType(ConnectorProfileConnectorType connectorType) {
             this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
-
         public Builder kMSArn(@Nullable Output<String> kMSArn) {
             this.kMSArn = kMSArn;
             return this;
         }
-
         public Builder kMSArn(@Nullable String kMSArn) {
             this.kMSArn = Output.ofNullable(kMSArn);
             return this;
-        }
-        public ConnectorProfileArgs build() {
+        }        public ConnectorProfileArgs build() {
             return new ConnectorProfileArgs(connectionMode, connectorProfileConfig, connectorProfileName, connectorType, kMSArn);
         }
     }

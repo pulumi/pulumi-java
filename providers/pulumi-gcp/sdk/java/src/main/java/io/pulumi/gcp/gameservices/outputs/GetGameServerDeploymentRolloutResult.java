@@ -105,32 +105,29 @@ public final class GetGameServerDeploymentRolloutResult {
             this.defaultGameServerConfig = Objects.requireNonNull(defaultGameServerConfig);
             return this;
         }
-
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public Builder gameServerConfigOverrides(List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides) {
             this.gameServerConfigOverrides = Objects.requireNonNull(gameServerConfigOverrides);
             return this;
         }
-
+        public Builder gameServerConfigOverrides(GetGameServerDeploymentRolloutGameServerConfigOverride... gameServerConfigOverrides) {
+            return gameServerConfigOverrides(List.of(gameServerConfigOverrides));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
-        }
-        public GetGameServerDeploymentRolloutResult build() {
+        }        public GetGameServerDeploymentRolloutResult build() {
             return new GetGameServerDeploymentRolloutResult(defaultGameServerConfig, deploymentId, gameServerConfigOverrides, id, name, project);
         }
     }

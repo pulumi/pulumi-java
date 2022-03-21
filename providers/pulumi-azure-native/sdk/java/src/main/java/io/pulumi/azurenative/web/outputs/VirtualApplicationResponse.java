@@ -106,22 +106,21 @@ public final class VirtualApplicationResponse {
             this.physicalPath = physicalPath;
             return this;
         }
-
         public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
             this.preloadEnabled = preloadEnabled;
             return this;
         }
-
         public Builder virtualDirectories(@Nullable List<VirtualDirectoryResponse> virtualDirectories) {
             this.virtualDirectories = virtualDirectories;
             return this;
         }
-
+        public Builder virtualDirectories(VirtualDirectoryResponse... virtualDirectories) {
+            return virtualDirectories(List.of(virtualDirectories));
+        }
         public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = virtualPath;
             return this;
-        }
-        public VirtualApplicationResponse build() {
+        }        public VirtualApplicationResponse build() {
             return new VirtualApplicationResponse(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
         }
     }

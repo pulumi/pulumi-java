@@ -80,22 +80,21 @@ public final class BotAbortStatementGetArgs extends io.pulumi.resources.Resource
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<BotAbortStatementMessageGetArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(BotAbortStatementMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public BotAbortStatementGetArgs build() {
+        }        public BotAbortStatementGetArgs build() {
             return new BotAbortStatementGetArgs(messages, responseCard);
         }
     }

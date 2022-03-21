@@ -104,52 +104,42 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             this.autoprovision = autoprovision;
             return this;
         }
-
         public Builder autoprovision(@Nullable Boolean autoprovision) {
             this.autoprovision = Output.ofNullable(autoprovision);
             return this;
         }
-
         public Builder driver(@Nullable Output<String> driver) {
             this.driver = driver;
             return this;
         }
-
         public Builder driver(@Nullable String driver) {
             this.driver = Output.ofNullable(driver);
             return this;
         }
-
         public Builder driverOpts(@Nullable Output<Object> driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
-
         public Builder driverOpts(@Nullable Object driverOpts) {
             this.driverOpts = Output.ofNullable(driverOpts);
             return this;
         }
-
         public Builder labels(@Nullable Output<Object> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Object labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = Output.ofNullable(scope);
             return this;
-        }
-        public TaskDefinitionDockerVolumeConfigurationArgs build() {
+        }        public TaskDefinitionDockerVolumeConfigurationArgs build() {
             return new TaskDefinitionDockerVolumeConfigurationArgs(autoprovision, driver, driverOpts, labels, scope);
         }
     }

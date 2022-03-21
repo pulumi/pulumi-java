@@ -202,52 +202,51 @@ public final class GetIpGroupResult {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder firewallPolicies(List<SubResourceResponse> firewallPolicies) {
             this.firewallPolicies = Objects.requireNonNull(firewallPolicies);
             return this;
         }
-
+        public Builder firewallPolicies(SubResourceResponse... firewallPolicies) {
+            return firewallPolicies(List.of(firewallPolicies));
+        }
         public Builder firewalls(List<SubResourceResponse> firewalls) {
             this.firewalls = Objects.requireNonNull(firewalls);
             return this;
         }
-
+        public Builder firewalls(SubResourceResponse... firewalls) {
+            return firewalls(List.of(firewalls));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetIpGroupResult build() {
+        }        public GetIpGroupResult build() {
             return new GetIpGroupResult(etag, firewallPolicies, firewalls, id, ipAddresses, location, name, provisioningState, tags, type);
         }
     }

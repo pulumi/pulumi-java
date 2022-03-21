@@ -79,12 +79,10 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.count = count;
             return this;
         }
-
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
-        }
-        public RetryPolicyResponse build() {
+        }        public RetryPolicyResponse build() {
             return new RetryPolicyResponse(count, intervalInSeconds);
         }
     }

@@ -140,62 +140,50 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder iamRole(Output<String> iamRole) {
             this.iamRole = Objects.requireNonNull(iamRole);
             return this;
         }
-
         public Builder iamRole(String iamRole) {
             this.iamRole = Output.of(Objects.requireNonNull(iamRole));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder registrationLimit(@Nullable Output<Integer> registrationLimit) {
             this.registrationLimit = registrationLimit;
             return this;
         }
-
         public Builder registrationLimit(@Nullable Integer registrationLimit) {
             this.registrationLimit = Output.ofNullable(registrationLimit);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ActivationArgs build() {
+        }        public ActivationArgs build() {
             return new ActivationArgs(description, expirationDate, iamRole, name, registrationLimit, tags);
         }
     }

@@ -107,22 +107,24 @@ public final class IngressSpec {
             this.backend = backend;
             return this;
         }
-
         public Builder ingressClassName(@Nullable String ingressClassName) {
             this.ingressClassName = ingressClassName;
             return this;
         }
-
         public Builder rules(@Nullable List<IngressRule> rules) {
             this.rules = rules;
             return this;
         }
-
+        public Builder rules(IngressRule... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tls(@Nullable List<IngressTLS> tls) {
             this.tls = tls;
             return this;
         }
-        public IngressSpec build() {
+        public Builder tls(IngressTLS... tls) {
+            return tls(List.of(tls));
+        }        public IngressSpec build() {
             return new IngressSpec(backend, ingressClassName, rules, tls);
         }
     }

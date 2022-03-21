@@ -88,17 +88,14 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
             this.natRuleName = Objects.requireNonNull(natRuleName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayNatRuleArgs build() {
+        }        public GetVirtualNetworkGatewayNatRuleArgs build() {
             return new GetVirtualNetworkGatewayNatRuleArgs(natRuleName, resourceGroupName, virtualNetworkGatewayName);
         }
     }

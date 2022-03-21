@@ -79,12 +79,16 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.
             this.fqdns = fqdns;
             return this;
         }
-
+        public Builder fqdns(String... fqdns) {
+            return fqdns(List.of(fqdns));
+        }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-        public FirewallPolicyThreatIntelWhitelistResponse build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public FirewallPolicyThreatIntelWhitelistResponse build() {
             return new FirewallPolicyThreatIntelWhitelistResponse(fqdns, ipAddresses);
         }
     }

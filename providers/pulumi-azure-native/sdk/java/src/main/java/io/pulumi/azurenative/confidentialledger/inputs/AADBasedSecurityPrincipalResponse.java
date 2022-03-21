@@ -94,17 +94,14 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
-
         public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public AADBasedSecurityPrincipalResponse build() {
+        }        public AADBasedSecurityPrincipalResponse build() {
             return new AADBasedSecurityPrincipalResponse(ledgerRoleName, principalId, tenantId);
         }
     }

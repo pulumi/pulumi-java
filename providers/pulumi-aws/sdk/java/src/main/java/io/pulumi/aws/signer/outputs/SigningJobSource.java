@@ -51,8 +51,7 @@ public final class SigningJobSource {
         public Builder s3(SigningJobSourceS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
-        }
-        public SigningJobSource build() {
+        }        public SigningJobSource build() {
             return new SigningJobSource(s3);
         }
     }

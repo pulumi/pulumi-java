@@ -79,12 +79,10 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
             this.id = id;
             return this;
         }
-
         public Builder key(@Nullable KeyPropertiesResponse key) {
             this.key = key;
             return this;
-        }
-        public KeyVaultPropertiesResponse build() {
+        }        public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(id, key);
         }
     }

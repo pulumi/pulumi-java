@@ -58,8 +58,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse extends io.
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDatacatalogV1DatabaseTableSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1DatabaseTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1DatabaseTableSpecResponse(type);
         }
     }

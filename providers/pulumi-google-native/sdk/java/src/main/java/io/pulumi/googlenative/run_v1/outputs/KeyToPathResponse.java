@@ -86,17 +86,14 @@ public final class KeyToPathResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder mode(Integer mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
-        }
-        public KeyToPathResponse build() {
+        }        public KeyToPathResponse build() {
             return new KeyToPathResponse(key, mode, path);
         }
     }

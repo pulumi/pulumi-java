@@ -84,17 +84,14 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
             this.outboundRuleFqdn = Objects.requireNonNull(outboundRuleFqdn);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetOutboundFirewallRuleArgs build() {
+        }        public GetOutboundFirewallRuleArgs build() {
             return new GetOutboundFirewallRuleArgs(outboundRuleFqdn, resourceGroupName, serverName);
         }
     }

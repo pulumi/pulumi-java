@@ -86,17 +86,14 @@ public final class BackendServiceFailoverPolicyResponse {
             this.disableConnectionDrainOnFailover = Objects.requireNonNull(disableConnectionDrainOnFailover);
             return this;
         }
-
         public Builder dropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = Objects.requireNonNull(dropTrafficIfUnhealthy);
             return this;
         }
-
         public Builder failoverRatio(Double failoverRatio) {
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
-        }
-        public BackendServiceFailoverPolicyResponse build() {
+        }        public BackendServiceFailoverPolicyResponse build() {
             return new BackendServiceFailoverPolicyResponse(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }
     }

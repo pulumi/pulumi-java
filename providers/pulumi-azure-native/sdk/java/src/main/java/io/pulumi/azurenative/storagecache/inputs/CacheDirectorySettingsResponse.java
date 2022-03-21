@@ -79,12 +79,10 @@ public final class CacheDirectorySettingsResponse extends io.pulumi.resources.In
             this.activeDirectory = activeDirectory;
             return this;
         }
-
         public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
             this.usernameDownload = usernameDownload;
             return this;
-        }
-        public CacheDirectorySettingsResponse build() {
+        }        public CacheDirectorySettingsResponse build() {
             return new CacheDirectorySettingsResponse(activeDirectory, usernameDownload);
         }
     }

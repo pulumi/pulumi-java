@@ -128,52 +128,42 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
-
         public Builder diskId(String diskId) {
             this.diskId = Output.of(Objects.requireNonNull(diskId));
             return this;
         }
-
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
-
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
             this.diskType = Output.ofNullable(diskType);
             return this;
         }
-
         public Builder isOSDisk(Output<String> isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
-
         public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Output.of(Objects.requireNonNull(isOSDisk));
             return this;
         }
-
         public Builder logStorageAccountId(Output<String> logStorageAccountId) {
             this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
             return this;
         }
-
         public Builder logStorageAccountId(String logStorageAccountId) {
             this.logStorageAccountId = Output.of(Objects.requireNonNull(logStorageAccountId));
             return this;
         }
-
         public Builder logStorageAccountSasSecretName(Output<String> logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
             return this;
         }
-
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Output.of(Objects.requireNonNull(logStorageAccountSasSecretName));
             return this;
-        }
-        public VMwareCbtDiskInputArgs build() {
+        }        public VMwareCbtDiskInputArgs build() {
             return new VMwareCbtDiskInputArgs(diskId, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName);
         }
     }

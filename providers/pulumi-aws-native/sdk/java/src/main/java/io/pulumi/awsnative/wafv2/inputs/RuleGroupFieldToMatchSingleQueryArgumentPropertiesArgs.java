@@ -56,12 +56,10 @@ public final class RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs extend
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs build() {
+        }        public RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs build() {
             return new RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs(name);
         }
     }

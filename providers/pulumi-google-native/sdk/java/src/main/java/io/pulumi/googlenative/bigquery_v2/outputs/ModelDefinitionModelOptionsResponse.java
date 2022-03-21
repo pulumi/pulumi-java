@@ -62,17 +62,17 @@ public final class ModelDefinitionModelOptionsResponse {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder lossType(String lossType) {
             this.lossType = Objects.requireNonNull(lossType);
             return this;
         }
-
         public Builder modelType(String modelType) {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
-        }
-        public ModelDefinitionModelOptionsResponse build() {
+        }        public ModelDefinitionModelOptionsResponse build() {
             return new ModelDefinitionModelOptionsResponse(labels, lossType, modelType);
         }
     }

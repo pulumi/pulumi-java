@@ -119,27 +119,22 @@ public final class PasswordValidationPolicyResponse {
             this.complexity = Objects.requireNonNull(complexity);
             return this;
         }
-
         public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring);
             return this;
         }
-
         public Builder minLength(Integer minLength) {
             this.minLength = Objects.requireNonNull(minLength);
             return this;
         }
-
         public Builder passwordChangeInterval(String passwordChangeInterval) {
             this.passwordChangeInterval = Objects.requireNonNull(passwordChangeInterval);
             return this;
         }
-
         public Builder reuseInterval(Integer reuseInterval) {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
-        }
-        public PasswordValidationPolicyResponse build() {
+        }        public PasswordValidationPolicyResponse build() {
             return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }
     }

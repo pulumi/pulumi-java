@@ -76,12 +76,10 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder scale(String scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
-        }
-        public AxisResponse build() {
+        }        public AxisResponse build() {
             return new AxisResponse(label, scale);
         }
     }

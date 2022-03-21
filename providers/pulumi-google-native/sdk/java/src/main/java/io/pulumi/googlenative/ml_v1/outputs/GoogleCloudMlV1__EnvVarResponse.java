@@ -69,12 +69,10 @@ public final class GoogleCloudMlV1__EnvVarResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GoogleCloudMlV1__EnvVarResponse build() {
+        }        public GoogleCloudMlV1__EnvVarResponse build() {
             return new GoogleCloudMlV1__EnvVarResponse(name, value);
         }
     }

@@ -122,52 +122,42 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
             this.metadataName = metadataName;
             return this;
         }
-
         public Builder metadataName(@Nullable String metadataName) {
             this.metadataName = Output.ofNullable(metadataName);
             return this;
         }
-
         public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
-
         public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder virtualMachineName(Output<String> virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
-
         public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Output.of(Objects.requireNonNull(virtualMachineName));
             return this;
         }
-
         public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = Output.ofNullable(vmId);
             return this;
-        }
-        public HybridIdentityMetadatumArgs build() {
+        }        public HybridIdentityMetadatumArgs build() {
             return new HybridIdentityMetadatumArgs(metadataName, publicKey, resourceGroupName, virtualMachineName, vmId);
         }
     }

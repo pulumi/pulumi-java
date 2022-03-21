@@ -54,12 +54,13 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs build() {
+        public Builder items(FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs... items) {
+            return items(List.of(items));
+        }        public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs build() {
             return new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(items);
         }
     }

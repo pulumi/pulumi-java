@@ -239,122 +239,98 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
             this.agreementName = agreementName;
             return this;
         }
-
         public Builder agreementName(@Nullable String agreementName) {
             this.agreementName = Output.ofNullable(agreementName);
             return this;
         }
-
         public Builder agreementType(Output<AgreementType> agreementType) {
             this.agreementType = Objects.requireNonNull(agreementType);
             return this;
         }
-
         public Builder agreementType(AgreementType agreementType) {
             this.agreementType = Output.of(Objects.requireNonNull(agreementType));
             return this;
         }
-
         public Builder content(Output<AgreementContentArgs> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder content(AgreementContentArgs content) {
             this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
-
         public Builder guestIdentity(Output<BusinessIdentityArgs> guestIdentity) {
             this.guestIdentity = Objects.requireNonNull(guestIdentity);
             return this;
         }
-
         public Builder guestIdentity(BusinessIdentityArgs guestIdentity) {
             this.guestIdentity = Output.of(Objects.requireNonNull(guestIdentity));
             return this;
         }
-
         public Builder guestPartner(Output<String> guestPartner) {
             this.guestPartner = Objects.requireNonNull(guestPartner);
             return this;
         }
-
         public Builder guestPartner(String guestPartner) {
             this.guestPartner = Output.of(Objects.requireNonNull(guestPartner));
             return this;
         }
-
         public Builder hostIdentity(Output<BusinessIdentityArgs> hostIdentity) {
             this.hostIdentity = Objects.requireNonNull(hostIdentity);
             return this;
         }
-
         public Builder hostIdentity(BusinessIdentityArgs hostIdentity) {
             this.hostIdentity = Output.of(Objects.requireNonNull(hostIdentity));
             return this;
         }
-
         public Builder hostPartner(Output<String> hostPartner) {
             this.hostPartner = Objects.requireNonNull(hostPartner);
             return this;
         }
-
         public Builder hostPartner(String hostPartner) {
             this.hostPartner = Output.of(Objects.requireNonNull(hostPartner));
             return this;
         }
-
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public IntegrationAccountAgreementArgs build() {
+        }        public IntegrationAccountAgreementArgs build() {
             return new IntegrationAccountAgreementArgs(agreementName, agreementType, content, guestIdentity, guestPartner, hostIdentity, hostPartner, integrationAccountName, location, metadata, resourceGroupName, tags);
         }
     }

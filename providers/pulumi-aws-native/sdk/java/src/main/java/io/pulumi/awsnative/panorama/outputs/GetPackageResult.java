@@ -83,27 +83,25 @@ public final class GetPackageResult {
             this.arn = arn;
             return this;
         }
-
         public Builder createdTime(@Nullable Integer createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder packageId(@Nullable String packageId) {
             this.packageId = packageId;
             return this;
         }
-
         public Builder storageLocation(@Nullable PackageStorageLocation storageLocation) {
             this.storageLocation = storageLocation;
             return this;
         }
-
         public Builder tags(@Nullable List<PackageTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetPackageResult build() {
+        public Builder tags(PackageTag... tags) {
+            return tags(List.of(tags));
+        }        public GetPackageResult build() {
             return new GetPackageResult(arn, createdTime, packageId, storageLocation, tags);
         }
     }

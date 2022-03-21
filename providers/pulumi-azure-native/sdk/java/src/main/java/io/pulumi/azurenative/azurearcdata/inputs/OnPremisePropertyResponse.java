@@ -94,17 +94,14 @@ public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder publicSigningKey(String publicSigningKey) {
             this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
             return this;
         }
-
         public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
-        }
-        public OnPremisePropertyResponse build() {
+        }        public OnPremisePropertyResponse build() {
             return new OnPremisePropertyResponse(id, publicSigningKey, signingCertificateThumbprint);
         }
     }

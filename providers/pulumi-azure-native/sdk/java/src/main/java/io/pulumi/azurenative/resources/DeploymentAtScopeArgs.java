@@ -124,52 +124,42 @@ public final class DeploymentAtScopeArgs extends io.pulumi.resources.ResourceArg
             this.deploymentName = deploymentName;
             return this;
         }
-
         public Builder deploymentName(@Nullable String deploymentName) {
             this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(Output<DeploymentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(DeploymentPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DeploymentAtScopeArgs build() {
+        }        public DeploymentAtScopeArgs build() {
             return new DeploymentAtScopeArgs(deploymentName, location, properties, scope, tags);
         }
     }

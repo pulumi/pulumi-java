@@ -76,22 +76,21 @@ public final class GroupMixedInstancesPolicyLaunchTemplateGetArgs extends io.pul
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
-
         public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Output.of(Objects.requireNonNull(launchTemplateSpecification));
             return this;
         }
-
         public Builder overrides(@Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs> overrides) {
             this.overrides = Output.ofNullable(overrides);
             return this;
         }
-        public GroupMixedInstancesPolicyLaunchTemplateGetArgs build() {
+        public Builder overrides(GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs... overrides) {
+            return overrides(List.of(overrides));
+        }        public GroupMixedInstancesPolicyLaunchTemplateGetArgs build() {
             return new GroupMixedInstancesPolicyLaunchTemplateGetArgs(launchTemplateSpecification, overrides);
         }
     }

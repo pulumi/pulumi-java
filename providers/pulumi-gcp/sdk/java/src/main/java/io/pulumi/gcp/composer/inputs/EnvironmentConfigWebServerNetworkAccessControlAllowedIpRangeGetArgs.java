@@ -66,22 +66,18 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeG
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs build() {
+        }        public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs build() {
             return new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs(description, value);
         }
     }

@@ -177,82 +177,66 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             this.elapsedTime = elapsedTime;
             return this;
         }
-
         public Builder elapsedTime(@Nullable DurationArgs elapsedTime) {
             this.elapsedTime = Output.ofNullable(elapsedTime);
             return this;
         }
-
         public Builder errorCount(@Nullable Output<Integer> errorCount) {
             this.errorCount = errorCount;
             return this;
         }
-
         public Builder errorCount(@Nullable Integer errorCount) {
             this.errorCount = Output.ofNullable(errorCount);
             return this;
         }
-
         public Builder failureCount(@Nullable Output<Integer> failureCount) {
             this.failureCount = failureCount;
             return this;
         }
-
         public Builder failureCount(@Nullable Integer failureCount) {
             this.failureCount = Output.ofNullable(failureCount);
             return this;
         }
-
         public Builder flakyCount(@Nullable Output<Integer> flakyCount) {
             this.flakyCount = flakyCount;
             return this;
         }
-
         public Builder flakyCount(@Nullable Integer flakyCount) {
             this.flakyCount = Output.ofNullable(flakyCount);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder skippedCount(@Nullable Output<Integer> skippedCount) {
             this.skippedCount = skippedCount;
             return this;
         }
-
         public Builder skippedCount(@Nullable Integer skippedCount) {
             this.skippedCount = Output.ofNullable(skippedCount);
             return this;
         }
-
         public Builder totalCount(@Nullable Output<Integer> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
-
         public Builder totalCount(@Nullable Integer totalCount) {
             this.totalCount = Output.ofNullable(totalCount);
             return this;
         }
-
         public Builder xmlSource(@Nullable Output<FileReferenceArgs> xmlSource) {
             this.xmlSource = xmlSource;
             return this;
         }
-
         public Builder xmlSource(@Nullable FileReferenceArgs xmlSource) {
             this.xmlSource = Output.ofNullable(xmlSource);
             return this;
-        }
-        public TestSuiteOverviewArgs build() {
+        }        public TestSuiteOverviewArgs build() {
             return new TestSuiteOverviewArgs(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
         }
     }

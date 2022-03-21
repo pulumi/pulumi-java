@@ -189,47 +189,38 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder notAfter(String notAfter) {
             this.notAfter = Objects.requireNonNull(notAfter);
             return this;
         }
-
         public Builder notBefore(String notBefore) {
             this.notBefore = Objects.requireNonNull(notBefore);
             return this;
         }
-
         public Builder rawData(String rawData) {
             this.rawData = Objects.requireNonNull(rawData);
             return this;
         }
-
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public CertificateDetailsResponse build() {
+        }        public CertificateDetailsResponse build() {
             return new CertificateDetailsResponse(issuer, notAfter, notBefore, rawData, serialNumber, signatureAlgorithm, subject, thumbprint, version);
         }
     }

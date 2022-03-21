@@ -53,8 +53,7 @@ public final class FirewallLogConfig {
         public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
-        }
-        public FirewallLogConfig build() {
+        }        public FirewallLogConfig build() {
             return new FirewallLogConfig(metadata);
         }
     }

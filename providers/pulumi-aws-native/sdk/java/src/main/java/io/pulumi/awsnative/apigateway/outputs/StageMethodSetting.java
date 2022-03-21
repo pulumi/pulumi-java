@@ -202,52 +202,42 @@ public final class StageMethodSetting {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
-
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
-
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
-
         public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
-
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
-        }
-        public StageMethodSetting build() {
+        }        public StageMethodSetting build() {
             return new StageMethodSetting(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);
         }
     }

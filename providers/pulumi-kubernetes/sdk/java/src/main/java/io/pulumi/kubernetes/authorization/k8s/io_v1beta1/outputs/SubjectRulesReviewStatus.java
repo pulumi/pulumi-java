@@ -107,22 +107,24 @@ public final class SubjectRulesReviewStatus {
             this.evaluationError = evaluationError;
             return this;
         }
-
         public Builder incomplete(Boolean incomplete) {
             this.incomplete = Objects.requireNonNull(incomplete);
             return this;
         }
-
         public Builder nonResourceRules(List<NonResourceRule> nonResourceRules) {
             this.nonResourceRules = Objects.requireNonNull(nonResourceRules);
             return this;
         }
-
+        public Builder nonResourceRules(NonResourceRule... nonResourceRules) {
+            return nonResourceRules(List.of(nonResourceRules));
+        }
         public Builder resourceRules(List<ResourceRule> resourceRules) {
             this.resourceRules = Objects.requireNonNull(resourceRules);
             return this;
         }
-        public SubjectRulesReviewStatus build() {
+        public Builder resourceRules(ResourceRule... resourceRules) {
+            return resourceRules(List.of(resourceRules));
+        }        public SubjectRulesReviewStatus build() {
             return new SubjectRulesReviewStatus(evaluationError, incomplete, nonResourceRules, resourceRules);
         }
     }

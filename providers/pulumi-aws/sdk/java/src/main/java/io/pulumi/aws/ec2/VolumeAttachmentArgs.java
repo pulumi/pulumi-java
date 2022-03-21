@@ -148,62 +148,50 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder forceDetach(@Nullable Output<Boolean> forceDetach) {
             this.forceDetach = forceDetach;
             return this;
         }
-
         public Builder forceDetach(@Nullable Boolean forceDetach) {
             this.forceDetach = Output.ofNullable(forceDetach);
             return this;
         }
-
         public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
-
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             this.skipDestroy = skipDestroy;
             return this;
         }
-
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
             this.skipDestroy = Output.ofNullable(skipDestroy);
             return this;
         }
-
         public Builder stopInstanceBeforeDetaching(@Nullable Output<Boolean> stopInstanceBeforeDetaching) {
             this.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
             return this;
         }
-
         public Builder stopInstanceBeforeDetaching(@Nullable Boolean stopInstanceBeforeDetaching) {
             this.stopInstanceBeforeDetaching = Output.ofNullable(stopInstanceBeforeDetaching);
             return this;
         }
-
         public Builder volumeId(Output<String> volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
-
         public Builder volumeId(String volumeId) {
             this.volumeId = Output.of(Objects.requireNonNull(volumeId));
             return this;
-        }
-        public VolumeAttachmentArgs build() {
+        }        public VolumeAttachmentArgs build() {
             return new VolumeAttachmentArgs(deviceName, forceDetach, instanceId, skipDestroy, stopInstanceBeforeDetaching, volumeId);
         }
     }

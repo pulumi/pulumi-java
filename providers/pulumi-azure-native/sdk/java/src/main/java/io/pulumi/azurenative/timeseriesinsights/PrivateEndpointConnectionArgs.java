@@ -124,52 +124,45 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
-
         public Builder environmentName(String environmentName) {
             this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
-
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
-
         public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = Output.ofNullable(groupIds);
             return this;
         }
-
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public PrivateEndpointConnectionArgs build() {
+        }        public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(environmentName, groupIds, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName);
         }
     }

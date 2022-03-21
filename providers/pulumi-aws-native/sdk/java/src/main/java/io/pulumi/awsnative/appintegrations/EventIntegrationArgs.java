@@ -125,52 +125,45 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder eventBridgeBus(Output<String> eventBridgeBus) {
             this.eventBridgeBus = Objects.requireNonNull(eventBridgeBus);
             return this;
         }
-
         public Builder eventBridgeBus(String eventBridgeBus) {
             this.eventBridgeBus = Output.of(Objects.requireNonNull(eventBridgeBus));
             return this;
         }
-
         public Builder eventFilter(Output<EventIntegrationEventFilterArgs> eventFilter) {
             this.eventFilter = Objects.requireNonNull(eventFilter);
             return this;
         }
-
         public Builder eventFilter(EventIntegrationEventFilterArgs eventFilter) {
             this.eventFilter = Output.of(Objects.requireNonNull(eventFilter));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<EventIntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<EventIntegrationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public EventIntegrationArgs build() {
+        public Builder tags(EventIntegrationTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public EventIntegrationArgs build() {
             return new EventIntegrationArgs(description, eventBridgeBus, eventFilter, name, tags);
         }
     }

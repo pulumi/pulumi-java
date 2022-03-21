@@ -158,32 +158,26 @@ public final class DatasetAccess {
             this.domain = domain;
             return this;
         }
-
         public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
-
         public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
-
         public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
-
         public Builder view(@Nullable DatasetAccessView view) {
             this.view = view;
             return this;
-        }
-        public DatasetAccess build() {
+        }        public DatasetAccess build() {
             return new DatasetAccess(domain, groupByEmail, role, specialGroup, userByEmail, view);
         }
     }

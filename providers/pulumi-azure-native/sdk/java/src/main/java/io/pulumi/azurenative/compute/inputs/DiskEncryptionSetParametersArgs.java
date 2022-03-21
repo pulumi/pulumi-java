@@ -61,12 +61,10 @@ public final class DiskEncryptionSetParametersArgs extends io.pulumi.resources.R
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public DiskEncryptionSetParametersArgs build() {
+        }        public DiskEncryptionSetParametersArgs build() {
             return new DiskEncryptionSetParametersArgs(id);
         }
     }

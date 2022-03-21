@@ -94,17 +94,14 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
             this.minimumVersion = minimumVersion;
             return this;
         }
-
         public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
-        }
-        public AccessLevelBasicConditionDevicePolicyOsConstraint build() {
+        }        public AccessLevelBasicConditionDevicePolicyOsConstraint build() {
             return new AccessLevelBasicConditionDevicePolicyOsConstraint(minimumVersion, osType, requireVerifiedChromeOs);
         }
     }

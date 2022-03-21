@@ -109,42 +109,34 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable JobActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder recurrence(@Nullable Output<JobRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
-
         public Builder recurrence(@Nullable JobRecurrenceArgs recurrence) {
             this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder state(@Nullable Output<JobState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable JobState state) {
             this.state = Output.ofNullable(state);
             return this;
-        }
-        public JobPropertiesArgs build() {
+        }        public JobPropertiesArgs build() {
             return new JobPropertiesArgs(action, recurrence, startTime, state);
         }
     }

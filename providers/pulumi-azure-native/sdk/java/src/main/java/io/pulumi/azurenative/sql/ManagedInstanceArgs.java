@@ -510,282 +510,226 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
             this.administratorLogin = administratorLogin;
             return this;
         }
-
         public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = Output.ofNullable(administratorLogin);
             return this;
         }
-
         public Builder administratorLoginPassword(@Nullable Output<String> administratorLoginPassword) {
             this.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
-
         public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
             this.administratorLoginPassword = Output.ofNullable(administratorLoginPassword);
             return this;
         }
-
         public Builder administrators(@Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators) {
             this.administrators = administrators;
             return this;
         }
-
         public Builder administrators(@Nullable ManagedInstanceExternalAdministratorArgs administrators) {
             this.administrators = Output.ofNullable(administrators);
             return this;
         }
-
         public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder dnsZonePartner(@Nullable Output<String> dnsZonePartner) {
             this.dnsZonePartner = dnsZonePartner;
             return this;
         }
-
         public Builder dnsZonePartner(@Nullable String dnsZonePartner) {
             this.dnsZonePartner = Output.ofNullable(dnsZonePartner);
             return this;
         }
-
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder instancePoolId(@Nullable Output<String> instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
-
         public Builder instancePoolId(@Nullable String instancePoolId) {
             this.instancePoolId = Output.ofNullable(instancePoolId);
             return this;
         }
-
         public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
-
         public Builder keyId(@Nullable String keyId) {
             this.keyId = Output.ofNullable(keyId);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable Either<String,ManagedInstanceLicenseType> licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
-
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
-
         public Builder managedInstanceCreateMode(@Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode) {
             this.managedInstanceCreateMode = managedInstanceCreateMode;
             return this;
         }
-
         public Builder managedInstanceCreateMode(@Nullable Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
             this.managedInstanceCreateMode = Output.ofNullable(managedInstanceCreateMode);
             return this;
         }
-
         public Builder managedInstanceName(@Nullable Output<String> managedInstanceName) {
             this.managedInstanceName = managedInstanceName;
             return this;
         }
-
         public Builder managedInstanceName(@Nullable String managedInstanceName) {
             this.managedInstanceName = Output.ofNullable(managedInstanceName);
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable Output<String> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
-
         public Builder primaryUserAssignedIdentityId(@Nullable Output<String> primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
-
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = Output.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
-
         public Builder proxyOverride(@Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride) {
             this.proxyOverride = proxyOverride;
             return this;
         }
-
         public Builder proxyOverride(@Nullable Either<String,ManagedInstanceProxyOverride> proxyOverride) {
             this.proxyOverride = Output.ofNullable(proxyOverride);
             return this;
         }
-
         public Builder publicDataEndpointEnabled(@Nullable Output<Boolean> publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = publicDataEndpointEnabled;
             return this;
         }
-
         public Builder publicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = Output.ofNullable(publicDataEndpointEnabled);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
-
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder sourceManagedInstanceId(@Nullable Output<String> sourceManagedInstanceId) {
             this.sourceManagedInstanceId = sourceManagedInstanceId;
             return this;
         }
-
         public Builder sourceManagedInstanceId(@Nullable String sourceManagedInstanceId) {
             this.sourceManagedInstanceId = Output.ofNullable(sourceManagedInstanceId);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
-
         public Builder storageSizeInGB(@Nullable Output<Integer> storageSizeInGB) {
             this.storageSizeInGB = storageSizeInGB;
             return this;
         }
-
         public Builder storageSizeInGB(@Nullable Integer storageSizeInGB) {
             this.storageSizeInGB = Output.ofNullable(storageSizeInGB);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder timezoneId(@Nullable Output<String> timezoneId) {
             this.timezoneId = timezoneId;
             return this;
         }
-
         public Builder timezoneId(@Nullable String timezoneId) {
             this.timezoneId = Output.ofNullable(timezoneId);
             return this;
         }
-
         public Builder vCores(@Nullable Output<Integer> vCores) {
             this.vCores = vCores;
             return this;
         }
-
         public Builder vCores(@Nullable Integer vCores) {
             this.vCores = Output.ofNullable(vCores);
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
-        }
-        public ManagedInstanceArgs build() {
+        }        public ManagedInstanceArgs build() {
             return new ManagedInstanceArgs(administratorLogin, administratorLoginPassword, administrators, collation, dnsZonePartner, identity, instancePoolId, keyId, licenseType, location, maintenanceConfigurationId, managedInstanceCreateMode, managedInstanceName, minimalTlsVersion, primaryUserAssignedIdentityId, proxyOverride, publicDataEndpointEnabled, resourceGroupName, restorePointInTime, sku, sourceManagedInstanceId, storageAccountType, storageSizeInGB, subnetId, tags, timezoneId, vCores, zoneRedundant);
         }
     }

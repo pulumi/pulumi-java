@@ -76,12 +76,10 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
-        }
-        public StatusResponse build() {
+        }        public StatusResponse build() {
             return new StatusResponse(code, description);
         }
     }

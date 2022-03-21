@@ -88,17 +88,14 @@ public final class VirtualNetworkRuleResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public VirtualNetworkRuleResponse build() {
+        }        public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, ignoreMissingVnetServiceEndpoint, state);
         }
     }

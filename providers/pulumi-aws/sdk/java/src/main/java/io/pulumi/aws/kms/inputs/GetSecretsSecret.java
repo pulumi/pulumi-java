@@ -108,22 +108,21 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
             this.context = context;
             return this;
         }
-
         public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
-
+        public Builder grantTokens(String... grantTokens) {
+            return grantTokens(List.of(grantTokens));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
-        }
-        public GetSecretsSecret build() {
+        }        public GetSecretsSecret build() {
             return new GetSecretsSecret(context, grantTokens, name, payload);
         }
     }

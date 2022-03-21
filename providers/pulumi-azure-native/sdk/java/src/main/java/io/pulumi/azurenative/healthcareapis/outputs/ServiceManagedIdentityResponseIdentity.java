@@ -53,8 +53,7 @@ public final class ServiceManagedIdentityResponseIdentity {
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ServiceManagedIdentityResponseIdentity build() {
+        }        public ServiceManagedIdentityResponseIdentity build() {
             return new ServiceManagedIdentityResponseIdentity(type);
         }
     }

@@ -45,8 +45,7 @@ public final class WebACLCountAction {
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
-        }
-        public WebACLCountAction build() {
+        }        public WebACLCountAction build() {
             return new WebACLCountAction(customRequestHandling);
         }
     }

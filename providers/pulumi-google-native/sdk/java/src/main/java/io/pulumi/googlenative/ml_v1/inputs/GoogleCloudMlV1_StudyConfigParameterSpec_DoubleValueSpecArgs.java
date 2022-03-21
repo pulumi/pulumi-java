@@ -74,22 +74,18 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
             this.maxValue = maxValue;
             return this;
         }
-
         public Builder maxValue(@Nullable Double maxValue) {
             this.maxValue = Output.ofNullable(maxValue);
             return this;
         }
-
         public Builder minValue(@Nullable Output<Double> minValue) {
             this.minValue = minValue;
             return this;
         }
-
         public Builder minValue(@Nullable Double minValue) {
             this.minValue = Output.ofNullable(minValue);
             return this;
-        }
-        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs build() {
+        }        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs build() {
             return new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs(maxValue, minValue);
         }
     }

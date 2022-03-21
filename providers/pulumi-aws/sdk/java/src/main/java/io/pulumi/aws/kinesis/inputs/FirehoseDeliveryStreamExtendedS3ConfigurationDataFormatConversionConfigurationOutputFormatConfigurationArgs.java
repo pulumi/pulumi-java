@@ -56,12 +56,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             this.serializer = Objects.requireNonNull(serializer);
             return this;
         }
-
         public Builder serializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs serializer) {
             this.serializer = Output.of(Objects.requireNonNull(serializer));
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs(serializer);
         }
     }

@@ -80,32 +80,26 @@ public final class ClusterLoggingInfoBrokerLogsGetArgs extends io.pulumi.resourc
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
-
         public Builder cloudwatchLogs(@Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs cloudwatchLogs) {
             this.cloudwatchLogs = Output.ofNullable(cloudwatchLogs);
             return this;
         }
-
         public Builder firehose(@Nullable Output<ClusterLoggingInfoBrokerLogsFirehoseGetArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
-
         public Builder firehose(@Nullable ClusterLoggingInfoBrokerLogsFirehoseGetArgs firehose) {
             this.firehose = Output.ofNullable(firehose);
             return this;
         }
-
         public Builder s3(@Nullable Output<ClusterLoggingInfoBrokerLogsS3GetArgs> s3) {
             this.s3 = s3;
             return this;
         }
-
         public Builder s3(@Nullable ClusterLoggingInfoBrokerLogsS3GetArgs s3) {
             this.s3 = Output.ofNullable(s3);
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsGetArgs build() {
+        }        public ClusterLoggingInfoBrokerLogsGetArgs build() {
             return new ClusterLoggingInfoBrokerLogsGetArgs(cloudwatchLogs, firehose, s3);
         }
     }

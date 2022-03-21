@@ -78,32 +78,26 @@ public final class SigningJobRevocationRecordArgs extends io.pulumi.resources.Re
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder revokedAt(@Nullable Output<String> revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
-
         public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = Output.ofNullable(revokedAt);
             return this;
         }
-
         public Builder revokedBy(@Nullable Output<String> revokedBy) {
             this.revokedBy = revokedBy;
             return this;
         }
-
         public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = Output.ofNullable(revokedBy);
             return this;
-        }
-        public SigningJobRevocationRecordArgs build() {
+        }        public SigningJobRevocationRecordArgs build() {
             return new SigningJobRevocationRecordArgs(reason, revokedAt, revokedBy);
         }
     }

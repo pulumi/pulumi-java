@@ -61,12 +61,13 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs extends
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(List<String> text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
-        public GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs build() {
+        public Builder text(String... text) {
+            return text(List.of(text));
+        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs(text);
         }
     }

@@ -75,22 +75,18 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
         }
-
         public Builder wildcardMatch(@Nullable Output<Boolean> wildcardMatch) {
             this.wildcardMatch = wildcardMatch;
             return this;
         }
-
         public Builder wildcardMatch(@Nullable Boolean wildcardMatch) {
             this.wildcardMatch = Output.ofNullable(wildcardMatch);
             return this;
-        }
-        public GoogleCloudApigeeV1TlsInfoCommonNameArgs build() {
+        }        public GoogleCloudApigeeV1TlsInfoCommonNameArgs build() {
             return new GoogleCloudApigeeV1TlsInfoCommonNameArgs(value, wildcardMatch);
         }
     }

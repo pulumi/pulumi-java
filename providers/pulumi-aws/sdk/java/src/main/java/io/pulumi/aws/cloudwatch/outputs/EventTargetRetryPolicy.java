@@ -71,12 +71,10 @@ public final class EventTargetRetryPolicy {
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
-
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
-        }
-        public EventTargetRetryPolicy build() {
+        }        public EventTargetRetryPolicy build() {
             return new EventTargetRetryPolicy(maximumEventAgeInSeconds, maximumRetryAttempts);
         }
     }

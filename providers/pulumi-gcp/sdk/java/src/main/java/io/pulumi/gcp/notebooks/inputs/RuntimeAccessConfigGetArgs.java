@@ -94,32 +94,26 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
             this.accessType = accessType;
             return this;
         }
-
         public Builder accessType(@Nullable String accessType) {
             this.accessType = Output.ofNullable(accessType);
             return this;
         }
-
         public Builder proxyUri(@Nullable Output<String> proxyUri) {
             this.proxyUri = proxyUri;
             return this;
         }
-
         public Builder proxyUri(@Nullable String proxyUri) {
             this.proxyUri = Output.ofNullable(proxyUri);
             return this;
         }
-
         public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
         }
-
         public Builder runtimeOwner(@Nullable String runtimeOwner) {
             this.runtimeOwner = Output.ofNullable(runtimeOwner);
             return this;
-        }
-        public RuntimeAccessConfigGetArgs build() {
+        }        public RuntimeAccessConfigGetArgs build() {
             return new RuntimeAccessConfigGetArgs(accessType, proxyUri, runtimeOwner);
         }
     }

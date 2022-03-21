@@ -183,72 +183,61 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
             this.corsPolicy = corsPolicy;
             return this;
         }
-
         public Builder corsPolicy(@Nullable URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs corsPolicy) {
             this.corsPolicy = Output.ofNullable(corsPolicy);
             return this;
         }
-
         public Builder faultInjectionPolicy(@Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
-
         public Builder faultInjectionPolicy(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs faultInjectionPolicy) {
             this.faultInjectionPolicy = Output.ofNullable(faultInjectionPolicy);
             return this;
         }
-
         public Builder requestMirrorPolicy(@Nullable Output<URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
-
         public Builder requestMirrorPolicy(@Nullable URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs requestMirrorPolicy) {
             this.requestMirrorPolicy = Output.ofNullable(requestMirrorPolicy);
             return this;
         }
-
         public Builder retryPolicy(@Nullable Output<URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder timeout(@Nullable Output<URLMapPathMatcherDefaultRouteActionTimeoutGetArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable URLMapPathMatcherDefaultRouteActionTimeoutGetArgs timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder urlRewrite(@Nullable Output<URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs> urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
-
         public Builder urlRewrite(@Nullable URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs urlRewrite) {
             this.urlRewrite = Output.ofNullable(urlRewrite);
             return this;
         }
-
         public Builder weightedBackendServices(@Nullable Output<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-
         public Builder weightedBackendServices(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs> weightedBackendServices) {
             this.weightedBackendServices = Output.ofNullable(weightedBackendServices);
             return this;
         }
-        public URLMapPathMatcherDefaultRouteActionGetArgs build() {
+        public Builder weightedBackendServices(URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs... weightedBackendServices) {
+            return weightedBackendServices(List.of(weightedBackendServices));
+        }        public URLMapPathMatcherDefaultRouteActionGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionGetArgs(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }
     }

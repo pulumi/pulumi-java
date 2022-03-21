@@ -78,22 +78,18 @@ public final class SoftwareRecipeArtifactRemoteArgs extends io.pulumi.resources.
             this.checksum = checksum;
             return this;
         }
-
         public Builder checksum(@Nullable String checksum) {
             this.checksum = Output.ofNullable(checksum);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public SoftwareRecipeArtifactRemoteArgs build() {
+        }        public SoftwareRecipeArtifactRemoteArgs build() {
             return new SoftwareRecipeArtifactRemoteArgs(checksum, uri);
         }
     }

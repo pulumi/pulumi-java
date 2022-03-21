@@ -119,27 +119,22 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
             this.autoHealingTriggers = Objects.requireNonNull(autoHealingTriggers);
             return this;
         }
-
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
-
         public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
-
         public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public Builder updateInstances(String updateInstances) {
             this.updateInstances = Objects.requireNonNull(updateInstances);
             return this;
-        }
-        public InstanceGroupManagerAutoHealingPolicyResponse build() {
+        }        public InstanceGroupManagerAutoHealingPolicyResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyResponse(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);
         }
     }

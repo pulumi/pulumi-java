@@ -75,22 +75,21 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
             this.linkingMode = linkingMode;
             return this;
         }
-
         public Builder linkingMode(@Nullable String linkingMode) {
             this.linkingMode = Output.ofNullable(linkingMode);
             return this;
         }
-
         public Builder specifiedRegions(@Nullable Output<List<String>> specifiedRegions) {
             this.specifiedRegions = specifiedRegions;
             return this;
         }
-
         public Builder specifiedRegions(@Nullable List<String> specifiedRegions) {
             this.specifiedRegions = Output.ofNullable(specifiedRegions);
             return this;
         }
-        public FindingAggregatorState build() {
+        public Builder specifiedRegions(String... specifiedRegions) {
+            return specifiedRegions(List.of(specifiedRegions));
+        }        public FindingAggregatorState build() {
             return new FindingAggregatorState(linkingMode, specifiedRegions);
         }
     }

@@ -104,22 +104,18 @@ public final class OSPolicyResourceResponse {
             this.exec = Objects.requireNonNull(exec);
             return this;
         }
-
         public Builder file(OSPolicyResourceFileResourceResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder pkg(OSPolicyResourcePackageResourceResponse pkg) {
             this.pkg = Objects.requireNonNull(pkg);
             return this;
         }
-
         public Builder repository(OSPolicyResourceRepositoryResourceResponse repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
-        }
-        public OSPolicyResourceResponse build() {
+        }        public OSPolicyResourceResponse build() {
             return new OSPolicyResourceResponse(exec, file, pkg, repository);
         }
     }

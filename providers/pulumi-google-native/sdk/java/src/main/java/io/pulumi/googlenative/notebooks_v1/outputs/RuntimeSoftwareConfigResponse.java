@@ -169,42 +169,37 @@ public final class RuntimeSoftwareConfigResponse {
             this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
             return this;
         }
-
         public Builder enableHealthMonitoring(Boolean enableHealthMonitoring) {
             this.enableHealthMonitoring = Objects.requireNonNull(enableHealthMonitoring);
             return this;
         }
-
         public Builder idleShutdown(Boolean idleShutdown) {
             this.idleShutdown = Objects.requireNonNull(idleShutdown);
             return this;
         }
-
         public Builder idleShutdownTimeout(Integer idleShutdownTimeout) {
             this.idleShutdownTimeout = Objects.requireNonNull(idleShutdownTimeout);
             return this;
         }
-
         public Builder installGpuDriver(Boolean installGpuDriver) {
             this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
             return this;
         }
-
         public Builder kernels(List<ContainerImageResponse> kernels) {
             this.kernels = Objects.requireNonNull(kernels);
             return this;
         }
-
+        public Builder kernels(ContainerImageResponse... kernels) {
+            return kernels(List.of(kernels));
+        }
         public Builder notebookUpgradeSchedule(String notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = Objects.requireNonNull(notebookUpgradeSchedule);
             return this;
         }
-
         public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
-        }
-        public RuntimeSoftwareConfigResponse build() {
+        }        public RuntimeSoftwareConfigResponse build() {
             return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
         }
     }

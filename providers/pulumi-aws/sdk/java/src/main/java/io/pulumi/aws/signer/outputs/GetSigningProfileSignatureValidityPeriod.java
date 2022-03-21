@@ -54,12 +54,10 @@ public final class GetSigningProfileSignatureValidityPeriod {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GetSigningProfileSignatureValidityPeriod build() {
+        }        public GetSigningProfileSignatureValidityPeriod build() {
             return new GetSigningProfileSignatureValidityPeriod(type, value);
         }
     }

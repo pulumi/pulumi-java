@@ -122,52 +122,42 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
             this.assumeRole = assumeRole;
             return this;
         }
-
         public Builder assumeRole(@Nullable String assumeRole) {
             this.assumeRole = Output.ofNullable(assumeRole);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Output.of(Objects.requireNonNull(version));
             return this;
-        }
-        public ServiceActionDefinitionArgs build() {
+        }        public ServiceActionDefinitionArgs build() {
             return new ServiceActionDefinitionArgs(assumeRole, name, parameters, type, version);
         }
     }

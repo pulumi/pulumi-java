@@ -250,132 +250,112 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
-
         public Builder excludeFilters(@Nullable List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
             this.excludeFilters = Output.ofNullable(excludeFilters);
             return this;
         }
-
+        public Builder excludeFilters(MetricStreamExcludeFilterGetArgs... excludeFilters) {
+            return excludeFilters(List.of(excludeFilters));
+        }
         public Builder firehoseArn(@Nullable Output<String> firehoseArn) {
             this.firehoseArn = firehoseArn;
             return this;
         }
-
         public Builder firehoseArn(@Nullable String firehoseArn) {
             this.firehoseArn = Output.ofNullable(firehoseArn);
             return this;
         }
-
         public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
-
         public Builder includeFilters(@Nullable List<MetricStreamIncludeFilterGetArgs> includeFilters) {
             this.includeFilters = Output.ofNullable(includeFilters);
             return this;
         }
-
+        public Builder includeFilters(MetricStreamIncludeFilterGetArgs... includeFilters) {
+            return includeFilters(List.of(includeFilters));
+        }
         public Builder lastUpdateDate(@Nullable Output<String> lastUpdateDate) {
             this.lastUpdateDate = lastUpdateDate;
             return this;
         }
-
         public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
             this.lastUpdateDate = Output.ofNullable(lastUpdateDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
-
         public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
-
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
-
         public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public MetricStreamState build() {
+        }        public MetricStreamState build() {
             return new MetricStreamState(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, name, namePrefix, outputFormat, roleArn, state, tags, tagsAll);
         }
     }

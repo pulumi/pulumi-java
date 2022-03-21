@@ -103,22 +103,18 @@ public final class ChannelIngestEndpoint {
             this.id = id;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ChannelIngestEndpoint build() {
+        }        public ChannelIngestEndpoint build() {
             return new ChannelIngestEndpoint(id, password, url, username);
         }
     }

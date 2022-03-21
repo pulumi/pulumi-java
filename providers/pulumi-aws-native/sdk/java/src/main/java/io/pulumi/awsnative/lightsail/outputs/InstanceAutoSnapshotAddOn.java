@@ -53,8 +53,7 @@ public final class InstanceAutoSnapshotAddOn {
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
-        }
-        public InstanceAutoSnapshotAddOn build() {
+        }        public InstanceAutoSnapshotAddOn build() {
             return new InstanceAutoSnapshotAddOn(snapshotTimeOfDay);
         }
     }

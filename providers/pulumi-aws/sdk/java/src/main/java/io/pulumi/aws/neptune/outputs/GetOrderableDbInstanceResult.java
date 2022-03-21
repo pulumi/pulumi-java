@@ -347,112 +347,96 @@ public final class GetOrderableDbInstanceResult {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceClass(String instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder maxIopsPerDbInstance(Integer maxIopsPerDbInstance) {
             this.maxIopsPerDbInstance = Objects.requireNonNull(maxIopsPerDbInstance);
             return this;
         }
-
         public Builder maxIopsPerGib(Double maxIopsPerGib) {
             this.maxIopsPerGib = Objects.requireNonNull(maxIopsPerGib);
             return this;
         }
-
         public Builder maxStorageSize(Integer maxStorageSize) {
             this.maxStorageSize = Objects.requireNonNull(maxStorageSize);
             return this;
         }
-
         public Builder minIopsPerDbInstance(Integer minIopsPerDbInstance) {
             this.minIopsPerDbInstance = Objects.requireNonNull(minIopsPerDbInstance);
             return this;
         }
-
         public Builder minIopsPerGib(Double minIopsPerGib) {
             this.minIopsPerGib = Objects.requireNonNull(minIopsPerGib);
             return this;
         }
-
         public Builder minStorageSize(Integer minStorageSize) {
             this.minStorageSize = Objects.requireNonNull(minStorageSize);
             return this;
         }
-
         public Builder multiAzCapable(Boolean multiAzCapable) {
             this.multiAzCapable = Objects.requireNonNull(multiAzCapable);
             return this;
         }
-
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
-
+        public Builder preferredInstanceClasses(String... preferredInstanceClasses) {
+            return preferredInstanceClasses(List.of(preferredInstanceClasses));
+        }
         public Builder readReplicaCapable(Boolean readReplicaCapable) {
             this.readReplicaCapable = Objects.requireNonNull(readReplicaCapable);
             return this;
         }
-
         public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public Builder supportsEnhancedMonitoring(Boolean supportsEnhancedMonitoring) {
             this.supportsEnhancedMonitoring = Objects.requireNonNull(supportsEnhancedMonitoring);
             return this;
         }
-
         public Builder supportsIamDatabaseAuthentication(Boolean supportsIamDatabaseAuthentication) {
             this.supportsIamDatabaseAuthentication = Objects.requireNonNull(supportsIamDatabaseAuthentication);
             return this;
         }
-
         public Builder supportsIops(Boolean supportsIops) {
             this.supportsIops = Objects.requireNonNull(supportsIops);
             return this;
         }
-
         public Builder supportsPerformanceInsights(Boolean supportsPerformanceInsights) {
             this.supportsPerformanceInsights = Objects.requireNonNull(supportsPerformanceInsights);
             return this;
         }
-
         public Builder supportsStorageEncryption(Boolean supportsStorageEncryption) {
             this.supportsStorageEncryption = Objects.requireNonNull(supportsStorageEncryption);
             return this;
         }
-
         public Builder vpc(Boolean vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
-        }
-        public GetOrderableDbInstanceResult build() {
+        }        public GetOrderableDbInstanceResult build() {
             return new GetOrderableDbInstanceResult(availabilityZones, engine, engineVersion, id, instanceClass, licenseModel, maxIopsPerDbInstance, maxIopsPerGib, maxStorageSize, minIopsPerDbInstance, minIopsPerGib, minStorageSize, multiAzCapable, preferredInstanceClasses, readReplicaCapable, storageType, supportsEnhancedMonitoring, supportsIamDatabaseAuthentication, supportsIops, supportsPerformanceInsights, supportsStorageEncryption, vpc);
         }
     }

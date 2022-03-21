@@ -88,17 +88,14 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
             this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder transactionNodeName(String transactionNodeName) {
             this.transactionNodeName = Objects.requireNonNull(transactionNodeName);
             return this;
-        }
-        public GetTransactionNodeArgs build() {
+        }        public GetTransactionNodeArgs build() {
             return new GetTransactionNodeArgs(blockchainMemberName, resourceGroupName, transactionNodeName);
         }
     }

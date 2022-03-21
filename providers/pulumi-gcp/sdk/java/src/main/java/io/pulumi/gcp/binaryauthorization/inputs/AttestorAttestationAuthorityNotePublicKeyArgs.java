@@ -125,42 +125,34 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
             this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
-
         public Builder asciiArmoredPgpPublicKey(@Nullable String asciiArmoredPgpPublicKey) {
             this.asciiArmoredPgpPublicKey = Output.ofNullable(asciiArmoredPgpPublicKey);
             return this;
         }
-
         public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder pkixPublicKey(@Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> pkixPublicKey) {
             this.pkixPublicKey = pkixPublicKey;
             return this;
         }
-
         public Builder pkixPublicKey(@Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs pkixPublicKey) {
             this.pkixPublicKey = Output.ofNullable(pkixPublicKey);
             return this;
-        }
-        public AttestorAttestationAuthorityNotePublicKeyArgs build() {
+        }        public AttestorAttestationAuthorityNotePublicKeyArgs build() {
             return new AttestorAttestationAuthorityNotePublicKeyArgs(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);
         }
     }

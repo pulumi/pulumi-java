@@ -69,12 +69,10 @@ public final class GetKeyRingResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetKeyRingResult build() {
+        }        public GetKeyRingResult build() {
             return new GetKeyRingResult(createTime, name);
         }
     }

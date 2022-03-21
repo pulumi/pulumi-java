@@ -131,37 +131,30 @@ public final class GetBackupRunResult {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public GetBackupRunResult build() {
+        }        public GetBackupRunResult build() {
             return new GetBackupRunResult(backupId, id, instance, location, mostRecent, startTime, status);
         }
     }

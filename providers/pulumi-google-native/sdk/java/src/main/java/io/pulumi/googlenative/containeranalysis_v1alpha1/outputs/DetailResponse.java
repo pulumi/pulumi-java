@@ -216,57 +216,46 @@ public final class DetailResponse {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder fixedLocation(VulnerabilityLocationResponse fixedLocation) {
             this.fixedLocation = Objects.requireNonNull(fixedLocation);
             return this;
         }
-
         public Builder isObsolete(Boolean isObsolete) {
             this.isObsolete = Objects.requireNonNull(isObsolete);
             return this;
         }
-
         public Builder maxAffectedVersion(VersionResponse maxAffectedVersion) {
             this.maxAffectedVersion = Objects.requireNonNull(maxAffectedVersion);
             return this;
         }
-
         public Builder minAffectedVersion(VersionResponse minAffectedVersion) {
             this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion);
             return this;
         }
-
         public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
-
         public Builder severityName(String severityName) {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder vendor(String vendor) {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
-        }
-        public DetailResponse build() {
+        }        public DetailResponse build() {
             return new DetailResponse(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, vendor);
         }
     }

@@ -58,8 +58,7 @@ public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
         public Builder shell(String shell) {
             this.shell = Objects.requireNonNull(shell);
             return this;
-        }
-        public EntrypointResponse build() {
+        }        public EntrypointResponse build() {
             return new EntrypointResponse(shell);
         }
     }

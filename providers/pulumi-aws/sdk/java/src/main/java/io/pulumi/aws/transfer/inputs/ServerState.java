@@ -353,192 +353,157 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
-
         public Builder certificate(@Nullable String certificate) {
             this.certificate = Output.ofNullable(certificate);
             return this;
         }
-
         public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
-
         public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
-
         public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = Output.ofNullable(domain);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder endpointDetails(@Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails) {
             this.endpointDetails = endpointDetails;
             return this;
         }
-
         public Builder endpointDetails(@Nullable ServerEndpointDetailsGetArgs endpointDetails) {
             this.endpointDetails = Output.ofNullable(endpointDetails);
             return this;
         }
-
         public Builder endpointType(@Nullable Output<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
-
         public Builder function(@Nullable String function) {
             this.function = Output.ofNullable(function);
             return this;
         }
-
         public Builder hostKey(@Nullable Output<String> hostKey) {
             this.hostKey = hostKey;
             return this;
         }
-
         public Builder hostKey(@Nullable String hostKey) {
             this.hostKey = Output.ofNullable(hostKey);
             return this;
         }
-
         public Builder hostKeyFingerprint(@Nullable Output<String> hostKeyFingerprint) {
             this.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
-
         public Builder hostKeyFingerprint(@Nullable String hostKeyFingerprint) {
             this.hostKeyFingerprint = Output.ofNullable(hostKeyFingerprint);
             return this;
         }
-
         public Builder identityProviderType(@Nullable Output<String> identityProviderType) {
             this.identityProviderType = identityProviderType;
             return this;
         }
-
         public Builder identityProviderType(@Nullable String identityProviderType) {
             this.identityProviderType = Output.ofNullable(identityProviderType);
             return this;
         }
-
         public Builder invocationRole(@Nullable Output<String> invocationRole) {
             this.invocationRole = invocationRole;
             return this;
         }
-
         public Builder invocationRole(@Nullable String invocationRole) {
             this.invocationRole = Output.ofNullable(invocationRole);
             return this;
         }
-
         public Builder loggingRole(@Nullable Output<String> loggingRole) {
             this.loggingRole = loggingRole;
             return this;
         }
-
         public Builder loggingRole(@Nullable String loggingRole) {
             this.loggingRole = Output.ofNullable(loggingRole);
             return this;
         }
-
         public Builder protocols(@Nullable Output<List<String>> protocols) {
             this.protocols = protocols;
             return this;
         }
-
         public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = Output.ofNullable(protocols);
             return this;
         }
-
+        public Builder protocols(String... protocols) {
+            return protocols(List.of(protocols));
+        }
         public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
             this.securityPolicyName = securityPolicyName;
             return this;
         }
-
         public Builder securityPolicyName(@Nullable String securityPolicyName) {
             this.securityPolicyName = Output.ofNullable(securityPolicyName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ServerState build() {
+        }        public ServerState build() {
             return new ServerState(arn, certificate, directoryId, domain, endpoint, endpointDetails, endpointType, forceDestroy, function, hostKey, hostKeyFingerprint, identityProviderType, invocationRole, loggingRole, protocols, securityPolicyName, tags, tagsAll, url);
         }
     }

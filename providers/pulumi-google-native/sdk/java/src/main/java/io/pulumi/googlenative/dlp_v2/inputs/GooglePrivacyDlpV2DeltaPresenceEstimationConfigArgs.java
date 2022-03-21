@@ -97,32 +97,32 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs extends i
             this.auxiliaryTables = auxiliaryTables;
             return this;
         }
-
         public Builder auxiliaryTables(@Nullable List<GooglePrivacyDlpV2StatisticalTableArgs> auxiliaryTables) {
             this.auxiliaryTables = Output.ofNullable(auxiliaryTables);
             return this;
         }
-
+        public Builder auxiliaryTables(GooglePrivacyDlpV2StatisticalTableArgs... auxiliaryTables) {
+            return auxiliaryTables(List.of(auxiliaryTables));
+        }
         public Builder quasiIds(Output<List<GooglePrivacyDlpV2QuasiIdArgs>> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
-
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdArgs> quasiIds) {
             this.quasiIds = Output.of(Objects.requireNonNull(quasiIds));
             return this;
         }
-
+        public Builder quasiIds(GooglePrivacyDlpV2QuasiIdArgs... quasiIds) {
+            return quasiIds(List.of(quasiIds));
+        }
         public Builder regionCode(@Nullable Output<String> regionCode) {
             this.regionCode = regionCode;
             return this;
         }
-
         public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = Output.ofNullable(regionCode);
             return this;
-        }
-        public GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs build() {
+        }        public GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs(auxiliaryTables, quasiIds, regionCode);
         }
     }

@@ -72,12 +72,10 @@ public final class GetAzureFirewallArgs extends io.pulumi.resources.InvokeArgs {
             this.azureFirewallName = Objects.requireNonNull(azureFirewallName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAzureFirewallArgs build() {
+        }        public GetAzureFirewallArgs build() {
             return new GetAzureFirewallArgs(azureFirewallName, resourceGroupName);
         }
     }

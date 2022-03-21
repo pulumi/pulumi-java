@@ -60,12 +60,10 @@ public final class DataQualityJobDefinitionStoppingConditionArgs extends io.pulu
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
             return this;
-        }
-        public DataQualityJobDefinitionStoppingConditionArgs build() {
+        }        public DataQualityJobDefinitionStoppingConditionArgs build() {
             return new DataQualityJobDefinitionStoppingConditionArgs(maxRuntimeInSeconds);
         }
     }

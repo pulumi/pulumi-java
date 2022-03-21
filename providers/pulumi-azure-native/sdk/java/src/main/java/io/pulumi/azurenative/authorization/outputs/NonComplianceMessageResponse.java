@@ -71,12 +71,10 @@ public final class NonComplianceMessageResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
-        }
-        public NonComplianceMessageResponse build() {
+        }        public NonComplianceMessageResponse build() {
             return new NonComplianceMessageResponse(message, policyDefinitionReferenceId);
         }
     }

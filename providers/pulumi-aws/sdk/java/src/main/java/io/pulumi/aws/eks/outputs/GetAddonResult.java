@@ -160,47 +160,38 @@ public final class GetAddonResult {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
-
         public Builder addonVersion(String addonVersion) {
             this.addonVersion = Objects.requireNonNull(addonVersion);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder modifiedAt(String modifiedAt) {
             this.modifiedAt = Objects.requireNonNull(modifiedAt);
             return this;
         }
-
         public Builder serviceAccountRoleArn(String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = Objects.requireNonNull(serviceAccountRoleArn);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetAddonResult build() {
+        }        public GetAddonResult build() {
             return new GetAddonResult(addonName, addonVersion, arn, clusterName, createdAt, id, modifiedAt, serviceAccountRoleArn, tags);
         }
     }

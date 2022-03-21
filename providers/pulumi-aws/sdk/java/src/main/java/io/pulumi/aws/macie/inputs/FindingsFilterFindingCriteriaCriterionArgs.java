@@ -171,82 +171,75 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
             this.eqExactMatches = eqExactMatches;
             return this;
         }
-
         public Builder eqExactMatches(@Nullable List<String> eqExactMatches) {
             this.eqExactMatches = Output.ofNullable(eqExactMatches);
             return this;
         }
-
+        public Builder eqExactMatches(String... eqExactMatches) {
+            return eqExactMatches(List.of(eqExactMatches));
+        }
         public Builder eqs(@Nullable Output<List<String>> eqs) {
             this.eqs = eqs;
             return this;
         }
-
         public Builder eqs(@Nullable List<String> eqs) {
             this.eqs = Output.ofNullable(eqs);
             return this;
         }
-
+        public Builder eqs(String... eqs) {
+            return eqs(List.of(eqs));
+        }
         public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public Builder field(String field) {
             this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
-
         public Builder gt(@Nullable Output<String> gt) {
             this.gt = gt;
             return this;
         }
-
         public Builder gt(@Nullable String gt) {
             this.gt = Output.ofNullable(gt);
             return this;
         }
-
         public Builder gte(@Nullable Output<String> gte) {
             this.gte = gte;
             return this;
         }
-
         public Builder gte(@Nullable String gte) {
             this.gte = Output.ofNullable(gte);
             return this;
         }
-
         public Builder lt(@Nullable Output<String> lt) {
             this.lt = lt;
             return this;
         }
-
         public Builder lt(@Nullable String lt) {
             this.lt = Output.ofNullable(lt);
             return this;
         }
-
         public Builder lte(@Nullable Output<String> lte) {
             this.lte = lte;
             return this;
         }
-
         public Builder lte(@Nullable String lte) {
             this.lte = Output.ofNullable(lte);
             return this;
         }
-
         public Builder neqs(@Nullable Output<List<String>> neqs) {
             this.neqs = neqs;
             return this;
         }
-
         public Builder neqs(@Nullable List<String> neqs) {
             this.neqs = Output.ofNullable(neqs);
             return this;
         }
-        public FindingsFilterFindingCriteriaCriterionArgs build() {
+        public Builder neqs(String... neqs) {
+            return neqs(List.of(neqs));
+        }        public FindingsFilterFindingCriteriaCriterionArgs build() {
             return new FindingsFilterFindingCriteriaCriterionArgs(eqExactMatches, eqs, field, gt, gte, lt, lte, neqs);
         }
     }

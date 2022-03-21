@@ -79,32 +79,26 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder s3OutputFormatConfig(Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig) {
             this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig);
             return this;
         }
-
         public Builder s3OutputFormatConfig(FlowUpsolverS3OutputFormatConfigArgs s3OutputFormatConfig) {
             this.s3OutputFormatConfig = Output.of(Objects.requireNonNull(s3OutputFormatConfig));
             return this;
-        }
-        public FlowUpsolverDestinationPropertiesArgs build() {
+        }        public FlowUpsolverDestinationPropertiesArgs build() {
             return new FlowUpsolverDestinationPropertiesArgs(bucketName, bucketPrefix, s3OutputFormatConfig);
         }
     }

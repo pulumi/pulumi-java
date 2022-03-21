@@ -113,42 +113,43 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<ParameterContractArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(ParameterContractArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder queryParameters(@Nullable Output<List<ParameterContractArgs>> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
-
         public Builder queryParameters(@Nullable List<ParameterContractArgs> queryParameters) {
             this.queryParameters = Output.ofNullable(queryParameters);
             return this;
         }
-
+        public Builder queryParameters(ParameterContractArgs... queryParameters) {
+            return queryParameters(List.of(queryParameters));
+        }
         public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
             this.representations = representations;
             return this;
         }
-
         public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
             this.representations = Output.ofNullable(representations);
             return this;
         }
-        public RequestContractArgs build() {
+        public Builder representations(RepresentationContractArgs... representations) {
+            return representations(List.of(representations));
+        }        public RequestContractArgs build() {
             return new RequestContractArgs(description, headers, queryParameters, representations);
         }
     }

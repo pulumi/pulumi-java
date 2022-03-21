@@ -73,12 +73,13 @@ public final class GetAggregationAuthorizationResult {
             this.aggregationAuthorizationArn = aggregationAuthorizationArn;
             return this;
         }
-
         public Builder tags(@Nullable List<AggregationAuthorizationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetAggregationAuthorizationResult build() {
+        public Builder tags(AggregationAuthorizationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetAggregationAuthorizationResult build() {
             return new GetAggregationAuthorizationResult(aggregationAuthorizationArn, tags);
         }
     }

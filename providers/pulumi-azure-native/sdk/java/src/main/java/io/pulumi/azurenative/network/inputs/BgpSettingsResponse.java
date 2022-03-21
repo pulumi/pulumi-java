@@ -114,22 +114,21 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.asn = asn;
             return this;
         }
-
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
-
         public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
-
+        public Builder bgpPeeringAddresses(IPConfigurationBgpPeeringAddressResponse... bgpPeeringAddresses) {
+            return bgpPeeringAddresses(List.of(bgpPeeringAddresses));
+        }
         public Builder peerWeight(@Nullable Integer peerWeight) {
             this.peerWeight = peerWeight;
             return this;
-        }
-        public BgpSettingsResponse build() {
+        }        public BgpSettingsResponse build() {
             return new BgpSettingsResponse(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
         }
     }

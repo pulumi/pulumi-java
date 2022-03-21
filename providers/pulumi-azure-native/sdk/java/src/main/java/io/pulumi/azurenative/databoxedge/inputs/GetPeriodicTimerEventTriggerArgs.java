@@ -88,17 +88,14 @@ public final class GetPeriodicTimerEventTriggerArgs extends io.pulumi.resources.
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetPeriodicTimerEventTriggerArgs build() {
+        }        public GetPeriodicTimerEventTriggerArgs build() {
             return new GetPeriodicTimerEventTriggerArgs(deviceName, name, resourceGroupName);
         }
     }

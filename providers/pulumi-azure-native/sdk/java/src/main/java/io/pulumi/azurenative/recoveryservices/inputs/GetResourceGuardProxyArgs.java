@@ -84,17 +84,14 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGuardProxyName(String resourceGuardProxyName) {
             this.resourceGuardProxyName = Objects.requireNonNull(resourceGuardProxyName);
             return this;
         }
-
         public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
-        }
-        public GetResourceGuardProxyArgs build() {
+        }        public GetResourceGuardProxyArgs build() {
             return new GetResourceGuardProxyArgs(resourceGroupName, resourceGuardProxyName, vaultName);
         }
     }

@@ -92,17 +92,14 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
             this.address = address;
             return this;
         }
-
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
-
         public Builder sshPort(@Nullable Integer sshPort) {
             this.sshPort = sshPort;
             return this;
-        }
-        public HDInsightResponseProperties build() {
+        }        public HDInsightResponseProperties build() {
             return new HDInsightResponseProperties(address, administratorAccount, sshPort);
         }
     }

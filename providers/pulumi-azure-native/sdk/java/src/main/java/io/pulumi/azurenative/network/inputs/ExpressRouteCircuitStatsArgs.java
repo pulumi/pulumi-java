@@ -110,42 +110,34 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
             this.primarybytesIn = primarybytesIn;
             return this;
         }
-
         public Builder primarybytesIn(@Nullable Double primarybytesIn) {
             this.primarybytesIn = Output.ofNullable(primarybytesIn);
             return this;
         }
-
         public Builder primarybytesOut(@Nullable Output<Double> primarybytesOut) {
             this.primarybytesOut = primarybytesOut;
             return this;
         }
-
         public Builder primarybytesOut(@Nullable Double primarybytesOut) {
             this.primarybytesOut = Output.ofNullable(primarybytesOut);
             return this;
         }
-
         public Builder secondarybytesIn(@Nullable Output<Double> secondarybytesIn) {
             this.secondarybytesIn = secondarybytesIn;
             return this;
         }
-
         public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
             this.secondarybytesIn = Output.ofNullable(secondarybytesIn);
             return this;
         }
-
         public Builder secondarybytesOut(@Nullable Output<Double> secondarybytesOut) {
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }
-
         public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
             this.secondarybytesOut = Output.ofNullable(secondarybytesOut);
             return this;
-        }
-        public ExpressRouteCircuitStatsArgs build() {
+        }        public ExpressRouteCircuitStatsArgs build() {
             return new ExpressRouteCircuitStatsArgs(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
         }
     }

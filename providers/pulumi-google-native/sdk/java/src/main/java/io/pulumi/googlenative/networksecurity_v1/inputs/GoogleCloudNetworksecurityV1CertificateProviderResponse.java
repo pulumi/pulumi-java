@@ -77,12 +77,10 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse exten
             this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance);
             return this;
         }
-
         public Builder grpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
-        }
-        public GoogleCloudNetworksecurityV1CertificateProviderResponse build() {
+        }        public GoogleCloudNetworksecurityV1CertificateProviderResponse build() {
             return new GoogleCloudNetworksecurityV1CertificateProviderResponse(certificateProviderInstance, grpcEndpoint);
         }
     }

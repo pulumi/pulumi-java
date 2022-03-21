@@ -75,12 +75,10 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConfigArgs build() {
+        }        public GetConfigArgs build() {
             return new GetConfigArgs(name, project);
         }
     }

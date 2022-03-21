@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsResponse extends io.
         public Builder loggingSettings(GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse loggingSettings) {
             this.loggingSettings = Objects.requireNonNull(loggingSettings);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3AdvancedSettingsResponse build() {
+        }        public GoogleCloudDialogflowCxV3AdvancedSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsResponse(loggingSettings);
         }
     }

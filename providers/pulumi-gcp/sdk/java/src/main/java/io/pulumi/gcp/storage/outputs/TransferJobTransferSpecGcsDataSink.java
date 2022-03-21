@@ -71,12 +71,10 @@ public final class TransferJobTransferSpecGcsDataSink {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }
-        public TransferJobTransferSpecGcsDataSink build() {
+        }        public TransferJobTransferSpecGcsDataSink build() {
             return new TransferJobTransferSpecGcsDataSink(bucketName, path);
         }
     }

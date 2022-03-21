@@ -53,8 +53,7 @@ public final class IngressStatus {
         public Builder loadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
-        }
-        public IngressStatus build() {
+        }        public IngressStatus build() {
             return new IngressStatus(loadBalancer);
         }
     }

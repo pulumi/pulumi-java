@@ -54,12 +54,13 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
             this.items = items;
             return this;
         }
-
         public Builder items(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs> items) {
             this.items = Output.ofNullable(items);
             return this;
         }
-        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs build() {
+        public Builder items(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs... items) {
+            return items(List.of(items));
+        }        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs build() {
             return new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs(items);
         }
     }

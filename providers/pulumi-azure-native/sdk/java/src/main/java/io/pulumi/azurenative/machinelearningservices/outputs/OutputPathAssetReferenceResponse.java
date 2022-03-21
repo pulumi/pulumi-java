@@ -89,17 +89,14 @@ public final class OutputPathAssetReferenceResponse {
             this.jobId = jobId;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
-
         public Builder referenceType(String referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
-        }
-        public OutputPathAssetReferenceResponse build() {
+        }        public OutputPathAssetReferenceResponse build() {
             return new OutputPathAssetReferenceResponse(jobId, path, referenceType);
         }
     }

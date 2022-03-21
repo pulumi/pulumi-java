@@ -177,52 +177,45 @@ public final class GetVirtualServiceResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
-
         public Builder meshName(String meshName) {
             this.meshName = Objects.requireNonNull(meshName);
             return this;
         }
-
         public Builder meshOwner(String meshOwner) {
             this.meshOwner = Objects.requireNonNull(meshOwner);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceOwner(String resourceOwner) {
             this.resourceOwner = Objects.requireNonNull(resourceOwner);
             return this;
         }
-
         public Builder specs(List<GetVirtualServiceSpec> specs) {
             this.specs = Objects.requireNonNull(specs);
             return this;
         }
-
+        public Builder specs(GetVirtualServiceSpec... specs) {
+            return specs(List.of(specs));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVirtualServiceResult build() {
+        }        public GetVirtualServiceResult build() {
             return new GetVirtualServiceResult(arn, createdDate, id, lastUpdatedDate, meshName, meshOwner, name, resourceOwner, specs, tags);
         }
     }

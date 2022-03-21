@@ -79,22 +79,18 @@ public final class StreamingPolicyFairPlayConfigurationArgs extends io.pulumi.re
             this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense);
             return this;
         }
-
         public Builder allowPersistentLicense(Boolean allowPersistentLicense) {
             this.allowPersistentLicense = Output.of(Objects.requireNonNull(allowPersistentLicense));
             return this;
         }
-
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = Output.ofNullable(customLicenseAcquisitionUrlTemplate);
             return this;
-        }
-        public StreamingPolicyFairPlayConfigurationArgs build() {
+        }        public StreamingPolicyFairPlayConfigurationArgs build() {
             return new StreamingPolicyFairPlayConfigurationArgs(allowPersistentLicense, customLicenseAcquisitionUrlTemplate);
         }
     }

@@ -53,8 +53,7 @@ public final class VirtualServiceSpec {
         public Builder provider(@Nullable VirtualServiceSpecProvider provider) {
             this.provider = provider;
             return this;
-        }
-        public VirtualServiceSpec build() {
+        }        public VirtualServiceSpec build() {
             return new VirtualServiceSpec(provider);
         }
     }

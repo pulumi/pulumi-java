@@ -147,62 +147,50 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder idpConfig(Output<InboundSamlConfigIdpConfigArgs> idpConfig) {
             this.idpConfig = Objects.requireNonNull(idpConfig);
             return this;
         }
-
         public Builder idpConfig(InboundSamlConfigIdpConfigArgs idpConfig) {
             this.idpConfig = Output.of(Objects.requireNonNull(idpConfig));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder spConfig(Output<InboundSamlConfigSpConfigArgs> spConfig) {
             this.spConfig = Objects.requireNonNull(spConfig);
             return this;
         }
-
         public Builder spConfig(InboundSamlConfigSpConfigArgs spConfig) {
             this.spConfig = Output.of(Objects.requireNonNull(spConfig));
             return this;
-        }
-        public InboundSamlConfigArgs build() {
+        }        public InboundSamlConfigArgs build() {
             return new InboundSamlConfigArgs(displayName, enabled, idpConfig, name, project, spConfig);
         }
     }

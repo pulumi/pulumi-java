@@ -51,8 +51,7 @@ public final class TopicResponse {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public TopicResponse build() {
+        }        public TopicResponse build() {
             return new TopicResponse(name);
         }
     }

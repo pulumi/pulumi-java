@@ -73,12 +73,13 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsResult
             this.nextLink = nextLink;
             return this;
         }
-
         public Builder value(List<ScheduledSourceSynchronizationSettingResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListShareSubscriptionSourceShareSynchronizationSettingsResult build() {
+        public Builder value(ScheduledSourceSynchronizationSettingResponse... value) {
+            return value(List.of(value));
+        }        public ListShareSubscriptionSourceShareSynchronizationSettingsResult build() {
             return new ListShareSubscriptionSourceShareSynchronizationSettingsResult(nextLink, value);
         }
     }

@@ -70,12 +70,10 @@ public final class VertexAIParametersResponse {
             this.env = Objects.requireNonNull(env);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
-        }
-        public VertexAIParametersResponse build() {
+        }        public VertexAIParametersResponse build() {
             return new VertexAIParametersResponse(env, network);
         }
     }

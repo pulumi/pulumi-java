@@ -95,32 +95,26 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
             this.baseRatePerMinute = Objects.requireNonNull(baseRatePerMinute);
             return this;
         }
-
         public Builder baseRatePerMinute(Integer baseRatePerMinute) {
             this.baseRatePerMinute = Output.of(Objects.requireNonNull(baseRatePerMinute));
             return this;
         }
-
         public Builder incrementFactor(Output<Double> incrementFactor) {
             this.incrementFactor = Objects.requireNonNull(incrementFactor);
             return this;
         }
-
         public Builder incrementFactor(Double incrementFactor) {
             this.incrementFactor = Output.of(Objects.requireNonNull(incrementFactor));
             return this;
         }
-
         public Builder rateIncreaseCriteria(Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria) {
             this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria);
             return this;
         }
-
         public Builder rateIncreaseCriteria(JobTemplateRateIncreaseCriteriaArgs rateIncreaseCriteria) {
             this.rateIncreaseCriteria = Output.of(Objects.requireNonNull(rateIncreaseCriteria));
             return this;
-        }
-        public JobTemplateExponentialRolloutRateArgs build() {
+        }        public JobTemplateExponentialRolloutRateArgs build() {
             return new JobTemplateExponentialRolloutRateArgs(baseRatePerMinute, incrementFactor, rateIncreaseCriteria);
         }
     }

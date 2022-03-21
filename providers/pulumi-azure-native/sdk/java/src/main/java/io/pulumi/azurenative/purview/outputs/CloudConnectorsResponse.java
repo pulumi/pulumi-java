@@ -53,8 +53,7 @@ public final class CloudConnectorsResponse {
         public Builder awsExternalId(String awsExternalId) {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
-        }
-        public CloudConnectorsResponse build() {
+        }        public CloudConnectorsResponse build() {
             return new CloudConnectorsResponse(awsExternalId);
         }
     }

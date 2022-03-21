@@ -69,12 +69,10 @@ public final class SecurityAssessmentPartnerDataResponse {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public SecurityAssessmentPartnerDataResponse build() {
+        }        public SecurityAssessmentPartnerDataResponse build() {
             return new SecurityAssessmentPartnerDataResponse(partnerName, secret);
         }
     }

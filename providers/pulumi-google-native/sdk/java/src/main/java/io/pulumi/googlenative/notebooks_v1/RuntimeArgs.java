@@ -129,62 +129,50 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             this.accessConfig = accessConfig;
             return this;
         }
-
         public Builder accessConfig(@Nullable RuntimeAccessConfigArgs accessConfig) {
             this.accessConfig = Output.ofNullable(accessConfig);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder runtimeId(Output<String> runtimeId) {
             this.runtimeId = Objects.requireNonNull(runtimeId);
             return this;
         }
-
         public Builder runtimeId(String runtimeId) {
             this.runtimeId = Output.of(Objects.requireNonNull(runtimeId));
             return this;
         }
-
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
-
         public Builder softwareConfig(@Nullable RuntimeSoftwareConfigArgs softwareConfig) {
             this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
-
         public Builder virtualMachine(@Nullable Output<VirtualMachineArgs> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
-
         public Builder virtualMachine(@Nullable VirtualMachineArgs virtualMachine) {
             this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
-        }
-        public RuntimeArgs build() {
+        }        public RuntimeArgs build() {
             return new RuntimeArgs(accessConfig, location, project, runtimeId, softwareConfig, virtualMachine);
         }
     }

@@ -86,17 +86,14 @@ public final class MigrationPropertiesResponse {
             this.migrationProgress = Objects.requireNonNull(migrationProgress);
             return this;
         }
-
         public Builder oldSubnetId(String oldSubnetId) {
             this.oldSubnetId = Objects.requireNonNull(oldSubnetId);
             return this;
         }
-
         public Builder oldVnetSiteId(String oldVnetSiteId) {
             this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
             return this;
-        }
-        public MigrationPropertiesResponse build() {
+        }        public MigrationPropertiesResponse build() {
             return new MigrationPropertiesResponse(migrationProgress, oldSubnetId, oldVnetSiteId);
         }
     }

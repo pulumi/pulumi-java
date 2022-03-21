@@ -69,12 +69,10 @@ public final class PublicKeyCredentialResponse {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public PublicKeyCredentialResponse build() {
+        }        public PublicKeyCredentialResponse build() {
             return new PublicKeyCredentialResponse(format, key);
         }
     }

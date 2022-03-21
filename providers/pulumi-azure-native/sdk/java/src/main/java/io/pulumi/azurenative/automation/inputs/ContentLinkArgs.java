@@ -95,32 +95,26 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.contentHash = contentHash;
             return this;
         }
-
         public Builder contentHash(@Nullable ContentHashArgs contentHash) {
             this.contentHash = Output.ofNullable(contentHash);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ContentLinkArgs build() {
+        }        public ContentLinkArgs build() {
             return new ContentLinkArgs(contentHash, uri, version);
         }
     }

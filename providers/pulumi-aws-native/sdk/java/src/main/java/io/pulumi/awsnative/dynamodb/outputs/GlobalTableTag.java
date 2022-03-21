@@ -53,12 +53,10 @@ public final class GlobalTableTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public GlobalTableTag build() {
+        }        public GlobalTableTag build() {
             return new GlobalTableTag(key, value);
         }
     }

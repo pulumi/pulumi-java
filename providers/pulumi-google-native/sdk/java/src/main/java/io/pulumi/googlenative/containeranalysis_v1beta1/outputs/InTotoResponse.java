@@ -128,32 +128,38 @@ public final class InTotoResponse {
             this.expectedCommand = Objects.requireNonNull(expectedCommand);
             return this;
         }
-
+        public Builder expectedCommand(String... expectedCommand) {
+            return expectedCommand(List.of(expectedCommand));
+        }
         public Builder expectedMaterials(List<ArtifactRuleResponse> expectedMaterials) {
             this.expectedMaterials = Objects.requireNonNull(expectedMaterials);
             return this;
         }
-
+        public Builder expectedMaterials(ArtifactRuleResponse... expectedMaterials) {
+            return expectedMaterials(List.of(expectedMaterials));
+        }
         public Builder expectedProducts(List<ArtifactRuleResponse> expectedProducts) {
             this.expectedProducts = Objects.requireNonNull(expectedProducts);
             return this;
         }
-
+        public Builder expectedProducts(ArtifactRuleResponse... expectedProducts) {
+            return expectedProducts(List.of(expectedProducts));
+        }
         public Builder signingKeys(List<SigningKeyResponse> signingKeys) {
             this.signingKeys = Objects.requireNonNull(signingKeys);
             return this;
         }
-
+        public Builder signingKeys(SigningKeyResponse... signingKeys) {
+            return signingKeys(List.of(signingKeys));
+        }
         public Builder stepName(String stepName) {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }
-
         public Builder threshold(String threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
-        }
-        public InTotoResponse build() {
+        }        public InTotoResponse build() {
             return new InTotoResponse(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }
     }

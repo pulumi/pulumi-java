@@ -104,22 +104,18 @@ public final class GetConsumerGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
             return this;
         }
-
         public Builder eventHubName(String eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConsumerGroupArgs build() {
+        }        public GetConsumerGroupArgs build() {
             return new GetConsumerGroupArgs(consumerGroupName, eventHubName, namespaceName, resourceGroupName);
         }
     }

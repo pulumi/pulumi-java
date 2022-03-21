@@ -127,62 +127,50 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionId(Output<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder executionId(String executionId) {
             this.executionId = Output.of(Objects.requireNonNull(executionId));
             return this;
         }
-
         public Builder executionTemplate(@Nullable Output<ExecutionTemplateArgs> executionTemplate) {
             this.executionTemplate = executionTemplate;
             return this;
         }
-
         public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
             this.executionTemplate = Output.ofNullable(executionTemplate);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder outputNotebookFile(@Nullable Output<String> outputNotebookFile) {
             this.outputNotebookFile = outputNotebookFile;
             return this;
         }
-
         public Builder outputNotebookFile(@Nullable String outputNotebookFile) {
             this.outputNotebookFile = Output.ofNullable(outputNotebookFile);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ExecutionArgs build() {
+        }        public ExecutionArgs build() {
             return new ExecutionArgs(description, executionId, executionTemplate, location, outputNotebookFile, project);
         }
     }

@@ -144,72 +144,58 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             this.conversationId = Objects.requireNonNull(conversationId);
             return this;
         }
-
         public Builder conversationId(String conversationId) {
             this.conversationId = Output.of(Objects.requireNonNull(conversationId));
             return this;
         }
-
         public Builder documentsMetadataFilters(@Nullable Output<Map<String,String>> documentsMetadataFilters) {
             this.documentsMetadataFilters = documentsMetadataFilters;
             return this;
         }
-
         public Builder documentsMetadataFilters(@Nullable Map<String,String> documentsMetadataFilters) {
             this.documentsMetadataFilters = Output.ofNullable(documentsMetadataFilters);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder obfuscatedExternalUserId(@Nullable Output<String> obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = obfuscatedExternalUserId;
             return this;
         }
-
         public Builder obfuscatedExternalUserId(@Nullable String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Output.ofNullable(obfuscatedExternalUserId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder role(@Nullable Output<ParticipantRole> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable ParticipantRole role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public ParticipantArgs build() {
+        }        public ParticipantArgs build() {
             return new ParticipantArgs(conversationId, documentsMetadataFilters, location, name, obfuscatedExternalUserId, project, role);
         }
     }

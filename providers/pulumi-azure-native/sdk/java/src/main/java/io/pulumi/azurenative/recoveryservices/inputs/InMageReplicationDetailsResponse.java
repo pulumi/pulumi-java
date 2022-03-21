@@ -665,192 +665,166 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
             this.activeSiteType = activeSiteType;
             return this;
         }
-
         public Builder agentDetails(@Nullable InMageAgentDetailsResponse agentDetails) {
             this.agentDetails = agentDetails;
             return this;
         }
-
         public Builder azureStorageAccountId(@Nullable String azureStorageAccountId) {
             this.azureStorageAccountId = azureStorageAccountId;
             return this;
         }
-
         public Builder compressedDataRateInMB(@Nullable Double compressedDataRateInMB) {
             this.compressedDataRateInMB = compressedDataRateInMB;
             return this;
         }
-
         public Builder consistencyPoints(@Nullable Map<String,String> consistencyPoints) {
             this.consistencyPoints = consistencyPoints;
             return this;
         }
-
         public Builder datastores(@Nullable List<String> datastores) {
             this.datastores = datastores;
             return this;
         }
-
+        public Builder datastores(String... datastores) {
+            return datastores(List.of(datastores));
+        }
         public Builder discoveryType(@Nullable String discoveryType) {
             this.discoveryType = discoveryType;
             return this;
         }
-
         public Builder diskResized(@Nullable String diskResized) {
             this.diskResized = diskResized;
             return this;
         }
-
         public Builder infrastructureVmId(@Nullable String infrastructureVmId) {
             this.infrastructureVmId = infrastructureVmId;
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
-
         public Builder lastUpdateReceivedTime(@Nullable String lastUpdateReceivedTime) {
             this.lastUpdateReceivedTime = lastUpdateReceivedTime;
             return this;
         }
-
         public Builder masterTargetId(@Nullable String masterTargetId) {
             this.masterTargetId = masterTargetId;
             return this;
         }
-
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             this.multiVmGroupId = multiVmGroupId;
             return this;
         }
-
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
-
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
-
         public Builder osDetails(@Nullable OSDiskDetailsResponse osDetails) {
             this.osDetails = osDetails;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = processServerId;
             return this;
         }
-
         public Builder protectedDisks(@Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = protectedDisks;
             return this;
         }
-
+        public Builder protectedDisks(InMageProtectedDiskDetailsResponse... protectedDisks) {
+            return protectedDisks(List.of(protectedDisks));
+        }
         public Builder protectionStage(@Nullable String protectionStage) {
             this.protectionStage = protectionStage;
             return this;
         }
-
         public Builder rebootAfterUpdateStatus(@Nullable String rebootAfterUpdateStatus) {
             this.rebootAfterUpdateStatus = rebootAfterUpdateStatus;
             return this;
         }
-
         public Builder replicaId(@Nullable String replicaId) {
             this.replicaId = replicaId;
             return this;
         }
-
         public Builder resyncDetails(@Nullable InitialReplicationDetailsResponse resyncDetails) {
             this.resyncDetails = resyncDetails;
             return this;
         }
-
         public Builder retentionWindowEnd(@Nullable String retentionWindowEnd) {
             this.retentionWindowEnd = retentionWindowEnd;
             return this;
         }
-
         public Builder retentionWindowStart(@Nullable String retentionWindowStart) {
             this.retentionWindowStart = retentionWindowStart;
             return this;
         }
-
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
-
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             this.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
-
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
-
         public Builder uncompressedDataRateInMB(@Nullable Double uncompressedDataRateInMB) {
             this.uncompressedDataRateInMB = uncompressedDataRateInMB;
             return this;
         }
-
         public Builder vCenterInfrastructureId(@Nullable String vCenterInfrastructureId) {
             this.vCenterInfrastructureId = vCenterInfrastructureId;
             return this;
         }
-
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             this.validationErrors = validationErrors;
             return this;
         }
-
+        public Builder validationErrors(HealthErrorResponse... validationErrors) {
+            return validationErrors(List.of(validationErrors));
+        }
         public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
-
+        public Builder vmNics(VMNicDetailsResponse... vmNics) {
+            return vmNics(List.of(vmNics));
+        }
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
-
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }
-        public InMageReplicationDetailsResponse build() {
+        }        public InMageReplicationDetailsResponse build() {
             return new InMageReplicationDetailsResponse(activeSiteType, agentDetails, azureStorageAccountId, compressedDataRateInMB, consistencyPoints, datastores, discoveryType, diskResized, infrastructureVmId, instanceType, ipAddress, lastHeartbeat, lastRpoCalculatedTime, lastUpdateReceivedTime, masterTargetId, multiVmGroupId, multiVmGroupName, multiVmSyncStatus, osDetails, osVersion, processServerId, protectedDisks, protectionStage, rebootAfterUpdateStatus, replicaId, resyncDetails, retentionWindowEnd, retentionWindowStart, rpoInSeconds, sourceVmCpuCount, sourceVmRamSizeInMB, uncompressedDataRateInMB, vCenterInfrastructureId, validationErrors, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }
     }

@@ -146,62 +146,53 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.artifactStorage = artifactStorage;
             return this;
         }
-
         public Builder artifactStorage(@Nullable String artifactStorage) {
             this.artifactStorage = Output.ofNullable(artifactStorage);
             return this;
         }
-
         public Builder defaultPool(@Nullable Output<DefaultPoolArgs> defaultPool) {
             this.defaultPool = defaultPool;
             return this;
         }
-
         public Builder defaultPool(@Nullable DefaultPoolArgs defaultPool) {
             this.defaultPool = Output.ofNullable(defaultPool);
             return this;
         }
-
         public Builder privatePool(@Nullable Output<PrivatePoolArgs> privatePool) {
             this.privatePool = privatePool;
             return this;
         }
-
         public Builder privatePool(@Nullable PrivatePoolArgs privatePool) {
             this.privatePool = Output.ofNullable(privatePool);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder usages(Output<List<ExecutionConfigUsagesItem>> usages) {
             this.usages = Objects.requireNonNull(usages);
             return this;
         }
-
         public Builder usages(List<ExecutionConfigUsagesItem> usages) {
             this.usages = Output.of(Objects.requireNonNull(usages));
             return this;
         }
-
+        public Builder usages(ExecutionConfigUsagesItem... usages) {
+            return usages(List.of(usages));
+        }
         public Builder workerPool(@Nullable Output<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
-
         public Builder workerPool(@Nullable String workerPool) {
             this.workerPool = Output.ofNullable(workerPool);
             return this;
-        }
-        public ExecutionConfigArgs build() {
+        }        public ExecutionConfigArgs build() {
             return new ExecutionConfigArgs(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
         }
     }

@@ -78,32 +78,26 @@ public final class DataSourceToIndexFieldMappingArgs extends io.pulumi.resources
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
-
         public Builder dataSourceFieldName(String dataSourceFieldName) {
             this.dataSourceFieldName = Output.of(Objects.requireNonNull(dataSourceFieldName));
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable Output<String> dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
-
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
             this.dateFieldFormat = Output.ofNullable(dateFieldFormat);
             return this;
         }
-
         public Builder indexFieldName(Output<String> indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }
-
         public Builder indexFieldName(String indexFieldName) {
             this.indexFieldName = Output.of(Objects.requireNonNull(indexFieldName));
             return this;
-        }
-        public DataSourceToIndexFieldMappingArgs build() {
+        }        public DataSourceToIndexFieldMappingArgs build() {
             return new DataSourceToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }
     }

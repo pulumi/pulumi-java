@@ -78,22 +78,18 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
             this.current = Objects.requireNonNull(current);
             return this;
         }
-
         public Builder current(MetricValueStatusArgs current) {
             this.current = Output.of(Objects.requireNonNull(current));
             return this;
         }
-
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder metric(MetricIdentifierArgs metric) {
             this.metric = Output.of(Objects.requireNonNull(metric));
             return this;
-        }
-        public ExternalMetricStatusArgs build() {
+        }        public ExternalMetricStatusArgs build() {
             return new ExternalMetricStatusArgs(current, metric);
         }
     }

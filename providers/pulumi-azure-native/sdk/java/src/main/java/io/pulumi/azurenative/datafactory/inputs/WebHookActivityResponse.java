@@ -244,62 +244,56 @@ public final class WebHookActivityResponse extends io.pulumi.resources.InvokeArg
             this.authentication = authentication;
             return this;
         }
-
         public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder headers(@Nullable Object headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
             this.reportStatusOnCallBack = reportStatusOnCallBack;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public WebHookActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public WebHookActivityResponse build() {
             return new WebHookActivityResponse(authentication, body, dependsOn, description, headers, method, name, reportStatusOnCallBack, timeout, type, url, userProperties);
         }
     }

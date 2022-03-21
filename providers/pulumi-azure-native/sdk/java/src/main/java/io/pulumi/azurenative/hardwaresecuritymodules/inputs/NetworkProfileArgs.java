@@ -76,22 +76,21 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
-
+        public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
+            return networkInterfaces(List.of(networkInterfaces));
+        }
         public Builder subnet(@Nullable Output<ApiEntityReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public NetworkProfileArgs build() {
+        }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(networkInterfaces, subnet);
         }
     }

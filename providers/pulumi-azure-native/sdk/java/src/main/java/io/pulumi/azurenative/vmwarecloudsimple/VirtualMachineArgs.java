@@ -306,162 +306,139 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             this.amountOfRam = Objects.requireNonNull(amountOfRam);
             return this;
         }
-
         public Builder amountOfRam(Integer amountOfRam) {
             this.amountOfRam = Output.of(Objects.requireNonNull(amountOfRam));
             return this;
         }
-
         public Builder customization(@Nullable Output<GuestOSCustomizationArgs> customization) {
             this.customization = customization;
             return this;
         }
-
         public Builder customization(@Nullable GuestOSCustomizationArgs customization) {
             this.customization = Output.ofNullable(customization);
             return this;
         }
-
         public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(VirtualDiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder exposeToGuestVM(@Nullable Output<Boolean> exposeToGuestVM) {
             this.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
-
         public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
             this.exposeToGuestVM = Output.ofNullable(exposeToGuestVM);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder nics(@Nullable Output<List<VirtualNicArgs>> nics) {
             this.nics = nics;
             return this;
         }
-
         public Builder nics(@Nullable List<VirtualNicArgs> nics) {
             this.nics = Output.ofNullable(nics);
             return this;
         }
-
+        public Builder nics(VirtualNicArgs... nics) {
+            return nics(List.of(nics));
+        }
         public Builder numberOfCores(Output<Integer> numberOfCores) {
             this.numberOfCores = Objects.requireNonNull(numberOfCores);
             return this;
         }
-
         public Builder numberOfCores(Integer numberOfCores) {
             this.numberOfCores = Output.of(Objects.requireNonNull(numberOfCores));
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder privateCloudId(Output<String> privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
-
         public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Output.of(Objects.requireNonNull(privateCloudId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourcePool(@Nullable Output<ResourcePoolArgs> resourcePool) {
             this.resourcePool = resourcePool;
             return this;
         }
-
         public Builder resourcePool(@Nullable ResourcePoolArgs resourcePool) {
             this.resourcePool = Output.ofNullable(resourcePool);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
-
         public Builder templateId(@Nullable String templateId) {
             this.templateId = Output.ofNullable(templateId);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
         }
-
         public Builder vSphereNetworks(@Nullable Output<List<String>> vSphereNetworks) {
             this.vSphereNetworks = vSphereNetworks;
             return this;
         }
-
         public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
             this.vSphereNetworks = Output.ofNullable(vSphereNetworks);
             return this;
         }
-
+        public Builder vSphereNetworks(String... vSphereNetworks) {
+            return vSphereNetworks(List.of(vSphereNetworks));
+        }
         public Builder virtualMachineName(@Nullable Output<String> virtualMachineName) {
             this.virtualMachineName = virtualMachineName;
             return this;
         }
-
         public Builder virtualMachineName(@Nullable String virtualMachineName) {
             this.virtualMachineName = Output.ofNullable(virtualMachineName);
             return this;
-        }
-        public VirtualMachineArgs build() {
+        }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(amountOfRam, customization, disks, exposeToGuestVM, location, nics, numberOfCores, password, privateCloudId, resourceGroupName, resourcePool, tags, templateId, username, vSphereNetworks, virtualMachineName);
         }
     }

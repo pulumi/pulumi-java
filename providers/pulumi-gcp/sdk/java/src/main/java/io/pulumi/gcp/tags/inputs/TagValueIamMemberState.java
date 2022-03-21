@@ -117,52 +117,42 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable TagValueIamMemberConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
-
         public Builder member(@Nullable String member) {
             this.member = Output.ofNullable(member);
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = Output.ofNullable(tagValue);
             return this;
-        }
-        public TagValueIamMemberState build() {
+        }        public TagValueIamMemberState build() {
             return new TagValueIamMemberState(condition, etag, member, role, tagValue);
         }
     }

@@ -72,12 +72,10 @@ public final class GetProjectKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetProjectKeysArgs build() {
+        }        public GetProjectKeysArgs build() {
             return new GetProjectKeysArgs(projectName, resourceGroupName);
         }
     }

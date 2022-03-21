@@ -152,72 +152,58 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             this.header = header;
             return this;
         }
-
         public Builder header(@Nullable Either<String,Header> header) {
             this.header = Output.ofNullable(header);
             return this;
         }
-
         public Builder includePath(@Nullable Output<Boolean> includePath) {
             this.includePath = includePath;
             return this;
         }
-
         public Builder includePath(@Nullable Boolean includePath) {
             this.includePath = Output.ofNullable(includePath);
             return this;
         }
-
         public Builder partitionFormat(@Nullable Output<String> partitionFormat) {
             this.partitionFormat = partitionFormat;
             return this;
         }
-
         public Builder partitionFormat(@Nullable String partitionFormat) {
             this.partitionFormat = Output.ofNullable(partitionFormat);
             return this;
         }
-
         public Builder path(@Nullable Output<DatasetCreateRequestPathArgs> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable DatasetCreateRequestPathArgs path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder query(@Nullable Output<DatasetCreateRequestQueryArgs> query) {
             this.query = query;
             return this;
         }
-
         public Builder query(@Nullable DatasetCreateRequestQueryArgs query) {
             this.query = Output.ofNullable(query);
             return this;
         }
-
         public Builder separator(@Nullable Output<String> separator) {
             this.separator = separator;
             return this;
         }
-
         public Builder separator(@Nullable String separator) {
             this.separator = Output.ofNullable(separator);
             return this;
         }
-
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
-
         public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
             this.sourceType = Output.ofNullable(sourceType);
             return this;
-        }
-        public DatasetCreateRequestParametersArgs build() {
+        }        public DatasetCreateRequestParametersArgs build() {
             return new DatasetCreateRequestParametersArgs(header, includePath, partitionFormat, path, query, separator, sourceType);
         }
     }

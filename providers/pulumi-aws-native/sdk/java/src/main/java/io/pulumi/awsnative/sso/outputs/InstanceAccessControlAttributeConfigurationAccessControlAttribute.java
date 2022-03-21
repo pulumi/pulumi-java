@@ -54,12 +54,10 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InstanceAccessControlAttributeConfigurationAccessControlAttribute build() {
+        }        public InstanceAccessControlAttributeConfigurationAccessControlAttribute build() {
             return new InstanceAccessControlAttributeConfigurationAccessControlAttribute(key, value);
         }
     }

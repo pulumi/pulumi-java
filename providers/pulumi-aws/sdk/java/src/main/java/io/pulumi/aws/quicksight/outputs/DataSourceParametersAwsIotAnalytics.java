@@ -51,8 +51,7 @@ public final class DataSourceParametersAwsIotAnalytics {
         public Builder dataSetName(String dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
-        }
-        public DataSourceParametersAwsIotAnalytics build() {
+        }        public DataSourceParametersAwsIotAnalytics build() {
             return new DataSourceParametersAwsIotAnalytics(dataSetName);
         }
     }

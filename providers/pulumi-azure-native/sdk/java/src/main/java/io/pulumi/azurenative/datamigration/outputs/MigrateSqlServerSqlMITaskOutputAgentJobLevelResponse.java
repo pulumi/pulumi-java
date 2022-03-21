@@ -186,47 +186,41 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
-
+        public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
+            return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse build() {
+        }        public MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(endedOn, exceptionsAndWarnings, id, isEnabled, message, name, resultType, startedOn, state);
         }
     }

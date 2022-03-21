@@ -72,12 +72,10 @@ public final class TableMagneticStoreWriteProperties {
             this.enableMagneticStoreWrites = enableMagneticStoreWrites;
             return this;
         }
-
         public Builder magneticStoreRejectedDataLocation(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
-        }
-        public TableMagneticStoreWriteProperties build() {
+        }        public TableMagneticStoreWriteProperties build() {
             return new TableMagneticStoreWriteProperties(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
         }
     }

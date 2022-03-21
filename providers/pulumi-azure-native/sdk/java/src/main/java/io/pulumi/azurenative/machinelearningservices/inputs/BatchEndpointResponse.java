@@ -144,32 +144,26 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
             this.authMode = authMode;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
-
         public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
-
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = traffic;
             return this;
-        }
-        public BatchEndpointResponse build() {
+        }        public BatchEndpointResponse build() {
             return new BatchEndpointResponse(authMode, description, properties, scoringUri, swaggerUri, traffic);
         }
     }

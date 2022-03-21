@@ -69,12 +69,10 @@ public final class DatabaseAccountConnectionStringResponse {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
-        }
-        public DatabaseAccountConnectionStringResponse build() {
+        }        public DatabaseAccountConnectionStringResponse build() {
             return new DatabaseAccountConnectionStringResponse(connectionString, description);
         }
     }

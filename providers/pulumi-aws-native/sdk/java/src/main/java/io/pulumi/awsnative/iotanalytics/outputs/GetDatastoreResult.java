@@ -93,32 +93,29 @@ public final class GetDatastoreResult {
             this.datastorePartitions = datastorePartitions;
             return this;
         }
-
         public Builder datastoreStorage(@Nullable DatastoreStorage datastoreStorage) {
             this.datastoreStorage = datastoreStorage;
             return this;
         }
-
         public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfiguration fileFormatConfiguration) {
             this.fileFormatConfiguration = fileFormatConfiguration;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable DatastoreRetentionPeriod retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder tags(@Nullable List<DatastoreTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDatastoreResult build() {
+        public Builder tags(DatastoreTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDatastoreResult build() {
             return new GetDatastoreResult(datastorePartitions, datastoreStorage, fileFormatConfiguration, id, retentionPeriod, tags);
         }
     }

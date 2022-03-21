@@ -160,47 +160,38 @@ public final class GetContactFlowResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public GetContactFlowResult build() {
+        }        public GetContactFlowResult build() {
             return new GetContactFlowResult(arn, contactFlowId, content, description, id, instanceId, name, tags, type);
         }
     }

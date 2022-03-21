@@ -71,12 +71,10 @@ public final class IotHubLocationDescriptionResponse {
             this.location = location;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = role;
             return this;
-        }
-        public IotHubLocationDescriptionResponse build() {
+        }        public IotHubLocationDescriptionResponse build() {
             return new IotHubLocationDescriptionResponse(location, role);
         }
     }

@@ -75,22 +75,18 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
             this.enableSipLogs = enableSipLogs;
             return this;
         }
-
         public Builder enableSipLogs(@Nullable Boolean enableSipLogs) {
             this.enableSipLogs = Output.ofNullable(enableSipLogs);
             return this;
         }
-
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
-
         public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
-        }
-        public VoiceConnectorLoggingArgs build() {
+        }        public VoiceConnectorLoggingArgs build() {
             return new VoiceConnectorLoggingArgs(enableSipLogs, voiceConnectorId);
         }
     }

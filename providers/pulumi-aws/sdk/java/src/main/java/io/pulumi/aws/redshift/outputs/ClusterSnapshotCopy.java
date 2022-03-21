@@ -88,17 +88,14 @@ public final class ClusterSnapshotCopy {
             this.destinationRegion = Objects.requireNonNull(destinationRegion);
             return this;
         }
-
         public Builder grantName(@Nullable String grantName) {
             this.grantName = grantName;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
-        }
-        public ClusterSnapshotCopy build() {
+        }        public ClusterSnapshotCopy build() {
             return new ClusterSnapshotCopy(destinationRegion, grantName, retentionPeriod);
         }
     }

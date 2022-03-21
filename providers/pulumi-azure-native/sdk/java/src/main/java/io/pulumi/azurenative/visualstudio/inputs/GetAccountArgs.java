@@ -72,12 +72,10 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetAccountArgs build() {
+        }        public GetAccountArgs build() {
             return new GetAccountArgs(resourceGroupName, resourceName);
         }
     }

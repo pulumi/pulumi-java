@@ -79,22 +79,18 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
-
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
             this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
             return this;
         }
-
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
             this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
-        }
-        public AddressPropertiesArgs build() {
+        }        public AddressPropertiesArgs build() {
             return new AddressPropertiesArgs(contactDetails, shippingAddress);
         }
     }

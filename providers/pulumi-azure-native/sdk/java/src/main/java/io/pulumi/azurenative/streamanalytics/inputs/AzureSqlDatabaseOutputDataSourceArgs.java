@@ -143,62 +143,50 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
             this.database = database;
             return this;
         }
-
         public Builder database(@Nullable String database) {
             this.database = Output.ofNullable(database);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder server(@Nullable Output<String> server) {
             this.server = server;
             return this;
         }
-
         public Builder server(@Nullable String server) {
             this.server = Output.ofNullable(server);
             return this;
         }
-
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
-
         public Builder user(@Nullable String user) {
             this.user = Output.ofNullable(user);
             return this;
-        }
-        public AzureSqlDatabaseOutputDataSourceArgs build() {
+        }        public AzureSqlDatabaseOutputDataSourceArgs build() {
             return new AzureSqlDatabaseOutputDataSourceArgs(database, password, server, table, type, user);
         }
     }

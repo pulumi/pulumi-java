@@ -81,17 +81,17 @@ public final class ServiceImageConfiguration {
             this.port = port;
             return this;
         }
-
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
-
+        public Builder runtimeEnvironmentVariables(ServiceKeyValuePair... runtimeEnvironmentVariables) {
+            return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
+        }
         public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
-        }
-        public ServiceImageConfiguration build() {
+        }        public ServiceImageConfiguration build() {
             return new ServiceImageConfiguration(port, runtimeEnvironmentVariables, startCommand);
         }
     }

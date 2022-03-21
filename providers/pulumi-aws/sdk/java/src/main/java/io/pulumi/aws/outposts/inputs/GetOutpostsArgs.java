@@ -106,22 +106,18 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder siteId(@Nullable String siteId) {
             this.siteId = siteId;
             return this;
-        }
-        public GetOutpostsArgs build() {
+        }        public GetOutpostsArgs build() {
             return new GetOutpostsArgs(availabilityZone, availabilityZoneId, ownerId, siteId);
         }
     }

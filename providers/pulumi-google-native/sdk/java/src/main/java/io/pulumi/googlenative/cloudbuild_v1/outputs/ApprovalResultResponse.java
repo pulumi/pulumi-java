@@ -117,27 +117,22 @@ public final class ApprovalResultResponse {
             this.approvalTime = Objects.requireNonNull(approvalTime);
             return this;
         }
-
         public Builder approverAccount(String approverAccount) {
             this.approverAccount = Objects.requireNonNull(approverAccount);
             return this;
         }
-
         public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
-
         public Builder decision(String decision) {
             this.decision = Objects.requireNonNull(decision);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public ApprovalResultResponse build() {
+        }        public ApprovalResultResponse build() {
             return new ApprovalResultResponse(approvalTime, approverAccount, comment, decision, url);
         }
     }

@@ -101,22 +101,18 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
-
         public Builder modelPath(String modelPath) {
             this.modelPath = Objects.requireNonNull(modelPath);
             return this;
         }
-
         public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
-
         public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
-        }
-        public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse build() {
+        }        public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse build() {
             return new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(framework, modelPath, pythonVersion, runtimeVersion);
         }
     }

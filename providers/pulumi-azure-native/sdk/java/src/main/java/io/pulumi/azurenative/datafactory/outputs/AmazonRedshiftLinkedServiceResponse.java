@@ -225,57 +225,49 @@ public final class AmazonRedshiftLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder database(Object database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
-
         public Builder port(@Nullable Object port) {
             this.port = port;
             return this;
         }
-
         public Builder server(Object server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
-        }
-        public AmazonRedshiftLinkedServiceResponse build() {
+        }        public AmazonRedshiftLinkedServiceResponse build() {
             return new AmazonRedshiftLinkedServiceResponse(annotations, connectVia, database, description, encryptedCredential, parameters, password, port, server, type, username);
         }
     }

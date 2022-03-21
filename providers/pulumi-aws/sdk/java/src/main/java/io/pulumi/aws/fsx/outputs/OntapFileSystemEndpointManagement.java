@@ -72,12 +72,13 @@ public final class OntapFileSystemEndpointManagement {
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-        public OntapFileSystemEndpointManagement build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapFileSystemEndpointManagement build() {
             return new OntapFileSystemEndpointManagement(dnsName, ipAddresses);
         }
     }

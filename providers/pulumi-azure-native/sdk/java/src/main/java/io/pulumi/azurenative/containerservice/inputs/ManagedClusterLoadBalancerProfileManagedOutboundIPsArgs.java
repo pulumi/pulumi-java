@@ -61,12 +61,10 @@ public final class ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs exten
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
-        }
-        public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs build() {
+        }        public ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs build() {
             return new ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(count);
         }
     }

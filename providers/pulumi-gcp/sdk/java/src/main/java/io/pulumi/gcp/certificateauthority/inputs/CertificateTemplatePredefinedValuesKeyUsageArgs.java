@@ -93,32 +93,29 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
             this.baseKeyUsage = baseKeyUsage;
             return this;
         }
-
         public Builder baseKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs baseKeyUsage) {
             this.baseKeyUsage = Output.ofNullable(baseKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-
         public Builder extendedKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
             this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-        public CertificateTemplatePredefinedValuesKeyUsageArgs build() {
+        public Builder unknownExtendedKeyUsages(CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CertificateTemplatePredefinedValuesKeyUsageArgs build() {
             return new CertificateTemplatePredefinedValuesKeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

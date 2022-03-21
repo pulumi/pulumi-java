@@ -96,32 +96,29 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
             this.customFields = customFields;
             return this;
         }
-
         public Builder customFields(@Nullable List<LogConfigCounterOptionsCustomFieldArgs> customFields) {
             this.customFields = Output.ofNullable(customFields);
             return this;
         }
-
+        public Builder customFields(LogConfigCounterOptionsCustomFieldArgs... customFields) {
+            return customFields(List.of(customFields));
+        }
         public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable String field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
-
         public Builder metric(@Nullable String metric) {
             this.metric = Output.ofNullable(metric);
             return this;
-        }
-        public LogConfigCounterOptionsArgs build() {
+        }        public LogConfigCounterOptionsArgs build() {
             return new LogConfigCounterOptionsArgs(customFields, field, metric);
         }
     }

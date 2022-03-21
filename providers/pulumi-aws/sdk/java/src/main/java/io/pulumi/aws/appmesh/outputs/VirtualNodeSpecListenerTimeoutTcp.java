@@ -53,8 +53,7 @@ public final class VirtualNodeSpecListenerTimeoutTcp {
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle) {
             this.idle = idle;
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutTcp build() {
+        }        public VirtualNodeSpecListenerTimeoutTcp build() {
             return new VirtualNodeSpecListenerTimeoutTcp(idle);
         }
     }

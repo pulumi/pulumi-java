@@ -105,52 +105,42 @@ public final class TaskDefinitionEFSVolumeConfigurationArgs extends io.pulumi.re
             this.authorizationConfig = authorizationConfig;
             return this;
         }
-
         public Builder authorizationConfig(@Nullable TaskDefinitionAuthorizationConfigArgs authorizationConfig) {
             this.authorizationConfig = Output.ofNullable(authorizationConfig);
             return this;
         }
-
         public Builder filesystemId(Output<String> filesystemId) {
             this.filesystemId = Objects.requireNonNull(filesystemId);
             return this;
         }
-
         public Builder filesystemId(String filesystemId) {
             this.filesystemId = Output.of(Objects.requireNonNull(filesystemId));
             return this;
         }
-
         public Builder rootDirectory(@Nullable Output<String> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
-
         public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
         }
-
         public Builder transitEncryption(@Nullable Output<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
-
         public Builder transitEncryption(@Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption) {
             this.transitEncryption = Output.ofNullable(transitEncryption);
             return this;
         }
-
         public Builder transitEncryptionPort(@Nullable Output<Integer> transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }
-
         public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = Output.ofNullable(transitEncryptionPort);
             return this;
-        }
-        public TaskDefinitionEFSVolumeConfigurationArgs build() {
+        }        public TaskDefinitionEFSVolumeConfigurationArgs build() {
             return new TaskDefinitionEFSVolumeConfigurationArgs(authorizationConfig, filesystemId, rootDirectory, transitEncryption, transitEncryptionPort);
         }
     }

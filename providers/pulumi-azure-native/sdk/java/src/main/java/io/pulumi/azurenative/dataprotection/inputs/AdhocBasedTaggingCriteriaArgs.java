@@ -61,12 +61,10 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
             this.tagInfo = tagInfo;
             return this;
         }
-
         public Builder tagInfo(@Nullable RetentionTagArgs tagInfo) {
             this.tagInfo = Output.ofNullable(tagInfo);
             return this;
-        }
-        public AdhocBasedTaggingCriteriaArgs build() {
+        }        public AdhocBasedTaggingCriteriaArgs build() {
             return new AdhocBasedTaggingCriteriaArgs(tagInfo);
         }
     }

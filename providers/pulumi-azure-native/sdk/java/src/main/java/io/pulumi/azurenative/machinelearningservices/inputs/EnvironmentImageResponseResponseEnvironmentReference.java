@@ -78,12 +78,10 @@ public final class EnvironmentImageResponseResponseEnvironmentReference extends 
             this.name = name;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public EnvironmentImageResponseResponseEnvironmentReference build() {
+        }        public EnvironmentImageResponseResponseEnvironmentReference build() {
             return new EnvironmentImageResponseResponseEnvironmentReference(name, version);
         }
     }

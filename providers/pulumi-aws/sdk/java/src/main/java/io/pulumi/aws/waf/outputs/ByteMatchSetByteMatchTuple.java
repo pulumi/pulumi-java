@@ -124,22 +124,18 @@ public final class ByteMatchSetByteMatchTuple {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder targetString(@Nullable String targetString) {
             this.targetString = targetString;
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
-        }
-        public ByteMatchSetByteMatchTuple build() {
+        }        public ByteMatchSetByteMatchTuple build() {
             return new ByteMatchSetByteMatchTuple(fieldToMatch, positionalConstraint, targetString, textTransformation);
         }
     }

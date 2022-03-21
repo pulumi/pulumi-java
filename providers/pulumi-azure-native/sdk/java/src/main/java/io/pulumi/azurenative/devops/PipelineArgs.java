@@ -142,62 +142,50 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.bootstrapConfiguration = Objects.requireNonNull(bootstrapConfiguration);
             return this;
         }
-
         public Builder bootstrapConfiguration(BootstrapConfigurationArgs bootstrapConfiguration) {
             this.bootstrapConfiguration = Output.of(Objects.requireNonNull(bootstrapConfiguration));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
-
         public Builder pipelineName(@Nullable String pipelineName) {
             this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
-
         public Builder pipelineType(Output<Either<String,PipelineTypeEnum>> pipelineType) {
             this.pipelineType = Objects.requireNonNull(pipelineType);
             return this;
         }
-
         public Builder pipelineType(Either<String,PipelineTypeEnum> pipelineType) {
             this.pipelineType = Output.of(Objects.requireNonNull(pipelineType));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public PipelineArgs build() {
+        }        public PipelineArgs build() {
             return new PipelineArgs(bootstrapConfiguration, location, pipelineName, pipelineType, resourceGroupName, tags);
         }
     }

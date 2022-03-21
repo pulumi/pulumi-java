@@ -136,32 +136,26 @@ public final class VpnConnectionVgwTelemetry {
             this.acceptedRouteCount = acceptedRouteCount;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder lastStatusChange(@Nullable String lastStatusChange) {
             this.lastStatusChange = lastStatusChange;
             return this;
         }
-
         public Builder outsideIpAddress(@Nullable String outsideIpAddress) {
             this.outsideIpAddress = outsideIpAddress;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
-
         public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
-        }
-        public VpnConnectionVgwTelemetry build() {
+        }        public VpnConnectionVgwTelemetry build() {
             return new VpnConnectionVgwTelemetry(acceptedRouteCount, certificateArn, lastStatusChange, outsideIpAddress, status, statusMessage);
         }
     }

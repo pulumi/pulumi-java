@@ -112,22 +112,18 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
             this.offset = offset;
             return this;
         }
-
         public Builder referenceTrigger(TriggerReferenceResponse referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TumblingWindowTriggerDependencyReferenceResponse build() {
+        }        public TumblingWindowTriggerDependencyReferenceResponse build() {
             return new TumblingWindowTriggerDependencyReferenceResponse(offset, referenceTrigger, size, type);
         }
     }

@@ -195,92 +195,77 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.adminPassword = adminPassword;
             return this;
         }
-
         public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
-
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
-
         public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
-
         public Builder allowExtensionOperations(@Nullable Output<Boolean> allowExtensionOperations) {
             this.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
-
         public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
             this.allowExtensionOperations = Output.ofNullable(allowExtensionOperations);
             return this;
         }
-
         public Builder computerName(@Nullable Output<String> computerName) {
             this.computerName = computerName;
             return this;
         }
-
         public Builder computerName(@Nullable String computerName) {
             this.computerName = Output.ofNullable(computerName);
             return this;
         }
-
         public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
-
         public Builder customData(@Nullable String customData) {
             this.customData = Output.ofNullable(customData);
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
             this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
             return this;
         }
-
         public Builder requireGuestProvisionSignal(@Nullable Output<Boolean> requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
-
         public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = Output.ofNullable(requireGuestProvisionSignal);
             return this;
         }
-
         public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
-
         public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
             this.secrets = Output.ofNullable(secrets);
             return this;
         }
-
+        public Builder secrets(VaultSecretGroupArgs... secrets) {
+            return secrets(List.of(secrets));
+        }
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
             this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
             return this;
-        }
-        public OSProfileArgs build() {
+        }        public OSProfileArgs build() {
             return new OSProfileArgs(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);
         }
     }

@@ -61,12 +61,10 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
             this.spec = spec;
             return this;
         }
-
         public Builder spec(@Nullable InstanceSpecArgs spec) {
             this.spec = Output.ofNullable(spec);
             return this;
-        }
-        public InstanceTemplateSpecArgs build() {
+        }        public InstanceTemplateSpecArgs build() {
             return new InstanceTemplateSpecArgs(spec);
         }
     }

@@ -78,22 +78,18 @@ public final class VirtualMachineScaleSetIpTagArgs extends io.pulumi.resources.R
             this.ipTagType = ipTagType;
             return this;
         }
-
         public Builder ipTagType(@Nullable String ipTagType) {
             this.ipTagType = Output.ofNullable(ipTagType);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public VirtualMachineScaleSetIpTagArgs build() {
+        }        public VirtualMachineScaleSetIpTagArgs build() {
             return new VirtualMachineScaleSetIpTagArgs(ipTagType, tag);
         }
     }

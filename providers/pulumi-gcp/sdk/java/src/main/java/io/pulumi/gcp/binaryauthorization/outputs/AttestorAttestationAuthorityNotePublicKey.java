@@ -140,22 +140,18 @@ public final class AttestorAttestationAuthorityNotePublicKey {
             this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder pkixPublicKey(@Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey) {
             this.pkixPublicKey = pkixPublicKey;
             return this;
-        }
-        public AttestorAttestationAuthorityNotePublicKey build() {
+        }        public AttestorAttestationAuthorityNotePublicKey build() {
             return new AttestorAttestationAuthorityNotePublicKey(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);
         }
     }

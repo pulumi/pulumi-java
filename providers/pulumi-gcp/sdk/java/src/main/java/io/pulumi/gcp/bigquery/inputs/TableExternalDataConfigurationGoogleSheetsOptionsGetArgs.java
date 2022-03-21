@@ -78,22 +78,18 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
             this.range = range;
             return this;
         }
-
         public Builder range(@Nullable String range) {
             this.range = Output.ofNullable(range);
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
-
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
-        }
-        public TableExternalDataConfigurationGoogleSheetsOptionsGetArgs build() {
+        }        public TableExternalDataConfigurationGoogleSheetsOptionsGetArgs build() {
             return new TableExternalDataConfigurationGoogleSheetsOptionsGetArgs(range, skipLeadingRows);
         }
     }

@@ -76,12 +76,10 @@ public final class X12AgreementContentResponse extends io.pulumi.resources.Invok
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
-
         public Builder sendAgreement(X12OneWayAgreementResponse sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
-        }
-        public X12AgreementContentResponse build() {
+        }        public X12AgreementContentResponse build() {
             return new X12AgreementContentResponse(receiveAgreement, sendAgreement);
         }
     }

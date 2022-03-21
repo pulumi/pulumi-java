@@ -189,47 +189,44 @@ public final class VirtualMachineConfigurationResponse {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
-
         public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-
+        public Builder dataDisks(DataDiskResponse... dataDisks) {
+            return dataDisks(List.of(dataDisks));
+        }
         public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-
         public Builder extensions(@Nullable List<VMExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
-
+        public Builder extensions(VMExtensionResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder imageReference(ImageReferenceResponse imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder nodeAgentSkuId(String nodeAgentSkuId) {
             this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
             return this;
         }
-
         public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationResponse nodePlacementConfiguration) {
             this.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
-
         public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
-        }
-        public VirtualMachineConfigurationResponse build() {
+        }        public VirtualMachineConfigurationResponse build() {
             return new VirtualMachineConfigurationResponse(containerConfiguration, dataDisks, diskEncryptionConfiguration, extensions, imageReference, licenseType, nodeAgentSkuId, nodePlacementConfiguration, windowsConfiguration);
         }
     }

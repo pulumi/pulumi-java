@@ -95,32 +95,29 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
-
         public Builder dailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Output.ofNullable(dailyMaintenanceWindow);
             return this;
         }
-
         public Builder maintenanceExclusions(@Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
-
         public Builder maintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs> maintenanceExclusions) {
             this.maintenanceExclusions = Output.ofNullable(maintenanceExclusions);
             return this;
         }
-
+        public Builder maintenanceExclusions(ClusterMaintenancePolicyMaintenanceExclusionGetArgs... maintenanceExclusions) {
+            return maintenanceExclusions(List.of(maintenanceExclusions));
+        }
         public Builder recurringWindow(@Nullable Output<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }
-
         public Builder recurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindowGetArgs recurringWindow) {
             this.recurringWindow = Output.ofNullable(recurringWindow);
             return this;
-        }
-        public ClusterMaintenancePolicyGetArgs build() {
+        }        public ClusterMaintenancePolicyGetArgs build() {
             return new ClusterMaintenancePolicyGetArgs(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }
     }

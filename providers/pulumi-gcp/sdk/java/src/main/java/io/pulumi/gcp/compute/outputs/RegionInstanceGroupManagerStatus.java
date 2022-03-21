@@ -90,17 +90,20 @@ public final class RegionInstanceGroupManagerStatus {
             this.isStable = isStable;
             return this;
         }
-
         public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
-
+        public Builder statefuls(RegionInstanceGroupManagerStatusStateful... statefuls) {
+            return statefuls(List.of(statefuls));
+        }
         public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
-        public RegionInstanceGroupManagerStatus build() {
+        public Builder versionTargets(RegionInstanceGroupManagerStatusVersionTarget... versionTargets) {
+            return versionTargets(List.of(versionTargets));
+        }        public RegionInstanceGroupManagerStatus build() {
             return new RegionInstanceGroupManagerStatus(isStable, statefuls, versionTargets);
         }
     }

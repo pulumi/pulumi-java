@@ -86,17 +86,17 @@ public final class FileNoteResponse {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
-
+        public Builder checksum(String... checksum) {
+            return checksum(List.of(checksum));
+        }
         public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public FileNoteResponse build() {
+        }        public FileNoteResponse build() {
             return new FileNoteResponse(checksum, fileType, title);
         }
     }

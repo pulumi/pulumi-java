@@ -53,8 +53,7 @@ public final class LoginRoutesResponse {
         public Builder logoutEndpoint(@Nullable String logoutEndpoint) {
             this.logoutEndpoint = logoutEndpoint;
             return this;
-        }
-        public LoginRoutesResponse build() {
+        }        public LoginRoutesResponse build() {
             return new LoginRoutesResponse(logoutEndpoint);
         }
     }

@@ -108,42 +108,34 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
             this.passwordLength = passwordLength;
             return this;
         }
-
         public Builder passwordLength(@Nullable Integer passwordLength) {
             this.passwordLength = Output.ofNullable(passwordLength);
             return this;
         }
-
         public Builder passwordResetRequired(@Nullable Output<Boolean> passwordResetRequired) {
             this.passwordResetRequired = passwordResetRequired;
             return this;
         }
-
         public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
             this.passwordResetRequired = Output.ofNullable(passwordResetRequired);
             return this;
         }
-
         public Builder pgpKey(Output<String> pgpKey) {
             this.pgpKey = Objects.requireNonNull(pgpKey);
             return this;
         }
-
         public Builder pgpKey(String pgpKey) {
             this.pgpKey = Output.of(Objects.requireNonNull(pgpKey));
             return this;
         }
-
         public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Output.of(Objects.requireNonNull(user));
             return this;
-        }
-        public UserLoginProfileArgs build() {
+        }        public UserLoginProfileArgs build() {
             return new UserLoginProfileArgs(passwordLength, passwordResetRequired, pgpKey, user);
         }
     }

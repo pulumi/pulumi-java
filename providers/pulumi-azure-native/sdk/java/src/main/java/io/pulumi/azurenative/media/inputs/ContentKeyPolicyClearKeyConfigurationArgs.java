@@ -61,12 +61,10 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.r
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
-        }
-        public ContentKeyPolicyClearKeyConfigurationArgs build() {
+        }        public ContentKeyPolicyClearKeyConfigurationArgs build() {
             return new ContentKeyPolicyClearKeyConfigurationArgs(odataType);
         }
     }

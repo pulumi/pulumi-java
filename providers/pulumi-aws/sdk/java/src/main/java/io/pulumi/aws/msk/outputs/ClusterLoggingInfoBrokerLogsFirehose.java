@@ -72,12 +72,10 @@ public final class ClusterLoggingInfoBrokerLogsFirehose {
             this.deliveryStream = deliveryStream;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ClusterLoggingInfoBrokerLogsFirehose build() {
+        }        public ClusterLoggingInfoBrokerLogsFirehose build() {
             return new ClusterLoggingInfoBrokerLogsFirehose(deliveryStream, enabled);
         }
     }

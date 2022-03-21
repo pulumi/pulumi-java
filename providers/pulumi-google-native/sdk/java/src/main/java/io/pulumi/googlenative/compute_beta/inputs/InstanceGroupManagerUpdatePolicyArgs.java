@@ -176,82 +176,66 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
             this.instanceRedistributionType = instanceRedistributionType;
             return this;
         }
-
         public Builder instanceRedistributionType(@Nullable InstanceGroupManagerUpdatePolicyInstanceRedistributionType instanceRedistributionType) {
             this.instanceRedistributionType = Output.ofNullable(instanceRedistributionType);
             return this;
         }
-
         public Builder maxSurge(@Nullable Output<FixedOrPercentArgs> maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }
-
         public Builder maxSurge(@Nullable FixedOrPercentArgs maxSurge) {
             this.maxSurge = Output.ofNullable(maxSurge);
             return this;
         }
-
         public Builder maxUnavailable(@Nullable Output<FixedOrPercentArgs> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
             this.maxUnavailable = Output.ofNullable(maxUnavailable);
             return this;
         }
-
         public Builder minReadySec(@Nullable Output<Integer> minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
-
         public Builder minReadySec(@Nullable Integer minReadySec) {
             this.minReadySec = Output.ofNullable(minReadySec);
             return this;
         }
-
         public Builder minimalAction(@Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction) {
             this.minimalAction = minimalAction;
             return this;
         }
-
         public Builder minimalAction(@Nullable InstanceGroupManagerUpdatePolicyMinimalAction minimalAction) {
             this.minimalAction = Output.ofNullable(minimalAction);
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(@Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
-
         public Builder mostDisruptiveAllowedAction(@Nullable InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Output.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
-
         public Builder replacementMethod(@Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
-
         public Builder replacementMethod(@Nullable InstanceGroupManagerUpdatePolicyReplacementMethod replacementMethod) {
             this.replacementMethod = Output.ofNullable(replacementMethod);
             return this;
         }
-
         public Builder type(@Nullable Output<InstanceGroupManagerUpdatePolicyType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable InstanceGroupManagerUpdatePolicyType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public InstanceGroupManagerUpdatePolicyArgs build() {
+        }        public InstanceGroupManagerUpdatePolicyArgs build() {
             return new InstanceGroupManagerUpdatePolicyArgs(instanceRedistributionType, maxSurge, maxUnavailable, minReadySec, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
         }
     }

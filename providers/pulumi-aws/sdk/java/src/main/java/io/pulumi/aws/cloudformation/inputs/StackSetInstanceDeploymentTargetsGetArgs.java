@@ -54,12 +54,13 @@ public final class StackSetInstanceDeploymentTargetsGetArgs extends io.pulumi.re
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = Output.ofNullable(organizationalUnitIds);
             return this;
         }
-        public StackSetInstanceDeploymentTargetsGetArgs build() {
+        public Builder organizationalUnitIds(String... organizationalUnitIds) {
+            return organizationalUnitIds(List.of(organizationalUnitIds));
+        }        public StackSetInstanceDeploymentTargetsGetArgs build() {
             return new StackSetInstanceDeploymentTargetsGetArgs(organizationalUnitIds);
         }
     }

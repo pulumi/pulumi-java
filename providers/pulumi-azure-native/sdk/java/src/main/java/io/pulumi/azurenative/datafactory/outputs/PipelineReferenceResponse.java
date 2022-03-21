@@ -87,17 +87,14 @@ public final class PipelineReferenceResponse {
             this.name = name;
             return this;
         }
-
         public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public PipelineReferenceResponse build() {
+        }        public PipelineReferenceResponse build() {
             return new PipelineReferenceResponse(name, referenceName, type);
         }
     }

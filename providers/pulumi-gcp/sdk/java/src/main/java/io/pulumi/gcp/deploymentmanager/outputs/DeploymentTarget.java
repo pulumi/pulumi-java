@@ -80,12 +80,13 @@ public final class DeploymentTarget {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder imports(@Nullable List<DeploymentTargetImport> imports) {
             this.imports = imports;
             return this;
         }
-        public DeploymentTarget build() {
+        public Builder imports(DeploymentTargetImport... imports) {
+            return imports(List.of(imports));
+        }        public DeploymentTarget build() {
             return new DeploymentTarget(config, imports);
         }
     }

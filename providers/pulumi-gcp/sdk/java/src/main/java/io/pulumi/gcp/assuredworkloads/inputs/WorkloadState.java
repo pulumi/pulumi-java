@@ -240,122 +240,104 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
             this.billingAccount = billingAccount;
             return this;
         }
-
         public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
-
         public Builder complianceRegime(@Nullable Output<String> complianceRegime) {
             this.complianceRegime = complianceRegime;
             return this;
         }
-
         public Builder complianceRegime(@Nullable String complianceRegime) {
             this.complianceRegime = Output.ofNullable(complianceRegime);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsGetArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
-
         public Builder kmsSettings(@Nullable WorkloadKmsSettingsGetArgs kmsSettings) {
             this.kmsSettings = Output.ofNullable(kmsSettings);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organization(@Nullable Output<String> organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = Output.ofNullable(organization);
             return this;
         }
-
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
-
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
             this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
             return this;
         }
-
         public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingGetArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
-
         public Builder resourceSettings(@Nullable List<WorkloadResourceSettingGetArgs> resourceSettings) {
             this.resourceSettings = Output.ofNullable(resourceSettings);
             return this;
         }
-
+        public Builder resourceSettings(WorkloadResourceSettingGetArgs... resourceSettings) {
+            return resourceSettings(List.of(resourceSettings));
+        }
         public Builder resources(@Nullable Output<List<WorkloadResourceGetArgs>> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable List<WorkloadResourceGetArgs> resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-        public WorkloadState build() {
+        public Builder resources(WorkloadResourceGetArgs... resources) {
+            return resources(List.of(resources));
+        }        public WorkloadState build() {
             return new WorkloadState(billingAccount, complianceRegime, createTime, displayName, kmsSettings, labels, location, name, organization, provisionedResourcesParent, resourceSettings, resources);
         }
     }

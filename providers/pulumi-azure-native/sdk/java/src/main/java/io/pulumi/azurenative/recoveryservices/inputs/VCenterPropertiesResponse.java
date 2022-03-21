@@ -224,57 +224,49 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
             this.discoveryStatus = discoveryStatus;
             return this;
         }
-
         public Builder fabricArmResourceName(@Nullable String fabricArmResourceName) {
             this.fabricArmResourceName = fabricArmResourceName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
-
+        public Builder healthErrors(HealthErrorResponse... healthErrors) {
+            return healthErrors(List.of(healthErrors));
+        }
         public Builder infrastructureId(@Nullable String infrastructureId) {
             this.infrastructureId = infrastructureId;
             return this;
         }
-
         public Builder internalId(@Nullable String internalId) {
             this.internalId = internalId;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
-
         public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = processServerId;
             return this;
         }
-
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
-        }
-        public VCenterPropertiesResponse build() {
+        }        public VCenterPropertiesResponse build() {
             return new VCenterPropertiesResponse(discoveryStatus, fabricArmResourceName, friendlyName, healthErrors, infrastructureId, internalId, ipAddress, lastHeartbeat, port, processServerId, runAsAccountId);
         }
     }

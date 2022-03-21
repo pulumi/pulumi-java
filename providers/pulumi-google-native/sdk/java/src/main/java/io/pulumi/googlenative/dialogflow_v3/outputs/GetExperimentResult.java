@@ -283,77 +283,65 @@ public final class GetExperimentResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder definition(GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder experimentLength(String experimentLength) {
             this.experimentLength = Objects.requireNonNull(experimentLength);
             return this;
         }
-
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder result(GoogleCloudDialogflowCxV3ExperimentResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
-
         public Builder rolloutConfig(GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig) {
             this.rolloutConfig = Objects.requireNonNull(rolloutConfig);
             return this;
         }
-
         public Builder rolloutFailureReason(String rolloutFailureReason) {
             this.rolloutFailureReason = Objects.requireNonNull(rolloutFailureReason);
             return this;
         }
-
         public Builder rolloutState(GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState) {
             this.rolloutState = Objects.requireNonNull(rolloutState);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder variantsHistory(List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
             this.variantsHistory = Objects.requireNonNull(variantsHistory);
             return this;
         }
-        public GetExperimentResult build() {
+        public Builder variantsHistory(GoogleCloudDialogflowCxV3VariantsHistoryResponse... variantsHistory) {
+            return variantsHistory(List.of(variantsHistory));
+        }        public GetExperimentResult build() {
             return new GetExperimentResult(createTime, definition, description, displayName, endTime, experimentLength, lastUpdateTime, name, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
         }
     }

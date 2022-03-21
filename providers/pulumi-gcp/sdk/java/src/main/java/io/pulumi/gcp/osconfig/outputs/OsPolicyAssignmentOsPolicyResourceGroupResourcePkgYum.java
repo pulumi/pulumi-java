@@ -51,8 +51,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(name);
         }
     }

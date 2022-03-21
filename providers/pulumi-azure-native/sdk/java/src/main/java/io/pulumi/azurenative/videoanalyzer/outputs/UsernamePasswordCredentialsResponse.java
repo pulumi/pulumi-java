@@ -87,17 +87,14 @@ public final class UsernamePasswordCredentialsResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public UsernamePasswordCredentialsResponse build() {
+        }        public UsernamePasswordCredentialsResponse build() {
             return new UsernamePasswordCredentialsResponse(password, type, username);
         }
     }

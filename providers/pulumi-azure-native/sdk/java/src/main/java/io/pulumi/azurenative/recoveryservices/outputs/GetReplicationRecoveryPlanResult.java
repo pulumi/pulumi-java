@@ -120,27 +120,22 @@ public final class GetReplicationRecoveryPlanResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(RecoveryPlanPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetReplicationRecoveryPlanResult build() {
+        }        public GetReplicationRecoveryPlanResult build() {
             return new GetReplicationRecoveryPlanResult(id, location, name, properties, type);
         }
     }

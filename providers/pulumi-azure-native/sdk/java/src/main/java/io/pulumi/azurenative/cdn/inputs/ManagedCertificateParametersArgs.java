@@ -61,12 +61,10 @@ public final class ManagedCertificateParametersArgs extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ManagedCertificateParametersArgs build() {
+        }        public ManagedCertificateParametersArgs build() {
             return new ManagedCertificateParametersArgs(type);
         }
     }

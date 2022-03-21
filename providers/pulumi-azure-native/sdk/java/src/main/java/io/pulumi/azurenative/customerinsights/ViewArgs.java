@@ -139,62 +139,50 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(String definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
-
         public Builder userId(@Nullable String userId) {
             this.userId = Output.ofNullable(userId);
             return this;
         }
-
         public Builder viewName(@Nullable Output<String> viewName) {
             this.viewName = viewName;
             return this;
         }
-
         public Builder viewName(@Nullable String viewName) {
             this.viewName = Output.ofNullable(viewName);
             return this;
-        }
-        public ViewArgs build() {
+        }        public ViewArgs build() {
             return new ViewArgs(definition, displayName, hubName, resourceGroupName, userId, viewName);
         }
     }

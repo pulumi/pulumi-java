@@ -75,22 +75,18 @@ public final class CertificateTemplatePredefinedValuesCaOptionsGetArgs extends i
             this.isCa = isCa;
             return this;
         }
-
         public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = Output.ofNullable(isCa);
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
-
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
             return this;
-        }
-        public CertificateTemplatePredefinedValuesCaOptionsGetArgs build() {
+        }        public CertificateTemplatePredefinedValuesCaOptionsGetArgs build() {
             return new CertificateTemplatePredefinedValuesCaOptionsGetArgs(isCa, maxIssuerPathLength);
         }
     }

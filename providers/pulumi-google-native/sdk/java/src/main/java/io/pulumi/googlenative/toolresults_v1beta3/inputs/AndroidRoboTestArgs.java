@@ -127,52 +127,42 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
             this.appInitialActivity = appInitialActivity;
             return this;
         }
-
         public Builder appInitialActivity(@Nullable String appInitialActivity) {
             this.appInitialActivity = Output.ofNullable(appInitialActivity);
             return this;
         }
-
         public Builder bootstrapPackageId(@Nullable Output<String> bootstrapPackageId) {
             this.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
-
         public Builder bootstrapPackageId(@Nullable String bootstrapPackageId) {
             this.bootstrapPackageId = Output.ofNullable(bootstrapPackageId);
             return this;
         }
-
         public Builder bootstrapRunnerClass(@Nullable Output<String> bootstrapRunnerClass) {
             this.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
-
         public Builder bootstrapRunnerClass(@Nullable String bootstrapRunnerClass) {
             this.bootstrapRunnerClass = Output.ofNullable(bootstrapRunnerClass);
             return this;
         }
-
         public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
             this.maxDepth = maxDepth;
             return this;
         }
-
         public Builder maxDepth(@Nullable Integer maxDepth) {
             this.maxDepth = Output.ofNullable(maxDepth);
             return this;
         }
-
         public Builder maxSteps(@Nullable Output<Integer> maxSteps) {
             this.maxSteps = maxSteps;
             return this;
         }
-
         public Builder maxSteps(@Nullable Integer maxSteps) {
             this.maxSteps = Output.ofNullable(maxSteps);
             return this;
-        }
-        public AndroidRoboTestArgs build() {
+        }        public AndroidRoboTestArgs build() {
             return new AndroidRoboTestArgs(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
         }
     }

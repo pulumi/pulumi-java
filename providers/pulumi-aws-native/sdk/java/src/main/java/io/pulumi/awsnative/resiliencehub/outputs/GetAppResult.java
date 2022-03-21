@@ -130,32 +130,29 @@ public final class GetAppResult {
             this.appArn = appArn;
             return this;
         }
-
         public Builder appTemplateBody(@Nullable String appTemplateBody) {
             this.appTemplateBody = appTemplateBody;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder resiliencyPolicyArn(@Nullable String resiliencyPolicyArn) {
             this.resiliencyPolicyArn = resiliencyPolicyArn;
             return this;
         }
-
         public Builder resourceMappings(@Nullable List<AppResourceMapping> resourceMappings) {
             this.resourceMappings = resourceMappings;
             return this;
         }
-
+        public Builder resourceMappings(AppResourceMapping... resourceMappings) {
+            return resourceMappings(List.of(resourceMappings));
+        }
         public Builder tags(@Nullable AppTagMap tags) {
             this.tags = tags;
             return this;
-        }
-        public GetAppResult build() {
+        }        public GetAppResult build() {
             return new GetAppResult(appArn, appTemplateBody, description, resiliencyPolicyArn, resourceMappings, tags);
         }
     }

@@ -60,8 +60,7 @@ public final class ExpressRouteCircuitPeeringIdResponse extends io.pulumi.resour
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public ExpressRouteCircuitPeeringIdResponse build() {
+        }        public ExpressRouteCircuitPeeringIdResponse build() {
             return new ExpressRouteCircuitPeeringIdResponse(id);
         }
     }

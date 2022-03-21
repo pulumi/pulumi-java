@@ -66,22 +66,18 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
             this.eventType = eventType;
             return this;
         }
-
         public Builder eventType(@Nullable String eventType) {
             this.eventType = Output.ofNullable(eventType);
             return this;
         }
-
         public Builder functionARN(@Nullable Output<String> functionARN) {
             this.functionARN = functionARN;
             return this;
         }
-
         public Builder functionARN(@Nullable String functionARN) {
             this.functionARN = Output.ofNullable(functionARN);
             return this;
-        }
-        public DistributionFunctionAssociationArgs build() {
+        }        public DistributionFunctionAssociationArgs build() {
             return new DistributionFunctionAssociationArgs(eventType, functionARN);
         }
     }

@@ -515,147 +515,118 @@ public final class GetTableResult {
             this.clustering = Objects.requireNonNull(clustering);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder defaultCollation(String defaultCollation) {
             this.defaultCollation = Objects.requireNonNull(defaultCollation);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder encryptionConfiguration(EncryptionConfigurationResponse encryptionConfiguration) {
             this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder externalDataConfiguration(ExternalDataConfigurationResponse externalDataConfiguration) {
             this.externalDataConfiguration = Objects.requireNonNull(externalDataConfiguration);
             return this;
         }
-
         public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder materializedView(MaterializedViewDefinitionResponse materializedView) {
             this.materializedView = Objects.requireNonNull(materializedView);
             return this;
         }
-
         public Builder model(ModelDefinitionResponse model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public Builder numBytes(String numBytes) {
             this.numBytes = Objects.requireNonNull(numBytes);
             return this;
         }
-
         public Builder numLongTermBytes(String numLongTermBytes) {
             this.numLongTermBytes = Objects.requireNonNull(numLongTermBytes);
             return this;
         }
-
         public Builder numPhysicalBytes(String numPhysicalBytes) {
             this.numPhysicalBytes = Objects.requireNonNull(numPhysicalBytes);
             return this;
         }
-
         public Builder numRows(String numRows) {
             this.numRows = Objects.requireNonNull(numRows);
             return this;
         }
-
         public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
             this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
             return this;
         }
-
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
-
         public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder snapshotDefinition(SnapshotDefinitionResponse snapshotDefinition) {
             this.snapshotDefinition = Objects.requireNonNull(snapshotDefinition);
             return this;
         }
-
         public Builder streamingBuffer(StreamingbufferResponse streamingBuffer) {
             this.streamingBuffer = Objects.requireNonNull(streamingBuffer);
             return this;
         }
-
         public Builder tableReference(TableReferenceResponse tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
-
         public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
             this.timePartitioning = Objects.requireNonNull(timePartitioning);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder view(ViewDefinitionResponse view) {
             this.view = Objects.requireNonNull(view);
             return this;
-        }
-        public GetTableResult build() {
+        }        public GetTableResult build() {
             return new GetTableResult(clustering, creationTime, defaultCollation, description, encryptionConfiguration, etag, expirationTime, externalDataConfiguration, friendlyName, kind, labels, lastModifiedTime, location, materializedView, model, numBytes, numLongTermBytes, numPhysicalBytes, numRows, rangePartitioning, requirePartitionFilter, schema, selfLink, snapshotDefinition, streamingBuffer, tableReference, timePartitioning, type, view);
         }
     }

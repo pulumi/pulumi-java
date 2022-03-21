@@ -80,27 +80,22 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
             this.cpu = cpu;
             return this;
         }
-
         public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
-
         public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
-
         public Builder minCount(@Nullable Integer minCount) {
             this.minCount = minCount;
             return this;
         }
-
         public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = storageGb;
             return this;
-        }
-        public EnvironmentConfigWorkloadsConfigWorker build() {
+        }        public EnvironmentConfigWorkloadsConfigWorker build() {
             return new EnvironmentConfigWorkloadsConfigWorker(cpu, maxCount, memoryGb, minCount, storageGb);
         }
     }

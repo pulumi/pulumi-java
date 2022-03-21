@@ -105,42 +105,40 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             this.analyzerName = analyzerName;
             return this;
         }
-
         public Builder analyzerName(@Nullable String analyzerName) {
             this.analyzerName = Output.ofNullable(analyzerName);
             return this;
         }
-
         public Builder archiveRules(@Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules) {
             this.archiveRules = archiveRules;
             return this;
         }
-
         public Builder archiveRules(@Nullable List<AnalyzerArchiveRuleArgs> archiveRules) {
             this.archiveRules = Output.ofNullable(archiveRules);
             return this;
         }
-
+        public Builder archiveRules(AnalyzerArchiveRuleArgs... archiveRules) {
+            return archiveRules(List.of(archiveRules));
+        }
         public Builder tags(@Nullable Output<List<AnalyzerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<AnalyzerTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(AnalyzerTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AnalyzerArgs build() {
+        }        public AnalyzerArgs build() {
             return new AnalyzerArgs(analyzerName, archiveRules, tags, type);
         }
     }

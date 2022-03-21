@@ -103,22 +103,18 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResou
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
-
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
-
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
-        }
-        public DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec build() {
+        }        public DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec build() {
             return new DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);
         }
     }

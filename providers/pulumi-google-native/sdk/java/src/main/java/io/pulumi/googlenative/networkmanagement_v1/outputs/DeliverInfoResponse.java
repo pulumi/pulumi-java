@@ -69,12 +69,10 @@ public final class DeliverInfoResponse {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public DeliverInfoResponse build() {
+        }        public DeliverInfoResponse build() {
             return new DeliverInfoResponse(resourceUri, target);
         }
     }

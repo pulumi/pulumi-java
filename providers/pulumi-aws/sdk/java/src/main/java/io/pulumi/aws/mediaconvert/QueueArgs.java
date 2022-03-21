@@ -140,62 +140,50 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder pricingPlan(@Nullable Output<String> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
-
         public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
-
         public Builder reservationPlanSettings(@Nullable Output<QueueReservationPlanSettingsArgs> reservationPlanSettings) {
             this.reservationPlanSettings = reservationPlanSettings;
             return this;
         }
-
         public Builder reservationPlanSettings(@Nullable QueueReservationPlanSettingsArgs reservationPlanSettings) {
             this.reservationPlanSettings = Output.ofNullable(reservationPlanSettings);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public QueueArgs build() {
+        }        public QueueArgs build() {
             return new QueueArgs(description, name, pricingPlan, reservationPlanSettings, status, tags);
         }
     }

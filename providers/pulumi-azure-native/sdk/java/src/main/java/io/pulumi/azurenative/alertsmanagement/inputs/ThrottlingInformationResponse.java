@@ -60,8 +60,7 @@ public final class ThrottlingInformationResponse extends io.pulumi.resources.Inv
         public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
-        }
-        public ThrottlingInformationResponse build() {
+        }        public ThrottlingInformationResponse build() {
             return new ThrottlingInformationResponse(duration);
         }
     }

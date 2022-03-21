@@ -163,37 +163,36 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder dependsOn(List<PipelineReferenceResponse> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(PipelineReferenceResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
-
         public Builder runDimension(String runDimension) {
             this.runDimension = Objects.requireNonNull(runDimension);
             return this;
         }
-
         public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ChainingTriggerResponse build() {
+        }        public ChainingTriggerResponse build() {
             return new ChainingTriggerResponse(annotations, dependsOn, description, pipeline, runDimension, runtimeState, type);
         }
     }

@@ -120,17 +120,14 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
             this.mode = mode;
             return this;
         }
-
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
-
         public Builder sourceUriPrefix(@Nullable String sourceUriPrefix) {
             this.sourceUriPrefix = sourceUriPrefix;
             return this;
-        }
-        public TableExternalDataConfigurationHivePartitioningOptions build() {
+        }        public TableExternalDataConfigurationHivePartitioningOptions build() {
             return new TableExternalDataConfigurationHivePartitioningOptions(mode, requirePartitionFilter, sourceUriPrefix);
         }
     }

@@ -97,17 +97,17 @@ public final class TransportStreamFormatResponse extends io.pulumi.resources.Inv
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
-        public TransportStreamFormatResponse build() {
+        public Builder outputFiles(OutputFileResponse... outputFiles) {
+            return outputFiles(List.of(outputFiles));
+        }        public TransportStreamFormatResponse build() {
             return new TransportStreamFormatResponse(filenamePattern, odataType, outputFiles);
         }
     }

@@ -43,8 +43,7 @@ public final class GetOrganizationPolicyBooleanPolicy {
         public Builder enforced(Boolean enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
-        }
-        public GetOrganizationPolicyBooleanPolicy build() {
+        }        public GetOrganizationPolicyBooleanPolicy build() {
             return new GetOrganizationPolicyBooleanPolicy(enforced);
         }
     }

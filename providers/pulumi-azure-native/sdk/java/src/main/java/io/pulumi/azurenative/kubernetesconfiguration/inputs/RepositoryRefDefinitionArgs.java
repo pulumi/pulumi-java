@@ -110,42 +110,34 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
             this.branch = branch;
             return this;
         }
-
         public Builder branch(@Nullable String branch) {
             this.branch = Output.ofNullable(branch);
             return this;
         }
-
         public Builder commit(@Nullable Output<String> commit) {
             this.commit = commit;
             return this;
         }
-
         public Builder commit(@Nullable String commit) {
             this.commit = Output.ofNullable(commit);
             return this;
         }
-
         public Builder semver(@Nullable Output<String> semver) {
             this.semver = semver;
             return this;
         }
-
         public Builder semver(@Nullable String semver) {
             this.semver = Output.ofNullable(semver);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public RepositoryRefDefinitionArgs build() {
+        }        public RepositoryRefDefinitionArgs build() {
             return new RepositoryRefDefinitionArgs(branch, commit, semver, tag);
         }
     }

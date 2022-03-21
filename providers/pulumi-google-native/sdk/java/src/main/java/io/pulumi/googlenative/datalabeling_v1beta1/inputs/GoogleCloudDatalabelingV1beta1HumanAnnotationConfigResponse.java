@@ -190,47 +190,41 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
             this.annotatedDatasetDescription = Objects.requireNonNull(annotatedDatasetDescription);
             return this;
         }
-
         public Builder annotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
             this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName);
             return this;
         }
-
         public Builder contributorEmails(List<String> contributorEmails) {
             this.contributorEmails = Objects.requireNonNull(contributorEmails);
             return this;
         }
-
+        public Builder contributorEmails(String... contributorEmails) {
+            return contributorEmails(List.of(contributorEmails));
+        }
         public Builder instruction(String instruction) {
             this.instruction = Objects.requireNonNull(instruction);
             return this;
         }
-
         public Builder labelGroup(String labelGroup) {
             this.labelGroup = Objects.requireNonNull(labelGroup);
             return this;
         }
-
         public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
-
         public Builder questionDuration(String questionDuration) {
             this.questionDuration = Objects.requireNonNull(questionDuration);
             return this;
         }
-
         public Builder replicaCount(Integer replicaCount) {
             this.replicaCount = Objects.requireNonNull(replicaCount);
             return this;
         }
-
         public Builder userEmailAddress(String userEmailAddress) {
             this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(annotatedDatasetDescription, annotatedDatasetDisplayName, contributorEmails, instruction, labelGroup, languageCode, questionDuration, replicaCount, userEmailAddress);
         }
     }

@@ -86,17 +86,14 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
             this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
             return this;
         }
-
         public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
-
         public Builder answerAggregationType(String answerAggregationType) {
             this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(allowMultiLabel, annotationSpecSet, answerAggregationType);
         }
     }

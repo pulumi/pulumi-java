@@ -78,22 +78,18 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
             this.ekmConnectionKeyPath = ekmConnectionKeyPath;
             return this;
         }
-
         public Builder ekmConnectionKeyPath(@Nullable String ekmConnectionKeyPath) {
             this.ekmConnectionKeyPath = Output.ofNullable(ekmConnectionKeyPath);
             return this;
         }
-
         public Builder externalKeyUri(@Nullable Output<String> externalKeyUri) {
             this.externalKeyUri = externalKeyUri;
             return this;
         }
-
         public Builder externalKeyUri(@Nullable String externalKeyUri) {
             this.externalKeyUri = Output.ofNullable(externalKeyUri);
             return this;
-        }
-        public ExternalProtectionLevelOptionsArgs build() {
+        }        public ExternalProtectionLevelOptionsArgs build() {
             return new ExternalProtectionLevelOptionsArgs(ekmConnectionKeyPath, externalKeyUri);
         }
     }

@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
             this.cells = cells;
             return this;
         }
-
         public Builder cells(@Nullable List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs> cells) {
             this.cells = Output.ofNullable(cells);
             return this;
         }
-
+        public Builder cells(GoogleCloudDialogflowV2IntentMessageTableCardCellArgs... cells) {
+            return cells(List.of(cells));
+        }
         public Builder dividerAfter(@Nullable Output<Boolean> dividerAfter) {
             this.dividerAfter = dividerAfter;
             return this;
         }
-
         public Builder dividerAfter(@Nullable Boolean dividerAfter) {
             this.dividerAfter = Output.ofNullable(dividerAfter);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageTableCardRowArgs build() {
+        }        public GoogleCloudDialogflowV2IntentMessageTableCardRowArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardRowArgs(cells, dividerAfter);
         }
     }

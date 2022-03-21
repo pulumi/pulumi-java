@@ -151,72 +151,58 @@ public final class CertificateAuthoritySubject {
             this.commonName = commonName;
             return this;
         }
-
         public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
-
         public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
             this.distinguishedNameQualifier = distinguishedNameQualifier;
             return this;
         }
-
         public Builder generationQualifier(@Nullable String generationQualifier) {
             this.generationQualifier = generationQualifier;
             return this;
         }
-
         public Builder givenName(@Nullable String givenName) {
             this.givenName = givenName;
             return this;
         }
-
         public Builder initials(@Nullable String initials) {
             this.initials = initials;
             return this;
         }
-
         public Builder locality(@Nullable String locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
         }
-
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
-
         public Builder pseudonym(@Nullable String pseudonym) {
             this.pseudonym = pseudonym;
             return this;
         }
-
         public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder surname(@Nullable String surname) {
             this.surname = surname;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public CertificateAuthoritySubject build() {
+        }        public CertificateAuthoritySubject build() {
             return new CertificateAuthoritySubject(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, serialNumber, state, surname, title);
         }
     }

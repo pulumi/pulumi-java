@@ -90,32 +90,26 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
             this.cents = cents;
             return this;
         }
-
         public Builder cents(@Nullable Integer cents) {
             this.cents = Output.ofNullable(cents);
             return this;
         }
-
         public Builder dollars(@Nullable Output<Integer> dollars) {
             this.dollars = dollars;
             return this;
         }
-
         public Builder dollars(@Nullable Integer dollars) {
             this.dollars = Output.ofNullable(dollars);
             return this;
         }
-
         public Builder tenthFractionsOfACent(@Nullable Output<Integer> tenthFractionsOfACent) {
             this.tenthFractionsOfACent = tenthFractionsOfACent;
             return this;
         }
-
         public Builder tenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
             this.tenthFractionsOfACent = Output.ofNullable(tenthFractionsOfACent);
             return this;
-        }
-        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs build() {
+        }        public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs build() {
             return new FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs(cents, dollars, tenthFractionsOfACent);
         }
     }

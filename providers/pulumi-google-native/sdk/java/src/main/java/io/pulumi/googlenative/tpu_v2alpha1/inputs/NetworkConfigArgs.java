@@ -111,42 +111,34 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.canIpForward = canIpForward;
             return this;
         }
-
         public Builder canIpForward(@Nullable Boolean canIpForward) {
             this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
-
         public Builder enableExternalIps(@Nullable Output<Boolean> enableExternalIps) {
             this.enableExternalIps = enableExternalIps;
             return this;
         }
-
         public Builder enableExternalIps(@Nullable Boolean enableExternalIps) {
             this.enableExternalIps = Output.ofNullable(enableExternalIps);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
-        }
-        public NetworkConfigArgs build() {
+        }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(canIpForward, enableExternalIps, network, subnetwork);
         }
     }

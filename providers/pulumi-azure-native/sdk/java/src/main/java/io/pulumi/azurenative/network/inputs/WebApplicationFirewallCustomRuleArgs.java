@@ -132,52 +132,45 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(Either<String,WebApplicationFirewallAction> action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
-
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
             this.matchConditions = Output.of(Objects.requireNonNull(matchConditions));
             return this;
         }
-
+        public Builder matchConditions(MatchConditionArgs... matchConditions) {
+            return matchConditions(List.of(matchConditions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
-
         public Builder ruleType(Output<Either<String,WebApplicationFirewallRuleType>> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public Builder ruleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
             this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
-        }
-        public WebApplicationFirewallCustomRuleArgs build() {
+        }        public WebApplicationFirewallCustomRuleArgs build() {
             return new WebApplicationFirewallCustomRuleArgs(action, matchConditions, name, priority, ruleType);
         }
     }

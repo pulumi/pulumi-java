@@ -96,32 +96,29 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
             this.cpuCount = cpuCount;
             return this;
         }
-
         public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = Output.ofNullable(cpuCount);
             return this;
         }
-
         public Builder disks(@Nullable Output<List<InstanceDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<InstanceDiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(InstanceDiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder ramSizeInGb(@Nullable Output<Integer> ramSizeInGb) {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }
-
         public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
             this.ramSizeInGb = Output.ofNullable(ramSizeInGb);
             return this;
-        }
-        public InstanceHardwareArgs build() {
+        }        public InstanceHardwareArgs build() {
             return new InstanceHardwareArgs(cpuCount, disks, ramSizeInGb);
         }
     }

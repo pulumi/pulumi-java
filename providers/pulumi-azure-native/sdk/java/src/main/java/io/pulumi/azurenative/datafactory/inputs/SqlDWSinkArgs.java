@@ -307,162 +307,130 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.allowCopyCommand = allowCopyCommand;
             return this;
         }
-
         public Builder allowCopyCommand(@Nullable Object allowCopyCommand) {
             this.allowCopyCommand = Output.ofNullable(allowCopyCommand);
             return this;
         }
-
         public Builder allowPolyBase(@Nullable Output<Object> allowPolyBase) {
             this.allowPolyBase = allowPolyBase;
             return this;
         }
-
         public Builder allowPolyBase(@Nullable Object allowPolyBase) {
             this.allowPolyBase = Output.ofNullable(allowPolyBase);
             return this;
         }
-
         public Builder copyCommandSettings(@Nullable Output<DWCopyCommandSettingsArgs> copyCommandSettings) {
             this.copyCommandSettings = copyCommandSettings;
             return this;
         }
-
         public Builder copyCommandSettings(@Nullable DWCopyCommandSettingsArgs copyCommandSettings) {
             this.copyCommandSettings = Output.ofNullable(copyCommandSettings);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder polyBaseSettings(@Nullable Output<PolybaseSettingsArgs> polyBaseSettings) {
             this.polyBaseSettings = polyBaseSettings;
             return this;
         }
-
         public Builder polyBaseSettings(@Nullable PolybaseSettingsArgs polyBaseSettings) {
             this.polyBaseSettings = Output.ofNullable(polyBaseSettings);
             return this;
         }
-
         public Builder preCopyScript(@Nullable Output<Object> preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
-
         public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = Output.ofNullable(preCopyScript);
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
             return this;
         }
-
         public Builder sqlWriterUseTableLock(@Nullable Output<Object> sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
-
         public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = Output.ofNullable(sqlWriterUseTableLock);
             return this;
         }
-
         public Builder tableOption(@Nullable Output<Object> tableOption) {
             this.tableOption = tableOption;
             return this;
         }
-
         public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = Output.ofNullable(tableOption);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder upsertSettings(@Nullable Output<SqlDWUpsertSettingsArgs> upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
-
         public Builder upsertSettings(@Nullable SqlDWUpsertSettingsArgs upsertSettings) {
             this.upsertSettings = Output.ofNullable(upsertSettings);
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Output.ofNullable(writeBatchSize);
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
             return this;
         }
-
         public Builder writeBehavior(@Nullable Output<Object> writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = Output.ofNullable(writeBehavior);
             return this;
-        }
-        public SqlDWSinkArgs build() {
+        }        public SqlDWSinkArgs build() {
             return new SqlDWSinkArgs(allowCopyCommand, allowPolyBase, copyCommandSettings, disableMetricsCollection, maxConcurrentConnections, polyBaseSettings, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterUseTableLock, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }
     }

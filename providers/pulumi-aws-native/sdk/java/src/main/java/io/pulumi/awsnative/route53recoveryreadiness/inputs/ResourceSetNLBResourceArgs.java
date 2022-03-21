@@ -61,12 +61,10 @@ public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.Resour
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
-        }
-        public ResourceSetNLBResourceArgs build() {
+        }        public ResourceSetNLBResourceArgs build() {
             return new ResourceSetNLBResourceArgs(arn);
         }
     }

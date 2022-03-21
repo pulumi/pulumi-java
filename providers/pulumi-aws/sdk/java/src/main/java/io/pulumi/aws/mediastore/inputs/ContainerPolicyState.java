@@ -74,22 +74,18 @@ public final class ContainerPolicyState extends io.pulumi.resources.ResourceArgs
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public ContainerPolicyState build() {
+        }        public ContainerPolicyState build() {
             return new ContainerPolicyState(containerName, policy);
         }
     }

@@ -87,17 +87,14 @@ public final class TimerTriggerResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public TimerTriggerResponse build() {
+        }        public TimerTriggerResponse build() {
             return new TimerTriggerResponse(name, schedule, status);
         }
     }

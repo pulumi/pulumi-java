@@ -92,32 +92,26 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             this.checkpointConfiguration = checkpointConfiguration;
             return this;
         }
-
         public Builder checkpointConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs checkpointConfiguration) {
             this.checkpointConfiguration = Output.ofNullable(checkpointConfiguration);
             return this;
         }
-
         public Builder monitoringConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration) {
             this.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
-
         public Builder monitoringConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs monitoringConfiguration) {
             this.monitoringConfiguration = Output.ofNullable(monitoringConfiguration);
             return this;
         }
-
         public Builder parallelismConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
-
         public Builder parallelismConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs parallelismConfiguration) {
             this.parallelismConfiguration = Output.ofNullable(parallelismConfiguration);
             return this;
-        }
-        public ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs build() {
+        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs(checkpointConfiguration, monitoringConfiguration, parallelismConfiguration);
         }
     }

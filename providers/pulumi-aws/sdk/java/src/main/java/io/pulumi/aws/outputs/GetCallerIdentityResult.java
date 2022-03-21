@@ -101,22 +101,18 @@ public final class GetCallerIdentityResult {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
-        }
-        public GetCallerIdentityResult build() {
+        }        public GetCallerIdentityResult build() {
             return new GetCallerIdentityResult(accountId, arn, id, userId);
         }
     }

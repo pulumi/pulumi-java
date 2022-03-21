@@ -124,52 +124,42 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
             this.authScheme = authScheme;
             return this;
         }
-
         public Builder authScheme(@Nullable DBProxyAuthFormatAuthScheme authScheme) {
             this.authScheme = Output.ofNullable(authScheme);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder iAMAuth(@Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth) {
             this.iAMAuth = iAMAuth;
             return this;
         }
-
         public Builder iAMAuth(@Nullable DBProxyAuthFormatIAMAuth iAMAuth) {
             this.iAMAuth = Output.ofNullable(iAMAuth);
             return this;
         }
-
         public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
-
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
-
         public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = Output.ofNullable(userName);
             return this;
-        }
-        public DBProxyAuthFormatArgs build() {
+        }        public DBProxyAuthFormatArgs build() {
             return new DBProxyAuthFormatArgs(authScheme, description, iAMAuth, secretArn, userName);
         }
     }

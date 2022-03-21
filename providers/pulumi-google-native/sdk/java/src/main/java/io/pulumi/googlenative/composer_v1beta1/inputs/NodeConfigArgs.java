@@ -226,112 +226,96 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder enableIpMasqAgent(@Nullable Output<Boolean> enableIpMasqAgent) {
             this.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
-
         public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
             this.enableIpMasqAgent = Output.ofNullable(enableIpMasqAgent);
             return this;
         }
-
         public Builder ipAllocationPolicy(@Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
-
         public Builder ipAllocationPolicy(@Nullable IPAllocationPolicyArgs ipAllocationPolicy) {
             this.ipAllocationPolicy = Output.ofNullable(ipAllocationPolicy);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = Output.ofNullable(maxPodsPerNode);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
-
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
-
+        public Builder oauthScopes(String... oauthScopes) {
+            return oauthScopes(List.of(oauthScopes));
+        }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public NodeConfigArgs build() {
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }        public NodeConfigArgs build() {
             return new NodeConfigArgs(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, location, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags);
         }
     }

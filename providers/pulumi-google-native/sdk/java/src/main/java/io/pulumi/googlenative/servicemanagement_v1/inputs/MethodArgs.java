@@ -162,72 +162,61 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(OptionArgs... options) {
+            return options(List.of(options));
+        }
         public Builder requestStreaming(@Nullable Output<Boolean> requestStreaming) {
             this.requestStreaming = requestStreaming;
             return this;
         }
-
         public Builder requestStreaming(@Nullable Boolean requestStreaming) {
             this.requestStreaming = Output.ofNullable(requestStreaming);
             return this;
         }
-
         public Builder requestTypeUrl(@Nullable Output<String> requestTypeUrl) {
             this.requestTypeUrl = requestTypeUrl;
             return this;
         }
-
         public Builder requestTypeUrl(@Nullable String requestTypeUrl) {
             this.requestTypeUrl = Output.ofNullable(requestTypeUrl);
             return this;
         }
-
         public Builder responseStreaming(@Nullable Output<Boolean> responseStreaming) {
             this.responseStreaming = responseStreaming;
             return this;
         }
-
         public Builder responseStreaming(@Nullable Boolean responseStreaming) {
             this.responseStreaming = Output.ofNullable(responseStreaming);
             return this;
         }
-
         public Builder responseTypeUrl(@Nullable Output<String> responseTypeUrl) {
             this.responseTypeUrl = responseTypeUrl;
             return this;
         }
-
         public Builder responseTypeUrl(@Nullable String responseTypeUrl) {
             this.responseTypeUrl = Output.ofNullable(responseTypeUrl);
             return this;
         }
-
         public Builder syntax(@Nullable Output<MethodSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
-
         public Builder syntax(@Nullable MethodSyntax syntax) {
             this.syntax = Output.ofNullable(syntax);
             return this;
-        }
-        public MethodArgs build() {
+        }        public MethodArgs build() {
             return new MethodArgs(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
         }
     }

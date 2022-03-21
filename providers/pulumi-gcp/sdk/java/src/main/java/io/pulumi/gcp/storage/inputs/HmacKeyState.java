@@ -157,72 +157,58 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             this.accessId = accessId;
             return this;
         }
-
         public Builder accessId(@Nullable String accessId) {
             this.accessId = Output.ofNullable(accessId);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
-
         public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Output.ofNullable(timeCreated);
             return this;
         }
-
         public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
-
         public Builder updated(@Nullable String updated) {
             this.updated = Output.ofNullable(updated);
             return this;
-        }
-        public HmacKeyState build() {
+        }        public HmacKeyState build() {
             return new HmacKeyState(accessId, project, secret, serviceAccountEmail, state, timeCreated, updated);
         }
     }

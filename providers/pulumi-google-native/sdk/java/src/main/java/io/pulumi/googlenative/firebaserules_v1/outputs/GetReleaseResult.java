@@ -101,22 +101,18 @@ public final class GetReleaseResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder rulesetName(String rulesetName) {
             this.rulesetName = Objects.requireNonNull(rulesetName);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetReleaseResult build() {
+        }        public GetReleaseResult build() {
             return new GetReleaseResult(createTime, name, rulesetName, updateTime);
         }
     }

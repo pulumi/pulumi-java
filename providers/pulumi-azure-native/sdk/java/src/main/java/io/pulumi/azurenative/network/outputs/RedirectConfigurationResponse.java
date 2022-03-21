@@ -151,37 +151,30 @@ public final class RedirectConfigurationResponse {
             this.customFragment = customFragment;
             return this;
         }
-
         public Builder customHost(@Nullable String customHost) {
             this.customHost = customHost;
             return this;
         }
-
         public Builder customPath(@Nullable String customPath) {
             this.customPath = customPath;
             return this;
         }
-
         public Builder customQueryString(@Nullable String customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder redirectProtocol(@Nullable String redirectProtocol) {
             this.redirectProtocol = redirectProtocol;
             return this;
         }
-
         public Builder redirectType(@Nullable String redirectType) {
             this.redirectType = redirectType;
             return this;
-        }
-        public RedirectConfigurationResponse build() {
+        }        public RedirectConfigurationResponse build() {
             return new RedirectConfigurationResponse(customFragment, customHost, customPath, customQueryString, odataType, redirectProtocol, redirectType);
         }
     }

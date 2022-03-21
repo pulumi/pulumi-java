@@ -122,27 +122,22 @@ public final class BqmlIterationResultResponse extends io.pulumi.resources.Invok
             this.durationMs = Objects.requireNonNull(durationMs);
             return this;
         }
-
         public Builder evalLoss(Double evalLoss) {
             this.evalLoss = Objects.requireNonNull(evalLoss);
             return this;
         }
-
         public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
-
         public Builder learnRate(Double learnRate) {
             this.learnRate = Objects.requireNonNull(learnRate);
             return this;
         }
-
         public Builder trainingLoss(Double trainingLoss) {
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
-        }
-        public BqmlIterationResultResponse build() {
+        }        public BqmlIterationResultResponse build() {
             return new BqmlIterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
         }
     }

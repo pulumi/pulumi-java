@@ -53,7 +53,9 @@ public final class FilterResponse {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-        public FilterResponse build() {
+        public Builder eventType(String... eventType) {
+            return eventType(List.of(eventType));
+        }        public FilterResponse build() {
             return new FilterResponse(eventType);
         }
     }

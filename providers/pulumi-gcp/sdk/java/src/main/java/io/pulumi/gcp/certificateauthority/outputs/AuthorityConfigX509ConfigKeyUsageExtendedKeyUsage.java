@@ -135,32 +135,26 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage {
             this.clientAuth = clientAuth;
             return this;
         }
-
         public Builder codeSigning(@Nullable Boolean codeSigning) {
             this.codeSigning = codeSigning;
             return this;
         }
-
         public Builder emailProtection(@Nullable Boolean emailProtection) {
             this.emailProtection = emailProtection;
             return this;
         }
-
         public Builder ocspSigning(@Nullable Boolean ocspSigning) {
             this.ocspSigning = ocspSigning;
             return this;
         }
-
         public Builder serverAuth(@Nullable Boolean serverAuth) {
             this.serverAuth = serverAuth;
             return this;
         }
-
         public Builder timeStamping(@Nullable Boolean timeStamping) {
             this.timeStamping = timeStamping;
             return this;
-        }
-        public AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage build() {
+        }        public AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage build() {
             return new AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }
     }

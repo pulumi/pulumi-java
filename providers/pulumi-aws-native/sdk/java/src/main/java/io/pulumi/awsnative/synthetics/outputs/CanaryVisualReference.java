@@ -72,12 +72,13 @@ public final class CanaryVisualReference {
             this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
             return this;
         }
-
         public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshot> baseScreenshots) {
             this.baseScreenshots = baseScreenshots;
             return this;
         }
-        public CanaryVisualReference build() {
+        public Builder baseScreenshots(CanaryBaseScreenshot... baseScreenshots) {
+            return baseScreenshots(List.of(baseScreenshots));
+        }        public CanaryVisualReference build() {
             return new CanaryVisualReference(baseCanaryRunId, baseScreenshots);
         }
     }

@@ -92,17 +92,14 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse build() {
+        }        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse build() {
             return new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(displayName, resourceId, resourceType);
         }
     }

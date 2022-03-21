@@ -156,37 +156,30 @@ public final class BucketReplicationConfigurationRuleDestination {
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder metrics(@Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics) {
             this.metrics = metrics;
             return this;
         }
-
         public Builder replicaKmsKeyId(@Nullable String replicaKmsKeyId) {
             this.replicaKmsKeyId = replicaKmsKeyId;
             return this;
         }
-
         public Builder replicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
-
         public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
-        }
-        public BucketReplicationConfigurationRuleDestination build() {
+        }        public BucketReplicationConfigurationRuleDestination build() {
             return new BucketReplicationConfigurationRuleDestination(accessControlTranslation, accountId, bucket, metrics, replicaKmsKeyId, replicationTime, storageClass);
         }
     }

@@ -69,12 +69,10 @@ public final class UserDefinedFunctionResourceUri {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
-        }
-        public UserDefinedFunctionResourceUri build() {
+        }        public UserDefinedFunctionResourceUri build() {
             return new UserDefinedFunctionResourceUri(resourceType, uri);
         }
     }

@@ -156,37 +156,30 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
             this.azureSubscriptionId = Objects.requireNonNull(azureSubscriptionId);
             return this;
         }
-
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
-
         public Builder elasticsearchRegion(String elasticsearchRegion) {
             this.elasticsearchRegion = Objects.requireNonNull(elasticsearchRegion);
             return this;
         }
-
         public Builder elasticsearchServiceUrl(String elasticsearchServiceUrl) {
             this.elasticsearchServiceUrl = Objects.requireNonNull(elasticsearchServiceUrl);
             return this;
         }
-
         public Builder kibanaServiceUrl(String kibanaServiceUrl) {
             this.kibanaServiceUrl = Objects.requireNonNull(kibanaServiceUrl);
             return this;
         }
-
         public Builder kibanaSsoUrl(String kibanaSsoUrl) {
             this.kibanaSsoUrl = Objects.requireNonNull(kibanaSsoUrl);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ElasticCloudDeploymentResponse build() {
+        }        public ElasticCloudDeploymentResponse build() {
             return new ElasticCloudDeploymentResponse(azureSubscriptionId, deploymentId, elasticsearchRegion, elasticsearchServiceUrl, kibanaServiceUrl, kibanaSsoUrl, name);
         }
     }

@@ -55,12 +55,10 @@ public final class VpcConnectorTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public VpcConnectorTag build() {
+        }        public VpcConnectorTag build() {
             return new VpcConnectorTag(key, value);
         }
     }

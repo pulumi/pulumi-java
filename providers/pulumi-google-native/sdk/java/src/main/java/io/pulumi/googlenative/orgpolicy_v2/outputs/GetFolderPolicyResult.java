@@ -70,12 +70,10 @@ public final class GetFolderPolicyResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder spec(GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
-        }
-        public GetFolderPolicyResult build() {
+        }        public GetFolderPolicyResult build() {
             return new GetFolderPolicyResult(name, spec);
         }
     }

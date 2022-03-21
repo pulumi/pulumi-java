@@ -241,122 +241,98 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
-
         public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
             this.deleteFilesAfterCompletion = Output.ofNullable(deleteFilesAfterCompletion);
             return this;
         }
-
         public Builder disableChunking(@Nullable Output<Object> disableChunking) {
             this.disableChunking = disableChunking;
             return this;
         }
-
         public Builder disableChunking(@Nullable Object disableChunking) {
             this.disableChunking = Output.ofNullable(disableChunking);
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = Output.ofNullable(enablePartitionDiscovery);
             return this;
         }
-
         public Builder fileListPath(@Nullable Output<Object> fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
-
         public Builder fileListPath(@Nullable Object fileListPath) {
             this.fileListPath = Output.ofNullable(fileListPath);
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
-
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = Output.ofNullable(partitionRootPath);
             return this;
         }
-
         public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
-
         public Builder recursive(@Nullable Object recursive) {
             this.recursive = Output.ofNullable(recursive);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder useBinaryTransfer(@Nullable Output<Boolean> useBinaryTransfer) {
             this.useBinaryTransfer = useBinaryTransfer;
             return this;
         }
-
         public Builder useBinaryTransfer(@Nullable Boolean useBinaryTransfer) {
             this.useBinaryTransfer = Output.ofNullable(useBinaryTransfer);
             return this;
         }
-
         public Builder wildcardFileName(@Nullable Output<Object> wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
-
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             this.wildcardFileName = Output.ofNullable(wildcardFileName);
             return this;
         }
-
         public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
-
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             this.wildcardFolderPath = Output.ofNullable(wildcardFolderPath);
             return this;
-        }
-        public FtpReadSettingsArgs build() {
+        }        public FtpReadSettingsArgs build() {
             return new FtpReadSettingsArgs(deleteFilesAfterCompletion, disableChunking, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, partitionRootPath, recursive, type, useBinaryTransfer, wildcardFileName, wildcardFolderPath);
         }
     }

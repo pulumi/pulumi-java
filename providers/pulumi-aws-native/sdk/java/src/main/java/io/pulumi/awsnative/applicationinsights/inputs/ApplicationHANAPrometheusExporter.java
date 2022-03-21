@@ -130,27 +130,22 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
             this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
             return this;
         }
-
         public Builder hANAPort(String hANAPort) {
             this.hANAPort = Objects.requireNonNull(hANAPort);
             return this;
         }
-
         public Builder hANASID(String hANASID) {
             this.hANASID = Objects.requireNonNull(hANASID);
             return this;
         }
-
         public Builder hANASecretName(String hANASecretName) {
             this.hANASecretName = Objects.requireNonNull(hANASecretName);
             return this;
         }
-
         public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
-        }
-        public ApplicationHANAPrometheusExporter build() {
+        }        public ApplicationHANAPrometheusExporter build() {
             return new ApplicationHANAPrometheusExporter(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
         }
     }

@@ -78,12 +78,10 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(name, tier);
         }
     }

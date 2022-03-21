@@ -161,72 +161,58 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             this.analyticsRegion = analyticsRegion;
             return this;
         }
-
         public Builder analyticsRegion(@Nullable String analyticsRegion) {
             this.analyticsRegion = Output.ofNullable(analyticsRegion);
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
-
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
             this.runtimeType = runtimeType;
             return this;
         }
-
         public Builder runtimeType(@Nullable String runtimeType) {
             this.runtimeType = Output.ofNullable(runtimeType);
             return this;
-        }
-        public OrganizationArgs build() {
+        }        public OrganizationArgs build() {
             return new OrganizationArgs(analyticsRegion, authorizedNetwork, description, displayName, projectId, runtimeDatabaseEncryptionKeyName, runtimeType);
         }
     }

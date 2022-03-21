@@ -56,12 +56,10 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs extends
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }
-
         public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Output.of(Objects.requireNonNull(ruleOrder));
             return this;
-        }
-        public FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs build() {
+        }        public FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs build() {
             return new FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs(ruleOrder);
         }
     }

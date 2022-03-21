@@ -79,22 +79,21 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.time = time;
             return this;
         }
-
         public Builder time(@Nullable String time) {
             this.time = Output.ofNullable(time);
             return this;
         }
-
         public Builder weekdays(@Nullable Output<List<String>> weekdays) {
             this.weekdays = weekdays;
             return this;
         }
-
         public Builder weekdays(@Nullable List<String> weekdays) {
             this.weekdays = Output.ofNullable(weekdays);
             return this;
         }
-        public WeekDetailsArgs build() {
+        public Builder weekdays(String... weekdays) {
+            return weekdays(List.of(weekdays));
+        }        public WeekDetailsArgs build() {
             return new WeekDetailsArgs(time, weekdays);
         }
     }

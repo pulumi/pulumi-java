@@ -87,17 +87,14 @@ public final class CollectionOverrideResponse {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
-
         public Builder methodMap(MethodMapResponse methodMap) {
             this.methodMap = Objects.requireNonNull(methodMap);
             return this;
         }
-
         public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
-        }
-        public CollectionOverrideResponse build() {
+        }        public CollectionOverrideResponse build() {
             return new CollectionOverrideResponse(collection, methodMap, options);
         }
     }

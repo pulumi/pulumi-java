@@ -184,47 +184,38 @@ public final class GetAnalyticsItemResult {
             this.content = content;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public Builder timeModified(String timeModified) {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetAnalyticsItemResult build() {
+        }        public GetAnalyticsItemResult build() {
             return new GetAnalyticsItemResult(content, id, name, properties, scope, timeCreated, timeModified, type, version);
         }
     }

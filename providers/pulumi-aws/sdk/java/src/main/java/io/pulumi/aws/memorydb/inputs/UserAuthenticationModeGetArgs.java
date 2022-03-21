@@ -92,32 +92,29 @@ public final class UserAuthenticationModeGetArgs extends io.pulumi.resources.Res
             this.passwordCount = passwordCount;
             return this;
         }
-
         public Builder passwordCount(@Nullable Integer passwordCount) {
             this.passwordCount = Output.ofNullable(passwordCount);
             return this;
         }
-
         public Builder passwords(Output<List<String>> passwords) {
             this.passwords = Objects.requireNonNull(passwords);
             return this;
         }
-
         public Builder passwords(List<String> passwords) {
             this.passwords = Output.of(Objects.requireNonNull(passwords));
             return this;
         }
-
+        public Builder passwords(String... passwords) {
+            return passwords(List.of(passwords));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public UserAuthenticationModeGetArgs build() {
+        }        public UserAuthenticationModeGetArgs build() {
             return new UserAuthenticationModeGetArgs(passwordCount, passwords, type);
         }
     }

@@ -173,82 +173,66 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
             this.galleryImageName = Objects.requireNonNull(galleryImageName);
             return this;
         }
-
         public Builder galleryImageName(String galleryImageName) {
             this.galleryImageName = Output.of(Objects.requireNonNull(galleryImageName));
             return this;
         }
-
         public Builder galleryImageVersionName(@Nullable Output<String> galleryImageVersionName) {
             this.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
-
         public Builder galleryImageVersionName(@Nullable String galleryImageVersionName) {
             this.galleryImageVersionName = Output.ofNullable(galleryImageVersionName);
             return this;
         }
-
         public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
-
         public Builder galleryName(String galleryName) {
             this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder publishingProfile(@Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile) {
             this.publishingProfile = publishingProfile;
             return this;
         }
-
         public Builder publishingProfile(@Nullable GalleryImageVersionPublishingProfileArgs publishingProfile) {
             this.publishingProfile = Output.ofNullable(publishingProfile);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageProfile(Output<GalleryImageVersionStorageProfileArgs> storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
-
         public Builder storageProfile(GalleryImageVersionStorageProfileArgs storageProfile) {
             this.storageProfile = Output.of(Objects.requireNonNull(storageProfile));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GalleryImageVersionArgs build() {
+        }        public GalleryImageVersionArgs build() {
             return new GalleryImageVersionArgs(galleryImageName, galleryImageVersionName, galleryName, location, publishingProfile, resourceGroupName, storageProfile, tags);
         }
     }

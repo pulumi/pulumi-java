@@ -69,12 +69,10 @@ public final class ClassifierXmlClassifier {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
-
         public Builder rowTag(String rowTag) {
             this.rowTag = Objects.requireNonNull(rowTag);
             return this;
-        }
-        public ClassifierXmlClassifier build() {
+        }        public ClassifierXmlClassifier build() {
             return new ClassifierXmlClassifier(classification, rowTag);
         }
     }

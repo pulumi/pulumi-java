@@ -160,37 +160,30 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
             this.automaticResolution = automaticResolution;
             return this;
         }
-
         public Builder dependencyType(@Nullable String dependencyType) {
             this.dependencyType = dependencyType;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder isOptional(@Nullable String isOptional) {
             this.isOptional = isOptional;
             return this;
         }
-
         public Builder manualResolution(@Nullable ManualResolutionPropertiesResponse manualResolution) {
             this.manualResolution = manualResolution;
             return this;
         }
-
         public Builder resolutionStatus(@Nullable String resolutionStatus) {
             this.resolutionStatus = resolutionStatus;
             return this;
         }
-
         public Builder resolutionType(@Nullable String resolutionType) {
             this.resolutionType = resolutionType;
             return this;
-        }
-        public MoveResourceDependencyResponse build() {
+        }        public MoveResourceDependencyResponse build() {
             return new MoveResourceDependencyResponse(automaticResolution, dependencyType, id, isOptional, manualResolution, resolutionStatus, resolutionType);
         }
     }

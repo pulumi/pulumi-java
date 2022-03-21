@@ -97,17 +97,17 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
-
         public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
-
+        public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
+            return preferredDataCenterRegion(List.of(preferredDataCenterRegion));
+        }
         public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
-        }
-        public PreferencesResponse build() {
+        }        public PreferencesResponse build() {
             return new PreferencesResponse(encryptionPreferences, preferredDataCenterRegion, transportPreferences);
         }
     }

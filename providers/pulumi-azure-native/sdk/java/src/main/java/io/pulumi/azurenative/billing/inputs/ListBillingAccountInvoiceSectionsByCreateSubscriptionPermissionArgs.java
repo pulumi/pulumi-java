@@ -54,8 +54,7 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
         public Builder billingAccountName(String billingAccountName) {
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
-        }
-        public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs build() {
+        }        public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs build() {
             return new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs(billingAccountName);
         }
     }

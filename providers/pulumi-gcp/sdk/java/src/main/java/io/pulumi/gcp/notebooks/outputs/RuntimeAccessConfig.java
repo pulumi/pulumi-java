@@ -95,17 +95,14 @@ public final class RuntimeAccessConfig {
             this.accessType = accessType;
             return this;
         }
-
         public Builder proxyUri(@Nullable String proxyUri) {
             this.proxyUri = proxyUri;
             return this;
         }
-
         public Builder runtimeOwner(@Nullable String runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
-        }
-        public RuntimeAccessConfig build() {
+        }        public RuntimeAccessConfig build() {
             return new RuntimeAccessConfig(accessType, proxyUri, runtimeOwner);
         }
     }

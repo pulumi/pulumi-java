@@ -52,7 +52,9 @@ public final class RuleGroupOrStatement extends io.pulumi.resources.InvokeArgs {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-        public RuleGroupOrStatement build() {
+        public Builder statements(RuleGroupStatement... statements) {
+            return statements(List.of(statements));
+        }        public RuleGroupOrStatement build() {
             return new RuleGroupOrStatement(statements);
         }
     }

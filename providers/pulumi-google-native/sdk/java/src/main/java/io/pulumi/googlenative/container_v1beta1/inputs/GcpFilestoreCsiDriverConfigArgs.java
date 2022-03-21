@@ -61,12 +61,10 @@ public final class GcpFilestoreCsiDriverConfigArgs extends io.pulumi.resources.R
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public GcpFilestoreCsiDriverConfigArgs build() {
+        }        public GcpFilestoreCsiDriverConfigArgs build() {
             return new GcpFilestoreCsiDriverConfigArgs(enabled);
         }
     }

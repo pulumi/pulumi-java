@@ -126,52 +126,42 @@ public final class ReplicationControllerConditionArgs extends io.pulumi.resource
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
-
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
             this.lastTransitionTime = Output.ofNullable(lastTransitionTime);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
-
         public Builder reason(@Nullable String reason) {
             this.reason = Output.ofNullable(reason);
             return this;
         }
-
         public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ReplicationControllerConditionArgs build() {
+        }        public ReplicationControllerConditionArgs build() {
             return new ReplicationControllerConditionArgs(lastTransitionTime, message, reason, status, type);
         }
     }

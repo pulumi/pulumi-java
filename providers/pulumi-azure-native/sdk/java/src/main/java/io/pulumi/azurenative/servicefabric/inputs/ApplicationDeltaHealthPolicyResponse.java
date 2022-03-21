@@ -80,12 +80,10 @@ public final class ApplicationDeltaHealthPolicyResponse extends io.pulumi.resour
             this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
-
         public Builder serviceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
-        }
-        public ApplicationDeltaHealthPolicyResponse build() {
+        }        public ApplicationDeltaHealthPolicyResponse build() {
             return new ApplicationDeltaHealthPolicyResponse(defaultServiceTypeDeltaHealthPolicy, serviceTypeDeltaHealthPolicies);
         }
     }

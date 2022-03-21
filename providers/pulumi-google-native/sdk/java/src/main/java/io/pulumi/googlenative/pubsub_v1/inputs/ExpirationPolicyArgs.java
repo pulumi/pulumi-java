@@ -61,12 +61,10 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.ttl = ttl;
             return this;
         }
-
         public Builder ttl(@Nullable String ttl) {
             this.ttl = Output.ofNullable(ttl);
             return this;
-        }
-        public ExpirationPolicyArgs build() {
+        }        public ExpirationPolicyArgs build() {
             return new ExpirationPolicyArgs(ttl);
         }
     }

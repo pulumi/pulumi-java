@@ -69,12 +69,10 @@ public final class CloudSqlCredentialResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public CloudSqlCredentialResponse build() {
+        }        public CloudSqlCredentialResponse build() {
             return new CloudSqlCredentialResponse(password, username);
         }
     }

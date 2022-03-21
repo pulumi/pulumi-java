@@ -218,102 +218,91 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
             this.connectionPreference = Objects.requireNonNull(connectionPreference);
             return this;
         }
-
         public Builder connectionPreference(String connectionPreference) {
             this.connectionPreference = Output.of(Objects.requireNonNull(connectionPreference));
             return this;
         }
-
         public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
-
         public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListArgs> consumerAcceptLists) {
             this.consumerAcceptLists = Output.ofNullable(consumerAcceptLists);
             return this;
         }
-
+        public Builder consumerAcceptLists(ServiceAttachmentConsumerAcceptListArgs... consumerAcceptLists) {
+            return consumerAcceptLists(List.of(consumerAcceptLists));
+        }
         public Builder consumerRejectLists(@Nullable Output<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
-
         public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
             this.consumerRejectLists = Output.ofNullable(consumerRejectLists);
             return this;
         }
-
+        public Builder consumerRejectLists(String... consumerRejectLists) {
+            return consumerRejectLists(List.of(consumerRejectLists));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableProxyProtocol(Output<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = Objects.requireNonNull(enableProxyProtocol);
             return this;
         }
-
         public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Output.of(Objects.requireNonNull(enableProxyProtocol));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder natSubnets(Output<List<String>> natSubnets) {
             this.natSubnets = Objects.requireNonNull(natSubnets);
             return this;
         }
-
         public Builder natSubnets(List<String> natSubnets) {
             this.natSubnets = Output.of(Objects.requireNonNull(natSubnets));
             return this;
         }
-
+        public Builder natSubnets(String... natSubnets) {
+            return natSubnets(List.of(natSubnets));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder targetService(Output<String> targetService) {
             this.targetService = Objects.requireNonNull(targetService);
             return this;
         }
-
         public Builder targetService(String targetService) {
             this.targetService = Output.of(Objects.requireNonNull(targetService));
             return this;
-        }
-        public ServiceAttachmentArgs build() {
+        }        public ServiceAttachmentArgs build() {
             return new ServiceAttachmentArgs(connectionPreference, consumerAcceptLists, consumerRejectLists, description, enableProxyProtocol, name, natSubnets, project, region, targetService);
         }
     }

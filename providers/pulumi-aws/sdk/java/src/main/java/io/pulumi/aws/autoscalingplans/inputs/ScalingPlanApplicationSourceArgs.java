@@ -76,22 +76,21 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
             this.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
-
         public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
             this.cloudformationStackArn = Output.ofNullable(cloudformationStackArn);
             return this;
         }
-
         public Builder tagFilters(@Nullable Output<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilterArgs> tagFilters) {
             this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
-        public ScalingPlanApplicationSourceArgs build() {
+        public Builder tagFilters(ScalingPlanApplicationSourceTagFilterArgs... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public ScalingPlanApplicationSourceArgs build() {
             return new ScalingPlanApplicationSourceArgs(cloudformationStackArn, tagFilters);
         }
     }

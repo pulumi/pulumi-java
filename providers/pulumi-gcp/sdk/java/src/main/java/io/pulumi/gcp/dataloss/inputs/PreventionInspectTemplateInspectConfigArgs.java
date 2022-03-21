@@ -185,82 +185,78 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             this.contentOptions = contentOptions;
             return this;
         }
-
         public Builder contentOptions(@Nullable List<String> contentOptions) {
             this.contentOptions = Output.ofNullable(contentOptions);
             return this;
         }
-
+        public Builder contentOptions(String... contentOptions) {
+            return contentOptions(List.of(contentOptions));
+        }
         public Builder customInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
-
         public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs> customInfoTypes) {
             this.customInfoTypes = Output.ofNullable(customInfoTypes);
             return this;
         }
-
+        public Builder customInfoTypes(PreventionInspectTemplateInspectConfigCustomInfoTypeArgs... customInfoTypes) {
+            return customInfoTypes(List.of(customInfoTypes));
+        }
         public Builder excludeInfoTypes(@Nullable Output<Boolean> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
-
         public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
-
         public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = Output.ofNullable(includeQuote);
             return this;
         }
-
         public Builder infoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
-
         public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoTypeArgs> infoTypes) {
             this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(PreventionInspectTemplateInspectConfigInfoTypeArgs... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder limits(@Nullable Output<PreventionInspectTemplateInspectConfigLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
-
         public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimitsArgs limits) {
             this.limits = Output.ofNullable(limits);
             return this;
         }
-
         public Builder minLikelihood(@Nullable Output<String> minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
-
         public Builder minLikelihood(@Nullable String minLikelihood) {
             this.minLikelihood = Output.ofNullable(minLikelihood);
             return this;
         }
-
         public Builder ruleSets(@Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
-
         public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSetArgs> ruleSets) {
             this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
-        public PreventionInspectTemplateInspectConfigArgs build() {
+        public Builder ruleSets(PreventionInspectTemplateInspectConfigRuleSetArgs... ruleSets) {
+            return ruleSets(List.of(ruleSets));
+        }        public PreventionInspectTemplateInspectConfigArgs build() {
             return new PreventionInspectTemplateInspectConfigArgs(contentOptions, customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSets);
         }
     }

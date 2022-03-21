@@ -95,32 +95,26 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder state(@Nullable Output<PubsubConfigState> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable PubsubConfigState state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public PubsubConfigArgs build() {
+        }        public PubsubConfigArgs build() {
             return new PubsubConfigArgs(serviceAccountEmail, state, topic);
         }
     }

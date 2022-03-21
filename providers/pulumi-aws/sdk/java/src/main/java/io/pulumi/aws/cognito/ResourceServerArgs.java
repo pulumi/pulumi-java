@@ -104,42 +104,37 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
-
         public Builder identifier(String identifier) {
             this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<ResourceServerScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<ResourceServerScopeArgs> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-
+        public Builder scopes(ResourceServerScopeArgs... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
-        }
-        public ResourceServerArgs build() {
+        }        public ResourceServerArgs build() {
             return new ResourceServerArgs(identifier, name, scopes, userPoolId);
         }
     }

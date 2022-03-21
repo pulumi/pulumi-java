@@ -60,12 +60,10 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs ext
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
-        }
-        public ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs build() {
+        }        public ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs build() {
             return new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(s3Uri);
         }
     }

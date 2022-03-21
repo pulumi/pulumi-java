@@ -163,72 +163,58 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
             this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings);
             return this;
         }
-
         public Builder acknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsArgs acknowledgementConnectionSettings) {
             this.acknowledgementConnectionSettings = Output.of(Objects.requireNonNull(acknowledgementConnectionSettings));
             return this;
         }
-
         public Builder envelopeSettings(Output<AS2EnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
-
         public Builder envelopeSettings(AS2EnvelopeSettingsArgs envelopeSettings) {
             this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
-
         public Builder errorSettings(Output<AS2ErrorSettingsArgs> errorSettings) {
             this.errorSettings = Objects.requireNonNull(errorSettings);
             return this;
         }
-
         public Builder errorSettings(AS2ErrorSettingsArgs errorSettings) {
             this.errorSettings = Output.of(Objects.requireNonNull(errorSettings));
             return this;
         }
-
         public Builder mdnSettings(Output<AS2MdnSettingsArgs> mdnSettings) {
             this.mdnSettings = Objects.requireNonNull(mdnSettings);
             return this;
         }
-
         public Builder mdnSettings(AS2MdnSettingsArgs mdnSettings) {
             this.mdnSettings = Output.of(Objects.requireNonNull(mdnSettings));
             return this;
         }
-
         public Builder messageConnectionSettings(Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings) {
             this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings);
             return this;
         }
-
         public Builder messageConnectionSettings(AS2MessageConnectionSettingsArgs messageConnectionSettings) {
             this.messageConnectionSettings = Output.of(Objects.requireNonNull(messageConnectionSettings));
             return this;
         }
-
         public Builder securitySettings(Output<AS2SecuritySettingsArgs> securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
-
         public Builder securitySettings(AS2SecuritySettingsArgs securitySettings) {
             this.securitySettings = Output.of(Objects.requireNonNull(securitySettings));
             return this;
         }
-
         public Builder validationSettings(Output<AS2ValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public Builder validationSettings(AS2ValidationSettingsArgs validationSettings) {
             this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
             return this;
-        }
-        public AS2ProtocolSettingsArgs build() {
+        }        public AS2ProtocolSettingsArgs build() {
             return new AS2ProtocolSettingsArgs(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
         }
     }

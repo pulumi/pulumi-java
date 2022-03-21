@@ -87,17 +87,14 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
-
         public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
-
         public Builder objectVersion(@Nullable String objectVersion) {
             this.objectVersion = objectVersion;
             return this;
-        }
-        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation build() {
+        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation(bucketArn, fileKey, objectVersion);
         }
     }

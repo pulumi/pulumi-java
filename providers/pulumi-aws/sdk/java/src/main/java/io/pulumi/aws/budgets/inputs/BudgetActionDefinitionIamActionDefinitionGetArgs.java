@@ -107,42 +107,43 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
             this.groups = groups;
             return this;
         }
-
         public Builder groups(@Nullable List<String> groups) {
             this.groups = Output.ofNullable(groups);
             return this;
         }
-
+        public Builder groups(String... groups) {
+            return groups(List.of(groups));
+        }
         public Builder policyArn(Output<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
-
         public Builder policyArn(String policyArn) {
             this.policyArn = Output.of(Objects.requireNonNull(policyArn));
             return this;
         }
-
         public Builder roles(@Nullable Output<List<String>> roles) {
             this.roles = roles;
             return this;
         }
-
         public Builder roles(@Nullable List<String> roles) {
             this.roles = Output.ofNullable(roles);
             return this;
         }
-
+        public Builder roles(String... roles) {
+            return roles(List.of(roles));
+        }
         public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
-
         public Builder users(@Nullable List<String> users) {
             this.users = Output.ofNullable(users);
             return this;
         }
-        public BudgetActionDefinitionIamActionDefinitionGetArgs build() {
+        public Builder users(String... users) {
+            return users(List.of(users));
+        }        public BudgetActionDefinitionIamActionDefinitionGetArgs build() {
             return new BudgetActionDefinitionIamActionDefinitionGetArgs(groups, policyArn, roles, users);
         }
     }

@@ -72,12 +72,10 @@ public final class BucketReplicationConfigRuleFilterAnd {
             this.prefix = prefix;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public BucketReplicationConfigRuleFilterAnd build() {
+        }        public BucketReplicationConfigRuleFilterAnd build() {
             return new BucketReplicationConfigRuleFilterAnd(prefix, tags);
         }
     }

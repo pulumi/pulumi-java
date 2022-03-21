@@ -95,17 +95,17 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(ExtendedKeyUsageOptionsResponse extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(List<ObjectIdResponse> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
             return this;
         }
-        public KeyUsageResponse build() {
+        public Builder unknownExtendedKeyUsages(ObjectIdResponse... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public KeyUsageResponse build() {
             return new KeyUsageResponse(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

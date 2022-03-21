@@ -122,27 +122,28 @@ public final class FCVolumeSource {
             this.fsType = fsType;
             return this;
         }
-
         public Builder lun(@Nullable Integer lun) {
             this.lun = lun;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder targetWWNs(@Nullable List<String> targetWWNs) {
             this.targetWWNs = targetWWNs;
             return this;
         }
-
+        public Builder targetWWNs(String... targetWWNs) {
+            return targetWWNs(List.of(targetWWNs));
+        }
         public Builder wwids(@Nullable List<String> wwids) {
             this.wwids = wwids;
             return this;
         }
-        public FCVolumeSource build() {
+        public Builder wwids(String... wwids) {
+            return wwids(List.of(wwids));
+        }        public FCVolumeSource build() {
             return new FCVolumeSource(fsType, lun, readOnly, targetWWNs, wwids);
         }
     }

@@ -267,132 +267,118 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
             this.connectedEndpoints = connectedEndpoints;
             return this;
         }
-
         public Builder connectedEndpoints(@Nullable List<ServiceAttachmentConnectedEndpointGetArgs> connectedEndpoints) {
             this.connectedEndpoints = Output.ofNullable(connectedEndpoints);
             return this;
         }
-
+        public Builder connectedEndpoints(ServiceAttachmentConnectedEndpointGetArgs... connectedEndpoints) {
+            return connectedEndpoints(List.of(connectedEndpoints));
+        }
         public Builder connectionPreference(@Nullable Output<String> connectionPreference) {
             this.connectionPreference = connectionPreference;
             return this;
         }
-
         public Builder connectionPreference(@Nullable String connectionPreference) {
             this.connectionPreference = Output.ofNullable(connectionPreference);
             return this;
         }
-
         public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
-
         public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListGetArgs> consumerAcceptLists) {
             this.consumerAcceptLists = Output.ofNullable(consumerAcceptLists);
             return this;
         }
-
+        public Builder consumerAcceptLists(ServiceAttachmentConsumerAcceptListGetArgs... consumerAcceptLists) {
+            return consumerAcceptLists(List.of(consumerAcceptLists));
+        }
         public Builder consumerRejectLists(@Nullable Output<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
-
         public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
             this.consumerRejectLists = Output.ofNullable(consumerRejectLists);
             return this;
         }
-
+        public Builder consumerRejectLists(String... consumerRejectLists) {
+            return consumerRejectLists(List.of(consumerRejectLists));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
-
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
             return this;
         }
-
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder natSubnets(@Nullable Output<List<String>> natSubnets) {
             this.natSubnets = natSubnets;
             return this;
         }
-
         public Builder natSubnets(@Nullable List<String> natSubnets) {
             this.natSubnets = Output.ofNullable(natSubnets);
             return this;
         }
-
+        public Builder natSubnets(String... natSubnets) {
+            return natSubnets(List.of(natSubnets));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder targetService(@Nullable Output<String> targetService) {
             this.targetService = targetService;
             return this;
         }
-
         public Builder targetService(@Nullable String targetService) {
             this.targetService = Output.ofNullable(targetService);
             return this;
-        }
-        public ServiceAttachmentState build() {
+        }        public ServiceAttachmentState build() {
             return new ServiceAttachmentState(connectedEndpoints, connectionPreference, consumerAcceptLists, consumerRejectLists, description, enableProxyProtocol, fingerprint, name, natSubnets, project, region, selfLink, targetService);
         }
     }

@@ -223,112 +223,90 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             this.aksResourceID = aksResourceID;
             return this;
         }
-
         public Builder aksResourceID(@Nullable String aksResourceID) {
             this.aksResourceID = Output.ofNullable(aksResourceID);
             return this;
         }
-
         public Builder appLogsConfiguration(@Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration) {
             this.appLogsConfiguration = appLogsConfiguration;
             return this;
         }
-
         public Builder appLogsConfiguration(@Nullable AppLogsConfigurationArgs appLogsConfiguration) {
             this.appLogsConfiguration = Output.ofNullable(appLogsConfiguration);
             return this;
         }
-
         public Builder arcConfiguration(@Nullable Output<ArcConfigurationArgs> arcConfiguration) {
             this.arcConfiguration = arcConfiguration;
             return this;
         }
-
         public Builder arcConfiguration(@Nullable ArcConfigurationArgs arcConfiguration) {
             this.arcConfiguration = Output.ofNullable(arcConfiguration);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder internalLoadBalancerEnabled(@Nullable Output<Boolean> internalLoadBalancerEnabled) {
             this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
             return this;
         }
-
         public Builder internalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
             this.internalLoadBalancerEnabled = Output.ofNullable(internalLoadBalancerEnabled);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder staticIp(@Nullable Output<String> staticIp) {
             this.staticIp = staticIp;
             return this;
         }
-
         public Builder staticIp(@Nullable String staticIp) {
             this.staticIp = Output.ofNullable(staticIp);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public KubeEnvironmentArgs build() {
+        }        public KubeEnvironmentArgs build() {
             return new KubeEnvironmentArgs(aksResourceID, appLogsConfiguration, arcConfiguration, extendedLocation, internalLoadBalancerEnabled, kind, location, name, resourceGroupName, staticIp, tags);
         }
     }

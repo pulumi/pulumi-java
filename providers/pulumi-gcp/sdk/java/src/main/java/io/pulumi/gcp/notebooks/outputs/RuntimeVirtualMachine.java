@@ -94,17 +94,14 @@ public final class RuntimeVirtualMachine {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder virtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
-        }
-        public RuntimeVirtualMachine build() {
+        }        public RuntimeVirtualMachine build() {
             return new RuntimeVirtualMachine(instanceId, instanceName, virtualMachineConfig);
         }
     }

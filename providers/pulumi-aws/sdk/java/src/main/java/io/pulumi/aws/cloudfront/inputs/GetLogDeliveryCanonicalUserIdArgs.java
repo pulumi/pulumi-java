@@ -56,8 +56,7 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends io.pulumi.resources
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetLogDeliveryCanonicalUserIdArgs build() {
+        }        public GetLogDeliveryCanonicalUserIdArgs build() {
             return new GetLogDeliveryCanonicalUserIdArgs(region);
         }
     }

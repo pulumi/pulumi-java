@@ -359,192 +359,157 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
             this.apiId = apiId;
             return this;
         }
-
         public Builder apiId(@Nullable String apiId) {
             this.apiId = Output.ofNullable(apiId);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder connectionType(@Nullable Output<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
-
         public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = Output.ofNullable(connectionType);
             return this;
         }
-
         public Builder contentHandlingStrategy(@Nullable Output<String> contentHandlingStrategy) {
             this.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
-
         public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
             this.contentHandlingStrategy = Output.ofNullable(contentHandlingStrategy);
             return this;
         }
-
         public Builder credentialsArn(@Nullable Output<String> credentialsArn) {
             this.credentialsArn = credentialsArn;
             return this;
         }
-
         public Builder credentialsArn(@Nullable String credentialsArn) {
             this.credentialsArn = Output.ofNullable(credentialsArn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder integrationMethod(@Nullable Output<String> integrationMethod) {
             this.integrationMethod = integrationMethod;
             return this;
         }
-
         public Builder integrationMethod(@Nullable String integrationMethod) {
             this.integrationMethod = Output.ofNullable(integrationMethod);
             return this;
         }
-
         public Builder integrationResponseSelectionExpression(@Nullable Output<String> integrationResponseSelectionExpression) {
             this.integrationResponseSelectionExpression = integrationResponseSelectionExpression;
             return this;
         }
-
         public Builder integrationResponseSelectionExpression(@Nullable String integrationResponseSelectionExpression) {
             this.integrationResponseSelectionExpression = Output.ofNullable(integrationResponseSelectionExpression);
             return this;
         }
-
         public Builder integrationSubtype(@Nullable Output<String> integrationSubtype) {
             this.integrationSubtype = integrationSubtype;
             return this;
         }
-
         public Builder integrationSubtype(@Nullable String integrationSubtype) {
             this.integrationSubtype = Output.ofNullable(integrationSubtype);
             return this;
         }
-
         public Builder integrationType(@Nullable Output<String> integrationType) {
             this.integrationType = integrationType;
             return this;
         }
-
         public Builder integrationType(@Nullable String integrationType) {
             this.integrationType = Output.ofNullable(integrationType);
             return this;
         }
-
         public Builder integrationUri(@Nullable Output<String> integrationUri) {
             this.integrationUri = integrationUri;
             return this;
         }
-
         public Builder integrationUri(@Nullable String integrationUri) {
             this.integrationUri = Output.ofNullable(integrationUri);
             return this;
         }
-
         public Builder passthroughBehavior(@Nullable Output<String> passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
-
         public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
             this.passthroughBehavior = Output.ofNullable(passthroughBehavior);
             return this;
         }
-
         public Builder payloadFormatVersion(@Nullable Output<String> payloadFormatVersion) {
             this.payloadFormatVersion = payloadFormatVersion;
             return this;
         }
-
         public Builder payloadFormatVersion(@Nullable String payloadFormatVersion) {
             this.payloadFormatVersion = Output.ofNullable(payloadFormatVersion);
             return this;
         }
-
         public Builder requestParameters(@Nullable Output<Map<String,String>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
-
         public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
             this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
-
         public Builder requestTemplates(@Nullable Output<Map<String,String>> requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
-
         public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
             this.requestTemplates = Output.ofNullable(requestTemplates);
             return this;
         }
-
         public Builder responseParameters(@Nullable Output<List<IntegrationResponseParameterGetArgs>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable List<IntegrationResponseParameterGetArgs> responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
+        public Builder responseParameters(IntegrationResponseParameterGetArgs... responseParameters) {
+            return responseParameters(List.of(responseParameters));
+        }
         public Builder templateSelectionExpression(@Nullable Output<String> templateSelectionExpression) {
             this.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
-
         public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
             this.templateSelectionExpression = Output.ofNullable(templateSelectionExpression);
             return this;
         }
-
         public Builder timeoutMilliseconds(@Nullable Output<Integer> timeoutMilliseconds) {
             this.timeoutMilliseconds = timeoutMilliseconds;
             return this;
         }
-
         public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
             this.timeoutMilliseconds = Output.ofNullable(timeoutMilliseconds);
             return this;
         }
-
         public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig) {
             this.tlsConfig = tlsConfig;
             return this;
         }
-
         public Builder tlsConfig(@Nullable IntegrationTlsConfigGetArgs tlsConfig) {
             this.tlsConfig = Output.ofNullable(tlsConfig);
             return this;
-        }
-        public IntegrationState build() {
+        }        public IntegrationState build() {
             return new IntegrationState(apiId, connectionId, connectionType, contentHandlingStrategy, credentialsArn, description, integrationMethod, integrationResponseSelectionExpression, integrationSubtype, integrationType, integrationUri, passthroughBehavior, payloadFormatVersion, requestParameters, requestTemplates, responseParameters, templateSelectionExpression, timeoutMilliseconds, tlsConfig);
         }
     }

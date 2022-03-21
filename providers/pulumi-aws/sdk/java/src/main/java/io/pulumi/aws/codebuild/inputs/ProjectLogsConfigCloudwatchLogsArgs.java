@@ -90,32 +90,26 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
             this.groupName = groupName;
             return this;
         }
-
         public Builder groupName(@Nullable String groupName) {
             this.groupName = Output.ofNullable(groupName);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder streamName(@Nullable Output<String> streamName) {
             this.streamName = streamName;
             return this;
         }
-
         public Builder streamName(@Nullable String streamName) {
             this.streamName = Output.ofNullable(streamName);
             return this;
-        }
-        public ProjectLogsConfigCloudwatchLogsArgs build() {
+        }        public ProjectLogsConfigCloudwatchLogsArgs build() {
             return new ProjectLogsConfigCloudwatchLogsArgs(groupName, status, streamName);
         }
     }

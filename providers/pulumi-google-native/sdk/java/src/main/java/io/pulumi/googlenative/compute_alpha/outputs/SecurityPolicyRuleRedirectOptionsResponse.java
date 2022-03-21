@@ -69,12 +69,10 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public SecurityPolicyRuleRedirectOptionsResponse build() {
+        }        public SecurityPolicyRuleRedirectOptionsResponse build() {
             return new SecurityPolicyRuleRedirectOptionsResponse(target, type);
         }
     }

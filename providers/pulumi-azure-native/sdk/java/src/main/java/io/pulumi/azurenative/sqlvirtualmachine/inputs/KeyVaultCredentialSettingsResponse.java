@@ -111,22 +111,18 @@ public final class KeyVaultCredentialSettingsResponse extends io.pulumi.resource
             this.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
-
         public Builder credentialName(@Nullable String credentialName) {
             this.credentialName = credentialName;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
             this.servicePrincipalName = servicePrincipalName;
             return this;
-        }
-        public KeyVaultCredentialSettingsResponse build() {
+        }        public KeyVaultCredentialSettingsResponse build() {
             return new KeyVaultCredentialSettingsResponse(azureKeyVaultUrl, credentialName, enable, servicePrincipalName);
         }
     }

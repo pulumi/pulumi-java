@@ -115,42 +115,40 @@ public final class GameServerConfigScalingConfigGetArgs extends io.pulumi.resour
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
-
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Output.of(Objects.requireNonNull(fleetAutoscalerSpec));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder schedules(@Nullable Output<List<GameServerConfigScalingConfigScheduleGetArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
-
         public Builder schedules(@Nullable List<GameServerConfigScalingConfigScheduleGetArgs> schedules) {
             this.schedules = Output.ofNullable(schedules);
             return this;
         }
-
+        public Builder schedules(GameServerConfigScalingConfigScheduleGetArgs... schedules) {
+            return schedules(List.of(schedules));
+        }
         public Builder selectors(@Nullable Output<List<GameServerConfigScalingConfigSelectorGetArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
-
         public Builder selectors(@Nullable List<GameServerConfigScalingConfigSelectorGetArgs> selectors) {
             this.selectors = Output.ofNullable(selectors);
             return this;
         }
-        public GameServerConfigScalingConfigGetArgs build() {
+        public Builder selectors(GameServerConfigScalingConfigSelectorGetArgs... selectors) {
+            return selectors(List.of(selectors));
+        }        public GameServerConfigScalingConfigGetArgs build() {
             return new GameServerConfigScalingConfigGetArgs(fleetAutoscalerSpec, name, schedules, selectors);
         }
     }

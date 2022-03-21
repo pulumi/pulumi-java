@@ -77,22 +77,18 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
-
         public Builder fhirStoreId(String fhirStoreId) {
             this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public FhirStoreIamPolicyArgs build() {
+        }        public FhirStoreIamPolicyArgs build() {
             return new FhirStoreIamPolicyArgs(fhirStoreId, policyData);
         }
     }

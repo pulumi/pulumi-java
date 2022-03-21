@@ -76,12 +76,10 @@ public final class DataSourceManifestFileLocation extends io.pulumi.resources.In
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public DataSourceManifestFileLocation build() {
+        }        public DataSourceManifestFileLocation build() {
             return new DataSourceManifestFileLocation(bucket, key);
         }
     }

@@ -191,92 +191,74 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             this.caCertificate = caCertificate;
             return this;
         }
-
         public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = Output.ofNullable(caCertificate);
             return this;
         }
-
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
-
         public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = Output.ofNullable(clientCertificate);
             return this;
         }
-
         public Builder clientKey(@Nullable Output<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
-
         public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = Output.ofNullable(clientKey);
             return this;
         }
-
         public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
             this.dumpFilePath = dumpFilePath;
             return this;
         }
-
         public Builder dumpFilePath(@Nullable String dumpFilePath) {
             this.dumpFilePath = Output.ofNullable(dumpFilePath);
             return this;
         }
-
         public Builder hostPort(@Nullable Output<String> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
-
         public Builder hostPort(@Nullable String hostPort) {
             this.hostPort = Output.ofNullable(hostPort);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
-
         public Builder password(@Nullable String password) {
             this.password = Output.ofNullable(password);
             return this;
         }
-
         public Builder sourceInstance(@Nullable Output<InstanceReferenceArgs> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
-
         public Builder sourceInstance(@Nullable InstanceReferenceArgs sourceInstance) {
             this.sourceInstance = Output.ofNullable(sourceInstance);
             return this;
         }
-
         public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = Output.ofNullable(username);
             return this;
-        }
-        public OnPremisesConfigurationArgs build() {
+        }        public OnPremisesConfigurationArgs build() {
             return new OnPremisesConfigurationArgs(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
         }
     }

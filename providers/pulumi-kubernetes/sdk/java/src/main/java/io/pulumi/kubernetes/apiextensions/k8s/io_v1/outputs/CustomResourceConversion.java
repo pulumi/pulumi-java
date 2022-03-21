@@ -74,12 +74,10 @@ public final class CustomResourceConversion {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
-
         public Builder webhook(@Nullable WebhookConversion webhook) {
             this.webhook = webhook;
             return this;
-        }
-        public CustomResourceConversion build() {
+        }        public CustomResourceConversion build() {
             return new CustomResourceConversion(strategy, webhook);
         }
     }

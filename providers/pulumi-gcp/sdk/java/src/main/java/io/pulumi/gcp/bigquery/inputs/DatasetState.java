@@ -299,152 +299,125 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             this.accesses = accesses;
             return this;
         }
-
         public Builder accesses(@Nullable List<DatasetAccessGetArgs> accesses) {
             this.accesses = Output.ofNullable(accesses);
             return this;
         }
-
+        public Builder accesses(DatasetAccessGetArgs... accesses) {
+            return accesses(List.of(accesses));
+        }
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
-
         public Builder creationTime(@Nullable Integer creationTime) {
             this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
-
         public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
-
         public Builder defaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
-
         public Builder defaultPartitionExpirationMs(@Nullable Output<Integer> defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
-
         public Builder defaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
-
         public Builder defaultTableExpirationMs(@Nullable Output<Integer> defaultTableExpirationMs) {
             this.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
-
         public Builder defaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
             this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
             return this;
         }
-
         public Builder deleteContentsOnDestroy(@Nullable Output<Boolean> deleteContentsOnDestroy) {
             this.deleteContentsOnDestroy = deleteContentsOnDestroy;
             return this;
         }
-
         public Builder deleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
             this.deleteContentsOnDestroy = Output.ofNullable(deleteContentsOnDestroy);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
             this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public DatasetState build() {
+        }        public DatasetState build() {
             return new DatasetState(accesses, creationTime, datasetId, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, deleteContentsOnDestroy, description, etag, friendlyName, labels, lastModifiedTime, location, project, selfLink);
         }
     }

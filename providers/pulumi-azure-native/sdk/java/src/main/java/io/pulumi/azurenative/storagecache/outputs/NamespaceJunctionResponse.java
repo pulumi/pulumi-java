@@ -103,22 +103,18 @@ public final class NamespaceJunctionResponse {
             this.namespacePath = namespacePath;
             return this;
         }
-
         public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
             this.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
-
         public Builder nfsExport(@Nullable String nfsExport) {
             this.nfsExport = nfsExport;
             return this;
         }
-
         public Builder targetPath(@Nullable String targetPath) {
             this.targetPath = targetPath;
             return this;
-        }
-        public NamespaceJunctionResponse build() {
+        }        public NamespaceJunctionResponse build() {
             return new NamespaceJunctionResponse(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }
     }

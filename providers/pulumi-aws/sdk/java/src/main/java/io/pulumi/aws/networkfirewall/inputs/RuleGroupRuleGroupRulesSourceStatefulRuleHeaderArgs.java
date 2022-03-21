@@ -137,62 +137,50 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs extends i
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(String destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder destinationPort(Output<String> destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
-
         public Builder destinationPort(String destinationPort) {
             this.destinationPort = Output.of(Objects.requireNonNull(destinationPort));
             return this;
         }
-
         public Builder direction(Output<String> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
-
         public Builder direction(String direction) {
             this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(String source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder sourcePort(Output<String> sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public Builder sourcePort(String sourcePort) {
             this.sourcePort = Output.of(Objects.requireNonNull(sourcePort));
             return this;
-        }
-        public RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs build() {
+        }        public RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs(destination, destinationPort, direction, protocol, source, sourcePort);
         }
     }

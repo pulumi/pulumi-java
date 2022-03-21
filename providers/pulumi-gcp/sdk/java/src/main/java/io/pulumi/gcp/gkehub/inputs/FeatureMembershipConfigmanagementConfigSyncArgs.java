@@ -76,22 +76,18 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
             this.git = git;
             return this;
         }
-
         public Builder git(@Nullable FeatureMembershipConfigmanagementConfigSyncGitArgs git) {
             this.git = Output.ofNullable(git);
             return this;
         }
-
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = Output.ofNullable(sourceFormat);
             return this;
-        }
-        public FeatureMembershipConfigmanagementConfigSyncArgs build() {
+        }        public FeatureMembershipConfigmanagementConfigSyncArgs build() {
             return new FeatureMembershipConfigmanagementConfigSyncArgs(git, sourceFormat);
         }
     }

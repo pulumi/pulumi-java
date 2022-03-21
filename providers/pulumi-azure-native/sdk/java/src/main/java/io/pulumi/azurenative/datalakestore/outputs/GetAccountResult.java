@@ -428,122 +428,107 @@ public final class GetAccountResult {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder currentTier(String currentTier) {
             this.currentTier = Objects.requireNonNull(currentTier);
             return this;
         }
-
         public Builder defaultGroup(String defaultGroup) {
             this.defaultGroup = Objects.requireNonNull(defaultGroup);
             return this;
         }
-
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
-
         public Builder encryptionProvisioningState(String encryptionProvisioningState) {
             this.encryptionProvisioningState = Objects.requireNonNull(encryptionProvisioningState);
             return this;
         }
-
         public Builder encryptionState(String encryptionState) {
             this.encryptionState = Objects.requireNonNull(encryptionState);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder firewallAllowAzureIps(String firewallAllowAzureIps) {
             this.firewallAllowAzureIps = Objects.requireNonNull(firewallAllowAzureIps);
             return this;
         }
-
         public Builder firewallRules(List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = Objects.requireNonNull(firewallRules);
             return this;
         }
-
+        public Builder firewallRules(FirewallRuleResponse... firewallRules) {
+            return firewallRules(List.of(firewallRules));
+        }
         public Builder firewallState(String firewallState) {
             this.firewallState = Objects.requireNonNull(firewallState);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(EncryptionIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder newTier(String newTier) {
             this.newTier = Objects.requireNonNull(newTier);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder trustedIdProviderState(String trustedIdProviderState) {
             this.trustedIdProviderState = Objects.requireNonNull(trustedIdProviderState);
             return this;
         }
-
         public Builder trustedIdProviders(List<TrustedIdProviderResponse> trustedIdProviders) {
             this.trustedIdProviders = Objects.requireNonNull(trustedIdProviders);
             return this;
         }
-
+        public Builder trustedIdProviders(TrustedIdProviderResponse... trustedIdProviders) {
+            return trustedIdProviders(List.of(trustedIdProviders));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkRules(List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }
-        public GetAccountResult build() {
+        public Builder virtualNetworkRules(VirtualNetworkRuleResponse... virtualNetworkRules) {
+            return virtualNetworkRules(List.of(virtualNetworkRules));
+        }        public GetAccountResult build() {
             return new GetAccountResult(accountId, creationTime, currentTier, defaultGroup, encryptionConfig, encryptionProvisioningState, encryptionState, endpoint, firewallAllowAzureIps, firewallRules, firewallState, id, identity, lastModifiedTime, location, name, newTier, provisioningState, state, tags, trustedIdProviderState, trustedIdProviders, type, virtualNetworkRules);
         }
     }

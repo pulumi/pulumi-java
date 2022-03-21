@@ -69,12 +69,10 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambda {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public AnalyticsApplicationInputsProcessingConfigurationLambda build() {
+        }        public AnalyticsApplicationInputsProcessingConfigurationLambda build() {
             return new AnalyticsApplicationInputsProcessingConfigurationLambda(resourceArn, roleArn);
         }
     }

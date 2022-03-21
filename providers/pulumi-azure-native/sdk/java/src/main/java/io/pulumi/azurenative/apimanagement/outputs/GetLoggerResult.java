@@ -171,42 +171,34 @@ public final class GetLoggerResult {
             this.credentials = credentials;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isBuffered(@Nullable Boolean isBuffered) {
             this.isBuffered = isBuffered;
             return this;
         }
-
         public Builder loggerType(String loggerType) {
             this.loggerType = Objects.requireNonNull(loggerType);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetLoggerResult build() {
+        }        public GetLoggerResult build() {
             return new GetLoggerResult(credentials, description, id, isBuffered, loggerType, name, resourceId, type);
         }
     }

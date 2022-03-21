@@ -220,57 +220,55 @@ public final class InstanceGroupConfigResponse {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorConfigResponse... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder diskConfig(DiskConfigResponse diskConfig) {
             this.diskConfig = Objects.requireNonNull(diskConfig);
             return this;
         }
-
         public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public Builder instanceNames(List<String> instanceNames) {
             this.instanceNames = Objects.requireNonNull(instanceNames);
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder instanceReferences(List<InstanceReferenceResponse> instanceReferences) {
             this.instanceReferences = Objects.requireNonNull(instanceReferences);
             return this;
         }
-
+        public Builder instanceReferences(InstanceReferenceResponse... instanceReferences) {
+            return instanceReferences(List.of(instanceReferences));
+        }
         public Builder isPreemptible(Boolean isPreemptible) {
             this.isPreemptible = Objects.requireNonNull(isPreemptible);
             return this;
         }
-
         public Builder machineTypeUri(String machineTypeUri) {
             this.machineTypeUri = Objects.requireNonNull(machineTypeUri);
             return this;
         }
-
         public Builder managedGroupConfig(ManagedGroupConfigResponse managedGroupConfig) {
             this.managedGroupConfig = Objects.requireNonNull(managedGroupConfig);
             return this;
         }
-
         public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public Builder numInstances(Integer numInstances) {
             this.numInstances = Objects.requireNonNull(numInstances);
             return this;
         }
-
         public Builder preemptibility(String preemptibility) {
             this.preemptibility = Objects.requireNonNull(preemptibility);
             return this;
-        }
-        public InstanceGroupConfigResponse build() {
+        }        public InstanceGroupConfigResponse build() {
             return new InstanceGroupConfigResponse(accelerators, diskConfig, imageUri, instanceNames, instanceReferences, isPreemptible, machineTypeUri, managedGroupConfig, minCpuPlatform, numInstances, preemptibility);
         }
     }

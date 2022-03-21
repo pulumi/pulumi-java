@@ -130,52 +130,42 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
             this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
             return this;
         }
-
         public Builder baseImageTriggerType(Either<String,BaseImageTriggerType> baseImageTriggerType) {
             this.baseImageTriggerType = Output.of(Objects.requireNonNull(baseImageTriggerType));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder updateTriggerEndpoint(@Nullable Output<String> updateTriggerEndpoint) {
             this.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
-
         public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
             this.updateTriggerEndpoint = Output.ofNullable(updateTriggerEndpoint);
             return this;
         }
-
         public Builder updateTriggerPayloadType(@Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
-
         public Builder updateTriggerPayloadType(@Nullable Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
             this.updateTriggerPayloadType = Output.ofNullable(updateTriggerPayloadType);
             return this;
-        }
-        public BaseImageTriggerArgs build() {
+        }        public BaseImageTriggerArgs build() {
             return new BaseImageTriggerArgs(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }
     }

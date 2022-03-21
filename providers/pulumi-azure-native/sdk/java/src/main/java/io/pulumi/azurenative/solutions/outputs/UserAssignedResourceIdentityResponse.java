@@ -69,12 +69,10 @@ public final class UserAssignedResourceIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }
-        public UserAssignedResourceIdentityResponse build() {
+        }        public UserAssignedResourceIdentityResponse build() {
             return new UserAssignedResourceIdentityResponse(principalId, tenantId);
         }
     }

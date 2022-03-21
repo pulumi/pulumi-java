@@ -71,12 +71,10 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
             this.computeType = computeType;
             return this;
         }
-
         public Builder coreCount(@Nullable Object coreCount) {
             this.coreCount = coreCount;
             return this;
-        }
-        public ExecuteDataFlowActivityTypePropertiesResponseCompute build() {
+        }        public ExecuteDataFlowActivityTypePropertiesResponseCompute build() {
             return new ExecuteDataFlowActivityTypePropertiesResponseCompute(computeType, coreCount);
         }
     }

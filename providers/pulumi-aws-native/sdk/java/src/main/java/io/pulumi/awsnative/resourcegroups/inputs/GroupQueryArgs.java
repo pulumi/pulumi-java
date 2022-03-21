@@ -80,32 +80,32 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
-
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
             this.resourceTypeFilters = Output.ofNullable(resourceTypeFilters);
             return this;
         }
-
+        public Builder resourceTypeFilters(String... resourceTypeFilters) {
+            return resourceTypeFilters(List.of(resourceTypeFilters));
+        }
         public Builder stackIdentifier(@Nullable Output<String> stackIdentifier) {
             this.stackIdentifier = stackIdentifier;
             return this;
         }
-
         public Builder stackIdentifier(@Nullable String stackIdentifier) {
             this.stackIdentifier = Output.ofNullable(stackIdentifier);
             return this;
         }
-
         public Builder tagFilters(@Nullable Output<List<GroupTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
-
         public Builder tagFilters(@Nullable List<GroupTagFilterArgs> tagFilters) {
             this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
-        public GroupQueryArgs build() {
+        public Builder tagFilters(GroupTagFilterArgs... tagFilters) {
+            return tagFilters(List.of(tagFilters));
+        }        public GroupQueryArgs build() {
             return new GroupQueryArgs(resourceTypeFilters, stackIdentifier, tagFilters);
         }
     }

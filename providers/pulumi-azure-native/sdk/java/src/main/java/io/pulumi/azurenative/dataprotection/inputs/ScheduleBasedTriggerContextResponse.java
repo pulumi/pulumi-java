@@ -96,17 +96,17 @@ public final class ScheduleBasedTriggerContextResponse extends io.pulumi.resourc
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder schedule(BackupScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder taggingCriteria(List<TaggingCriteriaResponse> taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-        public ScheduleBasedTriggerContextResponse build() {
+        public Builder taggingCriteria(TaggingCriteriaResponse... taggingCriteria) {
+            return taggingCriteria(List.of(taggingCriteria));
+        }        public ScheduleBasedTriggerContextResponse build() {
             return new ScheduleBasedTriggerContextResponse(objectType, schedule, taggingCriteria);
         }
     }

@@ -134,32 +134,26 @@ public final class GetDebugSessionResult {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder tracesize(Integer tracesize) {
             this.tracesize = Objects.requireNonNull(tracesize);
             return this;
         }
-
         public Builder validity(Integer validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
-        }
-        public GetDebugSessionResult build() {
+        }        public GetDebugSessionResult build() {
             return new GetDebugSessionResult(count, filter, name, timeout, tracesize, validity);
         }
     }

@@ -74,22 +74,18 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
             this.deleteBehavior = deleteBehavior;
             return this;
         }
-
         public Builder deleteBehavior(@Nullable String deleteBehavior) {
             this.deleteBehavior = Output.ofNullable(deleteBehavior);
             return this;
         }
-
         public Builder updateBehavior(@Nullable Output<String> updateBehavior) {
             this.updateBehavior = updateBehavior;
             return this;
         }
-
         public Builder updateBehavior(@Nullable String updateBehavior) {
             this.updateBehavior = Output.ofNullable(updateBehavior);
             return this;
-        }
-        public CrawlerSchemaChangePolicyArgs build() {
+        }        public CrawlerSchemaChangePolicyArgs build() {
             return new CrawlerSchemaChangePolicyArgs(deleteBehavior, updateBehavior);
         }
     }

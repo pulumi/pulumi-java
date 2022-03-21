@@ -104,22 +104,18 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
             this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetIotHubResourceEventHubConsumerGroupArgs build() {
+        }        public GetIotHubResourceEventHubConsumerGroupArgs build() {
             return new GetIotHubResourceEventHubConsumerGroupArgs(eventHubEndpointName, name, resourceGroupName, resourceName);
         }
     }

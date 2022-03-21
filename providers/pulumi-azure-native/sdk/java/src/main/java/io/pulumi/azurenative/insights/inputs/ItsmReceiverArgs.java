@@ -125,52 +125,42 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
-
         public Builder connectionId(String connectionId) {
             this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder ticketConfiguration(Output<String> ticketConfiguration) {
             this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
             return this;
         }
-
         public Builder ticketConfiguration(String ticketConfiguration) {
             this.ticketConfiguration = Output.of(Objects.requireNonNull(ticketConfiguration));
             return this;
         }
-
         public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
-        }
-        public ItsmReceiverArgs build() {
+        }        public ItsmReceiverArgs build() {
             return new ItsmReceiverArgs(connectionId, name, region, ticketConfiguration, workspaceId);
         }
     }

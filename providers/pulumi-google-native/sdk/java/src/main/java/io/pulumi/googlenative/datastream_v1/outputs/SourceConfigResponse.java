@@ -87,17 +87,14 @@ public final class SourceConfigResponse {
             this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig);
             return this;
         }
-
         public Builder oracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
             this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig);
             return this;
         }
-
         public Builder sourceConnectionProfile(String sourceConnectionProfile) {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
-        }
-        public SourceConfigResponse build() {
+        }        public SourceConfigResponse build() {
             return new SourceConfigResponse(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfile);
         }
     }

@@ -54,8 +54,7 @@ public final class ShareInfoElementResponse extends io.pulumi.resources.InvokeAr
         public Builder vmUri(String vmUri) {
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
-        }
-        public ShareInfoElementResponse build() {
+        }        public ShareInfoElementResponse build() {
             return new ShareInfoElementResponse(vmUri);
         }
     }

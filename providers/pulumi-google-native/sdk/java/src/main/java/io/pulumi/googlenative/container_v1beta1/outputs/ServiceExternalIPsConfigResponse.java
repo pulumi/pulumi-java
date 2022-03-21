@@ -51,8 +51,7 @@ public final class ServiceExternalIPsConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ServiceExternalIPsConfigResponse build() {
+        }        public ServiceExternalIPsConfigResponse build() {
             return new ServiceExternalIPsConfigResponse(enabled);
         }
     }

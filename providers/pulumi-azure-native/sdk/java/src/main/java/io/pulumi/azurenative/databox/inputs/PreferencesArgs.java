@@ -97,32 +97,29 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
-
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
             this.encryptionPreferences = Output.ofNullable(encryptionPreferences);
             return this;
         }
-
         public Builder preferredDataCenterRegion(@Nullable Output<List<String>> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
-
         public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = Output.ofNullable(preferredDataCenterRegion);
             return this;
         }
-
+        public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
+            return preferredDataCenterRegion(List.of(preferredDataCenterRegion));
+        }
         public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }
-
         public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
             this.transportPreferences = Output.ofNullable(transportPreferences);
             return this;
-        }
-        public PreferencesArgs build() {
+        }        public PreferencesArgs build() {
             return new PreferencesArgs(encryptionPreferences, preferredDataCenterRegion, transportPreferences);
         }
     }

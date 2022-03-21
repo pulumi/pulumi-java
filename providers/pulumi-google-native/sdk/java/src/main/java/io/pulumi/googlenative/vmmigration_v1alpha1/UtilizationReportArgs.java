@@ -153,82 +153,69 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public Builder sourceId(String sourceId) {
             this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
         }
-
         public Builder timeFrame(@Nullable Output<UtilizationReportTimeFrame> timeFrame) {
             this.timeFrame = timeFrame;
             return this;
         }
-
         public Builder timeFrame(@Nullable UtilizationReportTimeFrame timeFrame) {
             this.timeFrame = Output.ofNullable(timeFrame);
             return this;
         }
-
         public Builder utilizationReportId(Output<String> utilizationReportId) {
             this.utilizationReportId = Objects.requireNonNull(utilizationReportId);
             return this;
         }
-
         public Builder utilizationReportId(String utilizationReportId) {
             this.utilizationReportId = Output.of(Objects.requireNonNull(utilizationReportId));
             return this;
         }
-
         public Builder vms(@Nullable Output<List<VmUtilizationInfoArgs>> vms) {
             this.vms = vms;
             return this;
         }
-
         public Builder vms(@Nullable List<VmUtilizationInfoArgs> vms) {
             this.vms = Output.ofNullable(vms);
             return this;
         }
-        public UtilizationReportArgs build() {
+        public Builder vms(VmUtilizationInfoArgs... vms) {
+            return vms(List.of(vms));
+        }        public UtilizationReportArgs build() {
             return new UtilizationReportArgs(displayName, location, project, requestId, sourceId, timeFrame, utilizationReportId, vms);
         }
     }

@@ -78,22 +78,18 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
             this.onlyExcludeIfSingleVolume = onlyExcludeIfSingleVolume;
             return this;
         }
-
         public Builder onlyExcludeIfSingleVolume(@Nullable String onlyExcludeIfSingleVolume) {
             this.onlyExcludeIfSingleVolume = Output.ofNullable(onlyExcludeIfSingleVolume);
             return this;
         }
-
         public Builder volumeLabel(@Nullable Output<String> volumeLabel) {
             this.volumeLabel = volumeLabel;
             return this;
         }
-
         public Builder volumeLabel(@Nullable String volumeLabel) {
             this.volumeLabel = Output.ofNullable(volumeLabel);
             return this;
-        }
-        public InMageVolumeExclusionOptionsArgs build() {
+        }        public InMageVolumeExclusionOptionsArgs build() {
             return new InMageVolumeExclusionOptionsArgs(onlyExcludeIfSingleVolume, volumeLabel);
         }
     }

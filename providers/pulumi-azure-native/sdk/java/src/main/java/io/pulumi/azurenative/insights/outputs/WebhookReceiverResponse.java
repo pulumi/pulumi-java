@@ -152,37 +152,30 @@ public final class WebhookReceiverResponse {
             this.identifierUri = identifierUri;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
-
         public Builder serviceUri(String serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder useAadAuth(@Nullable Boolean useAadAuth) {
             this.useAadAuth = useAadAuth;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }
-        public WebhookReceiverResponse build() {
+        }        public WebhookReceiverResponse build() {
             return new WebhookReceiverResponse(identifierUri, name, objectId, serviceUri, tenantId, useAadAuth, useCommonAlertSchema);
         }
     }

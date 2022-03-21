@@ -71,12 +71,13 @@ public final class ListDomainRecommendationsResult {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
-
         public Builder value(List<NameIdentifierResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-        public ListDomainRecommendationsResult build() {
+        public Builder value(NameIdentifierResponse... value) {
+            return value(List.of(value));
+        }        public ListDomainRecommendationsResult build() {
             return new ListDomainRecommendationsResult(nextLink, value);
         }
     }

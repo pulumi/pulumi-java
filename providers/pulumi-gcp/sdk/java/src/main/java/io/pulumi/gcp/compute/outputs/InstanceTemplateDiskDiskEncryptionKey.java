@@ -51,8 +51,7 @@ public final class InstanceTemplateDiskDiskEncryptionKey {
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
-        }
-        public InstanceTemplateDiskDiskEncryptionKey build() {
+        }        public InstanceTemplateDiskDiskEncryptionKey build() {
             return new InstanceTemplateDiskDiskEncryptionKey(kmsKeySelfLink);
         }
     }

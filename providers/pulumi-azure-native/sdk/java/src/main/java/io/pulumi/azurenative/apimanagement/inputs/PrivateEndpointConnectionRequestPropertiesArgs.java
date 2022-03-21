@@ -61,12 +61,10 @@ public final class PrivateEndpointConnectionRequestPropertiesArgs extends io.pul
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
-        }
-        public PrivateEndpointConnectionRequestPropertiesArgs build() {
+        }        public PrivateEndpointConnectionRequestPropertiesArgs build() {
             return new PrivateEndpointConnectionRequestPropertiesArgs(privateLinkServiceConnectionState);
         }
     }

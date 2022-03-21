@@ -305,162 +305,130 @@ public final class AwsNodePoolState extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder autoscaling(@Nullable Output<AwsNodePoolAutoscalingGetArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
-
         public Builder autoscaling(@Nullable AwsNodePoolAutoscalingGetArgs autoscaling) {
             this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
-
         public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
-
         public Builder cluster(@Nullable String cluster) {
             this.cluster = Output.ofNullable(cluster);
             return this;
         }
-
         public Builder config(@Nullable Output<AwsNodePoolConfigGetArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable AwsNodePoolConfigGetArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maxPodsConstraint(@Nullable Output<AwsNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
             this.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
-
         public Builder maxPodsConstraint(@Nullable AwsNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
             this.maxPodsConstraint = Output.ofNullable(maxPodsConstraint);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
-
         public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Output.ofNullable(reconciling);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
-
         public Builder uid(@Nullable String uid) {
             this.uid = Output.ofNullable(uid);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public AwsNodePoolState build() {
+        }        public AwsNodePoolState build() {
             return new AwsNodePoolState(annotations, autoscaling, cluster, config, createTime, etag, location, maxPodsConstraint, name, project, reconciling, state, subnetId, uid, updateTime, version);
         }
     }

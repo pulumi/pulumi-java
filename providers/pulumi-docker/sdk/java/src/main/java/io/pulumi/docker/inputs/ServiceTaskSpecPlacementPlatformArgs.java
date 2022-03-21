@@ -65,22 +65,18 @@ public final class ServiceTaskSpecPlacementPlatformArgs extends io.pulumi.resour
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
-
         public Builder architecture(String architecture) {
             this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
-
         public Builder os(Output<String> os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
-
         public Builder os(String os) {
             this.os = Output.of(Objects.requireNonNull(os));
             return this;
-        }
-        public ServiceTaskSpecPlacementPlatformArgs build() {
+        }        public ServiceTaskSpecPlacementPlatformArgs build() {
             return new ServiceTaskSpecPlacementPlatformArgs(architecture, os);
         }
     }

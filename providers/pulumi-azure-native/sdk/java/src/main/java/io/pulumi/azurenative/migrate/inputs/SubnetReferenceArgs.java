@@ -78,22 +78,18 @@ public final class SubnetReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
-
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
-        }
-        public SubnetReferenceArgs build() {
+        }        public SubnetReferenceArgs build() {
             return new SubnetReferenceArgs(name, sourceArmResourceId);
         }
     }

@@ -53,12 +53,10 @@ public final class FrameworkControlInputParameter {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
-
         public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
-        }
-        public FrameworkControlInputParameter build() {
+        }        public FrameworkControlInputParameter build() {
             return new FrameworkControlInputParameter(parameterName, parameterValue);
         }
     }

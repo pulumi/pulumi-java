@@ -54,8 +54,7 @@ public final class GetOriginAccessIdentityArgs extends io.pulumi.resources.Invok
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetOriginAccessIdentityArgs build() {
+        }        public GetOriginAccessIdentityArgs build() {
             return new GetOriginAccessIdentityArgs(id);
         }
     }

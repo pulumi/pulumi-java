@@ -112,22 +112,18 @@ public final class SourcePropertiesResponse extends io.pulumi.resources.InvokeAr
             this.branch = branch;
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder sourceControlAuthProperties(@Nullable AuthInfoResponse sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
-
         public Builder sourceControlType(String sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
-        }
-        public SourcePropertiesResponse build() {
+        }        public SourcePropertiesResponse build() {
             return new SourcePropertiesResponse(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }
     }

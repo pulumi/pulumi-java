@@ -53,8 +53,7 @@ public final class ServiceHealthCheckCustomConfig {
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
-        }
-        public ServiceHealthCheckCustomConfig build() {
+        }        public ServiceHealthCheckCustomConfig build() {
             return new ServiceHealthCheckCustomConfig(failureThreshold);
         }
     }

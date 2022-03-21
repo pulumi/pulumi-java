@@ -43,8 +43,7 @@ public final class FlowMarketoSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowMarketoSourceProperties build() {
+        }        public FlowMarketoSourceProperties build() {
             return new FlowMarketoSourceProperties(object);
         }
     }

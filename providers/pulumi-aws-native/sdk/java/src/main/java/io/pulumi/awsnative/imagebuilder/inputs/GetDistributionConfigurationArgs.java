@@ -54,8 +54,7 @@ public final class GetDistributionConfigurationArgs extends io.pulumi.resources.
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetDistributionConfigurationArgs build() {
+        }        public GetDistributionConfigurationArgs build() {
             return new GetDistributionConfigurationArgs(arn);
         }
     }

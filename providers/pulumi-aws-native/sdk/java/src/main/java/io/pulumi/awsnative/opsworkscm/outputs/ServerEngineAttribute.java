@@ -55,12 +55,10 @@ public final class ServerEngineAttribute {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ServerEngineAttribute build() {
+        }        public ServerEngineAttribute build() {
             return new ServerEngineAttribute(name, value);
         }
     }

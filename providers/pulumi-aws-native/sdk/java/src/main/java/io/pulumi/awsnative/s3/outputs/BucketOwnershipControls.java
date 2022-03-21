@@ -45,7 +45,9 @@ public final class BucketOwnershipControls {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public BucketOwnershipControls build() {
+        public Builder rules(BucketOwnershipControlsRule... rules) {
+            return rules(List.of(rules));
+        }        public BucketOwnershipControls build() {
             return new BucketOwnershipControls(rules);
         }
     }

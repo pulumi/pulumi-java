@@ -91,32 +91,26 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable DocumentationPartLocationGetArgs location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable String properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Output.ofNullable(restApiId);
             return this;
-        }
-        public DocumentationPartState build() {
+        }        public DocumentationPartState build() {
             return new DocumentationPartState(location, properties, restApiId);
         }
     }

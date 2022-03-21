@@ -124,52 +124,42 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             this.addonName = addonName;
             return this;
         }
-
         public Builder addonName(@Nullable String addonName) {
             this.addonName = Output.ofNullable(addonName);
             return this;
         }
-
         public Builder addonType(@Nullable Output<Either<String,AddonType>> addonType) {
             this.addonType = addonType;
             return this;
         }
-
         public Builder addonType(@Nullable Either<String,AddonType> addonType) {
             this.addonType = Output.ofNullable(addonType);
             return this;
         }
-
         public Builder licenseKey(@Nullable Output<String> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
-
         public Builder licenseKey(@Nullable String licenseKey) {
             this.licenseKey = Output.ofNullable(licenseKey);
             return this;
         }
-
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public AddonArgs build() {
+        }        public AddonArgs build() {
             return new AddonArgs(addonName, addonType, licenseKey, privateCloudName, resourceGroupName);
         }
     }

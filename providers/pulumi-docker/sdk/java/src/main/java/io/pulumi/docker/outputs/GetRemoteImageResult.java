@@ -69,17 +69,14 @@ public final class GetRemoteImageResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder repoDigest(String repoDigest) {
             this.repoDigest = Objects.requireNonNull(repoDigest);
             return this;
-        }
-        public GetRemoteImageResult build() {
+        }        public GetRemoteImageResult build() {
             return new GetRemoteImageResult(id, name, repoDigest);
         }
     }

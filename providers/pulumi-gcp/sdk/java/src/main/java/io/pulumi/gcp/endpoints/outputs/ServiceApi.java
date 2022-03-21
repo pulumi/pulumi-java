@@ -73,22 +73,21 @@ public final class ServiceApi {
             this.methods = methods;
             return this;
         }
-
+        public Builder methods(ServiceApiMethod... methods) {
+            return methods(List.of(methods));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder syntax(@Nullable String syntax) {
             this.syntax = syntax;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public ServiceApi build() {
+        }        public ServiceApi build() {
             return new ServiceApi(methods, name, syntax, version);
         }
     }

@@ -70,12 +70,10 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder lockedTime(String lockedTime) {
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
-        }
-        public BucketIamConfigurationBucketPolicyOnlyResponse build() {
+        }        public BucketIamConfigurationBucketPolicyOnlyResponse build() {
             return new BucketIamConfigurationBucketPolicyOnlyResponse(enabled, lockedTime);
         }
     }

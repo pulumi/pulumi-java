@@ -242,62 +242,53 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
             this.assignmentHash = Objects.requireNonNull(assignmentHash);
             return this;
         }
-
         public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
-
         public Builder guestConfiguration(@Nullable GuestConfigurationNavigationResponse guestConfiguration) {
             this.guestConfiguration = guestConfiguration;
             return this;
         }
-
         public Builder lastComplianceStatusChecked(String lastComplianceStatusChecked) {
             this.lastComplianceStatusChecked = Objects.requireNonNull(lastComplianceStatusChecked);
             return this;
         }
-
         public Builder latestAssignmentReport(@Nullable AssignmentReportResponse latestAssignmentReport) {
             this.latestAssignmentReport = latestAssignmentReport;
             return this;
         }
-
         public Builder latestReportId(String latestReportId) {
             this.latestReportId = Objects.requireNonNull(latestReportId);
             return this;
         }
-
         public Builder parameterHash(String parameterHash) {
             this.parameterHash = Objects.requireNonNull(parameterHash);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
-
         public Builder vmssVMList(@Nullable List<VMSSVMInfoResponse> vmssVMList) {
             this.vmssVMList = vmssVMList;
             return this;
         }
-        public GuestConfigurationAssignmentPropertiesResponse build() {
+        public Builder vmssVMList(VMSSVMInfoResponse... vmssVMList) {
+            return vmssVMList(List.of(vmssVMList));
+        }        public GuestConfigurationAssignmentPropertiesResponse build() {
             return new GuestConfigurationAssignmentPropertiesResponse(assignmentHash, complianceStatus, context, guestConfiguration, lastComplianceStatusChecked, latestAssignmentReport, latestReportId, parameterHash, provisioningState, resourceType, targetResourceId, vmssVMList);
         }
     }

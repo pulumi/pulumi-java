@@ -113,22 +113,21 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
             this.allocatedIpAddresses = allocatedIpAddresses;
             return this;
         }
-
+        public Builder allocatedIpAddresses(String... allocatedIpAddresses) {
+            return allocatedIpAddresses(List.of(allocatedIpAddresses));
+        }
         public Builder totalEgressBytesTransferred(Double totalEgressBytesTransferred) {
             this.totalEgressBytesTransferred = Objects.requireNonNull(totalEgressBytesTransferred);
             return this;
         }
-
         public Builder totalIngressBytesTransferred(Double totalIngressBytesTransferred) {
             this.totalIngressBytesTransferred = Objects.requireNonNull(totalIngressBytesTransferred);
             return this;
         }
-
         public Builder vpnClientConnectionsCount(@Nullable Integer vpnClientConnectionsCount) {
             this.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;
-        }
-        public VpnClientConnectionHealthResponse build() {
+        }        public VpnClientConnectionHealthResponse build() {
             return new VpnClientConnectionHealthResponse(allocatedIpAddresses, totalEgressBytesTransferred, totalIngressBytesTransferred, vpnClientConnectionsCount);
         }
     }

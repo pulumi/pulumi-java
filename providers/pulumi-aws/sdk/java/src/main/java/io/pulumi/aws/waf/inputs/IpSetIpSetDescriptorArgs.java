@@ -73,22 +73,18 @@ public final class IpSetIpSetDescriptorArgs extends io.pulumi.resources.Resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public IpSetIpSetDescriptorArgs build() {
+        }        public IpSetIpSetDescriptorArgs build() {
             return new IpSetIpSetDescriptorArgs(type, value);
         }
     }

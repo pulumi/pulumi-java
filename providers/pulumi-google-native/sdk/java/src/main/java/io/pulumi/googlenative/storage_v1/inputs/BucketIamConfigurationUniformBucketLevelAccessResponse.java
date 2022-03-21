@@ -77,12 +77,10 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse extend
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder lockedTime(String lockedTime) {
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
-        }
-        public BucketIamConfigurationUniformBucketLevelAccessResponse build() {
+        }        public BucketIamConfigurationUniformBucketLevelAccessResponse build() {
             return new BucketIamConfigurationUniformBucketLevelAccessResponse(enabled, lockedTime);
         }
     }

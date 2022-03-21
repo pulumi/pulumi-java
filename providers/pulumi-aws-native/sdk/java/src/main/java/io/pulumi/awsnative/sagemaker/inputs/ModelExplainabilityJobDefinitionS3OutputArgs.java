@@ -95,32 +95,26 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public Builder localPath(String localPath) {
             this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
-
         public Builder s3UploadMode(@Nullable Output<ModelExplainabilityJobDefinitionS3OutputS3UploadMode> s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
-
         public Builder s3UploadMode(@Nullable ModelExplainabilityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = Output.ofNullable(s3UploadMode);
             return this;
         }
-
         public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public Builder s3Uri(String s3Uri) {
             this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
-        }
-        public ModelExplainabilityJobDefinitionS3OutputArgs build() {
+        }        public ModelExplainabilityJobDefinitionS3OutputArgs build() {
             return new ModelExplainabilityJobDefinitionS3OutputArgs(localPath, s3UploadMode, s3Uri);
         }
     }

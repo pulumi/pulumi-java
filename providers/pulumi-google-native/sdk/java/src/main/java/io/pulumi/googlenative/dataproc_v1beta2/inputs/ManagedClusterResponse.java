@@ -94,17 +94,14 @@ public final class ManagedClusterResponse extends io.pulumi.resources.InvokeArgs
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder config(ClusterConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
-        }
-        public ManagedClusterResponse build() {
+        }        public ManagedClusterResponse build() {
             return new ManagedClusterResponse(clusterName, config, labels);
         }
     }

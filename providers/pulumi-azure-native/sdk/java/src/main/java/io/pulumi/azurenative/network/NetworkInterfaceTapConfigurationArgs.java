@@ -139,62 +139,50 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkInterfaceName(Output<String> networkInterfaceName) {
             this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
             return this;
         }
-
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = Output.of(Objects.requireNonNull(networkInterfaceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tapConfigurationName(@Nullable Output<String> tapConfigurationName) {
             this.tapConfigurationName = tapConfigurationName;
             return this;
         }
-
         public Builder tapConfigurationName(@Nullable String tapConfigurationName) {
             this.tapConfigurationName = Output.ofNullable(tapConfigurationName);
             return this;
         }
-
         public Builder virtualNetworkTap(@Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
             this.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
-
         public Builder virtualNetworkTap(@Nullable VirtualNetworkTapArgs virtualNetworkTap) {
             this.virtualNetworkTap = Output.ofNullable(virtualNetworkTap);
             return this;
-        }
-        public NetworkInterfaceTapConfigurationArgs build() {
+        }        public NetworkInterfaceTapConfigurationArgs build() {
             return new NetworkInterfaceTapConfigurationArgs(id, name, networkInterfaceName, resourceGroupName, tapConfigurationName, virtualNetworkTap);
         }
     }

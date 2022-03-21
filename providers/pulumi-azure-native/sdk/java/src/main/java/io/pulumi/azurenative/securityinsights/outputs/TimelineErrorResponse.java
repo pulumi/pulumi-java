@@ -87,17 +87,14 @@ public final class TimelineErrorResponse {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
-        }
-        public TimelineErrorResponse build() {
+        }        public TimelineErrorResponse build() {
             return new TimelineErrorResponse(errorMessage, kind, queryId);
         }
     }

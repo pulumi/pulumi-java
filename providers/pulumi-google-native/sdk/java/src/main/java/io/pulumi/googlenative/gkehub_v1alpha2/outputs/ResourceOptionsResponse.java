@@ -86,17 +86,14 @@ public final class ResourceOptionsResponse {
             this.connectVersion = Objects.requireNonNull(connectVersion);
             return this;
         }
-
         public Builder k8sVersion(String k8sVersion) {
             this.k8sVersion = Objects.requireNonNull(k8sVersion);
             return this;
         }
-
         public Builder v1beta1Crd(Boolean v1beta1Crd) {
             this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
             return this;
-        }
-        public ResourceOptionsResponse build() {
+        }        public ResourceOptionsResponse build() {
             return new ResourceOptionsResponse(connectVersion, k8sVersion, v1beta1Crd);
         }
     }

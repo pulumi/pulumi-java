@@ -106,22 +106,18 @@ public final class PolicyTargetTrackingConfiguration {
             this.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
-
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
-
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification) {
             this.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
-
         public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
-        }
-        public PolicyTargetTrackingConfiguration build() {
+        }        public PolicyTargetTrackingConfiguration build() {
             return new PolicyTargetTrackingConfiguration(customizedMetricSpecification, disableScaleIn, predefinedMetricSpecification, targetValue);
         }
     }

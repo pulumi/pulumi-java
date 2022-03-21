@@ -130,52 +130,45 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder roleRef(Output<RoleRefArgs> roleRef) {
             this.roleRef = Objects.requireNonNull(roleRef);
             return this;
         }
-
         public Builder roleRef(RoleRefArgs roleRef) {
             this.roleRef = Output.of(Objects.requireNonNull(roleRef));
             return this;
         }
-
         public Builder subjects(@Nullable Output<List<SubjectArgs>> subjects) {
             this.subjects = subjects;
             return this;
         }
-
         public Builder subjects(@Nullable List<SubjectArgs> subjects) {
             this.subjects = Output.ofNullable(subjects);
             return this;
         }
-        public RoleBindingArgs build() {
+        public Builder subjects(SubjectArgs... subjects) {
+            return subjects(List.of(subjects));
+        }        public RoleBindingArgs build() {
             return new RoleBindingArgs(apiVersion, kind, metadata, roleRef, subjects);
         }
     }

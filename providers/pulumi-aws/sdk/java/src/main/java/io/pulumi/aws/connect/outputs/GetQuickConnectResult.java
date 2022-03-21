@@ -152,42 +152,37 @@ public final class GetQuickConnectResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder quickConnectConfigs(List<GetQuickConnectQuickConnectConfig> quickConnectConfigs) {
             this.quickConnectConfigs = Objects.requireNonNull(quickConnectConfigs);
             return this;
         }
-
+        public Builder quickConnectConfigs(GetQuickConnectQuickConnectConfig... quickConnectConfigs) {
+            return quickConnectConfigs(List.of(quickConnectConfigs));
+        }
         public Builder quickConnectId(String quickConnectId) {
             this.quickConnectId = Objects.requireNonNull(quickConnectId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetQuickConnectResult build() {
+        }        public GetQuickConnectResult build() {
             return new GetQuickConnectResult(arn, description, id, instanceId, name, quickConnectConfigs, quickConnectId, tags);
         }
     }

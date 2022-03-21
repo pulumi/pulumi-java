@@ -135,32 +135,26 @@ public final class AutoShutdownProfileResponse {
             this.disconnectDelay = disconnectDelay;
             return this;
         }
-
         public Builder idleDelay(@Nullable String idleDelay) {
             this.idleDelay = idleDelay;
             return this;
         }
-
         public Builder noConnectDelay(@Nullable String noConnectDelay) {
             this.noConnectDelay = noConnectDelay;
             return this;
         }
-
         public Builder shutdownOnDisconnect(@Nullable String shutdownOnDisconnect) {
             this.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
-
         public Builder shutdownOnIdle(@Nullable String shutdownOnIdle) {
             this.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
-
         public Builder shutdownWhenNotConnected(@Nullable String shutdownWhenNotConnected) {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
-        }
-        public AutoShutdownProfileResponse build() {
+        }        public AutoShutdownProfileResponse build() {
             return new AutoShutdownProfileResponse(disconnectDelay, idleDelay, noConnectDelay, shutdownOnDisconnect, shutdownOnIdle, shutdownWhenNotConnected);
         }
     }

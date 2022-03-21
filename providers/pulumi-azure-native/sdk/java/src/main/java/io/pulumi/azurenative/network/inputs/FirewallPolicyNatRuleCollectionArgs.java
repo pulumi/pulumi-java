@@ -134,52 +134,45 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable FirewallPolicyNatRuleCollectionActionArgs action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = Output.ofNullable(priority);
             return this;
         }
-
         public Builder ruleCollectionType(Output<String> ruleCollectionType) {
             this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
             return this;
         }
-
         public Builder ruleCollectionType(String ruleCollectionType) {
             this.ruleCollectionType = Output.of(Objects.requireNonNull(ruleCollectionType));
             return this;
         }
-
         public Builder rules(@Nullable Output<List<Object>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<Object> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-        public FirewallPolicyNatRuleCollectionArgs build() {
+        public Builder rules(Object... rules) {
+            return rules(List.of(rules));
+        }        public FirewallPolicyNatRuleCollectionArgs build() {
             return new FirewallPolicyNatRuleCollectionArgs(action, name, priority, ruleCollectionType, rules);
         }
     }

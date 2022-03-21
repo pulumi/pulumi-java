@@ -50,8 +50,7 @@ public final class GetDeliveryStreamArgs extends io.pulumi.resources.InvokeArgs 
         public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
-        }
-        public GetDeliveryStreamArgs build() {
+        }        public GetDeliveryStreamArgs build() {
             return new GetDeliveryStreamArgs(deliveryStreamName);
         }
     }

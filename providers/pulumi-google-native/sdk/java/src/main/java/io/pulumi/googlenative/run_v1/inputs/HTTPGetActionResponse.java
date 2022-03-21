@@ -110,22 +110,21 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder httpHeaders(List<HTTPHeaderResponse> httpHeaders) {
             this.httpHeaders = Objects.requireNonNull(httpHeaders);
             return this;
         }
-
+        public Builder httpHeaders(HTTPHeaderResponse... httpHeaders) {
+            return httpHeaders(List.of(httpHeaders));
+        }
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
-        }
-        public HTTPGetActionResponse build() {
+        }        public HTTPGetActionResponse build() {
             return new HTTPGetActionResponse(host, httpHeaders, path, scheme);
         }
     }

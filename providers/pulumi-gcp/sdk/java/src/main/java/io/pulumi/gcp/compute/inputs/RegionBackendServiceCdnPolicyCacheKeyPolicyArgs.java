@@ -137,52 +137,48 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
             this.includeHost = includeHost;
             return this;
         }
-
         public Builder includeHost(@Nullable Boolean includeHost) {
             this.includeHost = Output.ofNullable(includeHost);
             return this;
         }
-
         public Builder includeProtocol(@Nullable Output<Boolean> includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
-
         public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = Output.ofNullable(includeProtocol);
             return this;
         }
-
         public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
-
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = Output.ofNullable(includeQueryString);
             return this;
         }
-
         public Builder queryStringBlacklists(@Nullable Output<List<String>> queryStringBlacklists) {
             this.queryStringBlacklists = queryStringBlacklists;
             return this;
         }
-
         public Builder queryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
             this.queryStringBlacklists = Output.ofNullable(queryStringBlacklists);
             return this;
         }
-
+        public Builder queryStringBlacklists(String... queryStringBlacklists) {
+            return queryStringBlacklists(List.of(queryStringBlacklists));
+        }
         public Builder queryStringWhitelists(@Nullable Output<List<String>> queryStringWhitelists) {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }
-
         public Builder queryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
             this.queryStringWhitelists = Output.ofNullable(queryStringWhitelists);
             return this;
         }
-        public RegionBackendServiceCdnPolicyCacheKeyPolicyArgs build() {
+        public Builder queryStringWhitelists(String... queryStringWhitelists) {
+            return queryStringWhitelists(List.of(queryStringWhitelists));
+        }        public RegionBackendServiceCdnPolicyCacheKeyPolicyArgs build() {
             return new RegionBackendServiceCdnPolicyCacheKeyPolicyArgs(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }
     }

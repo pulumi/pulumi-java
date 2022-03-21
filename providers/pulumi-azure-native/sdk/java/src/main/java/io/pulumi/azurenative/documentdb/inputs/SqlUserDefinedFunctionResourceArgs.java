@@ -78,22 +78,18 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public SqlUserDefinedFunctionResourceArgs build() {
+        }        public SqlUserDefinedFunctionResourceArgs build() {
             return new SqlUserDefinedFunctionResourceArgs(body, id);
         }
     }

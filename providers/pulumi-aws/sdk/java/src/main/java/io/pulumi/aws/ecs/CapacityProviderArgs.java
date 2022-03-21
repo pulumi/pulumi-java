@@ -92,32 +92,26 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
             this.autoScalingGroupProvider = Objects.requireNonNull(autoScalingGroupProvider);
             return this;
         }
-
         public Builder autoScalingGroupProvider(CapacityProviderAutoScalingGroupProviderArgs autoScalingGroupProvider) {
             this.autoScalingGroupProvider = Output.of(Objects.requireNonNull(autoScalingGroupProvider));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CapacityProviderArgs build() {
+        }        public CapacityProviderArgs build() {
             return new CapacityProviderArgs(autoScalingGroupProvider, name, tags);
         }
     }

@@ -189,82 +189,66 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             this.appEngine = appEngine;
             return this;
         }
-
         public Builder appEngine(@Nullable RegionNetworkEndpointGroupAppEngineArgs appEngine) {
             this.appEngine = Output.ofNullable(appEngine);
             return this;
         }
-
         public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
-
         public Builder cloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionArgs cloudFunction) {
             this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
-
         public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
-
         public Builder cloudRun(@Nullable RegionNetworkEndpointGroupCloudRunArgs cloudRun) {
             this.cloudRun = Output.ofNullable(cloudRun);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
-
         public Builder networkEndpointType(@Nullable String networkEndpointType) {
             this.networkEndpointType = Output.ofNullable(networkEndpointType);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
-        }
-        public RegionNetworkEndpointGroupArgs build() {
+        }        public RegionNetworkEndpointGroupArgs build() {
             return new RegionNetworkEndpointGroupArgs(appEngine, cloudFunction, cloudRun, description, name, networkEndpointType, project, region);
         }
     }

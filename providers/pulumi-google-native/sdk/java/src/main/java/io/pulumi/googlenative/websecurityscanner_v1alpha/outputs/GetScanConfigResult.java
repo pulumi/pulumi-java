@@ -202,52 +202,51 @@ public final class GetScanConfigResult {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder blacklistPatterns(List<String> blacklistPatterns) {
             this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
             return this;
         }
-
+        public Builder blacklistPatterns(String... blacklistPatterns) {
+            return blacklistPatterns(List.of(blacklistPatterns));
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder latestRun(ScanRunResponse latestRun) {
             this.latestRun = Objects.requireNonNull(latestRun);
             return this;
         }
-
         public Builder maxQps(Integer maxQps) {
             this.maxQps = Objects.requireNonNull(maxQps);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schedule(ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
-
+        public Builder startingUrls(String... startingUrls) {
+            return startingUrls(List.of(startingUrls));
+        }
         public Builder targetPlatforms(List<String> targetPlatforms) {
             this.targetPlatforms = Objects.requireNonNull(targetPlatforms);
             return this;
         }
-
+        public Builder targetPlatforms(String... targetPlatforms) {
+            return targetPlatforms(List.of(targetPlatforms));
+        }
         public Builder userAgent(String userAgent) {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
-        }
-        public GetScanConfigResult build() {
+        }        public GetScanConfigResult build() {
             return new GetScanConfigResult(authentication, blacklistPatterns, displayName, latestRun, maxQps, name, schedule, startingUrls, targetPlatforms, userAgent);
         }
     }

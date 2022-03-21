@@ -191,92 +191,83 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.assumeRolePolicyDocument = Objects.requireNonNull(assumeRolePolicyDocument);
             return this;
         }
-
         public Builder assumeRolePolicyDocument(Object assumeRolePolicyDocument) {
             this.assumeRolePolicyDocument = Output.of(Objects.requireNonNull(assumeRolePolicyDocument));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
-
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = Output.ofNullable(managedPolicyArns);
             return this;
         }
-
+        public Builder managedPolicyArns(String... managedPolicyArns) {
+            return managedPolicyArns(List.of(managedPolicyArns));
+        }
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
-
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = Output.ofNullable(maxSessionDuration);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
-
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
             return this;
         }
-
         public Builder policies(@Nullable Output<List<RolePolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
-
         public Builder policies(@Nullable List<RolePolicyArgs> policies) {
             this.policies = Output.ofNullable(policies);
             return this;
         }
-
+        public Builder policies(RolePolicyArgs... policies) {
+            return policies(List.of(policies));
+        }
         public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
-
         public Builder roleName(@Nullable String roleName) {
             this.roleName = Output.ofNullable(roleName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<RoleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<RoleTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public RoleArgs build() {
+        public Builder tags(RoleTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public RoleArgs build() {
             return new RoleArgs(assumeRolePolicyDocument, description, managedPolicyArns, maxSessionDuration, path, permissionsBoundary, policies, roleName, tags);
         }
     }

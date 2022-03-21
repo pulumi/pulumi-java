@@ -129,52 +129,45 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
             this.accessModes = accessModes;
             return this;
         }
-
         public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Output.ofNullable(accessModes);
             return this;
         }
-
+        public Builder accessModes(String... accessModes) {
+            return accessModes(List.of(accessModes));
+        }
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
-
         public Builder disableGatewayAuth(@Nullable Output<Boolean> disableGatewayAuth) {
             this.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
-
         public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
             this.disableGatewayAuth = Output.ofNullable(disableGatewayAuth);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder subDomainSuffix(@Nullable Output<String> subDomainSuffix) {
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }
-
         public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
             this.subDomainSuffix = Output.ofNullable(subDomainSuffix);
             return this;
-        }
-        public ApplicationGetHttpsEndpointArgs build() {
+        }        public ApplicationGetHttpsEndpointArgs build() {
             return new ApplicationGetHttpsEndpointArgs(accessModes, destinationPort, disableGatewayAuth, privateIPAddress, subDomainSuffix);
         }
     }

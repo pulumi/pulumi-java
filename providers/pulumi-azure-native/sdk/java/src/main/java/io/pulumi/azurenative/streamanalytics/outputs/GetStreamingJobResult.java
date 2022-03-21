@@ -431,122 +431,107 @@ public final class GetStreamingJobResult {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
-
         public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder dataLocale(@Nullable String dataLocale) {
             this.dataLocale = dataLocale;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
-
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
-
         public Builder eventsOutOfOrderPolicy(@Nullable String eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
-
         public Builder functions(@Nullable List<FunctionResponse> functions) {
             this.functions = functions;
             return this;
         }
-
+        public Builder functions(FunctionResponse... functions) {
+            return functions(List.of(functions));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder inputs(@Nullable List<InputResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
-
+        public Builder inputs(InputResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder jobState(String jobState) {
             this.jobState = Objects.requireNonNull(jobState);
             return this;
         }
-
         public Builder lastOutputEventTime(String lastOutputEventTime) {
             this.lastOutputEventTime = Objects.requireNonNull(lastOutputEventTime);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder outputErrorPolicy(@Nullable String outputErrorPolicy) {
             this.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
-
         public Builder outputStartMode(@Nullable String outputStartMode) {
             this.outputStartMode = outputStartMode;
             return this;
         }
-
         public Builder outputStartTime(@Nullable String outputStartTime) {
             this.outputStartTime = outputStartTime;
             return this;
         }
-
         public Builder outputs(@Nullable List<OutputResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
-
+        public Builder outputs(OutputResponse... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transformation(@Nullable TransformationResponse transformation) {
             this.transformation = transformation;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetStreamingJobResult build() {
+        }        public GetStreamingJobResult build() {
             return new GetStreamingJobResult(compatibilityLevel, createdDate, dataLocale, etag, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, id, inputs, jobId, jobState, lastOutputEventTime, location, name, outputErrorPolicy, outputStartMode, outputStartTime, outputs, provisioningState, sku, tags, transformation, type);
         }
     }

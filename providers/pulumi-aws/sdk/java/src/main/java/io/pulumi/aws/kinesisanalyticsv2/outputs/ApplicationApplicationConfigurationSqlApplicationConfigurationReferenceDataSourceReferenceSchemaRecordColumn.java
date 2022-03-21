@@ -87,17 +87,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.mapping = mapping;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sqlType(String sqlType) {
             this.sqlType = Objects.requireNonNull(sqlType);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn(mapping, name, sqlType);
         }
     }

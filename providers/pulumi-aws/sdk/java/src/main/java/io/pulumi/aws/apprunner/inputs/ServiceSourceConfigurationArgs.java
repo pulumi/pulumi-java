@@ -109,42 +109,34 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-
         public Builder authenticationConfiguration(@Nullable ServiceSourceConfigurationAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
-
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = Output.ofNullable(autoDeploymentsEnabled);
             return this;
         }
-
         public Builder codeRepository(@Nullable Output<ServiceSourceConfigurationCodeRepositoryArgs> codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
-
         public Builder codeRepository(@Nullable ServiceSourceConfigurationCodeRepositoryArgs codeRepository) {
             this.codeRepository = Output.ofNullable(codeRepository);
             return this;
         }
-
         public Builder imageRepository(@Nullable Output<ServiceSourceConfigurationImageRepositoryArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
-
         public Builder imageRepository(@Nullable ServiceSourceConfigurationImageRepositoryArgs imageRepository) {
             this.imageRepository = Output.ofNullable(imageRepository);
             return this;
-        }
-        public ServiceSourceConfigurationArgs build() {
+        }        public ServiceSourceConfigurationArgs build() {
             return new ServiceSourceConfigurationArgs(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }
     }

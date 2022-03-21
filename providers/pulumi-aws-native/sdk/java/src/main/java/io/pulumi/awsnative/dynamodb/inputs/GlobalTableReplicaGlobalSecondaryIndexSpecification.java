@@ -80,17 +80,14 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification extends i
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
-
         public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
-
         public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
-        }
-        public GlobalTableReplicaGlobalSecondaryIndexSpecification build() {
+        }        public GlobalTableReplicaGlobalSecondaryIndexSpecification build() {
             return new GlobalTableReplicaGlobalSecondaryIndexSpecification(contributorInsightsSpecification, indexName, readProvisionedThroughputSettings);
         }
     }

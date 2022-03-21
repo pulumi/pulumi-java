@@ -96,17 +96,14 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
             this.metricTrigger = metricTrigger;
             return this;
         }
-
         public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public Builder thresholdOperator(String thresholdOperator) {
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
-        }
-        public TriggerConditionResponse build() {
+        }        public TriggerConditionResponse build() {
             return new TriggerConditionResponse(metricTrigger, threshold, thresholdOperator);
         }
     }

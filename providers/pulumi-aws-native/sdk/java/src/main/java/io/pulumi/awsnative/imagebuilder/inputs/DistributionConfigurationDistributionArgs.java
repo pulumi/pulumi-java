@@ -130,52 +130,48 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
-
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs amiDistributionConfiguration) {
             this.amiDistributionConfiguration = Output.ofNullable(amiDistributionConfiguration);
             return this;
         }
-
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
-
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs containerDistributionConfiguration) {
             this.containerDistributionConfiguration = Output.ofNullable(containerDistributionConfiguration);
             return this;
         }
-
         public Builder launchTemplateConfigurations(@Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations) {
             this.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
-
         public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfigurationArgs> launchTemplateConfigurations) {
             this.launchTemplateConfigurations = Output.ofNullable(launchTemplateConfigurations);
             return this;
         }
-
+        public Builder launchTemplateConfigurations(DistributionConfigurationLaunchTemplateConfigurationArgs... launchTemplateConfigurations) {
+            return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
+        }
         public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
-
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Output.ofNullable(licenseConfigurationArns);
             return this;
         }
-
+        public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
+            return licenseConfigurationArns(List.of(licenseConfigurationArns));
+        }
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
-        }
-        public DistributionConfigurationDistributionArgs build() {
+        }        public DistributionConfigurationDistributionArgs build() {
             return new DistributionConfigurationDistributionArgs(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }
     }

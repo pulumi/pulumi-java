@@ -80,22 +80,21 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable List<String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
+        public Builder properties(String... properties) {
+            return properties(List.of(properties));
+        }
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(OSPolicyResourceFileArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public OSPolicyResourcePackageResourceMSIArgs build() {
+        }        public OSPolicyResourcePackageResourceMSIArgs build() {
             return new OSPolicyResourcePackageResourceMSIArgs(properties, source);
         }
     }

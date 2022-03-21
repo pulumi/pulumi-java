@@ -123,52 +123,42 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
             this.apiPortalName = Objects.requireNonNull(apiPortalName);
             return this;
         }
-
         public Builder apiPortalName(String apiPortalName) {
             this.apiPortalName = Output.of(Objects.requireNonNull(apiPortalName));
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ApiPortalCustomDomainPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ApiPortalCustomDomainPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ApiPortalCustomDomainArgs build() {
+        }        public ApiPortalCustomDomainArgs build() {
             return new ApiPortalCustomDomainArgs(apiPortalName, domainName, properties, resourceGroupName, serviceName);
         }
     }

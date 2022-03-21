@@ -138,32 +138,26 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
             this.categoricalStatsConfig = Objects.requireNonNull(categoricalStatsConfig);
             return this;
         }
-
         public Builder deltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = Objects.requireNonNull(deltaPresenceEstimationConfig);
             return this;
         }
-
         public Builder kAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
             this.kAnonymityConfig = Objects.requireNonNull(kAnonymityConfig);
             return this;
         }
-
         public Builder kMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
             this.kMapEstimationConfig = Objects.requireNonNull(kMapEstimationConfig);
             return this;
         }
-
         public Builder lDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
             this.lDiversityConfig = Objects.requireNonNull(lDiversityConfig);
             return this;
         }
-
         public Builder numericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
             this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2PrivacyMetricResponse build() {
+        }        public GooglePrivacyDlpV2PrivacyMetricResponse build() {
             return new GooglePrivacyDlpV2PrivacyMetricResponse(categoricalStatsConfig, deltaPresenceEstimationConfig, kAnonymityConfig, kMapEstimationConfig, lDiversityConfig, numericalStatsConfig);
         }
     }

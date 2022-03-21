@@ -77,12 +77,10 @@ public final class EncoderSystemPresetResponse extends io.pulumi.resources.Invok
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public EncoderSystemPresetResponse build() {
+        }        public EncoderSystemPresetResponse build() {
             return new EncoderSystemPresetResponse(name, type);
         }
     }

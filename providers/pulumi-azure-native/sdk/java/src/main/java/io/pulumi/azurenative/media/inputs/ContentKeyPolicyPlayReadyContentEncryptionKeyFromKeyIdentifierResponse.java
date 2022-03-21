@@ -77,12 +77,10 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse build() {
+        }        public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse build() {
             return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse(keyId, odataType);
         }
     }

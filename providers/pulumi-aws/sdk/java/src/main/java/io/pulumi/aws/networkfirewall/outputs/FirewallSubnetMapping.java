@@ -51,8 +51,7 @@ public final class FirewallSubnetMapping {
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
-        }
-        public FirewallSubnetMapping build() {
+        }        public FirewallSubnetMapping build() {
             return new FirewallSubnetMapping(subnetId);
         }
     }

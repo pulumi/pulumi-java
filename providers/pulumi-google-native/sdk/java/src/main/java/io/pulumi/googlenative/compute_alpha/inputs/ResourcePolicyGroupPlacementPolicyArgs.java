@@ -146,62 +146,50 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
             this.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
-
         public Builder availabilityDomainCount(@Nullable Integer availabilityDomainCount) {
             this.availabilityDomainCount = Output.ofNullable(availabilityDomainCount);
             return this;
         }
-
         public Builder collocation(@Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation) {
             this.collocation = collocation;
             return this;
         }
-
         public Builder collocation(@Nullable ResourcePolicyGroupPlacementPolicyCollocation collocation) {
             this.collocation = Output.ofNullable(collocation);
             return this;
         }
-
         public Builder locality(@Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality) {
             this.locality = locality;
             return this;
         }
-
         public Builder locality(@Nullable ResourcePolicyGroupPlacementPolicyLocality locality) {
             this.locality = Output.ofNullable(locality);
             return this;
         }
-
         public Builder scope(@Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope) {
             this.scope = scope;
             return this;
         }
-
         public Builder scope(@Nullable ResourcePolicyGroupPlacementPolicyScope scope) {
             this.scope = Output.ofNullable(scope);
             return this;
         }
-
         public Builder style(@Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style) {
             this.style = style;
             return this;
         }
-
         public Builder style(@Nullable ResourcePolicyGroupPlacementPolicyStyle style) {
             this.style = Output.ofNullable(style);
             return this;
         }
-
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
             this.vmCount = vmCount;
             return this;
         }
-
         public Builder vmCount(@Nullable Integer vmCount) {
             this.vmCount = Output.ofNullable(vmCount);
             return this;
-        }
-        public ResourcePolicyGroupPlacementPolicyArgs build() {
+        }        public ResourcePolicyGroupPlacementPolicyArgs build() {
             return new ResourcePolicyGroupPlacementPolicyArgs(availabilityDomainCount, collocation, locality, scope, style, vmCount);
         }
     }

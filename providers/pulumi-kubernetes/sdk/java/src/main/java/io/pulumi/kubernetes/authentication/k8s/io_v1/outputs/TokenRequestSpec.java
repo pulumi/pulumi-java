@@ -90,17 +90,17 @@ public final class TokenRequestSpec {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder boundObjectRef(@Nullable BoundObjectReference boundObjectRef) {
             this.boundObjectRef = boundObjectRef;
             return this;
         }
-
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
-        }
-        public TokenRequestSpec build() {
+        }        public TokenRequestSpec build() {
             return new TokenRequestSpec(audiences, boundObjectRef, expirationSeconds);
         }
     }

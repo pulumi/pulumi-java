@@ -190,102 +190,88 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             this.additions = additions;
             return this;
         }
-
         public Builder additions(@Nullable List<ResourceRecordSetArgs> additions) {
             this.additions = Output.ofNullable(additions);
             return this;
         }
-
+        public Builder additions(ResourceRecordSetArgs... additions) {
+            return additions(List.of(additions));
+        }
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
-
         public Builder deletions(@Nullable Output<List<ResourceRecordSetArgs>> deletions) {
             this.deletions = deletions;
             return this;
         }
-
         public Builder deletions(@Nullable List<ResourceRecordSetArgs> deletions) {
             this.deletions = Output.ofNullable(deletions);
             return this;
         }
-
+        public Builder deletions(ResourceRecordSetArgs... deletions) {
+            return deletions(List.of(deletions));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder isServing(@Nullable Output<Boolean> isServing) {
             this.isServing = isServing;
             return this;
         }
-
         public Builder isServing(@Nullable Boolean isServing) {
             this.isServing = Output.ofNullable(isServing);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder managedZone(Output<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
-
         public Builder managedZone(String managedZone) {
             this.managedZone = Output.of(Objects.requireNonNull(managedZone));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder status(@Nullable Output<ChangeStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable ChangeStatus status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public ChangeArgs build() {
+        }        public ChangeArgs build() {
             return new ChangeArgs(additions, clientOperationId, deletions, id, isServing, kind, managedZone, project, startTime, status);
         }
     }

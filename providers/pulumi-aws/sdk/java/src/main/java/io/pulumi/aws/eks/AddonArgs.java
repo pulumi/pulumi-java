@@ -148,62 +148,50 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
-
         public Builder addonName(String addonName) {
             this.addonName = Output.of(Objects.requireNonNull(addonName));
             return this;
         }
-
         public Builder addonVersion(@Nullable Output<String> addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
-
         public Builder addonVersion(@Nullable String addonVersion) {
             this.addonVersion = Output.ofNullable(addonVersion);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder resolveConflicts(@Nullable Output<String> resolveConflicts) {
             this.resolveConflicts = resolveConflicts;
             return this;
         }
-
         public Builder resolveConflicts(@Nullable String resolveConflicts) {
             this.resolveConflicts = Output.ofNullable(resolveConflicts);
             return this;
         }
-
         public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
-
         public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = Output.ofNullable(serviceAccountRoleArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public AddonArgs build() {
+        }        public AddonArgs build() {
             return new AddonArgs(addonName, addonVersion, clusterName, resolveConflicts, serviceAccountRoleArn, tags);
         }
     }

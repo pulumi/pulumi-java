@@ -70,12 +70,10 @@ public final class DenoiseResponse {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }
-
         public Builder tune(String tune) {
             this.tune = Objects.requireNonNull(tune);
             return this;
-        }
-        public DenoiseResponse build() {
+        }        public DenoiseResponse build() {
             return new DenoiseResponse(strength, tune);
         }
     }

@@ -100,27 +100,25 @@ public final class Object {
             this.bar = bar;
             return this;
         }
-
         public Builder configs(@Nullable List<ConfigMap> configs) {
             this.configs = configs;
             return this;
         }
-
+        public Builder configs(ConfigMap... configs) {
+            return configs(List.of(configs));
+        }
         public Builder foo(@Nullable Resource foo) {
             this.foo = foo;
             return this;
         }
-
         public Builder others(@Nullable List<List<SomeOtherObject>> others) {
             this.others = others;
             return this;
         }
-
         public Builder stillOthers(@Nullable Map<String,List<SomeOtherObject>> stillOthers) {
             this.stillOthers = stillOthers;
             return this;
-        }
-        public Object build() {
+        }        public Object build() {
             return new Object(bar, configs, foo, others, stillOthers);
         }
     }

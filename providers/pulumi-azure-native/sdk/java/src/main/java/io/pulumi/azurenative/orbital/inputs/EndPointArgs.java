@@ -111,42 +111,34 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
             this.endPointName = Objects.requireNonNull(endPointName);
             return this;
         }
-
         public Builder endPointName(String endPointName) {
             this.endPointName = Output.of(Objects.requireNonNull(endPointName));
             return this;
         }
-
         public Builder ipAddress(Output<String> ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
             return this;
         }
-
         public Builder port(Output<String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(String port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,Protocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public EndPointArgs build() {
+        }        public EndPointArgs build() {
             return new EndPointArgs(endPointName, ipAddress, port, protocol);
         }
     }

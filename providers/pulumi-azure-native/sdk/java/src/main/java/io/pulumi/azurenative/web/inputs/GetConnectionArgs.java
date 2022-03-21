@@ -90,17 +90,14 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
-        }
-        public GetConnectionArgs build() {
+        }        public GetConnectionArgs build() {
             return new GetConnectionArgs(connectionName, resourceGroupName, subscriptionId);
         }
     }

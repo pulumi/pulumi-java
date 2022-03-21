@@ -58,8 +58,7 @@ public final class BuildNoteResponse extends io.pulumi.resources.InvokeArgs {
         public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
-        }
-        public BuildNoteResponse build() {
+        }        public BuildNoteResponse build() {
             return new BuildNoteResponse(builderVersion);
         }
     }

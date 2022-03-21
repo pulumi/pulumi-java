@@ -84,32 +84,26 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
             this.perfMetricType = perfMetricType;
             return this;
         }
-
         public Builder perfMetricType(@Nullable BasicPerfSampleSeriesPerfMetricType perfMetricType) {
             this.perfMetricType = Output.ofNullable(perfMetricType);
             return this;
         }
-
         public Builder perfUnit(@Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit) {
             this.perfUnit = perfUnit;
             return this;
         }
-
         public Builder perfUnit(@Nullable BasicPerfSampleSeriesPerfUnit perfUnit) {
             this.perfUnit = Output.ofNullable(perfUnit);
             return this;
         }
-
         public Builder sampleSeriesLabel(@Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel) {
             this.sampleSeriesLabel = sampleSeriesLabel;
             return this;
         }
-
         public Builder sampleSeriesLabel(@Nullable BasicPerfSampleSeriesSampleSeriesLabel sampleSeriesLabel) {
             this.sampleSeriesLabel = Output.ofNullable(sampleSeriesLabel);
             return this;
-        }
-        public BasicPerfSampleSeriesArgs build() {
+        }        public BasicPerfSampleSeriesArgs build() {
             return new BasicPerfSampleSeriesArgs(perfMetricType, perfUnit, sampleSeriesLabel);
         }
     }

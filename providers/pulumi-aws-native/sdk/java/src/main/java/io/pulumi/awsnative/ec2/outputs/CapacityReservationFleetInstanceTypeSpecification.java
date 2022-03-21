@@ -98,37 +98,30 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
-
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
-
         public Builder instancePlatform(@Nullable String instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
-        }
-        public CapacityReservationFleetInstanceTypeSpecification build() {
+        }        public CapacityReservationFleetInstanceTypeSpecification build() {
             return new CapacityReservationFleetInstanceTypeSpecification(availabilityZone, availabilityZoneId, ebsOptimized, instancePlatform, instanceType, priority, weight);
         }
     }

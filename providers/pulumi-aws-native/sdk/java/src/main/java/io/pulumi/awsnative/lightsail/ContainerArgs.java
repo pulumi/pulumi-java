@@ -160,72 +160,64 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.containerServiceDeployment = containerServiceDeployment;
             return this;
         }
-
         public Builder containerServiceDeployment(@Nullable ContainerServiceDeploymentArgs containerServiceDeployment) {
             this.containerServiceDeployment = Output.ofNullable(containerServiceDeployment);
             return this;
         }
-
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
-
         public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = Output.ofNullable(isDisabled);
             return this;
         }
-
         public Builder power(Output<String> power) {
             this.power = Objects.requireNonNull(power);
             return this;
         }
-
         public Builder power(String power) {
             this.power = Output.of(Objects.requireNonNull(power));
             return this;
         }
-
         public Builder publicDomainNames(@Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
             this.publicDomainNames = publicDomainNames;
             return this;
         }
-
         public Builder publicDomainNames(@Nullable List<ContainerPublicDomainNameArgs> publicDomainNames) {
             this.publicDomainNames = Output.ofNullable(publicDomainNames);
             return this;
         }
-
+        public Builder publicDomainNames(ContainerPublicDomainNameArgs... publicDomainNames) {
+            return publicDomainNames(List.of(publicDomainNames));
+        }
         public Builder scale(Output<Integer> scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public Builder scale(Integer scale) {
             this.scale = Output.of(Objects.requireNonNull(scale));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ContainerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ContainerTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ContainerArgs build() {
+        public Builder tags(ContainerTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ContainerArgs build() {
             return new ContainerArgs(containerServiceDeployment, isDisabled, power, publicDomainNames, scale, serviceName, tags);
         }
     }

@@ -80,22 +80,18 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
             this.sendNotification = Objects.requireNonNull(sendNotification);
             return this;
         }
-
         public Builder sendNotification(Boolean sendNotification) {
             this.sendNotification = Output.of(Objects.requireNonNull(sendNotification));
             return this;
         }
-
         public Builder stageName(Output<Either<String,NotificationStageName>> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
-
         public Builder stageName(Either<String,NotificationStageName> stageName) {
             this.stageName = Output.of(Objects.requireNonNull(stageName));
             return this;
-        }
-        public NotificationPreferenceArgs build() {
+        }        public NotificationPreferenceArgs build() {
             return new NotificationPreferenceArgs(sendNotification, stageName);
         }
     }

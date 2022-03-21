@@ -69,12 +69,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
-
         public Builder recordRowDelimiter(String recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
-        }
-        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv build() {
+        }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv build() {
             return new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv(recordColumnDelimiter, recordRowDelimiter);
         }
     }

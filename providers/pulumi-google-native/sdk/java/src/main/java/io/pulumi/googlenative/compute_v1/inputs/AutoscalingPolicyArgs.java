@@ -194,92 +194,77 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.coolDownPeriodSec = coolDownPeriodSec;
             return this;
         }
-
         public Builder coolDownPeriodSec(@Nullable Integer coolDownPeriodSec) {
             this.coolDownPeriodSec = Output.ofNullable(coolDownPeriodSec);
             return this;
         }
-
         public Builder cpuUtilization(@Nullable Output<AutoscalingPolicyCpuUtilizationArgs> cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
-
         public Builder cpuUtilization(@Nullable AutoscalingPolicyCpuUtilizationArgs cpuUtilization) {
             this.cpuUtilization = Output.ofNullable(cpuUtilization);
             return this;
         }
-
         public Builder customMetricUtilizations(@Nullable Output<List<AutoscalingPolicyCustomMetricUtilizationArgs>> customMetricUtilizations) {
             this.customMetricUtilizations = customMetricUtilizations;
             return this;
         }
-
         public Builder customMetricUtilizations(@Nullable List<AutoscalingPolicyCustomMetricUtilizationArgs> customMetricUtilizations) {
             this.customMetricUtilizations = Output.ofNullable(customMetricUtilizations);
             return this;
         }
-
+        public Builder customMetricUtilizations(AutoscalingPolicyCustomMetricUtilizationArgs... customMetricUtilizations) {
+            return customMetricUtilizations(List.of(customMetricUtilizations));
+        }
         public Builder loadBalancingUtilization(@Nullable Output<AutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
-
         public Builder loadBalancingUtilization(@Nullable AutoscalingPolicyLoadBalancingUtilizationArgs loadBalancingUtilization) {
             this.loadBalancingUtilization = Output.ofNullable(loadBalancingUtilization);
             return this;
         }
-
         public Builder maxNumReplicas(@Nullable Output<Integer> maxNumReplicas) {
             this.maxNumReplicas = maxNumReplicas;
             return this;
         }
-
         public Builder maxNumReplicas(@Nullable Integer maxNumReplicas) {
             this.maxNumReplicas = Output.ofNullable(maxNumReplicas);
             return this;
         }
-
         public Builder minNumReplicas(@Nullable Output<Integer> minNumReplicas) {
             this.minNumReplicas = minNumReplicas;
             return this;
         }
-
         public Builder minNumReplicas(@Nullable Integer minNumReplicas) {
             this.minNumReplicas = Output.ofNullable(minNumReplicas);
             return this;
         }
-
         public Builder mode(@Nullable Output<AutoscalingPolicyMode> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable AutoscalingPolicyMode mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder scaleInControl(@Nullable Output<AutoscalingPolicyScaleInControlArgs> scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
-
         public Builder scaleInControl(@Nullable AutoscalingPolicyScaleInControlArgs scaleInControl) {
             this.scaleInControl = Output.ofNullable(scaleInControl);
             return this;
         }
-
         public Builder scalingSchedules(@Nullable Output<Map<String,String>> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
-
         public Builder scalingSchedules(@Nullable Map<String,String> scalingSchedules) {
             this.scalingSchedules = Output.ofNullable(scalingSchedules);
             return this;
-        }
-        public AutoscalingPolicyArgs build() {
+        }        public AutoscalingPolicyArgs build() {
             return new AutoscalingPolicyArgs(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleInControl, scalingSchedules);
         }
     }

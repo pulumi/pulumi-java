@@ -88,17 +88,14 @@ public final class ListChannelWithKeysArgs extends io.pulumi.resources.InvokeArg
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListChannelWithKeysArgs build() {
+        }        public ListChannelWithKeysArgs build() {
             return new ListChannelWithKeysArgs(channelName, resourceGroupName, resourceName);
         }
     }

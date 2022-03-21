@@ -80,22 +80,18 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
             this.appendRowFileName = appendRowFileName;
             return this;
         }
-
         public Builder appendRowFileName(@Nullable String appendRowFileName) {
             this.appendRowFileName = Output.ofNullable(appendRowFileName);
             return this;
         }
-
         public Builder outputAction(@Nullable Output<Either<String,BatchOutputAction>> outputAction) {
             this.outputAction = outputAction;
             return this;
         }
-
         public Builder outputAction(@Nullable Either<String,BatchOutputAction> outputAction) {
             this.outputAction = Output.ofNullable(outputAction);
             return this;
-        }
-        public BatchOutputConfigurationArgs build() {
+        }        public BatchOutputConfigurationArgs build() {
             return new BatchOutputConfigurationArgs(appendRowFileName, outputAction);
         }
     }

@@ -176,42 +176,37 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
             this.filesNotSyncingErrors = Objects.requireNonNull(filesNotSyncingErrors);
             return this;
         }
-
+        public Builder filesNotSyncingErrors(ServerEndpointFilesNotSyncingErrorResponse... filesNotSyncingErrors) {
+            return filesNotSyncingErrors(List.of(filesNotSyncingErrors));
+        }
         public Builder lastSyncMode(String lastSyncMode) {
             this.lastSyncMode = Objects.requireNonNull(lastSyncMode);
             return this;
         }
-
         public Builder lastSyncPerItemErrorCount(Double lastSyncPerItemErrorCount) {
             this.lastSyncPerItemErrorCount = Objects.requireNonNull(lastSyncPerItemErrorCount);
             return this;
         }
-
         public Builder lastSyncResult(Integer lastSyncResult) {
             this.lastSyncResult = Objects.requireNonNull(lastSyncResult);
             return this;
         }
-
         public Builder lastSyncSuccessTimestamp(String lastSyncSuccessTimestamp) {
             this.lastSyncSuccessTimestamp = Objects.requireNonNull(lastSyncSuccessTimestamp);
             return this;
         }
-
         public Builder lastSyncTimestamp(String lastSyncTimestamp) {
             this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
             return this;
         }
-
         public Builder persistentFilesNotSyncingCount(Double persistentFilesNotSyncingCount) {
             this.persistentFilesNotSyncingCount = Objects.requireNonNull(persistentFilesNotSyncingCount);
             return this;
         }
-
         public Builder transientFilesNotSyncingCount(Double transientFilesNotSyncingCount) {
             this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
             return this;
-        }
-        public ServerEndpointSyncSessionStatusResponse build() {
+        }        public ServerEndpointSyncSessionStatusResponse build() {
             return new ServerEndpointSyncSessionStatusResponse(filesNotSyncingErrors, lastSyncMode, lastSyncPerItemErrorCount, lastSyncResult, lastSyncSuccessTimestamp, lastSyncTimestamp, persistentFilesNotSyncingCount, transientFilesNotSyncingCount);
         }
     }

@@ -54,8 +54,7 @@ public final class GetGroupsArgs extends io.pulumi.resources.InvokeArgs {
         public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
-        }
-        public GetGroupsArgs build() {
+        }        public GetGroupsArgs build() {
             return new GetGroupsArgs(parent);
         }
     }

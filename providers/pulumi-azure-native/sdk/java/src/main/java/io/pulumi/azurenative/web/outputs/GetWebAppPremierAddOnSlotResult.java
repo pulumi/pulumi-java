@@ -216,57 +216,46 @@ public final class GetWebAppPremierAddOnSlotResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
             this.marketplaceOffer = marketplaceOffer;
             return this;
         }
-
         public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
             this.marketplacePublisher = marketplacePublisher;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
-
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
-        }
-        public GetWebAppPremierAddOnSlotResult build() {
+        }        public GetWebAppPremierAddOnSlotResult build() {
             return new GetWebAppPremierAddOnSlotResult(id, kind, location, marketplaceOffer, marketplacePublisher, name, product, sku, tags, type, vendor);
         }
     }

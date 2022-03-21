@@ -88,17 +88,14 @@ public final class LoadBalancerAccessLogs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
-        }
-        public LoadBalancerAccessLogs build() {
+        }        public LoadBalancerAccessLogs build() {
             return new LoadBalancerAccessLogs(bucket, enabled, prefix);
         }
     }

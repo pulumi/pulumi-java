@@ -88,17 +88,14 @@ public final class NFSVolumeSource {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder server(String server) {
             this.server = Objects.requireNonNull(server);
             return this;
-        }
-        public NFSVolumeSource build() {
+        }        public NFSVolumeSource build() {
             return new NFSVolumeSource(path, readOnly, server);
         }
     }

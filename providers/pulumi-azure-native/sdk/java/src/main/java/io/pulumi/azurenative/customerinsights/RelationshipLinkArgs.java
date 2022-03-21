@@ -206,102 +206,91 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder interactionType(Output<String> interactionType) {
             this.interactionType = Objects.requireNonNull(interactionType);
             return this;
         }
-
         public Builder interactionType(String interactionType) {
             this.interactionType = Output.of(Objects.requireNonNull(interactionType));
             return this;
         }
-
         public Builder mappings(@Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings) {
             this.mappings = mappings;
             return this;
         }
-
         public Builder mappings(@Nullable List<RelationshipLinkFieldMappingArgs> mappings) {
             this.mappings = Output.ofNullable(mappings);
             return this;
         }
-
+        public Builder mappings(RelationshipLinkFieldMappingArgs... mappings) {
+            return mappings(List.of(mappings));
+        }
         public Builder profilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences) {
             this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences);
             return this;
         }
-
         public Builder profilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> profilePropertyReferences) {
             this.profilePropertyReferences = Output.of(Objects.requireNonNull(profilePropertyReferences));
             return this;
         }
-
+        public Builder profilePropertyReferences(ParticipantProfilePropertyReferenceArgs... profilePropertyReferences) {
+            return profilePropertyReferences(List.of(profilePropertyReferences));
+        }
         public Builder relatedProfilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences) {
             this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences);
             return this;
         }
-
         public Builder relatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> relatedProfilePropertyReferences) {
             this.relatedProfilePropertyReferences = Output.of(Objects.requireNonNull(relatedProfilePropertyReferences));
             return this;
         }
-
+        public Builder relatedProfilePropertyReferences(ParticipantProfilePropertyReferenceArgs... relatedProfilePropertyReferences) {
+            return relatedProfilePropertyReferences(List.of(relatedProfilePropertyReferences));
+        }
         public Builder relationshipLinkName(@Nullable Output<String> relationshipLinkName) {
             this.relationshipLinkName = relationshipLinkName;
             return this;
         }
-
         public Builder relationshipLinkName(@Nullable String relationshipLinkName) {
             this.relationshipLinkName = Output.ofNullable(relationshipLinkName);
             return this;
         }
-
         public Builder relationshipName(Output<String> relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
-
         public Builder relationshipName(String relationshipName) {
             this.relationshipName = Output.of(Objects.requireNonNull(relationshipName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public RelationshipLinkArgs build() {
+        }        public RelationshipLinkArgs build() {
             return new RelationshipLinkArgs(description, displayName, hubName, interactionType, mappings, profilePropertyReferences, relatedProfilePropertyReferences, relationshipLinkName, relationshipName, resourceGroupName);
         }
     }

@@ -91,32 +91,26 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder properties(Output<UserPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(UserPropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder userSettingsName(@Nullable Output<String> userSettingsName) {
             this.userSettingsName = userSettingsName;
             return this;
         }
-
         public Builder userSettingsName(@Nullable String userSettingsName) {
             this.userSettingsName = Output.ofNullable(userSettingsName);
             return this;
-        }
-        public UserSettingsWithLocationArgs build() {
+        }        public UserSettingsWithLocationArgs build() {
             return new UserSettingsWithLocationArgs(location, properties, userSettingsName);
         }
     }

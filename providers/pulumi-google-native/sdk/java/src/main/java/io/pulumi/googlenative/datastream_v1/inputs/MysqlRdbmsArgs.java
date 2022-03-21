@@ -62,12 +62,13 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
             this.mysqlDatabases = mysqlDatabases;
             return this;
         }
-
         public Builder mysqlDatabases(@Nullable List<MysqlDatabaseArgs> mysqlDatabases) {
             this.mysqlDatabases = Output.ofNullable(mysqlDatabases);
             return this;
         }
-        public MysqlRdbmsArgs build() {
+        public Builder mysqlDatabases(MysqlDatabaseArgs... mysqlDatabases) {
+            return mysqlDatabases(List.of(mysqlDatabases));
+        }        public MysqlRdbmsArgs build() {
             return new MysqlRdbmsArgs(mysqlDatabases);
         }
     }

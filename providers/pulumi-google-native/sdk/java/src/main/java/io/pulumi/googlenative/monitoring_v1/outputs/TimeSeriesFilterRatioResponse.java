@@ -103,22 +103,18 @@ public final class TimeSeriesFilterRatioResponse {
             this.denominator = Objects.requireNonNull(denominator);
             return this;
         }
-
         public Builder numerator(RatioPartResponse numerator) {
             this.numerator = Objects.requireNonNull(numerator);
             return this;
         }
-
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
             return this;
         }
-
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
-        }
-        public TimeSeriesFilterRatioResponse build() {
+        }        public TimeSeriesFilterRatioResponse build() {
             return new TimeSeriesFilterRatioResponse(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
         }
     }

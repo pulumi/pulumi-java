@@ -66,12 +66,10 @@ public final class SpotFleetAcceleratorCountRequest extends io.pulumi.resources.
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public SpotFleetAcceleratorCountRequest build() {
+        }        public SpotFleetAcceleratorCountRequest build() {
             return new SpotFleetAcceleratorCountRequest(max, min);
         }
     }

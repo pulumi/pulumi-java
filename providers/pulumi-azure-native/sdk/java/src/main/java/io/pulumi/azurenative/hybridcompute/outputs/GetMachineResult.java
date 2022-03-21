@@ -438,127 +438,108 @@ public final class GetMachineResult {
             this.adFqdn = Objects.requireNonNull(adFqdn);
             return this;
         }
-
         public Builder agentVersion(String agentVersion) {
             this.agentVersion = Objects.requireNonNull(agentVersion);
             return this;
         }
-
         public Builder clientPublicKey(@Nullable String clientPublicKey) {
             this.clientPublicKey = clientPublicKey;
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder dnsFqdn(String dnsFqdn) {
             this.dnsFqdn = Objects.requireNonNull(dnsFqdn);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder errorDetails(List<ErrorDetailResponse> errorDetails) {
             this.errorDetails = Objects.requireNonNull(errorDetails);
             return this;
         }
-
+        public Builder errorDetails(ErrorDetailResponse... errorDetails) {
+            return errorDetails(List.of(errorDetails));
+        }
         public Builder extensions(List<MachineExtensionInstanceViewResponse> extensions) {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }
-
+        public Builder extensions(MachineExtensionInstanceViewResponse... extensions) {
+            return extensions(List.of(extensions));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder identity(@Nullable MachineResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder lastStatusChange(String lastStatusChange) {
             this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder locationData(@Nullable LocationDataResponse locationData) {
             this.locationData = locationData;
             return this;
         }
-
         public Builder machineFqdn(String machineFqdn) {
             this.machineFqdn = Objects.requireNonNull(machineFqdn);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder osName(String osName) {
             this.osName = Objects.requireNonNull(osName);
             return this;
         }
-
         public Builder osProfile(@Nullable MachinePropertiesResponseOsProfile osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osSku(String osSku) {
             this.osSku = Objects.requireNonNull(osSku);
             return this;
         }
-
         public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
-
         public Builder vmUuid(String vmUuid) {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
-        }
-        public GetMachineResult build() {
+        }        public GetMachineResult build() {
             return new GetMachineResult(adFqdn, agentVersion, clientPublicKey, displayName, dnsFqdn, domainName, errorDetails, extensions, id, identity, lastStatusChange, location, locationData, machineFqdn, name, osName, osProfile, osSku, osVersion, provisioningState, status, tags, type, vmId, vmUuid);
         }
     }

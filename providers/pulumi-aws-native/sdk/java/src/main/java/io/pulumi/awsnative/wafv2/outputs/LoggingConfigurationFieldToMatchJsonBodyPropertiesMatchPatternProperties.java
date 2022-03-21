@@ -73,12 +73,13 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             this.all = all;
             return this;
         }
-
         public Builder includedPaths(@Nullable List<String> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
-        public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties build() {
+        public Builder includedPaths(String... includedPaths) {
+            return includedPaths(List.of(includedPaths));
+        }        public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties(all, includedPaths);
         }
     }

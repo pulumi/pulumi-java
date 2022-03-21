@@ -112,22 +112,18 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
             this.defaultValue = defaultValue;
             return this;
         }
-
         public Builder isMandatory(@Nullable Boolean isMandatory) {
             this.isMandatory = isMandatory;
             return this;
         }
-
         public Builder position(@Nullable Integer position) {
             this.position = position;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public RunbookParameterResponse build() {
+        }        public RunbookParameterResponse build() {
             return new RunbookParameterResponse(defaultValue, isMandatory, position, type);
         }
     }

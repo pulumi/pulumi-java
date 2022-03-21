@@ -53,8 +53,7 @@ public final class LanguageExtensionResponse {
         public Builder languageExtensionName(@Nullable String languageExtensionName) {
             this.languageExtensionName = languageExtensionName;
             return this;
-        }
-        public LanguageExtensionResponse build() {
+        }        public LanguageExtensionResponse build() {
             return new LanguageExtensionResponse(languageExtensionName);
         }
     }

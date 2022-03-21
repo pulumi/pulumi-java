@@ -145,27 +145,37 @@ public final class GuestPoliciesAssignment {
             this.groupLabels = groupLabels;
             return this;
         }
-
+        public Builder groupLabels(GuestPoliciesAssignmentGroupLabel... groupLabels) {
+            return groupLabels(List.of(groupLabels));
+        }
         public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
-
+        public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
+            return instanceNamePrefixes(List.of(instanceNamePrefixes));
+        }
         public Builder instances(@Nullable List<String> instances) {
             this.instances = instances;
             return this;
         }
-
+        public Builder instances(String... instances) {
+            return instances(List.of(instances));
+        }
         public Builder osTypes(@Nullable List<GuestPoliciesAssignmentOsType> osTypes) {
             this.osTypes = osTypes;
             return this;
         }
-
+        public Builder osTypes(GuestPoliciesAssignmentOsType... osTypes) {
+            return osTypes(List.of(osTypes));
+        }
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GuestPoliciesAssignment build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GuestPoliciesAssignment build() {
             return new GuestPoliciesAssignment(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }
     }

@@ -77,22 +77,18 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
             this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert);
             return this;
         }
-
         public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
             this.minFailingPeriodsToAlert = Output.of(Objects.requireNonNull(minFailingPeriodsToAlert));
             return this;
         }
-
         public Builder numberOfEvaluationPeriods(Output<Double> numberOfEvaluationPeriods) {
             this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
             return this;
         }
-
         public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
             this.numberOfEvaluationPeriods = Output.of(Objects.requireNonNull(numberOfEvaluationPeriods));
             return this;
-        }
-        public DynamicThresholdFailingPeriodsArgs build() {
+        }        public DynamicThresholdFailingPeriodsArgs build() {
             return new DynamicThresholdFailingPeriodsArgs(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
         }
     }

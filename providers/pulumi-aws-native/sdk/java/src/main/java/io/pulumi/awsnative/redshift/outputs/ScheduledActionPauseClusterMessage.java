@@ -43,8 +43,7 @@ public final class ScheduledActionPauseClusterMessage {
         public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
-        }
-        public ScheduledActionPauseClusterMessage build() {
+        }        public ScheduledActionPauseClusterMessage build() {
             return new ScheduledActionPauseClusterMessage(clusterIdentifier);
         }
     }

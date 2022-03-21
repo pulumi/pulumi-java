@@ -81,22 +81,18 @@ public final class EnterpriseSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder name(Output<Either<String,SkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(Either<String,SkuName> name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public EnterpriseSkuArgs build() {
+        }        public EnterpriseSkuArgs build() {
             return new EnterpriseSkuArgs(capacity, name);
         }
     }

@@ -90,22 +90,18 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder readMask(@Nullable String readMask) {
             this.readMask = readMask;
             return this;
         }
-
         public Builder routineId(String routineId) {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
-        }
-        public GetRoutineArgs build() {
+        }        public GetRoutineArgs build() {
             return new GetRoutineArgs(datasetId, project, readMask, routineId);
         }
     }

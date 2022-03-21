@@ -141,62 +141,53 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
             this.accounts = accounts;
             return this;
         }
-
         public Builder accounts(@Nullable List<OrganizationalUnitAccountGetArgs> accounts) {
             this.accounts = Output.ofNullable(accounts);
             return this;
         }
-
+        public Builder accounts(OrganizationalUnitAccountGetArgs... accounts) {
+            return accounts(List.of(accounts));
+        }
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
-
         public Builder parentId(@Nullable String parentId) {
             this.parentId = Output.ofNullable(parentId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public OrganizationalUnitState build() {
+        }        public OrganizationalUnitState build() {
             return new OrganizationalUnitState(accounts, arn, name, parentId, tags, tagsAll);
         }
     }

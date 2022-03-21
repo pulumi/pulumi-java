@@ -67,22 +67,21 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
-
         public Builder cookieBehavior(String cookieBehavior) {
             this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
             return this;
         }
-
         public Builder cookies(@Nullable Output<List<String>> cookies) {
             this.cookies = cookies;
             return this;
         }
-
         public Builder cookies(@Nullable List<String> cookies) {
             this.cookies = Output.ofNullable(cookies);
             return this;
         }
-        public CachePolicyCookiesConfigArgs build() {
+        public Builder cookies(String... cookies) {
+            return cookies(List.of(cookies));
+        }        public CachePolicyCookiesConfigArgs build() {
             return new CachePolicyCookiesConfigArgs(cookieBehavior, cookies);
         }
     }

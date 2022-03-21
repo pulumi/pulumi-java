@@ -106,42 +106,34 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
             this.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
-
         public Builder customerSubscriptionName(@Nullable String customerSubscriptionName) {
             this.customerSubscriptionName = Output.ofNullable(customerSubscriptionName);
             return this;
         }
-
         public Builder registrationName(Output<String> registrationName) {
             this.registrationName = Objects.requireNonNull(registrationName);
             return this;
         }
-
         public Builder registrationName(String registrationName) {
             this.registrationName = Output.of(Objects.requireNonNull(registrationName));
             return this;
         }
-
         public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
-
         public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Output.ofNullable(tenantId);
             return this;
-        }
-        public CustomerSubscriptionArgs build() {
+        }        public CustomerSubscriptionArgs build() {
             return new CustomerSubscriptionArgs(customerSubscriptionName, registrationName, resourceGroup, tenantId);
         }
     }

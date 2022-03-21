@@ -62,7 +62,9 @@ public final class ServerlessUpstreamSettingsResponse extends io.pulumi.resource
             this.templates = templates;
             return this;
         }
-        public ServerlessUpstreamSettingsResponse build() {
+        public Builder templates(UpstreamTemplateResponse... templates) {
+            return templates(List.of(templates));
+        }        public ServerlessUpstreamSettingsResponse build() {
             return new ServerlessUpstreamSettingsResponse(templates);
         }
     }

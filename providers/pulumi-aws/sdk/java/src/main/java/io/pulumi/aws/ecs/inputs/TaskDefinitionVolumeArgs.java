@@ -126,52 +126,42 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
-
         public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionVolumeDockerVolumeConfigurationArgs dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = Output.ofNullable(dockerVolumeConfiguration);
             return this;
         }
-
         public Builder efsVolumeConfiguration(@Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationArgs> efsVolumeConfiguration) {
             this.efsVolumeConfiguration = efsVolumeConfiguration;
             return this;
         }
-
         public Builder efsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationArgs efsVolumeConfiguration) {
             this.efsVolumeConfiguration = Output.ofNullable(efsVolumeConfiguration);
             return this;
         }
-
         public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs> fsxWindowsFileServerVolumeConfiguration) {
             this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
             return this;
         }
-
         public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs fsxWindowsFileServerVolumeConfiguration) {
             this.fsxWindowsFileServerVolumeConfiguration = Output.ofNullable(fsxWindowsFileServerVolumeConfiguration);
             return this;
         }
-
         public Builder hostPath(@Nullable Output<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
-
         public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = Output.ofNullable(hostPath);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public TaskDefinitionVolumeArgs build() {
+        }        public TaskDefinitionVolumeArgs build() {
             return new TaskDefinitionVolumeArgs(dockerVolumeConfiguration, efsVolumeConfiguration, fsxWindowsFileServerVolumeConfiguration, hostPath, name);
         }
     }

@@ -111,17 +111,14 @@ public final class DomainMappingSslSettings {
             this.certificateId = certificateId;
             return this;
         }
-
         public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
-
         public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
-        }
-        public DomainMappingSslSettings build() {
+        }        public DomainMappingSslSettings build() {
             return new DomainMappingSslSettings(certificateId, pendingManagedCertificateId, sslManagementType);
         }
     }

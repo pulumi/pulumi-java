@@ -108,22 +108,21 @@ public final class CxPageEntryFulfillment {
             this.messages = messages;
             return this;
         }
-
+        public Builder messages(CxPageEntryFulfillmentMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder webhook(@Nullable String webhook) {
             this.webhook = webhook;
             return this;
-        }
-        public CxPageEntryFulfillment build() {
+        }        public CxPageEntryFulfillment build() {
             return new CxPageEntryFulfillment(messages, returnPartialResponses, tag, webhook);
         }
     }

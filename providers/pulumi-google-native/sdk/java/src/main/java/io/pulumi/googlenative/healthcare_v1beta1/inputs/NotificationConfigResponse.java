@@ -77,12 +77,10 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder sendForBulkImport(Boolean sendForBulkImport) {
             this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport);
             return this;
-        }
-        public NotificationConfigResponse build() {
+        }        public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsubTopic, sendForBulkImport);
         }
     }

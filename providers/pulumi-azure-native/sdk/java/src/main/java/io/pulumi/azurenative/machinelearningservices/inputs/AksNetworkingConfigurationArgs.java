@@ -110,42 +110,34 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
-
         public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = Output.ofNullable(dnsServiceIP);
             return this;
         }
-
         public Builder dockerBridgeCidr(@Nullable Output<String> dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
-
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = Output.ofNullable(dockerBridgeCidr);
             return this;
         }
-
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Output.ofNullable(serviceCidr);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
-        }
-        public AksNetworkingConfigurationArgs build() {
+        }        public AksNetworkingConfigurationArgs build() {
             return new AksNetworkingConfigurationArgs(dnsServiceIP, dockerBridgeCidr, serviceCidr, subnetId);
         }
     }

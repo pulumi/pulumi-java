@@ -175,112 +175,90 @@ public final class PhpAppLayerCloudwatchConfigurationLogStreamArgs extends io.pu
             this.batchCount = batchCount;
             return this;
         }
-
         public Builder batchCount(@Nullable Integer batchCount) {
             this.batchCount = Output.ofNullable(batchCount);
             return this;
         }
-
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
-
         public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Output.ofNullable(batchSize);
             return this;
         }
-
         public Builder bufferDuration(@Nullable Output<Integer> bufferDuration) {
             this.bufferDuration = bufferDuration;
             return this;
         }
-
         public Builder bufferDuration(@Nullable Integer bufferDuration) {
             this.bufferDuration = Output.ofNullable(bufferDuration);
             return this;
         }
-
         public Builder datetimeFormat(@Nullable Output<String> datetimeFormat) {
             this.datetimeFormat = datetimeFormat;
             return this;
         }
-
         public Builder datetimeFormat(@Nullable String datetimeFormat) {
             this.datetimeFormat = Output.ofNullable(datetimeFormat);
             return this;
         }
-
         public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
-
         public Builder encoding(@Nullable String encoding) {
             this.encoding = Output.ofNullable(encoding);
             return this;
         }
-
         public Builder file(Output<String> file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder file(String file) {
             this.file = Output.of(Objects.requireNonNull(file));
             return this;
         }
-
         public Builder fileFingerprintLines(@Nullable Output<String> fileFingerprintLines) {
             this.fileFingerprintLines = fileFingerprintLines;
             return this;
         }
-
         public Builder fileFingerprintLines(@Nullable String fileFingerprintLines) {
             this.fileFingerprintLines = Output.ofNullable(fileFingerprintLines);
             return this;
         }
-
         public Builder initialPosition(@Nullable Output<String> initialPosition) {
             this.initialPosition = initialPosition;
             return this;
         }
-
         public Builder initialPosition(@Nullable String initialPosition) {
             this.initialPosition = Output.ofNullable(initialPosition);
             return this;
         }
-
         public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
-
         public Builder logGroupName(String logGroupName) {
             this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
-
         public Builder multilineStartPattern(@Nullable Output<String> multilineStartPattern) {
             this.multilineStartPattern = multilineStartPattern;
             return this;
         }
-
         public Builder multilineStartPattern(@Nullable String multilineStartPattern) {
             this.multilineStartPattern = Output.ofNullable(multilineStartPattern);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public PhpAppLayerCloudwatchConfigurationLogStreamArgs build() {
+        }        public PhpAppLayerCloudwatchConfigurationLogStreamArgs build() {
             return new PhpAppLayerCloudwatchConfigurationLogStreamArgs(batchCount, batchSize, bufferDuration, datetimeFormat, encoding, file, fileFingerprintLines, initialPosition, logGroupName, multilineStartPattern, timeZone);
         }
     }

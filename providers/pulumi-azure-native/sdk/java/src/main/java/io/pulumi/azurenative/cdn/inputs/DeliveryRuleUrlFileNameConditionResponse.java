@@ -78,12 +78,10 @@ public final class DeliveryRuleUrlFileNameConditionResponse extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(UrlFileNameMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleUrlFileNameConditionResponse build() {
+        }        public DeliveryRuleUrlFileNameConditionResponse build() {
             return new DeliveryRuleUrlFileNameConditionResponse(name, parameters);
         }
     }

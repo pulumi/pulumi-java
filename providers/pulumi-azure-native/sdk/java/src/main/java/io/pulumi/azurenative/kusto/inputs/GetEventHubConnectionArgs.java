@@ -104,22 +104,18 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder eventHubConnectionName(String eventHubConnectionName) {
             this.eventHubConnectionName = Objects.requireNonNull(eventHubConnectionName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetEventHubConnectionArgs build() {
+        }        public GetEventHubConnectionArgs build() {
             return new GetEventHubConnectionArgs(clusterName, databaseName, eventHubConnectionName, resourceGroupName);
         }
     }

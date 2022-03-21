@@ -53,8 +53,7 @@ public final class AgentPropertiesResponse {
         public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
-        }
-        public AgentPropertiesResponse build() {
+        }        public AgentPropertiesResponse build() {
             return new AgentPropertiesResponse(cpu);
         }
     }

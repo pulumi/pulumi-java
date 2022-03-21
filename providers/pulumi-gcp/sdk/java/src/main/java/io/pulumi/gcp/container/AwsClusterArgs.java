@@ -207,102 +207,82 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder authorization(Output<AwsClusterAuthorizationArgs> authorization) {
             this.authorization = Objects.requireNonNull(authorization);
             return this;
         }
-
         public Builder authorization(AwsClusterAuthorizationArgs authorization) {
             this.authorization = Output.of(Objects.requireNonNull(authorization));
             return this;
         }
-
         public Builder awsRegion(Output<String> awsRegion) {
             this.awsRegion = Objects.requireNonNull(awsRegion);
             return this;
         }
-
         public Builder awsRegion(String awsRegion) {
             this.awsRegion = Output.of(Objects.requireNonNull(awsRegion));
             return this;
         }
-
         public Builder controlPlane(Output<AwsClusterControlPlaneArgs> controlPlane) {
             this.controlPlane = Objects.requireNonNull(controlPlane);
             return this;
         }
-
         public Builder controlPlane(AwsClusterControlPlaneArgs controlPlane) {
             this.controlPlane = Output.of(Objects.requireNonNull(controlPlane));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fleet(Output<AwsClusterFleetArgs> fleet) {
             this.fleet = Objects.requireNonNull(fleet);
             return this;
         }
-
         public Builder fleet(AwsClusterFleetArgs fleet) {
             this.fleet = Output.of(Objects.requireNonNull(fleet));
             return this;
         }
-
         public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networking(Output<AwsClusterNetworkingArgs> networking) {
             this.networking = Objects.requireNonNull(networking);
             return this;
         }
-
         public Builder networking(AwsClusterNetworkingArgs networking) {
             this.networking = Output.of(Objects.requireNonNull(networking));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public AwsClusterArgs build() {
+        }        public AwsClusterArgs build() {
             return new AwsClusterArgs(annotations, authorization, awsRegion, controlPlane, description, fleet, location, name, networking, project);
         }
     }

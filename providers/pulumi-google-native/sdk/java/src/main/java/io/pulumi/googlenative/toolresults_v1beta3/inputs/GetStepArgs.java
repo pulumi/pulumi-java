@@ -90,22 +90,18 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
-
         public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
-        }
-        public GetStepArgs build() {
+        }        public GetStepArgs build() {
             return new GetStepArgs(executionId, historyId, project, stepId);
         }
     }

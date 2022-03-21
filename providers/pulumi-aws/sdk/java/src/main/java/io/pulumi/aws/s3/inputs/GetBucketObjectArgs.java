@@ -119,27 +119,22 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
-        }
-        public GetBucketObjectArgs build() {
+        }        public GetBucketObjectArgs build() {
             return new GetBucketObjectArgs(bucket, key, range, tags, versionId);
         }
     }

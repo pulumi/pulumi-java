@@ -76,12 +76,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
-
         public Builder dialogflowConversation(String dialogflowConversation) {
             this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse build() {
+        }        public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(audioUri, dialogflowConversation);
         }
     }

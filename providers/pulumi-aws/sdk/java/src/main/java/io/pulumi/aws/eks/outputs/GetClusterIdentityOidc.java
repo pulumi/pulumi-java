@@ -51,8 +51,7 @@ public final class GetClusterIdentityOidc {
         public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
-        }
-        public GetClusterIdentityOidc build() {
+        }        public GetClusterIdentityOidc build() {
             return new GetClusterIdentityOidc(issuer);
         }
     }

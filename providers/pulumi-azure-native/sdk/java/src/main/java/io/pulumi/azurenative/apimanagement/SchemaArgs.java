@@ -140,62 +140,50 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaId(@Nullable Output<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
-
         public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Output.ofNullable(schemaId);
             return this;
         }
-
         public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
-
         public Builder schemaType(Either<String,SchemaType> schemaType) {
             this.schemaType = Output.of(Objects.requireNonNull(schemaType));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public SchemaArgs build() {
+        }        public SchemaArgs build() {
             return new SchemaArgs(description, resourceGroupName, schemaId, schemaType, serviceName, value);
         }
     }

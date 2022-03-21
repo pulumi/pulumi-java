@@ -59,8 +59,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebAclLoggingConfigurationRedactedFieldSingleQueryArgument build() {
+        }        public WebAclLoggingConfigurationRedactedFieldSingleQueryArgument build() {
             return new WebAclLoggingConfigurationRedactedFieldSingleQueryArgument(name);
         }
     }

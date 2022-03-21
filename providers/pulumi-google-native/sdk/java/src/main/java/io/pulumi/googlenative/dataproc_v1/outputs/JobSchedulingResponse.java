@@ -69,12 +69,10 @@ public final class JobSchedulingResponse {
             this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
             return this;
         }
-
         public Builder maxFailuresTotal(Integer maxFailuresTotal) {
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
-        }
-        public JobSchedulingResponse build() {
+        }        public JobSchedulingResponse build() {
             return new JobSchedulingResponse(maxFailuresPerHour, maxFailuresTotal);
         }
     }

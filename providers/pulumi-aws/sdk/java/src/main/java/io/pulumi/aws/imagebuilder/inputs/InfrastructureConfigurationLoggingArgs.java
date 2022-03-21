@@ -56,12 +56,10 @@ public final class InfrastructureConfigurationLoggingArgs extends io.pulumi.reso
             this.s3Logs = Objects.requireNonNull(s3Logs);
             return this;
         }
-
         public Builder s3Logs(InfrastructureConfigurationLoggingS3LogsArgs s3Logs) {
             this.s3Logs = Output.of(Objects.requireNonNull(s3Logs));
             return this;
-        }
-        public InfrastructureConfigurationLoggingArgs build() {
+        }        public InfrastructureConfigurationLoggingArgs build() {
             return new InfrastructureConfigurationLoggingArgs(s3Logs);
         }
     }

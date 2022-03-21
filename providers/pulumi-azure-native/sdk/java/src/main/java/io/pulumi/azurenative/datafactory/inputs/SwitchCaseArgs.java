@@ -118,22 +118,21 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
             this.activities = activities;
             return this;
         }
-
         public Builder activities(@Nullable List<Object> activities) {
             this.activities = Output.ofNullable(activities);
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public SwitchCaseArgs build() {
+        }        public SwitchCaseArgs build() {
             return new SwitchCaseArgs(activities, value);
         }
     }

@@ -87,17 +87,14 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
-
         public Builder repoId(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }
     }

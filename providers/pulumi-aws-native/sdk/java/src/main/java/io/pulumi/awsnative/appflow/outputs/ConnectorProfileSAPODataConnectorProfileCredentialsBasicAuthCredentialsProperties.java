@@ -71,12 +71,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
             this.password = password;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties build() {
+        }        public ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties(password, username);
         }
     }

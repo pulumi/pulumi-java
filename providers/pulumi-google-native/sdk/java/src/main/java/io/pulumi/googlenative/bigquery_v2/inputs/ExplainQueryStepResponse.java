@@ -73,12 +73,13 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder substeps(List<String> substeps) {
             this.substeps = Objects.requireNonNull(substeps);
             return this;
         }
-        public ExplainQueryStepResponse build() {
+        public Builder substeps(String... substeps) {
+            return substeps(List.of(substeps));
+        }        public ExplainQueryStepResponse build() {
             return new ExplainQueryStepResponse(kind, substeps);
         }
     }

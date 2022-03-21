@@ -58,8 +58,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
-        }
-        public ResourceIdentityResponse build() {
+        }        public ResourceIdentityResponse build() {
             return new ResourceIdentityResponse(userAssignedIdentity);
         }
     }

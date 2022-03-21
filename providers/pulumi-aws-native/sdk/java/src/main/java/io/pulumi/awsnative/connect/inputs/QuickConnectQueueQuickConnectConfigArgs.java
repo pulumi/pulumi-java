@@ -69,22 +69,18 @@ public final class QuickConnectQueueQuickConnectConfigArgs extends io.pulumi.res
             this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
             return this;
         }
-
         public Builder contactFlowArn(String contactFlowArn) {
             this.contactFlowArn = Output.of(Objects.requireNonNull(contactFlowArn));
             return this;
         }
-
         public Builder queueArn(Output<String> queueArn) {
             this.queueArn = Objects.requireNonNull(queueArn);
             return this;
         }
-
         public Builder queueArn(String queueArn) {
             this.queueArn = Output.of(Objects.requireNonNull(queueArn));
             return this;
-        }
-        public QuickConnectQueueQuickConnectConfigArgs build() {
+        }        public QuickConnectQueueQuickConnectConfigArgs build() {
             return new QuickConnectQueueQuickConnectConfigArgs(contactFlowArn, queueArn);
         }
     }

@@ -61,12 +61,10 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.fileUri = fileUri;
             return this;
         }
-
         public Builder fileUri(@Nullable String fileUri) {
             this.fileUri = Output.ofNullable(fileUri);
             return this;
-        }
-        public FileReferenceArgs build() {
+        }        public FileReferenceArgs build() {
             return new FileReferenceArgs(fileUri);
         }
     }

@@ -159,37 +159,33 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends io.
             this.audioEncoding = Objects.requireNonNull(audioEncoding);
             return this;
         }
-
         public Builder enableWordInfo(Boolean enableWordInfo) {
             this.enableWordInfo = Objects.requireNonNull(enableWordInfo);
             return this;
         }
-
         public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
-
         public Builder modelVariant(String modelVariant) {
             this.modelVariant = Objects.requireNonNull(modelVariant);
             return this;
         }
-
         public Builder phraseHints(List<String> phraseHints) {
             this.phraseHints = Objects.requireNonNull(phraseHints);
             return this;
         }
-
+        public Builder phraseHints(String... phraseHints) {
+            return phraseHints(List.of(phraseHints));
+        }
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
-
         public Builder singleUtterance(Boolean singleUtterance) {
             this.singleUtterance = Objects.requireNonNull(singleUtterance);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3InputAudioConfigResponse build() {
+        }        public GoogleCloudDialogflowCxV3InputAudioConfigResponse build() {
             return new GoogleCloudDialogflowCxV3InputAudioConfigResponse(audioEncoding, enableWordInfo, model, modelVariant, phraseHints, sampleRateHertz, singleUtterance);
         }
     }

@@ -104,22 +104,18 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder tagId(String tagId) {
             this.tagId = Objects.requireNonNull(tagId);
             return this;
-        }
-        public GetTagByProductArgs build() {
+        }        public GetTagByProductArgs build() {
             return new GetTagByProductArgs(productId, resourceGroupName, serviceName, tagId);
         }
     }

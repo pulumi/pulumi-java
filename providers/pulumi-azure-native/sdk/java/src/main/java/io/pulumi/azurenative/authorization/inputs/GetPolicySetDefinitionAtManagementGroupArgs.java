@@ -72,12 +72,10 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
-
         public Builder policySetDefinitionName(String policySetDefinitionName) {
             this.policySetDefinitionName = Objects.requireNonNull(policySetDefinitionName);
             return this;
-        }
-        public GetPolicySetDefinitionAtManagementGroupArgs build() {
+        }        public GetPolicySetDefinitionAtManagementGroupArgs build() {
             return new GetPolicySetDefinitionAtManagementGroupArgs(managementGroupId, policySetDefinitionName);
         }
     }

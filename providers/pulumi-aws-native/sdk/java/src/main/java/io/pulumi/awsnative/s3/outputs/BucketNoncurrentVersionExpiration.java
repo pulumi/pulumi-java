@@ -71,12 +71,10 @@ public final class BucketNoncurrentVersionExpiration {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
-
         public Builder noncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
-        }
-        public BucketNoncurrentVersionExpiration build() {
+        }        public BucketNoncurrentVersionExpiration build() {
             return new BucketNoncurrentVersionExpiration(newerNoncurrentVersions, noncurrentDays);
         }
     }

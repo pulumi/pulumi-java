@@ -88,17 +88,14 @@ public final class ListWebAppSyncFunctionTriggersSlotArgs extends io.pulumi.reso
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppSyncFunctionTriggersSlotArgs build() {
+        }        public ListWebAppSyncFunctionTriggersSlotArgs build() {
             return new ListWebAppSyncFunctionTriggersSlotArgs(name, resourceGroupName, slot);
         }
     }

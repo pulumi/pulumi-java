@@ -107,42 +107,34 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
-
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Output.of(Objects.requireNonNull(accessControlMaxAgeSec));
             return this;
         }
-
         public Builder includeSubdomains(@Nullable Output<Boolean> includeSubdomains) {
             this.includeSubdomains = includeSubdomains;
             return this;
         }
-
         public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
             this.includeSubdomains = Output.ofNullable(includeSubdomains);
             return this;
         }
-
         public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
-
         public Builder preload(@Nullable Output<Boolean> preload) {
             this.preload = preload;
             return this;
         }
-
         public Builder preload(@Nullable Boolean preload) {
             this.preload = Output.ofNullable(preload);
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs(accessControlMaxAgeSec, includeSubdomains, override, preload);
         }
     }

@@ -191,92 +191,74 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             this.autoReplaceOnFailure = autoReplaceOnFailure;
             return this;
         }
-
         public Builder autoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
             this.autoReplaceOnFailure = Output.ofNullable(autoReplaceOnFailure);
             return this;
         }
-
         public Builder hostGroupName(Output<String> hostGroupName) {
             this.hostGroupName = Objects.requireNonNull(hostGroupName);
             return this;
         }
-
         public Builder hostGroupName(String hostGroupName) {
             this.hostGroupName = Output.of(Objects.requireNonNull(hostGroupName));
             return this;
         }
-
         public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<DedicatedHostLicenseTypes> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable DedicatedHostLicenseTypes licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Output<Integer> platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
-
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = Output.ofNullable(platformFaultDomain);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DedicatedHostArgs build() {
+        }        public DedicatedHostArgs build() {
             return new DedicatedHostArgs(autoReplaceOnFailure, hostGroupName, hostName, licenseType, location, platformFaultDomain, resourceGroupName, sku, tags);
         }
     }

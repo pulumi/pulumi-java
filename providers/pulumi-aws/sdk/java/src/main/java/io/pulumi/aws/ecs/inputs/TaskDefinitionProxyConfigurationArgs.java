@@ -91,32 +91,26 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
-
         public Builder containerName(String containerName) {
             this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
-
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public TaskDefinitionProxyConfigurationArgs build() {
+        }        public TaskDefinitionProxyConfigurationArgs build() {
             return new TaskDefinitionProxyConfigurationArgs(containerName, properties, type);
         }
     }

@@ -127,52 +127,45 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
             this.allocatedIpRange = allocatedIpRange;
             return this;
         }
-
         public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
             this.allocatedIpRange = Output.ofNullable(allocatedIpRange);
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
-
         public Builder authorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs> authorizedNetworks) {
             this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
-
+        public Builder authorizedNetworks(DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder ipv4Enabled(@Nullable Output<Boolean> ipv4Enabled) {
             this.ipv4Enabled = ipv4Enabled;
             return this;
         }
-
         public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
             this.ipv4Enabled = Output.ofNullable(ipv4Enabled);
             return this;
         }
-
         public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
-
         public Builder privateNetwork(@Nullable String privateNetwork) {
             this.privateNetwork = Output.ofNullable(privateNetwork);
             return this;
         }
-
         public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }
-
         public Builder requireSsl(@Nullable Boolean requireSsl) {
             this.requireSsl = Output.ofNullable(requireSsl);
             return this;
-        }
-        public DatabaseInstanceSettingsIpConfigurationGetArgs build() {
+        }        public DatabaseInstanceSettingsIpConfigurationGetArgs build() {
             return new DatabaseInstanceSettingsIpConfigurationGetArgs(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
         }
     }

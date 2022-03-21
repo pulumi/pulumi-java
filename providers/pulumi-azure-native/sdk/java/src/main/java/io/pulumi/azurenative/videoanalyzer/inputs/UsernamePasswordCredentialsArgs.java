@@ -94,32 +94,26 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public UsernamePasswordCredentialsArgs build() {
+        }        public UsernamePasswordCredentialsArgs build() {
             return new UsernamePasswordCredentialsArgs(password, type, username);
         }
     }

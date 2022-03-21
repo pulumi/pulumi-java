@@ -78,17 +78,14 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCertificateAuthorityArgs build() {
+        }        public GetCertificateAuthorityArgs build() {
             return new GetCertificateAuthorityArgs(certificateAuthorityId, location, project);
         }
     }

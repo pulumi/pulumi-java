@@ -130,22 +130,21 @@ public final class RegionUrlMapPathMatcherPathRule {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
+        public Builder paths(String... paths) {
+            return paths(List.of(paths));
+        }
         public Builder routeAction(@Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
-
         public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRule build() {
+        }        public RegionUrlMapPathMatcherPathRule build() {
             return new RegionUrlMapPathMatcherPathRule(paths, routeAction, service, urlRedirect);
         }
     }

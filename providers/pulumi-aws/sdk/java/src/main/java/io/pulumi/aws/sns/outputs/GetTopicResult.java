@@ -77,17 +77,14 @@ public final class GetTopicResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetTopicResult build() {
+        }        public GetTopicResult build() {
             return new GetTopicResult(arn, id, name);
         }
     }

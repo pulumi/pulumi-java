@@ -58,12 +58,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public ProjectArgs build() {
+        }        public ProjectArgs build() {
             return new ProjectArgs(project);
         }
     }

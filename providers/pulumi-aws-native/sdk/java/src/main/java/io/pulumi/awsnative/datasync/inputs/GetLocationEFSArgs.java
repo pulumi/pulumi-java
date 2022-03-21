@@ -54,8 +54,7 @@ public final class GetLocationEFSArgs extends io.pulumi.resources.InvokeArgs {
         public Builder locationArn(String locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
-        }
-        public GetLocationEFSArgs build() {
+        }        public GetLocationEFSArgs build() {
             return new GetLocationEFSArgs(locationArn);
         }
     }

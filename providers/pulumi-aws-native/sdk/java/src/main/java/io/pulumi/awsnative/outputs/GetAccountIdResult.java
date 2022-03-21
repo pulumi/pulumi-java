@@ -43,8 +43,7 @@ public final class GetAccountIdResult {
         public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
-        }
-        public GetAccountIdResult build() {
+        }        public GetAccountIdResult build() {
             return new GetAccountIdResult(accountId);
         }
     }

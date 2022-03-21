@@ -166,42 +166,34 @@ public final class BgpPeerStatusResponse {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
-
         public Builder connectedDuration(String connectedDuration) {
             this.connectedDuration = Objects.requireNonNull(connectedDuration);
             return this;
         }
-
         public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
-
         public Builder messagesReceived(Double messagesReceived) {
             this.messagesReceived = Objects.requireNonNull(messagesReceived);
             return this;
         }
-
         public Builder messagesSent(Double messagesSent) {
             this.messagesSent = Objects.requireNonNull(messagesSent);
             return this;
         }
-
         public Builder neighbor(String neighbor) {
             this.neighbor = Objects.requireNonNull(neighbor);
             return this;
         }
-
         public Builder routesReceived(Double routesReceived) {
             this.routesReceived = Objects.requireNonNull(routesReceived);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
-        }
-        public BgpPeerStatusResponse build() {
+        }        public BgpPeerStatusResponse build() {
             return new BgpPeerStatusResponse(asn, connectedDuration, localAddress, messagesReceived, messagesSent, neighbor, routesReceived, state);
         }
     }

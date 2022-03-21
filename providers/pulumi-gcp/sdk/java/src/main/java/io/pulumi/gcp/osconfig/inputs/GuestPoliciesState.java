@@ -246,112 +246,99 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
             this.assignment = assignment;
             return this;
         }
-
         public Builder assignment(@Nullable GuestPoliciesAssignmentGetArgs assignment) {
             this.assignment = Output.ofNullable(assignment);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder guestPolicyId(@Nullable Output<String> guestPolicyId) {
             this.guestPolicyId = guestPolicyId;
             return this;
         }
-
         public Builder guestPolicyId(@Nullable String guestPolicyId) {
             this.guestPolicyId = Output.ofNullable(guestPolicyId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder packageRepositories(@Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories) {
             this.packageRepositories = packageRepositories;
             return this;
         }
-
         public Builder packageRepositories(@Nullable List<GuestPoliciesPackageRepositoryGetArgs> packageRepositories) {
             this.packageRepositories = Output.ofNullable(packageRepositories);
             return this;
         }
-
+        public Builder packageRepositories(GuestPoliciesPackageRepositoryGetArgs... packageRepositories) {
+            return packageRepositories(List.of(packageRepositories));
+        }
         public Builder packages(@Nullable Output<List<GuestPoliciesPackageGetArgs>> packages) {
             this.packages = packages;
             return this;
         }
-
         public Builder packages(@Nullable List<GuestPoliciesPackageGetArgs> packages) {
             this.packages = Output.ofNullable(packages);
             return this;
         }
-
+        public Builder packages(GuestPoliciesPackageGetArgs... packages) {
+            return packages(List.of(packages));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder recipes(@Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes) {
             this.recipes = recipes;
             return this;
         }
-
         public Builder recipes(@Nullable List<GuestPoliciesRecipeGetArgs> recipes) {
             this.recipes = Output.ofNullable(recipes);
             return this;
         }
-
+        public Builder recipes(GuestPoliciesRecipeGetArgs... recipes) {
+            return recipes(List.of(recipes));
+        }
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public GuestPoliciesState build() {
+        }        public GuestPoliciesState build() {
             return new GuestPoliciesState(assignment, createTime, description, etag, guestPolicyId, name, packageRepositories, packages, project, recipes, updateTime);
         }
     }

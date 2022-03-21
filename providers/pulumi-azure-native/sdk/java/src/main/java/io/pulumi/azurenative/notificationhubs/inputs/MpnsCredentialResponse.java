@@ -94,17 +94,14 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
             this.certificateKey = certificateKey;
             return this;
         }
-
         public Builder mpnsCertificate(@Nullable String mpnsCertificate) {
             this.mpnsCertificate = mpnsCertificate;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
-        }
-        public MpnsCredentialResponse build() {
+        }        public MpnsCredentialResponse build() {
             return new MpnsCredentialResponse(certificateKey, mpnsCertificate, thumbprint);
         }
     }

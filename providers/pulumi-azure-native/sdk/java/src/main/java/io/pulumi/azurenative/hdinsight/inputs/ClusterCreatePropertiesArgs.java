@@ -265,132 +265,106 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
             this.clusterDefinition = clusterDefinition;
             return this;
         }
-
         public Builder clusterDefinition(@Nullable ClusterDefinitionArgs clusterDefinition) {
             this.clusterDefinition = Output.ofNullable(clusterDefinition);
             return this;
         }
-
         public Builder clusterVersion(@Nullable Output<String> clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
-
         public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = Output.ofNullable(clusterVersion);
             return this;
         }
-
         public Builder computeIsolationProperties(@Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties) {
             this.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
-
         public Builder computeIsolationProperties(@Nullable ComputeIsolationPropertiesArgs computeIsolationProperties) {
             this.computeIsolationProperties = Output.ofNullable(computeIsolationProperties);
             return this;
         }
-
         public Builder computeProfile(@Nullable Output<ComputeProfileArgs> computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
-
         public Builder computeProfile(@Nullable ComputeProfileArgs computeProfile) {
             this.computeProfile = Output.ofNullable(computeProfile);
             return this;
         }
-
         public Builder diskEncryptionProperties(@Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties) {
             this.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
-
         public Builder diskEncryptionProperties(@Nullable DiskEncryptionPropertiesArgs diskEncryptionProperties) {
             this.diskEncryptionProperties = Output.ofNullable(diskEncryptionProperties);
             return this;
         }
-
         public Builder encryptionInTransitProperties(@Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties) {
             this.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
-
         public Builder encryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesArgs encryptionInTransitProperties) {
             this.encryptionInTransitProperties = Output.ofNullable(encryptionInTransitProperties);
             return this;
         }
-
         public Builder kafkaRestProperties(@Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties) {
             this.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
-
         public Builder kafkaRestProperties(@Nullable KafkaRestPropertiesArgs kafkaRestProperties) {
             this.kafkaRestProperties = Output.ofNullable(kafkaRestProperties);
             return this;
         }
-
         public Builder minSupportedTlsVersion(@Nullable Output<String> minSupportedTlsVersion) {
             this.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
-
         public Builder minSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
             this.minSupportedTlsVersion = Output.ofNullable(minSupportedTlsVersion);
             return this;
         }
-
         public Builder networkProperties(@Nullable Output<NetworkPropertiesArgs> networkProperties) {
             this.networkProperties = networkProperties;
             return this;
         }
-
         public Builder networkProperties(@Nullable NetworkPropertiesArgs networkProperties) {
             this.networkProperties = Output.ofNullable(networkProperties);
             return this;
         }
-
         public Builder osType(@Nullable Output<OSType> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable OSType osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Output.ofNullable(securityProfile);
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder tier(@Nullable Output<Tier> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Tier tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public ClusterCreatePropertiesArgs build() {
+        }        public ClusterCreatePropertiesArgs build() {
             return new ClusterCreatePropertiesArgs(clusterDefinition, clusterVersion, computeIsolationProperties, computeProfile, diskEncryptionProperties, encryptionInTransitProperties, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, securityProfile, storageProfile, tier);
         }
     }

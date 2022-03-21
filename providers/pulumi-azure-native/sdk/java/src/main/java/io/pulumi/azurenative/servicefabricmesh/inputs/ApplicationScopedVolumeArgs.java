@@ -112,42 +112,34 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
             this.creationParameters = Objects.requireNonNull(creationParameters);
             return this;
         }
-
         public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs creationParameters) {
             this.creationParameters = Output.of(Objects.requireNonNull(creationParameters));
             return this;
         }
-
         public Builder destinationPath(Output<String> destinationPath) {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
-
         public Builder destinationPath(String destinationPath) {
             this.destinationPath = Output.of(Objects.requireNonNull(destinationPath));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public ApplicationScopedVolumeArgs build() {
+        }        public ApplicationScopedVolumeArgs build() {
             return new ApplicationScopedVolumeArgs(creationParameters, destinationPath, name, readOnly);
         }
     }

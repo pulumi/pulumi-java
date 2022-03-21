@@ -465,262 +465,222 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.addresses = addresses;
             return this;
         }
-
         public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = Output.ofNullable(addresses);
             return this;
         }
-
+        public Builder addresses(String... addresses) {
+            return addresses(List.of(addresses));
+        }
         public Builder applicationInfo(Output<ApplicationInfoArgs> applicationInfo) {
             this.applicationInfo = Objects.requireNonNull(applicationInfo);
             return this;
         }
-
         public Builder applicationInfo(ApplicationInfoArgs applicationInfo) {
             this.applicationInfo = Output.of(Objects.requireNonNull(applicationInfo));
             return this;
         }
-
         public Builder companyName(Output<String> companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
-
         public Builder companyName(String companyName) {
             this.companyName = Output.of(Objects.requireNonNull(companyName));
             return this;
         }
-
         public Builder compensationInfo(@Nullable Output<CompensationInfoArgs> compensationInfo) {
             this.compensationInfo = compensationInfo;
             return this;
         }
-
         public Builder compensationInfo(@Nullable CompensationInfoArgs compensationInfo) {
             this.compensationInfo = Output.ofNullable(compensationInfo);
             return this;
         }
-
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
-
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
-
         public Builder degreeTypes(@Nullable Output<List<JobDegreeTypesItem>> degreeTypes) {
             this.degreeTypes = degreeTypes;
             return this;
         }
-
         public Builder degreeTypes(@Nullable List<JobDegreeTypesItem> degreeTypes) {
             this.degreeTypes = Output.ofNullable(degreeTypes);
             return this;
         }
-
+        public Builder degreeTypes(JobDegreeTypesItem... degreeTypes) {
+            return degreeTypes(List.of(degreeTypes));
+        }
         public Builder department(@Nullable Output<String> department) {
             this.department = department;
             return this;
         }
-
         public Builder department(@Nullable String department) {
             this.department = Output.ofNullable(department);
             return this;
         }
-
         public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
-
         public Builder employmentTypes(@Nullable Output<List<JobEmploymentTypesItem>> employmentTypes) {
             this.employmentTypes = employmentTypes;
             return this;
         }
-
         public Builder employmentTypes(@Nullable List<JobEmploymentTypesItem> employmentTypes) {
             this.employmentTypes = Output.ofNullable(employmentTypes);
             return this;
         }
-
+        public Builder employmentTypes(JobEmploymentTypesItem... employmentTypes) {
+            return employmentTypes(List.of(employmentTypes));
+        }
         public Builder incentives(@Nullable Output<String> incentives) {
             this.incentives = incentives;
             return this;
         }
-
         public Builder incentives(@Nullable String incentives) {
             this.incentives = Output.ofNullable(incentives);
             return this;
         }
-
         public Builder jobBenefits(@Nullable Output<List<JobJobBenefitsItem>> jobBenefits) {
             this.jobBenefits = jobBenefits;
             return this;
         }
-
         public Builder jobBenefits(@Nullable List<JobJobBenefitsItem> jobBenefits) {
             this.jobBenefits = Output.ofNullable(jobBenefits);
             return this;
         }
-
+        public Builder jobBenefits(JobJobBenefitsItem... jobBenefits) {
+            return jobBenefits(List.of(jobBenefits));
+        }
         public Builder jobEndTime(@Nullable Output<String> jobEndTime) {
             this.jobEndTime = jobEndTime;
             return this;
         }
-
         public Builder jobEndTime(@Nullable String jobEndTime) {
             this.jobEndTime = Output.ofNullable(jobEndTime);
             return this;
         }
-
         public Builder jobLevel(@Nullable Output<JobJobLevel> jobLevel) {
             this.jobLevel = jobLevel;
             return this;
         }
-
         public Builder jobLevel(@Nullable JobJobLevel jobLevel) {
             this.jobLevel = Output.ofNullable(jobLevel);
             return this;
         }
-
         public Builder jobStartTime(@Nullable Output<String> jobStartTime) {
             this.jobStartTime = jobStartTime;
             return this;
         }
-
         public Builder jobStartTime(@Nullable String jobStartTime) {
             this.jobStartTime = Output.ofNullable(jobStartTime);
             return this;
         }
-
         public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder postingExpireTime(@Nullable Output<String> postingExpireTime) {
             this.postingExpireTime = postingExpireTime;
             return this;
         }
-
         public Builder postingExpireTime(@Nullable String postingExpireTime) {
             this.postingExpireTime = Output.ofNullable(postingExpireTime);
             return this;
         }
-
         public Builder postingPublishTime(@Nullable Output<String> postingPublishTime) {
             this.postingPublishTime = postingPublishTime;
             return this;
         }
-
         public Builder postingPublishTime(@Nullable String postingPublishTime) {
             this.postingPublishTime = Output.ofNullable(postingPublishTime);
             return this;
         }
-
         public Builder postingRegion(@Nullable Output<JobPostingRegion> postingRegion) {
             this.postingRegion = postingRegion;
             return this;
         }
-
         public Builder postingRegion(@Nullable JobPostingRegion postingRegion) {
             this.postingRegion = Output.ofNullable(postingRegion);
             return this;
         }
-
         public Builder processingOptions(@Nullable Output<ProcessingOptionsArgs> processingOptions) {
             this.processingOptions = processingOptions;
             return this;
         }
-
         public Builder processingOptions(@Nullable ProcessingOptionsArgs processingOptions) {
             this.processingOptions = Output.ofNullable(processingOptions);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder promotionValue(@Nullable Output<Integer> promotionValue) {
             this.promotionValue = promotionValue;
             return this;
         }
-
         public Builder promotionValue(@Nullable Integer promotionValue) {
             this.promotionValue = Output.ofNullable(promotionValue);
             return this;
         }
-
         public Builder qualifications(@Nullable Output<String> qualifications) {
             this.qualifications = qualifications;
             return this;
         }
-
         public Builder qualifications(@Nullable String qualifications) {
             this.qualifications = Output.ofNullable(qualifications);
             return this;
         }
-
         public Builder requisitionId(Output<String> requisitionId) {
             this.requisitionId = Objects.requireNonNull(requisitionId);
             return this;
         }
-
         public Builder requisitionId(String requisitionId) {
             this.requisitionId = Output.of(Objects.requireNonNull(requisitionId));
             return this;
         }
-
         public Builder responsibilities(@Nullable Output<String> responsibilities) {
             this.responsibilities = responsibilities;
             return this;
         }
-
         public Builder responsibilities(@Nullable String responsibilities) {
             this.responsibilities = Output.ofNullable(responsibilities);
             return this;
         }
-
         public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Output.of(Objects.requireNonNull(title));
             return this;
-        }
-        public JobArgs build() {
+        }        public JobArgs build() {
             return new JobArgs(addresses, applicationInfo, companyName, compensationInfo, customAttributes, degreeTypes, department, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingExpireTime, postingPublishTime, postingRegion, processingOptions, project, promotionValue, qualifications, requisitionId, responsibilities, title);
         }
     }

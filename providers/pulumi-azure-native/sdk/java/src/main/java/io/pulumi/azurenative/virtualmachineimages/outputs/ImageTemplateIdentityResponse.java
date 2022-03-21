@@ -73,12 +73,10 @@ public final class ImageTemplateIdentityResponse {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public ImageTemplateIdentityResponse build() {
+        }        public ImageTemplateIdentityResponse build() {
             return new ImageTemplateIdentityResponse(type, userAssignedIdentities);
         }
     }

@@ -218,112 +218,90 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable String context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder importance(@Nullable Output<String> importance) {
             this.importance = importance;
             return this;
         }
-
         public Builder importance(@Nullable String importance) {
             this.importance = Output.ofNullable(importance);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder memberName(Output<String> memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
-
         public Builder memberName(String memberName) {
             this.memberName = Output.of(Objects.requireNonNull(memberName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
-
         public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder workloadClassifierName(@Nullable Output<String> workloadClassifierName) {
             this.workloadClassifierName = workloadClassifierName;
             return this;
         }
-
         public Builder workloadClassifierName(@Nullable String workloadClassifierName) {
             this.workloadClassifierName = Output.ofNullable(workloadClassifierName);
             return this;
         }
-
         public Builder workloadGroupName(Output<String> workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
         }
-
         public Builder workloadGroupName(String workloadGroupName) {
             this.workloadGroupName = Output.of(Objects.requireNonNull(workloadGroupName));
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public SqlPoolWorkloadClassifierArgs build() {
+        }        public SqlPoolWorkloadClassifierArgs build() {
             return new SqlPoolWorkloadClassifierArgs(context, endTime, importance, label, memberName, resourceGroupName, sqlPoolName, startTime, workloadClassifierName, workloadGroupName, workspaceName);
         }
     }

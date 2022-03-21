@@ -107,22 +107,21 @@ public final class SecretVolumeSource {
             this.defaultMode = defaultMode;
             return this;
         }
-
         public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
-
+        public Builder items(KeyToPath... items) {
+            return items(List.of(items));
+        }
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
-        }
-        public SecretVolumeSource build() {
+        }        public SecretVolumeSource build() {
             return new SecretVolumeSource(defaultMode, items, optional, secretName);
         }
     }

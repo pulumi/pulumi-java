@@ -75,12 +75,13 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder domainNames(@Nullable List<String> domainNames) {
             this.domainNames = domainNames;
             return this;
         }
-        public ContainerPublicDomainName build() {
+        public Builder domainNames(String... domainNames) {
+            return domainNames(List.of(domainNames));
+        }        public ContainerPublicDomainName build() {
             return new ContainerPublicDomainName(certificateName, domainNames);
         }
     }

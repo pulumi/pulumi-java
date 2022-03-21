@@ -81,22 +81,18 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.auditLogStatus = auditLogStatus;
             return this;
         }
-
         public Builder auditLogStatus(@Nullable Either<String,AuditLogStatus> auditLogStatus) {
             this.auditLogStatus = Output.ofNullable(auditLogStatus);
             return this;
         }
-
         public Builder logLevel(@Nullable Output<Either<String,LogLevel>> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
-
         public Builder logLevel(@Nullable Either<String,LogLevel> logLevel) {
             this.logLevel = Output.ofNullable(logLevel);
             return this;
-        }
-        public LoggingPropertiesArgs build() {
+        }        public LoggingPropertiesArgs build() {
             return new LoggingPropertiesArgs(auditLogStatus, logLevel);
         }
     }

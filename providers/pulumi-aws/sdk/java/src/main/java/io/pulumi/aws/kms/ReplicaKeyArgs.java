@@ -157,72 +157,58 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
-
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
             this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
             return this;
         }
-
         public Builder primaryKeyArn(String primaryKeyArn) {
             this.primaryKeyArn = Output.of(Objects.requireNonNull(primaryKeyArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ReplicaKeyArgs build() {
+        }        public ReplicaKeyArgs build() {
             return new ReplicaKeyArgs(bypassPolicyLockoutSafetyCheck, deletionWindowInDays, description, enabled, policy, primaryKeyArn, tags);
         }
     }

@@ -70,12 +70,10 @@ public final class NamedPortResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
-        }
-        public NamedPortResponse build() {
+        }        public NamedPortResponse build() {
             return new NamedPortResponse(name, port);
         }
     }

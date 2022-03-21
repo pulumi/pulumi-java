@@ -51,8 +51,7 @@ public final class InstanceScratchDisk {
         public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
-        }
-        public InstanceScratchDisk build() {
+        }        public InstanceScratchDisk build() {
             return new InstanceScratchDisk($interface);
         }
     }

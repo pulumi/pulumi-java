@@ -72,12 +72,10 @@ public final class GetDeviceExtendedInformationArgs extends io.pulumi.resources.
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDeviceExtendedInformationArgs build() {
+        }        public GetDeviceExtendedInformationArgs build() {
             return new GetDeviceExtendedInformationArgs(deviceName, resourceGroupName);
         }
     }

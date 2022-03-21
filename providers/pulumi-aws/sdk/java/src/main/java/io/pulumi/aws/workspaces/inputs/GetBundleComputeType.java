@@ -54,8 +54,7 @@ public final class GetBundleComputeType extends io.pulumi.resources.InvokeArgs {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetBundleComputeType build() {
+        }        public GetBundleComputeType build() {
             return new GetBundleComputeType(name);
         }
     }

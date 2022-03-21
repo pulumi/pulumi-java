@@ -74,22 +74,18 @@ public final class RouteSpecHttp2RouteTimeoutPerRequestGetArgs extends io.pulumi
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public RouteSpecHttp2RouteTimeoutPerRequestGetArgs build() {
+        }        public RouteSpecHttp2RouteTimeoutPerRequestGetArgs build() {
             return new RouteSpecHttp2RouteTimeoutPerRequestGetArgs(unit, value);
         }
     }

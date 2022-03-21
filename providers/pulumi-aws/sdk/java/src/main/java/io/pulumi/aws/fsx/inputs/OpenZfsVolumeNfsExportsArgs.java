@@ -57,12 +57,13 @@ public final class OpenZfsVolumeNfsExportsArgs extends io.pulumi.resources.Resou
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }
-
         public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfigurationArgs> clientConfigurations) {
             this.clientConfigurations = Output.of(Objects.requireNonNull(clientConfigurations));
             return this;
         }
-        public OpenZfsVolumeNfsExportsArgs build() {
+        public Builder clientConfigurations(OpenZfsVolumeNfsExportsClientConfigurationArgs... clientConfigurations) {
+            return clientConfigurations(List.of(clientConfigurations));
+        }        public OpenZfsVolumeNfsExportsArgs build() {
             return new OpenZfsVolumeNfsExportsArgs(clientConfigurations);
         }
     }

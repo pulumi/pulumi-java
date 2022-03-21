@@ -88,17 +88,17 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
             this.operator = operator;
             return this;
         }
-
         public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
         }
-
         public Builder propertyValues(@Nullable List<String> propertyValues) {
             this.propertyValues = propertyValues;
             return this;
         }
-        public AutomationRulePropertyValuesConditionResponseConditionProperties build() {
+        public Builder propertyValues(String... propertyValues) {
+            return propertyValues(List.of(propertyValues));
+        }        public AutomationRulePropertyValuesConditionResponseConditionProperties build() {
             return new AutomationRulePropertyValuesConditionResponseConditionProperties(operator, propertyName, propertyValues);
         }
     }

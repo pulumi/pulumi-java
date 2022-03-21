@@ -93,17 +93,14 @@ public final class TableMaterializedView {
             this.enableRefresh = enableRefresh;
             return this;
         }
-
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public Builder refreshIntervalMs(@Nullable Integer refreshIntervalMs) {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
-        }
-        public TableMaterializedView build() {
+        }        public TableMaterializedView build() {
             return new TableMaterializedView(enableRefresh, query, refreshIntervalMs);
         }
     }

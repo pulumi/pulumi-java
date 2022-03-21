@@ -70,12 +70,10 @@ public final class InstanceAttemptResultResponse {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
-
         public Builder status(GoogleRpcStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
-        }
-        public InstanceAttemptResultResponse build() {
+        }        public InstanceAttemptResultResponse build() {
             return new InstanceAttemptResultResponse(exitCode, status);
         }
     }

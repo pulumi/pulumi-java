@@ -140,57 +140,55 @@ public final class GetSecretResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder replications(List<GetSecretReplication> replications) {
             this.replications = Objects.requireNonNull(replications);
             return this;
         }
-
+        public Builder replications(GetSecretReplication... replications) {
+            return replications(List.of(replications));
+        }
         public Builder rotations(List<GetSecretRotation> rotations) {
             this.rotations = Objects.requireNonNull(rotations);
             return this;
         }
-
+        public Builder rotations(GetSecretRotation... rotations) {
+            return rotations(List.of(rotations));
+        }
         public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
-
         public Builder topics(List<GetSecretTopic> topics) {
             this.topics = Objects.requireNonNull(topics);
             return this;
         }
-
+        public Builder topics(GetSecretTopic... topics) {
+            return topics(List.of(topics));
+        }
         public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
-        }
-        public GetSecretResult build() {
+        }        public GetSecretResult build() {
             return new GetSecretResult(createTime, expireTime, id, labels, name, project, replications, rotations, secretId, topics, ttl);
         }
     }

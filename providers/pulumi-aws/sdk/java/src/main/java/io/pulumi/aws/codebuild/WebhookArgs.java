@@ -108,42 +108,37 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.branchFilter = branchFilter;
             return this;
         }
-
         public Builder branchFilter(@Nullable String branchFilter) {
             this.branchFilter = Output.ofNullable(branchFilter);
             return this;
         }
-
         public Builder buildType(@Nullable Output<String> buildType) {
             this.buildType = buildType;
             return this;
         }
-
         public Builder buildType(@Nullable String buildType) {
             this.buildType = Output.ofNullable(buildType);
             return this;
         }
-
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupArgs>> filterGroups) {
             this.filterGroups = filterGroups;
             return this;
         }
-
         public Builder filterGroups(@Nullable List<WebhookFilterGroupArgs> filterGroups) {
             this.filterGroups = Output.ofNullable(filterGroups);
             return this;
         }
-
+        public Builder filterGroups(WebhookFilterGroupArgs... filterGroups) {
+            return filterGroups(List.of(filterGroups));
+        }
         public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
-
         public Builder projectName(String projectName) {
             this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
-        }
-        public WebhookArgs build() {
+        }        public WebhookArgs build() {
             return new WebhookArgs(branchFilter, buildType, filterGroups, projectName);
         }
     }

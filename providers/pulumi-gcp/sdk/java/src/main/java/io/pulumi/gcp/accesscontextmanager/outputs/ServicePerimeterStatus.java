@@ -191,32 +191,41 @@ public final class ServicePerimeterStatus {
             this.accessLevels = accessLevels;
             return this;
         }
-
+        public Builder accessLevels(String... accessLevels) {
+            return accessLevels(List.of(accessLevels));
+        }
         public Builder egressPolicies(@Nullable List<ServicePerimeterStatusEgressPolicy> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
-
+        public Builder egressPolicies(ServicePerimeterStatusEgressPolicy... egressPolicies) {
+            return egressPolicies(List.of(egressPolicies));
+        }
         public Builder ingressPolicies(@Nullable List<ServicePerimeterStatusIngressPolicy> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
-
+        public Builder ingressPolicies(ServicePerimeterStatusIngressPolicy... ingressPolicies) {
+            return ingressPolicies(List.of(ingressPolicies));
+        }
         public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
-
+        public Builder resources(String... resources) {
+            return resources(List.of(resources));
+        }
         public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
-
+        public Builder restrictedServices(String... restrictedServices) {
+            return restrictedServices(List.of(restrictedServices));
+        }
         public Builder vpcAccessibleServices(@Nullable ServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
-        }
-        public ServicePerimeterStatus build() {
+        }        public ServicePerimeterStatus build() {
             return new ServicePerimeterStatus(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }
     }

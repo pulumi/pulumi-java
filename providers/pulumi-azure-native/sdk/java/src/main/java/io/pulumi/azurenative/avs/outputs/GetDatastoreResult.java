@@ -137,32 +137,26 @@ public final class GetDatastoreResult {
             this.diskPoolVolume = diskPoolVolume;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder netAppVolume(@Nullable NetAppVolumeResponse netAppVolume) {
             this.netAppVolume = netAppVolume;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDatastoreResult build() {
+        }        public GetDatastoreResult build() {
             return new GetDatastoreResult(diskPoolVolume, id, name, netAppVolume, provisioningState, type);
         }
     }

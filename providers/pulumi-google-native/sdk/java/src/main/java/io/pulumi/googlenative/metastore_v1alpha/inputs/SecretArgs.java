@@ -61,12 +61,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.cloudSecret = cloudSecret;
             return this;
         }
-
         public Builder cloudSecret(@Nullable String cloudSecret) {
             this.cloudSecret = Output.ofNullable(cloudSecret);
             return this;
-        }
-        public SecretArgs build() {
+        }        public SecretArgs build() {
             return new SecretArgs(cloudSecret);
         }
     }

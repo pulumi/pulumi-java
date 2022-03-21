@@ -89,22 +89,18 @@ public final class GetProjectServiceAccountResult {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
-        }
-        public GetProjectServiceAccountResult build() {
+        }        public GetProjectServiceAccountResult build() {
             return new GetProjectServiceAccountResult(emailAddress, id, project, userProject);
         }
     }

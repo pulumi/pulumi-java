@@ -73,12 +73,10 @@ public final class CopyAudioResponse {
             this.label = label;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public CopyAudioResponse build() {
+        }        public CopyAudioResponse build() {
             return new CopyAudioResponse(label, odataType);
         }
     }

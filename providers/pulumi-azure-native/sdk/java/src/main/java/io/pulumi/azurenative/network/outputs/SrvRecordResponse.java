@@ -104,22 +104,18 @@ public final class SrvRecordResponse {
             this.port = port;
             return this;
         }
-
         public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public SrvRecordResponse build() {
+        }        public SrvRecordResponse build() {
             return new SrvRecordResponse(port, priority, target, weight);
         }
     }

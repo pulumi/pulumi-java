@@ -97,22 +97,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             this.referenceId = referenceId;
             return this;
         }
-
         public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema) {
             this.referenceSchema = Objects.requireNonNull(referenceSchema);
             return this;
         }
-
         public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource(referenceId, referenceSchema, s3ReferenceDataSource, tableName);
         }
     }

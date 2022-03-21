@@ -94,32 +94,26 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
             this.abortedByUser = abortedByUser;
             return this;
         }
-
         public Builder abortedByUser(@Nullable Boolean abortedByUser) {
             this.abortedByUser = Output.ofNullable(abortedByUser);
             return this;
         }
-
         public Builder hasErrorLogs(@Nullable Output<Boolean> hasErrorLogs) {
             this.hasErrorLogs = hasErrorLogs;
             return this;
         }
-
         public Builder hasErrorLogs(@Nullable Boolean hasErrorLogs) {
             this.hasErrorLogs = Output.ofNullable(hasErrorLogs);
             return this;
         }
-
         public Builder infrastructureFailure(@Nullable Output<Boolean> infrastructureFailure) {
             this.infrastructureFailure = infrastructureFailure;
             return this;
         }
-
         public Builder infrastructureFailure(@Nullable Boolean infrastructureFailure) {
             this.infrastructureFailure = Output.ofNullable(infrastructureFailure);
             return this;
-        }
-        public InconclusiveDetailArgs build() {
+        }        public InconclusiveDetailArgs build() {
             return new InconclusiveDetailArgs(abortedByUser, hasErrorLogs, infrastructureFailure);
         }
     }

@@ -215,102 +215,82 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends io
             this.backupManagementType = backupManagementType;
             return this;
         }
-
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
-
         public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
-
         public Builder containerType(String containerType) {
             this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
-
         public Builder extendedInfo(@Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
-
         public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
-
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
-
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-
         public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
-
         public Builder operationType(@Nullable Output<Either<String,OperationType>> operationType) {
             this.operationType = operationType;
             return this;
         }
-
         public Builder operationType(@Nullable Either<String,OperationType> operationType) {
             this.operationType = Output.ofNullable(operationType);
             return this;
         }
-
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
-
         public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
-
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
-
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
-
         public Builder workloadType(@Nullable Output<Either<String,WorkloadType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
-
         public Builder workloadType(@Nullable Either<String,WorkloadType> workloadType) {
             this.workloadType = Output.ofNullable(workloadType);
             return this;
-        }
-        public AzureSQLAGWorkloadContainerProtectionContainerArgs build() {
+        }        public AzureSQLAGWorkloadContainerProtectionContainerArgs build() {
             return new AzureSQLAGWorkloadContainerProtectionContainerArgs(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
         }
     }

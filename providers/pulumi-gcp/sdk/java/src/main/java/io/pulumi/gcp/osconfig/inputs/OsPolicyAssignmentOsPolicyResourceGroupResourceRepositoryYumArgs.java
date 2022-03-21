@@ -107,42 +107,37 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumA
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
-
         public Builder baseUrl(String baseUrl) {
             this.baseUrl = Output.of(Objects.requireNonNull(baseUrl));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gpgKeys(@Nullable Output<List<String>> gpgKeys) {
             this.gpgKeys = gpgKeys;
             return this;
         }
-
         public Builder gpgKeys(@Nullable List<String> gpgKeys) {
             this.gpgKeys = Output.ofNullable(gpgKeys);
             return this;
         }
-
+        public Builder gpgKeys(String... gpgKeys) {
+            return gpgKeys(List.of(gpgKeys));
+        }
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs(baseUrl, displayName, gpgKeys, id);
         }
     }

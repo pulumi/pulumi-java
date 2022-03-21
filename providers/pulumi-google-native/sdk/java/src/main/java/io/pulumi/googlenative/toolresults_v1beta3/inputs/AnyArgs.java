@@ -78,22 +78,18 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
             this.typeUrl = typeUrl;
             return this;
         }
-
         public Builder typeUrl(@Nullable String typeUrl) {
             this.typeUrl = Output.ofNullable(typeUrl);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public AnyArgs build() {
+        }        public AnyArgs build() {
             return new AnyArgs(typeUrl, value);
         }
     }

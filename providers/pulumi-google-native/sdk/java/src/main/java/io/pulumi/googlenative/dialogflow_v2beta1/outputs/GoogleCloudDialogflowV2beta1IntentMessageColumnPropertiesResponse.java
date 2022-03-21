@@ -69,12 +69,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResp
             this.header = Objects.requireNonNull(header);
             return this;
         }
-
         public Builder horizontalAlignment(String horizontalAlignment) {
             this.horizontalAlignment = Objects.requireNonNull(horizontalAlignment);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse(header, horizontalAlignment);
         }
     }

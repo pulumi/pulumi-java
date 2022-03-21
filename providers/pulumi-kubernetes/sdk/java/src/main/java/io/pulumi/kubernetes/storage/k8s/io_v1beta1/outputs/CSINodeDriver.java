@@ -105,22 +105,21 @@ public final class CSINodeDriver {
             this.allocatable = allocatable;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodeID(String nodeID) {
             this.nodeID = Objects.requireNonNull(nodeID);
             return this;
         }
-
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }
-        public CSINodeDriver build() {
+        public Builder topologyKeys(String... topologyKeys) {
+            return topologyKeys(List.of(topologyKeys));
+        }        public CSINodeDriver build() {
             return new CSINodeDriver(allocatable, name, nodeID, topologyKeys);
         }
     }

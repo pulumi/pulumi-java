@@ -89,17 +89,17 @@ public final class InstanceHardware {
             this.cpuCount = cpuCount;
             return this;
         }
-
         public Builder disks(@Nullable List<InstanceDisk> disks) {
             this.disks = disks;
             return this;
         }
-
+        public Builder disks(InstanceDisk... disks) {
+            return disks(List.of(disks));
+        }
         public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
             this.ramSizeInGb = ramSizeInGb;
             return this;
-        }
-        public InstanceHardware build() {
+        }        public InstanceHardware build() {
             return new InstanceHardware(cpuCount, disks, ramSizeInGb);
         }
     }

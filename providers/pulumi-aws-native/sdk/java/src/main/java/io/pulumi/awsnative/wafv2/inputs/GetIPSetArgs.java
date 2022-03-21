@@ -77,17 +77,14 @@ public final class GetIPSetArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scope(IPSetScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
-        }
-        public GetIPSetArgs build() {
+        }        public GetIPSetArgs build() {
             return new GetIPSetArgs(id, name, scope);
         }
     }

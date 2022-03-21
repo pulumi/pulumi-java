@@ -79,22 +79,18 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.groupId = groupId;
             return this;
         }
-
         public Builder groupId(@Nullable String groupId) {
             this.groupId = Output.ofNullable(groupId);
             return this;
         }
-
         public Builder resourceType(@Nullable Output<ResourceGroupResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable ResourceGroupResourceType resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
-        }
-        public ResourceGroupArgs build() {
+        }        public ResourceGroupArgs build() {
             return new ResourceGroupArgs(groupId, resourceType);
         }
     }

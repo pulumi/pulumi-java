@@ -78,22 +78,18 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
             this.bestEffort = Objects.requireNonNull(bestEffort);
             return this;
         }
-
         public Builder bestEffort(Boolean bestEffort) {
             this.bestEffort = Output.of(Objects.requireNonNull(bestEffort));
             return this;
         }
-
         public Builder configurationData(Output<Integer> configurationData) {
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }
-
         public Builder configurationData(Integer configurationData) {
             this.configurationData = Output.of(Objects.requireNonNull(configurationData));
             return this;
-        }
-        public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs build() {
+        }        public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs build() {
             return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(bestEffort, configurationData);
         }
     }

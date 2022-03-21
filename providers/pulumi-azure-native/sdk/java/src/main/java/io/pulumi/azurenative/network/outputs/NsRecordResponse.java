@@ -53,8 +53,7 @@ public final class NsRecordResponse {
         public Builder nsdname(@Nullable String nsdname) {
             this.nsdname = nsdname;
             return this;
-        }
-        public NsRecordResponse build() {
+        }        public NsRecordResponse build() {
             return new NsRecordResponse(nsdname);
         }
     }

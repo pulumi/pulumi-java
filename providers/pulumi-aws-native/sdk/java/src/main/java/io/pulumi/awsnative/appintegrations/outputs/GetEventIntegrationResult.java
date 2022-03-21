@@ -106,22 +106,24 @@ public final class GetEventIntegrationResult {
             this.associations = associations;
             return this;
         }
-
+        public Builder associations(EventIntegrationAssociation... associations) {
+            return associations(List.of(associations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder eventIntegrationArn(@Nullable String eventIntegrationArn) {
             this.eventIntegrationArn = eventIntegrationArn;
             return this;
         }
-
         public Builder tags(@Nullable List<EventIntegrationTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetEventIntegrationResult build() {
+        public Builder tags(EventIntegrationTag... tags) {
+            return tags(List.of(tags));
+        }        public GetEventIntegrationResult build() {
             return new GetEventIntegrationResult(associations, description, eventIntegrationArn, tags);
         }
     }

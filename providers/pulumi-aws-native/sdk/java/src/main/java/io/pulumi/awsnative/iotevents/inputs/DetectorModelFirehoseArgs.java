@@ -91,32 +91,26 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
-
         public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Output.of(Objects.requireNonNull(deliveryStreamName));
             return this;
         }
-
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Output.ofNullable(payload);
             return this;
         }
-
         public Builder separator(@Nullable Output<String> separator) {
             this.separator = separator;
             return this;
         }
-
         public Builder separator(@Nullable String separator) {
             this.separator = Output.ofNullable(separator);
             return this;
-        }
-        public DetectorModelFirehoseArgs build() {
+        }        public DetectorModelFirehoseArgs build() {
             return new DetectorModelFirehoseArgs(deliveryStreamName, payload, separator);
         }
     }

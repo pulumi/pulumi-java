@@ -60,8 +60,7 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs e
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
-        }
-        public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs build() {
+        }        public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs build() {
             return new ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(count);
         }
     }

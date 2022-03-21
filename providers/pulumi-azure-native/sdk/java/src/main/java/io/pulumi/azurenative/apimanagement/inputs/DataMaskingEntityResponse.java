@@ -74,12 +74,10 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
             this.mode = mode;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public DataMaskingEntityResponse build() {
+        }        public DataMaskingEntityResponse build() {
             return new DataMaskingEntityResponse(mode, value);
         }
     }

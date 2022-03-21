@@ -106,42 +106,34 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Output.ofNullable(kmsKeyServiceAccount);
             return this;
         }
-
         public Builder rawKey(@Nullable Output<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
-
         public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = Output.ofNullable(rawKey);
             return this;
         }
-
         public Builder rsaEncryptedKey(@Nullable Output<String> rsaEncryptedKey) {
             this.rsaEncryptedKey = rsaEncryptedKey;
             return this;
         }
-
         public Builder rsaEncryptedKey(@Nullable String rsaEncryptedKey) {
             this.rsaEncryptedKey = Output.ofNullable(rsaEncryptedKey);
             return this;
-        }
-        public CustomerEncryptionKeyArgs build() {
+        }        public CustomerEncryptionKeyArgs build() {
             return new CustomerEncryptionKeyArgs(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey);
         }
     }

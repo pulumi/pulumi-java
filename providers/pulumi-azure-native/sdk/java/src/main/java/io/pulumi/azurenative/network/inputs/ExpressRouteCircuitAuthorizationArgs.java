@@ -112,42 +112,34 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
             this.authorizationKey = authorizationKey;
             return this;
         }
-
         public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
-
         public Builder authorizationUseStatus(@Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
             this.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
-
         public Builder authorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
             this.authorizationUseStatus = Output.ofNullable(authorizationUseStatus);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ExpressRouteCircuitAuthorizationArgs build() {
+        }        public ExpressRouteCircuitAuthorizationArgs build() {
             return new ExpressRouteCircuitAuthorizationArgs(authorizationKey, authorizationUseStatus, id, name);
         }
     }

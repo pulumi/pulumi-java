@@ -83,22 +83,18 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigA
             this.outputSchema = outputSchema;
             return this;
         }
-
         public Builder outputSchema(@Nullable String outputSchema) {
             this.outputSchema = Output.ofNullable(outputSchema);
             return this;
         }
-
         public Builder table(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder table(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs table) {
             this.table = Output.of(Objects.requireNonNull(table));
             return this;
-        }
-        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs build() {
+        }        public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(outputSchema, table);
         }
     }

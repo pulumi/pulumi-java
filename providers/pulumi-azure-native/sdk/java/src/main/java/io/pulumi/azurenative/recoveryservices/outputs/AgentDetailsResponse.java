@@ -119,27 +119,25 @@ public final class AgentDetailsResponse {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder biosId(String biosId) {
             this.biosId = Objects.requireNonNull(biosId);
             return this;
         }
-
         public Builder disks(List<AgentDiskDetailsResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
-
+        public Builder disks(AgentDiskDetailsResponse... disks) {
+            return disks(List.of(disks));
+        }
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder machineId(String machineId) {
             this.machineId = Objects.requireNonNull(machineId);
             return this;
-        }
-        public AgentDetailsResponse build() {
+        }        public AgentDetailsResponse build() {
             return new AgentDetailsResponse(agentId, biosId, disks, fqdn, machineId);
         }
     }

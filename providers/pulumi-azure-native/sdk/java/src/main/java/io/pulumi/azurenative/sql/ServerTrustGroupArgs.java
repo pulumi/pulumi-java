@@ -124,52 +124,48 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
             this.groupMembers = Objects.requireNonNull(groupMembers);
             return this;
         }
-
         public Builder groupMembers(List<ServerInfoArgs> groupMembers) {
             this.groupMembers = Output.of(Objects.requireNonNull(groupMembers));
             return this;
         }
-
+        public Builder groupMembers(ServerInfoArgs... groupMembers) {
+            return groupMembers(List.of(groupMembers));
+        }
         public Builder locationName(Output<String> locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
-
         public Builder locationName(String locationName) {
             this.locationName = Output.of(Objects.requireNonNull(locationName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverTrustGroupName(@Nullable Output<String> serverTrustGroupName) {
             this.serverTrustGroupName = serverTrustGroupName;
             return this;
         }
-
         public Builder serverTrustGroupName(@Nullable String serverTrustGroupName) {
             this.serverTrustGroupName = Output.ofNullable(serverTrustGroupName);
             return this;
         }
-
         public Builder trustScopes(Output<List<String>> trustScopes) {
             this.trustScopes = Objects.requireNonNull(trustScopes);
             return this;
         }
-
         public Builder trustScopes(List<String> trustScopes) {
             this.trustScopes = Output.of(Objects.requireNonNull(trustScopes));
             return this;
         }
-        public ServerTrustGroupArgs build() {
+        public Builder trustScopes(String... trustScopes) {
+            return trustScopes(List.of(trustScopes));
+        }        public ServerTrustGroupArgs build() {
             return new ServerTrustGroupArgs(groupMembers, locationName, resourceGroupName, serverTrustGroupName, trustScopes);
         }
     }

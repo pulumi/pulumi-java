@@ -109,42 +109,37 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder metricType(Output<CustomMetricMetricType> metricType) {
             this.metricType = Objects.requireNonNull(metricType);
             return this;
         }
-
         public Builder metricType(CustomMetricMetricType metricType) {
             this.metricType = Output.of(Objects.requireNonNull(metricType));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<CustomMetricTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<CustomMetricTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public CustomMetricArgs build() {
+        public Builder tags(CustomMetricTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public CustomMetricArgs build() {
             return new CustomMetricArgs(displayName, metricName, metricType, tags);
         }
     }

@@ -239,122 +239,101 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
-
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
             this.backupPolicyName = Output.ofNullable(backupPolicyName);
             return this;
         }
-
         public Builder dailyBackupsToKeep(@Nullable Output<Integer> dailyBackupsToKeep) {
             this.dailyBackupsToKeep = dailyBackupsToKeep;
             return this;
         }
-
         public Builder dailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
             this.dailyBackupsToKeep = Output.ofNullable(dailyBackupsToKeep);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder monthlyBackupsToKeep(@Nullable Output<Integer> monthlyBackupsToKeep) {
             this.monthlyBackupsToKeep = monthlyBackupsToKeep;
             return this;
         }
-
         public Builder monthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
             this.monthlyBackupsToKeep = Output.ofNullable(monthlyBackupsToKeep);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder volumeBackups(@Nullable Output<List<VolumeBackupsArgs>> volumeBackups) {
             this.volumeBackups = volumeBackups;
             return this;
         }
-
         public Builder volumeBackups(@Nullable List<VolumeBackupsArgs> volumeBackups) {
             this.volumeBackups = Output.ofNullable(volumeBackups);
             return this;
         }
-
+        public Builder volumeBackups(VolumeBackupsArgs... volumeBackups) {
+            return volumeBackups(List.of(volumeBackups));
+        }
         public Builder volumesAssigned(@Nullable Output<Integer> volumesAssigned) {
             this.volumesAssigned = volumesAssigned;
             return this;
         }
-
         public Builder volumesAssigned(@Nullable Integer volumesAssigned) {
             this.volumesAssigned = Output.ofNullable(volumesAssigned);
             return this;
         }
-
         public Builder weeklyBackupsToKeep(@Nullable Output<Integer> weeklyBackupsToKeep) {
             this.weeklyBackupsToKeep = weeklyBackupsToKeep;
             return this;
         }
-
         public Builder weeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
             this.weeklyBackupsToKeep = Output.ofNullable(weeklyBackupsToKeep);
             return this;
         }
-
         public Builder yearlyBackupsToKeep(@Nullable Output<Integer> yearlyBackupsToKeep) {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
-
         public Builder yearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
             this.yearlyBackupsToKeep = Output.ofNullable(yearlyBackupsToKeep);
             return this;
-        }
-        public BackupPolicyArgs build() {
+        }        public BackupPolicyArgs build() {
             return new BackupPolicyArgs(accountName, backupPolicyName, dailyBackupsToKeep, enabled, location, monthlyBackupsToKeep, resourceGroupName, tags, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
         }
     }

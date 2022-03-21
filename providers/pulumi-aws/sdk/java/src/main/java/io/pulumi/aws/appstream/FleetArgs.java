@@ -320,172 +320,138 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             this.computeCapacity = Objects.requireNonNull(computeCapacity);
             return this;
         }
-
         public Builder computeCapacity(FleetComputeCapacityArgs computeCapacity) {
             this.computeCapacity = Output.of(Objects.requireNonNull(computeCapacity));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disconnectTimeoutInSeconds(@Nullable Output<Integer> disconnectTimeoutInSeconds) {
             this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
             return this;
         }
-
         public Builder disconnectTimeoutInSeconds(@Nullable Integer disconnectTimeoutInSeconds) {
             this.disconnectTimeoutInSeconds = Output.ofNullable(disconnectTimeoutInSeconds);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder domainJoinInfo(@Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo) {
             this.domainJoinInfo = domainJoinInfo;
             return this;
         }
-
         public Builder domainJoinInfo(@Nullable FleetDomainJoinInfoArgs domainJoinInfo) {
             this.domainJoinInfo = Output.ofNullable(domainJoinInfo);
             return this;
         }
-
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
-
         public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = Output.ofNullable(enableDefaultInternetAccess);
             return this;
         }
-
         public Builder fleetType(@Nullable Output<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
-
         public Builder fleetType(@Nullable String fleetType) {
             this.fleetType = Output.ofNullable(fleetType);
             return this;
         }
-
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
-
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
-
         public Builder idleDisconnectTimeoutInSeconds(@Nullable Output<Integer> idleDisconnectTimeoutInSeconds) {
             this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
             return this;
         }
-
         public Builder idleDisconnectTimeoutInSeconds(@Nullable Integer idleDisconnectTimeoutInSeconds) {
             this.idleDisconnectTimeoutInSeconds = Output.ofNullable(idleDisconnectTimeoutInSeconds);
             return this;
         }
-
         public Builder imageArn(@Nullable Output<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
-
         public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = Output.ofNullable(imageArn);
             return this;
         }
-
         public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
-
         public Builder imageName(@Nullable String imageName) {
             this.imageName = Output.ofNullable(imageName);
             return this;
         }
-
         public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public Builder maxUserDurationInSeconds(@Nullable Output<Integer> maxUserDurationInSeconds) {
             this.maxUserDurationInSeconds = maxUserDurationInSeconds;
             return this;
         }
-
         public Builder maxUserDurationInSeconds(@Nullable Integer maxUserDurationInSeconds) {
             this.maxUserDurationInSeconds = Output.ofNullable(maxUserDurationInSeconds);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder streamView(@Nullable Output<String> streamView) {
             this.streamView = streamView;
             return this;
         }
-
         public Builder streamView(@Nullable String streamView) {
             this.streamView = Output.ofNullable(streamView);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcConfig(@Nullable Output<FleetVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public Builder vpcConfig(@Nullable FleetVpcConfigArgs vpcConfig) {
             this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
-        }
-        public FleetArgs build() {
+        }        public FleetArgs build() {
             return new FleetArgs(computeCapacity, description, disconnectTimeoutInSeconds, displayName, domainJoinInfo, enableDefaultInternetAccess, fleetType, iamRoleArn, idleDisconnectTimeoutInSeconds, imageArn, imageName, instanceType, maxUserDurationInSeconds, name, streamView, tags, vpcConfig);
         }
     }

@@ -125,27 +125,22 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
-
         public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
-
         public Builder kid(String kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
-
         public Builder n(String n) {
             this.n = Objects.requireNonNull(n);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public RsaTokenKeyResponse build() {
+        }        public RsaTokenKeyResponse build() {
             return new RsaTokenKeyResponse(alg, e, kid, n, type);
         }
     }

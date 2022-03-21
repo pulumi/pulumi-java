@@ -61,12 +61,10 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
             this.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
-
         public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
             this.recurrencePeriodDuration = Output.ofNullable(recurrencePeriodDuration);
             return this;
-        }
-        public GooglePrivacyDlpV2ScheduleArgs build() {
+        }        public GooglePrivacyDlpV2ScheduleArgs build() {
             return new GooglePrivacyDlpV2ScheduleArgs(recurrencePeriodDuration);
         }
     }

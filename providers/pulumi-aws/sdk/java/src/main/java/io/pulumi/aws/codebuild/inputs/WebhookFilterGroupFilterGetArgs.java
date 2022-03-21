@@ -91,32 +91,26 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
             this.excludeMatchedPattern = excludeMatchedPattern;
             return this;
         }
-
         public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
             this.excludeMatchedPattern = Output.ofNullable(excludeMatchedPattern);
             return this;
         }
-
         public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
-
         public Builder pattern(String pattern) {
             this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public WebhookFilterGroupFilterGetArgs build() {
+        }        public WebhookFilterGroupFilterGetArgs build() {
             return new WebhookFilterGroupFilterGetArgs(excludeMatchedPattern, pattern, type);
         }
     }

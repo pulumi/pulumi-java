@@ -88,17 +88,14 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
             this.flowLogName = Objects.requireNonNull(flowLogName);
             return this;
         }
-
         public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetFlowLogArgs build() {
+        }        public GetFlowLogArgs build() {
             return new GetFlowLogArgs(flowLogName, networkWatcherName, resourceGroupName);
         }
     }

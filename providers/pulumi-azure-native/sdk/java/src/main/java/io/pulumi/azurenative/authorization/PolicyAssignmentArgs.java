@@ -242,122 +242,104 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder enforcementMode(@Nullable Output<Either<String,EnforcementMode>> enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
-
         public Builder enforcementMode(@Nullable Either<String,EnforcementMode> enforcementMode) {
             this.enforcementMode = Output.ofNullable(enforcementMode);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Object metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder nonComplianceMessages(@Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages) {
             this.nonComplianceMessages = nonComplianceMessages;
             return this;
         }
-
         public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageArgs> nonComplianceMessages) {
             this.nonComplianceMessages = Output.ofNullable(nonComplianceMessages);
             return this;
         }
-
+        public Builder nonComplianceMessages(NonComplianceMessageArgs... nonComplianceMessages) {
+            return nonComplianceMessages(List.of(nonComplianceMessages));
+        }
         public Builder notScopes(@Nullable Output<List<String>> notScopes) {
             this.notScopes = notScopes;
             return this;
         }
-
         public Builder notScopes(@Nullable List<String> notScopes) {
             this.notScopes = Output.ofNullable(notScopes);
             return this;
         }
-
+        public Builder notScopes(String... notScopes) {
+            return notScopes(List.of(notScopes));
+        }
         public Builder parameters(@Nullable Output<Map<String,ParameterValuesValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder policyAssignmentName(@Nullable Output<String> policyAssignmentName) {
             this.policyAssignmentName = policyAssignmentName;
             return this;
         }
-
         public Builder policyAssignmentName(@Nullable String policyAssignmentName) {
             this.policyAssignmentName = Output.ofNullable(policyAssignmentName);
             return this;
         }
-
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
-
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = Output.ofNullable(policyDefinitionId);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public PolicyAssignmentArgs build() {
+        }        public PolicyAssignmentArgs build() {
             return new PolicyAssignmentArgs(description, displayName, enforcementMode, identity, location, metadata, nonComplianceMessages, notScopes, parameters, policyAssignmentName, policyDefinitionId, scope);
         }
     }

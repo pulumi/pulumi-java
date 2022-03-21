@@ -57,12 +57,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
-
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = Output.ofNullable(enableAutomaticUpdates);
             return this;
-        }
-        public WindowsConfigurationArgs build() {
+        }        public WindowsConfigurationArgs build() {
             return new WindowsConfigurationArgs(enableAutomaticUpdates);
         }
     }

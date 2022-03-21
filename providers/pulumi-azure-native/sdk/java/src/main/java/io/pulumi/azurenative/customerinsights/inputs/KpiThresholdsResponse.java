@@ -93,17 +93,14 @@ public final class KpiThresholdsResponse extends io.pulumi.resources.InvokeArgs 
             this.increasingKpi = Objects.requireNonNull(increasingKpi);
             return this;
         }
-
         public Builder lowerLimit(Double lowerLimit) {
             this.lowerLimit = Objects.requireNonNull(lowerLimit);
             return this;
         }
-
         public Builder upperLimit(Double upperLimit) {
             this.upperLimit = Objects.requireNonNull(upperLimit);
             return this;
-        }
-        public KpiThresholdsResponse build() {
+        }        public KpiThresholdsResponse build() {
             return new KpiThresholdsResponse(increasingKpi, lowerLimit, upperLimit);
         }
     }

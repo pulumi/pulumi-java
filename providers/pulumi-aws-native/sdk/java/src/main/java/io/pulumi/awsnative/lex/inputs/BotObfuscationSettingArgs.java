@@ -60,12 +60,10 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
             this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType);
             return this;
         }
-
         public Builder obfuscationSettingType(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
             this.obfuscationSettingType = Output.of(Objects.requireNonNull(obfuscationSettingType));
             return this;
-        }
-        public BotObfuscationSettingArgs build() {
+        }        public BotObfuscationSettingArgs build() {
             return new BotObfuscationSettingArgs(obfuscationSettingType);
         }
     }

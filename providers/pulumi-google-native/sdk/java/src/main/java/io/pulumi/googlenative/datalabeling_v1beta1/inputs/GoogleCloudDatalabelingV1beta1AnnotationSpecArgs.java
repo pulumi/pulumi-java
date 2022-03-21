@@ -78,22 +78,18 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs build() {
+        }        public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs build() {
             return new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(description, displayName);
         }
     }

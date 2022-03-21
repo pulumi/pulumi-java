@@ -81,22 +81,18 @@ public final class IotDpsSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.capacity = capacity;
             return this;
         }
-
         public Builder capacity(@Nullable Double capacity) {
             this.capacity = Output.ofNullable(capacity);
             return this;
         }
-
         public Builder name(@Nullable Output<Either<String,IotDpsSku>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,IotDpsSku> name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public IotDpsSkuInfoArgs build() {
+        }        public IotDpsSkuInfoArgs build() {
             return new IotDpsSkuInfoArgs(capacity, name);
         }
     }

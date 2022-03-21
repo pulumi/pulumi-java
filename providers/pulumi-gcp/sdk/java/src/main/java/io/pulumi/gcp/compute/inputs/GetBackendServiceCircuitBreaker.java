@@ -114,32 +114,29 @@ public final class GetBackendServiceCircuitBreaker extends io.pulumi.resources.I
             this.connectTimeouts = Objects.requireNonNull(connectTimeouts);
             return this;
         }
-
+        public Builder connectTimeouts(GetBackendServiceCircuitBreakerConnectTimeout... connectTimeouts) {
+            return connectTimeouts(List.of(connectTimeouts));
+        }
         public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
-
         public Builder maxPendingRequests(Integer maxPendingRequests) {
             this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
             return this;
         }
-
         public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
-
         public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
             return this;
         }
-
         public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
-        }
-        public GetBackendServiceCircuitBreaker build() {
+        }        public GetBackendServiceCircuitBreaker build() {
             return new GetBackendServiceCircuitBreaker(connectTimeouts, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }
     }

@@ -79,22 +79,18 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<Either<String,ReportConfigColumnType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ReportConfigColumnType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ReportConfigGroupingArgs build() {
+        }        public ReportConfigGroupingArgs build() {
             return new ReportConfigGroupingArgs(name, type);
         }
     }

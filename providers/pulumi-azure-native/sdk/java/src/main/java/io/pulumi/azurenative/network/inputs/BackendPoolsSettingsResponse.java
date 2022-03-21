@@ -79,12 +79,10 @@ public final class BackendPoolsSettingsResponse extends io.pulumi.resources.Invo
             this.enforceCertificateNameCheck = enforceCertificateNameCheck;
             return this;
         }
-
         public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
-        }
-        public BackendPoolsSettingsResponse build() {
+        }        public BackendPoolsSettingsResponse build() {
             return new BackendPoolsSettingsResponse(enforceCertificateNameCheck, sendRecvTimeoutSeconds);
         }
     }

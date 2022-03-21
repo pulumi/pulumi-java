@@ -220,57 +220,46 @@ public final class GetBlueprintResult {
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder layout(Object layout) {
             this.layout = Objects.requireNonNull(layout);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
-
         public Builder status(BlueprintStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetScope(String targetScope) {
             this.targetScope = Objects.requireNonNull(targetScope);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder versions(@Nullable Object versions) {
             this.versions = versions;
             return this;
-        }
-        public GetBlueprintResult build() {
+        }        public GetBlueprintResult build() {
             return new GetBlueprintResult(description, displayName, id, layout, name, parameters, resourceGroups, status, targetScope, type, versions);
         }
     }

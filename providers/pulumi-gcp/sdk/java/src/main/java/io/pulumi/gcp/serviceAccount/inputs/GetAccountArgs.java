@@ -75,12 +75,10 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAccountArgs build() {
+        }        public GetAccountArgs build() {
             return new GetAccountArgs(accountId, project);
         }
     }

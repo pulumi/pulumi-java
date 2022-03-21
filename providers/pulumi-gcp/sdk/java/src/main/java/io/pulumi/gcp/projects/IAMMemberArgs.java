@@ -107,42 +107,34 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable IAMMemberConditionArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
-
         public Builder member(String member) {
             this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
-
         public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
-
         public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public Builder role(String role) {
             this.role = Output.of(Objects.requireNonNull(role));
             return this;
-        }
-        public IAMMemberArgs build() {
+        }        public IAMMemberArgs build() {
             return new IAMMemberArgs(condition, member, project, role);
         }
     }

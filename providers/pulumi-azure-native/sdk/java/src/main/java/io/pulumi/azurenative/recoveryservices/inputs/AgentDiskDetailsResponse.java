@@ -126,27 +126,22 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
             this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
             return this;
         }
-
         public Builder diskId(String diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
-
         public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
-
         public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
-
         public Builder lunId(Integer lunId) {
             this.lunId = Objects.requireNonNull(lunId);
             return this;
-        }
-        public AgentDiskDetailsResponse build() {
+        }        public AgentDiskDetailsResponse build() {
             return new AgentDiskDetailsResponse(capacityInBytes, diskId, diskName, isOSDisk, lunId);
         }
     }

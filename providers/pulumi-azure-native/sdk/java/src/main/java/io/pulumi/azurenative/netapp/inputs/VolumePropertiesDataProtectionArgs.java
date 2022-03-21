@@ -96,32 +96,26 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
             this.backup = backup;
             return this;
         }
-
         public Builder backup(@Nullable VolumeBackupPropertiesArgs backup) {
             this.backup = Output.ofNullable(backup);
             return this;
         }
-
         public Builder replication(@Nullable Output<ReplicationObjectArgs> replication) {
             this.replication = replication;
             return this;
         }
-
         public Builder replication(@Nullable ReplicationObjectArgs replication) {
             this.replication = Output.ofNullable(replication);
             return this;
         }
-
         public Builder snapshot(@Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
-
         public Builder snapshot(@Nullable VolumeSnapshotPropertiesArgs snapshot) {
             this.snapshot = Output.ofNullable(snapshot);
             return this;
-        }
-        public VolumePropertiesDataProtectionArgs build() {
+        }        public VolumePropertiesDataProtectionArgs build() {
             return new VolumePropertiesDataProtectionArgs(backup, replication, snapshot);
         }
     }

@@ -53,8 +53,7 @@ public final class ModelExplainabilityJobDefinitionConstraintsResource {
         public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = s3Uri;
             return this;
-        }
-        public ModelExplainabilityJobDefinitionConstraintsResource build() {
+        }        public ModelExplainabilityJobDefinitionConstraintsResource build() {
             return new ModelExplainabilityJobDefinitionConstraintsResource(s3Uri);
         }
     }

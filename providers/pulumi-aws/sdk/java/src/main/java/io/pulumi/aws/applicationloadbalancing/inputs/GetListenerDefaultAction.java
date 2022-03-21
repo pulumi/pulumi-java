@@ -143,42 +143,49 @@ public final class GetListenerDefaultAction extends io.pulumi.resources.InvokeAr
             this.authenticateCognitos = Objects.requireNonNull(authenticateCognitos);
             return this;
         }
-
+        public Builder authenticateCognitos(GetListenerDefaultActionAuthenticateCognito... authenticateCognitos) {
+            return authenticateCognitos(List.of(authenticateCognitos));
+        }
         public Builder authenticateOidcs(List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs) {
             this.authenticateOidcs = Objects.requireNonNull(authenticateOidcs);
             return this;
         }
-
+        public Builder authenticateOidcs(GetListenerDefaultActionAuthenticateOidc... authenticateOidcs) {
+            return authenticateOidcs(List.of(authenticateOidcs));
+        }
         public Builder fixedResponses(List<GetListenerDefaultActionFixedResponse> fixedResponses) {
             this.fixedResponses = Objects.requireNonNull(fixedResponses);
             return this;
         }
-
+        public Builder fixedResponses(GetListenerDefaultActionFixedResponse... fixedResponses) {
+            return fixedResponses(List.of(fixedResponses));
+        }
         public Builder forwards(List<GetListenerDefaultActionForward> forwards) {
             this.forwards = Objects.requireNonNull(forwards);
             return this;
         }
-
+        public Builder forwards(GetListenerDefaultActionForward... forwards) {
+            return forwards(List.of(forwards));
+        }
         public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
-
         public Builder redirects(List<GetListenerDefaultActionRedirect> redirects) {
             this.redirects = Objects.requireNonNull(redirects);
             return this;
         }
-
+        public Builder redirects(GetListenerDefaultActionRedirect... redirects) {
+            return redirects(List.of(redirects));
+        }
         public Builder targetGroupArn(String targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetListenerDefaultAction build() {
+        }        public GetListenerDefaultAction build() {
             return new GetListenerDefaultAction(authenticateCognitos, authenticateOidcs, fixedResponses, forwards, order, redirects, targetGroupArn, type);
         }
     }

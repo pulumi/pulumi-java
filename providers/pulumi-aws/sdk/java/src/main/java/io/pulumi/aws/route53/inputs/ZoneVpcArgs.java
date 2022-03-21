@@ -74,22 +74,18 @@ public final class ZoneVpcArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
-
         public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
-        }
-        public ZoneVpcArgs build() {
+        }        public ZoneVpcArgs build() {
             return new ZoneVpcArgs(vpcId, vpcRegion);
         }
     }

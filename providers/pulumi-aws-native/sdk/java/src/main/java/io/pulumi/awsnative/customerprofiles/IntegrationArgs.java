@@ -138,62 +138,56 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder flowDefinition(@Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition) {
             this.flowDefinition = flowDefinition;
             return this;
         }
-
         public Builder flowDefinition(@Nullable IntegrationFlowDefinitionArgs flowDefinition) {
             this.flowDefinition = Output.ofNullable(flowDefinition);
             return this;
         }
-
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
-
         public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = Output.ofNullable(objectTypeName);
             return this;
         }
-
         public Builder objectTypeNames(@Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
             this.objectTypeNames = objectTypeNames;
             return this;
         }
-
         public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
             this.objectTypeNames = Output.ofNullable(objectTypeNames);
             return this;
         }
-
+        public Builder objectTypeNames(IntegrationObjectTypeMappingArgs... objectTypeNames) {
+            return objectTypeNames(List.of(objectTypeNames));
+        }
         public Builder tags(@Nullable Output<List<IntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<IntegrationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(IntegrationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public IntegrationArgs build() {
+        }        public IntegrationArgs build() {
             return new IntegrationArgs(domainName, flowDefinition, objectTypeName, objectTypeNames, tags, uri);
         }
     }

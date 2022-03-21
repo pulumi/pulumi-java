@@ -43,8 +43,7 @@ public final class FlowDatadogSourceProperties {
         public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
-        }
-        public FlowDatadogSourceProperties build() {
+        }        public FlowDatadogSourceProperties build() {
             return new FlowDatadogSourceProperties(object);
         }
     }

@@ -61,12 +61,10 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }
-
         public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
             this.isEncryptionInTransitEnabled = Output.ofNullable(isEncryptionInTransitEnabled);
             return this;
-        }
-        public EncryptionInTransitPropertiesArgs build() {
+        }        public EncryptionInTransitPropertiesArgs build() {
             return new EncryptionInTransitPropertiesArgs(isEncryptionInTransitEnabled);
         }
     }

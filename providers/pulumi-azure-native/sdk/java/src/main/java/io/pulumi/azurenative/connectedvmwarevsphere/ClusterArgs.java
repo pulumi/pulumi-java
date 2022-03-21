@@ -188,92 +188,74 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.clusterName = clusterName;
             return this;
         }
-
         public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
-
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = Output.ofNullable(inventoryItemId);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder moRefId(@Nullable Output<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = Output.ofNullable(moRefId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vCenterId(@Nullable Output<String> vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = Output.ofNullable(vCenterId);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(clusterName, extendedLocation, inventoryItemId, kind, location, moRefId, resourceGroupName, tags, vCenterId);
         }
     }

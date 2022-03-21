@@ -104,22 +104,18 @@ public final class SSISChildPackageResponse {
             this.packageContent = Objects.requireNonNull(packageContent);
             return this;
         }
-
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
-
         public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
-
         public Builder packagePath(Object packagePath) {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
-        }
-        public SSISChildPackageResponse build() {
+        }        public SSISChildPackageResponse build() {
             return new SSISChildPackageResponse(packageContent, packageLastModifiedDate, packageName, packagePath);
         }
     }

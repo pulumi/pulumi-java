@@ -124,52 +124,45 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
             this.customerEventName = customerEventName;
             return this;
         }
-
         public Builder customerEventName(@Nullable String customerEventName) {
             this.customerEventName = Output.ofNullable(customerEventName);
             return this;
         }
-
         public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
-
         public Builder eventName(String eventName) {
             this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
-
         public Builder receivers(Output<List<NotificationEventReceiverArgs>> receivers) {
             this.receivers = Objects.requireNonNull(receivers);
             return this;
         }
-
         public Builder receivers(List<NotificationEventReceiverArgs> receivers) {
             this.receivers = Output.of(Objects.requireNonNull(receivers));
             return this;
         }
-
+        public Builder receivers(NotificationEventReceiverArgs... receivers) {
+            return receivers(List.of(receivers));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
             return this;
-        }
-        public CustomerEventArgs build() {
+        }        public CustomerEventArgs build() {
             return new CustomerEventArgs(customerEventName, eventName, receivers, resourceGroupName, testBaseAccountName);
         }
     }

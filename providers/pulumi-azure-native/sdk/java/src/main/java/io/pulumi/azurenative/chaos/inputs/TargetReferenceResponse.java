@@ -76,12 +76,10 @@ public final class TargetReferenceResponse extends io.pulumi.resources.InvokeArg
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TargetReferenceResponse build() {
+        }        public TargetReferenceResponse build() {
             return new TargetReferenceResponse(id, type);
         }
     }

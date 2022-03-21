@@ -145,32 +145,26 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
-
         public Builder includePublic(@Nullable Boolean includePublic) {
             this.includePublic = includePublic;
             return this;
         }
-
         public Builder includeShared(@Nullable Boolean includeShared) {
             this.includeShared = includeShared;
             return this;
         }
-
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
-
         public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
-        }
-        public GetSnapshotArgs build() {
+        }        public GetSnapshotArgs build() {
             return new GetSnapshotArgs(dbInstanceIdentifier, dbSnapshotIdentifier, includePublic, includeShared, mostRecent, snapshotType);
         }
     }

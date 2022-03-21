@@ -68,22 +68,21 @@ public final class StaticWebLayerCloudwatchConfigurationGetArgs extends io.pulum
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<StaticWebLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public StaticWebLayerCloudwatchConfigurationGetArgs build() {
+        public Builder logStreams(StaticWebLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public StaticWebLayerCloudwatchConfigurationGetArgs build() {
             return new StaticWebLayerCloudwatchConfigurationGetArgs(enabled, logStreams);
         }
     }

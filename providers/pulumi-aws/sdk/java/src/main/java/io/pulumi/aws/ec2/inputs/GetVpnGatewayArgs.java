@@ -158,37 +158,33 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
-
         public Builder attachedVpcId(@Nullable String attachedVpcId) {
             this.attachedVpcId = attachedVpcId;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder filters(@Nullable List<GetVpnGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetVpnGatewayFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetVpnGatewayArgs build() {
+        }        public GetVpnGatewayArgs build() {
             return new GetVpnGatewayArgs(amazonSideAsn, attachedVpcId, availabilityZone, filters, id, state, tags);
         }
     }

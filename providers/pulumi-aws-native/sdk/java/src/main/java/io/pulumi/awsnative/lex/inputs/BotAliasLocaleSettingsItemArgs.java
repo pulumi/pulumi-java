@@ -74,22 +74,18 @@ public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.Re
             this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting);
             return this;
         }
-
         public Builder botAliasLocaleSetting(BotAliasLocaleSettingsArgs botAliasLocaleSetting) {
             this.botAliasLocaleSetting = Output.of(Objects.requireNonNull(botAliasLocaleSetting));
             return this;
         }
-
         public Builder localeId(Output<String> localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
-
         public Builder localeId(String localeId) {
             this.localeId = Output.of(Objects.requireNonNull(localeId));
             return this;
-        }
-        public BotAliasLocaleSettingsItemArgs build() {
+        }        public BotAliasLocaleSettingsItemArgs build() {
             return new BotAliasLocaleSettingsItemArgs(botAliasLocaleSetting, localeId);
         }
     }

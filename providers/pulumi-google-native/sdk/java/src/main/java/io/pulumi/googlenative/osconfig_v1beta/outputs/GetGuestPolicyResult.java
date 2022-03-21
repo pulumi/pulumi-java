@@ -186,47 +186,47 @@ public final class GetGuestPolicyResult {
             this.assignment = Objects.requireNonNull(assignment);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder packageRepositories(List<PackageRepositoryResponse> packageRepositories) {
             this.packageRepositories = Objects.requireNonNull(packageRepositories);
             return this;
         }
-
+        public Builder packageRepositories(PackageRepositoryResponse... packageRepositories) {
+            return packageRepositories(List.of(packageRepositories));
+        }
         public Builder packages(List<PackageResponse> packages) {
             this.packages = Objects.requireNonNull(packages);
             return this;
         }
-
+        public Builder packages(PackageResponse... packages) {
+            return packages(List.of(packages));
+        }
         public Builder recipes(List<SoftwareRecipeResponse> recipes) {
             this.recipes = Objects.requireNonNull(recipes);
             return this;
         }
-
+        public Builder recipes(SoftwareRecipeResponse... recipes) {
+            return recipes(List.of(recipes));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetGuestPolicyResult build() {
+        }        public GetGuestPolicyResult build() {
             return new GetGuestPolicyResult(assignment, createTime, description, etag, name, packageRepositories, packages, recipes, updateTime);
         }
     }

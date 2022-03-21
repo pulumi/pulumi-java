@@ -95,32 +95,26 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
-        }
-        public AzureFileVolumeSourceArgs build() {
+        }        public AzureFileVolumeSourceArgs build() {
             return new AzureFileVolumeSourceArgs(readOnly, secretName, shareName);
         }
     }

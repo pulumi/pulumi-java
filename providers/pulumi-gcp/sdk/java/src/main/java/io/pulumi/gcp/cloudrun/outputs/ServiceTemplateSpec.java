@@ -175,32 +175,32 @@ public final class ServiceTemplateSpec {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
-
         public Builder containers(@Nullable List<ServiceTemplateSpecContainer> containers) {
             this.containers = containers;
             return this;
         }
-
+        public Builder containers(ServiceTemplateSpecContainer... containers) {
+            return containers(List.of(containers));
+        }
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
-
         public Builder servingState(@Nullable String servingState) {
             this.servingState = servingState;
             return this;
         }
-
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public Builder volumes(@Nullable List<ServiceTemplateSpecVolume> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public ServiceTemplateSpec build() {
+        public Builder volumes(ServiceTemplateSpecVolume... volumes) {
+            return volumes(List.of(volumes));
+        }        public ServiceTemplateSpec build() {
             return new ServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }
     }

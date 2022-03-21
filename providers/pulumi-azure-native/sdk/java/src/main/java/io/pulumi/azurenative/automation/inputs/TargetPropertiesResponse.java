@@ -80,12 +80,16 @@ public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.azureQueries = azureQueries;
             return this;
         }
-
+        public Builder azureQueries(AzureQueryPropertiesResponse... azureQueries) {
+            return azureQueries(List.of(azureQueries));
+        }
         public Builder nonAzureQueries(@Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }
-        public TargetPropertiesResponse build() {
+        public Builder nonAzureQueries(NonAzureQueryPropertiesResponse... nonAzureQueries) {
+            return nonAzureQueries(List.of(nonAzureQueries));
+        }        public TargetPropertiesResponse build() {
             return new TargetPropertiesResponse(azureQueries, nonAzureQueries);
         }
     }

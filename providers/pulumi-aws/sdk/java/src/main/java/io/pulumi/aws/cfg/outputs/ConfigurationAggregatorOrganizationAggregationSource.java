@@ -89,17 +89,17 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
             this.allRegions = allRegions;
             return this;
         }
-
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
-        }
-        public ConfigurationAggregatorOrganizationAggregationSource build() {
+        }        public ConfigurationAggregatorOrganizationAggregationSource build() {
             return new ConfigurationAggregatorOrganizationAggregationSource(allRegions, regions, roleArn);
         }
     }

@@ -75,22 +75,21 @@ public final class PipelineStageArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
         public Builder actions(List<PipelineStageActionArgs> actions) {
             this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
-
+        public Builder actions(PipelineStageActionArgs... actions) {
+            return actions(List.of(actions));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PipelineStageArgs build() {
+        }        public PipelineStageArgs build() {
             return new PipelineStageArgs(actions, name);
         }
     }

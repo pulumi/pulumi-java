@@ -167,82 +167,69 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder metadatas(@Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas) {
             this.metadatas = metadatas;
             return this;
         }
-
         public Builder metadatas(@Nullable List<ThingGroupMetadataGetArgs> metadatas) {
             this.metadatas = Output.ofNullable(metadatas);
             return this;
         }
-
+        public Builder metadatas(ThingGroupMetadataGetArgs... metadatas) {
+            return metadatas(List.of(metadatas));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
-
         public Builder parentGroupName(@Nullable String parentGroupName) {
             this.parentGroupName = Output.ofNullable(parentGroupName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ThingGroupPropertiesGetArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ThingGroupPropertiesGetArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ThingGroupState build() {
+        }        public ThingGroupState build() {
             return new ThingGroupState(arn, metadatas, name, parentGroupName, properties, tags, tagsAll, version);
         }
     }

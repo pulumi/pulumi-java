@@ -94,32 +94,26 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
             this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
-
         public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
             this.clusterBootstrapAccountPassword = Output.ofNullable(clusterBootstrapAccountPassword);
             return this;
         }
-
         public Builder clusterOperatorAccountPassword(@Nullable Output<String> clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
-
         public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = Output.ofNullable(clusterOperatorAccountPassword);
             return this;
         }
-
         public Builder sqlServiceAccountPassword(@Nullable Output<String> sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }
-
         public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = Output.ofNullable(sqlServiceAccountPassword);
             return this;
-        }
-        public WsfcDomainCredentialsArgs build() {
+        }        public WsfcDomainCredentialsArgs build() {
             return new WsfcDomainCredentialsArgs(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);
         }
     }

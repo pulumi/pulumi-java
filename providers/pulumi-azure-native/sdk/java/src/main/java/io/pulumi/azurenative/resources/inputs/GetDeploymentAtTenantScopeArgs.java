@@ -54,8 +54,7 @@ public final class GetDeploymentAtTenantScopeArgs extends io.pulumi.resources.In
         public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
-        }
-        public GetDeploymentAtTenantScopeArgs build() {
+        }        public GetDeploymentAtTenantScopeArgs build() {
             return new GetDeploymentAtTenantScopeArgs(deploymentName);
         }
     }

@@ -107,42 +107,34 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
-
         public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
-
         public Builder partitionIndex(@Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex) {
             this.partitionIndex = partitionIndex;
             return this;
         }
-
         public Builder partitionIndex(@Nullable PartitionIndexPartitionIndexGetArgs partitionIndex) {
             this.partitionIndex = Output.ofNullable(partitionIndex);
             return this;
         }
-
         public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
-
         public Builder tableName(@Nullable String tableName) {
             this.tableName = Output.ofNullable(tableName);
             return this;
-        }
-        public PartitionIndexState build() {
+        }        public PartitionIndexState build() {
             return new PartitionIndexState(catalogId, databaseName, partitionIndex, tableName);
         }
     }

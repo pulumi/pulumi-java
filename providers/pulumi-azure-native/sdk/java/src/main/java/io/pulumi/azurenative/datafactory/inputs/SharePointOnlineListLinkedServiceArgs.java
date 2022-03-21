@@ -215,102 +215,85 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder servicePrincipalId(Output<Object> servicePrincipalId) {
             this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
             return this;
         }
-
         public Builder servicePrincipalId(Object servicePrincipalId) {
             this.servicePrincipalId = Output.of(Objects.requireNonNull(servicePrincipalId));
             return this;
         }
-
         public Builder servicePrincipalKey(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
             return this;
         }
-
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Output.of(Objects.requireNonNull(servicePrincipalKey));
             return this;
         }
-
         public Builder siteUrl(Output<Object> siteUrl) {
             this.siteUrl = Objects.requireNonNull(siteUrl);
             return this;
         }
-
         public Builder siteUrl(Object siteUrl) {
             this.siteUrl = Output.of(Objects.requireNonNull(siteUrl));
             return this;
         }
-
         public Builder tenantId(Output<Object> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder tenantId(Object tenantId) {
             this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public SharePointOnlineListLinkedServiceArgs build() {
+        }        public SharePointOnlineListLinkedServiceArgs build() {
             return new SharePointOnlineListLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, siteUrl, tenantId, type);
         }
     }

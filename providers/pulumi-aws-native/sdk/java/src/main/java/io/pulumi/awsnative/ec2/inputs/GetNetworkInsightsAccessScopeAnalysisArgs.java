@@ -50,8 +50,7 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.r
         public Builder networkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
             this.networkInsightsAccessScopeAnalysisId = Objects.requireNonNull(networkInsightsAccessScopeAnalysisId);
             return this;
-        }
-        public GetNetworkInsightsAccessScopeAnalysisArgs build() {
+        }        public GetNetworkInsightsAccessScopeAnalysisArgs build() {
             return new GetNetworkInsightsAccessScopeAnalysisArgs(networkInsightsAccessScopeAnalysisId);
         }
     }

@@ -97,32 +97,26 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
             this.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
-
         public Builder agentAutoUpdateStatus(@Nullable Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
             this.agentAutoUpdateStatus = Output.ofNullable(agentAutoUpdateStatus);
             return this;
         }
-
         public Builder automationAccountArmId(@Nullable Output<String> automationAccountArmId) {
             this.automationAccountArmId = automationAccountArmId;
             return this;
         }
-
         public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
             this.automationAccountArmId = Output.ofNullable(automationAccountArmId);
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
-        }
-        public A2AContainerMappingInputArgs build() {
+        }        public A2AContainerMappingInputArgs build() {
             return new A2AContainerMappingInputArgs(agentAutoUpdateStatus, automationAccountArmId, instanceType);
         }
     }

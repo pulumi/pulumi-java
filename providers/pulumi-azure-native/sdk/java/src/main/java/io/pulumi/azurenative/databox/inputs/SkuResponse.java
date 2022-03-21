@@ -94,17 +94,14 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
             this.displayName = displayName;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public SkuResponse build() {
+        }        public SkuResponse build() {
             return new SkuResponse(displayName, family, name);
         }
     }

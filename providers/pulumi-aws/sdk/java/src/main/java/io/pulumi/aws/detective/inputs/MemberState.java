@@ -215,112 +215,90 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder administratorId(@Nullable Output<String> administratorId) {
             this.administratorId = administratorId;
             return this;
         }
-
         public Builder administratorId(@Nullable String administratorId) {
             this.administratorId = Output.ofNullable(administratorId);
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
-
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
-
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
-
         public Builder disabledReason(@Nullable String disabledReason) {
             this.disabledReason = Output.ofNullable(disabledReason);
             return this;
         }
-
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
-
         public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
-
         public Builder graphArn(@Nullable Output<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
-
         public Builder graphArn(@Nullable String graphArn) {
             this.graphArn = Output.ofNullable(graphArn);
             return this;
         }
-
         public Builder invitedTime(@Nullable Output<String> invitedTime) {
             this.invitedTime = invitedTime;
             return this;
         }
-
         public Builder invitedTime(@Nullable String invitedTime) {
             this.invitedTime = Output.ofNullable(invitedTime);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder updatedTime(@Nullable Output<String> updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
-
         public Builder updatedTime(@Nullable String updatedTime) {
             this.updatedTime = Output.ofNullable(updatedTime);
             return this;
         }
-
         public Builder volumeUsageInBytes(@Nullable Output<String> volumeUsageInBytes) {
             this.volumeUsageInBytes = volumeUsageInBytes;
             return this;
         }
-
         public Builder volumeUsageInBytes(@Nullable String volumeUsageInBytes) {
             this.volumeUsageInBytes = Output.ofNullable(volumeUsageInBytes);
             return this;
-        }
-        public MemberState build() {
+        }        public MemberState build() {
             return new MemberState(accountId, administratorId, disableEmailNotification, disabledReason, emailAddress, graphArn, invitedTime, message, status, updatedTime, volumeUsageInBytes);
         }
     }

@@ -106,22 +106,18 @@ public final class SchemaComparisonValidationResultResponse {
             this.schemaDifferences = Objects.requireNonNull(schemaDifferences);
             return this;
         }
-
         public Builder sourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
             this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
             return this;
         }
-
         public Builder targetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
             this.targetDatabaseObjectCount = targetDatabaseObjectCount;
             return this;
         }
-
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
-        }
-        public SchemaComparisonValidationResultResponse build() {
+        }        public SchemaComparisonValidationResultResponse build() {
             return new SchemaComparisonValidationResultResponse(schemaDifferences, sourceDatabaseObjectCount, targetDatabaseObjectCount, validationErrors);
         }
     }

@@ -164,72 +164,67 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<MethodArgs> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(MethodArgs... methods) {
+            return methods(List.of(methods));
+        }
         public Builder mixins(@Nullable Output<List<MixinArgs>> mixins) {
             this.mixins = mixins;
             return this;
         }
-
         public Builder mixins(@Nullable List<MixinArgs> mixins) {
             this.mixins = Output.ofNullable(mixins);
             return this;
         }
-
+        public Builder mixins(MixinArgs... mixins) {
+            return mixins(List.of(mixins));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Output.ofNullable(options);
             return this;
         }
-
+        public Builder options(OptionArgs... options) {
+            return options(List.of(options));
+        }
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
-
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
             this.sourceContext = Output.ofNullable(sourceContext);
             return this;
         }
-
         public Builder syntax(@Nullable Output<ApiSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
-
         public Builder syntax(@Nullable ApiSyntax syntax) {
             this.syntax = Output.ofNullable(syntax);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public ApiArgs build() {
+        }        public ApiArgs build() {
             return new ApiArgs(methods, mixins, name, options, sourceContext, syntax, version);
         }
     }

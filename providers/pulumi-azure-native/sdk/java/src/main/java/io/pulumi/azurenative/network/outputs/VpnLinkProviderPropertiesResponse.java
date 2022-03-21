@@ -72,12 +72,10 @@ public final class VpnLinkProviderPropertiesResponse {
             this.linkProviderName = linkProviderName;
             return this;
         }
-
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
-        }
-        public VpnLinkProviderPropertiesResponse build() {
+        }        public VpnLinkProviderPropertiesResponse build() {
             return new VpnLinkProviderPropertiesResponse(linkProviderName, linkSpeedInMbps);
         }
     }

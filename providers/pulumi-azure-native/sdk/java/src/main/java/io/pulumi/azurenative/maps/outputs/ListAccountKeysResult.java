@@ -85,17 +85,14 @@ public final class ListAccountKeysResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public ListAccountKeysResult build() {
+        }        public ListAccountKeysResult build() {
             return new ListAccountKeysResult(id, primaryKey, secondaryKey);
         }
     }

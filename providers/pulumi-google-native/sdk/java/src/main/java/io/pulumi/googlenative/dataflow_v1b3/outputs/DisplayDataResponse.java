@@ -231,62 +231,50 @@ public final class DisplayDataResponse {
             this.boolValue = Objects.requireNonNull(boolValue);
             return this;
         }
-
         public Builder durationValue(String durationValue) {
             this.durationValue = Objects.requireNonNull(durationValue);
             return this;
         }
-
         public Builder floatValue(Double floatValue) {
             this.floatValue = Objects.requireNonNull(floatValue);
             return this;
         }
-
         public Builder int64Value(String int64Value) {
             this.int64Value = Objects.requireNonNull(int64Value);
             return this;
         }
-
         public Builder javaClassValue(String javaClassValue) {
             this.javaClassValue = Objects.requireNonNull(javaClassValue);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public Builder shortStrValue(String shortStrValue) {
             this.shortStrValue = Objects.requireNonNull(shortStrValue);
             return this;
         }
-
         public Builder strValue(String strValue) {
             this.strValue = Objects.requireNonNull(strValue);
             return this;
         }
-
         public Builder timestampValue(String timestampValue) {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public DisplayDataResponse build() {
+        }        public DisplayDataResponse build() {
             return new DisplayDataResponse(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
         }
     }

@@ -50,8 +50,7 @@ public final class GetPlaceIndexArgs extends io.pulumi.resources.InvokeArgs {
         public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
-        }
-        public GetPlaceIndexArgs build() {
+        }        public GetPlaceIndexArgs build() {
             return new GetPlaceIndexArgs(indexName);
         }
     }

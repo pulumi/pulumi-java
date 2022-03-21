@@ -249,67 +249,63 @@ public final class GetDomainResult {
             this.auditLogsEnabled = Objects.requireNonNull(auditLogsEnabled);
             return this;
         }
-
         public Builder authorizedNetworks(List<String> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
-
+        public Builder authorizedNetworks(String... authorizedNetworks) {
+            return authorizedNetworks(List.of(authorizedNetworks));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
-
+        public Builder locations(String... locations) {
+            return locations(List.of(locations));
+        }
         public Builder managedIdentitiesAdminName(String managedIdentitiesAdminName) {
             this.managedIdentitiesAdminName = Objects.requireNonNull(managedIdentitiesAdminName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public Builder trusts(List<TrustResponse> trusts) {
             this.trusts = Objects.requireNonNull(trusts);
             return this;
         }
-
+        public Builder trusts(TrustResponse... trusts) {
+            return trusts(List.of(trusts));
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetDomainResult build() {
+        }        public GetDomainResult build() {
             return new GetDomainResult(auditLogsEnabled, authorizedNetworks, createTime, fqdn, labels, locations, managedIdentitiesAdminName, name, reservedIpRange, state, statusMessage, trusts, updateTime);
         }
     }

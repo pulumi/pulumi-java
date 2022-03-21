@@ -74,22 +74,18 @@ public final class VirtualRouterSpecListenerPortMappingGetArgs extends io.pulumi
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
-        }
-        public VirtualRouterSpecListenerPortMappingGetArgs build() {
+        }        public VirtualRouterSpecListenerPortMappingGetArgs build() {
             return new VirtualRouterSpecListenerPortMappingGetArgs(port, protocol);
         }
     }

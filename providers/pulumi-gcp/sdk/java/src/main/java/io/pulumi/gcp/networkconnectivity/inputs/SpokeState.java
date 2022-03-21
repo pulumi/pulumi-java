@@ -255,132 +255,106 @@ public final class SpokeState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder hub(@Nullable Output<String> hub) {
             this.hub = hub;
             return this;
         }
-
         public Builder hub(@Nullable String hub) {
             this.hub = Output.ofNullable(hub);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder linkedInterconnectAttachments(@Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
-
         public Builder linkedInterconnectAttachments(@Nullable SpokeLinkedInterconnectAttachmentsGetArgs linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Output.ofNullable(linkedInterconnectAttachments);
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(@Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
-
         public Builder linkedRouterApplianceInstances(@Nullable SpokeLinkedRouterApplianceInstancesGetArgs linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Output.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
-
         public Builder linkedVpnTunnels(@Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels) {
             this.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
-
         public Builder linkedVpnTunnels(@Nullable SpokeLinkedVpnTunnelsGetArgs linkedVpnTunnels) {
             this.linkedVpnTunnels = Output.ofNullable(linkedVpnTunnels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
-
         public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Output.ofNullable(uniqueId);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public SpokeState build() {
+        }        public SpokeState build() {
             return new SpokeState(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project, state, uniqueId, updateTime);
         }
     }

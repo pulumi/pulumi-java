@@ -61,12 +61,10 @@ public final class ConfigConnectorConfigArgs extends io.pulumi.resources.Resourc
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ConfigConnectorConfigArgs build() {
+        }        public ConfigConnectorConfigArgs build() {
             return new ConfigConnectorConfigArgs(enabled);
         }
     }

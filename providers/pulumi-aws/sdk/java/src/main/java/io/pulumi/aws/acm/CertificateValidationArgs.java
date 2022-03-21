@@ -75,22 +75,21 @@ public final class CertificateValidationArgs extends io.pulumi.resources.Resourc
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
-
         public Builder certificateArn(String certificateArn) {
             this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
         }
-
         public Builder validationRecordFqdns(@Nullable Output<List<String>> validationRecordFqdns) {
             this.validationRecordFqdns = validationRecordFqdns;
             return this;
         }
-
         public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
             this.validationRecordFqdns = Output.ofNullable(validationRecordFqdns);
             return this;
         }
-        public CertificateValidationArgs build() {
+        public Builder validationRecordFqdns(String... validationRecordFqdns) {
+            return validationRecordFqdns(List.of(validationRecordFqdns));
+        }        public CertificateValidationArgs build() {
             return new CertificateValidationArgs(certificateArn, validationRecordFqdns);
         }
     }

@@ -78,32 +78,26 @@ public final class AwsClusterWorkloadIdentityConfigArgs extends io.pulumi.resour
             this.identityProvider = identityProvider;
             return this;
         }
-
         public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = Output.ofNullable(identityProvider);
             return this;
         }
-
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
-
         public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = Output.ofNullable(issuerUri);
             return this;
         }
-
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
-
         public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = Output.ofNullable(workloadPool);
             return this;
-        }
-        public AwsClusterWorkloadIdentityConfigArgs build() {
+        }        public AwsClusterWorkloadIdentityConfigArgs build() {
             return new AwsClusterWorkloadIdentityConfigArgs(identityProvider, issuerUri, workloadPool);
         }
     }

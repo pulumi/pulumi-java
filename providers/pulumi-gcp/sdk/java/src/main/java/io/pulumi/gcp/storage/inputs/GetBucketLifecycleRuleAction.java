@@ -64,12 +64,10 @@ public final class GetBucketLifecycleRuleAction extends io.pulumi.resources.Invo
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetBucketLifecycleRuleAction build() {
+        }        public GetBucketLifecycleRuleAction build() {
             return new GetBucketLifecycleRuleAction(storageClass, type);
         }
     }

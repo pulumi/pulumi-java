@@ -65,22 +65,18 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
-
         public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
-
         public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
-        }
-        public AccountIamPolicyArgs build() {
+        }        public AccountIamPolicyArgs build() {
             return new AccountIamPolicyArgs(billingAccountId, policyData);
         }
     }

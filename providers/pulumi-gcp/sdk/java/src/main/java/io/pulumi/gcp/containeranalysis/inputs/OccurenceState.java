@@ -201,92 +201,74 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
             this.attestation = attestation;
             return this;
         }
-
         public Builder attestation(@Nullable OccurenceAttestationGetArgs attestation) {
             this.attestation = Output.ofNullable(attestation);
             return this;
         }
-
         public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder noteName(@Nullable Output<String> noteName) {
             this.noteName = noteName;
             return this;
         }
-
         public Builder noteName(@Nullable String noteName) {
             this.noteName = Output.ofNullable(noteName);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder remediation(@Nullable Output<String> remediation) {
             this.remediation = remediation;
             return this;
         }
-
         public Builder remediation(@Nullable String remediation) {
             this.remediation = Output.ofNullable(remediation);
             return this;
         }
-
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public OccurenceState build() {
+        }        public OccurenceState build() {
             return new OccurenceState(attestation, createTime, kind, name, noteName, project, remediation, resourceUri, updateTime);
         }
     }

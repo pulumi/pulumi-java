@@ -90,17 +90,14 @@ public final class ComponentSetupResponse {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
-
         public Builder licenseKey(@Nullable SecureStringResponse licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ComponentSetupResponse build() {
+        }        public ComponentSetupResponse build() {
             return new ComponentSetupResponse(componentName, licenseKey, type);
         }
     }

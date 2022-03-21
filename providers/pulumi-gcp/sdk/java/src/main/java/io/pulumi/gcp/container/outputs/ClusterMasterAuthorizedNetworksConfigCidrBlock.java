@@ -73,12 +73,10 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
-        }
-        public ClusterMasterAuthorizedNetworksConfigCidrBlock build() {
+        }        public ClusterMasterAuthorizedNetworksConfigCidrBlock build() {
             return new ClusterMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
         }
     }

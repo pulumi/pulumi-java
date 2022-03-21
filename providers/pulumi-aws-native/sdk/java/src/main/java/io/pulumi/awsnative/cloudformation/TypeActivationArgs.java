@@ -208,102 +208,82 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
             this.autoUpdate = autoUpdate;
             return this;
         }
-
         public Builder autoUpdate(@Nullable Boolean autoUpdate) {
             this.autoUpdate = Output.ofNullable(autoUpdate);
             return this;
         }
-
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
-
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
-
         public Builder loggingConfig(@Nullable Output<TypeActivationLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
-
         public Builder loggingConfig(@Nullable TypeActivationLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
-
         public Builder majorVersion(@Nullable Output<String> majorVersion) {
             this.majorVersion = majorVersion;
             return this;
         }
-
         public Builder majorVersion(@Nullable String majorVersion) {
             this.majorVersion = Output.ofNullable(majorVersion);
             return this;
         }
-
         public Builder publicTypeArn(@Nullable Output<String> publicTypeArn) {
             this.publicTypeArn = publicTypeArn;
             return this;
         }
-
         public Builder publicTypeArn(@Nullable String publicTypeArn) {
             this.publicTypeArn = Output.ofNullable(publicTypeArn);
             return this;
         }
-
         public Builder publisherId(@Nullable Output<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
-
         public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = Output.ofNullable(publisherId);
             return this;
         }
-
         public Builder type(@Nullable Output<TypeActivationType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable TypeActivationType type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
         }
-
         public Builder typeNameAlias(@Nullable Output<String> typeNameAlias) {
             this.typeNameAlias = typeNameAlias;
             return this;
         }
-
         public Builder typeNameAlias(@Nullable String typeNameAlias) {
             this.typeNameAlias = Output.ofNullable(typeNameAlias);
             return this;
         }
-
         public Builder versionBump(@Nullable Output<TypeActivationVersionBump> versionBump) {
             this.versionBump = versionBump;
             return this;
         }
-
         public Builder versionBump(@Nullable TypeActivationVersionBump versionBump) {
             this.versionBump = Output.ofNullable(versionBump);
             return this;
-        }
-        public TypeActivationArgs build() {
+        }        public TypeActivationArgs build() {
             return new TypeActivationArgs(autoUpdate, executionRoleArn, loggingConfig, majorVersion, publicTypeArn, publisherId, type, typeName, typeNameAlias, versionBump);
         }
     }

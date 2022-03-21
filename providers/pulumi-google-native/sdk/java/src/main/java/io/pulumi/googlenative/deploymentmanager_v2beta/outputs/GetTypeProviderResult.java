@@ -219,57 +219,55 @@ public final class GetTypeProviderResult {
             this.collectionOverrides = Objects.requireNonNull(collectionOverrides);
             return this;
         }
-
+        public Builder collectionOverrides(CollectionOverrideResponse... collectionOverrides) {
+            return collectionOverrides(List.of(collectionOverrides));
+        }
         public Builder credential(CredentialResponse credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder customCertificateAuthorityRoots(List<String> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = Objects.requireNonNull(customCertificateAuthorityRoots);
             return this;
         }
-
+        public Builder customCertificateAuthorityRoots(String... customCertificateAuthorityRoots) {
+            return customCertificateAuthorityRoots(List.of(customCertificateAuthorityRoots));
+        }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder descriptorUrl(String descriptorUrl) {
             this.descriptorUrl = Objects.requireNonNull(descriptorUrl);
             return this;
         }
-
         public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
-
         public Builder labels(List<TypeProviderLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
+        public Builder labels(TypeProviderLabelEntryResponse... labels) {
+            return labels(List.of(labels));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operation(OperationResponse operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
-
         public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetTypeProviderResult build() {
+        }        public GetTypeProviderResult build() {
             return new GetTypeProviderResult(collectionOverrides, credential, customCertificateAuthorityRoots, description, descriptorUrl, insertTime, labels, name, operation, options, selfLink);
         }
     }

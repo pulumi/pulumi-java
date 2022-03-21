@@ -56,12 +56,16 @@ public final class GetClusterCapacityProviderAssociationsResult {
             this.capacityProviders = capacityProviders;
             return this;
         }
-
+        public Builder capacityProviders(String... capacityProviders) {
+            return capacityProviders(List.of(capacityProviders));
+        }
         public Builder defaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }
-        public GetClusterCapacityProviderAssociationsResult build() {
+        public Builder defaultCapacityProviderStrategy(ClusterCapacityProviderAssociationsCapacityProviderStrategy... defaultCapacityProviderStrategy) {
+            return defaultCapacityProviderStrategy(List.of(defaultCapacityProviderStrategy));
+        }        public GetClusterCapacityProviderAssociationsResult build() {
             return new GetClusterCapacityProviderAssociationsResult(capacityProviders, defaultCapacityProviderStrategy);
         }
     }

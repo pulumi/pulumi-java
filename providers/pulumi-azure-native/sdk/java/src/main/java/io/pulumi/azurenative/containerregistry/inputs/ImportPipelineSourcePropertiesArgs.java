@@ -98,32 +98,26 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
-
         public Builder type(@Nullable Output<Either<String,PipelineSourceType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,PipelineSourceType> type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public ImportPipelineSourcePropertiesArgs build() {
+        }        public ImportPipelineSourcePropertiesArgs build() {
             return new ImportPipelineSourcePropertiesArgs(keyVaultUri, type, uri);
         }
     }

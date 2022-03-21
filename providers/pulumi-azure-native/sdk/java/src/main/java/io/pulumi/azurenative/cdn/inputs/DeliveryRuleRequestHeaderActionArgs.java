@@ -79,22 +79,18 @@ public final class DeliveryRuleRequestHeaderActionArgs extends io.pulumi.resourc
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder parameters(Output<HeaderActionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parameters(HeaderActionParametersArgs parameters) {
             this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
-        }
-        public DeliveryRuleRequestHeaderActionArgs build() {
+        }        public DeliveryRuleRequestHeaderActionArgs build() {
             return new DeliveryRuleRequestHeaderActionArgs(name, parameters);
         }
     }

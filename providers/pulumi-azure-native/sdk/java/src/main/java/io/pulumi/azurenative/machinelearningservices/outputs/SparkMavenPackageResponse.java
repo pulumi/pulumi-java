@@ -63,17 +63,14 @@ public final class SparkMavenPackageResponse {
             this.artifact = artifact;
             return this;
         }
-
         public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public SparkMavenPackageResponse build() {
+        }        public SparkMavenPackageResponse build() {
             return new SparkMavenPackageResponse(artifact, group, version);
         }
     }

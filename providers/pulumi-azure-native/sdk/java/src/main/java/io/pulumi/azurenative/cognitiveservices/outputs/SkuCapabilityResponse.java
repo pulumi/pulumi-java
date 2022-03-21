@@ -71,12 +71,10 @@ public final class SkuCapabilityResponse {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public SkuCapabilityResponse build() {
+        }        public SkuCapabilityResponse build() {
             return new SkuCapabilityResponse(name, value);
         }
     }

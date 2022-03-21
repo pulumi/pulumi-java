@@ -94,17 +94,14 @@ public final class VaultPrivateEndpointConnectionResponse extends io.pulumi.reso
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
-
         public Builder privateLinkServiceConnectionState(VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public VaultPrivateEndpointConnectionResponse build() {
+        }        public VaultPrivateEndpointConnectionResponse build() {
             return new VaultPrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }
     }

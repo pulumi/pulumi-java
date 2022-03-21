@@ -57,8 +57,7 @@ public final class ProjectSinkBigqueryOptions {
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
-        }
-        public ProjectSinkBigqueryOptions build() {
+        }        public ProjectSinkBigqueryOptions build() {
             return new ProjectSinkBigqueryOptions(usePartitionedTables);
         }
     }

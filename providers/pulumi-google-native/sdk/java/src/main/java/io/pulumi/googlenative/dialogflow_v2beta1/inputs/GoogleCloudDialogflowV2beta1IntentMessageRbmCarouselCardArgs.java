@@ -79,22 +79,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
             this.cardContents = Objects.requireNonNull(cardContents);
             return this;
         }
-
         public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContents) {
             this.cardContents = Output.of(Objects.requireNonNull(cardContents));
             return this;
         }
-
+        public Builder cardContents(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs... cardContents) {
+            return cardContents(List.of(cardContents));
+        }
         public Builder cardWidth(Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
             this.cardWidth = Objects.requireNonNull(cardWidth);
             return this;
         }
-
         public Builder cardWidth(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth cardWidth) {
             this.cardWidth = Output.of(Objects.requireNonNull(cardWidth));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs(cardContents, cardWidth);
         }
     }

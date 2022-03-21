@@ -92,32 +92,29 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<PipelineDefinitionPipelineObjectFieldArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(PipelineDefinitionPipelineObjectFieldArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public PipelineDefinitionPipelineObjectArgs build() {
+        }        public PipelineDefinitionPipelineObjectArgs build() {
             return new PipelineDefinitionPipelineObjectArgs(fields, id, name);
         }
     }

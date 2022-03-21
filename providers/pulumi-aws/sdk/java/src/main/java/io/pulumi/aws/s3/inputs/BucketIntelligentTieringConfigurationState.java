@@ -125,52 +125,45 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterGetArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tierings(@Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
             this.tierings = tierings;
             return this;
         }
-
         public Builder tierings(@Nullable List<BucketIntelligentTieringConfigurationTieringGetArgs> tierings) {
             this.tierings = Output.ofNullable(tierings);
             return this;
         }
-        public BucketIntelligentTieringConfigurationState build() {
+        public Builder tierings(BucketIntelligentTieringConfigurationTieringGetArgs... tierings) {
+            return tierings(List.of(tierings));
+        }        public BucketIntelligentTieringConfigurationState build() {
             return new BucketIntelligentTieringConfigurationState(bucket, filter, name, status, tierings);
         }
     }

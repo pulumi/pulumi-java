@@ -101,27 +101,22 @@ public final class GetResourceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder pathPart(String pathPart) {
             this.pathPart = Objects.requireNonNull(pathPart);
             return this;
         }
-
         public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
-        }
-        public GetResourceResult build() {
+        }        public GetResourceResult build() {
             return new GetResourceResult(id, parentId, path, pathPart, restApiId);
         }
     }

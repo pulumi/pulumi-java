@@ -88,17 +88,17 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
-
+        public Builder actions(GooglePrivacyDlpV2ActionResponse... actions) {
+            return actions(List.of(actions));
+        }
         public Builder privacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric) {
             this.privacyMetric = Objects.requireNonNull(privacyMetric);
             return this;
         }
-
         public Builder sourceTable(GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
-        }
-        public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse build() {
+        }        public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse build() {
             return new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(actions, privacyMetric, sourceTable);
         }
     }

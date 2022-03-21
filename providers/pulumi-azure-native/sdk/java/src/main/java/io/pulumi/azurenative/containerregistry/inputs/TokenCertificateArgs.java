@@ -108,42 +108,34 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
             this.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
-
         public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
             this.encodedPemCertificate = Output.ofNullable(encodedPemCertificate);
             return this;
         }
-
         public Builder expiry(@Nullable Output<String> expiry) {
             this.expiry = expiry;
             return this;
         }
-
         public Builder expiry(@Nullable String expiry) {
             this.expiry = Output.ofNullable(expiry);
             return this;
         }
-
         public Builder name(@Nullable Output<Either<String,TokenCertificateName>> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,TokenCertificateName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public TokenCertificateArgs build() {
+        }        public TokenCertificateArgs build() {
             return new TokenCertificateArgs(encodedPemCertificate, expiry, name, thumbprint);
         }
     }

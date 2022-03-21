@@ -203,52 +203,42 @@ public final class GetImageResult {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder sourceVirtualMachine(@Nullable SubResourceResponse sourceVirtualMachine) {
             this.sourceVirtualMachine = sourceVirtualMachine;
             return this;
         }
-
         public Builder storageProfile(@Nullable ImageStorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetImageResult build() {
+        }        public GetImageResult build() {
             return new GetImageResult(extendedLocation, hyperVGeneration, id, location, name, provisioningState, sourceVirtualMachine, storageProfile, tags, type);
         }
     }

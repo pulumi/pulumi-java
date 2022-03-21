@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse extends io.pulumi.
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
-        }
-        public GooglePrivacyDlpV2CryptoHashConfigResponse build() {
+        }        public GooglePrivacyDlpV2CryptoHashConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoHashConfigResponse(cryptoKey);
         }
     }

@@ -72,12 +72,10 @@ public final class IngressEnvironmentStatusResponse {
             this.state = state;
             return this;
         }
-
         public Builder stateDetails(EnvironmentStateDetailsResponse stateDetails) {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
-        }
-        public IngressEnvironmentStatusResponse build() {
+        }        public IngressEnvironmentStatusResponse build() {
             return new IngressEnvironmentStatusResponse(state, stateDetails);
         }
     }

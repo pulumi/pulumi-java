@@ -50,8 +50,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
         public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
-        }
-        public GetDatastoreArgs build() {
+        }        public GetDatastoreArgs build() {
             return new GetDatastoreArgs(datastoreName);
         }
     }

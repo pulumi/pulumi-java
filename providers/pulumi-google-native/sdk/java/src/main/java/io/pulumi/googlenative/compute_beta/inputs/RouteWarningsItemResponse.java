@@ -90,17 +90,17 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public Builder data(List<RouteWarningsItemDataItemResponse> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
-
+        public Builder data(RouteWarningsItemDataItemResponse... data) {
+            return data(List.of(data));
+        }
         public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
-        }
-        public RouteWarningsItemResponse build() {
+        }        public RouteWarningsItemResponse build() {
             return new RouteWarningsItemResponse(code, data, message);
         }
     }

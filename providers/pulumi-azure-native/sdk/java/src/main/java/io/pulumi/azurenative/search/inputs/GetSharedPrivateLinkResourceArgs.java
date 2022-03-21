@@ -88,17 +88,14 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder searchServiceName(String searchServiceName) {
             this.searchServiceName = Objects.requireNonNull(searchServiceName);
             return this;
         }
-
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
             return this;
-        }
-        public GetSharedPrivateLinkResourceArgs build() {
+        }        public GetSharedPrivateLinkResourceArgs build() {
             return new GetSharedPrivateLinkResourceArgs(resourceGroupName, searchServiceName, sharedPrivateLinkResourceName);
         }
     }

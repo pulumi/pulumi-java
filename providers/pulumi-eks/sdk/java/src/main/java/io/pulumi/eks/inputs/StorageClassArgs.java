@@ -230,112 +230,96 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             this.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
-
         public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
             this.allowVolumeExpansion = Output.ofNullable(allowVolumeExpansion);
             return this;
         }
-
         public Builder $default(@Nullable Output<Boolean> $default) {
             this.$default = $default;
             return this;
         }
-
         public Builder $default(@Nullable Boolean $default) {
             this.$default = Output.ofNullable($default);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder iopsPerGb(@Nullable Output<Integer> iopsPerGb) {
             this.iopsPerGb = iopsPerGb;
             return this;
         }
-
         public Builder iopsPerGb(@Nullable Integer iopsPerGb) {
             this.iopsPerGb = Output.ofNullable(iopsPerGb);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
         }
-
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
-
         public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = Output.ofNullable(mountOptions);
             return this;
         }
-
+        public Builder mountOptions(String... mountOptions) {
+            return mountOptions(List.of(mountOptions));
+        }
         public Builder reclaimPolicy(@Nullable Output<String> reclaimPolicy) {
             this.reclaimPolicy = reclaimPolicy;
             return this;
         }
-
         public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
             this.reclaimPolicy = Output.ofNullable(reclaimPolicy);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder volumeBindingMode(@Nullable Output<String> volumeBindingMode) {
             this.volumeBindingMode = volumeBindingMode;
             return this;
         }
-
         public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
             this.volumeBindingMode = Output.ofNullable(volumeBindingMode);
             return this;
         }
-
         public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = Output.ofNullable(zones);
             return this;
         }
-        public StorageClassArgs build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public StorageClassArgs build() {
             return new StorageClassArgs(allowVolumeExpansion, $default, encrypted, iopsPerGb, kmsKeyId, metadata, mountOptions, reclaimPolicy, type, volumeBindingMode, zones);
         }
     }

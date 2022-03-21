@@ -75,22 +75,21 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
             this.nodeGroupId = nodeGroupId;
             return this;
         }
-
         public Builder nodeGroupId(@Nullable String nodeGroupId) {
             this.nodeGroupId = Output.ofNullable(nodeGroupId);
             return this;
         }
-
         public Builder preferredAvailabilityZones(@Nullable Output<List<String>> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
-
         public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = Output.ofNullable(preferredAvailabilityZones);
             return this;
         }
-        public GlobalReplicationGroupReshardingConfigurationArgs build() {
+        public Builder preferredAvailabilityZones(String... preferredAvailabilityZones) {
+            return preferredAvailabilityZones(List.of(preferredAvailabilityZones));
+        }        public GlobalReplicationGroupReshardingConfigurationArgs build() {
             return new GlobalReplicationGroupReshardingConfigurationArgs(nodeGroupId, preferredAvailabilityZones);
         }
     }

@@ -76,22 +76,21 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs build() {
+        }        public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs(parameters, type);
         }
     }

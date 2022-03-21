@@ -101,22 +101,18 @@ public final class GetGroupUser {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
-        }
-        public GetGroupUser build() {
+        }        public GetGroupUser build() {
             return new GetGroupUser(arn, path, userId, userName);
         }
     }

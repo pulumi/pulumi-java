@@ -167,42 +167,34 @@ public final class GetSavedQueryResult {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
-
         public Builder lastUpdater(String lastUpdater) {
             this.lastUpdater = Objects.requireNonNull(lastUpdater);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetSavedQueryResult build() {
+        }        public GetSavedQueryResult build() {
             return new GetSavedQueryResult(content, createTime, creator, description, labels, lastUpdateTime, lastUpdater, name);
         }
     }

@@ -78,12 +78,10 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
             this.location = location;
             return this;
         }
-
         public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
-        }
-        public PartnerRegionInfoResponse build() {
+        }        public PartnerRegionInfoResponse build() {
             return new PartnerRegionInfoResponse(location, replicationRole);
         }
     }

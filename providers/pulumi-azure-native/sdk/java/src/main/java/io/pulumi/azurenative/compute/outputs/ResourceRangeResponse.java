@@ -71,12 +71,10 @@ public final class ResourceRangeResponse {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public ResourceRangeResponse build() {
+        }        public ResourceRangeResponse build() {
             return new ResourceRangeResponse(max, min);
         }
     }

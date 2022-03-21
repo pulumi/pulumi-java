@@ -79,32 +79,26 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends io.pulumi.r
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
-
         public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
             this.enableDynamicFieldUpdate = Output.ofNullable(enableDynamicFieldUpdate);
             return this;
         }
-
         public Builder includeDeletedRecords(@Nullable Output<Boolean> includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
-
         public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
             this.includeDeletedRecords = Output.ofNullable(includeDeletedRecords);
             return this;
         }
-
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public IntegrationSalesforceSourcePropertiesArgs build() {
+        }        public IntegrationSalesforceSourcePropertiesArgs build() {
             return new IntegrationSalesforceSourcePropertiesArgs(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }
     }

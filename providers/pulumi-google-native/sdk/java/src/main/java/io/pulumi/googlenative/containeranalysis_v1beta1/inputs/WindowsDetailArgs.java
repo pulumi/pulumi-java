@@ -108,42 +108,37 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
-
         public Builder cpeUri(String cpeUri) {
             this.cpeUri = Output.of(Objects.requireNonNull(cpeUri));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fixingKbs(Output<List<KnowledgeBaseArgs>> fixingKbs) {
             this.fixingKbs = Objects.requireNonNull(fixingKbs);
             return this;
         }
-
         public Builder fixingKbs(List<KnowledgeBaseArgs> fixingKbs) {
             this.fixingKbs = Output.of(Objects.requireNonNull(fixingKbs));
             return this;
         }
-
+        public Builder fixingKbs(KnowledgeBaseArgs... fixingKbs) {
+            return fixingKbs(List.of(fixingKbs));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public WindowsDetailArgs build() {
+        }        public WindowsDetailArgs build() {
             return new WindowsDetailArgs(cpeUri, description, fixingKbs, name);
         }
     }

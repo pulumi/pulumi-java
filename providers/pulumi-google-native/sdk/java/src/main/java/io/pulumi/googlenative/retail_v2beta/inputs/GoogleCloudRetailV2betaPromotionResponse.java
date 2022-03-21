@@ -58,8 +58,7 @@ public final class GoogleCloudRetailV2betaPromotionResponse extends io.pulumi.re
         public Builder promotionId(String promotionId) {
             this.promotionId = Objects.requireNonNull(promotionId);
             return this;
-        }
-        public GoogleCloudRetailV2betaPromotionResponse build() {
+        }        public GoogleCloudRetailV2betaPromotionResponse build() {
             return new GoogleCloudRetailV2betaPromotionResponse(promotionId);
         }
     }

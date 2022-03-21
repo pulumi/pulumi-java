@@ -88,17 +88,14 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
             this.connectionMonitorName = Objects.requireNonNull(connectionMonitorName);
             return this;
         }
-
         public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConnectionMonitorArgs build() {
+        }        public GetConnectionMonitorArgs build() {
             return new GetConnectionMonitorArgs(connectionMonitorName, networkWatcherName, resourceGroupName);
         }
     }

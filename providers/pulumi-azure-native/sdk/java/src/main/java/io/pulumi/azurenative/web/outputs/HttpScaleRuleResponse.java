@@ -73,12 +73,13 @@ public final class HttpScaleRuleResponse {
             this.auth = auth;
             return this;
         }
-
+        public Builder auth(ScaleRuleAuthResponse... auth) {
+            return auth(List.of(auth));
+        }
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
-        }
-        public HttpScaleRuleResponse build() {
+        }        public HttpScaleRuleResponse build() {
             return new HttpScaleRuleResponse(auth, metadata);
         }
     }

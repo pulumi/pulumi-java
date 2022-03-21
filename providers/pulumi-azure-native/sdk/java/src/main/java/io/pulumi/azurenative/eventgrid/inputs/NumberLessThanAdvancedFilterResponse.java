@@ -96,17 +96,14 @@ public final class NumberLessThanAdvancedFilterResponse extends io.pulumi.resour
             this.key = key;
             return this;
         }
-
         public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
-        }
-        public NumberLessThanAdvancedFilterResponse build() {
+        }        public NumberLessThanAdvancedFilterResponse build() {
             return new NumberLessThanAdvancedFilterResponse(key, operatorType, value);
         }
     }

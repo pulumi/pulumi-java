@@ -86,17 +86,14 @@ public final class KeyOperationAttestationResponse {
             this.certChains = Objects.requireNonNull(certChains);
             return this;
         }
-
         public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
-        }
-        public KeyOperationAttestationResponse build() {
+        }        public KeyOperationAttestationResponse build() {
             return new KeyOperationAttestationResponse(certChains, content, format);
         }
     }

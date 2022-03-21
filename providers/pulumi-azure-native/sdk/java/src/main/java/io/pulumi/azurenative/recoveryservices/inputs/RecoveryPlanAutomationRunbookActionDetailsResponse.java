@@ -111,22 +111,18 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
             this.fabricLocation = Objects.requireNonNull(fabricLocation);
             return this;
         }
-
         public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder runbookId(@Nullable String runbookId) {
             this.runbookId = runbookId;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
-        }
-        public RecoveryPlanAutomationRunbookActionDetailsResponse build() {
+        }        public RecoveryPlanAutomationRunbookActionDetailsResponse build() {
             return new RecoveryPlanAutomationRunbookActionDetailsResponse(fabricLocation, instanceType, runbookId, timeout);
         }
     }

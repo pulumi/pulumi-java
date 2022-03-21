@@ -108,42 +108,37 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
             this.checkpointDelay = checkpointDelay;
             return this;
         }
-
         public Builder checkpointDelay(@Nullable String checkpointDelay) {
             this.checkpointDelay = Output.ofNullable(checkpointDelay);
             return this;
         }
-
         public Builder checkpointPercentages(@Nullable Output<List<Integer>> checkpointPercentages) {
             this.checkpointPercentages = checkpointPercentages;
             return this;
         }
-
         public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
             this.checkpointPercentages = Output.ofNullable(checkpointPercentages);
             return this;
         }
-
+        public Builder checkpointPercentages(Integer... checkpointPercentages) {
+            return checkpointPercentages(List.of(checkpointPercentages));
+        }
         public Builder instanceWarmup(@Nullable Output<String> instanceWarmup) {
             this.instanceWarmup = instanceWarmup;
             return this;
         }
-
         public Builder instanceWarmup(@Nullable String instanceWarmup) {
             this.instanceWarmup = Output.ofNullable(instanceWarmup);
             return this;
         }
-
         public Builder minHealthyPercentage(@Nullable Output<Integer> minHealthyPercentage) {
             this.minHealthyPercentage = minHealthyPercentage;
             return this;
         }
-
         public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
             this.minHealthyPercentage = Output.ofNullable(minHealthyPercentage);
             return this;
-        }
-        public GroupInstanceRefreshPreferencesArgs build() {
+        }        public GroupInstanceRefreshPreferencesArgs build() {
             return new GroupInstanceRefreshPreferencesArgs(checkpointDelay, checkpointPercentages, instanceWarmup, minHealthyPercentage);
         }
     }

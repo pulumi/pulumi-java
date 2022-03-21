@@ -54,8 +54,7 @@ public final class GetOIDCProviderArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetOIDCProviderArgs build() {
+        }        public GetOIDCProviderArgs build() {
             return new GetOIDCProviderArgs(arn);
         }
     }

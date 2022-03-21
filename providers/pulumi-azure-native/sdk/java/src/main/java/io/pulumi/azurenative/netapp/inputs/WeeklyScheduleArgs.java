@@ -128,52 +128,42 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.day = day;
             return this;
         }
-
         public Builder day(@Nullable String day) {
             this.day = Output.ofNullable(day);
             return this;
         }
-
         public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
-
         public Builder hour(@Nullable Integer hour) {
             this.hour = Output.ofNullable(hour);
             return this;
         }
-
         public Builder minute(@Nullable Output<Integer> minute) {
             this.minute = minute;
             return this;
         }
-
         public Builder minute(@Nullable Integer minute) {
             this.minute = Output.ofNullable(minute);
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = Output.ofNullable(snapshotsToKeep);
             return this;
         }
-
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = Output.ofNullable(usedBytes);
             return this;
-        }
-        public WeeklyScheduleArgs build() {
+        }        public WeeklyScheduleArgs build() {
             return new WeeklyScheduleArgs(day, hour, minute, snapshotsToKeep, usedBytes);
         }
     }

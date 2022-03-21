@@ -137,32 +137,26 @@ public final class SSLHealthCheckResponse extends io.pulumi.resources.InvokeArgs
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
-
         public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
-
         public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
-
         public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
-
         public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
-        }
-        public SSLHealthCheckResponse build() {
+        }        public SSLHealthCheckResponse build() {
             return new SSLHealthCheckResponse(port, portName, portSpecification, proxyHeader, request, response);
         }
     }

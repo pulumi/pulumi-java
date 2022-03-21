@@ -106,42 +106,34 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
             this.destinationArn = destinationArn;
             return this;
         }
-
         public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
-
         public Builder destinationType(@Nullable Output<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
-
         public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Output.ofNullable(destinationType);
             return this;
         }
-
         public Builder detectorId(@Nullable Output<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
-
         public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Output.ofNullable(detectorId);
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
-        }
-        public PublishingDestinationState build() {
+        }        public PublishingDestinationState build() {
             return new PublishingDestinationState(destinationArn, destinationType, detectorId, kmsKeyArn);
         }
     }

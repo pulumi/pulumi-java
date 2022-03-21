@@ -67,12 +67,10 @@ public final class AnomalyDetectorJsonFormatDescriptor extends io.pulumi.resourc
             this.charset = charset;
             return this;
         }
-
         public Builder fileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = fileCompression;
             return this;
-        }
-        public AnomalyDetectorJsonFormatDescriptor build() {
+        }        public AnomalyDetectorJsonFormatDescriptor build() {
             return new AnomalyDetectorJsonFormatDescriptor(charset, fileCompression);
         }
     }

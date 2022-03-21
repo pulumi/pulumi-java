@@ -165,37 +165,30 @@ public final class RuntimeSoftwareConfig {
             this.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
-
         public Builder enableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
             this.enableHealthMonitoring = enableHealthMonitoring;
             return this;
         }
-
         public Builder idleShutdown(@Nullable Boolean idleShutdown) {
             this.idleShutdown = idleShutdown;
             return this;
         }
-
         public Builder idleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
             this.idleShutdownTimeout = idleShutdownTimeout;
             return this;
         }
-
         public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
             this.installGpuDriver = installGpuDriver;
             return this;
         }
-
         public Builder notebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = notebookUpgradeSchedule;
             return this;
         }
-
         public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
-        }
-        public RuntimeSoftwareConfig build() {
+        }        public RuntimeSoftwareConfig build() {
             return new RuntimeSoftwareConfig(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, notebookUpgradeSchedule, postStartupScript);
         }
     }

@@ -154,37 +154,33 @@ public final class GetDashboardResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lenses(@Nullable List<DashboardLensResponse> lenses) {
             this.lenses = lenses;
             return this;
         }
-
+        public Builder lenses(DashboardLensResponse... lenses) {
+            return lenses(List.of(lenses));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetDashboardResult build() {
+        }        public GetDashboardResult build() {
             return new GetDashboardResult(id, lenses, location, metadata, name, tags, type);
         }
     }

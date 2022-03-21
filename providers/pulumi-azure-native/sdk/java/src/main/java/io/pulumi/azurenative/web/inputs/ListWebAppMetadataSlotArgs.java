@@ -88,17 +88,14 @@ public final class ListWebAppMetadataSlotArgs extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
-        }
-        public ListWebAppMetadataSlotArgs build() {
+        }        public ListWebAppMetadataSlotArgs build() {
             return new ListWebAppMetadataSlotArgs(name, resourceGroupName, slot);
         }
     }

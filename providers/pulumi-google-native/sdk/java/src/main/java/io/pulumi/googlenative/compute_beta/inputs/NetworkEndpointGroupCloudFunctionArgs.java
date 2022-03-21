@@ -78,22 +78,18 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
             this.function = function;
             return this;
         }
-
         public Builder function(@Nullable String function) {
             this.function = Output.ofNullable(function);
             return this;
         }
-
         public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
-
         public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Output.ofNullable(urlMask);
             return this;
-        }
-        public NetworkEndpointGroupCloudFunctionArgs build() {
+        }        public NetworkEndpointGroupCloudFunctionArgs build() {
             return new NetworkEndpointGroupCloudFunctionArgs(function, urlMask);
         }
     }

@@ -62,12 +62,13 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
             this.words = words;
             return this;
         }
-
         public Builder words(@Nullable List<String> words) {
             this.words = Output.ofNullable(words);
             return this;
         }
-        public GooglePrivacyDlpV2WordListArgs build() {
+        public Builder words(String... words) {
+            return words(List.of(words));
+        }        public GooglePrivacyDlpV2WordListArgs build() {
             return new GooglePrivacyDlpV2WordListArgs(words);
         }
     }

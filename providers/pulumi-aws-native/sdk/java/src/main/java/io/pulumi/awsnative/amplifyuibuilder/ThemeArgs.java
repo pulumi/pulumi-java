@@ -93,42 +93,40 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder overrides(@Nullable Output<List<ThemeValuesArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
-
         public Builder overrides(@Nullable List<ThemeValuesArgs> overrides) {
             this.overrides = Output.ofNullable(overrides);
             return this;
         }
-
+        public Builder overrides(ThemeValuesArgs... overrides) {
+            return overrides(List.of(overrides));
+        }
         public Builder tags(@Nullable Output<ThemeTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable ThemeTagsArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder values(Output<List<ThemeValuesArgs>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public Builder values(List<ThemeValuesArgs> values) {
             this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
-        public ThemeArgs build() {
+        public Builder values(ThemeValuesArgs... values) {
+            return values(List.of(values));
+        }        public ThemeArgs build() {
             return new ThemeArgs(name, overrides, tags, values);
         }
     }

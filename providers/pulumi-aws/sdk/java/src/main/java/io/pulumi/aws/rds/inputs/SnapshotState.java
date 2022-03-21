@@ -373,212 +373,170 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
             this.allocatedStorage = allocatedStorage;
             return this;
         }
-
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
             this.allocatedStorage = Output.ofNullable(allocatedStorage);
             return this;
         }
-
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
-
         public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
-
         public Builder dbSnapshotArn(@Nullable Output<String> dbSnapshotArn) {
             this.dbSnapshotArn = dbSnapshotArn;
             return this;
         }
-
         public Builder dbSnapshotArn(@Nullable String dbSnapshotArn) {
             this.dbSnapshotArn = Output.ofNullable(dbSnapshotArn);
             return this;
         }
-
         public Builder dbSnapshotIdentifier(@Nullable Output<String> dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
-
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = Output.ofNullable(dbSnapshotIdentifier);
             return this;
         }
-
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
-
         public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
-
         public Builder iops(@Nullable Integer iops) {
             this.iops = Output.ofNullable(iops);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder licenseModel(@Nullable Output<String> licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
-
         public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = Output.ofNullable(licenseModel);
             return this;
         }
-
         public Builder optionGroupName(@Nullable Output<String> optionGroupName) {
             this.optionGroupName = optionGroupName;
             return this;
         }
-
         public Builder optionGroupName(@Nullable String optionGroupName) {
             this.optionGroupName = Output.ofNullable(optionGroupName);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder snapshotType(@Nullable Output<String> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
-
         public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = Output.ofNullable(snapshotType);
             return this;
         }
-
         public Builder sourceDbSnapshotIdentifier(@Nullable Output<String> sourceDbSnapshotIdentifier) {
             this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
             return this;
         }
-
         public Builder sourceDbSnapshotIdentifier(@Nullable String sourceDbSnapshotIdentifier) {
             this.sourceDbSnapshotIdentifier = Output.ofNullable(sourceDbSnapshotIdentifier);
             return this;
         }
-
         public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
             this.sourceRegion = sourceRegion;
             return this;
         }
-
         public Builder sourceRegion(@Nullable String sourceRegion) {
             this.sourceRegion = Output.ofNullable(sourceRegion);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
-
         public Builder storageType(@Nullable String storageType) {
             this.storageType = Output.ofNullable(storageType);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public SnapshotState build() {
+        }        public SnapshotState build() {
             return new SnapshotState(allocatedStorage, availabilityZone, dbInstanceIdentifier, dbSnapshotArn, dbSnapshotIdentifier, encrypted, engine, engineVersion, iops, kmsKeyId, licenseModel, optionGroupName, port, snapshotType, sourceDbSnapshotIdentifier, sourceRegion, status, storageType, tags, tagsAll, vpcId);
         }
     }

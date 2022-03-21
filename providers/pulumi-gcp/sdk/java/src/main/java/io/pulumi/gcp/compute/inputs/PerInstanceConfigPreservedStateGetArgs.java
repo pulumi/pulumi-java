@@ -78,22 +78,21 @@ public final class PerInstanceConfigPreservedStateGetArgs extends io.pulumi.reso
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<PerInstanceConfigPreservedStateDiskGetArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(PerInstanceConfigPreservedStateDiskGetArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Output.ofNullable(metadata);
             return this;
-        }
-        public PerInstanceConfigPreservedStateGetArgs build() {
+        }        public PerInstanceConfigPreservedStateGetArgs build() {
             return new PerInstanceConfigPreservedStateGetArgs(disks, metadata);
         }
     }

@@ -77,12 +77,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
+        }        public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeRbacAuthorizationResponse(authorizationType, resourceId);
         }
     }

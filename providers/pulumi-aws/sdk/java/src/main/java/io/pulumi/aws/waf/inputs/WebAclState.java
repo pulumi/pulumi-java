@@ -175,82 +175,69 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder defaultAction(@Nullable WebAclDefaultActionGetArgs defaultAction) {
             this.defaultAction = Output.ofNullable(defaultAction);
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public Builder loggingConfiguration(@Nullable WebAclLoggingConfigurationGetArgs loggingConfiguration) {
             this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
-
         public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
-
         public Builder metricName(@Nullable String metricName) {
             this.metricName = Output.ofNullable(metricName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<WebAclRuleGetArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(WebAclRuleGetArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public WebAclState build() {
+        }        public WebAclState build() {
             return new WebAclState(arn, defaultAction, loggingConfiguration, metricName, name, rules, tags, tagsAll);
         }
     }

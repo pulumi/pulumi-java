@@ -50,8 +50,7 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetExperimentArgs build() {
+        }        public GetExperimentArgs build() {
             return new GetExperimentArgs(arn);
         }
     }

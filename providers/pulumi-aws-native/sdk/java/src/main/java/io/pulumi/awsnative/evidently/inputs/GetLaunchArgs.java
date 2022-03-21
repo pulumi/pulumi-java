@@ -50,8 +50,7 @@ public final class GetLaunchArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetLaunchArgs build() {
+        }        public GetLaunchArgs build() {
             return new GetLaunchArgs(arn);
         }
     }

@@ -134,52 +134,42 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable String dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder defaultConsentTtl(@Nullable Output<String> defaultConsentTtl) {
             this.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
-
         public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
             this.defaultConsentTtl = Output.ofNullable(defaultConsentTtl);
             return this;
         }
-
         public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
-
         public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Output.ofNullable(enableConsentCreateOnUpdate);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ConsentStoreState build() {
+        }        public ConsentStoreState build() {
             return new ConsentStoreState(dataset, defaultConsentTtl, enableConsentCreateOnUpdate, labels, name);
         }
     }

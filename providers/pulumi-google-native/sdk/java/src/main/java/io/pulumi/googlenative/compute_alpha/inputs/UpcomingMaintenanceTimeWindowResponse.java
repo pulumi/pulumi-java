@@ -68,12 +68,10 @@ public final class UpcomingMaintenanceTimeWindowResponse extends io.pulumi.resou
             this.earliest = Objects.requireNonNull(earliest);
             return this;
         }
-
         public Builder latest(String latest) {
             this.latest = Objects.requireNonNull(latest);
             return this;
-        }
-        public UpcomingMaintenanceTimeWindowResponse build() {
+        }        public UpcomingMaintenanceTimeWindowResponse build() {
             return new UpcomingMaintenanceTimeWindowResponse(earliest, latest);
         }
     }

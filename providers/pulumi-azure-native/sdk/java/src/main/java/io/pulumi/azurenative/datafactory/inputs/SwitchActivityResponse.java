@@ -218,42 +218,46 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
             this.cases = cases;
             return this;
         }
-
+        public Builder cases(SwitchCaseResponse... cases) {
+            return cases(List.of(cases));
+        }
         public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
             this.defaultActivities = defaultActivities;
             return this;
         }
-
+        public Builder defaultActivities(Object... defaultActivities) {
+            return defaultActivities(List.of(defaultActivities));
+        }
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder on(ExpressionResponse on) {
             this.on = Objects.requireNonNull(on);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public SwitchActivityResponse build() {
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public SwitchActivityResponse build() {
             return new SwitchActivityResponse(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
         }
     }

@@ -85,17 +85,14 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder userGroup(String userGroup) {
             this.userGroup = Objects.requireNonNull(userGroup);
             return this;
         }
-
         public Builder userPool(String userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
-        }
-        public WorkteamMemberDefinitionCognitoMemberDefinition build() {
+        }        public WorkteamMemberDefinitionCognitoMemberDefinition build() {
             return new WorkteamMemberDefinitionCognitoMemberDefinition(clientId, userGroup, userPool);
         }
     }

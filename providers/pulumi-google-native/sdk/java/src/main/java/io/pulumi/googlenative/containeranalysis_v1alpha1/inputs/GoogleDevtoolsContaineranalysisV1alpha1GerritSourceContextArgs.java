@@ -111,42 +111,34 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
             this.aliasContext = aliasContext;
             return this;
         }
-
         public Builder aliasContext(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs aliasContext) {
             this.aliasContext = Output.ofNullable(aliasContext);
             return this;
         }
-
         public Builder gerritProject(@Nullable Output<String> gerritProject) {
             this.gerritProject = gerritProject;
             return this;
         }
-
         public Builder gerritProject(@Nullable String gerritProject) {
             this.gerritProject = Output.ofNullable(gerritProject);
             return this;
         }
-
         public Builder hostUri(@Nullable Output<String> hostUri) {
             this.hostUri = hostUri;
             return this;
         }
-
         public Builder hostUri(@Nullable String hostUri) {
             this.hostUri = Output.ofNullable(hostUri);
             return this;
         }
-
         public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
-
         public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Output.ofNullable(revisionId);
             return this;
-        }
-        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs build() {
+        }        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs(aliasContext, gerritProject, hostUri, revisionId);
         }
     }

@@ -104,42 +104,34 @@ public final class DomainServiceSoftwareOptions {
             this.automatedUpdateDate = automatedUpdateDate;
             return this;
         }
-
         public Builder cancellable(@Nullable Boolean cancellable) {
             this.cancellable = cancellable;
             return this;
         }
-
         public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder newVersion(@Nullable String newVersion) {
             this.newVersion = newVersion;
             return this;
         }
-
         public Builder optionalDeployment(@Nullable Boolean optionalDeployment) {
             this.optionalDeployment = optionalDeployment;
             return this;
         }
-
         public Builder updateAvailable(@Nullable Boolean updateAvailable) {
             this.updateAvailable = updateAvailable;
             return this;
         }
-
         public Builder updateStatus(@Nullable String updateStatus) {
             this.updateStatus = updateStatus;
             return this;
-        }
-        public DomainServiceSoftwareOptions build() {
+        }        public DomainServiceSoftwareOptions build() {
             return new DomainServiceSoftwareOptions(automatedUpdateDate, cancellable, currentVersion, description, newVersion, optionalDeployment, updateAvailable, updateStatus);
         }
     }

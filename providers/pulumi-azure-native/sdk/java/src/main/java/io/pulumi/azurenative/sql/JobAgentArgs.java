@@ -156,72 +156,58 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
-
         public Builder databaseId(String databaseId) {
             this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
-
         public Builder jobAgentName(@Nullable Output<String> jobAgentName) {
             this.jobAgentName = jobAgentName;
             return this;
         }
-
         public Builder jobAgentName(@Nullable String jobAgentName) {
             this.jobAgentName = Output.ofNullable(jobAgentName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public JobAgentArgs build() {
+        }        public JobAgentArgs build() {
             return new JobAgentArgs(databaseId, jobAgentName, location, resourceGroupName, serverName, sku, tags);
         }
     }

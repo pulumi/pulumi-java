@@ -108,42 +108,37 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends io.pu
             this.pathId = pathId;
             return this;
         }
-
         public Builder pathId(@Nullable String pathId) {
             this.pathId = Output.ofNullable(pathId);
             return this;
         }
-
         public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-
         public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Output.ofNullable(provisioningArtifactId);
             return this;
         }
-
         public Builder provisioningParameters(@Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
-
         public Builder provisioningParameters(@Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs> provisioningParameters) {
             this.provisioningParameters = Output.ofNullable(provisioningParameters);
             return this;
         }
-        public ProjectServiceCatalogProvisioningDetailsGetArgs build() {
+        public Builder provisioningParameters(ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs... provisioningParameters) {
+            return provisioningParameters(List.of(provisioningParameters));
+        }        public ProjectServiceCatalogProvisioningDetailsGetArgs build() {
             return new ProjectServiceCatalogProvisioningDetailsGetArgs(pathId, productId, provisioningArtifactId, provisioningParameters);
         }
     }

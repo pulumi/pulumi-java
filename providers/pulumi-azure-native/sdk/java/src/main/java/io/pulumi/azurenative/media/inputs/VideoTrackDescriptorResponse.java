@@ -59,8 +59,7 @@ public final class VideoTrackDescriptorResponse extends io.pulumi.resources.Invo
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public VideoTrackDescriptorResponse build() {
+        }        public VideoTrackDescriptorResponse build() {
             return new VideoTrackDescriptorResponse(odataType);
         }
     }

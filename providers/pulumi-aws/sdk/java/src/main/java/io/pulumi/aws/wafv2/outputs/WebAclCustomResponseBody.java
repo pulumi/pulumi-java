@@ -85,17 +85,14 @@ public final class WebAclCustomResponseBody {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
-        }
-        public WebAclCustomResponseBody build() {
+        }        public WebAclCustomResponseBody build() {
             return new WebAclCustomResponseBody(content, contentType, key);
         }
     }

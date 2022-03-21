@@ -139,62 +139,50 @@ public final class BuildpackBindingArgs extends io.pulumi.resources.ResourceArgs
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
-
         public Builder buildServiceName(String buildServiceName) {
             this.buildServiceName = Output.of(Objects.requireNonNull(buildServiceName));
             return this;
         }
-
         public Builder builderName(Output<String> builderName) {
             this.builderName = Objects.requireNonNull(builderName);
             return this;
         }
-
         public Builder builderName(String builderName) {
             this.builderName = Output.of(Objects.requireNonNull(builderName));
             return this;
         }
-
         public Builder buildpackBindingName(@Nullable Output<String> buildpackBindingName) {
             this.buildpackBindingName = buildpackBindingName;
             return this;
         }
-
         public Builder buildpackBindingName(@Nullable String buildpackBindingName) {
             this.buildpackBindingName = Output.ofNullable(buildpackBindingName);
             return this;
         }
-
         public Builder properties(@Nullable Output<BuildpackBindingPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable BuildpackBindingPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public BuildpackBindingArgs build() {
+        }        public BuildpackBindingArgs build() {
             return new BuildpackBindingArgs(buildServiceName, builderName, buildpackBindingName, properties, resourceGroupName, serviceName);
         }
     }

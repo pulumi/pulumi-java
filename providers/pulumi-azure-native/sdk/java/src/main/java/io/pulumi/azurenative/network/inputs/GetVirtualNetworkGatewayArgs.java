@@ -72,12 +72,10 @@ public final class GetVirtualNetworkGatewayArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayArgs build() {
+        }        public GetVirtualNetworkGatewayArgs build() {
             return new GetVirtualNetworkGatewayArgs(resourceGroupName, virtualNetworkGatewayName);
         }
     }

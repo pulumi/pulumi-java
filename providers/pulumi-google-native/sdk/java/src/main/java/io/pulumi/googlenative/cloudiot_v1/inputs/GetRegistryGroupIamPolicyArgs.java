@@ -90,22 +90,18 @@ public final class GetRegistryGroupIamPolicyArgs extends io.pulumi.resources.Inv
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
-        }
-        public GetRegistryGroupIamPolicyArgs build() {
+        }        public GetRegistryGroupIamPolicyArgs build() {
             return new GetRegistryGroupIamPolicyArgs(groupId, location, project, registryId);
         }
     }

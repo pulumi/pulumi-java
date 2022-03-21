@@ -78,17 +78,14 @@ public final class ImportCollectorPropertiesResponse extends io.pulumi.resources
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
-
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
-
         public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
-        }
-        public ImportCollectorPropertiesResponse build() {
+        }        public ImportCollectorPropertiesResponse build() {
             return new ImportCollectorPropertiesResponse(createdTimestamp, discoverySiteId, updatedTimestamp);
         }
     }

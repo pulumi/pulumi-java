@@ -69,22 +69,18 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
-
         public Builder apiKey(String apiKey) {
             this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
-
         public Builder secretKey(Output<String> secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
         }
-
         public Builder secretKey(String secretKey) {
             this.secretKey = Output.of(Objects.requireNonNull(secretKey));
             return this;
-        }
-        public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs build() {
+        }        public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileAmplitudeConnectorProfileCredentialsArgs(apiKey, secretKey);
         }
     }

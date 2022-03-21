@@ -88,17 +88,14 @@ public final class GraphQLApiLambdaAuthorizerConfig {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
-
         public Builder authorizerUri(String authorizerUri) {
             this.authorizerUri = Objects.requireNonNull(authorizerUri);
             return this;
         }
-
         public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
-        }
-        public GraphQLApiLambdaAuthorizerConfig build() {
+        }        public GraphQLApiLambdaAuthorizerConfig build() {
             return new GraphQLApiLambdaAuthorizerConfig(authorizerResultTtlInSeconds, authorizerUri, identityValidationExpression);
         }
     }

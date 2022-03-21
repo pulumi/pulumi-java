@@ -61,12 +61,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs 
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
-
         public Builder simpleResponses(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs> simpleResponses) {
             this.simpleResponses = Output.of(Objects.requireNonNull(simpleResponses));
             return this;
         }
-        public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs build() {
+        public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs... simpleResponses) {
+            return simpleResponses(List.of(simpleResponses));
+        }        public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs(simpleResponses);
         }
     }

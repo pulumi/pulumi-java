@@ -57,12 +57,10 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
-        }
-        public UserProfileJupyterServerAppSettingsArgs build() {
+        }        public UserProfileJupyterServerAppSettingsArgs build() {
             return new UserProfileJupyterServerAppSettingsArgs(defaultResourceSpec);
         }
     }

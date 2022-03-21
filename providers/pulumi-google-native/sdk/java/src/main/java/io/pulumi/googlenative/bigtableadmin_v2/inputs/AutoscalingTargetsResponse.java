@@ -58,8 +58,7 @@ public final class AutoscalingTargetsResponse extends io.pulumi.resources.Invoke
         public Builder cpuUtilizationPercent(Integer cpuUtilizationPercent) {
             this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent);
             return this;
-        }
-        public AutoscalingTargetsResponse build() {
+        }        public AutoscalingTargetsResponse build() {
             return new AutoscalingTargetsResponse(cpuUtilizationPercent);
         }
     }

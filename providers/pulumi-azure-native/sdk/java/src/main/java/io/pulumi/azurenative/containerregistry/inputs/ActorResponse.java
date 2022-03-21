@@ -60,8 +60,7 @@ public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public ActorResponse build() {
+        }        public ActorResponse build() {
             return new ActorResponse(name);
         }
     }

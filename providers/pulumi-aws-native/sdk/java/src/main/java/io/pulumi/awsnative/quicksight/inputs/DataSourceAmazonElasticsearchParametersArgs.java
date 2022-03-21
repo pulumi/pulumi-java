@@ -60,12 +60,10 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends io.pulumi
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domain(String domain) {
             this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
-        }
-        public DataSourceAmazonElasticsearchParametersArgs build() {
+        }        public DataSourceAmazonElasticsearchParametersArgs build() {
             return new DataSourceAmazonElasticsearchParametersArgs(domain);
         }
     }

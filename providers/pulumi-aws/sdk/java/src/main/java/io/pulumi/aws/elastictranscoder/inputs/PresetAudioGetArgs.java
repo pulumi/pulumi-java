@@ -122,52 +122,42 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
             this.audioPackingMode = audioPackingMode;
             return this;
         }
-
         public Builder audioPackingMode(@Nullable String audioPackingMode) {
             this.audioPackingMode = Output.ofNullable(audioPackingMode);
             return this;
         }
-
         public Builder bitRate(@Nullable Output<String> bitRate) {
             this.bitRate = bitRate;
             return this;
         }
-
         public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = Output.ofNullable(bitRate);
             return this;
         }
-
         public Builder channels(@Nullable Output<String> channels) {
             this.channels = channels;
             return this;
         }
-
         public Builder channels(@Nullable String channels) {
             this.channels = Output.ofNullable(channels);
             return this;
         }
-
         public Builder codec(@Nullable Output<String> codec) {
             this.codec = codec;
             return this;
         }
-
         public Builder codec(@Nullable String codec) {
             this.codec = Output.ofNullable(codec);
             return this;
         }
-
         public Builder sampleRate(@Nullable Output<String> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public Builder sampleRate(@Nullable String sampleRate) {
             this.sampleRate = Output.ofNullable(sampleRate);
             return this;
-        }
-        public PresetAudioGetArgs build() {
+        }        public PresetAudioGetArgs build() {
             return new PresetAudioGetArgs(audioPackingMode, bitRate, channels, codec, sampleRate);
         }
     }

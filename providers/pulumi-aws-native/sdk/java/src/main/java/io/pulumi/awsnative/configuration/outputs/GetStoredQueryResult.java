@@ -89,27 +89,25 @@ public final class GetStoredQueryResult {
             this.queryArn = queryArn;
             return this;
         }
-
         public Builder queryDescription(@Nullable String queryDescription) {
             this.queryDescription = queryDescription;
             return this;
         }
-
         public Builder queryExpression(@Nullable String queryExpression) {
             this.queryExpression = queryExpression;
             return this;
         }
-
         public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
         }
-
         public Builder tags(@Nullable List<StoredQueryTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetStoredQueryResult build() {
+        public Builder tags(StoredQueryTag... tags) {
+            return tags(List.of(tags));
+        }        public GetStoredQueryResult build() {
             return new GetStoredQueryResult(queryArn, queryDescription, queryExpression, queryId, tags);
         }
     }

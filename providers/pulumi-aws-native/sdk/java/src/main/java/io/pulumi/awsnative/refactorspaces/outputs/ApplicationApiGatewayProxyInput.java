@@ -56,12 +56,10 @@ public final class ApplicationApiGatewayProxyInput {
             this.endpointType = endpointType;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
-        }
-        public ApplicationApiGatewayProxyInput build() {
+        }        public ApplicationApiGatewayProxyInput build() {
             return new ApplicationApiGatewayProxyInput(endpointType, stageName);
         }
     }

@@ -61,12 +61,10 @@ public final class EnterprisePolicyIdentityArgs extends io.pulumi.resources.Reso
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public EnterprisePolicyIdentityArgs build() {
+        }        public EnterprisePolicyIdentityArgs build() {
             return new EnterprisePolicyIdentityArgs(type);
         }
     }

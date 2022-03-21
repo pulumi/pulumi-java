@@ -88,17 +88,14 @@ public final class GetEncryptionProtectorArgs extends io.pulumi.resources.Invoke
             this.encryptionProtectorName = Objects.requireNonNull(encryptionProtectorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetEncryptionProtectorArgs build() {
+        }        public GetEncryptionProtectorArgs build() {
             return new GetEncryptionProtectorArgs(encryptionProtectorName, resourceGroupName, serverName);
         }
     }

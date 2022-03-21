@@ -125,32 +125,26 @@ public final class GetSessionContextResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder issuerArn(String issuerArn) {
             this.issuerArn = Objects.requireNonNull(issuerArn);
             return this;
         }
-
         public Builder issuerId(String issuerId) {
             this.issuerId = Objects.requireNonNull(issuerId);
             return this;
         }
-
         public Builder issuerName(String issuerName) {
             this.issuerName = Objects.requireNonNull(issuerName);
             return this;
         }
-
         public Builder sessionName(String sessionName) {
             this.sessionName = Objects.requireNonNull(sessionName);
             return this;
-        }
-        public GetSessionContextResult build() {
+        }        public GetSessionContextResult build() {
             return new GetSessionContextResult(arn, id, issuerArn, issuerId, issuerName, sessionName);
         }
     }

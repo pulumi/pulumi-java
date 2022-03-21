@@ -111,42 +111,34 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
-
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder network(@Nullable Output<NetworkArgs> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable NetworkArgs network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public WorkerConfigArgs build() {
+        }        public WorkerConfigArgs build() {
             return new WorkerConfigArgs(diskSizeGb, machineType, network, tag);
         }
     }

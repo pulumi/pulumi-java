@@ -89,17 +89,14 @@ public final class DeploymentConfigTrafficRoutingConfig {
             this.timeBasedCanary = timeBasedCanary;
             return this;
         }
-
         public Builder timeBasedLinear(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinear timeBasedLinear) {
             this.timeBasedLinear = timeBasedLinear;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public DeploymentConfigTrafficRoutingConfig build() {
+        }        public DeploymentConfigTrafficRoutingConfig build() {
             return new DeploymentConfigTrafficRoutingConfig(timeBasedCanary, timeBasedLinear, type);
         }
     }

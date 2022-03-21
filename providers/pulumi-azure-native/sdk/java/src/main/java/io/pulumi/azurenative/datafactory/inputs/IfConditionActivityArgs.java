@@ -217,82 +217,78 @@ public final class IfConditionActivityArgs extends io.pulumi.resources.ResourceA
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expression(Output<ExpressionArgs> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(ExpressionArgs expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public Builder ifFalseActivities(@Nullable Output<List<Object>> ifFalseActivities) {
             this.ifFalseActivities = ifFalseActivities;
             return this;
         }
-
         public Builder ifFalseActivities(@Nullable List<Object> ifFalseActivities) {
             this.ifFalseActivities = Output.ofNullable(ifFalseActivities);
             return this;
         }
-
+        public Builder ifFalseActivities(Object... ifFalseActivities) {
+            return ifFalseActivities(List.of(ifFalseActivities));
+        }
         public Builder ifTrueActivities(@Nullable Output<List<Object>> ifTrueActivities) {
             this.ifTrueActivities = ifTrueActivities;
             return this;
         }
-
         public Builder ifTrueActivities(@Nullable List<Object> ifTrueActivities) {
             this.ifTrueActivities = Output.ofNullable(ifTrueActivities);
             return this;
         }
-
+        public Builder ifTrueActivities(Object... ifTrueActivities) {
+            return ifTrueActivities(List.of(ifTrueActivities));
+        }
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public IfConditionActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public IfConditionActivityArgs build() {
             return new IfConditionActivityArgs(dependsOn, description, expression, ifFalseActivities, ifTrueActivities, name, type, userProperties);
         }
     }

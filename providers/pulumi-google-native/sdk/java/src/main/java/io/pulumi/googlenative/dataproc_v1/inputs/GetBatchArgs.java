@@ -78,17 +78,14 @@ public final class GetBatchArgs extends io.pulumi.resources.InvokeArgs {
             this.batchId = Objects.requireNonNull(batchId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetBatchArgs build() {
+        }        public GetBatchArgs build() {
             return new GetBatchArgs(batchId, location, project);
         }
     }

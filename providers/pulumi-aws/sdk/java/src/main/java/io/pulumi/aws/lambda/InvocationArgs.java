@@ -103,42 +103,34 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder functionName(String functionName) {
             this.functionName = Output.of(Objects.requireNonNull(functionName));
             return this;
         }
-
         public Builder input(Output<String> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
-
         public Builder input(String input) {
             this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
-
         public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
-
         public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
-
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
-
         public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Output.ofNullable(triggers);
             return this;
-        }
-        public InvocationArgs build() {
+        }        public InvocationArgs build() {
             return new InvocationArgs(functionName, input, qualifier, triggers);
         }
     }

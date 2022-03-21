@@ -79,22 +79,18 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
-
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = Output.ofNullable(certificateThumbprint);
             return this;
         }
-
         public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Object value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public WebServiceParameterArgs build() {
+        }        public WebServiceParameterArgs build() {
             return new WebServiceParameterArgs(certificateThumbprint, value);
         }
     }

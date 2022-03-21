@@ -70,12 +70,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder logicalOperator(String logicalOperator) {
             this.logicalOperator = Objects.requireNonNull(logicalOperator);
             return this;
-        }
-        public GooglePrivacyDlpV2ExpressionsResponse build() {
+        }        public GooglePrivacyDlpV2ExpressionsResponse build() {
             return new GooglePrivacyDlpV2ExpressionsResponse(conditions, logicalOperator);
         }
     }

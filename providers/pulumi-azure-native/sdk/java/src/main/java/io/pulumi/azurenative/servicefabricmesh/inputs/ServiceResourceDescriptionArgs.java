@@ -182,82 +182,75 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             this.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
-
         public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyArgs> autoScalingPolicies) {
             this.autoScalingPolicies = Output.ofNullable(autoScalingPolicies);
             return this;
         }
-
+        public Builder autoScalingPolicies(AutoScalingPolicyArgs... autoScalingPolicies) {
+            return autoScalingPolicies(List.of(autoScalingPolicies));
+        }
         public Builder codePackages(Output<List<ContainerCodePackagePropertiesArgs>> codePackages) {
             this.codePackages = Objects.requireNonNull(codePackages);
             return this;
         }
-
         public Builder codePackages(List<ContainerCodePackagePropertiesArgs> codePackages) {
             this.codePackages = Output.of(Objects.requireNonNull(codePackages));
             return this;
         }
-
+        public Builder codePackages(ContainerCodePackagePropertiesArgs... codePackages) {
+            return codePackages(List.of(codePackages));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
-
         public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
             this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder networkRefs(@Nullable Output<List<NetworkRefArgs>> networkRefs) {
             this.networkRefs = networkRefs;
             return this;
         }
-
         public Builder networkRefs(@Nullable List<NetworkRefArgs> networkRefs) {
             this.networkRefs = Output.ofNullable(networkRefs);
             return this;
         }
-
+        public Builder networkRefs(NetworkRefArgs... networkRefs) {
+            return networkRefs(List.of(networkRefs));
+        }
         public Builder osType(Output<Either<String,OperatingSystemType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
-
         public Builder osType(Either<String,OperatingSystemType> osType) {
             this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
-
         public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Output.ofNullable(replicaCount);
             return this;
-        }
-        public ServiceResourceDescriptionArgs build() {
+        }        public ServiceResourceDescriptionArgs build() {
             return new ServiceResourceDescriptionArgs(autoScalingPolicies, codePackages, description, diagnostics, name, networkRefs, osType, replicaCount);
         }
     }

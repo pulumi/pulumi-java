@@ -154,42 +154,37 @@ public final class GetKMSCryptoKeyVersionResult {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
-
         public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
-
         public Builder publicKeys(List<GetKMSCryptoKeyVersionPublicKey> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
+        public Builder publicKeys(GetKMSCryptoKeyVersionPublicKey... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
-        }
-        public GetKMSCryptoKeyVersionResult build() {
+        }        public GetKMSCryptoKeyVersionResult build() {
             return new GetKMSCryptoKeyVersionResult(algorithm, cryptoKey, id, name, protectionLevel, publicKeys, state, version);
         }
     }

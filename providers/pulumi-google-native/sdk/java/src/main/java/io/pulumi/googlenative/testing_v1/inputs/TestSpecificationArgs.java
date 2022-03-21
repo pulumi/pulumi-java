@@ -214,102 +214,82 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
             this.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
-
         public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
             this.androidInstrumentationTest = Output.ofNullable(androidInstrumentationTest);
             return this;
         }
-
         public Builder androidRoboTest(@Nullable Output<AndroidRoboTestArgs> androidRoboTest) {
             this.androidRoboTest = androidRoboTest;
             return this;
         }
-
         public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
             this.androidRoboTest = Output.ofNullable(androidRoboTest);
             return this;
         }
-
         public Builder androidTestLoop(@Nullable Output<AndroidTestLoopArgs> androidTestLoop) {
             this.androidTestLoop = androidTestLoop;
             return this;
         }
-
         public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
             this.androidTestLoop = Output.ofNullable(androidTestLoop);
             return this;
         }
-
         public Builder disablePerformanceMetrics(@Nullable Output<Boolean> disablePerformanceMetrics) {
             this.disablePerformanceMetrics = disablePerformanceMetrics;
             return this;
         }
-
         public Builder disablePerformanceMetrics(@Nullable Boolean disablePerformanceMetrics) {
             this.disablePerformanceMetrics = Output.ofNullable(disablePerformanceMetrics);
             return this;
         }
-
         public Builder disableVideoRecording(@Nullable Output<Boolean> disableVideoRecording) {
             this.disableVideoRecording = disableVideoRecording;
             return this;
         }
-
         public Builder disableVideoRecording(@Nullable Boolean disableVideoRecording) {
             this.disableVideoRecording = Output.ofNullable(disableVideoRecording);
             return this;
         }
-
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
             this.iosTestLoop = iosTestLoop;
             return this;
         }
-
         public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
             this.iosTestLoop = Output.ofNullable(iosTestLoop);
             return this;
         }
-
         public Builder iosTestSetup(@Nullable Output<IosTestSetupArgs> iosTestSetup) {
             this.iosTestSetup = iosTestSetup;
             return this;
         }
-
         public Builder iosTestSetup(@Nullable IosTestSetupArgs iosTestSetup) {
             this.iosTestSetup = Output.ofNullable(iosTestSetup);
             return this;
         }
-
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
             this.iosXcTest = iosXcTest;
             return this;
         }
-
         public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
             this.iosXcTest = Output.ofNullable(iosXcTest);
             return this;
         }
-
         public Builder testSetup(@Nullable Output<TestSetupArgs> testSetup) {
             this.testSetup = testSetup;
             return this;
         }
-
         public Builder testSetup(@Nullable TestSetupArgs testSetup) {
             this.testSetup = Output.ofNullable(testSetup);
             return this;
         }
-
         public Builder testTimeout(@Nullable Output<String> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
-
         public Builder testTimeout(@Nullable String testTimeout) {
             this.testTimeout = Output.ofNullable(testTimeout);
             return this;
-        }
-        public TestSpecificationArgs build() {
+        }        public TestSpecificationArgs build() {
             return new TestSpecificationArgs(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }
     }

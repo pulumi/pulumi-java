@@ -128,27 +128,22 @@ public final class MsTeamsChannelResponse extends io.pulumi.resources.InvokeArgs
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder properties(@Nullable MsTeamsChannelPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public MsTeamsChannelResponse build() {
+        }        public MsTeamsChannelResponse build() {
             return new MsTeamsChannelResponse(channelName, etag, location, properties, provisioningState);
         }
     }

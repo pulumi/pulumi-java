@@ -87,17 +87,14 @@ public final class FileShareResponse {
             this.password = password;
             return this;
         }
-
         public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public FileShareResponse build() {
+        }        public FileShareResponse build() {
             return new FileShareResponse(password, path, userName);
         }
     }

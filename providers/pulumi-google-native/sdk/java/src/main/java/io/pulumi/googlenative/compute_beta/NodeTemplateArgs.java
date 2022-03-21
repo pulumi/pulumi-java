@@ -221,122 +221,104 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.accelerators = accelerators;
             return this;
         }
-
         public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
             this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
-
+        public Builder accelerators(AcceleratorConfigArgs... accelerators) {
+            return accelerators(List.of(accelerators));
+        }
         public Builder cpuOvercommitType(@Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType) {
             this.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
-
         public Builder cpuOvercommitType(@Nullable NodeTemplateCpuOvercommitType cpuOvercommitType) {
             this.cpuOvercommitType = Output.ofNullable(cpuOvercommitType);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disks(@Nullable Output<List<LocalDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
-
         public Builder disks(@Nullable List<LocalDiskArgs> disks) {
             this.disks = Output.ofNullable(disks);
             return this;
         }
-
+        public Builder disks(LocalDiskArgs... disks) {
+            return disks(List.of(disks));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodeAffinityLabels(@Nullable Output<Map<String,String>> nodeAffinityLabels) {
             this.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
-
         public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
             this.nodeAffinityLabels = Output.ofNullable(nodeAffinityLabels);
             return this;
         }
-
         public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
-
         public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
             this.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
-
         public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityArgs nodeTypeFlexibility) {
             this.nodeTypeFlexibility = Output.ofNullable(nodeTypeFlexibility);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder serverBinding(@Nullable Output<ServerBindingArgs> serverBinding) {
             this.serverBinding = serverBinding;
             return this;
         }
-
         public Builder serverBinding(@Nullable ServerBindingArgs serverBinding) {
             this.serverBinding = Output.ofNullable(serverBinding);
             return this;
-        }
-        public NodeTemplateArgs build() {
+        }        public NodeTemplateArgs build() {
             return new NodeTemplateArgs(accelerators, cpuOvercommitType, description, disks, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, project, region, requestId, serverBinding);
         }
     }

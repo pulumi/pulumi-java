@@ -171,102 +171,82 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             this.addAttributes = addAttributes;
             return this;
         }
-
         public Builder addAttributes(@Nullable PipelineAddAttributesArgs addAttributes) {
             this.addAttributes = Output.ofNullable(addAttributes);
             return this;
         }
-
         public Builder channel(@Nullable Output<PipelineChannelArgs> channel) {
             this.channel = channel;
             return this;
         }
-
         public Builder channel(@Nullable PipelineChannelArgs channel) {
             this.channel = Output.ofNullable(channel);
             return this;
         }
-
         public Builder datastore(@Nullable Output<PipelineDatastoreArgs> datastore) {
             this.datastore = datastore;
             return this;
         }
-
         public Builder datastore(@Nullable PipelineDatastoreArgs datastore) {
             this.datastore = Output.ofNullable(datastore);
             return this;
         }
-
         public Builder deviceRegistryEnrich(@Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich) {
             this.deviceRegistryEnrich = deviceRegistryEnrich;
             return this;
         }
-
         public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrichArgs deviceRegistryEnrich) {
             this.deviceRegistryEnrich = Output.ofNullable(deviceRegistryEnrich);
             return this;
         }
-
         public Builder deviceShadowEnrich(@Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich) {
             this.deviceShadowEnrich = deviceShadowEnrich;
             return this;
         }
-
         public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrichArgs deviceShadowEnrich) {
             this.deviceShadowEnrich = Output.ofNullable(deviceShadowEnrich);
             return this;
         }
-
         public Builder filter(@Nullable Output<PipelineFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable PipelineFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder lambda(@Nullable Output<PipelineLambdaArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
-
         public Builder lambda(@Nullable PipelineLambdaArgs lambda) {
             this.lambda = Output.ofNullable(lambda);
             return this;
         }
-
         public Builder math(@Nullable Output<PipelineMathArgs> math) {
             this.math = math;
             return this;
         }
-
         public Builder math(@Nullable PipelineMathArgs math) {
             this.math = Output.ofNullable(math);
             return this;
         }
-
         public Builder removeAttributes(@Nullable Output<PipelineRemoveAttributesArgs> removeAttributes) {
             this.removeAttributes = removeAttributes;
             return this;
         }
-
         public Builder removeAttributes(@Nullable PipelineRemoveAttributesArgs removeAttributes) {
             this.removeAttributes = Output.ofNullable(removeAttributes);
             return this;
         }
-
         public Builder selectAttributes(@Nullable Output<PipelineSelectAttributesArgs> selectAttributes) {
             this.selectAttributes = selectAttributes;
             return this;
         }
-
         public Builder selectAttributes(@Nullable PipelineSelectAttributesArgs selectAttributes) {
             this.selectAttributes = Output.ofNullable(selectAttributes);
             return this;
-        }
-        public PipelineActivityArgs build() {
+        }        public PipelineActivityArgs build() {
             return new PipelineActivityArgs(addAttributes, channel, datastore, deviceRegistryEnrich, deviceShadowEnrich, filter, lambda, math, removeAttributes, selectAttributes);
         }
     }

@@ -53,8 +53,7 @@ public final class AccessPolicyPortal {
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public AccessPolicyPortal build() {
+        }        public AccessPolicyPortal build() {
             return new AccessPolicyPortal(id);
         }
     }

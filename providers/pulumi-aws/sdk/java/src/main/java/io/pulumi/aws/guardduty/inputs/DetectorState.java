@@ -157,72 +157,58 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder datasources(@Nullable Output<DetectorDatasourcesGetArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
-
         public Builder datasources(@Nullable DetectorDatasourcesGetArgs datasources) {
             this.datasources = Output.ofNullable(datasources);
             return this;
         }
-
         public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
-
         public Builder enable(@Nullable Boolean enable) {
             this.enable = Output.ofNullable(enable);
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public DetectorState build() {
+        }        public DetectorState build() {
             return new DetectorState(accountId, arn, datasources, enable, findingPublishingFrequency, tags, tagsAll);
         }
     }

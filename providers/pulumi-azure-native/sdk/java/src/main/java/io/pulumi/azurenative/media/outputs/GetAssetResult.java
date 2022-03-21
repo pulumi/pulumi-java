@@ -232,62 +232,50 @@ public final class GetAssetResult {
             this.alternateId = alternateId;
             return this;
         }
-
         public Builder assetId(String assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
-
         public Builder container(@Nullable String container) {
             this.container = container;
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
-
         public Builder storageEncryptionFormat(String storageEncryptionFormat) {
             this.storageEncryptionFormat = Objects.requireNonNull(storageEncryptionFormat);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetAssetResult build() {
+        }        public GetAssetResult build() {
             return new GetAssetResult(alternateId, assetId, container, created, description, id, lastModified, name, storageAccountName, storageEncryptionFormat, systemData, type);
         }
     }

@@ -91,32 +91,26 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends io
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public Builder interval(Integer interval) {
             this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
-
         public Builder intervalUnit(@Nullable Output<String> intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
-
         public Builder intervalUnit(@Nullable String intervalUnit) {
             this.intervalUnit = Output.ofNullable(intervalUnit);
             return this;
         }
-
         public Builder times(@Nullable Output<String> times) {
             this.times = times;
             return this;
         }
-
         public Builder times(@Nullable String times) {
             this.times = Output.ofNullable(times);
             return this;
-        }
-        public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs build() {
+        }        public LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs build() {
             return new LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(interval, intervalUnit, times);
         }
     }

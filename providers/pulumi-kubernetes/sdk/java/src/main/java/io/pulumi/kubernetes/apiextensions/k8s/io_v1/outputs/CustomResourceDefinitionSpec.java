@@ -140,32 +140,29 @@ public final class CustomResourceDefinitionSpec {
             this.conversion = conversion;
             return this;
         }
-
         public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
-
         public Builder names(CustomResourceDefinitionNames names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder versions(List<CustomResourceDefinitionVersion> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-        public CustomResourceDefinitionSpec build() {
+        public Builder versions(CustomResourceDefinitionVersion... versions) {
+            return versions(List.of(versions));
+        }        public CustomResourceDefinitionSpec build() {
             return new CustomResourceDefinitionSpec(conversion, group, names, preserveUnknownFields, scope, versions);
         }
     }

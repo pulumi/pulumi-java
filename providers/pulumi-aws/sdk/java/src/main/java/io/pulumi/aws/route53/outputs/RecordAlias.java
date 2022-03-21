@@ -86,17 +86,14 @@ public final class RecordAlias {
             this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
-        }
-        public RecordAlias build() {
+        }        public RecordAlias build() {
             return new RecordAlias(evaluateTargetHealth, name, zoneId);
         }
     }

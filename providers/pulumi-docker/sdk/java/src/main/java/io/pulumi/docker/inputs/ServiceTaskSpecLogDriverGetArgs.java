@@ -67,22 +67,18 @@ public final class ServiceTaskSpecLogDriverGetArgs extends io.pulumi.resources.R
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder options(@Nullable Output<Map<String,String>> options) {
             this.options = options;
             return this;
         }
-
         public Builder options(@Nullable Map<String,String> options) {
             this.options = Output.ofNullable(options);
             return this;
-        }
-        public ServiceTaskSpecLogDriverGetArgs build() {
+        }        public ServiceTaskSpecLogDriverGetArgs build() {
             return new ServiceTaskSpecLogDriverGetArgs(name, options);
         }
     }

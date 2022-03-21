@@ -170,42 +170,37 @@ public final class GetClusterResult {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterUuid(String clusterUuid) {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
         }
-
         public Builder config(ClusterConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder metrics(ClusterMetricsResponse metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder status(ClusterStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusHistory(List<ClusterStatusResponse> statusHistory) {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }
-        public GetClusterResult build() {
+        public Builder statusHistory(ClusterStatusResponse... statusHistory) {
+            return statusHistory(List.of(statusHistory));
+        }        public GetClusterResult build() {
             return new GetClusterResult(clusterName, clusterUuid, config, labels, metrics, project, status, statusHistory);
         }
     }

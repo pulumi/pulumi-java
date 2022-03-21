@@ -429,122 +429,101 @@ public final class GetComponentResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public Builder applicationType(String applicationType) {
             this.applicationType = Objects.requireNonNull(applicationType);
             return this;
         }
-
         public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
-
         public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
             this.disableIpMasking = disableIpMasking;
             return this;
         }
-
         public Builder flowType(@Nullable String flowType) {
             this.flowType = flowType;
             return this;
         }
-
         public Builder hockeyAppId(@Nullable String hockeyAppId) {
             this.hockeyAppId = hockeyAppId;
             return this;
         }
-
         public Builder hockeyAppToken(String hockeyAppToken) {
             this.hockeyAppToken = Objects.requireNonNull(hockeyAppToken);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
-
         public Builder ingestionMode(@Nullable String ingestionMode) {
             this.ingestionMode = ingestionMode;
             return this;
         }
-
         public Builder instrumentationKey(String instrumentationKey) {
             this.instrumentationKey = Objects.requireNonNull(instrumentationKey);
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder privateLinkScopedResources(List<PrivateLinkScopedResourceResponse> privateLinkScopedResources) {
             this.privateLinkScopedResources = Objects.requireNonNull(privateLinkScopedResources);
             return this;
         }
-
+        public Builder privateLinkScopedResources(PrivateLinkScopedResourceResponse... privateLinkScopedResources) {
+            return privateLinkScopedResources(List.of(privateLinkScopedResources));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder requestSource(@Nullable String requestSource) {
             this.requestSource = requestSource;
             return this;
         }
-
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
-
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetComponentResult build() {
+        }        public GetComponentResult build() {
             return new GetComponentResult(appId, applicationId, applicationType, connectionString, creationDate, disableIpMasking, flowType, hockeyAppId, hockeyAppToken, id, immediatePurgeDataOn30Days, ingestionMode, instrumentationKey, kind, location, name, privateLinkScopedResources, provisioningState, requestSource, retentionInDays, samplingPercentage, tags, tenantId, type);
         }
     }

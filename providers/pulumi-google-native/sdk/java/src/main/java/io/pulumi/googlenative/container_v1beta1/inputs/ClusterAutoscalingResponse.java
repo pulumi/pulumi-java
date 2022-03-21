@@ -128,27 +128,28 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
             this.autoprovisioningLocations = Objects.requireNonNull(autoprovisioningLocations);
             return this;
         }
-
+        public Builder autoprovisioningLocations(String... autoprovisioningLocations) {
+            return autoprovisioningLocations(List.of(autoprovisioningLocations));
+        }
         public Builder autoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults) {
             this.autoprovisioningNodePoolDefaults = Objects.requireNonNull(autoprovisioningNodePoolDefaults);
             return this;
         }
-
         public Builder autoscalingProfile(String autoscalingProfile) {
             this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
             return this;
         }
-
         public Builder enableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
             this.enableNodeAutoprovisioning = Objects.requireNonNull(enableNodeAutoprovisioning);
             return this;
         }
-
         public Builder resourceLimits(List<ResourceLimitResponse> resourceLimits) {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-        public ClusterAutoscalingResponse build() {
+        public Builder resourceLimits(ResourceLimitResponse... resourceLimits) {
+            return resourceLimits(List.of(resourceLimits));
+        }        public ClusterAutoscalingResponse build() {
             return new ClusterAutoscalingResponse(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
         }
     }

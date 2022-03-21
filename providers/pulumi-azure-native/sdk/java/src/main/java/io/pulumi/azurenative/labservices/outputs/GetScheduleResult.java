@@ -201,52 +201,42 @@ public final class GetScheduleResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder recurrencePattern(@Nullable RecurrencePatternResponse recurrencePattern) {
             this.recurrencePattern = recurrencePattern;
             return this;
         }
-
         public Builder startAt(@Nullable String startAt) {
             this.startAt = startAt;
             return this;
         }
-
         public Builder stopAt(String stopAt) {
             this.stopAt = Objects.requireNonNull(stopAt);
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder timeZoneId(String timeZoneId) {
             this.timeZoneId = Objects.requireNonNull(timeZoneId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetScheduleResult build() {
+        }        public GetScheduleResult build() {
             return new GetScheduleResult(id, name, notes, provisioningState, recurrencePattern, startAt, stopAt, systemData, timeZoneId, type);
         }
     }

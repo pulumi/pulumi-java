@@ -51,8 +51,7 @@ public final class SessionInfoResponse {
         public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
-        }
-        public SessionInfoResponse build() {
+        }        public SessionInfoResponse build() {
             return new SessionInfoResponse(sessionId);
         }
     }

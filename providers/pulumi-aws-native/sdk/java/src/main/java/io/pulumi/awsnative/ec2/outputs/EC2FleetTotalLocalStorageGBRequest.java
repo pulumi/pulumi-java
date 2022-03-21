@@ -55,12 +55,10 @@ public final class EC2FleetTotalLocalStorageGBRequest {
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
-        }
-        public EC2FleetTotalLocalStorageGBRequest build() {
+        }        public EC2FleetTotalLocalStorageGBRequest build() {
             return new EC2FleetTotalLocalStorageGBRequest(max, min);
         }
     }

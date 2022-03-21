@@ -281,77 +281,62 @@ public final class GetWatcherResult {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
-
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = scriptName;
             return this;
         }
-
         public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
-
         public Builder scriptRunOn(@Nullable String scriptRunOn) {
             this.scriptRunOn = scriptRunOn;
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWatcherResult build() {
+        }        public GetWatcherResult build() {
             return new GetWatcherResult(creationTime, description, etag, executionFrequencyInSeconds, id, lastModifiedBy, lastModifiedTime, location, name, scriptName, scriptParameters, scriptRunOn, status, tags, type);
         }
     }

@@ -59,8 +59,7 @@ public final class InstanceParamsResponse extends io.pulumi.resources.InvokeArgs
         public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
-        }
-        public InstanceParamsResponse build() {
+        }        public InstanceParamsResponse build() {
             return new InstanceParamsResponse(resourceManagerTags);
         }
     }

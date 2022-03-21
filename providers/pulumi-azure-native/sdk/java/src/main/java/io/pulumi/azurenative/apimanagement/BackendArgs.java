@@ -240,122 +240,98 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             this.backendId = backendId;
             return this;
         }
-
         public Builder backendId(@Nullable String backendId) {
             this.backendId = Output.ofNullable(backendId);
             return this;
         }
-
         public Builder credentials(@Nullable Output<BackendCredentialsContractArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable BackendCredentialsContractArgs credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder properties(@Nullable Output<BackendPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable BackendPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder protocol(Output<Either<String,BackendProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,BackendProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder proxy(@Nullable Output<BackendProxyContractArgs> proxy) {
             this.proxy = proxy;
             return this;
         }
-
         public Builder proxy(@Nullable BackendProxyContractArgs proxy) {
             this.proxy = Output.ofNullable(proxy);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
         }
-
         public Builder tls(@Nullable Output<BackendTlsPropertiesArgs> tls) {
             this.tls = tls;
             return this;
         }
-
         public Builder tls(@Nullable BackendTlsPropertiesArgs tls) {
             this.tls = Output.ofNullable(tls);
             return this;
         }
-
         public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public BackendArgs build() {
+        }        public BackendArgs build() {
             return new BackendArgs(backendId, credentials, description, properties, protocol, proxy, resourceGroupName, resourceId, serviceName, title, tls, url);
         }
     }

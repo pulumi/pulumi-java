@@ -70,12 +70,13 @@ public final class GetRulesPackagesResult {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
-
+        public Builder arns(String... arns) {
+            return arns(List.of(arns));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetRulesPackagesResult build() {
+        }        public GetRulesPackagesResult build() {
             return new GetRulesPackagesResult(arns, id);
         }
     }

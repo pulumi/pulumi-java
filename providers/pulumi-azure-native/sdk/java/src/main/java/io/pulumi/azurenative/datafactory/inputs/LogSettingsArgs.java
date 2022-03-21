@@ -96,32 +96,26 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
-
         public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsArgs copyActivityLogSettings) {
             this.copyActivityLogSettings = Output.ofNullable(copyActivityLogSettings);
             return this;
         }
-
         public Builder enableCopyActivityLog(@Nullable Output<Object> enableCopyActivityLog) {
             this.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
-
         public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
             this.enableCopyActivityLog = Output.ofNullable(enableCopyActivityLog);
             return this;
         }
-
         public Builder logLocationSettings(Output<LogLocationSettingsArgs> logLocationSettings) {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }
-
         public Builder logLocationSettings(LogLocationSettingsArgs logLocationSettings) {
             this.logLocationSettings = Output.of(Objects.requireNonNull(logLocationSettings));
             return this;
-        }
-        public LogSettingsArgs build() {
+        }        public LogSettingsArgs build() {
             return new LogSettingsArgs(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }
     }

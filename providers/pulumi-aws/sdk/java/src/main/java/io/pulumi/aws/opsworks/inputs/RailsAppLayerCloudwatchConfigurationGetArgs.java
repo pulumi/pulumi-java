@@ -68,22 +68,21 @@ public final class RailsAppLayerCloudwatchConfigurationGetArgs extends io.pulumi
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<RailsAppLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public RailsAppLayerCloudwatchConfigurationGetArgs build() {
+        public Builder logStreams(RailsAppLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public RailsAppLayerCloudwatchConfigurationGetArgs build() {
             return new RailsAppLayerCloudwatchConfigurationGetArgs(enabled, logStreams);
         }
     }

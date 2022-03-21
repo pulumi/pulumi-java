@@ -53,8 +53,7 @@ public final class VirtualRouterSpec {
         public Builder listener(VirtualRouterSpecListener listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
-        }
-        public VirtualRouterSpec build() {
+        }        public VirtualRouterSpec build() {
             return new VirtualRouterSpec(listener);
         }
     }

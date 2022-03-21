@@ -95,17 +95,17 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
             this.extendedLocations = extendedLocations;
             return this;
         }
-
+        public Builder extendedLocations(String... extendedLocations) {
+            return extendedLocations(List.of(extendedLocations));
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ProviderExtendedLocationResponse build() {
+        }        public ProviderExtendedLocationResponse build() {
             return new ProviderExtendedLocationResponse(extendedLocations, location, type);
         }
     }

@@ -61,12 +61,13 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public Builder resourceUri(List<String> resourceUri) {
             this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
-        public DeployableArgs build() {
+        public Builder resourceUri(String... resourceUri) {
+            return resourceUri(List.of(resourceUri));
+        }        public DeployableArgs build() {
             return new DeployableArgs(resourceUri);
         }
     }

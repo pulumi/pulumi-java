@@ -71,12 +71,10 @@ public final class KeyVaultPropertiesResponse {
             this.currentKeyIdentifier = Objects.requireNonNull(currentKeyIdentifier);
             return this;
         }
-
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
-        }
-        public KeyVaultPropertiesResponse build() {
+        }        public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(currentKeyIdentifier, keyIdentifier);
         }
     }

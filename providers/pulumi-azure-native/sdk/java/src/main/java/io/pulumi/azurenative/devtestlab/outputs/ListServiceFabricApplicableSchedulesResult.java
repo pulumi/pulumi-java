@@ -153,37 +153,30 @@ public final class ListServiceFabricApplicableSchedulesResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labVmsShutdown(@Nullable ScheduleResponse labVmsShutdown) {
             this.labVmsShutdown = labVmsShutdown;
             return this;
         }
-
         public Builder labVmsStartup(@Nullable ScheduleResponse labVmsStartup) {
             this.labVmsStartup = labVmsStartup;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ListServiceFabricApplicableSchedulesResult build() {
+        }        public ListServiceFabricApplicableSchedulesResult build() {
             return new ListServiceFabricApplicableSchedulesResult(id, labVmsShutdown, labVmsStartup, location, name, tags, type);
         }
     }

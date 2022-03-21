@@ -109,22 +109,21 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder events(@Nullable List<SyncMigrationDatabaseErrorEventResponse> events) {
             this.events = events;
             return this;
         }
-
+        public Builder events(SyncMigrationDatabaseErrorEventResponse... events) {
+            return events(List.of(events));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
-        }
-        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse build() {
+        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse(errorMessage, events, id, resultType);
         }
     }

@@ -76,12 +76,10 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
-        }
-        public RolePolicy build() {
+        }        public RolePolicy build() {
             return new RolePolicy(policyDocument, policyName);
         }
     }

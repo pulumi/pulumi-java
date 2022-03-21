@@ -147,42 +147,46 @@ public final class GetIpRangesResult {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
-
+        public Builder cidrBlocks(String... cidrBlocks) {
+            return cidrBlocks(List.of(cidrBlocks));
+        }
         public Builder createDate(String createDate) {
             this.createDate = Objects.requireNonNull(createDate);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ipv6CidrBlocks(List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = Objects.requireNonNull(ipv6CidrBlocks);
             return this;
         }
-
+        public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
+            return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
+        }
         public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
-
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }
         public Builder services(List<String> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
-
+        public Builder services(String... services) {
+            return services(List.of(services));
+        }
         public Builder syncToken(Integer syncToken) {
             this.syncToken = Objects.requireNonNull(syncToken);
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public GetIpRangesResult build() {
+        }        public GetIpRangesResult build() {
             return new GetIpRangesResult(cidrBlocks, createDate, id, ipv6CidrBlocks, regions, services, syncToken, url);
         }
     }

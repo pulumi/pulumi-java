@@ -188,92 +188,74 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
-
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = Output.ofNullable(inventoryItemId);
             return this;
         }
-
         public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder moRefId(@Nullable Output<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
-
         public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = Output.ofNullable(moRefId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vCenterId(@Nullable Output<String> vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
-
         public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = Output.ofNullable(vCenterId);
             return this;
         }
-
         public Builder virtualNetworkName(@Nullable Output<String> virtualNetworkName) {
             this.virtualNetworkName = virtualNetworkName;
             return this;
         }
-
         public Builder virtualNetworkName(@Nullable String virtualNetworkName) {
             this.virtualNetworkName = Output.ofNullable(virtualNetworkName);
             return this;
-        }
-        public VirtualNetworkArgs build() {
+        }        public VirtualNetworkArgs build() {
             return new VirtualNetworkArgs(extendedLocation, inventoryItemId, kind, location, moRefId, resourceGroupName, tags, vCenterId, virtualNetworkName);
         }
     }

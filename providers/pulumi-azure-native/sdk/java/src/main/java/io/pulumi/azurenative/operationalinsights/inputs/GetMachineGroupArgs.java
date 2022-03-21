@@ -122,27 +122,22 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.endTime = endTime;
             return this;
         }
-
         public Builder machineGroupName(String machineGroupName) {
             this.machineGroupName = Objects.requireNonNull(machineGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetMachineGroupArgs build() {
+        }        public GetMachineGroupArgs build() {
             return new GetMachineGroupArgs(endTime, machineGroupName, resourceGroupName, startTime, workspaceName);
         }
     }

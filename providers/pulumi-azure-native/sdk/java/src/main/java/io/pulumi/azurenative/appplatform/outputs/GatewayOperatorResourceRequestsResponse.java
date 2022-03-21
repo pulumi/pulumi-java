@@ -86,17 +86,14 @@ public final class GatewayOperatorResourceRequestsResponse {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
-        }
-        public GatewayOperatorResourceRequestsResponse build() {
+        }        public GatewayOperatorResourceRequestsResponse build() {
             return new GatewayOperatorResourceRequestsResponse(cpu, instanceCount, memory);
         }
     }

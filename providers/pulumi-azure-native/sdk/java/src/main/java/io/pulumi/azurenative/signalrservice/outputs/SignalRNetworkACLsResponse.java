@@ -90,17 +90,17 @@ public final class SignalRNetworkACLsResponse {
             this.defaultAction = defaultAction;
             return this;
         }
-
         public Builder privateEndpoints(@Nullable List<PrivateEndpointACLResponse> privateEndpoints) {
             this.privateEndpoints = privateEndpoints;
             return this;
         }
-
+        public Builder privateEndpoints(PrivateEndpointACLResponse... privateEndpoints) {
+            return privateEndpoints(List.of(privateEndpoints));
+        }
         public Builder publicNetwork(@Nullable NetworkACLResponse publicNetwork) {
             this.publicNetwork = publicNetwork;
             return this;
-        }
-        public SignalRNetworkACLsResponse build() {
+        }        public SignalRNetworkACLsResponse build() {
             return new SignalRNetworkACLsResponse(defaultAction, privateEndpoints, publicNetwork);
         }
     }

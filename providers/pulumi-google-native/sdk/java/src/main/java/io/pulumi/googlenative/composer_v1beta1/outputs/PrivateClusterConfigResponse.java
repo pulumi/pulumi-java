@@ -86,17 +86,14 @@ public final class PrivateClusterConfigResponse {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
-
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
-
         public Builder masterIpv4ReservedRange(String masterIpv4ReservedRange) {
             this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
             return this;
-        }
-        public PrivateClusterConfigResponse build() {
+        }        public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, masterIpv4CidrBlock, masterIpv4ReservedRange);
         }
     }

@@ -160,72 +160,58 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
-
         public Builder registryName(String registryName) {
             this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder runRequest(@Nullable Output<Object> runRequest) {
             this.runRequest = runRequest;
             return this;
         }
-
         public Builder runRequest(@Nullable Object runRequest) {
             this.runRequest = Output.ofNullable(runRequest);
             return this;
         }
-
         public Builder taskRunName(@Nullable Output<String> taskRunName) {
             this.taskRunName = taskRunName;
             return this;
         }
-
         public Builder taskRunName(@Nullable String taskRunName) {
             this.taskRunName = Output.ofNullable(taskRunName);
             return this;
-        }
-        public TaskRunArgs build() {
+        }        public TaskRunArgs build() {
             return new TaskRunArgs(forceUpdateTag, identity, location, registryName, resourceGroupName, runRequest, taskRunName);
         }
     }

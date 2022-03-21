@@ -118,52 +118,45 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
             this.predicateType = predicateType;
             return this;
         }
-
         public Builder predicateType(@Nullable String predicateType) {
             this.predicateType = Output.ofNullable(predicateType);
             return this;
         }
-
         public Builder provenance(@Nullable Output<InTotoProvenanceArgs> provenance) {
             this.provenance = provenance;
             return this;
         }
-
         public Builder provenance(@Nullable InTotoProvenanceArgs provenance) {
             this.provenance = Output.ofNullable(provenance);
             return this;
         }
-
         public Builder slsaProvenance(@Nullable Output<SlsaProvenanceArgs> slsaProvenance) {
             this.slsaProvenance = slsaProvenance;
             return this;
         }
-
         public Builder slsaProvenance(@Nullable SlsaProvenanceArgs slsaProvenance) {
             this.slsaProvenance = Output.ofNullable(slsaProvenance);
             return this;
         }
-
         public Builder subject(@Nullable Output<List<SubjectArgs>> subject) {
             this.subject = subject;
             return this;
         }
-
         public Builder subject(@Nullable List<SubjectArgs> subject) {
             this.subject = Output.ofNullable(subject);
             return this;
         }
-
+        public Builder subject(SubjectArgs... subject) {
+            return subject(List.of(subject));
+        }
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public InTotoStatementArgs build() {
+        }        public InTotoStatementArgs build() {
             return new InTotoStatementArgs(predicateType, provenance, slsaProvenance, subject, type);
         }
     }

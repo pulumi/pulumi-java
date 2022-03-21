@@ -61,12 +61,10 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
             this.ipAddressOrRange = ipAddressOrRange;
             return this;
         }
-
         public Builder ipAddressOrRange(@Nullable String ipAddressOrRange) {
             this.ipAddressOrRange = Output.ofNullable(ipAddressOrRange);
             return this;
-        }
-        public IpAddressOrRangeArgs build() {
+        }        public IpAddressOrRangeArgs build() {
             return new IpAddressOrRangeArgs(ipAddressOrRange);
         }
     }

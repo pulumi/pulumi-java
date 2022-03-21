@@ -70,12 +70,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
             this.categoricalFeatures = Objects.requireNonNull(categoricalFeatures);
             return this;
         }
-
         public Builder numericalFeatures(Map<String,String> numericalFeatures) {
             this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
             return this;
-        }
-        public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
+        }        public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
             return new GoogleCloudRecommendationengineV1beta1FeatureMapResponse(categoricalFeatures, numericalFeatures);
         }
     }

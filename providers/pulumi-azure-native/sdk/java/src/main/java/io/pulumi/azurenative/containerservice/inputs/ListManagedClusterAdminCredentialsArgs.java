@@ -72,12 +72,10 @@ public final class ListManagedClusterAdminCredentialsArgs extends io.pulumi.reso
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public ListManagedClusterAdminCredentialsArgs build() {
+        }        public ListManagedClusterAdminCredentialsArgs build() {
             return new ListManagedClusterAdminCredentialsArgs(resourceGroupName, resourceName);
         }
     }

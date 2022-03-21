@@ -336,182 +336,152 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.apiEntitySetName = apiEntitySetName;
             return this;
         }
-
         public Builder apiEntitySetName(@Nullable String apiEntitySetName) {
             this.apiEntitySetName = Output.ofNullable(apiEntitySetName);
             return this;
         }
-
         public Builder attributes(@Nullable Output<Map<String,List<String>>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable Map<String,List<String>> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
         public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable Map<String,String> description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder entityType(@Nullable Output<EntityTypes> entityType) {
             this.entityType = entityType;
             return this;
         }
-
         public Builder entityType(@Nullable EntityTypes entityType) {
             this.entityType = Output.ofNullable(entityType);
             return this;
         }
-
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
             this.fields = fields;
             return this;
         }
-
         public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
             this.fields = Output.ofNullable(fields);
             return this;
         }
-
+        public Builder fields(PropertyDefinitionArgs... fields) {
+            return fields(List.of(fields));
+        }
         public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
-
         public Builder hubName(String hubName) {
             this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
-
         public Builder instancesCount(@Nullable Output<Integer> instancesCount) {
             this.instancesCount = instancesCount;
             return this;
         }
-
         public Builder instancesCount(@Nullable Integer instancesCount) {
             this.instancesCount = Output.ofNullable(instancesCount);
             return this;
         }
-
         public Builder largeImage(@Nullable Output<String> largeImage) {
             this.largeImage = largeImage;
             return this;
         }
-
         public Builder largeImage(@Nullable String largeImage) {
             this.largeImage = Output.ofNullable(largeImage);
             return this;
         }
-
         public Builder localizedAttributes(@Nullable Output<Map<String,Map<String,String>>> localizedAttributes) {
             this.localizedAttributes = localizedAttributes;
             return this;
         }
-
         public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
             this.localizedAttributes = Output.ofNullable(localizedAttributes);
             return this;
         }
-
         public Builder mediumImage(@Nullable Output<String> mediumImage) {
             this.mediumImage = mediumImage;
             return this;
         }
-
         public Builder mediumImage(@Nullable String mediumImage) {
             this.mediumImage = Output.ofNullable(mediumImage);
             return this;
         }
-
         public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
-
         public Builder profileName(@Nullable String profileName) {
             this.profileName = Output.ofNullable(profileName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder schemaItemTypeLink(@Nullable Output<String> schemaItemTypeLink) {
             this.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
-
         public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
             this.schemaItemTypeLink = Output.ofNullable(schemaItemTypeLink);
             return this;
         }
-
         public Builder smallImage(@Nullable Output<String> smallImage) {
             this.smallImage = smallImage;
             return this;
         }
-
         public Builder smallImage(@Nullable String smallImage) {
             this.smallImage = Output.ofNullable(smallImage);
             return this;
         }
-
         public Builder strongIds(@Nullable Output<List<StrongIdArgs>> strongIds) {
             this.strongIds = strongIds;
             return this;
         }
-
         public Builder strongIds(@Nullable List<StrongIdArgs> strongIds) {
             this.strongIds = Output.ofNullable(strongIds);
             return this;
         }
-
+        public Builder strongIds(StrongIdArgs... strongIds) {
+            return strongIds(List.of(strongIds));
+        }
         public Builder timestampFieldName(@Nullable Output<String> timestampFieldName) {
             this.timestampFieldName = timestampFieldName;
             return this;
         }
-
         public Builder timestampFieldName(@Nullable String timestampFieldName) {
             this.timestampFieldName = Output.ofNullable(timestampFieldName);
             return this;
         }
-
         public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = Output.ofNullable(typeName);
             return this;
-        }
-        public ProfileArgs build() {
+        }        public ProfileArgs build() {
             return new ProfileArgs(apiEntitySetName, attributes, description, displayName, entityType, fields, hubName, instancesCount, largeImage, localizedAttributes, mediumImage, profileName, resourceGroupName, schemaItemTypeLink, smallImage, strongIds, timestampFieldName, typeName);
         }
     }

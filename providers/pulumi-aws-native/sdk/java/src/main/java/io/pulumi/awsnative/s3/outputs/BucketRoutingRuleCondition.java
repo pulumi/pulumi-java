@@ -71,12 +71,10 @@ public final class BucketRoutingRuleCondition {
             this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
-
         public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
-        }
-        public BucketRoutingRuleCondition build() {
+        }        public BucketRoutingRuleCondition build() {
             return new BucketRoutingRuleCondition(httpErrorCodeReturnedEquals, keyPrefixEquals);
         }
     }

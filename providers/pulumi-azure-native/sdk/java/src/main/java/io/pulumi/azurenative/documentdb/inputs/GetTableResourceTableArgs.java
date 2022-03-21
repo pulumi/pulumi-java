@@ -88,17 +88,14 @@ public final class GetTableResourceTableArgs extends io.pulumi.resources.InvokeA
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public GetTableResourceTableArgs build() {
+        }        public GetTableResourceTableArgs build() {
             return new GetTableResourceTableArgs(accountName, resourceGroupName, tableName);
         }
     }

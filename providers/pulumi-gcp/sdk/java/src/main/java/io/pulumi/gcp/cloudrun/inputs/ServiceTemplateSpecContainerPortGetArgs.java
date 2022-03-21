@@ -91,32 +91,26 @@ public final class ServiceTemplateSpecContainerPortGetArgs extends io.pulumi.res
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder containerPort(Integer containerPort) {
             this.containerPort = Output.of(Objects.requireNonNull(containerPort));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
-        }
-        public ServiceTemplateSpecContainerPortGetArgs build() {
+        }        public ServiceTemplateSpecContainerPortGetArgs build() {
             return new ServiceTemplateSpecContainerPortGetArgs(containerPort, name, protocol);
         }
     }

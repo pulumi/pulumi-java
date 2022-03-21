@@ -78,22 +78,18 @@ public final class TriggerBuildOptionsVolumeGetArgs extends io.pulumi.resources.
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public TriggerBuildOptionsVolumeGetArgs build() {
+        }        public TriggerBuildOptionsVolumeGetArgs build() {
             return new TriggerBuildOptionsVolumeGetArgs(name, path);
         }
     }

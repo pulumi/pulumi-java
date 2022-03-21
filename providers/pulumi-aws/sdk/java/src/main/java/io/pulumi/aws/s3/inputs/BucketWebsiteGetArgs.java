@@ -109,42 +109,34 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
             this.errorDocument = errorDocument;
             return this;
         }
-
         public Builder errorDocument(@Nullable String errorDocument) {
             this.errorDocument = Output.ofNullable(errorDocument);
             return this;
         }
-
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
-
         public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = Output.ofNullable(indexDocument);
             return this;
         }
-
         public Builder redirectAllRequestsTo(@Nullable Output<String> redirectAllRequestsTo) {
             this.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
-
         public Builder redirectAllRequestsTo(@Nullable String redirectAllRequestsTo) {
             this.redirectAllRequestsTo = Output.ofNullable(redirectAllRequestsTo);
             return this;
         }
-
         public Builder routingRules(@Nullable Output<Either<String,List<String>>> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
-
         public Builder routingRules(@Nullable Either<String,List<String>> routingRules) {
             this.routingRules = Output.ofNullable(routingRules);
             return this;
-        }
-        public BucketWebsiteGetArgs build() {
+        }        public BucketWebsiteGetArgs build() {
             return new BucketWebsiteGetArgs(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }
     }

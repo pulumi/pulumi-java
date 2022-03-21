@@ -61,12 +61,10 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
             this.limitMbps = limitMbps;
             return this;
         }
-
         public Builder limitMbps(@Nullable String limitMbps) {
             this.limitMbps = Output.ofNullable(limitMbps);
             return this;
-        }
-        public BandwidthLimitArgs build() {
+        }        public BandwidthLimitArgs build() {
             return new BandwidthLimitArgs(limitMbps);
         }
     }

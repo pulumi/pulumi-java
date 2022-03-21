@@ -306,162 +306,133 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.author = author;
             return this;
         }
-
         public Builder author(@Nullable MetadataAuthorArgs author) {
             this.author = Output.ofNullable(author);
             return this;
         }
-
         public Builder categories(@Nullable Output<MetadataCategoriesArgs> categories) {
             this.categories = categories;
             return this;
         }
-
         public Builder categories(@Nullable MetadataCategoriesArgs categories) {
             this.categories = Output.ofNullable(categories);
             return this;
         }
-
         public Builder contentId(@Nullable Output<String> contentId) {
             this.contentId = contentId;
             return this;
         }
-
         public Builder contentId(@Nullable String contentId) {
             this.contentId = Output.ofNullable(contentId);
             return this;
         }
-
         public Builder dependencies(@Nullable Output<MetadataDependenciesArgs> dependencies) {
             this.dependencies = dependencies;
             return this;
         }
-
         public Builder dependencies(@Nullable MetadataDependenciesArgs dependencies) {
             this.dependencies = Output.ofNullable(dependencies);
             return this;
         }
-
         public Builder firstPublishDate(@Nullable Output<String> firstPublishDate) {
             this.firstPublishDate = firstPublishDate;
             return this;
         }
-
         public Builder firstPublishDate(@Nullable String firstPublishDate) {
             this.firstPublishDate = Output.ofNullable(firstPublishDate);
             return this;
         }
-
         public Builder kind(Output<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,Kind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder lastPublishDate(@Nullable Output<String> lastPublishDate) {
             this.lastPublishDate = lastPublishDate;
             return this;
         }
-
         public Builder lastPublishDate(@Nullable String lastPublishDate) {
             this.lastPublishDate = Output.ofNullable(lastPublishDate);
             return this;
         }
-
         public Builder metadataName(@Nullable Output<String> metadataName) {
             this.metadataName = metadataName;
             return this;
         }
-
         public Builder metadataName(@Nullable String metadataName) {
             this.metadataName = Output.ofNullable(metadataName);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder parentId(Output<String> parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
-
         public Builder parentId(String parentId) {
             this.parentId = Output.of(Objects.requireNonNull(parentId));
             return this;
         }
-
         public Builder providers(@Nullable Output<List<String>> providers) {
             this.providers = providers;
             return this;
         }
-
         public Builder providers(@Nullable List<String> providers) {
             this.providers = Output.ofNullable(providers);
             return this;
         }
-
+        public Builder providers(String... providers) {
+            return providers(List.of(providers));
+        }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder source(@Nullable Output<MetadataSourceArgs> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable MetadataSourceArgs source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder support(@Nullable Output<MetadataSupportArgs> support) {
             this.support = support;
             return this;
         }
-
         public Builder support(@Nullable MetadataSupportArgs support) {
             this.support = Output.ofNullable(support);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public MetadataArgs build() {
+        }        public MetadataArgs build() {
             return new MetadataArgs(author, categories, contentId, dependencies, firstPublishDate, kind, lastPublishDate, metadataName, operationalInsightsResourceProvider, parentId, providers, resourceGroupName, source, support, version, workspaceName);
         }
     }

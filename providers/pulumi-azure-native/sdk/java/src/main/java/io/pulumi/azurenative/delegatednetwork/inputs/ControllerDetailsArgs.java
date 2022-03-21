@@ -61,12 +61,10 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
-        }
-        public ControllerDetailsArgs build() {
+        }        public ControllerDetailsArgs build() {
             return new ControllerDetailsArgs(id);
         }
     }

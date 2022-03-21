@@ -130,72 +130,61 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder preProvisioningHook(@Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook) {
             this.preProvisioningHook = preProvisioningHook;
             return this;
         }
-
         public Builder preProvisioningHook(@Nullable ProvisioningTemplateProvisioningHookArgs preProvisioningHook) {
             this.preProvisioningHook = Output.ofNullable(preProvisioningHook);
             return this;
         }
-
         public Builder provisioningRoleArn(Output<String> provisioningRoleArn) {
             this.provisioningRoleArn = Objects.requireNonNull(provisioningRoleArn);
             return this;
         }
-
         public Builder provisioningRoleArn(String provisioningRoleArn) {
             this.provisioningRoleArn = Output.of(Objects.requireNonNull(provisioningRoleArn));
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ProvisioningTemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ProvisioningTemplateTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ProvisioningTemplateTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder templateBody(Output<String> templateBody) {
             this.templateBody = Objects.requireNonNull(templateBody);
             return this;
         }
-
         public Builder templateBody(String templateBody) {
             this.templateBody = Output.of(Objects.requireNonNull(templateBody));
             return this;
         }
-
         public Builder templateName(@Nullable Output<String> templateName) {
             this.templateName = templateName;
             return this;
         }
-
         public Builder templateName(@Nullable String templateName) {
             this.templateName = Output.ofNullable(templateName);
             return this;
-        }
-        public ProvisioningTemplateArgs build() {
+        }        public ProvisioningTemplateArgs build() {
             return new ProvisioningTemplateArgs(description, enabled, preProvisioningHook, provisioningRoleArn, tags, templateBody, templateName);
         }
     }

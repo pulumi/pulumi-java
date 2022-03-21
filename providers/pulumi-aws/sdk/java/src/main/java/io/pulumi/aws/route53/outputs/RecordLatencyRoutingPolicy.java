@@ -51,8 +51,7 @@ public final class RecordLatencyRoutingPolicy {
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public RecordLatencyRoutingPolicy build() {
+        }        public RecordLatencyRoutingPolicy build() {
             return new RecordLatencyRoutingPolicy(region);
         }
     }

@@ -54,12 +54,13 @@ public final class BudgetsActionScpActionDefinition {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder targetIds(List<String> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }
-        public BudgetsActionScpActionDefinition build() {
+        public Builder targetIds(String... targetIds) {
+            return targetIds(List.of(targetIds));
+        }        public BudgetsActionScpActionDefinition build() {
             return new BudgetsActionScpActionDefinition(policyId, targetIds);
         }
     }

@@ -76,22 +76,21 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable ConfigFileArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
             this.imports = imports;
             return this;
         }
-
         public Builder imports(@Nullable List<ImportFileArgs> imports) {
             this.imports = Output.ofNullable(imports);
             return this;
         }
-        public TargetConfigurationArgs build() {
+        public Builder imports(ImportFileArgs... imports) {
+            return imports(List.of(imports));
+        }        public TargetConfigurationArgs build() {
             return new TargetConfigurationArgs(config, imports);
         }
     }

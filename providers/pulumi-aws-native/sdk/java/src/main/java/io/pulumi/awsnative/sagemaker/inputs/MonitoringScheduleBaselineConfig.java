@@ -71,12 +71,10 @@ public final class MonitoringScheduleBaselineConfig extends io.pulumi.resources.
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResource statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
-        }
-        public MonitoringScheduleBaselineConfig build() {
+        }        public MonitoringScheduleBaselineConfig build() {
             return new MonitoringScheduleBaselineConfig(constraintsResource, statisticsResource);
         }
     }

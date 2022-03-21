@@ -109,22 +109,21 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
             this.dxGatewayId = dxGatewayId;
             return this;
         }
-
         public Builder filters(@Nullable List<GetDirectConnectGatewayAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetDirectConnectGatewayAttachmentFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
-        }
-        public GetDirectConnectGatewayAttachmentArgs build() {
+        }        public GetDirectConnectGatewayAttachmentArgs build() {
             return new GetDirectConnectGatewayAttachmentArgs(dxGatewayId, filters, tags, transitGatewayId);
         }
     }

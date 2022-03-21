@@ -78,22 +78,18 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
-        }
-        public GoogleCloudRetailV2alphaConditionTimeRangeArgs build() {
+        }        public GoogleCloudRetailV2alphaConditionTimeRangeArgs build() {
             return new GoogleCloudRetailV2alphaConditionTimeRangeArgs(endTime, startTime);
         }
     }

@@ -60,12 +60,10 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
-
         public Builder driver(String driver) {
             this.driver = Output.of(Objects.requireNonNull(driver));
             return this;
-        }
-        public AllowedFlexVolumeArgs build() {
+        }        public AllowedFlexVolumeArgs build() {
             return new AllowedFlexVolumeArgs(driver);
         }
     }

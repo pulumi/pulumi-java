@@ -60,12 +60,10 @@ public final class SqlDatabaseResourceArgs extends io.pulumi.resources.ResourceA
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
-        }
-        public SqlDatabaseResourceArgs build() {
+        }        public SqlDatabaseResourceArgs build() {
             return new SqlDatabaseResourceArgs(id);
         }
     }

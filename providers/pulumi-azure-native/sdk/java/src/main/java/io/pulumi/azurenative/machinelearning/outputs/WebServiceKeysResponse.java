@@ -71,12 +71,10 @@ public final class WebServiceKeysResponse {
             this.primary = primary;
             return this;
         }
-
         public Builder secondary(@Nullable String secondary) {
             this.secondary = secondary;
             return this;
-        }
-        public WebServiceKeysResponse build() {
+        }        public WebServiceKeysResponse build() {
             return new WebServiceKeysResponse(primary, secondary);
         }
     }

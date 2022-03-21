@@ -83,27 +83,25 @@ public final class RuleGroupByteMatchStatement {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder positionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
-
         public Builder searchString(@Nullable String searchString) {
             this.searchString = searchString;
             return this;
         }
-
         public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
-
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-        public RuleGroupByteMatchStatement build() {
+        public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
+            return textTransformations(List.of(textTransformations));
+        }        public RuleGroupByteMatchStatement build() {
             return new RuleGroupByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }
     }

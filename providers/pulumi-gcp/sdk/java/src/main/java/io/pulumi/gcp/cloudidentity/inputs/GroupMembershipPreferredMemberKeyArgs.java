@@ -84,22 +84,18 @@ public final class GroupMembershipPreferredMemberKeyArgs extends io.pulumi.resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public GroupMembershipPreferredMemberKeyArgs build() {
+        }        public GroupMembershipPreferredMemberKeyArgs build() {
             return new GroupMembershipPreferredMemberKeyArgs(id, namespace);
         }
     }

@@ -95,32 +95,26 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
-
         public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = Output.ofNullable(maxVideoBitsPerSecond);
             return this;
         }
-
         public Builder minVideoBitsPerSecond(@Nullable Output<Integer> minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
-
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = Output.ofNullable(minVideoBitsPerSecond);
             return this;
         }
-
         public Builder streamOrder(@Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
             this.streamOrder = streamOrder;
             return this;
         }
-
         public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = Output.ofNullable(streamOrder);
             return this;
-        }
-        public OriginEndpointStreamSelectionArgs build() {
+        }        public OriginEndpointStreamSelectionArgs build() {
             return new OriginEndpointStreamSelectionArgs(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
         }
     }

@@ -72,12 +72,10 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public GetRemediationAtResourceArgs build() {
+        }        public GetRemediationAtResourceArgs build() {
             return new GetRemediationAtResourceArgs(remediationName, resourceId);
         }
     }

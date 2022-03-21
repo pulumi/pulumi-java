@@ -94,32 +94,26 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Output.ofNullable(thumbprint);
             return this;
-        }
-        public VpnClientRevokedCertificateArgs build() {
+        }        public VpnClientRevokedCertificateArgs build() {
             return new VpnClientRevokedCertificateArgs(id, name, thumbprint);
         }
     }

@@ -96,17 +96,20 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetInstancesFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
             this.instanceStateNames = instanceStateNames;
             return this;
         }
-
+        public Builder instanceStateNames(String... instanceStateNames) {
+            return instanceStateNames(List.of(instanceStateNames));
+        }
         public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
             this.instanceTags = instanceTags;
             return this;
-        }
-        public GetInstancesArgs build() {
+        }        public GetInstancesArgs build() {
             return new GetInstancesArgs(filters, instanceStateNames, instanceTags);
         }
     }

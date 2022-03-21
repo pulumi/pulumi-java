@@ -79,22 +79,24 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             this.dataActions = dataActions;
             return this;
         }
-
         public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = Output.ofNullable(dataActions);
             return this;
         }
-
+        public Builder dataActions(String... dataActions) {
+            return dataActions(List.of(dataActions));
+        }
         public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
-
         public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = Output.ofNullable(notDataActions);
             return this;
         }
-        public PermissionArgs build() {
+        public Builder notDataActions(String... notDataActions) {
+            return notDataActions(List.of(notDataActions));
+        }        public PermissionArgs build() {
             return new PermissionArgs(dataActions, notDataActions);
         }
     }

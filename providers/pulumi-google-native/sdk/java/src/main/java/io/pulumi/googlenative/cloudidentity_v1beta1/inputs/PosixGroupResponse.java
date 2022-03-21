@@ -92,17 +92,14 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder systemId(String systemId) {
             this.systemId = Objects.requireNonNull(systemId);
             return this;
-        }
-        public PosixGroupResponse build() {
+        }        public PosixGroupResponse build() {
             return new PosixGroupResponse(gid, name, systemId);
         }
     }

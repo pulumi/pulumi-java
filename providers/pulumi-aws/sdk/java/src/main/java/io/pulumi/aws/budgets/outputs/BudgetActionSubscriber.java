@@ -69,12 +69,10 @@ public final class BudgetActionSubscriber {
             this.address = Objects.requireNonNull(address);
             return this;
         }
-
         public Builder subscriptionType(String subscriptionType) {
             this.subscriptionType = Objects.requireNonNull(subscriptionType);
             return this;
-        }
-        public BudgetActionSubscriber build() {
+        }        public BudgetActionSubscriber build() {
             return new BudgetActionSubscriber(address, subscriptionType);
         }
     }

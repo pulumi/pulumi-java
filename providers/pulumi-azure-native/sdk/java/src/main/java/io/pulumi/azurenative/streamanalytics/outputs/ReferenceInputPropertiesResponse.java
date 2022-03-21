@@ -127,27 +127,22 @@ public final class ReferenceInputPropertiesResponse {
             this.datasource = datasource;
             return this;
         }
-
         public Builder diagnostics(DiagnosticsResponse diagnostics) {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder serialization(@Nullable Object serialization) {
             this.serialization = serialization;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ReferenceInputPropertiesResponse build() {
+        }        public ReferenceInputPropertiesResponse build() {
             return new ReferenceInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }
     }

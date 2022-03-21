@@ -69,12 +69,10 @@ public final class GlusterFsSectionResponse {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
-
         public Builder volumeName(String volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
-        }
-        public GlusterFsSectionResponse build() {
+        }        public GlusterFsSectionResponse build() {
             return new GlusterFsSectionResponse(serverAddress, volumeName);
         }
     }

@@ -61,12 +61,10 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
             this.memberRestrictionEvaluation = memberRestrictionEvaluation;
             return this;
         }
-
         public Builder memberRestrictionEvaluation(@Nullable MembershipRoleRestrictionEvaluationArgs memberRestrictionEvaluation) {
             this.memberRestrictionEvaluation = Output.ofNullable(memberRestrictionEvaluation);
             return this;
-        }
-        public RestrictionEvaluationsArgs build() {
+        }        public RestrictionEvaluationsArgs build() {
             return new RestrictionEvaluationsArgs(memberRestrictionEvaluation);
         }
     }

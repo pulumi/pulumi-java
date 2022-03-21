@@ -73,22 +73,18 @@ public final class LiteTopicPartitionConfigCapacityArgs extends io.pulumi.resour
             this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec);
             return this;
         }
-
         public Builder publishMibPerSec(Integer publishMibPerSec) {
             this.publishMibPerSec = Output.of(Objects.requireNonNull(publishMibPerSec));
             return this;
         }
-
         public Builder subscribeMibPerSec(Output<Integer> subscribeMibPerSec) {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
         }
-
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
             this.subscribeMibPerSec = Output.of(Objects.requireNonNull(subscribeMibPerSec));
             return this;
-        }
-        public LiteTopicPartitionConfigCapacityArgs build() {
+        }        public LiteTopicPartitionConfigCapacityArgs build() {
             return new LiteTopicPartitionConfigCapacityArgs(publishMibPerSec, subscribeMibPerSec);
         }
     }

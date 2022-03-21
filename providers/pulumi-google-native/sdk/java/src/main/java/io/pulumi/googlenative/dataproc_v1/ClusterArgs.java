@@ -144,72 +144,58 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
             return this;
         }
-
         public Builder actionOnFailedPrimaryWorkers(@Nullable String actionOnFailedPrimaryWorkers) {
             this.actionOnFailedPrimaryWorkers = Output.ofNullable(actionOnFailedPrimaryWorkers);
             return this;
         }
-
         public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
-
         public Builder config(@Nullable Output<ClusterConfigArgs> config) {
             this.config = config;
             return this;
         }
-
         public Builder config(@Nullable ClusterConfigArgs config) {
             this.config = Output.ofNullable(config);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public ClusterArgs build() {
+        }        public ClusterArgs build() {
             return new ClusterArgs(actionOnFailedPrimaryWorkers, clusterName, config, labels, project, region, requestId);
         }
     }

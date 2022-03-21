@@ -79,12 +79,10 @@ public final class ImageDiskReferenceResponse extends io.pulumi.resources.Invoke
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lun(@Nullable Integer lun) {
             this.lun = lun;
             return this;
-        }
-        public ImageDiskReferenceResponse build() {
+        }        public ImageDiskReferenceResponse build() {
             return new ImageDiskReferenceResponse(id, lun);
         }
     }

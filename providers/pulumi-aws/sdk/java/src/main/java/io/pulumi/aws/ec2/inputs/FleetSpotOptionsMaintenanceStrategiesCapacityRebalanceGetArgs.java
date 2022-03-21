@@ -57,12 +57,10 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs
             this.replacementStrategy = replacementStrategy;
             return this;
         }
-
         public Builder replacementStrategy(@Nullable String replacementStrategy) {
             this.replacementStrategy = Output.ofNullable(replacementStrategy);
             return this;
-        }
-        public FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs build() {
+        }        public FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs build() {
             return new FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs(replacementStrategy);
         }
     }

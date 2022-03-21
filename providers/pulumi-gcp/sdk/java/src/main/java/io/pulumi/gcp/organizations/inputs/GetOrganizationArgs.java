@@ -74,12 +74,10 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
             this.domain = domain;
             return this;
         }
-
         public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
-        }
-        public GetOrganizationArgs build() {
+        }        public GetOrganizationArgs build() {
             return new GetOrganizationArgs(domain, organization);
         }
     }

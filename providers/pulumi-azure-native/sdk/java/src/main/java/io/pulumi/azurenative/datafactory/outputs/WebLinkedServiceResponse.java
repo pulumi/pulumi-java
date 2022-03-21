@@ -145,32 +145,29 @@ public final class WebLinkedServiceResponse {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeProperties(Object typeProperties) {
             this.typeProperties = Objects.requireNonNull(typeProperties);
             return this;
-        }
-        public WebLinkedServiceResponse build() {
+        }        public WebLinkedServiceResponse build() {
             return new WebLinkedServiceResponse(annotations, connectVia, description, parameters, type, typeProperties);
         }
     }

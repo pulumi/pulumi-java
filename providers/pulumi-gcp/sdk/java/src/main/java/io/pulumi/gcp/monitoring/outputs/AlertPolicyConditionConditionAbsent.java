@@ -176,22 +176,21 @@ public final class AlertPolicyConditionConditionAbsent {
             this.aggregations = aggregations;
             return this;
         }
-
+        public Builder aggregations(AlertPolicyConditionConditionAbsentAggregation... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder trigger(@Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
             this.trigger = trigger;
             return this;
-        }
-        public AlertPolicyConditionConditionAbsent build() {
+        }        public AlertPolicyConditionConditionAbsent build() {
             return new AlertPolicyConditionConditionAbsent(aggregations, duration, filter, trigger);
         }
     }

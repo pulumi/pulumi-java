@@ -282,142 +282,129 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
-
         public Builder applicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolArgs> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
-
+        public Builder applicationGatewayBackendAddressPools(ApplicationGatewayBackendAddressPoolArgs... applicationGatewayBackendAddressPools) {
+            return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
+        }
         public Builder applicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
-
         public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> applicationSecurityGroups) {
             this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
             return this;
         }
-
+        public Builder applicationSecurityGroups(ApplicationSecurityGroupArgs... applicationSecurityGroups) {
+            return applicationSecurityGroups(List.of(applicationSecurityGroups));
+        }
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder loadBalancerBackendAddressPools(@Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-
         public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolArgs> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
-
+        public Builder loadBalancerBackendAddressPools(BackendAddressPoolArgs... loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
+        }
         public Builder loadBalancerInboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
-
         public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleArgs> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = Output.ofNullable(loadBalancerInboundNatRules);
             return this;
         }
-
+        public Builder loadBalancerInboundNatRules(InboundNatRuleArgs... loadBalancerInboundNatRules) {
+            return loadBalancerInboundNatRules(List.of(loadBalancerInboundNatRules));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = Output.ofNullable(primary);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
             this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
-
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
-
         public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
             this.publicIPAddress = Output.ofNullable(publicIPAddress);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder virtualNetworkTaps(@Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
             this.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
-
         public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapArgs> virtualNetworkTaps) {
             this.virtualNetworkTaps = Output.ofNullable(virtualNetworkTaps);
             return this;
         }
-        public NetworkInterfaceIPConfigurationArgs build() {
+        public Builder virtualNetworkTaps(VirtualNetworkTapArgs... virtualNetworkTaps) {
+            return virtualNetworkTaps(List.of(virtualNetworkTaps));
+        }        public NetworkInterfaceIPConfigurationArgs build() {
             return new NetworkInterfaceIPConfigurationArgs(applicationGatewayBackendAddressPools, applicationSecurityGroups, id, loadBalancerBackendAddressPools, loadBalancerInboundNatRules, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, publicIPAddress, subnet, type, virtualNetworkTaps);
         }
     }

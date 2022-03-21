@@ -72,12 +72,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
             this.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
-
         public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
-        }
-        public FlexibleAppVersionAutomaticScalingCpuUtilization build() {
+        }        public FlexibleAppVersionAutomaticScalingCpuUtilization build() {
             return new FlexibleAppVersionAutomaticScalingCpuUtilization(aggregationWindowLength, targetUtilization);
         }
     }

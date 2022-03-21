@@ -64,12 +64,10 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder ledgerName(String ledgerName) {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
-        }
-        public GetStreamArgs build() {
+        }        public GetStreamArgs build() {
             return new GetStreamArgs(id, ledgerName);
         }
     }

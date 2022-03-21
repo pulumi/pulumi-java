@@ -66,12 +66,10 @@ public final class SpotFleetVCpuCountRangeRequest extends io.pulumi.resources.In
             this.max = max;
             return this;
         }
-
         public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
-        }
-        public SpotFleetVCpuCountRangeRequest build() {
+        }        public SpotFleetVCpuCountRangeRequest build() {
             return new SpotFleetVCpuCountRangeRequest(max, min);
         }
     }

@@ -106,22 +106,18 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
             this.arn = arn;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
-
         public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
-        }
-        public GetCloudFormationTypeArgs build() {
+        }        public GetCloudFormationTypeArgs build() {
             return new GetCloudFormationTypeArgs(arn, type, typeName, versionId);
         }
     }

@@ -73,12 +73,10 @@ public final class AnalysisSheet {
             this.name = name;
             return this;
         }
-
         public Builder sheetId(@Nullable String sheetId) {
             this.sheetId = sheetId;
             return this;
-        }
-        public AnalysisSheet build() {
+        }        public AnalysisSheet build() {
             return new AnalysisSheet(name, sheetId);
         }
     }

@@ -58,8 +58,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
         public Builder domainNameLabel(String domainNameLabel) {
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
-        }
-        public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse build() {
+        }        public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(domainNameLabel);
         }
     }

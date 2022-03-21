@@ -71,12 +71,10 @@ public final class GetRegistryCredentialsResult {
             this.password = password;
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public GetRegistryCredentialsResult build() {
+        }        public GetRegistryCredentialsResult build() {
             return new GetRegistryCredentialsResult(password, username);
         }
     }

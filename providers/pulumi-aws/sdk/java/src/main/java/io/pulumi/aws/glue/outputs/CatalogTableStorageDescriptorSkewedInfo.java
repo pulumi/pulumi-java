@@ -88,17 +88,20 @@ public final class CatalogTableStorageDescriptorSkewedInfo {
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
-
+        public Builder skewedColumnNames(String... skewedColumnNames) {
+            return skewedColumnNames(List.of(skewedColumnNames));
+        }
         public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
-
         public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }
-        public CatalogTableStorageDescriptorSkewedInfo build() {
+        public Builder skewedColumnValues(String... skewedColumnValues) {
+            return skewedColumnValues(List.of(skewedColumnValues));
+        }        public CatalogTableStorageDescriptorSkewedInfo build() {
             return new CatalogTableStorageDescriptorSkewedInfo(skewedColumnNames, skewedColumnValueLocationMaps, skewedColumnValues);
         }
     }

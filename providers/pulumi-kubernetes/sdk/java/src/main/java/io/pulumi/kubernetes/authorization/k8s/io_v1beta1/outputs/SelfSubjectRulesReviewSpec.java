@@ -53,8 +53,7 @@ public final class SelfSubjectRulesReviewSpec {
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
-        }
-        public SelfSubjectRulesReviewSpec build() {
+        }        public SelfSubjectRulesReviewSpec build() {
             return new SelfSubjectRulesReviewSpec(namespace);
         }
     }

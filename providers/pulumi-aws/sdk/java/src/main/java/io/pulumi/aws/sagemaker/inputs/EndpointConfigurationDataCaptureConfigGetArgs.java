@@ -143,62 +143,53 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
             this.captureContentTypeHeader = captureContentTypeHeader;
             return this;
         }
-
         public Builder captureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs captureContentTypeHeader) {
             this.captureContentTypeHeader = Output.ofNullable(captureContentTypeHeader);
             return this;
         }
-
         public Builder captureOptions(Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions) {
             this.captureOptions = Objects.requireNonNull(captureOptions);
             return this;
         }
-
         public Builder captureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs> captureOptions) {
             this.captureOptions = Output.of(Objects.requireNonNull(captureOptions));
             return this;
         }
-
+        public Builder captureOptions(EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs... captureOptions) {
+            return captureOptions(List.of(captureOptions));
+        }
         public Builder destinationS3Uri(Output<String> destinationS3Uri) {
             this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri);
             return this;
         }
-
         public Builder destinationS3Uri(String destinationS3Uri) {
             this.destinationS3Uri = Output.of(Objects.requireNonNull(destinationS3Uri));
             return this;
         }
-
         public Builder enableCapture(@Nullable Output<Boolean> enableCapture) {
             this.enableCapture = enableCapture;
             return this;
         }
-
         public Builder enableCapture(@Nullable Boolean enableCapture) {
             this.enableCapture = Output.ofNullable(enableCapture);
             return this;
         }
-
         public Builder initialSamplingPercentage(Output<Integer> initialSamplingPercentage) {
             this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage);
             return this;
         }
-
         public Builder initialSamplingPercentage(Integer initialSamplingPercentage) {
             this.initialSamplingPercentage = Output.of(Objects.requireNonNull(initialSamplingPercentage));
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
-        }
-        public EndpointConfigurationDataCaptureConfigGetArgs build() {
+        }        public EndpointConfigurationDataCaptureConfigGetArgs build() {
             return new EndpointConfigurationDataCaptureConfigGetArgs(captureContentTypeHeader, captureOptions, destinationS3Uri, enableCapture, initialSamplingPercentage, kmsKeyId);
         }
     }

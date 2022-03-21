@@ -105,32 +105,26 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder entity(Output<String> entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
-
         public Builder entity(String entity) {
             this.entity = Output.of(Objects.requireNonNull(entity));
             return this;
         }
-
         public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable String role) {
             this.role = Output.ofNullable(role);
             return this;
-        }
-        public BucketAccessControlArgs build() {
+        }        public BucketAccessControlArgs build() {
             return new BucketAccessControlArgs(bucket, entity, role);
         }
     }

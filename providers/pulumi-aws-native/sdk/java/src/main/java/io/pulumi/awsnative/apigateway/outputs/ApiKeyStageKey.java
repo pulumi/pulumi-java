@@ -71,12 +71,10 @@ public final class ApiKeyStageKey {
             this.restApiId = restApiId;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
-        }
-        public ApiKeyStageKey build() {
+        }        public ApiKeyStageKey build() {
             return new ApiKeyStageKey(restApiId, stageName);
         }
     }

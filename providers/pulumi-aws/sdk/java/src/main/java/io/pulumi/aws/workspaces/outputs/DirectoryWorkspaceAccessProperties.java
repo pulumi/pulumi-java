@@ -167,42 +167,34 @@ public final class DirectoryWorkspaceAccessProperties {
             this.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
-
         public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
             this.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
-
         public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
             this.deviceTypeIos = deviceTypeIos;
             return this;
         }
-
         public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
             this.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
-
         public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
             this.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
-
         public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
             this.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
-
         public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
             this.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
-
         public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
             this.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
-        }
-        public DirectoryWorkspaceAccessProperties build() {
+        }        public DirectoryWorkspaceAccessProperties build() {
             return new DirectoryWorkspaceAccessProperties(deviceTypeAndroid, deviceTypeChromeos, deviceTypeIos, deviceTypeLinux, deviceTypeOsx, deviceTypeWeb, deviceTypeWindows, deviceTypeZeroclient);
         }
     }

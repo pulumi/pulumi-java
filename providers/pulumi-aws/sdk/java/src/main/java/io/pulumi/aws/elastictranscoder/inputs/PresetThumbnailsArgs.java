@@ -170,82 +170,66 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
             this.aspectRatio = aspectRatio;
             return this;
         }
-
         public Builder aspectRatio(@Nullable String aspectRatio) {
             this.aspectRatio = Output.ofNullable(aspectRatio);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
         }
-
         public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
-
         public Builder interval(@Nullable String interval) {
             this.interval = Output.ofNullable(interval);
             return this;
         }
-
         public Builder maxHeight(@Nullable Output<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
-
         public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = Output.ofNullable(maxHeight);
             return this;
         }
-
         public Builder maxWidth(@Nullable Output<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
-
         public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = Output.ofNullable(maxWidth);
             return this;
         }
-
         public Builder paddingPolicy(@Nullable Output<String> paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
-
         public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = Output.ofNullable(paddingPolicy);
             return this;
         }
-
         public Builder resolution(@Nullable Output<String> resolution) {
             this.resolution = resolution;
             return this;
         }
-
         public Builder resolution(@Nullable String resolution) {
             this.resolution = Output.ofNullable(resolution);
             return this;
         }
-
         public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
-
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = Output.ofNullable(sizingPolicy);
             return this;
-        }
-        public PresetThumbnailsArgs build() {
+        }        public PresetThumbnailsArgs build() {
             return new PresetThumbnailsArgs(aspectRatio, format, interval, maxHeight, maxWidth, paddingPolicy, resolution, sizingPolicy);
         }
     }

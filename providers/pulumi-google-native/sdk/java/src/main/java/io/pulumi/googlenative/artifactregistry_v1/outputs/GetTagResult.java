@@ -69,12 +69,10 @@ public final class GetTagResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetTagResult build() {
+        }        public GetTagResult build() {
             return new GetTagResult(name, version);
         }
     }

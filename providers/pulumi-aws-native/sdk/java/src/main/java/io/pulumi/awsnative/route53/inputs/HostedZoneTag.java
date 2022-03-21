@@ -76,12 +76,10 @@ public final class HostedZoneTag extends io.pulumi.resources.InvokeArgs {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public HostedZoneTag build() {
+        }        public HostedZoneTag build() {
             return new HostedZoneTag(key, value);
         }
     }

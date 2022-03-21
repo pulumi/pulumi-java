@@ -191,47 +191,44 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
             this.aaddsResourceId = aaddsResourceId;
             return this;
         }
-
         public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
-
+        public Builder clusterUsersGroupDNs(String... clusterUsersGroupDNs) {
+            return clusterUsersGroupDNs(List.of(clusterUsersGroupDNs));
+        }
         public Builder directoryType(@Nullable String directoryType) {
             this.directoryType = directoryType;
             return this;
         }
-
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
-
         public Builder domainUserPassword(@Nullable String domainUserPassword) {
             this.domainUserPassword = domainUserPassword;
             return this;
         }
-
         public Builder domainUsername(@Nullable String domainUsername) {
             this.domainUsername = domainUsername;
             return this;
         }
-
         public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
             this.ldapsUrls = ldapsUrls;
             return this;
         }
-
+        public Builder ldapsUrls(String... ldapsUrls) {
+            return ldapsUrls(List.of(ldapsUrls));
+        }
         public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
-
         public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
-        }
-        public SecurityProfileResponse build() {
+        }        public SecurityProfileResponse build() {
             return new SecurityProfileResponse(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
         }
     }

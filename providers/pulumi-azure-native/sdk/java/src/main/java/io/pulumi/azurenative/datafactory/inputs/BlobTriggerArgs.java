@@ -164,72 +164,64 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folderPath(Output<String> folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
-
         public Builder folderPath(String folderPath) {
             this.folderPath = Output.of(Objects.requireNonNull(folderPath));
             return this;
         }
-
         public Builder linkedService(Output<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = Objects.requireNonNull(linkedService);
             return this;
         }
-
         public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
             this.linkedService = Output.of(Objects.requireNonNull(linkedService));
             return this;
         }
-
         public Builder maxConcurrency(Output<Integer> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
-
         public Builder maxConcurrency(Integer maxConcurrency) {
             this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
-
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
-
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
-
+        public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
+            return pipelines(List.of(pipelines));
+        }
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public BlobTriggerArgs build() {
+        }        public BlobTriggerArgs build() {
             return new BlobTriggerArgs(annotations, description, folderPath, linkedService, maxConcurrency, pipelines, type);
         }
     }

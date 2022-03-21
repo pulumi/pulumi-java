@@ -72,12 +72,10 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetWebAppArgs build() {
+        }        public GetWebAppArgs build() {
             return new GetWebAppArgs(name, resourceGroupName);
         }
     }

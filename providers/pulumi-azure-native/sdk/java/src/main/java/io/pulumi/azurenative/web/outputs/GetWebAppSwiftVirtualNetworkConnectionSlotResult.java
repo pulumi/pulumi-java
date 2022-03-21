@@ -153,37 +153,30 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
-
         public Builder swiftSupported(@Nullable Boolean swiftSupported) {
             this.swiftSupported = swiftSupported;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppSwiftVirtualNetworkConnectionSlotResult build() {
+        }        public GetWebAppSwiftVirtualNetworkConnectionSlotResult build() {
             return new GetWebAppSwiftVirtualNetworkConnectionSlotResult(id, kind, name, subnetResourceId, swiftSupported, systemData, type);
         }
     }

@@ -95,32 +95,26 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
             this.end = end;
             return this;
         }
-
         public Builder end(@Nullable String end) {
             this.end = Output.ofNullable(end);
             return this;
         }
-
         public Builder fee(@Nullable Output<GoogleTypeMoneyArgs> fee) {
             this.fee = fee;
             return this;
         }
-
         public Builder fee(@Nullable GoogleTypeMoneyArgs fee) {
             this.fee = Output.ofNullable(fee);
             return this;
         }
-
         public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
-
         public Builder start(@Nullable String start) {
             this.start = Output.ofNullable(start);
             return this;
-        }
-        public GoogleCloudApigeeV1RateRangeArgs build() {
+        }        public GoogleCloudApigeeV1RateRangeArgs build() {
             return new GoogleCloudApigeeV1RateRangeArgs(end, fee, start);
         }
     }

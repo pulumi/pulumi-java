@@ -79,12 +79,13 @@ public final class WeekDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.time = time;
             return this;
         }
-
         public Builder weekdays(@Nullable List<String> weekdays) {
             this.weekdays = weekdays;
             return this;
         }
-        public WeekDetailsResponse build() {
+        public Builder weekdays(String... weekdays) {
+            return weekdays(List.of(weekdays));
+        }        public WeekDetailsResponse build() {
             return new WeekDetailsResponse(time, weekdays);
         }
     }

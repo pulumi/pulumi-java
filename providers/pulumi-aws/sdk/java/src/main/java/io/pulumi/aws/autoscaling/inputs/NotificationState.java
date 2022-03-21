@@ -92,32 +92,32 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
             this.groupNames = groupNames;
             return this;
         }
-
         public Builder groupNames(@Nullable List<String> groupNames) {
             this.groupNames = Output.ofNullable(groupNames);
             return this;
         }
-
+        public Builder groupNames(String... groupNames) {
+            return groupNames(List.of(groupNames));
+        }
         public Builder notifications(@Nullable Output<List<String>> notifications) {
             this.notifications = notifications;
             return this;
         }
-
         public Builder notifications(@Nullable List<String> notifications) {
             this.notifications = Output.ofNullable(notifications);
             return this;
         }
-
+        public Builder notifications(String... notifications) {
+            return notifications(List.of(notifications));
+        }
         public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
-
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Output.ofNullable(topicArn);
             return this;
-        }
-        public NotificationState build() {
+        }        public NotificationState build() {
             return new NotificationState(groupNames, notifications, topicArn);
         }
     }

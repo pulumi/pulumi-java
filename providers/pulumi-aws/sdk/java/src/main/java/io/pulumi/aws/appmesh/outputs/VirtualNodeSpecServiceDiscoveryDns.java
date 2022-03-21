@@ -51,8 +51,7 @@ public final class VirtualNodeSpecServiceDiscoveryDns {
         public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
-        }
-        public VirtualNodeSpecServiceDiscoveryDns build() {
+        }        public VirtualNodeSpecServiceDiscoveryDns build() {
             return new VirtualNodeSpecServiceDiscoveryDns(hostname);
         }
     }

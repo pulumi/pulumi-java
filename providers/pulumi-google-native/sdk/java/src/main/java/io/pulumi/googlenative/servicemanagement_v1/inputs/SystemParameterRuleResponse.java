@@ -78,12 +78,13 @@ public final class SystemParameterRuleResponse extends io.pulumi.resources.Invok
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
+        public Builder parameters(SystemParameterResponse... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
-        }
-        public SystemParameterRuleResponse build() {
+        }        public SystemParameterRuleResponse build() {
             return new SystemParameterRuleResponse(parameters, selector);
         }
     }

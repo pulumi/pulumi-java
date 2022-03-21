@@ -199,102 +199,82 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             this.columnLayout = columnLayout;
             return this;
         }
-
         public Builder columnLayout(@Nullable ColumnLayoutArgs columnLayout) {
             this.columnLayout = Output.ofNullable(columnLayout);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
-
         public Builder etag(@Nullable String etag) {
             this.etag = Output.ofNullable(etag);
             return this;
         }
-
         public Builder gridLayout(@Nullable Output<GridLayoutArgs> gridLayout) {
             this.gridLayout = gridLayout;
             return this;
         }
-
         public Builder gridLayout(@Nullable GridLayoutArgs gridLayout) {
             this.gridLayout = Output.ofNullable(gridLayout);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder mosaicLayout(@Nullable Output<MosaicLayoutArgs> mosaicLayout) {
             this.mosaicLayout = mosaicLayout;
             return this;
         }
-
         public Builder mosaicLayout(@Nullable MosaicLayoutArgs mosaicLayout) {
             this.mosaicLayout = Output.ofNullable(mosaicLayout);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder rowLayout(@Nullable Output<RowLayoutArgs> rowLayout) {
             this.rowLayout = rowLayout;
             return this;
         }
-
         public Builder rowLayout(@Nullable RowLayoutArgs rowLayout) {
             this.rowLayout = Output.ofNullable(rowLayout);
             return this;
         }
-
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
-
         public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Output.ofNullable(validateOnly);
             return this;
-        }
-        public DashboardArgs build() {
+        }        public DashboardArgs build() {
             return new DashboardArgs(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, project, rowLayout, validateOnly);
         }
     }

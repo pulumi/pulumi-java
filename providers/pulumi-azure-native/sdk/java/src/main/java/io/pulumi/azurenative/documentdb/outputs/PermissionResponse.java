@@ -71,12 +71,16 @@ public final class PermissionResponse {
             this.dataActions = dataActions;
             return this;
         }
-
+        public Builder dataActions(String... dataActions) {
+            return dataActions(List.of(dataActions));
+        }
         public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
-        public PermissionResponse build() {
+        public Builder notDataActions(String... notDataActions) {
+            return notDataActions(List.of(notDataActions));
+        }        public PermissionResponse build() {
             return new PermissionResponse(dataActions, notDataActions);
         }
     }

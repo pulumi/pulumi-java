@@ -61,12 +61,10 @@ public final class IosAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public IosAppInfoArgs build() {
+        }        public IosAppInfoArgs build() {
             return new IosAppInfoArgs(name);
         }
     }

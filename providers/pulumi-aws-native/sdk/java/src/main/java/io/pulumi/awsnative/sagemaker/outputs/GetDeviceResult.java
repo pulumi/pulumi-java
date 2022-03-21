@@ -73,12 +73,13 @@ public final class GetDeviceResult {
             this.device = device;
             return this;
         }
-
         public Builder tags(@Nullable List<DeviceTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetDeviceResult build() {
+        public Builder tags(DeviceTag... tags) {
+            return tags(List.of(tags));
+        }        public GetDeviceResult build() {
             return new GetDeviceResult(device, tags);
         }
     }

@@ -93,17 +93,14 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
-
         public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
             return this;
         }
-
         public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
-        }
-        public AdvancedMachineFeaturesResponse build() {
+        }        public AdvancedMachineFeaturesResponse build() {
             return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
         }
     }

@@ -72,12 +72,10 @@ public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDedicatedHsmArgs build() {
+        }        public GetDedicatedHsmArgs build() {
             return new GetDedicatedHsmArgs(name, resourceGroupName);
         }
     }

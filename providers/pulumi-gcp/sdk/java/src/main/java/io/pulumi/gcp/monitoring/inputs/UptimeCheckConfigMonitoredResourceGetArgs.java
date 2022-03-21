@@ -74,22 +74,18 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public UptimeCheckConfigMonitoredResourceGetArgs build() {
+        }        public UptimeCheckConfigMonitoredResourceGetArgs build() {
             return new UptimeCheckConfigMonitoredResourceGetArgs(labels, type);
         }
     }

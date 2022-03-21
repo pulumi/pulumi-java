@@ -103,22 +103,27 @@ public final class BucketCorsItemResponse {
             this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
             return this;
         }
-
         public Builder method(List<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
-
+        public Builder method(String... method) {
+            return method(List.of(method));
+        }
         public Builder origin(List<String> origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
-
+        public Builder origin(String... origin) {
+            return origin(List.of(origin));
+        }
         public Builder responseHeader(List<String> responseHeader) {
             this.responseHeader = Objects.requireNonNull(responseHeader);
             return this;
         }
-        public BucketCorsItemResponse build() {
+        public Builder responseHeader(String... responseHeader) {
+            return responseHeader(List.of(responseHeader));
+        }        public BucketCorsItemResponse build() {
             return new BucketCorsItemResponse(maxAgeSeconds, method, origin, responseHeader);
         }
     }

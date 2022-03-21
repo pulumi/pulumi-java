@@ -408,212 +408,188 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
             return this;
         }
-
         public Builder allocateLoadBalancerNodePorts(@Nullable Boolean allocateLoadBalancerNodePorts) {
             this.allocateLoadBalancerNodePorts = Output.ofNullable(allocateLoadBalancerNodePorts);
             return this;
         }
-
         public Builder clusterIP(@Nullable Output<String> clusterIP) {
             this.clusterIP = clusterIP;
             return this;
         }
-
         public Builder clusterIP(@Nullable String clusterIP) {
             this.clusterIP = Output.ofNullable(clusterIP);
             return this;
         }
-
         public Builder clusterIPs(@Nullable Output<List<String>> clusterIPs) {
             this.clusterIPs = clusterIPs;
             return this;
         }
-
         public Builder clusterIPs(@Nullable List<String> clusterIPs) {
             this.clusterIPs = Output.ofNullable(clusterIPs);
             return this;
         }
-
+        public Builder clusterIPs(String... clusterIPs) {
+            return clusterIPs(List.of(clusterIPs));
+        }
         public Builder externalIPs(@Nullable Output<List<String>> externalIPs) {
             this.externalIPs = externalIPs;
             return this;
         }
-
         public Builder externalIPs(@Nullable List<String> externalIPs) {
             this.externalIPs = Output.ofNullable(externalIPs);
             return this;
         }
-
+        public Builder externalIPs(String... externalIPs) {
+            return externalIPs(List.of(externalIPs));
+        }
         public Builder externalName(@Nullable Output<String> externalName) {
             this.externalName = externalName;
             return this;
         }
-
         public Builder externalName(@Nullable String externalName) {
             this.externalName = Output.ofNullable(externalName);
             return this;
         }
-
         public Builder externalTrafficPolicy(@Nullable Output<String> externalTrafficPolicy) {
             this.externalTrafficPolicy = externalTrafficPolicy;
             return this;
         }
-
         public Builder externalTrafficPolicy(@Nullable String externalTrafficPolicy) {
             this.externalTrafficPolicy = Output.ofNullable(externalTrafficPolicy);
             return this;
         }
-
         public Builder healthCheckNodePort(@Nullable Output<Integer> healthCheckNodePort) {
             this.healthCheckNodePort = healthCheckNodePort;
             return this;
         }
-
         public Builder healthCheckNodePort(@Nullable Integer healthCheckNodePort) {
             this.healthCheckNodePort = Output.ofNullable(healthCheckNodePort);
             return this;
         }
-
         public Builder internalTrafficPolicy(@Nullable Output<String> internalTrafficPolicy) {
             this.internalTrafficPolicy = internalTrafficPolicy;
             return this;
         }
-
         public Builder internalTrafficPolicy(@Nullable String internalTrafficPolicy) {
             this.internalTrafficPolicy = Output.ofNullable(internalTrafficPolicy);
             return this;
         }
-
         public Builder ipFamilies(@Nullable Output<List<String>> ipFamilies) {
             this.ipFamilies = ipFamilies;
             return this;
         }
-
         public Builder ipFamilies(@Nullable List<String> ipFamilies) {
             this.ipFamilies = Output.ofNullable(ipFamilies);
             return this;
         }
-
+        public Builder ipFamilies(String... ipFamilies) {
+            return ipFamilies(List.of(ipFamilies));
+        }
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
-
         public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = Output.ofNullable(ipFamily);
             return this;
         }
-
         public Builder ipFamilyPolicy(@Nullable Output<String> ipFamilyPolicy) {
             this.ipFamilyPolicy = ipFamilyPolicy;
             return this;
         }
-
         public Builder ipFamilyPolicy(@Nullable String ipFamilyPolicy) {
             this.ipFamilyPolicy = Output.ofNullable(ipFamilyPolicy);
             return this;
         }
-
         public Builder loadBalancerClass(@Nullable Output<String> loadBalancerClass) {
             this.loadBalancerClass = loadBalancerClass;
             return this;
         }
-
         public Builder loadBalancerClass(@Nullable String loadBalancerClass) {
             this.loadBalancerClass = Output.ofNullable(loadBalancerClass);
             return this;
         }
-
         public Builder loadBalancerIP(@Nullable Output<String> loadBalancerIP) {
             this.loadBalancerIP = loadBalancerIP;
             return this;
         }
-
         public Builder loadBalancerIP(@Nullable String loadBalancerIP) {
             this.loadBalancerIP = Output.ofNullable(loadBalancerIP);
             return this;
         }
-
         public Builder loadBalancerSourceRanges(@Nullable Output<List<String>> loadBalancerSourceRanges) {
             this.loadBalancerSourceRanges = loadBalancerSourceRanges;
             return this;
         }
-
         public Builder loadBalancerSourceRanges(@Nullable List<String> loadBalancerSourceRanges) {
             this.loadBalancerSourceRanges = Output.ofNullable(loadBalancerSourceRanges);
             return this;
         }
-
+        public Builder loadBalancerSourceRanges(String... loadBalancerSourceRanges) {
+            return loadBalancerSourceRanges(List.of(loadBalancerSourceRanges));
+        }
         public Builder ports(@Nullable Output<List<ServicePortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ServicePortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(ServicePortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder publishNotReadyAddresses(@Nullable Output<Boolean> publishNotReadyAddresses) {
             this.publishNotReadyAddresses = publishNotReadyAddresses;
             return this;
         }
-
         public Builder publishNotReadyAddresses(@Nullable Boolean publishNotReadyAddresses) {
             this.publishNotReadyAddresses = Output.ofNullable(publishNotReadyAddresses);
             return this;
         }
-
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
             this.selector = selector;
             return this;
         }
-
         public Builder selector(@Nullable Map<String,String> selector) {
             this.selector = Output.ofNullable(selector);
             return this;
         }
-
         public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
-
         public Builder sessionAffinity(@Nullable String sessionAffinity) {
             this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
-
         public Builder sessionAffinityConfig(@Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig) {
             this.sessionAffinityConfig = sessionAffinityConfig;
             return this;
         }
-
         public Builder sessionAffinityConfig(@Nullable SessionAffinityConfigArgs sessionAffinityConfig) {
             this.sessionAffinityConfig = Output.ofNullable(sessionAffinityConfig);
             return this;
         }
-
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }
-
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
             this.topologyKeys = Output.ofNullable(topologyKeys);
             return this;
         }
-
+        public Builder topologyKeys(String... topologyKeys) {
+            return topologyKeys(List.of(topologyKeys));
+        }
         public Builder type(@Nullable Output<Either<String,ServiceSpecType>> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable Either<String,ServiceSpecType> type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ServiceSpecArgs build() {
+        }        public ServiceSpecArgs build() {
             return new ServiceSpecArgs(allocateLoadBalancerNodePorts, clusterIP, clusterIPs, externalIPs, externalName, externalTrafficPolicy, healthCheckNodePort, internalTrafficPolicy, ipFamilies, ipFamily, ipFamilyPolicy, loadBalancerClass, loadBalancerIP, loadBalancerSourceRanges, ports, publishNotReadyAddresses, selector, sessionAffinity, sessionAffinityConfig, topologyKeys, type);
         }
     }

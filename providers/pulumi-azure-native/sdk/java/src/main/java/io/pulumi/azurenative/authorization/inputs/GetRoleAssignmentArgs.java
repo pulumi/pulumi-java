@@ -90,17 +90,14 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
             this.roleAssignmentName = Objects.requireNonNull(roleAssignmentName);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
-        }
-        public GetRoleAssignmentArgs build() {
+        }        public GetRoleAssignmentArgs build() {
             return new GetRoleAssignmentArgs(roleAssignmentName, scope, tenantId);
         }
     }

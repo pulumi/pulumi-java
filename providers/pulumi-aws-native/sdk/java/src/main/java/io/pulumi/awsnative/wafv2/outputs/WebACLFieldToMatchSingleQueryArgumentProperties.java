@@ -43,8 +43,7 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties {
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public WebACLFieldToMatchSingleQueryArgumentProperties build() {
+        }        public WebACLFieldToMatchSingleQueryArgumentProperties build() {
             return new WebACLFieldToMatchSingleQueryArgumentProperties(name);
         }
     }

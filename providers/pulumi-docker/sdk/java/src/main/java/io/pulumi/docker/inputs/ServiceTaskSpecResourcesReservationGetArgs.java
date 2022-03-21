@@ -79,32 +79,26 @@ public final class ServiceTaskSpecResourcesReservationGetArgs extends io.pulumi.
             this.genericResources = genericResources;
             return this;
         }
-
         public Builder genericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResourcesGetArgs genericResources) {
             this.genericResources = Output.ofNullable(genericResources);
             return this;
         }
-
         public Builder memoryBytes(@Nullable Output<Integer> memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
-
         public Builder memoryBytes(@Nullable Integer memoryBytes) {
             this.memoryBytes = Output.ofNullable(memoryBytes);
             return this;
         }
-
         public Builder nanoCpus(@Nullable Output<Integer> nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
         }
-
         public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = Output.ofNullable(nanoCpus);
             return this;
-        }
-        public ServiceTaskSpecResourcesReservationGetArgs build() {
+        }        public ServiceTaskSpecResourcesReservationGetArgs build() {
             return new ServiceTaskSpecResourcesReservationGetArgs(genericResources, memoryBytes, nanoCpus);
         }
     }

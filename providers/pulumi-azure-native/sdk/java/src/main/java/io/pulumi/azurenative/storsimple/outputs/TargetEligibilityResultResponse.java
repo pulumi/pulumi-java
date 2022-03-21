@@ -73,12 +73,13 @@ public final class TargetEligibilityResultResponse {
             this.eligibilityStatus = eligibilityStatus;
             return this;
         }
-
         public Builder messages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
             this.messages = messages;
             return this;
         }
-        public TargetEligibilityResultResponse build() {
+        public Builder messages(TargetEligibilityErrorMessageResponse... messages) {
+            return messages(List.of(messages));
+        }        public TargetEligibilityResultResponse build() {
             return new TargetEligibilityResultResponse(eligibilityStatus, messages);
         }
     }

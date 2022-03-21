@@ -71,12 +71,10 @@ public final class SkipErrorFileResponse {
             this.dataInconsistency = dataInconsistency;
             return this;
         }
-
         public Builder fileMissing(@Nullable Object fileMissing) {
             this.fileMissing = fileMissing;
             return this;
-        }
-        public SkipErrorFileResponse build() {
+        }        public SkipErrorFileResponse build() {
             return new SkipErrorFileResponse(dataInconsistency, fileMissing);
         }
     }

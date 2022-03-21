@@ -111,42 +111,34 @@ public final class AzureFilePersistentVolumeSourceArgs extends io.pulumi.resourc
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
-
         public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
-
         public Builder secretNamespace(@Nullable Output<String> secretNamespace) {
             this.secretNamespace = secretNamespace;
             return this;
         }
-
         public Builder secretNamespace(@Nullable String secretNamespace) {
             this.secretNamespace = Output.ofNullable(secretNamespace);
             return this;
         }
-
         public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
-
         public Builder shareName(String shareName) {
             this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
-        }
-        public AzureFilePersistentVolumeSourceArgs build() {
+        }        public AzureFilePersistentVolumeSourceArgs build() {
             return new AzureFilePersistentVolumeSourceArgs(readOnly, secretName, secretNamespace, shareName);
         }
     }

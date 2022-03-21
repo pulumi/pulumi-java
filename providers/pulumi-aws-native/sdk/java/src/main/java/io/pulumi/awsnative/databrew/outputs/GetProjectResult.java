@@ -104,22 +104,18 @@ public final class GetProjectResult {
             this.datasetName = datasetName;
             return this;
         }
-
         public Builder recipeName(@Nullable String recipeName) {
             this.recipeName = recipeName;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder sample(@Nullable ProjectSample sample) {
             this.sample = sample;
             return this;
-        }
-        public GetProjectResult build() {
+        }        public GetProjectResult build() {
             return new GetProjectResult(datasetName, recipeName, roleArn, sample);
         }
     }

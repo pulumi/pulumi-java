@@ -78,22 +78,18 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
-
         public Builder keyUrl(String keyUrl) {
             this.keyUrl = Output.of(Objects.requireNonNull(keyUrl));
             return this;
         }
-
         public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
-
         public Builder sourceVault(SubResourceArgs sourceVault) {
             this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
             return this;
-        }
-        public KeyVaultKeyReferenceArgs build() {
+        }        public KeyVaultKeyReferenceArgs build() {
             return new KeyVaultKeyReferenceArgs(keyUrl, sourceVault);
         }
     }

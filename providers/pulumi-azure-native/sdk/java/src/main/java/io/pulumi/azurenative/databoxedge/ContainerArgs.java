@@ -124,52 +124,42 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.containerName = containerName;
             return this;
         }
-
         public Builder containerName(@Nullable String containerName) {
             this.containerName = Output.ofNullable(containerName);
             return this;
         }
-
         public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
             this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
-
         public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-
         public Builder deviceName(String deviceName) {
             this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageAccountName(Output<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
             return this;
-        }
-        public ContainerArgs build() {
+        }        public ContainerArgs build() {
             return new ContainerArgs(containerName, dataFormat, deviceName, resourceGroupName, storageAccountName);
         }
     }

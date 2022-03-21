@@ -87,17 +87,14 @@ public final class ListenerDefaultActionFixedResponse {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = messageBody;
             return this;
         }
-
         public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
-        }
-        public ListenerDefaultActionFixedResponse build() {
+        }        public ListenerDefaultActionFixedResponse build() {
             return new ListenerDefaultActionFixedResponse(contentType, messageBody, statusCode);
         }
     }

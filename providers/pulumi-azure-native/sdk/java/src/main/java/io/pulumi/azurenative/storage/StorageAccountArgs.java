@@ -427,232 +427,186 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.accessTier = accessTier;
             return this;
         }
-
         public Builder accessTier(@Nullable AccessTier accessTier) {
             this.accessTier = Output.ofNullable(accessTier);
             return this;
         }
-
         public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
-
         public Builder accountName(@Nullable String accountName) {
             this.accountName = Output.ofNullable(accountName);
             return this;
         }
-
         public Builder allowBlobPublicAccess(@Nullable Output<Boolean> allowBlobPublicAccess) {
             this.allowBlobPublicAccess = allowBlobPublicAccess;
             return this;
         }
-
         public Builder allowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
             this.allowBlobPublicAccess = Output.ofNullable(allowBlobPublicAccess);
             return this;
         }
-
         public Builder allowSharedKeyAccess(@Nullable Output<Boolean> allowSharedKeyAccess) {
             this.allowSharedKeyAccess = allowSharedKeyAccess;
             return this;
         }
-
         public Builder allowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
             this.allowSharedKeyAccess = Output.ofNullable(allowSharedKeyAccess);
             return this;
         }
-
         public Builder azureFilesIdentityBasedAuthentication(@Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication) {
             this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
             return this;
         }
-
         public Builder azureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
             this.azureFilesIdentityBasedAuthentication = Output.ofNullable(azureFilesIdentityBasedAuthentication);
             return this;
         }
-
         public Builder customDomain(@Nullable Output<CustomDomainArgs> customDomain) {
             this.customDomain = customDomain;
             return this;
         }
-
         public Builder customDomain(@Nullable CustomDomainArgs customDomain) {
             this.customDomain = Output.ofNullable(customDomain);
             return this;
         }
-
         public Builder enableHttpsTrafficOnly(@Nullable Output<Boolean> enableHttpsTrafficOnly) {
             this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
             return this;
         }
-
         public Builder enableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
             this.enableHttpsTrafficOnly = Output.ofNullable(enableHttpsTrafficOnly);
             return this;
         }
-
         public Builder enableNfsV3(@Nullable Output<Boolean> enableNfsV3) {
             this.enableNfsV3 = enableNfsV3;
             return this;
         }
-
         public Builder enableNfsV3(@Nullable Boolean enableNfsV3) {
             this.enableNfsV3 = Output.ofNullable(enableNfsV3);
             return this;
         }
-
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
-
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder isHnsEnabled(@Nullable Output<Boolean> isHnsEnabled) {
             this.isHnsEnabled = isHnsEnabled;
             return this;
         }
-
         public Builder isHnsEnabled(@Nullable Boolean isHnsEnabled) {
             this.isHnsEnabled = Output.ofNullable(isHnsEnabled);
             return this;
         }
-
         public Builder keyPolicy(@Nullable Output<KeyPolicyArgs> keyPolicy) {
             this.keyPolicy = keyPolicy;
             return this;
         }
-
         public Builder keyPolicy(@Nullable KeyPolicyArgs keyPolicy) {
             this.keyPolicy = Output.ofNullable(keyPolicy);
             return this;
         }
-
         public Builder kind(Output<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,Kind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder largeFileSharesState(@Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState) {
             this.largeFileSharesState = largeFileSharesState;
             return this;
         }
-
         public Builder largeFileSharesState(@Nullable Either<String,LargeFileSharesState> largeFileSharesState) {
             this.largeFileSharesState = Output.ofNullable(largeFileSharesState);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-
         public Builder minimumTlsVersion(@Nullable Either<String,MinimumTlsVersion> minimumTlsVersion) {
             this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
             return this;
         }
-
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
-
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
             this.networkRuleSet = Output.ofNullable(networkRuleSet);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingPreference(@Nullable Output<RoutingPreferenceArgs> routingPreference) {
             this.routingPreference = routingPreference;
             return this;
         }
-
         public Builder routingPreference(@Nullable RoutingPreferenceArgs routingPreference) {
             this.routingPreference = Output.ofNullable(routingPreference);
             return this;
         }
-
         public Builder sasPolicy(@Nullable Output<SasPolicyArgs> sasPolicy) {
             this.sasPolicy = sasPolicy;
             return this;
         }
-
         public Builder sasPolicy(@Nullable SasPolicyArgs sasPolicy) {
             this.sasPolicy = Output.ofNullable(sasPolicy);
             return this;
         }
-
         public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public Builder sku(SkuArgs sku) {
             this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public StorageAccountArgs build() {
+        }        public StorageAccountArgs build() {
             return new StorageAccountArgs(accessTier, accountName, allowBlobPublicAccess, allowSharedKeyAccess, azureFilesIdentityBasedAuthentication, customDomain, enableHttpsTrafficOnly, enableNfsV3, encryption, extendedLocation, identity, isHnsEnabled, keyPolicy, kind, largeFileSharesState, location, minimumTlsVersion, networkRuleSet, resourceGroupName, routingPreference, sasPolicy, sku, tags);
         }
     }

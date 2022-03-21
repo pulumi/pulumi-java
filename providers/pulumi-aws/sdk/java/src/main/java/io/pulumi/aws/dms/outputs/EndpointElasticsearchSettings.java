@@ -104,22 +104,18 @@ public final class EndpointElasticsearchSettings {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
-
         public Builder errorRetryDuration(@Nullable Integer errorRetryDuration) {
             this.errorRetryDuration = errorRetryDuration;
             return this;
         }
-
         public Builder fullLoadErrorPercentage(@Nullable Integer fullLoadErrorPercentage) {
             this.fullLoadErrorPercentage = fullLoadErrorPercentage;
             return this;
         }
-
         public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = Objects.requireNonNull(serviceAccessRoleArn);
             return this;
-        }
-        public EndpointElasticsearchSettings build() {
+        }        public EndpointElasticsearchSettings build() {
             return new EndpointElasticsearchSettings(endpointUri, errorRetryDuration, fullLoadErrorPercentage, serviceAccessRoleArn);
         }
     }

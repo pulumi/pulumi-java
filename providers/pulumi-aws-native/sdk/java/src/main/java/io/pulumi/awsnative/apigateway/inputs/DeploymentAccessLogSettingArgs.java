@@ -74,22 +74,18 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
             this.destinationArn = destinationArn;
             return this;
         }
-
         public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
-
         public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = Output.ofNullable(format);
             return this;
-        }
-        public DeploymentAccessLogSettingArgs build() {
+        }        public DeploymentAccessLogSettingArgs build() {
             return new DeploymentAccessLogSettingArgs(destinationArn, format);
         }
     }

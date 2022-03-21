@@ -88,17 +88,14 @@ public final class GetDataContainerArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetDataContainerArgs build() {
+        }        public GetDataContainerArgs build() {
             return new GetDataContainerArgs(name, resourceGroupName, workspaceName);
         }
     }

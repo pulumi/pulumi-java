@@ -95,32 +95,26 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder mode(@Nullable Output<Integer> mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable Integer mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public KeyToPathArgs build() {
+        }        public KeyToPathArgs build() {
             return new KeyToPathArgs(key, mode, path);
         }
     }

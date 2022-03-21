@@ -123,52 +123,42 @@ public final class EventBusState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
-
         public Builder eventSourceName(@Nullable String eventSourceName) {
             this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public EventBusState build() {
+        }        public EventBusState build() {
             return new EventBusState(arn, eventSourceName, name, tags, tagsAll);
         }
     }

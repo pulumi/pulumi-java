@@ -56,12 +56,10 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
-
         public Builder frequency(String frequency) {
             this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
-        }
-        public InventoryScheduleArgs build() {
+        }        public InventoryScheduleArgs build() {
             return new InventoryScheduleArgs(frequency);
         }
     }

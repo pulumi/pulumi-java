@@ -121,27 +121,25 @@ public final class ProviderResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
-
         public Builder registrationPolicy(String registrationPolicy) {
             this.registrationPolicy = Objects.requireNonNull(registrationPolicy);
             return this;
         }
-
         public Builder registrationState(String registrationState) {
             this.registrationState = Objects.requireNonNull(registrationState);
             return this;
         }
-
         public Builder resourceTypes(List<ProviderResourceTypeResponse> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
-        public ProviderResponse build() {
+        public Builder resourceTypes(ProviderResourceTypeResponse... resourceTypes) {
+            return resourceTypes(List.of(resourceTypes));
+        }        public ProviderResponse build() {
             return new ProviderResponse(id, namespace, registrationPolicy, registrationState, resourceTypes);
         }
     }

@@ -156,37 +156,42 @@ public final class GetSecurityProfileResult {
             this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
             return this;
         }
-
+        public Builder additionalMetricsToRetainV2(SecurityProfileMetricToRetain... additionalMetricsToRetainV2) {
+            return additionalMetricsToRetainV2(List.of(additionalMetricsToRetainV2));
+        }
         public Builder alertTargets(@Nullable Object alertTargets) {
             this.alertTargets = alertTargets;
             return this;
         }
-
         public Builder behaviors(@Nullable List<SecurityProfileBehavior> behaviors) {
             this.behaviors = behaviors;
             return this;
         }
-
+        public Builder behaviors(SecurityProfileBehavior... behaviors) {
+            return behaviors(List.of(behaviors));
+        }
         public Builder securityProfileArn(@Nullable String securityProfileArn) {
             this.securityProfileArn = securityProfileArn;
             return this;
         }
-
         public Builder securityProfileDescription(@Nullable String securityProfileDescription) {
             this.securityProfileDescription = securityProfileDescription;
             return this;
         }
-
         public Builder tags(@Nullable List<SecurityProfileTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(SecurityProfileTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder targetArns(@Nullable List<String> targetArns) {
             this.targetArns = targetArns;
             return this;
         }
-        public GetSecurityProfileResult build() {
+        public Builder targetArns(String... targetArns) {
+            return targetArns(List.of(targetArns));
+        }        public GetSecurityProfileResult build() {
             return new GetSecurityProfileResult(additionalMetricsToRetainV2, alertTargets, behaviors, securityProfileArn, securityProfileDescription, tags, targetArns);
         }
     }

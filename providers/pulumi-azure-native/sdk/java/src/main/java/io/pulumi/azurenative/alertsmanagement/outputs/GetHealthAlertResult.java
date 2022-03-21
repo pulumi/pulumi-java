@@ -219,57 +219,52 @@ public final class GetHealthAlertResult {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(HealthAlertActionResponse... actions) {
+            return actions(List.of(actions));
+        }
         public Builder criteria(HealthAlertCriteriaResponse criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetHealthAlertResult build() {
+        }        public GetHealthAlertResult build() {
             return new GetHealthAlertResult(actions, criteria, description, enabled, id, lastUpdatedTime, location, name, scopes, tags, type);
         }
     }

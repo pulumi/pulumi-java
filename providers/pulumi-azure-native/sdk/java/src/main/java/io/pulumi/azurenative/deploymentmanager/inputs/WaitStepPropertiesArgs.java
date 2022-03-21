@@ -79,22 +79,18 @@ public final class WaitStepPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(WaitStepAttributesArgs attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
         public Builder stepType(Output<String> stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }
-
         public Builder stepType(String stepType) {
             this.stepType = Output.of(Objects.requireNonNull(stepType));
             return this;
-        }
-        public WaitStepPropertiesArgs build() {
+        }        public WaitStepPropertiesArgs build() {
             return new WaitStepPropertiesArgs(attributes, stepType);
         }
     }

@@ -95,32 +95,26 @@ public final class BackendServiceFailoverPolicyArgs extends io.pulumi.resources.
             this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
-
         public Builder disableConnectionDrainOnFailover(@Nullable Boolean disableConnectionDrainOnFailover) {
             this.disableConnectionDrainOnFailover = Output.ofNullable(disableConnectionDrainOnFailover);
             return this;
         }
-
         public Builder dropTrafficIfUnhealthy(@Nullable Output<Boolean> dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
-
         public Builder dropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = Output.ofNullable(dropTrafficIfUnhealthy);
             return this;
         }
-
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }
-
         public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = Output.ofNullable(failoverRatio);
             return this;
-        }
-        public BackendServiceFailoverPolicyArgs build() {
+        }        public BackendServiceFailoverPolicyArgs build() {
             return new BackendServiceFailoverPolicyArgs(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }
     }

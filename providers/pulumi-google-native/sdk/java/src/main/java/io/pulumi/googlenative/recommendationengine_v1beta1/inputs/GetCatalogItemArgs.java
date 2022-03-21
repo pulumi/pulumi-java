@@ -90,22 +90,18 @@ public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
-
         public Builder catalogItemId(String catalogItemId) {
             this.catalogItemId = Objects.requireNonNull(catalogItemId);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetCatalogItemArgs build() {
+        }        public GetCatalogItemArgs build() {
             return new GetCatalogItemArgs(catalogId, catalogItemId, location, project);
         }
     }

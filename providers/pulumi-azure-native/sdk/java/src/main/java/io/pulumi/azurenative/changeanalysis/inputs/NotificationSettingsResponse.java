@@ -79,12 +79,10 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
             this.activationState = activationState;
             return this;
         }
-
         public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
             this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
-        }
-        public NotificationSettingsResponse build() {
+        }        public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(activationState, azureMonitorWorkspaceProperties);
         }
     }

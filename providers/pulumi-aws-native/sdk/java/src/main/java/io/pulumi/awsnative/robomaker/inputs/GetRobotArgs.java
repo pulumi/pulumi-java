@@ -50,8 +50,7 @@ public final class GetRobotArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetRobotArgs build() {
+        }        public GetRobotArgs build() {
             return new GetRobotArgs(arn);
         }
     }

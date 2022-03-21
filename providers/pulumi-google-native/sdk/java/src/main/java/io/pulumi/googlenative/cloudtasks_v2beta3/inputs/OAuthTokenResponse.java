@@ -76,12 +76,10 @@ public final class OAuthTokenResponse extends io.pulumi.resources.InvokeArgs {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
-        }
-        public OAuthTokenResponse build() {
+        }        public OAuthTokenResponse build() {
             return new OAuthTokenResponse(scope, serviceAccountEmail);
         }
     }

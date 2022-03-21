@@ -92,32 +92,26 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends io.pulum
             this.acm = acm;
             return this;
         }
-
         public Builder acm(@Nullable VirtualNodeSpecListenerTlsCertificateAcmGetArgs acm) {
             this.acm = Output.ofNullable(acm);
             return this;
         }
-
         public Builder file(@Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file) {
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable VirtualNodeSpecListenerTlsCertificateFileGetArgs file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder sds(@Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
-
         public Builder sds(@Nullable VirtualNodeSpecListenerTlsCertificateSdsGetArgs sds) {
             this.sds = Output.ofNullable(sds);
             return this;
-        }
-        public VirtualNodeSpecListenerTlsCertificateGetArgs build() {
+        }        public VirtualNodeSpecListenerTlsCertificateGetArgs build() {
             return new VirtualNodeSpecListenerTlsCertificateGetArgs(acm, file, sds);
         }
     }

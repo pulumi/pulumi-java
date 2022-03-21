@@ -66,22 +66,18 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs e
             this.file = file;
             return this;
         }
-
         public Builder file(@Nullable String file) {
             this.file = Output.ofNullable(file);
             return this;
         }
-
         public Builder registry(@Nullable Output<String> registry) {
             this.registry = registry;
             return this;
         }
-
         public Builder registry(@Nullable String registry) {
             this.registry = Output.ofNullable(registry);
             return this;
-        }
-        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs build() {
+        }        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs build() {
             return new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(file, registry);
         }
     }

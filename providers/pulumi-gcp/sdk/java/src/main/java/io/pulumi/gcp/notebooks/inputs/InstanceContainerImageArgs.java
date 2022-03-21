@@ -75,22 +75,18 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public InstanceContainerImageArgs build() {
+        }        public InstanceContainerImageArgs build() {
             return new InstanceContainerImageArgs(repository, tag);
         }
     }

@@ -75,12 +75,16 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoType... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder rules(List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public PreventionInspectTemplateInspectConfigRuleSet build() {
+        public Builder rules(PreventionInspectTemplateInspectConfigRuleSetRule... rules) {
+            return rules(List.of(rules));
+        }        public PreventionInspectTemplateInspectConfigRuleSet build() {
             return new PreventionInspectTemplateInspectConfigRuleSet(infoTypes, rules);
         }
     }

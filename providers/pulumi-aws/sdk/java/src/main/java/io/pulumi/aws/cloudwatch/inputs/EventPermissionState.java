@@ -123,52 +123,42 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
             this.action = action;
             return this;
         }
-
         public Builder action(@Nullable String action) {
             this.action = Output.ofNullable(action);
             return this;
         }
-
         public Builder condition(@Nullable Output<EventPermissionConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
-
         public Builder condition(@Nullable EventPermissionConditionGetArgs condition) {
             this.condition = Output.ofNullable(condition);
             return this;
         }
-
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
-
         public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Output.ofNullable(eventBusName);
             return this;
         }
-
         public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
-
         public Builder principal(@Nullable String principal) {
             this.principal = Output.ofNullable(principal);
             return this;
         }
-
         public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
-
         public Builder statementId(@Nullable String statementId) {
             this.statementId = Output.ofNullable(statementId);
             return this;
-        }
-        public EventPermissionState build() {
+        }        public EventPermissionState build() {
             return new EventPermissionState(action, condition, eventBusName, principal, statementId);
         }
     }

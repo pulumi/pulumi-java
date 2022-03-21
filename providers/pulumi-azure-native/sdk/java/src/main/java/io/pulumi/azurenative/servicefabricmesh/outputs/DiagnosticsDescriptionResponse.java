@@ -90,17 +90,20 @@ public final class DiagnosticsDescriptionResponse {
             this.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
-
+        public Builder defaultSinkRefs(String... defaultSinkRefs) {
+            return defaultSinkRefs(List.of(defaultSinkRefs));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
             this.sinks = sinks;
             return this;
         }
-        public DiagnosticsDescriptionResponse build() {
+        public Builder sinks(AzureInternalMonitoringPipelineSinkDescriptionResponse... sinks) {
+            return sinks(List.of(sinks));
+        }        public DiagnosticsDescriptionResponse build() {
             return new DiagnosticsDescriptionResponse(defaultSinkRefs, enabled, sinks);
         }
     }

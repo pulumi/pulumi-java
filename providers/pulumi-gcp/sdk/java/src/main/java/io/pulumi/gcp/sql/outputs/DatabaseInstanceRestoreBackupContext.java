@@ -90,17 +90,14 @@ public final class DatabaseInstanceRestoreBackupContext {
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
-
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public DatabaseInstanceRestoreBackupContext build() {
+        }        public DatabaseInstanceRestoreBackupContext build() {
             return new DatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
         }
     }

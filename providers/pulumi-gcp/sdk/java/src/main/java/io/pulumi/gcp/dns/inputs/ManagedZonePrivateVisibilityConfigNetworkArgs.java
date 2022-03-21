@@ -58,12 +58,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends io.pulu
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
-
         public Builder networkUrl(String networkUrl) {
             this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
             return this;
-        }
-        public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
+        }        public ManagedZonePrivateVisibilityConfigNetworkArgs build() {
             return new ManagedZonePrivateVisibilityConfigNetworkArgs(networkUrl);
         }
     }

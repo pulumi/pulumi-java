@@ -124,27 +124,22 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
-
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder mapName(String mapName) {
             this.mapName = Objects.requireNonNull(mapName);
             return this;
         }
-
         public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public ListIntegrationAccountMapContentCallbackUrlArgs build() {
+        }        public ListIntegrationAccountMapContentCallbackUrlArgs build() {
             return new ListIntegrationAccountMapContentCallbackUrlArgs(integrationAccountName, keyType, mapName, notAfter, resourceGroupName);
         }
     }

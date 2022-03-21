@@ -57,12 +57,10 @@ public final class ConfgurationSetDeliveryOptionsArgs extends io.pulumi.resource
             this.tlsPolicy = tlsPolicy;
             return this;
         }
-
         public Builder tlsPolicy(@Nullable String tlsPolicy) {
             this.tlsPolicy = Output.ofNullable(tlsPolicy);
             return this;
-        }
-        public ConfgurationSetDeliveryOptionsArgs build() {
+        }        public ConfgurationSetDeliveryOptionsArgs build() {
             return new ConfgurationSetDeliveryOptionsArgs(tlsPolicy);
         }
     }

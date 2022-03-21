@@ -71,22 +71,18 @@ public final class RecipeParametersInputPropertiesArgs extends io.pulumi.resourc
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
-
         public Builder dataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = Output.ofNullable(dataCatalogInputDefinition);
             return this;
         }
-
         public Builder s3InputDefinition(@Nullable Output<RecipeS3LocationArgs> s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
-
         public Builder s3InputDefinition(@Nullable RecipeS3LocationArgs s3InputDefinition) {
             this.s3InputDefinition = Output.ofNullable(s3InputDefinition);
             return this;
-        }
-        public RecipeParametersInputPropertiesArgs build() {
+        }        public RecipeParametersInputPropertiesArgs build() {
             return new RecipeParametersInputPropertiesArgs(dataCatalogInputDefinition, s3InputDefinition);
         }
     }

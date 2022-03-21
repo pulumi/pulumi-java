@@ -84,17 +84,14 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = Objects.requireNonNull(ipamPoolAllocationId);
             return this;
         }
-
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
-        }
-        public GetIPAMAllocationArgs build() {
+        }        public GetIPAMAllocationArgs build() {
             return new GetIPAMAllocationArgs(cidr, ipamPoolAllocationId, ipamPoolId);
         }
     }

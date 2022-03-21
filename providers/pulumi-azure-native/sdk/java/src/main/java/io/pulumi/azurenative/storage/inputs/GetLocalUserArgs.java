@@ -88,17 +88,14 @@ public final class GetLocalUserArgs extends io.pulumi.resources.InvokeArgs {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public GetLocalUserArgs build() {
+        }        public GetLocalUserArgs build() {
             return new GetLocalUserArgs(accountName, resourceGroupName, username);
         }
     }

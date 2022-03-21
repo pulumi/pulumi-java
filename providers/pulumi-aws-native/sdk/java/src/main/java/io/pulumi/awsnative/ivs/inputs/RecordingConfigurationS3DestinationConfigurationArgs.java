@@ -56,12 +56,10 @@ public final class RecordingConfigurationS3DestinationConfigurationArgs extends 
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
-        }
-        public RecordingConfigurationS3DestinationConfigurationArgs build() {
+        }        public RecordingConfigurationS3DestinationConfigurationArgs build() {
             return new RecordingConfigurationS3DestinationConfigurationArgs(bucketName);
         }
     }

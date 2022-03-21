@@ -182,82 +182,66 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             this.httpConfiguration = httpConfiguration;
             return this;
         }
-
         public Builder httpConfiguration(@Nullable ConnectionMonitorHttpConfigurationArgs httpConfiguration) {
             this.httpConfiguration = Output.ofNullable(httpConfiguration);
             return this;
         }
-
         public Builder icmpConfiguration(@Nullable Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration) {
             this.icmpConfiguration = icmpConfiguration;
             return this;
         }
-
         public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationArgs icmpConfiguration) {
             this.icmpConfiguration = Output.ofNullable(icmpConfiguration);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder preferredIPVersion(@Nullable Output<Either<String,PreferredIPVersion>> preferredIPVersion) {
             this.preferredIPVersion = preferredIPVersion;
             return this;
         }
-
         public Builder preferredIPVersion(@Nullable Either<String,PreferredIPVersion> preferredIPVersion) {
             this.preferredIPVersion = Output.ofNullable(preferredIPVersion);
             return this;
         }
-
         public Builder protocol(Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder protocol(Either<String,ConnectionMonitorTestConfigurationProtocol> protocol) {
             this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public Builder successThreshold(@Nullable Output<ConnectionMonitorSuccessThresholdArgs> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
-
         public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdArgs successThreshold) {
             this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
-
         public Builder tcpConfiguration(@Nullable Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration) {
             this.tcpConfiguration = tcpConfiguration;
             return this;
         }
-
         public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationArgs tcpConfiguration) {
             this.tcpConfiguration = Output.ofNullable(tcpConfiguration);
             return this;
         }
-
         public Builder testFrequencySec(@Nullable Output<Integer> testFrequencySec) {
             this.testFrequencySec = testFrequencySec;
             return this;
         }
-
         public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
             this.testFrequencySec = Output.ofNullable(testFrequencySec);
             return this;
-        }
-        public ConnectionMonitorTestConfigurationArgs build() {
+        }        public ConnectionMonitorTestConfigurationArgs build() {
             return new ConnectionMonitorTestConfigurationArgs(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
         }
     }

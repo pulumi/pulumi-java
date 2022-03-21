@@ -90,32 +90,29 @@ public final class StackSetOperationPreferences {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
-
         public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
-
         public Builder maxConcurrentCount(@Nullable Integer maxConcurrentCount) {
             this.maxConcurrentCount = maxConcurrentCount;
             return this;
         }
-
         public Builder maxConcurrentPercentage(@Nullable Integer maxConcurrentPercentage) {
             this.maxConcurrentPercentage = maxConcurrentPercentage;
             return this;
         }
-
         public Builder regionConcurrencyType(@Nullable StackSetRegionConcurrencyType regionConcurrencyType) {
             this.regionConcurrencyType = regionConcurrencyType;
             return this;
         }
-
         public Builder regionOrder(@Nullable List<String> regionOrder) {
             this.regionOrder = regionOrder;
             return this;
         }
-        public StackSetOperationPreferences build() {
+        public Builder regionOrder(String... regionOrder) {
+            return regionOrder(List.of(regionOrder));
+        }        public StackSetOperationPreferences build() {
             return new StackSetOperationPreferences(failureToleranceCount, failureTolerancePercentage, maxConcurrentCount, maxConcurrentPercentage, regionConcurrencyType, regionOrder);
         }
     }

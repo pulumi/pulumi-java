@@ -80,32 +80,32 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder metrics(Output<List<ThrottlingMetricArgs>> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
-
         public Builder metrics(List<ThrottlingMetricArgs> metrics) {
             this.metrics = Output.of(Objects.requireNonNull(metrics));
             return this;
         }
-
+        public Builder metrics(ThrottlingMetricArgs... metrics) {
+            return metrics(List.of(metrics));
+        }
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
-
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
-        public ThrottlingRuleArgs build() {
+        public Builder requiredFeatures(String... requiredFeatures) {
+            return requiredFeatures(List.of(requiredFeatures));
+        }        public ThrottlingRuleArgs build() {
             return new ThrottlingRuleArgs(action, metrics, requiredFeatures);
         }
     }

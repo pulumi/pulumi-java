@@ -110,52 +110,42 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
-
         public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Output.ofNullable(timeZone);
             return this;
-        }
-        public DatasetArgs build() {
+        }        public DatasetArgs build() {
             return new DatasetArgs(datasetId, location, name, project, timeZone);
         }
     }

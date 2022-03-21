@@ -78,12 +78,13 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder storageSettings(List<StorageSettingResponse> storageSettings) {
             this.storageSettings = Objects.requireNonNull(storageSettings);
             return this;
         }
-        public BackupVaultResponse build() {
+        public Builder storageSettings(StorageSettingResponse... storageSettings) {
+            return storageSettings(List.of(storageSettings));
+        }        public BackupVaultResponse build() {
             return new BackupVaultResponse(provisioningState, storageSettings);
         }
     }

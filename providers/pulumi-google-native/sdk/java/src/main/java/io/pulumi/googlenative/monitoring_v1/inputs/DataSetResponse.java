@@ -125,27 +125,22 @@ public final class DataSetResponse extends io.pulumi.resources.InvokeArgs {
             this.legendTemplate = Objects.requireNonNull(legendTemplate);
             return this;
         }
-
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
-
         public Builder plotType(String plotType) {
             this.plotType = Objects.requireNonNull(plotType);
             return this;
         }
-
         public Builder targetAxis(String targetAxis) {
             this.targetAxis = Objects.requireNonNull(targetAxis);
             return this;
         }
-
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
-        }
-        public DataSetResponse build() {
+        }        public DataSetResponse build() {
             return new DataSetResponse(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
         }
     }

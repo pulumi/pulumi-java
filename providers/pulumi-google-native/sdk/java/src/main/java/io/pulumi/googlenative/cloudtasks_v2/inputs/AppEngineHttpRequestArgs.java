@@ -129,52 +129,42 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             this.appEngineRouting = appEngineRouting;
             return this;
         }
-
         public Builder appEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
             this.appEngineRouting = Output.ofNullable(appEngineRouting);
             return this;
         }
-
         public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
-
         public Builder body(@Nullable String body) {
             this.body = Output.ofNullable(body);
             return this;
         }
-
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable AppEngineHttpRequestHttpMethod httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder relativeUri(@Nullable Output<String> relativeUri) {
             this.relativeUri = relativeUri;
             return this;
         }
-
         public Builder relativeUri(@Nullable String relativeUri) {
             this.relativeUri = Output.ofNullable(relativeUri);
             return this;
-        }
-        public AppEngineHttpRequestArgs build() {
+        }        public AppEngineHttpRequestArgs build() {
             return new AppEngineHttpRequestArgs(appEngineRouting, body, headers, httpMethod, relativeUri);
         }
     }

@@ -191,92 +191,74 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
-
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
         }
-
         public Builder publicIpAddressId(@Nullable Output<String> publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
-
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = Output.ofNullable(publicIpAddressId);
             return this;
         }
-
         public Builder rdpAuthority(@Nullable Output<String> rdpAuthority) {
             this.rdpAuthority = rdpAuthority;
             return this;
         }
-
         public Builder rdpAuthority(@Nullable String rdpAuthority) {
             this.rdpAuthority = Output.ofNullable(rdpAuthority);
             return this;
         }
-
         public Builder sharedPublicIpAddressConfiguration(@Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
-
         public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = Output.ofNullable(sharedPublicIpAddressConfiguration);
             return this;
         }
-
         public Builder sshAuthority(@Nullable Output<String> sshAuthority) {
             this.sshAuthority = sshAuthority;
             return this;
         }
-
         public Builder sshAuthority(@Nullable String sshAuthority) {
             this.sshAuthority = Output.ofNullable(sshAuthority);
             return this;
         }
-
         public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
-
         public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable Output<String> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
-
         public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
             this.virtualNetworkId = Output.ofNullable(virtualNetworkId);
             return this;
-        }
-        public NetworkInterfacePropertiesArgs build() {
+        }        public NetworkInterfacePropertiesArgs build() {
             return new NetworkInterfacePropertiesArgs(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);
         }
     }

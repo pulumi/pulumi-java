@@ -79,22 +79,18 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
             this.compression = compression;
             return this;
         }
-
         public Builder compression(@Nullable JsonFileFormatCompression compression) {
             this.compression = Output.ofNullable(compression);
             return this;
         }
-
         public Builder schemaFileFormat(@Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat) {
             this.schemaFileFormat = schemaFileFormat;
             return this;
         }
-
         public Builder schemaFileFormat(@Nullable JsonFileFormatSchemaFileFormat schemaFileFormat) {
             this.schemaFileFormat = Output.ofNullable(schemaFileFormat);
             return this;
-        }
-        public JsonFileFormatArgs build() {
+        }        public JsonFileFormatArgs build() {
             return new JsonFileFormatArgs(compression, schemaFileFormat);
         }
     }

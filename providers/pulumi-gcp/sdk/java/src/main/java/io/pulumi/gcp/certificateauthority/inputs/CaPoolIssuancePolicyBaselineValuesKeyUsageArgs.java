@@ -96,32 +96,29 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageArgs extends io.pul
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
-
         public Builder baseKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs baseKeyUsage) {
             this.baseKeyUsage = Output.of(Objects.requireNonNull(baseKeyUsage));
             return this;
         }
-
         public Builder extendedKeyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
-
         public Builder extendedKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
             this.extendedKeyUsage = Output.of(Objects.requireNonNull(extendedKeyUsage));
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-
         public Builder unknownExtendedKeyUsages(@Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
-        public CaPoolIssuancePolicyBaselineValuesKeyUsageArgs build() {
+        public Builder unknownExtendedKeyUsages(CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
+        }        public CaPoolIssuancePolicyBaselineValuesKeyUsageArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }
     }

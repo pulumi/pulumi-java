@@ -65,22 +65,18 @@ public final class DataSourceS3PathArgs extends io.pulumi.resources.ResourceArgs
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public DataSourceS3PathArgs build() {
+        }        public DataSourceS3PathArgs build() {
             return new DataSourceS3PathArgs(bucket, key);
         }
     }

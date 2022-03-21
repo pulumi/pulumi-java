@@ -85,17 +85,14 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
             this.interconnectName = Objects.requireNonNull(interconnectName);
             return this;
         }
-
         public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
-
         public Builder portalUrl(String portalUrl) {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
-        }
-        public InterconnectAttachmentPartnerMetadataResponse build() {
+        }        public InterconnectAttachmentPartnerMetadataResponse build() {
             return new InterconnectAttachmentPartnerMetadataResponse(interconnectName, partnerName, portalUrl);
         }
     }

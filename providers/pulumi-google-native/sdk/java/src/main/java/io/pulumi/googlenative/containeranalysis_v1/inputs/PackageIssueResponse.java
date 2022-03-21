@@ -190,47 +190,38 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
-
         public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
-
         public Builder affectedVersion(VersionResponse affectedVersion) {
             this.affectedVersion = Objects.requireNonNull(affectedVersion);
             return this;
         }
-
         public Builder effectiveSeverity(String effectiveSeverity) {
             this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
             return this;
         }
-
         public Builder fixAvailable(Boolean fixAvailable) {
             this.fixAvailable = Objects.requireNonNull(fixAvailable);
             return this;
         }
-
         public Builder fixedCpeUri(String fixedCpeUri) {
             this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
             return this;
         }
-
         public Builder fixedPackage(String fixedPackage) {
             this.fixedPackage = Objects.requireNonNull(fixedPackage);
             return this;
         }
-
         public Builder fixedVersion(VersionResponse fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
-
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
-        }
-        public PackageIssueResponse build() {
+        }        public PackageIssueResponse build() {
             return new PackageIssueResponse(affectedCpeUri, affectedPackage, affectedVersion, effectiveSeverity, fixAvailable, fixedCpeUri, fixedPackage, fixedVersion, packageType);
         }
     }

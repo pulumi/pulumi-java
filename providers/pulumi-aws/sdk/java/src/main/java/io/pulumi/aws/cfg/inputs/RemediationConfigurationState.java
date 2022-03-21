@@ -223,112 +223,93 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder automatic(@Nullable Output<Boolean> automatic) {
             this.automatic = automatic;
             return this;
         }
-
         public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = Output.ofNullable(automatic);
             return this;
         }
-
         public Builder configRuleName(@Nullable Output<String> configRuleName) {
             this.configRuleName = configRuleName;
             return this;
         }
-
         public Builder configRuleName(@Nullable String configRuleName) {
             this.configRuleName = Output.ofNullable(configRuleName);
             return this;
         }
-
         public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls) {
             this.executionControls = executionControls;
             return this;
         }
-
         public Builder executionControls(@Nullable RemediationConfigurationExecutionControlsGetArgs executionControls) {
             this.executionControls = Output.ofNullable(executionControls);
             return this;
         }
-
         public Builder maximumAutomaticAttempts(@Nullable Output<Integer> maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = maximumAutomaticAttempts;
             return this;
         }
-
         public Builder maximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = Output.ofNullable(maximumAutomaticAttempts);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<RemediationConfigurationParameterGetArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(RemediationConfigurationParameterGetArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
-
         public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
-
         public Builder retryAttemptSeconds(@Nullable Output<Integer> retryAttemptSeconds) {
             this.retryAttemptSeconds = retryAttemptSeconds;
             return this;
         }
-
         public Builder retryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
             this.retryAttemptSeconds = Output.ofNullable(retryAttemptSeconds);
             return this;
         }
-
         public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
-
         public Builder targetId(@Nullable String targetId) {
             this.targetId = Output.ofNullable(targetId);
             return this;
         }
-
         public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
-
         public Builder targetType(@Nullable String targetType) {
             this.targetType = Output.ofNullable(targetType);
             return this;
         }
-
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
             this.targetVersion = targetVersion;
             return this;
         }
-
         public Builder targetVersion(@Nullable String targetVersion) {
             this.targetVersion = Output.ofNullable(targetVersion);
             return this;
-        }
-        public RemediationConfigurationState build() {
+        }        public RemediationConfigurationState build() {
             return new RemediationConfigurationState(arn, automatic, configRuleName, executionControls, maximumAutomaticAttempts, parameters, resourceType, retryAttemptSeconds, targetId, targetType, targetVersion);
         }
     }

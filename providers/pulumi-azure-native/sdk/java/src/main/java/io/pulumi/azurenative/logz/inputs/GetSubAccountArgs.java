@@ -88,17 +88,14 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder subAccountName(String subAccountName) {
             this.subAccountName = Objects.requireNonNull(subAccountName);
             return this;
-        }
-        public GetSubAccountArgs build() {
+        }        public GetSubAccountArgs build() {
             return new GetSubAccountArgs(monitorName, resourceGroupName, subAccountName);
         }
     }

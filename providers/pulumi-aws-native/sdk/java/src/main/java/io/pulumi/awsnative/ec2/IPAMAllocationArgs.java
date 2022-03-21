@@ -99,42 +99,34 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipamPoolId(Output<String> ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
-
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Output.of(Objects.requireNonNull(ipamPoolId));
             return this;
         }
-
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
-
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Output.ofNullable(netmaskLength);
             return this;
-        }
-        public IPAMAllocationArgs build() {
+        }        public IPAMAllocationArgs build() {
             return new IPAMAllocationArgs(cidr, description, ipamPoolId, netmaskLength);
         }
     }

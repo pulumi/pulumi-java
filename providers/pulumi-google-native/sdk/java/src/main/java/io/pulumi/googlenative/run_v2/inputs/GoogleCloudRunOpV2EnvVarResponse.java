@@ -93,17 +93,14 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends io.pulumi.resources.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder valueSource(GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
-        }
-        public GoogleCloudRunOpV2EnvVarResponse build() {
+        }        public GoogleCloudRunOpV2EnvVarResponse build() {
             return new GoogleCloudRunOpV2EnvVarResponse(name, value, valueSource);
         }
     }

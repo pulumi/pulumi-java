@@ -90,17 +90,14 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public OrchestratorIdentityResponse build() {
+        }        public OrchestratorIdentityResponse build() {
             return new OrchestratorIdentityResponse(principalId, tenantId, type);
         }
     }

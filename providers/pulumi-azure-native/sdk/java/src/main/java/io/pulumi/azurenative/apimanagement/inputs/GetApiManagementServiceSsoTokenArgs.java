@@ -72,12 +72,10 @@ public final class GetApiManagementServiceSsoTokenArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public GetApiManagementServiceSsoTokenArgs build() {
+        }        public GetApiManagementServiceSsoTokenArgs build() {
             return new GetApiManagementServiceSsoTokenArgs(resourceGroupName, serviceName);
         }
     }

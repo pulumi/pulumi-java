@@ -78,22 +78,18 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
-
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
-        }
-        public Hl7V2NotificationConfigArgs build() {
+        }        public Hl7V2NotificationConfigArgs build() {
             return new Hl7V2NotificationConfigArgs(filter, pubsubTopic);
         }
     }

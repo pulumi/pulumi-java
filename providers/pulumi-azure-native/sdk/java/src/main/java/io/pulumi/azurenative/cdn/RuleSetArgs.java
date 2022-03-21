@@ -90,32 +90,26 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
-
         public Builder ruleSetName(@Nullable String ruleSetName) {
             this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
-        }
-        public RuleSetArgs build() {
+        }        public RuleSetArgs build() {
             return new RuleSetArgs(profileName, resourceGroupName, ruleSetName);
         }
     }

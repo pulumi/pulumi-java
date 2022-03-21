@@ -88,17 +88,14 @@ public final class GetAFDEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
-
         public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAFDEndpointArgs build() {
+        }        public GetAFDEndpointArgs build() {
             return new GetAFDEndpointArgs(endpointName, profileName, resourceGroupName);
         }
     }

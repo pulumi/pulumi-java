@@ -211,52 +211,42 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
             this.allowTestDevices = Objects.requireNonNull(allowTestDevices);
             return this;
         }
-
         public Builder beginDate(@Nullable String beginDate) {
             this.beginDate = beginDate;
             return this;
         }
-
         public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation) {
             this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder gracePeriod(@Nullable String gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
         }
-
         public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
-
         public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight) {
             this.playRight = playRight;
             return this;
         }
-
         public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
             this.relativeBeginDate = relativeBeginDate;
             return this;
         }
-
         public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
-        }
-        public ContentKeyPolicyPlayReadyLicenseResponse build() {
+        }        public ContentKeyPolicyPlayReadyLicenseResponse build() {
             return new ContentKeyPolicyPlayReadyLicenseResponse(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);
         }
     }

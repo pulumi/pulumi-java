@@ -134,32 +134,32 @@ public final class GetAttributeDefinitionResult {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
-
+        public Builder allowedValues(String... allowedValues) {
+            return allowedValues(List.of(allowedValues));
+        }
         public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder consentDefaultValues(List<String> consentDefaultValues) {
             this.consentDefaultValues = Objects.requireNonNull(consentDefaultValues);
             return this;
         }
-
+        public Builder consentDefaultValues(String... consentDefaultValues) {
+            return consentDefaultValues(List.of(consentDefaultValues));
+        }
         public Builder dataMappingDefaultValue(String dataMappingDefaultValue) {
             this.dataMappingDefaultValue = Objects.requireNonNull(dataMappingDefaultValue);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public GetAttributeDefinitionResult build() {
+        }        public GetAttributeDefinitionResult build() {
             return new GetAttributeDefinitionResult(allowedValues, category, consentDefaultValues, dataMappingDefaultValue, description, name);
         }
     }

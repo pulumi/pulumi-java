@@ -167,72 +167,76 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             this.absoluteCriteria = absoluteCriteria;
             return this;
         }
-
         public Builder absoluteCriteria(@Nullable List<Either<String,AbsoluteMarker>> absoluteCriteria) {
             this.absoluteCriteria = Output.ofNullable(absoluteCriteria);
             return this;
         }
-
+        public Builder absoluteCriteria(Either<String,AbsoluteMarker>... absoluteCriteria) {
+            return absoluteCriteria(List.of(absoluteCriteria));
+        }
         public Builder daysOfMonth(@Nullable Output<List<DayArgs>> daysOfMonth) {
             this.daysOfMonth = daysOfMonth;
             return this;
         }
-
         public Builder daysOfMonth(@Nullable List<DayArgs> daysOfMonth) {
             this.daysOfMonth = Output.ofNullable(daysOfMonth);
             return this;
         }
-
+        public Builder daysOfMonth(DayArgs... daysOfMonth) {
+            return daysOfMonth(List.of(daysOfMonth));
+        }
         public Builder daysOfTheWeek(@Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-
         public Builder daysOfTheWeek(@Nullable List<Either<String,DayOfWeek>> daysOfTheWeek) {
             this.daysOfTheWeek = Output.ofNullable(daysOfTheWeek);
             return this;
         }
-
+        public Builder daysOfTheWeek(Either<String,DayOfWeek>... daysOfTheWeek) {
+            return daysOfTheWeek(List.of(daysOfTheWeek));
+        }
         public Builder monthsOfYear(@Nullable Output<List<Either<String,Month>>> monthsOfYear) {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
-
         public Builder monthsOfYear(@Nullable List<Either<String,Month>> monthsOfYear) {
             this.monthsOfYear = Output.ofNullable(monthsOfYear);
             return this;
         }
-
+        public Builder monthsOfYear(Either<String,Month>... monthsOfYear) {
+            return monthsOfYear(List.of(monthsOfYear));
+        }
         public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public Builder objectType(String objectType) {
             this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public Builder scheduleTimes(@Nullable Output<List<String>> scheduleTimes) {
             this.scheduleTimes = scheduleTimes;
             return this;
         }
-
         public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
             this.scheduleTimes = Output.ofNullable(scheduleTimes);
             return this;
         }
-
+        public Builder scheduleTimes(String... scheduleTimes) {
+            return scheduleTimes(List.of(scheduleTimes));
+        }
         public Builder weeksOfTheMonth(@Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-
         public Builder weeksOfTheMonth(@Nullable List<Either<String,WeekNumber>> weeksOfTheMonth) {
             this.weeksOfTheMonth = Output.ofNullable(weeksOfTheMonth);
             return this;
         }
-        public ScheduleBasedBackupCriteriaArgs build() {
+        public Builder weeksOfTheMonth(Either<String,WeekNumber>... weeksOfTheMonth) {
+            return weeksOfTheMonth(List.of(weeksOfTheMonth));
+        }        public ScheduleBasedBackupCriteriaArgs build() {
             return new ScheduleBasedBackupCriteriaArgs(absoluteCriteria, daysOfMonth, daysOfTheWeek, monthsOfYear, objectType, scheduleTimes, weeksOfTheMonth);
         }
     }

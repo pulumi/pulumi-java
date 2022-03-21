@@ -73,22 +73,18 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
-
         public Builder routeTableId(String routeTableId) {
             this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
             return this;
         }
-
         public Builder vpcEndpointId(Output<String> vpcEndpointId) {
             this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
             return this;
         }
-
         public Builder vpcEndpointId(String vpcEndpointId) {
             this.vpcEndpointId = Output.of(Objects.requireNonNull(vpcEndpointId));
             return this;
-        }
-        public VpcEndpointRouteTableAssociationArgs build() {
+        }        public VpcEndpointRouteTableAssociationArgs build() {
             return new VpcEndpointRouteTableAssociationArgs(routeTableId, vpcEndpointId);
         }
     }

@@ -80,22 +80,21 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs extend
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
-
         public Builder parts(List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs> parts) {
             this.parts = Output.of(Objects.requireNonNull(parts));
             return this;
         }
-
+        public Builder parts(GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs... parts) {
+            return parts(List.of(parts));
+        }
         public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }
-
         public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = Output.ofNullable(repeatCount);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs(parts, repeatCount);
         }
     }

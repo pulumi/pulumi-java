@@ -133,32 +133,26 @@ public final class StorageAccountMicrosoftEndpointsResponse {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
-
         public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
-
         public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
-
         public Builder queue(String queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
-
         public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
-        }
-        public StorageAccountMicrosoftEndpointsResponse build() {
+        }        public StorageAccountMicrosoftEndpointsResponse build() {
             return new StorageAccountMicrosoftEndpointsResponse(blob, dfs, file, queue, table, web);
         }
     }

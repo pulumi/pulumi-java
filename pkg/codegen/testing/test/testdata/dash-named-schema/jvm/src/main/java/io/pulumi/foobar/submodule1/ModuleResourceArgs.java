@@ -53,12 +53,10 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.thing = thing;
             return this;
         }
-
         public Builder thing(@Nullable TopLevelArgs thing) {
             this.thing = Output.ofNullable(thing);
             return this;
-        }
-        public ModuleResourceArgs build() {
+        }        public ModuleResourceArgs build() {
             return new ModuleResourceArgs(thing);
         }
     }

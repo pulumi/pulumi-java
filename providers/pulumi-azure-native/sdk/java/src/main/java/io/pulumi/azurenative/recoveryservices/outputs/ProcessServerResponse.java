@@ -621,182 +621,152 @@ public final class ProcessServerResponse {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
-
         public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
-
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
-
         public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             this.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
-
         public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             this.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
-
         public Builder cpuLoad(@Nullable String cpuLoad) {
             this.cpuLoad = cpuLoad;
             return this;
         }
-
         public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             this.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
-
         public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
-
         public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
-
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
-
+        public Builder healthErrors(HealthErrorResponse... healthErrors) {
+            return healthErrors(List.of(healthErrors));
+        }
         public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
-
         public Builder machineCount(@Nullable String machineCount) {
             this.machineCount = machineCount;
             return this;
         }
-
         public Builder marsCommunicationStatus(String marsCommunicationStatus) {
             this.marsCommunicationStatus = Objects.requireNonNull(marsCommunicationStatus);
             return this;
         }
-
         public Builder marsRegistrationStatus(String marsRegistrationStatus) {
             this.marsRegistrationStatus = Objects.requireNonNull(marsRegistrationStatus);
             return this;
         }
-
         public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             this.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
-
         public Builder mobilityServiceUpdates(@Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates) {
             this.mobilityServiceUpdates = mobilityServiceUpdates;
             return this;
         }
-
+        public Builder mobilityServiceUpdates(MobilityServiceUpdateResponse... mobilityServiceUpdates) {
+            return mobilityServiceUpdates(List.of(mobilityServiceUpdates));
+        }
         public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
-
         public Builder psServiceStatus(@Nullable String psServiceStatus) {
             this.psServiceStatus = psServiceStatus;
             return this;
         }
-
         public Builder psStatsRefreshTime(String psStatsRefreshTime) {
             this.psStatsRefreshTime = Objects.requireNonNull(psStatsRefreshTime);
             return this;
         }
-
         public Builder replicationPairCount(@Nullable String replicationPairCount) {
             this.replicationPairCount = replicationPairCount;
             return this;
         }
-
         public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             this.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
-
         public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             this.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
-
         public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
-
         public Builder systemLoad(@Nullable String systemLoad) {
             this.systemLoad = systemLoad;
             return this;
         }
-
         public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             this.systemLoadStatus = systemLoadStatus;
             return this;
         }
-
         public Builder throughputInBytes(Double throughputInBytes) {
             this.throughputInBytes = Objects.requireNonNull(throughputInBytes);
             return this;
         }
-
         public Builder throughputInMBps(Double throughputInMBps) {
             this.throughputInMBps = Objects.requireNonNull(throughputInMBps);
             return this;
         }
-
         public Builder throughputStatus(String throughputStatus) {
             this.throughputStatus = Objects.requireNonNull(throughputStatus);
             return this;
         }
-
         public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
             this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes);
             return this;
         }
-
         public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             this.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
-
         public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             this.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
-
         public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
-        }
-        public ProcessServerResponse build() {
+        }        public ProcessServerResponse build() {
             return new ProcessServerResponse(agentExpiryDate, agentVersion, agentVersionDetails, availableMemoryInBytes, availableSpaceInBytes, cpuLoad, cpuLoadStatus, friendlyName, health, healthErrors, hostId, id, ipAddress, lastHeartbeat, machineCount, marsCommunicationStatus, marsRegistrationStatus, memoryUsageStatus, mobilityServiceUpdates, osType, osVersion, psServiceStatus, psStatsRefreshTime, replicationPairCount, spaceUsageStatus, sslCertExpiryDate, sslCertExpiryRemainingDays, systemLoad, systemLoadStatus, throughputInBytes, throughputInMBps, throughputStatus, throughputUploadPendingDataInBytes, totalMemoryInBytes, totalSpaceInBytes, versionStatus);
         }
     }

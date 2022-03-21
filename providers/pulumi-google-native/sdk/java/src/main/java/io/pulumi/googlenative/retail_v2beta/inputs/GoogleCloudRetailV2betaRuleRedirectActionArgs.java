@@ -61,12 +61,10 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends io.pulu
             this.redirectUri = redirectUri;
             return this;
         }
-
         public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = Output.ofNullable(redirectUri);
             return this;
-        }
-        public GoogleCloudRetailV2betaRuleRedirectActionArgs build() {
+        }        public GoogleCloudRetailV2betaRuleRedirectActionArgs build() {
             return new GoogleCloudRetailV2betaRuleRedirectActionArgs(redirectUri);
         }
     }

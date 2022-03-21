@@ -54,7 +54,9 @@ public final class EventSourceMappingFilterCriteria {
             this.filters = filters;
             return this;
         }
-        public EventSourceMappingFilterCriteria build() {
+        public Builder filters(EventSourceMappingFilterCriteriaFilter... filters) {
+            return filters(List.of(filters));
+        }        public EventSourceMappingFilterCriteria build() {
             return new EventSourceMappingFilterCriteria(filters);
         }
     }

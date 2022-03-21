@@ -78,12 +78,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTi
             this.nanos = nanos;
             return this;
         }
-
         public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout build() {
+        }        public RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout(nanos, seconds);
         }
     }

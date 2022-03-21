@@ -63,12 +63,10 @@ public final class PodDNSConfigOption {
             this.name = name;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public PodDNSConfigOption build() {
+        }        public PodDNSConfigOption build() {
             return new PodDNSConfigOption(name, value);
         }
     }

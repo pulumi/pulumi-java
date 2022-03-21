@@ -104,22 +104,21 @@ public final class BlobInventoryPolicySchemaResponse {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder rules(List<BlobInventoryPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
+        public Builder rules(BlobInventoryPolicyRuleResponse... rules) {
+            return rules(List.of(rules));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public BlobInventoryPolicySchemaResponse build() {
+        }        public BlobInventoryPolicySchemaResponse build() {
             return new BlobInventoryPolicySchemaResponse(destination, enabled, rules, type);
         }
     }

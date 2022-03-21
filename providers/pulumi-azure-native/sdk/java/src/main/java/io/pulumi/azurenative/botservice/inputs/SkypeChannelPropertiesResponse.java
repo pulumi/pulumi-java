@@ -207,52 +207,42 @@ public final class SkypeChannelPropertiesResponse extends io.pulumi.resources.In
             this.callingWebHook = callingWebHook;
             return this;
         }
-
         public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
-
         public Builder enableGroups(@Nullable Boolean enableGroups) {
             this.enableGroups = enableGroups;
             return this;
         }
-
         public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
             this.enableMediaCards = enableMediaCards;
             return this;
         }
-
         public Builder enableMessaging(@Nullable Boolean enableMessaging) {
             this.enableMessaging = enableMessaging;
             return this;
         }
-
         public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
             this.enableScreenSharing = enableScreenSharing;
             return this;
         }
-
         public Builder enableVideo(@Nullable Boolean enableVideo) {
             this.enableVideo = enableVideo;
             return this;
         }
-
         public Builder groupsMode(@Nullable String groupsMode) {
             this.groupsMode = groupsMode;
             return this;
         }
-
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
-        }
-        public SkypeChannelPropertiesResponse build() {
+        }        public SkypeChannelPropertiesResponse build() {
             return new SkypeChannelPropertiesResponse(callingWebHook, enableCalling, enableGroups, enableMediaCards, enableMessaging, enableScreenSharing, enableVideo, groupsMode, incomingCallRoute, isEnabled);
         }
     }

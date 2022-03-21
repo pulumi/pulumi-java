@@ -53,7 +53,9 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }
-        public RuleGroupRuleGroupRuleVariablesIpSetIpSet build() {
+        public Builder definitions(String... definitions) {
+            return definitions(List.of(definitions));
+        }        public RuleGroupRuleGroupRuleVariablesIpSetIpSet build() {
             return new RuleGroupRuleGroupRuleVariablesIpSetIpSet(definitions);
         }
     }

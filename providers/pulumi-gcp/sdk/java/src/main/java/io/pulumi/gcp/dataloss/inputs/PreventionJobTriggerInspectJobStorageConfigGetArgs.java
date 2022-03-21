@@ -113,42 +113,34 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
             this.bigQueryOptions = bigQueryOptions;
             return this;
         }
-
         public Builder bigQueryOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs bigQueryOptions) {
             this.bigQueryOptions = Output.ofNullable(bigQueryOptions);
             return this;
         }
-
         public Builder cloudStorageOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> cloudStorageOptions) {
             this.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
-
         public Builder cloudStorageOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs cloudStorageOptions) {
             this.cloudStorageOptions = Output.ofNullable(cloudStorageOptions);
             return this;
         }
-
         public Builder datastoreOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> datastoreOptions) {
             this.datastoreOptions = datastoreOptions;
             return this;
         }
-
         public Builder datastoreOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs datastoreOptions) {
             this.datastoreOptions = Output.ofNullable(datastoreOptions);
             return this;
         }
-
         public Builder timespanConfig(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> timespanConfig) {
             this.timespanConfig = timespanConfig;
             return this;
         }
-
         public Builder timespanConfig(@Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs timespanConfig) {
             this.timespanConfig = Output.ofNullable(timespanConfig);
             return this;
-        }
-        public PreventionJobTriggerInspectJobStorageConfigGetArgs build() {
+        }        public PreventionJobTriggerInspectJobStorageConfigGetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigGetArgs(bigQueryOptions, cloudStorageOptions, datastoreOptions, timespanConfig);
         }
     }

@@ -43,8 +43,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
         public Builder dailyMaintenanceWindow(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
             return this;
-        }
-        public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse build() {
+        }        public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse build() {
             return new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(dailyMaintenanceWindow);
         }
     }

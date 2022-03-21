@@ -79,22 +79,18 @@ public final class BucketIamConfigurationUniformBucketLevelAccessArgs extends io
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder lockedTime(@Nullable Output<String> lockedTime) {
             this.lockedTime = lockedTime;
             return this;
         }
-
         public Builder lockedTime(@Nullable String lockedTime) {
             this.lockedTime = Output.ofNullable(lockedTime);
             return this;
-        }
-        public BucketIamConfigurationUniformBucketLevelAccessArgs build() {
+        }        public BucketIamConfigurationUniformBucketLevelAccessArgs build() {
             return new BucketIamConfigurationUniformBucketLevelAccessArgs(enabled, lockedTime);
         }
     }

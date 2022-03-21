@@ -56,8 +56,7 @@ public final class ScheduledEventsProfileResponse extends io.pulumi.resources.In
         public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
             this.terminateNotificationProfile = terminateNotificationProfile;
             return this;
-        }
-        public ScheduledEventsProfileResponse build() {
+        }        public ScheduledEventsProfileResponse build() {
             return new ScheduledEventsProfileResponse(terminateNotificationProfile);
         }
     }

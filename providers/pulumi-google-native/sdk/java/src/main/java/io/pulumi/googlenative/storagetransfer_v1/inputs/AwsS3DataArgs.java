@@ -111,42 +111,34 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
-
         public Builder awsAccessKey(@Nullable AwsAccessKeyArgs awsAccessKey) {
             this.awsAccessKey = Output.ofNullable(awsAccessKey);
             return this;
         }
-
         public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
-
         public Builder bucketName(String bucketName) {
             this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
-
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Output.ofNullable(roleArn);
             return this;
-        }
-        public AwsS3DataArgs build() {
+        }        public AwsS3DataArgs build() {
             return new AwsS3DataArgs(awsAccessKey, bucketName, path, roleArn);
         }
     }

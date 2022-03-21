@@ -95,17 +95,14 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
             this.deprecatedBy = deprecatedBy;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public DatasetStateResponse build() {
+        }        public DatasetStateResponse build() {
             return new DatasetStateResponse(deprecatedBy, etag, state);
         }
     }

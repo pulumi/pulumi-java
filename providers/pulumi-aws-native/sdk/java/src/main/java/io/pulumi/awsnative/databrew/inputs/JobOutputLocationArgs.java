@@ -82,32 +82,26 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public Builder bucketOwner(@Nullable Output<String> bucketOwner) {
             this.bucketOwner = bucketOwner;
             return this;
         }
-
         public Builder bucketOwner(@Nullable String bucketOwner) {
             this.bucketOwner = Output.ofNullable(bucketOwner);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
-        }
-        public JobOutputLocationArgs build() {
+        }        public JobOutputLocationArgs build() {
             return new JobOutputLocationArgs(bucket, bucketOwner, key);
         }
     }

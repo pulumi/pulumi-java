@@ -120,27 +120,25 @@ public final class MabContainerExtendedInfoResponse {
             this.backupItemType = backupItemType;
             return this;
         }
-
         public Builder backupItems(@Nullable List<String> backupItems) {
             this.backupItems = backupItems;
             return this;
         }
-
+        public Builder backupItems(String... backupItems) {
+            return backupItems(List.of(backupItems));
+        }
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
-
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-
         public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
-        }
-        public MabContainerExtendedInfoResponse build() {
+        }        public MabContainerExtendedInfoResponse build() {
             return new MabContainerExtendedInfoResponse(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
         }
     }

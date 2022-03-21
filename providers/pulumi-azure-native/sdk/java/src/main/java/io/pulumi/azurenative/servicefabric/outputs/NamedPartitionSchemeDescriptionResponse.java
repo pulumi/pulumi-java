@@ -89,17 +89,17 @@ public final class NamedPartitionSchemeDescriptionResponse {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
+        public Builder names(String... names) {
+            return names(List.of(names));
+        }
         public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
-        }
-        public NamedPartitionSchemeDescriptionResponse build() {
+        }        public NamedPartitionSchemeDescriptionResponse build() {
             return new NamedPartitionSchemeDescriptionResponse(count, names, partitionScheme);
         }
     }

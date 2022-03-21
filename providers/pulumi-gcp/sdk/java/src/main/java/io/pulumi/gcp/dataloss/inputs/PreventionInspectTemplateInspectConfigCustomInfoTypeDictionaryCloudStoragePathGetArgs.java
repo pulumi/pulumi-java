@@ -56,12 +56,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs build() {
+        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathGetArgs(path);
         }
     }

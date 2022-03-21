@@ -104,22 +104,21 @@ public final class NodeGroupData {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
-
         public Builder cfnStack(Stack cfnStack) {
             this.cfnStack = Objects.requireNonNull(cfnStack);
             return this;
         }
-
         public Builder extraNodeSecurityGroups(List<SecurityGroup> extraNodeSecurityGroups) {
             this.extraNodeSecurityGroups = Objects.requireNonNull(extraNodeSecurityGroups);
             return this;
         }
-
+        public Builder extraNodeSecurityGroups(SecurityGroup... extraNodeSecurityGroups) {
+            return extraNodeSecurityGroups(List.of(extraNodeSecurityGroups));
+        }
         public Builder nodeSecurityGroup(SecurityGroup nodeSecurityGroup) {
             this.nodeSecurityGroup = Objects.requireNonNull(nodeSecurityGroup);
             return this;
-        }
-        public NodeGroupData build() {
+        }        public NodeGroupData build() {
             return new NodeGroupData(autoScalingGroupName, cfnStack, extraNodeSecurityGroups, nodeSecurityGroup);
         }
     }

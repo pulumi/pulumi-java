@@ -161,72 +161,61 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expectedOutputUrl(@Nullable Output<String> expectedOutputUrl) {
             this.expectedOutputUrl = expectedOutputUrl;
             return this;
         }
-
         public Builder expectedOutputUrl(@Nullable String expectedOutputUrl) {
             this.expectedOutputUrl = Output.ofNullable(expectedOutputUrl);
             return this;
         }
-
         public Builder expectedRedirectResponseCode(@Nullable Output<Integer> expectedRedirectResponseCode) {
             this.expectedRedirectResponseCode = expectedRedirectResponseCode;
             return this;
         }
-
         public Builder expectedRedirectResponseCode(@Nullable Integer expectedRedirectResponseCode) {
             this.expectedRedirectResponseCode = Output.ofNullable(expectedRedirectResponseCode);
             return this;
         }
-
         public Builder headers(@Nullable Output<List<UrlMapTestHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
-
         public Builder headers(@Nullable List<UrlMapTestHeaderArgs> headers) {
             this.headers = Output.ofNullable(headers);
             return this;
         }
-
+        public Builder headers(UrlMapTestHeaderArgs... headers) {
+            return headers(List.of(headers));
+        }
         public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public UrlMapTestArgs build() {
+        }        public UrlMapTestArgs build() {
             return new UrlMapTestArgs(description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
         }
     }

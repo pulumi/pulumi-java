@@ -216,112 +216,99 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.apiProducts = apiProducts;
             return this;
         }
-
         public Builder apiProducts(@Nullable List<String> apiProducts) {
             this.apiProducts = Output.ofNullable(apiProducts);
             return this;
         }
-
+        public Builder apiProducts(String... apiProducts) {
+            return apiProducts(List.of(apiProducts));
+        }
         public Builder appFamily(@Nullable Output<String> appFamily) {
             this.appFamily = appFamily;
             return this;
         }
-
         public Builder appFamily(@Nullable String appFamily) {
             this.appFamily = Output.ofNullable(appFamily);
             return this;
         }
-
         public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
-
         public Builder appId(@Nullable String appId) {
             this.appId = Output.ofNullable(appId);
             return this;
         }
-
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder callbackUrl(@Nullable Output<String> callbackUrl) {
             this.callbackUrl = callbackUrl;
             return this;
         }
-
         public Builder callbackUrl(@Nullable String callbackUrl) {
             this.callbackUrl = Output.ofNullable(callbackUrl);
             return this;
         }
-
         public Builder developerId(Output<String> developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
-
         public Builder developerId(String developerId) {
             this.developerId = Output.of(Objects.requireNonNull(developerId));
             return this;
         }
-
         public Builder keyExpiresIn(@Nullable Output<String> keyExpiresIn) {
             this.keyExpiresIn = keyExpiresIn;
             return this;
         }
-
         public Builder keyExpiresIn(@Nullable String keyExpiresIn) {
             this.keyExpiresIn = Output.ofNullable(keyExpiresIn);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
-
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Output.ofNullable(scopes);
             return this;
         }
-
+        public Builder scopes(String... scopes) {
+            return scopes(List.of(scopes));
+        }
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
-        }
-        public AppArgs build() {
+        }        public AppArgs build() {
             return new AppArgs(apiProducts, appFamily, appId, attributes, callbackUrl, developerId, keyExpiresIn, name, organizationId, scopes, status);
         }
     }

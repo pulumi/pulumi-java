@@ -53,8 +53,7 @@ public final class StorageLensActivityMetrics {
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
-        }
-        public StorageLensActivityMetrics build() {
+        }        public StorageLensActivityMetrics build() {
             return new StorageLensActivityMetrics(isEnabled);
         }
     }

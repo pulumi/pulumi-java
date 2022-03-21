@@ -156,72 +156,61 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
             this.catalogId = catalogId;
             return this;
         }
-
         public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
-
         public Builder className(Output<String> className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
-
         public Builder className(String className) {
             this.className = Output.of(Objects.requireNonNull(className));
             return this;
         }
-
         public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerName(Output<String> ownerName) {
             this.ownerName = Objects.requireNonNull(ownerName);
             return this;
         }
-
         public Builder ownerName(String ownerName) {
             this.ownerName = Output.of(Objects.requireNonNull(ownerName));
             return this;
         }
-
         public Builder ownerType(Output<String> ownerType) {
             this.ownerType = Objects.requireNonNull(ownerType);
             return this;
         }
-
         public Builder ownerType(String ownerType) {
             this.ownerType = Output.of(Objects.requireNonNull(ownerType));
             return this;
         }
-
         public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
             this.resourceUris = resourceUris;
             return this;
         }
-
         public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriArgs> resourceUris) {
             this.resourceUris = Output.ofNullable(resourceUris);
             return this;
         }
-        public UserDefinedFunctionArgs build() {
+        public Builder resourceUris(UserDefinedFunctionResourceUriArgs... resourceUris) {
+            return resourceUris(List.of(resourceUris));
+        }        public UserDefinedFunctionArgs build() {
             return new UserDefinedFunctionArgs(catalogId, className, databaseName, name, ownerName, ownerType, resourceUris);
         }
     }

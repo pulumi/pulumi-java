@@ -53,12 +53,10 @@ public final class AssistantAssociationTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public AssistantAssociationTag build() {
+        }        public AssistantAssociationTag build() {
             return new AssistantAssociationTag(key, value);
         }
     }

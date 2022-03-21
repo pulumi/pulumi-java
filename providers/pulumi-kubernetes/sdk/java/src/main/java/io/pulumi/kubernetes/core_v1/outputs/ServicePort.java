@@ -147,32 +147,26 @@ public final class ServicePort {
             this.appProtocol = appProtocol;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder nodePort(@Nullable Integer nodePort) {
             this.nodePort = nodePort;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
             this.targetPort = targetPort;
             return this;
-        }
-        public ServicePort build() {
+        }        public ServicePort build() {
             return new ServicePort(appProtocol, name, nodePort, port, protocol, targetPort);
         }
     }

@@ -102,27 +102,22 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
-
         public Builder entityTypeId(String entityTypeId) {
             this.entityTypeId = Objects.requireNonNull(entityTypeId);
             return this;
         }
-
         public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = languageCode;
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetEntityTypeArgs build() {
+        }        public GetEntityTypeArgs build() {
             return new GetEntityTypeArgs(agentId, entityTypeId, languageCode, location, project);
         }
     }

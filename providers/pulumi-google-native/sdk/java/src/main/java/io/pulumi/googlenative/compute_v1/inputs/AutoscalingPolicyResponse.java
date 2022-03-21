@@ -191,47 +191,41 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
             this.coolDownPeriodSec = Objects.requireNonNull(coolDownPeriodSec);
             return this;
         }
-
         public Builder cpuUtilization(AutoscalingPolicyCpuUtilizationResponse cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
-
         public Builder customMetricUtilizations(List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations) {
             this.customMetricUtilizations = Objects.requireNonNull(customMetricUtilizations);
             return this;
         }
-
+        public Builder customMetricUtilizations(AutoscalingPolicyCustomMetricUtilizationResponse... customMetricUtilizations) {
+            return customMetricUtilizations(List.of(customMetricUtilizations));
+        }
         public Builder loadBalancingUtilization(AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization) {
             this.loadBalancingUtilization = Objects.requireNonNull(loadBalancingUtilization);
             return this;
         }
-
         public Builder maxNumReplicas(Integer maxNumReplicas) {
             this.maxNumReplicas = Objects.requireNonNull(maxNumReplicas);
             return this;
         }
-
         public Builder minNumReplicas(Integer minNumReplicas) {
             this.minNumReplicas = Objects.requireNonNull(minNumReplicas);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder scaleInControl(AutoscalingPolicyScaleInControlResponse scaleInControl) {
             this.scaleInControl = Objects.requireNonNull(scaleInControl);
             return this;
         }
-
         public Builder scalingSchedules(Map<String,String> scalingSchedules) {
             this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
             return this;
-        }
-        public AutoscalingPolicyResponse build() {
+        }        public AutoscalingPolicyResponse build() {
             return new AutoscalingPolicyResponse(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleInControl, scalingSchedules);
         }
     }

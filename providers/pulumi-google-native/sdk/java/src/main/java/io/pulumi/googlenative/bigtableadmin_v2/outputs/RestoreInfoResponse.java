@@ -70,12 +70,10 @@ public final class RestoreInfoResponse {
             this.backupInfo = Objects.requireNonNull(backupInfo);
             return this;
         }
-
         public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
-        }
-        public RestoreInfoResponse build() {
+        }        public RestoreInfoResponse build() {
             return new RestoreInfoResponse(backupInfo, sourceType);
         }
     }

@@ -122,27 +122,25 @@ public final class ImageTemplateShellCustomizerResponse {
             this.inline = inline;
             return this;
         }
-
+        public Builder inline(String... inline) {
+            return inline(List.of(inline));
+        }
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateShellCustomizerResponse build() {
+        }        public ImageTemplateShellCustomizerResponse build() {
             return new ImageTemplateShellCustomizerResponse(inline, name, scriptUri, sha256Checksum, type);
         }
     }

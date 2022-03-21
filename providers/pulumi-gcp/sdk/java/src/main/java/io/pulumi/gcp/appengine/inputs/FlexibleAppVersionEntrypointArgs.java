@@ -56,12 +56,10 @@ public final class FlexibleAppVersionEntrypointArgs extends io.pulumi.resources.
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public Builder shell(String shell) {
             this.shell = Output.of(Objects.requireNonNull(shell));
             return this;
-        }
-        public FlexibleAppVersionEntrypointArgs build() {
+        }        public FlexibleAppVersionEntrypointArgs build() {
             return new FlexibleAppVersionEntrypointArgs(shell);
         }
     }

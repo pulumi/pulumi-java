@@ -127,52 +127,42 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder markdownSource(@Nullable Output<Integer> markdownSource) {
             this.markdownSource = markdownSource;
             return this;
         }
-
         public Builder markdownSource(@Nullable Integer markdownSource) {
             this.markdownSource = Output.ofNullable(markdownSource);
             return this;
         }
-
         public Builder markdownUri(@Nullable Output<String> markdownUri) {
             this.markdownUri = markdownUri;
             return this;
         }
-
         public Builder markdownUri(@Nullable String markdownUri) {
             this.markdownUri = Output.ofNullable(markdownUri);
             return this;
         }
-
         public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
-
         public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
-
         public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = Output.ofNullable(title);
             return this;
-        }
-        public MarkdownPartMetadataSettingsSettingsArgs build() {
+        }        public MarkdownPartMetadataSettingsSettingsArgs build() {
             return new MarkdownPartMetadataSettingsSettingsArgs(content, markdownSource, markdownUri, subtitle, title);
         }
     }

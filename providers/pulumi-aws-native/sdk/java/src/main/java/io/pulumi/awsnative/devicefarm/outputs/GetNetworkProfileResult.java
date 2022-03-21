@@ -138,62 +138,53 @@ public final class GetNetworkProfileResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
             this.downlinkBandwidthBits = downlinkBandwidthBits;
             return this;
         }
-
         public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
             this.downlinkDelayMs = downlinkDelayMs;
             return this;
         }
-
         public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
             this.downlinkJitterMs = downlinkJitterMs;
             return this;
         }
-
         public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
             this.downlinkLossPercent = downlinkLossPercent;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder tags(@Nullable List<NetworkProfileTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(NetworkProfileTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
             this.uplinkBandwidthBits = uplinkBandwidthBits;
             return this;
         }
-
         public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
             this.uplinkDelayMs = uplinkDelayMs;
             return this;
         }
-
         public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
             this.uplinkJitterMs = uplinkJitterMs;
             return this;
         }
-
         public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
             this.uplinkLossPercent = uplinkLossPercent;
             return this;
-        }
-        public GetNetworkProfileResult build() {
+        }        public GetNetworkProfileResult build() {
             return new GetNetworkProfileResult(arn, description, downlinkBandwidthBits, downlinkDelayMs, downlinkJitterMs, downlinkLossPercent, name, tags, uplinkBandwidthBits, uplinkDelayMs, uplinkJitterMs, uplinkLossPercent);
         }
     }

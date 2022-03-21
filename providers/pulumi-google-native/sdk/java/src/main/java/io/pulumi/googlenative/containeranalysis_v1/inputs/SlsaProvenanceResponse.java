@@ -104,22 +104,21 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
             this.builder = Objects.requireNonNull(builder);
             return this;
         }
-
         public Builder materials(List<MaterialResponse> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
+        public Builder materials(MaterialResponse... materials) {
+            return materials(List.of(materials));
+        }
         public Builder metadata(SlsaMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public Builder recipe(SlsaRecipeResponse recipe) {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
-        }
-        public SlsaProvenanceResponse build() {
+        }        public SlsaProvenanceResponse build() {
             return new SlsaProvenanceResponse(builder, materials, metadata, recipe);
         }
     }

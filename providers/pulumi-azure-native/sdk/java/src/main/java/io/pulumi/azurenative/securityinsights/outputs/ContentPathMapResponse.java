@@ -71,12 +71,10 @@ public final class ContentPathMapResponse {
             this.contentType = contentType;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }
-        public ContentPathMapResponse build() {
+        }        public ContentPathMapResponse build() {
             return new ContentPathMapResponse(contentType, path);
         }
     }

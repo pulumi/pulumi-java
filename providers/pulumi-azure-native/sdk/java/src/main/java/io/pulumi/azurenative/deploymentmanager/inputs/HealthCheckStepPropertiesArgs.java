@@ -79,22 +79,18 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public Builder attributes(RestHealthCheckStepAttributesArgs attributes) {
             this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
-
         public Builder stepType(Output<String> stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }
-
         public Builder stepType(String stepType) {
             this.stepType = Output.of(Objects.requireNonNull(stepType));
             return this;
-        }
-        public HealthCheckStepPropertiesArgs build() {
+        }        public HealthCheckStepPropertiesArgs build() {
             return new HealthCheckStepPropertiesArgs(attributes, stepType);
         }
     }

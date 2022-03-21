@@ -70,12 +70,10 @@ public final class VirtualNodeSpecListenerTimeoutTcpIdle {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public VirtualNodeSpecListenerTimeoutTcpIdle build() {
+        }        public VirtualNodeSpecListenerTimeoutTcpIdle build() {
             return new VirtualNodeSpecListenerTimeoutTcpIdle(unit, value);
         }
     }

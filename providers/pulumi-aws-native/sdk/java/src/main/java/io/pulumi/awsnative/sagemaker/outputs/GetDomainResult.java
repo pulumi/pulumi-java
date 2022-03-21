@@ -136,32 +136,26 @@ public final class GetDomainResult {
             this.defaultUserSettings = defaultUserSettings;
             return this;
         }
-
         public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = domainArn;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
             this.homeEfsFileSystemId = homeEfsFileSystemId;
             return this;
         }
-
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public GetDomainResult build() {
+        }        public GetDomainResult build() {
             return new GetDomainResult(defaultUserSettings, domainArn, domainId, homeEfsFileSystemId, singleSignOnManagedApplicationInstanceId, url);
         }
     }

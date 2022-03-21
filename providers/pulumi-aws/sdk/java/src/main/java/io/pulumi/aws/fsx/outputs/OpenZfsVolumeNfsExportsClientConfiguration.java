@@ -70,12 +70,13 @@ public final class OpenZfsVolumeNfsExportsClientConfiguration {
             this.clients = Objects.requireNonNull(clients);
             return this;
         }
-
         public Builder options(List<String> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
-        public OpenZfsVolumeNfsExportsClientConfiguration build() {
+        public Builder options(String... options) {
+            return options(List.of(options));
+        }        public OpenZfsVolumeNfsExportsClientConfiguration build() {
             return new OpenZfsVolumeNfsExportsClientConfiguration(clients, options);
         }
     }

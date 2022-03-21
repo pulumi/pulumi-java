@@ -55,12 +55,10 @@ public final class TaskDefinitionSystemControl {
             this.namespace = namespace;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public TaskDefinitionSystemControl build() {
+        }        public TaskDefinitionSystemControl build() {
             return new TaskDefinitionSystemControl(namespace, value);
         }
     }

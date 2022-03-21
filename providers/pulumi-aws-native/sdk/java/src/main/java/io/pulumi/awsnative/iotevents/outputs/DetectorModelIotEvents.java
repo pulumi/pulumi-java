@@ -64,12 +64,10 @@ public final class DetectorModelIotEvents {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
-
         public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
-        }
-        public DetectorModelIotEvents build() {
+        }        public DetectorModelIotEvents build() {
             return new DetectorModelIotEvents(inputName, payload);
         }
     }

@@ -78,22 +78,18 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
             this.max = max;
             return this;
         }
-
         public Builder max(@Nullable Double max) {
             this.max = Output.ofNullable(max);
             return this;
         }
-
         public Builder min(@Nullable Output<Double> min) {
             this.min = min;
             return this;
         }
-
         public Builder min(@Nullable Double min) {
             this.min = Output.ofNullable(min);
             return this;
-        }
-        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs build() {
+        }        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs(max, min);
         }
     }

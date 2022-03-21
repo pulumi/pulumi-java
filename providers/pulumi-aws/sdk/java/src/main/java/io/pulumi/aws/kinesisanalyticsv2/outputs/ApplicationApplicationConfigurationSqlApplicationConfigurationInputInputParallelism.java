@@ -53,8 +53,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
-        }
-        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism build() {
+        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism(count);
         }
     }

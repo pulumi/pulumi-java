@@ -73,12 +73,13 @@ public final class GetInternetGatewayResult {
             this.internetGatewayId = internetGatewayId;
             return this;
         }
-
         public Builder tags(@Nullable List<InternetGatewayTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetInternetGatewayResult build() {
+        public Builder tags(InternetGatewayTag... tags) {
+            return tags(List.of(tags));
+        }        public GetInternetGatewayResult build() {
             return new GetInternetGatewayResult(internetGatewayId, tags);
         }
     }

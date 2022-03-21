@@ -52,7 +52,9 @@ public final class ResponseHeadersPolicyAccessControlExposeHeaders extends io.pu
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public ResponseHeadersPolicyAccessControlExposeHeaders build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public ResponseHeadersPolicyAccessControlExposeHeaders build() {
             return new ResponseHeadersPolicyAccessControlExposeHeaders(items);
         }
     }

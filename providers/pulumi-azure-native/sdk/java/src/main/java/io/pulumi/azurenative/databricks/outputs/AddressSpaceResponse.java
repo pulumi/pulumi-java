@@ -54,7 +54,9 @@ public final class AddressSpaceResponse {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-        public AddressSpaceResponse build() {
+        public Builder addressPrefixes(String... addressPrefixes) {
+            return addressPrefixes(List.of(addressPrefixes));
+        }        public AddressSpaceResponse build() {
             return new AddressSpaceResponse(addressPrefixes);
         }
     }

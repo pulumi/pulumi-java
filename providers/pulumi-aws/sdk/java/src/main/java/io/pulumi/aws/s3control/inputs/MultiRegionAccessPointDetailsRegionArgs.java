@@ -56,12 +56,10 @@ public final class MultiRegionAccessPointDetailsRegionArgs extends io.pulumi.res
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
-
         public Builder bucket(String bucket) {
             this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
-        }
-        public MultiRegionAccessPointDetailsRegionArgs build() {
+        }        public MultiRegionAccessPointDetailsRegionArgs build() {
             return new MultiRegionAccessPointDetailsRegionArgs(bucket);
         }
     }

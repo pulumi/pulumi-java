@@ -61,12 +61,10 @@ public final class ConsumptionMeteringConfigArgs extends io.pulumi.resources.Res
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
-        }
-        public ConsumptionMeteringConfigArgs build() {
+        }        public ConsumptionMeteringConfigArgs build() {
             return new ConsumptionMeteringConfigArgs(enabled);
         }
     }

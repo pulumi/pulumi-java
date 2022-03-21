@@ -207,57 +207,46 @@ public final class GetClusterResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder bootstrapBrokers(String bootstrapBrokers) {
             this.bootstrapBrokers = Objects.requireNonNull(bootstrapBrokers);
             return this;
         }
-
         public Builder bootstrapBrokersSaslIam(String bootstrapBrokersSaslIam) {
             this.bootstrapBrokersSaslIam = Objects.requireNonNull(bootstrapBrokersSaslIam);
             return this;
         }
-
         public Builder bootstrapBrokersSaslScram(String bootstrapBrokersSaslScram) {
             this.bootstrapBrokersSaslScram = Objects.requireNonNull(bootstrapBrokersSaslScram);
             return this;
         }
-
         public Builder bootstrapBrokersTls(String bootstrapBrokersTls) {
             this.bootstrapBrokersTls = Objects.requireNonNull(bootstrapBrokersTls);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder kafkaVersion(String kafkaVersion) {
             this.kafkaVersion = Objects.requireNonNull(kafkaVersion);
             return this;
         }
-
         public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder zookeeperConnectString(String zookeeperConnectString) {
             this.zookeeperConnectString = Objects.requireNonNull(zookeeperConnectString);
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, bootstrapBrokers, bootstrapBrokersSaslIam, bootstrapBrokersSaslScram, bootstrapBrokersTls, clusterName, id, kafkaVersion, numberOfBrokerNodes, tags, zookeeperConnectString);
         }
     }

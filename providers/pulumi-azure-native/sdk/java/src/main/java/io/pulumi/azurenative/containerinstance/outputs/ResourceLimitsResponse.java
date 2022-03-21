@@ -88,17 +88,14 @@ public final class ResourceLimitsResponse {
             this.cpu = cpu;
             return this;
         }
-
         public Builder gpu(@Nullable GpuResourceResponse gpu) {
             this.gpu = gpu;
             return this;
         }
-
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
-        }
-        public ResourceLimitsResponse build() {
+        }        public ResourceLimitsResponse build() {
             return new ResourceLimitsResponse(cpu, gpu, memoryInGB);
         }
     }

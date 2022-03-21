@@ -80,12 +80,10 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicy {
             this.ingressFrom = ingressFrom;
             return this;
         }
-
         public Builder ingressTo(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
             this.ingressTo = ingressTo;
             return this;
-        }
-        public ServicePerimetersServicePerimeterSpecIngressPolicy build() {
+        }        public ServicePerimetersServicePerimeterSpecIngressPolicy build() {
             return new ServicePerimetersServicePerimeterSpecIngressPolicy(ingressFrom, ingressTo);
         }
     }

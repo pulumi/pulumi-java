@@ -61,12 +61,10 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }
-
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
             this.metadataConfigurationPath = Output.ofNullable(metadataConfigurationPath);
             return this;
-        }
-        public CustomProfileArgs build() {
+        }        public CustomProfileArgs build() {
             return new CustomProfileArgs(metadataConfigurationPath);
         }
     }

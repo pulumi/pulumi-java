@@ -66,22 +66,18 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
             this.keyid = keyid;
             return this;
         }
-
         public Builder keyid(@Nullable String keyid) {
             this.keyid = Output.ofNullable(keyid);
             return this;
         }
-
         public Builder sig(@Nullable Output<String> sig) {
             this.sig = sig;
             return this;
         }
-
         public Builder sig(@Nullable String sig) {
             this.sig = Output.ofNullable(sig);
             return this;
-        }
-        public EnvelopeSignatureArgs build() {
+        }        public EnvelopeSignatureArgs build() {
             return new EnvelopeSignatureArgs(keyid, sig);
         }
     }

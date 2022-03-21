@@ -90,22 +90,18 @@ public final class GetDiskIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetDiskIamPolicyArgs build() {
+        }        public GetDiskIamPolicyArgs build() {
             return new GetDiskIamPolicyArgs(optionsRequestedPolicyVersion, project, resource, zone);
         }
     }

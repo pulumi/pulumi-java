@@ -106,42 +106,34 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder css(@Nullable Output<String> css) {
             this.css = css;
             return this;
         }
-
         public Builder css(@Nullable String css) {
             this.css = Output.ofNullable(css);
             return this;
         }
-
         public Builder imageFile(@Nullable Output<String> imageFile) {
             this.imageFile = imageFile;
             return this;
         }
-
         public Builder imageFile(@Nullable String imageFile) {
             this.imageFile = Output.ofNullable(imageFile);
             return this;
         }
-
         public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
-        }
-        public UserPoolUICustomizationArgs build() {
+        }        public UserPoolUICustomizationArgs build() {
             return new UserPoolUICustomizationArgs(clientId, css, imageFile, userPoolId);
         }
     }

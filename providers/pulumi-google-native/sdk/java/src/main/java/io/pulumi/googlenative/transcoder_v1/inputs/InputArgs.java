@@ -95,32 +95,26 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder preprocessingConfig(@Nullable Output<PreprocessingConfigArgs> preprocessingConfig) {
             this.preprocessingConfig = preprocessingConfig;
             return this;
         }
-
         public Builder preprocessingConfig(@Nullable PreprocessingConfigArgs preprocessingConfig) {
             this.preprocessingConfig = Output.ofNullable(preprocessingConfig);
             return this;
         }
-
         public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public InputArgs build() {
+        }        public InputArgs build() {
             return new InputArgs(key, preprocessingConfig, uri);
         }
     }

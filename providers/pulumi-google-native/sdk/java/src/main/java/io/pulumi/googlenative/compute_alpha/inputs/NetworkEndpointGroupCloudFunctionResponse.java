@@ -76,12 +76,10 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
             this.function = Objects.requireNonNull(function);
             return this;
         }
-
         public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
-        }
-        public NetworkEndpointGroupCloudFunctionResponse build() {
+        }        public NetworkEndpointGroupCloudFunctionResponse build() {
             return new NetworkEndpointGroupCloudFunctionResponse(function, urlMask);
         }
     }

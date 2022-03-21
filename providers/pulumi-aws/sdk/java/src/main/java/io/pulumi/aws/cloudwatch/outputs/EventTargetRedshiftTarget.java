@@ -136,32 +136,26 @@ public final class EventTargetRedshiftTarget {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder dbUser(@Nullable String dbUser) {
             this.dbUser = dbUser;
             return this;
         }
-
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
-
         public Builder sql(@Nullable String sql) {
             this.sql = sql;
             return this;
         }
-
         public Builder statementName(@Nullable String statementName) {
             this.statementName = statementName;
             return this;
         }
-
         public Builder withEvent(@Nullable Boolean withEvent) {
             this.withEvent = withEvent;
             return this;
-        }
-        public EventTargetRedshiftTarget build() {
+        }        public EventTargetRedshiftTarget build() {
             return new EventTargetRedshiftTarget(database, dbUser, secretsManagerArn, sql, statementName, withEvent);
         }
     }

@@ -72,12 +72,10 @@ public final class GetNotificationRegistrationArgs extends io.pulumi.resources.I
             this.notificationRegistrationName = Objects.requireNonNull(notificationRegistrationName);
             return this;
         }
-
         public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
-        }
-        public GetNotificationRegistrationArgs build() {
+        }        public GetNotificationRegistrationArgs build() {
             return new GetNotificationRegistrationArgs(notificationRegistrationName, providerNamespace);
         }
     }

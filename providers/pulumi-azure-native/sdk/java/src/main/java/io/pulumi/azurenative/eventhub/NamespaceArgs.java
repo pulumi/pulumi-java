@@ -174,82 +174,66 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             this.isAutoInflateEnabled = isAutoInflateEnabled;
             return this;
         }
-
         public Builder isAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
             this.isAutoInflateEnabled = Output.ofNullable(isAutoInflateEnabled);
             return this;
         }
-
         public Builder kafkaEnabled(@Nullable Output<Boolean> kafkaEnabled) {
             this.kafkaEnabled = kafkaEnabled;
             return this;
         }
-
         public Builder kafkaEnabled(@Nullable Boolean kafkaEnabled) {
             this.kafkaEnabled = Output.ofNullable(kafkaEnabled);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder maximumThroughputUnits(@Nullable Output<Integer> maximumThroughputUnits) {
             this.maximumThroughputUnits = maximumThroughputUnits;
             return this;
         }
-
         public Builder maximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
             this.maximumThroughputUnits = Output.ofNullable(maximumThroughputUnits);
             return this;
         }
-
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
             this.namespaceName = namespaceName;
             return this;
         }
-
         public Builder namespaceName(@Nullable String namespaceName) {
             this.namespaceName = Output.ofNullable(namespaceName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public NamespaceArgs build() {
+        }        public NamespaceArgs build() {
             return new NamespaceArgs(isAutoInflateEnabled, kafkaEnabled, location, maximumThroughputUnits, namespaceName, resourceGroupName, sku, tags);
         }
     }

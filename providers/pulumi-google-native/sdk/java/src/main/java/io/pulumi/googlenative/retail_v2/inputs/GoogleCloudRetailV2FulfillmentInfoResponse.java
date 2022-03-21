@@ -77,12 +77,13 @@ public final class GoogleCloudRetailV2FulfillmentInfoResponse extends io.pulumi.
             this.placeIds = Objects.requireNonNull(placeIds);
             return this;
         }
-
+        public Builder placeIds(String... placeIds) {
+            return placeIds(List.of(placeIds));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudRetailV2FulfillmentInfoResponse build() {
+        }        public GoogleCloudRetailV2FulfillmentInfoResponse build() {
             return new GoogleCloudRetailV2FulfillmentInfoResponse(placeIds, type);
         }
     }

@@ -240,122 +240,98 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
-
         public Builder columnDelimiter(@Nullable Object columnDelimiter) {
             this.columnDelimiter = Output.ofNullable(columnDelimiter);
             return this;
         }
-
         public Builder deserializer(@Nullable Output<Object> deserializer) {
             this.deserializer = deserializer;
             return this;
         }
-
         public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = Output.ofNullable(deserializer);
             return this;
         }
-
         public Builder encodingName(@Nullable Output<Object> encodingName) {
             this.encodingName = encodingName;
             return this;
         }
-
         public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = Output.ofNullable(encodingName);
             return this;
         }
-
         public Builder escapeChar(@Nullable Output<Object> escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
-
         public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = Output.ofNullable(escapeChar);
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Output<Object> firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = Output.ofNullable(firstRowAsHeader);
             return this;
         }
-
         public Builder nullValue(@Nullable Output<Object> nullValue) {
             this.nullValue = nullValue;
             return this;
         }
-
         public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = Output.ofNullable(nullValue);
             return this;
         }
-
         public Builder quoteChar(@Nullable Output<Object> quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
-
         public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = Output.ofNullable(quoteChar);
             return this;
         }
-
         public Builder rowDelimiter(@Nullable Output<Object> rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
-
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = Output.ofNullable(rowDelimiter);
             return this;
         }
-
         public Builder serializer(@Nullable Output<Object> serializer) {
             this.serializer = serializer;
             return this;
         }
-
         public Builder serializer(@Nullable Object serializer) {
             this.serializer = Output.ofNullable(serializer);
             return this;
         }
-
         public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
             this.skipLineCount = skipLineCount;
             return this;
         }
-
         public Builder skipLineCount(@Nullable Object skipLineCount) {
             this.skipLineCount = Output.ofNullable(skipLineCount);
             return this;
         }
-
         public Builder treatEmptyAsNull(@Nullable Output<Object> treatEmptyAsNull) {
             this.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
-
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
             this.treatEmptyAsNull = Output.ofNullable(treatEmptyAsNull);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public TextFormatArgs build() {
+        }        public TextFormatArgs build() {
             return new TextFormatArgs(columnDelimiter, deserializer, encodingName, escapeChar, firstRowAsHeader, nullValue, quoteChar, rowDelimiter, serializer, skipLineCount, treatEmptyAsNull, type);
         }
     }

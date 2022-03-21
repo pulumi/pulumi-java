@@ -173,82 +173,72 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder defaultRouteTableId(@Nullable Output<String> defaultRouteTableId) {
             this.defaultRouteTableId = defaultRouteTableId;
             return this;
         }
-
         public Builder defaultRouteTableId(@Nullable String defaultRouteTableId) {
             this.defaultRouteTableId = Output.ofNullable(defaultRouteTableId);
             return this;
         }
-
         public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-
         public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
-
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
-
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
             this.propagatingVgws = Output.ofNullable(propagatingVgws);
             return this;
         }
-
+        public Builder propagatingVgws(String... propagatingVgws) {
+            return propagatingVgws(List.of(propagatingVgws));
+        }
         public Builder routes(@Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes) {
             this.routes = routes;
             return this;
         }
-
         public Builder routes(@Nullable List<DefaultRouteTableRouteGetArgs> routes) {
             this.routes = Output.ofNullable(routes);
             return this;
         }
-
+        public Builder routes(DefaultRouteTableRouteGetArgs... routes) {
+            return routes(List.of(routes));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
-        }
-        public DefaultRouteTableState build() {
+        }        public DefaultRouteTableState build() {
             return new DefaultRouteTableState(arn, defaultRouteTableId, ownerId, propagatingVgws, routes, tags, tagsAll, vpcId);
         }
     }

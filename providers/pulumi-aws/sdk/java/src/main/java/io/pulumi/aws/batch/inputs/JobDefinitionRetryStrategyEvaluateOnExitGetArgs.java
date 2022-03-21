@@ -106,42 +106,34 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(String action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder onExitCode(@Nullable Output<String> onExitCode) {
             this.onExitCode = onExitCode;
             return this;
         }
-
         public Builder onExitCode(@Nullable String onExitCode) {
             this.onExitCode = Output.ofNullable(onExitCode);
             return this;
         }
-
         public Builder onReason(@Nullable Output<String> onReason) {
             this.onReason = onReason;
             return this;
         }
-
         public Builder onReason(@Nullable String onReason) {
             this.onReason = Output.ofNullable(onReason);
             return this;
         }
-
         public Builder onStatusReason(@Nullable Output<String> onStatusReason) {
             this.onStatusReason = onStatusReason;
             return this;
         }
-
         public Builder onStatusReason(@Nullable String onStatusReason) {
             this.onStatusReason = Output.ofNullable(onStatusReason);
             return this;
-        }
-        public JobDefinitionRetryStrategyEvaluateOnExitGetArgs build() {
+        }        public JobDefinitionRetryStrategyEvaluateOnExitGetArgs build() {
             return new JobDefinitionRetryStrategyEvaluateOnExitGetArgs(action, onExitCode, onReason, onStatusReason);
         }
     }

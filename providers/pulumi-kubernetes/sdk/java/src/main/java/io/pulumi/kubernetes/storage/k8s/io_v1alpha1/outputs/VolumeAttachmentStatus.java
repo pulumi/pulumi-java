@@ -106,22 +106,18 @@ public final class VolumeAttachmentStatus {
             this.attachError = attachError;
             return this;
         }
-
         public Builder attached(Boolean attached) {
             this.attached = Objects.requireNonNull(attached);
             return this;
         }
-
         public Builder attachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
             this.attachmentMetadata = attachmentMetadata;
             return this;
         }
-
         public Builder detachError(@Nullable VolumeError detachError) {
             this.detachError = detachError;
             return this;
-        }
-        public VolumeAttachmentStatus build() {
+        }        public VolumeAttachmentStatus build() {
             return new VolumeAttachmentStatus(attachError, attached, attachmentMetadata, detachError);
         }
     }

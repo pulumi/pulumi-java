@@ -84,17 +84,17 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
             this.diskConfig = diskConfig;
             return this;
         }
-
         public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
-
+        public Builder instanceNames(String... instanceNames) {
+            return instanceNames(List.of(instanceNames));
+        }
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
-        }
-        public ClusterClusterConfigPreemptibleWorkerConfig build() {
+        }        public ClusterClusterConfigPreemptibleWorkerConfig build() {
             return new ClusterClusterConfigPreemptibleWorkerConfig(diskConfig, instanceNames, numInstances);
         }
     }

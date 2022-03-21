@@ -141,62 +141,59 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
             this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
             return this;
         }
-
         public Builder dbSecurityGroupMemberships(@Nullable List<String> dbSecurityGroupMemberships) {
             this.dbSecurityGroupMemberships = Output.ofNullable(dbSecurityGroupMemberships);
             return this;
         }
-
+        public Builder dbSecurityGroupMemberships(String... dbSecurityGroupMemberships) {
+            return dbSecurityGroupMemberships(List.of(dbSecurityGroupMemberships));
+        }
         public Builder optionName(Output<String> optionName) {
             this.optionName = Objects.requireNonNull(optionName);
             return this;
         }
-
         public Builder optionName(String optionName) {
             this.optionName = Output.of(Objects.requireNonNull(optionName));
             return this;
         }
-
         public Builder optionSettings(@Nullable Output<List<OptionGroupOptionOptionSettingArgs>> optionSettings) {
             this.optionSettings = optionSettings;
             return this;
         }
-
         public Builder optionSettings(@Nullable List<OptionGroupOptionOptionSettingArgs> optionSettings) {
             this.optionSettings = Output.ofNullable(optionSettings);
             return this;
         }
-
+        public Builder optionSettings(OptionGroupOptionOptionSettingArgs... optionSettings) {
+            return optionSettings(List.of(optionSettings));
+        }
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
         }
-
         public Builder vpcSecurityGroupMemberships(@Nullable Output<List<String>> vpcSecurityGroupMemberships) {
             this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
             return this;
         }
-
         public Builder vpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
             this.vpcSecurityGroupMemberships = Output.ofNullable(vpcSecurityGroupMemberships);
             return this;
         }
-        public OptionGroupOptionArgs build() {
+        public Builder vpcSecurityGroupMemberships(String... vpcSecurityGroupMemberships) {
+            return vpcSecurityGroupMemberships(List.of(vpcSecurityGroupMemberships));
+        }        public OptionGroupOptionArgs build() {
             return new OptionGroupOptionArgs(dbSecurityGroupMemberships, optionName, optionSettings, port, version, vpcSecurityGroupMemberships);
         }
     }

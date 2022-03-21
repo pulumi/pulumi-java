@@ -112,42 +112,34 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder localObjectReference(@Nullable Output<LocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
-
         public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
             this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = Output.ofNullable(optional);
             return this;
-        }
-        public SecretKeySelectorArgs build() {
+        }        public SecretKeySelectorArgs build() {
             return new SecretKeySelectorArgs(key, localObjectReference, name, optional);
         }
     }

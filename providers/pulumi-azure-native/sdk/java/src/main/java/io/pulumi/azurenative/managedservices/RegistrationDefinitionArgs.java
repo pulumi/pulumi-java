@@ -108,42 +108,34 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
             this.plan = plan;
             return this;
         }
-
         public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Output.ofNullable(plan);
             return this;
         }
-
         public Builder properties(@Nullable Output<RegistrationDefinitionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable RegistrationDefinitionPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder registrationDefinitionId(@Nullable Output<String> registrationDefinitionId) {
             this.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
-
         public Builder registrationDefinitionId(@Nullable String registrationDefinitionId) {
             this.registrationDefinitionId = Output.ofNullable(registrationDefinitionId);
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public RegistrationDefinitionArgs build() {
+        }        public RegistrationDefinitionArgs build() {
             return new RegistrationDefinitionArgs(plan, properties, registrationDefinitionId, scope);
         }
     }

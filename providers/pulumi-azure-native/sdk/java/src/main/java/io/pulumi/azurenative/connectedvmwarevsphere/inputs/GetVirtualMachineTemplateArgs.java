@@ -72,12 +72,10 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualMachineTemplateName(String virtualMachineTemplateName) {
             this.virtualMachineTemplateName = Objects.requireNonNull(virtualMachineTemplateName);
             return this;
-        }
-        public GetVirtualMachineTemplateArgs build() {
+        }        public GetVirtualMachineTemplateArgs build() {
             return new GetVirtualMachineTemplateArgs(resourceGroupName, virtualMachineTemplateName);
         }
     }

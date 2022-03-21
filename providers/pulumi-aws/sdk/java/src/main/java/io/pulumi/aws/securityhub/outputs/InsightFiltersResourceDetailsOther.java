@@ -85,17 +85,14 @@ public final class InsightFiltersResourceDetailsOther {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public InsightFiltersResourceDetailsOther build() {
+        }        public InsightFiltersResourceDetailsOther build() {
             return new InsightFiltersResourceDetailsOther(comparison, key, value);
         }
     }

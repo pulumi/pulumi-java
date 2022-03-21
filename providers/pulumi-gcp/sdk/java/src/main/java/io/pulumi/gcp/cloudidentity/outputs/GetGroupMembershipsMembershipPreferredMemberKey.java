@@ -79,12 +79,10 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
-        }
-        public GetGroupMembershipsMembershipPreferredMemberKey build() {
+        }        public GetGroupMembershipsMembershipPreferredMemberKey build() {
             return new GetGroupMembershipsMembershipPreferredMemberKey(id, namespace);
         }
     }

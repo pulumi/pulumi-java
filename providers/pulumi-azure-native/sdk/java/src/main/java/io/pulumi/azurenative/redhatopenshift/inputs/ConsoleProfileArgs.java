@@ -61,12 +61,10 @@ public final class ConsoleProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public ConsoleProfileArgs build() {
+        }        public ConsoleProfileArgs build() {
             return new ConsoleProfileArgs(url);
         }
     }

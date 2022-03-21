@@ -101,17 +101,14 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
-
         public Builder likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
-
         public Builder proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule(hotwordRegex, likelihoodAdjustment, proximity);
         }
     }

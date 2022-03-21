@@ -53,8 +53,7 @@ public final class NfsLocationMountOptions {
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public NfsLocationMountOptions build() {
+        }        public NfsLocationMountOptions build() {
             return new NfsLocationMountOptions(version);
         }
     }

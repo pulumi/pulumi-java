@@ -76,22 +76,24 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
             this.interclusters = interclusters;
             return this;
         }
-
         public Builder interclusters(@Nullable List<OntapFileSystemEndpointInterclusterArgs> interclusters) {
             this.interclusters = Output.ofNullable(interclusters);
             return this;
         }
-
+        public Builder interclusters(OntapFileSystemEndpointInterclusterArgs... interclusters) {
+            return interclusters(List.of(interclusters));
+        }
         public Builder managements(@Nullable Output<List<OntapFileSystemEndpointManagementArgs>> managements) {
             this.managements = managements;
             return this;
         }
-
         public Builder managements(@Nullable List<OntapFileSystemEndpointManagementArgs> managements) {
             this.managements = Output.ofNullable(managements);
             return this;
         }
-        public OntapFileSystemEndpointArgs build() {
+        public Builder managements(OntapFileSystemEndpointManagementArgs... managements) {
+            return managements(List.of(managements));
+        }        public OntapFileSystemEndpointArgs build() {
             return new OntapFileSystemEndpointArgs(interclusters, managements);
         }
     }

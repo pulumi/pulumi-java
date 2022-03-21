@@ -74,22 +74,18 @@ public final class PartitionStorageDescriptorSortColumnArgs extends io.pulumi.re
             this.column = Objects.requireNonNull(column);
             return this;
         }
-
         public Builder column(String column) {
             this.column = Output.of(Objects.requireNonNull(column));
             return this;
         }
-
         public Builder sortOrder(Output<Integer> sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }
-
         public Builder sortOrder(Integer sortOrder) {
             this.sortOrder = Output.of(Objects.requireNonNull(sortOrder));
             return this;
-        }
-        public PartitionStorageDescriptorSortColumnArgs build() {
+        }        public PartitionStorageDescriptorSortColumnArgs build() {
             return new PartitionStorageDescriptorSortColumnArgs(column, sortOrder);
         }
     }

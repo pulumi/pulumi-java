@@ -54,12 +54,10 @@ public final class RuleGroupForwardedIPConfiguration {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
-
         public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
-        }
-        public RuleGroupForwardedIPConfiguration build() {
+        }        public RuleGroupForwardedIPConfiguration build() {
             return new RuleGroupForwardedIPConfiguration(fallbackBehavior, headerName);
         }
     }

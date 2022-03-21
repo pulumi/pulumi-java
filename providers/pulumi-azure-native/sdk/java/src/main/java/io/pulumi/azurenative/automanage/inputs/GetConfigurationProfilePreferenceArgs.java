@@ -72,12 +72,10 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
             this.configurationProfilePreferenceName = Objects.requireNonNull(configurationProfilePreferenceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetConfigurationProfilePreferenceArgs build() {
+        }        public GetConfigurationProfilePreferenceArgs build() {
             return new GetConfigurationProfilePreferenceArgs(configurationProfilePreferenceName, resourceGroupName);
         }
     }

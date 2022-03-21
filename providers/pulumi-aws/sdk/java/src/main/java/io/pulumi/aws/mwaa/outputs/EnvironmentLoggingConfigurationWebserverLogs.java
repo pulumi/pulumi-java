@@ -80,17 +80,14 @@ public final class EnvironmentLoggingConfigurationWebserverLogs {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
-        }
-        public EnvironmentLoggingConfigurationWebserverLogs build() {
+        }        public EnvironmentLoggingConfigurationWebserverLogs build() {
             return new EnvironmentLoggingConfigurationWebserverLogs(cloudWatchLogGroupArn, enabled, logLevel);
         }
     }

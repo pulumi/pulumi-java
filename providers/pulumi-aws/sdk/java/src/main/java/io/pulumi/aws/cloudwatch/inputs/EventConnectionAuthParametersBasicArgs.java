@@ -73,22 +73,18 @@ public final class EventConnectionAuthParametersBasicArgs extends io.pulumi.reso
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder password(String password) {
             this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
-
         public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Output.of(Objects.requireNonNull(username));
             return this;
-        }
-        public EventConnectionAuthParametersBasicArgs build() {
+        }        public EventConnectionAuthParametersBasicArgs build() {
             return new EventConnectionAuthParametersBasicArgs(password, username);
         }
     }

@@ -75,22 +75,18 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs destination) {
             this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
-
         public Builder outputSchemaVersion(@Nullable Output<String> outputSchemaVersion) {
             this.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
-
         public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
             this.outputSchemaVersion = Output.ofNullable(outputSchemaVersion);
             return this;
-        }
-        public AnalyticsConfigurationStorageClassAnalysisDataExportArgs build() {
+        }        public AnalyticsConfigurationStorageClassAnalysisDataExportArgs build() {
             return new AnalyticsConfigurationStorageClassAnalysisDataExportArgs(destination, outputSchemaVersion);
         }
     }

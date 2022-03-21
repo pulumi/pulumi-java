@@ -111,22 +111,18 @@ public final class QueueAppEngineRoutingOverride {
             this.host = host;
             return this;
         }
-
         public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public QueueAppEngineRoutingOverride build() {
+        }        public QueueAppEngineRoutingOverride build() {
             return new QueueAppEngineRoutingOverride(host, instance, service, version);
         }
     }

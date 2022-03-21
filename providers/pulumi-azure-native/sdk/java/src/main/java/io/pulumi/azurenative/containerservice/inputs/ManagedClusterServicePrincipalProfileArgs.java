@@ -78,22 +78,18 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
-
         public Builder clientId(String clientId) {
             this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
-
         public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
-
         public Builder secret(@Nullable String secret) {
             this.secret = Output.ofNullable(secret);
             return this;
-        }
-        public ManagedClusterServicePrincipalProfileArgs build() {
+        }        public ManagedClusterServicePrincipalProfileArgs build() {
             return new ManagedClusterServicePrincipalProfileArgs(clientId, secret);
         }
     }

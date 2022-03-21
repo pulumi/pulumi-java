@@ -58,8 +58,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse extend
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse build() {
+        }        public GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(type);
         }
     }

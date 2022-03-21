@@ -74,22 +74,18 @@ public final class VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs extend
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public Builder unit(String unit) {
             this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
-
         public Builder value(Output<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Integer value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs build() {
+        }        public VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs build() {
             return new VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs(unit, value);
         }
     }

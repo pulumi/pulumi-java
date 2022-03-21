@@ -94,17 +94,14 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
             this.expirationTime = expirationTime;
             return this;
         }
-
         public Builder registrationTokenOperation(@Nullable String registrationTokenOperation) {
             this.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
-
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public RegistrationInfoResponse build() {
+        }        public RegistrationInfoResponse build() {
             return new RegistrationInfoResponse(expirationTime, registrationTokenOperation, token);
         }
     }

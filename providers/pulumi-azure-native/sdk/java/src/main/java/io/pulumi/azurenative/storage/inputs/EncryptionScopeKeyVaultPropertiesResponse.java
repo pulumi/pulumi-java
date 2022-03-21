@@ -94,17 +94,14 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
             this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
             return this;
         }
-
         public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = keyUri;
             return this;
         }
-
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
-        }
-        public EncryptionScopeKeyVaultPropertiesResponse build() {
+        }        public EncryptionScopeKeyVaultPropertiesResponse build() {
             return new EncryptionScopeKeyVaultPropertiesResponse(currentVersionedKeyIdentifier, keyUri, lastKeyRotationTimestamp);
         }
     }

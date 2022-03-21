@@ -208,102 +208,82 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
-
         public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Output.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
-
         public Builder crfLevel(@Nullable Output<Integer> crfLevel) {
             this.crfLevel = crfLevel;
             return this;
         }
-
         public Builder crfLevel(@Nullable Integer crfLevel) {
             this.crfLevel = Output.ofNullable(crfLevel);
             return this;
         }
-
         public Builder frameRate(Output<Double> frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
-
         public Builder frameRate(Double frameRate) {
             this.frameRate = Output.of(Objects.requireNonNull(frameRate));
             return this;
         }
-
         public Builder gopDuration(@Nullable Output<String> gopDuration) {
             this.gopDuration = gopDuration;
             return this;
         }
-
         public Builder gopDuration(@Nullable String gopDuration) {
             this.gopDuration = Output.ofNullable(gopDuration);
             return this;
         }
-
         public Builder gopFrameCount(@Nullable Output<Integer> gopFrameCount) {
             this.gopFrameCount = gopFrameCount;
             return this;
         }
-
         public Builder gopFrameCount(@Nullable Integer gopFrameCount) {
             this.gopFrameCount = Output.ofNullable(gopFrameCount);
             return this;
         }
-
         public Builder heightPixels(@Nullable Output<Integer> heightPixels) {
             this.heightPixels = heightPixels;
             return this;
         }
-
         public Builder heightPixels(@Nullable Integer heightPixels) {
             this.heightPixels = Output.ofNullable(heightPixels);
             return this;
         }
-
         public Builder pixelFormat(@Nullable Output<String> pixelFormat) {
             this.pixelFormat = pixelFormat;
             return this;
         }
-
         public Builder pixelFormat(@Nullable String pixelFormat) {
             this.pixelFormat = Output.ofNullable(pixelFormat);
             return this;
         }
-
         public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder rateControlMode(@Nullable Output<String> rateControlMode) {
             this.rateControlMode = rateControlMode;
             return this;
         }
-
         public Builder rateControlMode(@Nullable String rateControlMode) {
             this.rateControlMode = Output.ofNullable(rateControlMode);
             return this;
         }
-
         public Builder widthPixels(@Nullable Output<Integer> widthPixels) {
             this.widthPixels = widthPixels;
             return this;
         }
-
         public Builder widthPixels(@Nullable Integer widthPixels) {
             this.widthPixels = Output.ofNullable(widthPixels);
             return this;
-        }
-        public Vp9CodecSettingsArgs build() {
+        }        public Vp9CodecSettingsArgs build() {
             return new Vp9CodecSettingsArgs(bitrateBps, crfLevel, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, profile, rateControlMode, widthPixels);
         }
     }

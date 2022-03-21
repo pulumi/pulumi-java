@@ -91,32 +91,26 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
             this.fleetId = fleetId;
             return this;
         }
-
         public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = Output.ofNullable(fleetId);
             return this;
         }
-
         public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
-
         public Builder message(@Nullable String message) {
             this.message = Output.ofNullable(message);
             return this;
         }
-
         public Builder type(Output<AliasRoutingStrategyType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(AliasRoutingStrategyType type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public AliasRoutingStrategyArgs build() {
+        }        public AliasRoutingStrategyArgs build() {
             return new AliasRoutingStrategyArgs(fleetId, message, type);
         }
     }

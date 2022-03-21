@@ -60,12 +60,10 @@ public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resource
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public WorkspaceCustomStringParameterArgs build() {
+        }        public WorkspaceCustomStringParameterArgs build() {
             return new WorkspaceCustomStringParameterArgs(value);
         }
     }

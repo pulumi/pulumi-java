@@ -72,12 +72,10 @@ public final class GetJitRequestArgs extends io.pulumi.resources.InvokeArgs {
             this.jitRequestName = Objects.requireNonNull(jitRequestName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetJitRequestArgs build() {
+        }        public GetJitRequestArgs build() {
             return new GetJitRequestArgs(jitRequestName, resourceGroupName);
         }
     }

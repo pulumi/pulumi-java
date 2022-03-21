@@ -88,17 +88,14 @@ public final class GraphQLApiLogConfig {
             this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn);
             return this;
         }
-
         public Builder excludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
             this.excludeVerboseContent = excludeVerboseContent;
             return this;
         }
-
         public Builder fieldLogLevel(String fieldLogLevel) {
             this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel);
             return this;
-        }
-        public GraphQLApiLogConfig build() {
+        }        public GraphQLApiLogConfig build() {
             return new GraphQLApiLogConfig(cloudwatchLogsRoleArn, excludeVerboseContent, fieldLogLevel);
         }
     }

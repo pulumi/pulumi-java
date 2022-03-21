@@ -100,37 +100,36 @@ public final class TaskDefinitionLinuxParameters {
             this.capabilities = capabilities;
             return this;
         }
-
         public Builder devices(@Nullable List<TaskDefinitionDevice> devices) {
             this.devices = devices;
             return this;
         }
-
+        public Builder devices(TaskDefinitionDevice... devices) {
+            return devices(List.of(devices));
+        }
         public Builder initProcessEnabled(@Nullable Boolean initProcessEnabled) {
             this.initProcessEnabled = initProcessEnabled;
             return this;
         }
-
         public Builder maxSwap(@Nullable Integer maxSwap) {
             this.maxSwap = maxSwap;
             return this;
         }
-
         public Builder sharedMemorySize(@Nullable Integer sharedMemorySize) {
             this.sharedMemorySize = sharedMemorySize;
             return this;
         }
-
         public Builder swappiness(@Nullable Integer swappiness) {
             this.swappiness = swappiness;
             return this;
         }
-
         public Builder tmpfs(@Nullable List<TaskDefinitionTmpfs> tmpfs) {
             this.tmpfs = tmpfs;
             return this;
         }
-        public TaskDefinitionLinuxParameters build() {
+        public Builder tmpfs(TaskDefinitionTmpfs... tmpfs) {
+            return tmpfs(List.of(tmpfs));
+        }        public TaskDefinitionLinuxParameters build() {
             return new TaskDefinitionLinuxParameters(capabilities, devices, initProcessEnabled, maxSwap, sharedMemorySize, swappiness, tmpfs);
         }
     }

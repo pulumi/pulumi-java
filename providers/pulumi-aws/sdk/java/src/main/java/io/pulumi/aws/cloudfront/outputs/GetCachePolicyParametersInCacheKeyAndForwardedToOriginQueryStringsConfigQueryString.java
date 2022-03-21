@@ -53,7 +53,9 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
             this.items = Objects.requireNonNull(items);
             return this;
         }
-        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString build() {
+        public Builder items(String... items) {
+            return items(List.of(items));
+        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString build() {
             return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString(items);
         }
     }

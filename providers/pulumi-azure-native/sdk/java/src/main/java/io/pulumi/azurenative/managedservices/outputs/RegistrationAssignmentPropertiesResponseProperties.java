@@ -169,42 +169,37 @@ public final class RegistrationAssignmentPropertiesResponseProperties {
             this.authorizations = authorizations;
             return this;
         }
-
+        public Builder authorizations(AuthorizationResponse... authorizations) {
+            return authorizations(List.of(authorizations));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }
-
         public Builder managedByTenantName(@Nullable String managedByTenantName) {
             this.managedByTenantName = managedByTenantName;
             return this;
         }
-
         public Builder manageeTenantId(@Nullable String manageeTenantId) {
             this.manageeTenantId = manageeTenantId;
             return this;
         }
-
         public Builder manageeTenantName(@Nullable String manageeTenantName) {
             this.manageeTenantName = manageeTenantName;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
-        }
-        public RegistrationAssignmentPropertiesResponseProperties build() {
+        }        public RegistrationAssignmentPropertiesResponseProperties build() {
             return new RegistrationAssignmentPropertiesResponseProperties(authorizations, description, managedByTenantId, managedByTenantName, manageeTenantId, manageeTenantName, provisioningState, registrationDefinitionName);
         }
     }

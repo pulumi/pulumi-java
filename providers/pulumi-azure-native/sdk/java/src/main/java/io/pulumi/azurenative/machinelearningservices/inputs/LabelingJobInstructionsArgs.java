@@ -61,12 +61,10 @@ public final class LabelingJobInstructionsArgs extends io.pulumi.resources.Resou
             this.uri = uri;
             return this;
         }
-
         public Builder uri(@Nullable String uri) {
             this.uri = Output.ofNullable(uri);
             return this;
-        }
-        public LabelingJobInstructionsArgs build() {
+        }        public LabelingJobInstructionsArgs build() {
             return new LabelingJobInstructionsArgs(uri);
         }
     }

@@ -57,12 +57,10 @@ public final class ClusterPodSecurityPolicyConfigGetArgs extends io.pulumi.resou
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterPodSecurityPolicyConfigGetArgs build() {
+        }        public ClusterPodSecurityPolicyConfigGetArgs build() {
             return new ClusterPodSecurityPolicyConfigGetArgs(enabled);
         }
     }

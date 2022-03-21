@@ -87,17 +87,14 @@ public final class PrivateLinkServiceConnectionStateResponse {
             this.actionsRequired = actionsRequired;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
-        }
-        public PrivateLinkServiceConnectionStateResponse build() {
+        }        public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }
     }

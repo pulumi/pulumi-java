@@ -74,12 +74,10 @@ public final class ClusterNotificationConfigPubsub {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
-        }
-        public ClusterNotificationConfigPubsub build() {
+        }        public ClusterNotificationConfigPubsub build() {
             return new ClusterNotificationConfigPubsub(enabled, topic);
         }
     }

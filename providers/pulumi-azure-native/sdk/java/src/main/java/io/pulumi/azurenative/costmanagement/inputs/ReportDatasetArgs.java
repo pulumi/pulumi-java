@@ -134,52 +134,45 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.aggregation = aggregation;
             return this;
         }
-
         public Builder aggregation(@Nullable Map<String,ReportAggregationArgs> aggregation) {
             this.aggregation = Output.ofNullable(aggregation);
             return this;
         }
-
         public Builder configuration(@Nullable Output<ReportDatasetConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
-
         public Builder configuration(@Nullable ReportDatasetConfigurationArgs configuration) {
             this.configuration = Output.ofNullable(configuration);
             return this;
         }
-
         public Builder filter(@Nullable Output<ReportFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable ReportFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
             this.granularity = granularity;
             return this;
         }
-
         public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
             this.granularity = Output.ofNullable(granularity);
             return this;
         }
-
         public Builder grouping(@Nullable Output<List<ReportGroupingArgs>> grouping) {
             this.grouping = grouping;
             return this;
         }
-
         public Builder grouping(@Nullable List<ReportGroupingArgs> grouping) {
             this.grouping = Output.ofNullable(grouping);
             return this;
         }
-        public ReportDatasetArgs build() {
+        public Builder grouping(ReportGroupingArgs... grouping) {
+            return grouping(List.of(grouping));
+        }        public ReportDatasetArgs build() {
             return new ReportDatasetArgs(aggregation, configuration, filter, granularity, grouping);
         }
     }

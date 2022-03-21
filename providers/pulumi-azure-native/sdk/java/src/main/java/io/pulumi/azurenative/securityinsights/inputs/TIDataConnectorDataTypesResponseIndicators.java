@@ -60,8 +60,7 @@ public final class TIDataConnectorDataTypesResponseIndicators extends io.pulumi.
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
-        }
-        public TIDataConnectorDataTypesResponseIndicators build() {
+        }        public TIDataConnectorDataTypesResponseIndicators build() {
             return new TIDataConnectorDataTypesResponseIndicators(state);
         }
     }

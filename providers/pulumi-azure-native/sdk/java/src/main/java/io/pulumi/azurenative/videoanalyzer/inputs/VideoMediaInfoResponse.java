@@ -58,8 +58,7 @@ public final class VideoMediaInfoResponse extends io.pulumi.resources.InvokeArgs
         public Builder segmentLength(String segmentLength) {
             this.segmentLength = Objects.requireNonNull(segmentLength);
             return this;
-        }
-        public VideoMediaInfoResponse build() {
+        }        public VideoMediaInfoResponse build() {
             return new VideoMediaInfoResponse(segmentLength);
         }
     }

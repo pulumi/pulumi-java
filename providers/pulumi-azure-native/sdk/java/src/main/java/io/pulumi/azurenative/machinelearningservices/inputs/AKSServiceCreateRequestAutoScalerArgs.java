@@ -127,52 +127,42 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
             this.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
-
         public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
             this.autoscaleEnabled = Output.ofNullable(autoscaleEnabled);
             return this;
         }
-
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
-
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = Output.ofNullable(maxReplicas);
             return this;
         }
-
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
-
         public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
-
         public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
-
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = Output.ofNullable(refreshPeriodInSeconds);
             return this;
         }
-
         public Builder targetUtilization(@Nullable Output<Integer> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public Builder targetUtilization(@Nullable Integer targetUtilization) {
             this.targetUtilization = Output.ofNullable(targetUtilization);
             return this;
-        }
-        public AKSServiceCreateRequestAutoScalerArgs build() {
+        }        public AKSServiceCreateRequestAutoScalerArgs build() {
             return new AKSServiceCreateRequestAutoScalerArgs(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
         }
     }

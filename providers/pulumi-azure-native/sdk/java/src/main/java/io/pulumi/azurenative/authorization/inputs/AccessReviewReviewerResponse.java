@@ -78,12 +78,10 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
             this.principalId = principalId;
             return this;
         }
-
         public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
-        }
-        public AccessReviewReviewerResponse build() {
+        }        public AccessReviewReviewerResponse build() {
             return new AccessReviewReviewerResponse(principalId, principalType);
         }
     }

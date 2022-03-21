@@ -81,17 +81,14 @@ public final class RuleGroupVisibilityConfig extends io.pulumi.resources.InvokeA
             this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
             return this;
         }
-
         public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
-        }
-        public RuleGroupVisibilityConfig build() {
+        }        public RuleGroupVisibilityConfig build() {
             return new RuleGroupVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
         }
     }

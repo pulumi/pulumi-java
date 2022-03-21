@@ -174,82 +174,72 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
-
         public Builder collectionId(String collectionId) {
             this.collectionId = Output.of(Objects.requireNonNull(collectionId));
             return this;
         }
-
         public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder iconFileUris(@Nullable Output<Map<String,String>> iconFileUris) {
             this.iconFileUris = iconFileUris;
             return this;
         }
-
         public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
             this.iconFileUris = Output.ofNullable(iconFileUris);
             return this;
         }
-
         public Builder offerId(@Nullable Output<String> offerId) {
             this.offerId = offerId;
             return this;
         }
-
         public Builder offerId(@Nullable String offerId) {
             this.offerId = Output.ofNullable(offerId);
             return this;
         }
-
         public Builder plans(@Nullable Output<List<PlanArgs>> plans) {
             this.plans = plans;
             return this;
         }
-
         public Builder plans(@Nullable List<PlanArgs> plans) {
             this.plans = Output.ofNullable(plans);
             return this;
         }
-
+        public Builder plans(PlanArgs... plans) {
+            return plans(List.of(plans));
+        }
         public Builder privateStoreId(Output<String> privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
-
         public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Output.of(Objects.requireNonNull(privateStoreId));
             return this;
         }
-
         public Builder specificPlanIdsLimitation(@Nullable Output<List<String>> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = specificPlanIdsLimitation;
             return this;
         }
-
         public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = Output.ofNullable(specificPlanIdsLimitation);
             return this;
         }
-
+        public Builder specificPlanIdsLimitation(String... specificPlanIdsLimitation) {
+            return specificPlanIdsLimitation(List.of(specificPlanIdsLimitation));
+        }
         public Builder updateSuppressedDueIdempotence(@Nullable Output<Boolean> updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
         }
-
         public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = Output.ofNullable(updateSuppressedDueIdempotence);
             return this;
-        }
-        public PrivateStoreCollectionOfferArgs build() {
+        }        public PrivateStoreCollectionOfferArgs build() {
             return new PrivateStoreCollectionOfferArgs(collectionId, eTag, iconFileUris, offerId, plans, privateStoreId, specificPlanIdsLimitation, updateSuppressedDueIdempotence);
         }
     }

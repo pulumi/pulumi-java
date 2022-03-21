@@ -61,12 +61,10 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1LoggingConfigArgs build() {
+        }        public GoogleCloudDialogflowV2beta1LoggingConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1LoggingConfigArgs(enableStackdriverLogging);
         }
     }

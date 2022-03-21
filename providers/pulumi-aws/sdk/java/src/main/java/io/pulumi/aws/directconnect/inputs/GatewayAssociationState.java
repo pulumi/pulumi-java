@@ -193,92 +193,77 @@ public final class GatewayAssociationState extends io.pulumi.resources.ResourceA
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
-
         public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
             this.allowedPrefixes = Output.ofNullable(allowedPrefixes);
             return this;
         }
-
+        public Builder allowedPrefixes(String... allowedPrefixes) {
+            return allowedPrefixes(List.of(allowedPrefixes));
+        }
         public Builder associatedGatewayId(@Nullable Output<String> associatedGatewayId) {
             this.associatedGatewayId = associatedGatewayId;
             return this;
         }
-
         public Builder associatedGatewayId(@Nullable String associatedGatewayId) {
             this.associatedGatewayId = Output.ofNullable(associatedGatewayId);
             return this;
         }
-
         public Builder associatedGatewayOwnerAccountId(@Nullable Output<String> associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
-
         public Builder associatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = Output.ofNullable(associatedGatewayOwnerAccountId);
             return this;
         }
-
         public Builder associatedGatewayType(@Nullable Output<String> associatedGatewayType) {
             this.associatedGatewayType = associatedGatewayType;
             return this;
         }
-
         public Builder associatedGatewayType(@Nullable String associatedGatewayType) {
             this.associatedGatewayType = Output.ofNullable(associatedGatewayType);
             return this;
         }
-
         public Builder dxGatewayAssociationId(@Nullable Output<String> dxGatewayAssociationId) {
             this.dxGatewayAssociationId = dxGatewayAssociationId;
             return this;
         }
-
         public Builder dxGatewayAssociationId(@Nullable String dxGatewayAssociationId) {
             this.dxGatewayAssociationId = Output.ofNullable(dxGatewayAssociationId);
             return this;
         }
-
         public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
-
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Output.ofNullable(dxGatewayId);
             return this;
         }
-
         public Builder dxGatewayOwnerAccountId(@Nullable Output<String> dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = dxGatewayOwnerAccountId;
             return this;
         }
-
         public Builder dxGatewayOwnerAccountId(@Nullable String dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Output.ofNullable(dxGatewayOwnerAccountId);
             return this;
         }
-
         public Builder proposalId(@Nullable Output<String> proposalId) {
             this.proposalId = proposalId;
             return this;
         }
-
         public Builder proposalId(@Nullable String proposalId) {
             this.proposalId = Output.ofNullable(proposalId);
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
-
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
-        }
-        public GatewayAssociationState build() {
+        }        public GatewayAssociationState build() {
             return new GatewayAssociationState(allowedPrefixes, associatedGatewayId, associatedGatewayOwnerAccountId, associatedGatewayType, dxGatewayAssociationId, dxGatewayId, dxGatewayOwnerAccountId, proposalId, vpnGatewayId);
         }
     }

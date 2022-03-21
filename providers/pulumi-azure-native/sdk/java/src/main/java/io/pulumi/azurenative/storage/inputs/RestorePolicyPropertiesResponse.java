@@ -112,22 +112,18 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
             this.days = days;
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder lastEnabledTime(String lastEnabledTime) {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
         }
-
         public Builder minRestoreTime(String minRestoreTime) {
             this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
             return this;
-        }
-        public RestorePolicyPropertiesResponse build() {
+        }        public RestorePolicyPropertiesResponse build() {
             return new RestorePolicyPropertiesResponse(days, enabled, lastEnabledTime, minRestoreTime);
         }
     }

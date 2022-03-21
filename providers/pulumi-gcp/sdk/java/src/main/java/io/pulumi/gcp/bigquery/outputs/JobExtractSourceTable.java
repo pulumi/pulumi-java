@@ -89,17 +89,14 @@ public final class JobExtractSourceTable {
             this.datasetId = datasetId;
             return this;
         }
-
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public JobExtractSourceTable build() {
+        }        public JobExtractSourceTable build() {
             return new JobExtractSourceTable(datasetId, projectId, tableId);
         }
     }

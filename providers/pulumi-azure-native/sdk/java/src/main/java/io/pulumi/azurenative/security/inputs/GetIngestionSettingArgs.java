@@ -54,8 +54,7 @@ public final class GetIngestionSettingArgs extends io.pulumi.resources.InvokeArg
         public Builder ingestionSettingName(String ingestionSettingName) {
             this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
             return this;
-        }
-        public GetIngestionSettingArgs build() {
+        }        public GetIngestionSettingArgs build() {
             return new GetIngestionSettingArgs(ingestionSettingName);
         }
     }

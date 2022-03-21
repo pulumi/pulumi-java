@@ -78,12 +78,13 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
             this.endpointInfo = Objects.requireNonNull(endpointInfo);
             return this;
         }
-
         public Builder steps(List<StepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-        public TraceResponse build() {
+        public Builder steps(StepResponse... steps) {
+            return steps(List.of(steps));
+        }        public TraceResponse build() {
             return new TraceResponse(endpointInfo, steps);
         }
     }

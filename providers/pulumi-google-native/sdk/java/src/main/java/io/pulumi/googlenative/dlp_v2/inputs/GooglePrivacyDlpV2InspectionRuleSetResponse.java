@@ -78,12 +78,16 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
+        public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
+            return infoTypes(List.of(infoTypes));
+        }
         public Builder rules(List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-        public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
+        public Builder rules(GooglePrivacyDlpV2InspectionRuleResponse... rules) {
+            return rules(List.of(rules));
+        }        public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
             return new GooglePrivacyDlpV2InspectionRuleSetResponse(infoTypes, rules);
         }
     }

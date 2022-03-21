@@ -51,8 +51,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaSseK
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects build() {
+        }        public BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects build() {
             return new BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects(enabled);
         }
     }

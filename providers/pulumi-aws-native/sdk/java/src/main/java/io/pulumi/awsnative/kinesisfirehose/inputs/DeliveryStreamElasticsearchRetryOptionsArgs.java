@@ -53,12 +53,10 @@ public final class DeliveryStreamElasticsearchRetryOptionsArgs extends io.pulumi
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = Output.ofNullable(durationInSeconds);
             return this;
-        }
-        public DeliveryStreamElasticsearchRetryOptionsArgs build() {
+        }        public DeliveryStreamElasticsearchRetryOptionsArgs build() {
             return new DeliveryStreamElasticsearchRetryOptionsArgs(durationInSeconds);
         }
     }

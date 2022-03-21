@@ -56,12 +56,10 @@ public final class FunctionEventTriggerFailurePolicyArgs extends io.pulumi.resou
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public Builder retry(Boolean retry) {
             this.retry = Output.of(Objects.requireNonNull(retry));
             return this;
-        }
-        public FunctionEventTriggerFailurePolicyArgs build() {
+        }        public FunctionEventTriggerFailurePolicyArgs build() {
             return new FunctionEventTriggerFailurePolicyArgs(retry);
         }
     }

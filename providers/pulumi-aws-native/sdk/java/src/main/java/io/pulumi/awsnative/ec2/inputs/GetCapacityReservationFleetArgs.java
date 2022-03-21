@@ -50,8 +50,7 @@ public final class GetCapacityReservationFleetArgs extends io.pulumi.resources.I
         public Builder capacityReservationFleetId(String capacityReservationFleetId) {
             this.capacityReservationFleetId = Objects.requireNonNull(capacityReservationFleetId);
             return this;
-        }
-        public GetCapacityReservationFleetArgs build() {
+        }        public GetCapacityReservationFleetArgs build() {
             return new GetCapacityReservationFleetArgs(capacityReservationFleetId);
         }
     }

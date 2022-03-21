@@ -64,12 +64,10 @@ public final class GetOrganizationRoleArgs extends io.pulumi.resources.InvokeArg
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
-        }
-        public GetOrganizationRoleArgs build() {
+        }        public GetOrganizationRoleArgs build() {
             return new GetOrganizationRoleArgs(organizationId, roleId);
         }
     }

@@ -74,17 +74,14 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
             this.policy = policy;
             return this;
         }
-
         public Builder queueUrl(@Nullable Output<String> queueUrl) {
             this.queueUrl = queueUrl;
             return this;
         }
-
         public Builder queueUrl(@Nullable String queueUrl) {
             this.queueUrl = Output.ofNullable(queueUrl);
             return this;
-        }
-        public QueuePolicyState build() {
+        }        public QueuePolicyState build() {
             return new QueuePolicyState(policy, queueUrl);
         }
     }

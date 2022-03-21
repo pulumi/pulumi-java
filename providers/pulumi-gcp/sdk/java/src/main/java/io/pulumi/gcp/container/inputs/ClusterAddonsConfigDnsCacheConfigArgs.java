@@ -57,12 +57,10 @@ public final class ClusterAddonsConfigDnsCacheConfigArgs extends io.pulumi.resou
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public ClusterAddonsConfigDnsCacheConfigArgs build() {
+        }        public ClusterAddonsConfigDnsCacheConfigArgs build() {
             return new ClusterAddonsConfigDnsCacheConfigArgs(enabled);
         }
     }

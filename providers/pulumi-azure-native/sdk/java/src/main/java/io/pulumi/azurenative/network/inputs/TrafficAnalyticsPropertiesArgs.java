@@ -61,12 +61,10 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
             this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
         }
-
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesArgs networkWatcherFlowAnalyticsConfiguration) {
             this.networkWatcherFlowAnalyticsConfiguration = Output.ofNullable(networkWatcherFlowAnalyticsConfiguration);
             return this;
-        }
-        public TrafficAnalyticsPropertiesArgs build() {
+        }        public TrafficAnalyticsPropertiesArgs build() {
             return new TrafficAnalyticsPropertiesArgs(networkWatcherFlowAnalyticsConfiguration);
         }
     }

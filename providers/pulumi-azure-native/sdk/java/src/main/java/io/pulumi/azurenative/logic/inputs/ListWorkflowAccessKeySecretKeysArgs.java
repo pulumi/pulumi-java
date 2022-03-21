@@ -88,17 +88,14 @@ public final class ListWorkflowAccessKeySecretKeysArgs extends io.pulumi.resourc
             this.accessKeyName = Objects.requireNonNull(accessKeyName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
-        }
-        public ListWorkflowAccessKeySecretKeysArgs build() {
+        }        public ListWorkflowAccessKeySecretKeysArgs build() {
             return new ListWorkflowAccessKeySecretKeysArgs(accessKeyName, resourceGroupName, workflowName);
         }
     }

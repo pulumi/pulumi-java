@@ -88,17 +88,23 @@ public final class FirewallPolicyRuleMatch {
             this.destIpRanges = destIpRanges;
             return this;
         }
-
+        public Builder destIpRanges(String... destIpRanges) {
+            return destIpRanges(List.of(destIpRanges));
+        }
         public Builder layer4Configs(List<FirewallPolicyRuleMatchLayer4Config> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
-
+        public Builder layer4Configs(FirewallPolicyRuleMatchLayer4Config... layer4Configs) {
+            return layer4Configs(List.of(layer4Configs));
+        }
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-        public FirewallPolicyRuleMatch build() {
+        public Builder srcIpRanges(String... srcIpRanges) {
+            return srcIpRanges(List.of(srcIpRanges));
+        }        public FirewallPolicyRuleMatch build() {
             return new FirewallPolicyRuleMatch(destIpRanges, layer4Configs, srcIpRanges);
         }
     }

@@ -72,12 +72,10 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends io.pulumi.
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
-
         public Builder s3KeyPrefix(String s3KeyPrefix) {
             this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
             return this;
-        }
-        public GetInfrastructureConfigurationLoggingS3Log build() {
+        }        public GetInfrastructureConfigurationLoggingS3Log build() {
             return new GetInfrastructureConfigurationLoggingS3Log(s3BucketName, s3KeyPrefix);
         }
     }

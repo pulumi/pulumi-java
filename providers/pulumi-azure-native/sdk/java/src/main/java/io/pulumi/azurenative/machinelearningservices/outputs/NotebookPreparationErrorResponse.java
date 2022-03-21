@@ -56,12 +56,10 @@ public final class NotebookPreparationErrorResponse {
             this.errorMessage = errorMessage;
             return this;
         }
-
         public Builder statusCode(@Nullable Integer statusCode) {
             this.statusCode = statusCode;
             return this;
-        }
-        public NotebookPreparationErrorResponse build() {
+        }        public NotebookPreparationErrorResponse build() {
             return new NotebookPreparationErrorResponse(errorMessage, statusCode);
         }
     }

@@ -149,72 +149,61 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.customFeatures = customFeatures;
             return this;
         }
-
         public Builder customFeatures(@Nullable List<String> customFeatures) {
             this.customFeatures = Output.ofNullable(customFeatures);
             return this;
         }
-
+        public Builder customFeatures(String... customFeatures) {
+            return customFeatures(List.of(customFeatures));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder minTlsVersion(@Nullable Output<SslPolicyMinTlsVersion> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
-
         public Builder minTlsVersion(@Nullable SslPolicyMinTlsVersion minTlsVersion) {
             this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder profile(@Nullable Output<SslPolicyProfile> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable SslPolicyProfile profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
-        }
-        public SslPolicyArgs build() {
+        }        public SslPolicyArgs build() {
             return new SslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, requestId);
         }
     }

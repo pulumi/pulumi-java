@@ -69,12 +69,10 @@ public final class KnowledgeBaseResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public KnowledgeBaseResponse build() {
+        }        public KnowledgeBaseResponse build() {
             return new KnowledgeBaseResponse(name, url);
         }
     }

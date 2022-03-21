@@ -70,12 +70,10 @@ public final class SingleClusterRoutingResponse {
             this.allowTransactionalWrites = Objects.requireNonNull(allowTransactionalWrites);
             return this;
         }
-
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
-        }
-        public SingleClusterRoutingResponse build() {
+        }        public SingleClusterRoutingResponse build() {
             return new SingleClusterRoutingResponse(allowTransactionalWrites, clusterId);
         }
     }

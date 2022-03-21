@@ -54,8 +54,7 @@ public final class GetConnectorProfileArgs extends io.pulumi.resources.InvokeArg
         public Builder connectorProfileName(String connectorProfileName) {
             this.connectorProfileName = Objects.requireNonNull(connectorProfileName);
             return this;
-        }
-        public GetConnectorProfileArgs build() {
+        }        public GetConnectorProfileArgs build() {
             return new GetConnectorProfileArgs(connectorProfileName);
         }
     }

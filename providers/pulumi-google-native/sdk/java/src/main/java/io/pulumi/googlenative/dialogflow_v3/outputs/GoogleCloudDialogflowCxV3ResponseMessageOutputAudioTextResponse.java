@@ -86,17 +86,14 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
-
         public Builder ssml(String ssml) {
             this.ssml = Objects.requireNonNull(ssml);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
-        }
-        public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse build() {
+        }        public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse(allowPlaybackInterruption, ssml, text);
         }
     }

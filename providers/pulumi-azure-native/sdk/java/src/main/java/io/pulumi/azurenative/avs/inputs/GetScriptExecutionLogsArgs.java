@@ -88,17 +88,14 @@ public final class GetScriptExecutionLogsArgs extends io.pulumi.resources.Invoke
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder scriptExecutionName(String scriptExecutionName) {
             this.scriptExecutionName = Objects.requireNonNull(scriptExecutionName);
             return this;
-        }
-        public GetScriptExecutionLogsArgs build() {
+        }        public GetScriptExecutionLogsArgs build() {
             return new GetScriptExecutionLogsArgs(privateCloudName, resourceGroupName, scriptExecutionName);
         }
     }

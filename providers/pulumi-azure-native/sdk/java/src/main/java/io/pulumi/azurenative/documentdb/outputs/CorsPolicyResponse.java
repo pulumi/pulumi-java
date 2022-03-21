@@ -120,27 +120,22 @@ public final class CorsPolicyResponse {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
-
         public Builder allowedMethods(@Nullable String allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
-
         public Builder allowedOrigins(String allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
-
         public Builder exposedHeaders(@Nullable String exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
-
         public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
-        }
-        public CorsPolicyResponse build() {
+        }        public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
         }
     }

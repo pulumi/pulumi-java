@@ -106,42 +106,34 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
-
         public Builder peeringName(String peeringName) {
             this.peeringName = Output.of(Objects.requireNonNull(peeringName));
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder registeredPrefixName(@Nullable Output<String> registeredPrefixName) {
             this.registeredPrefixName = registeredPrefixName;
             return this;
         }
-
         public Builder registeredPrefixName(@Nullable String registeredPrefixName) {
             this.registeredPrefixName = Output.ofNullable(registeredPrefixName);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public RegisteredPrefixArgs build() {
+        }        public RegisteredPrefixArgs build() {
             return new RegisteredPrefixArgs(peeringName, prefix, registeredPrefixName, resourceGroupName);
         }
     }

@@ -242,122 +242,101 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder containerProperties(@Nullable Output<String> containerProperties) {
             this.containerProperties = containerProperties;
             return this;
         }
-
         public Builder containerProperties(@Nullable String containerProperties) {
             this.containerProperties = Output.ofNullable(containerProperties);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder platformCapabilities(@Nullable Output<List<String>> platformCapabilities) {
             this.platformCapabilities = platformCapabilities;
             return this;
         }
-
         public Builder platformCapabilities(@Nullable List<String> platformCapabilities) {
             this.platformCapabilities = Output.ofNullable(platformCapabilities);
             return this;
         }
-
+        public Builder platformCapabilities(String... platformCapabilities) {
+            return platformCapabilities(List.of(platformCapabilities));
+        }
         public Builder propagateTags(@Nullable Output<Boolean> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
-
         public Builder propagateTags(@Nullable Boolean propagateTags) {
             this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
-
         public Builder retryStrategy(@Nullable Output<JobDefinitionRetryStrategyGetArgs> retryStrategy) {
             this.retryStrategy = retryStrategy;
             return this;
         }
-
         public Builder retryStrategy(@Nullable JobDefinitionRetryStrategyGetArgs retryStrategy) {
             this.retryStrategy = Output.ofNullable(retryStrategy);
             return this;
         }
-
         public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable Integer revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder timeout(@Nullable Output<JobDefinitionTimeoutGetArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable JobDefinitionTimeoutGetArgs timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public JobDefinitionState build() {
+        }        public JobDefinitionState build() {
             return new JobDefinitionState(arn, containerProperties, name, parameters, platformCapabilities, propagateTags, retryStrategy, revision, tags, tagsAll, timeout, type);
         }
     }

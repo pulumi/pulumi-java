@@ -53,8 +53,7 @@ public final class DataCollectionEndpointResponseNetworkAcls {
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
-        }
-        public DataCollectionEndpointResponseNetworkAcls build() {
+        }        public DataCollectionEndpointResponseNetworkAcls build() {
             return new DataCollectionEndpointResponseNetworkAcls(publicNetworkAccess);
         }
     }

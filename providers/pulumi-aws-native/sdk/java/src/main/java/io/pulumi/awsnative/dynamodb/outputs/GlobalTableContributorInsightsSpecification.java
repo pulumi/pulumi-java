@@ -43,8 +43,7 @@ public final class GlobalTableContributorInsightsSpecification {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GlobalTableContributorInsightsSpecification build() {
+        }        public GlobalTableContributorInsightsSpecification build() {
             return new GlobalTableContributorInsightsSpecification(enabled);
         }
     }

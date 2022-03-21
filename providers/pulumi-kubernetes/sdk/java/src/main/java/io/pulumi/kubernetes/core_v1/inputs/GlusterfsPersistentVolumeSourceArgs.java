@@ -111,42 +111,34 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
         public Builder endpoints(String endpoints) {
             this.endpoints = Output.of(Objects.requireNonNull(endpoints));
             return this;
         }
-
         public Builder endpointsNamespace(@Nullable Output<String> endpointsNamespace) {
             this.endpointsNamespace = endpointsNamespace;
             return this;
         }
-
         public Builder endpointsNamespace(@Nullable String endpointsNamespace) {
             this.endpointsNamespace = Output.ofNullable(endpointsNamespace);
             return this;
         }
-
         public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public Builder path(String path) {
             this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
-
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Output.ofNullable(readOnly);
             return this;
-        }
-        public GlusterfsPersistentVolumeSourceArgs build() {
+        }        public GlusterfsPersistentVolumeSourceArgs build() {
             return new GlusterfsPersistentVolumeSourceArgs(endpoints, endpointsNamespace, path, readOnly);
         }
     }

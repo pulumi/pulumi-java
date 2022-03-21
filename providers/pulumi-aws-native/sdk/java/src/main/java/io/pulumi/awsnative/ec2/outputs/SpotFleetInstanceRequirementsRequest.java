@@ -227,107 +227,107 @@ public final class SpotFleetInstanceRequirementsRequest {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
-
         public Builder acceleratorManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers) {
             this.acceleratorManufacturers = acceleratorManufacturers;
             return this;
         }
-
+        public Builder acceleratorManufacturers(SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem... acceleratorManufacturers) {
+            return acceleratorManufacturers(List.of(acceleratorManufacturers));
+        }
         public Builder acceleratorNames(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames) {
             this.acceleratorNames = acceleratorNames;
             return this;
         }
-
+        public Builder acceleratorNames(SpotFleetInstanceRequirementsRequestAcceleratorNamesItem... acceleratorNames) {
+            return acceleratorNames(List.of(acceleratorNames));
+        }
         public Builder acceleratorTotalMemoryMiB(@Nullable SpotFleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB) {
             this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
             return this;
         }
-
         public Builder acceleratorTypes(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes) {
             this.acceleratorTypes = acceleratorTypes;
             return this;
         }
-
+        public Builder acceleratorTypes(SpotFleetInstanceRequirementsRequestAcceleratorTypesItem... acceleratorTypes) {
+            return acceleratorTypes(List.of(acceleratorTypes));
+        }
         public Builder bareMetal(@Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal) {
             this.bareMetal = bareMetal;
             return this;
         }
-
         public Builder baselineEbsBandwidthMbps(@Nullable SpotFleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps) {
             this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
             return this;
         }
-
         public Builder burstablePerformance(@Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance) {
             this.burstablePerformance = burstablePerformance;
             return this;
         }
-
         public Builder cpuManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers) {
             this.cpuManufacturers = cpuManufacturers;
             return this;
         }
-
+        public Builder cpuManufacturers(SpotFleetInstanceRequirementsRequestCpuManufacturersItem... cpuManufacturers) {
+            return cpuManufacturers(List.of(cpuManufacturers));
+        }
         public Builder excludedInstanceTypes(@Nullable List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
-
+        public Builder excludedInstanceTypes(String... excludedInstanceTypes) {
+            return excludedInstanceTypes(List.of(excludedInstanceTypes));
+        }
         public Builder instanceGenerations(@Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations) {
             this.instanceGenerations = instanceGenerations;
             return this;
         }
-
+        public Builder instanceGenerations(SpotFleetInstanceRequirementsRequestInstanceGenerationsItem... instanceGenerations) {
+            return instanceGenerations(List.of(instanceGenerations));
+        }
         public Builder localStorage(@Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage) {
             this.localStorage = localStorage;
             return this;
         }
-
         public Builder localStorageTypes(@Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes) {
             this.localStorageTypes = localStorageTypes;
             return this;
         }
-
+        public Builder localStorageTypes(SpotFleetInstanceRequirementsRequestLocalStorageTypesItem... localStorageTypes) {
+            return localStorageTypes(List.of(localStorageTypes));
+        }
         public Builder memoryGiBPerVCpu(@Nullable SpotFleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu) {
             this.memoryGiBPerVCpu = memoryGiBPerVCpu;
             return this;
         }
-
         public Builder memoryMiB(@Nullable SpotFleetMemoryMiBRequest memoryMiB) {
             this.memoryMiB = memoryMiB;
             return this;
         }
-
         public Builder networkInterfaceCount(@Nullable SpotFleetNetworkInterfaceCountRequest networkInterfaceCount) {
             this.networkInterfaceCount = networkInterfaceCount;
             return this;
         }
-
         public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Integer onDemandMaxPricePercentageOverLowestPrice) {
             this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
             return this;
         }
-
         public Builder requireHibernateSupport(@Nullable Boolean requireHibernateSupport) {
             this.requireHibernateSupport = requireHibernateSupport;
             return this;
         }
-
         public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Integer spotMaxPricePercentageOverLowestPrice) {
             this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
             return this;
         }
-
         public Builder totalLocalStorageGB(@Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB) {
             this.totalLocalStorageGB = totalLocalStorageGB;
             return this;
         }
-
         public Builder vCpuCount(@Nullable SpotFleetVCpuCountRangeRequest vCpuCount) {
             this.vCpuCount = vCpuCount;
             return this;
-        }
-        public SpotFleetInstanceRequirementsRequest build() {
+        }        public SpotFleetInstanceRequirementsRequest build() {
             return new SpotFleetInstanceRequirementsRequest(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }
     }

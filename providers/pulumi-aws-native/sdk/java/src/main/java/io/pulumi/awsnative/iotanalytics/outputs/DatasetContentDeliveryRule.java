@@ -56,12 +56,10 @@ public final class DatasetContentDeliveryRule {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public Builder entryName(@Nullable String entryName) {
             this.entryName = entryName;
             return this;
-        }
-        public DatasetContentDeliveryRule build() {
+        }        public DatasetContentDeliveryRule build() {
             return new DatasetContentDeliveryRule(destination, entryName);
         }
     }

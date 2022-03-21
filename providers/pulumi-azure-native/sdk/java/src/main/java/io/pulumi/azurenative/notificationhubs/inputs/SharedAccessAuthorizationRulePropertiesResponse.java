@@ -192,47 +192,41 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
             this.claimType = Objects.requireNonNull(claimType);
             return this;
         }
-
         public Builder claimValue(String claimValue) {
             this.claimValue = Objects.requireNonNull(claimValue);
             return this;
         }
-
         public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
-
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
-
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
-
         public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder rights(@Nullable List<String> rights) {
             this.rights = rights;
             return this;
         }
-
+        public Builder rights(String... rights) {
+            return rights(List.of(rights));
+        }
         public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
-        }
-        public SharedAccessAuthorizationRulePropertiesResponse build() {
+        }        public SharedAccessAuthorizationRulePropertiesResponse build() {
             return new SharedAccessAuthorizationRulePropertiesResponse(claimType, claimValue, createdTime, keyName, modifiedTime, primaryKey, revision, rights, secondaryKey);
         }
     }

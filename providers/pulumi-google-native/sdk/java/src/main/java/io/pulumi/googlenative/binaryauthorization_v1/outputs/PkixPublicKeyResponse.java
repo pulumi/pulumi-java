@@ -69,12 +69,10 @@ public final class PkixPublicKeyResponse {
             this.publicKeyPem = Objects.requireNonNull(publicKeyPem);
             return this;
         }
-
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
-        }
-        public PkixPublicKeyResponse build() {
+        }        public PkixPublicKeyResponse build() {
             return new PkixPublicKeyResponse(publicKeyPem, signatureAlgorithm);
         }
     }

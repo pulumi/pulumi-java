@@ -77,22 +77,18 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,ManagedClusterSKUName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,ManagedClusterSKUTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,ManagedClusterSKUTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public ManagedClusterSKUArgs build() {
+        }        public ManagedClusterSKUArgs build() {
             return new ManagedClusterSKUArgs(name, tier);
         }
     }

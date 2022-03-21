@@ -69,12 +69,10 @@ public final class GraphParameterLinkResponse {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
-
         public Builder parameterKey(String parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
-        }
-        public GraphParameterLinkResponse build() {
+        }        public GraphParameterLinkResponse build() {
             return new GraphParameterLinkResponse(nodeId, parameterKey);
         }
     }

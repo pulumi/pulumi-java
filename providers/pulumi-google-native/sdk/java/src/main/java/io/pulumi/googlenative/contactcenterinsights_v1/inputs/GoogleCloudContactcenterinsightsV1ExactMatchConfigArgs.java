@@ -61,12 +61,10 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
             this.caseSensitive = caseSensitive;
             return this;
         }
-
         public Builder caseSensitive(@Nullable Boolean caseSensitive) {
             this.caseSensitive = Output.ofNullable(caseSensitive);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(caseSensitive);
         }
     }

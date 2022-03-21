@@ -74,22 +74,18 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
-
         public Builder contentSecurityPolicy(String contentSecurityPolicy) {
             this.contentSecurityPolicy = Output.of(Objects.requireNonNull(contentSecurityPolicy));
             return this;
         }
-
         public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public Builder override(Boolean override) {
             this.override = Output.of(Objects.requireNonNull(override));
             return this;
-        }
-        public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs build() {
+        }        public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs build() {
             return new ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs(contentSecurityPolicy, override);
         }
     }

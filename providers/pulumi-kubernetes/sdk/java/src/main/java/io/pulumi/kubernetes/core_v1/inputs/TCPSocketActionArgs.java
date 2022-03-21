@@ -80,22 +80,18 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
             this.host = host;
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = Output.ofNullable(host);
             return this;
         }
-
         public Builder port(Output<Either<Integer,String>> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Either<Integer,String> port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public TCPSocketActionArgs build() {
+        }        public TCPSocketActionArgs build() {
             return new TCPSocketActionArgs(host, port);
         }
     }

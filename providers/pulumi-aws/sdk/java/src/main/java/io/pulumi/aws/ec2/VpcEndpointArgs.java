@@ -206,102 +206,91 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.autoAccept = autoAccept;
             return this;
         }
-
         public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Output.ofNullable(autoAccept);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder privateDnsEnabled(@Nullable Output<Boolean> privateDnsEnabled) {
             this.privateDnsEnabled = privateDnsEnabled;
             return this;
         }
-
         public Builder privateDnsEnabled(@Nullable Boolean privateDnsEnabled) {
             this.privateDnsEnabled = Output.ofNullable(privateDnsEnabled);
             return this;
         }
-
         public Builder routeTableIds(@Nullable Output<List<String>> routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
-
         public Builder routeTableIds(@Nullable List<String> routeTableIds) {
             this.routeTableIds = Output.ofNullable(routeTableIds);
             return this;
         }
-
+        public Builder routeTableIds(String... routeTableIds) {
+            return routeTableIds(List.of(routeTableIds));
+        }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
-
+        public Builder subnetIds(String... subnetIds) {
+            return subnetIds(List.of(subnetIds));
+        }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder vpcEndpointType(@Nullable Output<String> vpcEndpointType) {
             this.vpcEndpointType = vpcEndpointType;
             return this;
         }
-
         public Builder vpcEndpointType(@Nullable String vpcEndpointType) {
             this.vpcEndpointType = Output.ofNullable(vpcEndpointType);
             return this;
         }
-
         public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcId(String vpcId) {
             this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
-        }
-        public VpcEndpointArgs build() {
+        }        public VpcEndpointArgs build() {
             return new VpcEndpointArgs(autoAccept, policy, privateDnsEnabled, routeTableIds, securityGroupIds, serviceName, subnetIds, tags, vpcEndpointType, vpcId);
         }
     }

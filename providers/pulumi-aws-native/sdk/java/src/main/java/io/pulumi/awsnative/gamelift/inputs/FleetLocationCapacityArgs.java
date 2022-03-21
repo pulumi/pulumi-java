@@ -93,32 +93,26 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
             this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances);
             return this;
         }
-
         public Builder desiredEC2Instances(Integer desiredEC2Instances) {
             this.desiredEC2Instances = Output.of(Objects.requireNonNull(desiredEC2Instances));
             return this;
         }
-
         public Builder maxSize(Output<Integer> maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
-
         public Builder maxSize(Integer maxSize) {
             this.maxSize = Output.of(Objects.requireNonNull(maxSize));
             return this;
         }
-
         public Builder minSize(Output<Integer> minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public Builder minSize(Integer minSize) {
             this.minSize = Output.of(Objects.requireNonNull(minSize));
             return this;
-        }
-        public FleetLocationCapacityArgs build() {
+        }        public FleetLocationCapacityArgs build() {
             return new FleetLocationCapacityArgs(desiredEC2Instances, maxSize, minSize);
         }
     }

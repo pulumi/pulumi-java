@@ -110,22 +110,18 @@ public final class VideoCreationPropertiesResponse extends io.pulumi.resources.I
             this.description = description;
             return this;
         }
-
         public Builder retentionPeriod(@Nullable String retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
-
         public Builder segmentLength(@Nullable String segmentLength) {
             this.segmentLength = segmentLength;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
-        }
-        public VideoCreationPropertiesResponse build() {
+        }        public VideoCreationPropertiesResponse build() {
             return new VideoCreationPropertiesResponse(description, retentionPeriod, segmentLength, title);
         }
     }

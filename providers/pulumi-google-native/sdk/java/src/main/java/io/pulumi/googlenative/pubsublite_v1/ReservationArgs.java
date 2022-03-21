@@ -110,52 +110,42 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder reservationId(Output<String> reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
-
         public Builder reservationId(String reservationId) {
             this.reservationId = Output.of(Objects.requireNonNull(reservationId));
             return this;
         }
-
         public Builder throughputCapacity(@Nullable Output<String> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
-
         public Builder throughputCapacity(@Nullable String throughputCapacity) {
             this.throughputCapacity = Output.ofNullable(throughputCapacity);
             return this;
-        }
-        public ReservationArgs build() {
+        }        public ReservationArgs build() {
             return new ReservationArgs(location, name, project, reservationId, throughputCapacity);
         }
     }

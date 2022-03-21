@@ -69,12 +69,10 @@ public final class PullMessageResponse {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
-
         public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
-        }
-        public PullMessageResponse build() {
+        }        public PullMessageResponse build() {
             return new PullMessageResponse(payload, tag);
         }
     }

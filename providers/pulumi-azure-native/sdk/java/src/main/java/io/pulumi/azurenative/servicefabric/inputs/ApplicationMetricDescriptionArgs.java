@@ -121,42 +121,34 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
             this.maximumCapacity = maximumCapacity;
             return this;
         }
-
         public Builder maximumCapacity(@Nullable Double maximumCapacity) {
             this.maximumCapacity = Output.ofNullable(maximumCapacity);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder reservationCapacity(@Nullable Output<Double> reservationCapacity) {
             this.reservationCapacity = reservationCapacity;
             return this;
         }
-
         public Builder reservationCapacity(@Nullable Double reservationCapacity) {
             this.reservationCapacity = Output.ofNullable(reservationCapacity);
             return this;
         }
-
         public Builder totalApplicationCapacity(@Nullable Output<Double> totalApplicationCapacity) {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
-
         public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
             this.totalApplicationCapacity = Output.ofNullable(totalApplicationCapacity);
             return this;
-        }
-        public ApplicationMetricDescriptionArgs build() {
+        }        public ApplicationMetricDescriptionArgs build() {
             return new ApplicationMetricDescriptionArgs(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
         }
     }

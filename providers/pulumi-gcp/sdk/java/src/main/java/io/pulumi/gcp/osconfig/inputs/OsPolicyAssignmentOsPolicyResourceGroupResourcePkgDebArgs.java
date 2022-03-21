@@ -75,22 +75,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
             this.pullDeps = pullDeps;
             return this;
         }
-
         public Builder pullDeps(@Nullable Boolean pullDeps) {
             this.pullDeps = Output.ofNullable(pullDeps);
             return this;
         }
-
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs(pullDeps, source);
         }
     }

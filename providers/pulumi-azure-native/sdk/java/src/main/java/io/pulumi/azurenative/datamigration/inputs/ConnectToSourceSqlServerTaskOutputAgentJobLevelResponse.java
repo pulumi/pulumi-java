@@ -175,42 +175,34 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder jobCategory(String jobCategory) {
             this.jobCategory = Objects.requireNonNull(jobCategory);
             return this;
         }
-
         public Builder jobOwner(String jobOwner) {
             this.jobOwner = Objects.requireNonNull(jobOwner);
             return this;
         }
-
         public Builder lastExecutedOn(String lastExecutedOn) {
             this.lastExecutedOn = Objects.requireNonNull(lastExecutedOn);
             return this;
         }
-
         public Builder migrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
             this.migrationEligibility = Objects.requireNonNull(migrationEligibility);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
-        }
-        public ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse build() {
+        }        public ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(id, isEnabled, jobCategory, jobOwner, lastExecutedOn, migrationEligibility, name, resultType);
         }
     }

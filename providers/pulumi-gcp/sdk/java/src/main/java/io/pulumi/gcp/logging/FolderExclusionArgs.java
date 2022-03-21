@@ -127,52 +127,42 @@ public final class FolderExclusionArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
-
         public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Output.ofNullable(disabled);
             return this;
         }
-
         public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
-
         public Builder folder(String folder) {
             this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public FolderExclusionArgs build() {
+        }        public FolderExclusionArgs build() {
             return new FolderExclusionArgs(description, disabled, filter, folder, name);
         }
     }

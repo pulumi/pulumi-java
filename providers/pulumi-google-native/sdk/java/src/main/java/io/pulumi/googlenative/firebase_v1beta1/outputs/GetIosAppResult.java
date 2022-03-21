@@ -149,37 +149,30 @@ public final class GetIosAppResult {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
-
         public Builder appStoreId(String appStoreId) {
             this.appStoreId = Objects.requireNonNull(appStoreId);
             return this;
         }
-
         public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder teamId(String teamId) {
             this.teamId = Objects.requireNonNull(teamId);
             return this;
-        }
-        public GetIosAppResult build() {
+        }        public GetIosAppResult build() {
             return new GetIosAppResult(appId, appStoreId, bundleId, displayName, name, project, teamId);
         }
     }

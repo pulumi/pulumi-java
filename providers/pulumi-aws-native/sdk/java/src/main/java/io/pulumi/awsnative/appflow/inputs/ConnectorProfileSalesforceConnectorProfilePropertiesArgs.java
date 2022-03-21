@@ -71,22 +71,18 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
             this.instanceUrl = instanceUrl;
             return this;
         }
-
         public Builder instanceUrl(@Nullable String instanceUrl) {
             this.instanceUrl = Output.ofNullable(instanceUrl);
             return this;
         }
-
         public Builder isSandboxEnvironment(@Nullable Output<Boolean> isSandboxEnvironment) {
             this.isSandboxEnvironment = isSandboxEnvironment;
             return this;
         }
-
         public Builder isSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
             this.isSandboxEnvironment = Output.ofNullable(isSandboxEnvironment);
             return this;
-        }
-        public ConnectorProfileSalesforceConnectorProfilePropertiesArgs build() {
+        }        public ConnectorProfileSalesforceConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSalesforceConnectorProfilePropertiesArgs(instanceUrl, isSandboxEnvironment);
         }
     }

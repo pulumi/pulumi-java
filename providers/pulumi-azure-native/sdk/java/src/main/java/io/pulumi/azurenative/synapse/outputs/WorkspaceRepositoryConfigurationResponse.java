@@ -183,47 +183,38 @@ public final class WorkspaceRepositoryConfigurationResponse {
             this.accountName = accountName;
             return this;
         }
-
         public Builder collaborationBranch(@Nullable String collaborationBranch) {
             this.collaborationBranch = collaborationBranch;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
-
         public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
-
         public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
-
         public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
-
         public Builder rootFolder(@Nullable String rootFolder) {
             this.rootFolder = rootFolder;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public WorkspaceRepositoryConfigurationResponse build() {
+        }        public WorkspaceRepositoryConfigurationResponse build() {
             return new WorkspaceRepositoryConfigurationResponse(accountName, collaborationBranch, hostName, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }
     }

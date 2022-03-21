@@ -140,32 +140,26 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public Builder firstName(String firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
-
         public Builder lastName(String lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
-
         public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudChannelV1ContactInfoResponse build() {
+        }        public GoogleCloudChannelV1ContactInfoResponse build() {
             return new GoogleCloudChannelV1ContactInfoResponse(displayName, email, firstName, lastName, phone, title);
         }
     }

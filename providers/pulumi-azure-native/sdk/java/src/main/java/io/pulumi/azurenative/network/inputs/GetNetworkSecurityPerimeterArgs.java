@@ -72,12 +72,10 @@ public final class GetNetworkSecurityPerimeterArgs extends io.pulumi.resources.I
             this.networkSecurityPerimeterName = Objects.requireNonNull(networkSecurityPerimeterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetNetworkSecurityPerimeterArgs build() {
+        }        public GetNetworkSecurityPerimeterArgs build() {
             return new GetNetworkSecurityPerimeterArgs(networkSecurityPerimeterName, resourceGroupName);
         }
     }

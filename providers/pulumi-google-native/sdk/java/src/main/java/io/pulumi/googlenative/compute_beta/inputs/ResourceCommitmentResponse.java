@@ -92,17 +92,14 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
-
         public Builder amount(String amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ResourceCommitmentResponse build() {
+        }        public ResourceCommitmentResponse build() {
             return new ResourceCommitmentResponse(acceleratorType, amount, type);
         }
     }

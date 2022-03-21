@@ -71,12 +71,10 @@ public final class StackPropertiesResponse {
             this.id = id;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public StackPropertiesResponse build() {
+        }        public StackPropertiesResponse build() {
             return new StackPropertiesResponse(id, version);
         }
     }

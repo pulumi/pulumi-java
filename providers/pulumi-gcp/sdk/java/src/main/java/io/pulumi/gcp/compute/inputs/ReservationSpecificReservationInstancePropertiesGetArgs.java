@@ -115,42 +115,40 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
             this.guestAccelerators = guestAccelerators;
             return this;
         }
-
         public Builder guestAccelerators(@Nullable List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs> guestAccelerators) {
             this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
-
+        public Builder guestAccelerators(ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs... guestAccelerators) {
+            return guestAccelerators(List.of(guestAccelerators));
+        }
         public Builder localSsds(@Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
-
         public Builder localSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs> localSsds) {
             this.localSsds = Output.ofNullable(localSsds);
             return this;
         }
-
+        public Builder localSsds(ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs... localSsds) {
+            return localSsds(List.of(localSsds));
+        }
         public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
-
         public Builder machineType(String machineType) {
             this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
-        }
-        public ReservationSpecificReservationInstancePropertiesGetArgs build() {
+        }        public ReservationSpecificReservationInstancePropertiesGetArgs build() {
             return new ReservationSpecificReservationInstancePropertiesGetArgs(guestAccelerators, localSsds, machineType, minCpuPlatform);
         }
     }

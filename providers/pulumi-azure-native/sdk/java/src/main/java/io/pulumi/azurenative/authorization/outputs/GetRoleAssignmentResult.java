@@ -279,77 +279,62 @@ public final class GetRoleAssignmentResult {
             this.condition = condition;
             return this;
         }
-
         public Builder conditionVersion(@Nullable String conditionVersion) {
             this.conditionVersion = conditionVersion;
             return this;
         }
-
         public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
-
         public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
-
         public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalType(@Nullable String principalType) {
             this.principalType = principalType;
             return this;
         }
-
         public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }
-
         public Builder updatedOn(String updatedOn) {
             this.updatedOn = Objects.requireNonNull(updatedOn);
             return this;
-        }
-        public GetRoleAssignmentResult build() {
+        }        public GetRoleAssignmentResult build() {
             return new GetRoleAssignmentResult(condition, conditionVersion, createdBy, createdOn, delegatedManagedIdentityResourceId, description, id, name, principalId, principalType, roleDefinitionId, scope, type, updatedBy, updatedOn);
         }
     }

@@ -267,72 +267,58 @@ public final class GetEntryResult {
             this.bigqueryDateShardedSpec = Objects.requireNonNull(bigqueryDateShardedSpec);
             return this;
         }
-
         public Builder bigqueryTableSpec(GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse bigqueryTableSpec) {
             this.bigqueryTableSpec = Objects.requireNonNull(bigqueryTableSpec);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder gcsFilesetSpec(GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse gcsFilesetSpec) {
             this.gcsFilesetSpec = Objects.requireNonNull(gcsFilesetSpec);
             return this;
         }
-
         public Builder integratedSystem(String integratedSystem) {
             this.integratedSystem = Objects.requireNonNull(integratedSystem);
             return this;
         }
-
         public Builder linkedResource(String linkedResource) {
             this.linkedResource = Objects.requireNonNull(linkedResource);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder schema(GoogleCloudDatacatalogV1beta1SchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public Builder sourceSystemTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse sourceSystemTimestamps) {
             this.sourceSystemTimestamps = Objects.requireNonNull(sourceSystemTimestamps);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder usageSignal(GoogleCloudDatacatalogV1beta1UsageSignalResponse usageSignal) {
             this.usageSignal = Objects.requireNonNull(usageSignal);
             return this;
         }
-
         public Builder userSpecifiedSystem(String userSpecifiedSystem) {
             this.userSpecifiedSystem = Objects.requireNonNull(userSpecifiedSystem);
             return this;
         }
-
         public Builder userSpecifiedType(String userSpecifiedType) {
             this.userSpecifiedType = Objects.requireNonNull(userSpecifiedType);
             return this;
-        }
-        public GetEntryResult build() {
+        }        public GetEntryResult build() {
             return new GetEntryResult(bigqueryDateShardedSpec, bigqueryTableSpec, description, displayName, gcsFilesetSpec, integratedSystem, linkedResource, name, schema, sourceSystemTimestamps, type, usageSignal, userSpecifiedSystem, userSpecifiedType);
         }
     }

@@ -71,12 +71,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
-
         public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
-        }
-        public PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification build() {
+        }        public PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification build() {
             return new PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification(predefinedMetricType, resourceLabel);
         }
     }

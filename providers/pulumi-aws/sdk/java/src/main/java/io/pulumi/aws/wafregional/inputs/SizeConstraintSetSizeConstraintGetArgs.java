@@ -115,42 +115,34 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
-
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
-
         public Builder fieldToMatch(Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
-
         public Builder fieldToMatch(SizeConstraintSetSizeConstraintFieldToMatchGetArgs fieldToMatch) {
             this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
-
         public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public Builder size(Integer size) {
             this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
-
         public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
-
         public Builder textTransformation(String textTransformation) {
             this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
-        }
-        public SizeConstraintSetSizeConstraintGetArgs build() {
+        }        public SizeConstraintSetSizeConstraintGetArgs build() {
             return new SizeConstraintSetSizeConstraintGetArgs(comparisonOperator, fieldToMatch, size, textTransformation);
         }
     }

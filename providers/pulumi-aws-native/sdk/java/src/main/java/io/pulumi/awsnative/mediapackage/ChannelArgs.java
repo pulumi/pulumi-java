@@ -109,42 +109,37 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder egressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
-
         public Builder egressAccessLogs(@Nullable ChannelLogConfigurationArgs egressAccessLogs) {
             this.egressAccessLogs = Output.ofNullable(egressAccessLogs);
             return this;
         }
-
         public Builder ingressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs) {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
         }
-
         public Builder ingressAccessLogs(@Nullable ChannelLogConfigurationArgs ingressAccessLogs) {
             this.ingressAccessLogs = Output.ofNullable(ingressAccessLogs);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ChannelArgs build() {
+        public Builder tags(ChannelTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ChannelArgs build() {
             return new ChannelArgs(description, egressAccessLogs, ingressAccessLogs, tags);
         }
     }

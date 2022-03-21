@@ -56,12 +56,10 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationArgs exte
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
-        }
-        public BucketReplicationConfigRuleExistingObjectReplicationArgs build() {
+        }        public BucketReplicationConfigRuleExistingObjectReplicationArgs build() {
             return new BucketReplicationConfigRuleExistingObjectReplicationArgs(status);
         }
     }

@@ -90,22 +90,18 @@ public final class PipelineMath extends io.pulumi.resources.InvokeArgs {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder math(String math) {
             this.math = Objects.requireNonNull(math);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = next;
             return this;
-        }
-        public PipelineMath build() {
+        }        public PipelineMath build() {
             return new PipelineMath(attribute, math, name, next);
         }
     }

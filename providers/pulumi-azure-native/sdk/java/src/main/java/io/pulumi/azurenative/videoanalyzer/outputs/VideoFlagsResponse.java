@@ -85,17 +85,14 @@ public final class VideoFlagsResponse {
             this.canStream = Objects.requireNonNull(canStream);
             return this;
         }
-
         public Builder hasData(Boolean hasData) {
             this.hasData = Objects.requireNonNull(hasData);
             return this;
         }
-
         public Builder isRecording(Boolean isRecording) {
             this.isRecording = Objects.requireNonNull(isRecording);
             return this;
-        }
-        public VideoFlagsResponse build() {
+        }        public VideoFlagsResponse build() {
             return new VideoFlagsResponse(canStream, hasData, isRecording);
         }
     }

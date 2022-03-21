@@ -93,17 +93,14 @@ public final class ServiceRegistryResourceRequestsResponse extends io.pulumi.res
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
-
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
-
         public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
-        }
-        public ServiceRegistryResourceRequestsResponse build() {
+        }        public ServiceRegistryResourceRequestsResponse build() {
             return new ServiceRegistryResourceRequestsResponse(cpu, instanceCount, memory);
         }
     }

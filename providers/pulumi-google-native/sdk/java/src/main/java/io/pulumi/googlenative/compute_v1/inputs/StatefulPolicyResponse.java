@@ -50,8 +50,7 @@ public final class StatefulPolicyResponse extends io.pulumi.resources.InvokeArgs
         public Builder preservedState(StatefulPolicyPreservedStateResponse preservedState) {
             this.preservedState = Objects.requireNonNull(preservedState);
             return this;
-        }
-        public StatefulPolicyResponse build() {
+        }        public StatefulPolicyResponse build() {
             return new StatefulPolicyResponse(preservedState);
         }
     }

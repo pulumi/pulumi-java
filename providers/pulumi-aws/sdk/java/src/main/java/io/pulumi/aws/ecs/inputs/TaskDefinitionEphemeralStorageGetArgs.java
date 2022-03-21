@@ -56,12 +56,10 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends io.pulumi.resou
             this.sizeInGib = Objects.requireNonNull(sizeInGib);
             return this;
         }
-
         public Builder sizeInGib(Integer sizeInGib) {
             this.sizeInGib = Output.of(Objects.requireNonNull(sizeInGib));
             return this;
-        }
-        public TaskDefinitionEphemeralStorageGetArgs build() {
+        }        public TaskDefinitionEphemeralStorageGetArgs build() {
             return new TaskDefinitionEphemeralStorageGetArgs(sizeInGib);
         }
     }

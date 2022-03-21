@@ -72,12 +72,10 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends io.pulumi.r
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayLearnedRoutesArgs build() {
+        }        public GetVirtualNetworkGatewayLearnedRoutesArgs build() {
             return new GetVirtualNetworkGatewayLearnedRoutesArgs(resourceGroupName, virtualNetworkGatewayName);
         }
     }

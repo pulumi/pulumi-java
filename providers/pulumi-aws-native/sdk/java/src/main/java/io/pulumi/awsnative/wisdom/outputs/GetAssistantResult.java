@@ -55,12 +55,10 @@ public final class GetAssistantResult {
             this.assistantArn = assistantArn;
             return this;
         }
-
         public Builder assistantId(@Nullable String assistantId) {
             this.assistantId = assistantId;
             return this;
-        }
-        public GetAssistantResult build() {
+        }        public GetAssistantResult build() {
             return new GetAssistantResult(assistantArn, assistantId);
         }
     }

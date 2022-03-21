@@ -51,8 +51,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField build() {
+        }        public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField(name);
         }
     }

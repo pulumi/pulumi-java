@@ -164,72 +164,73 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
             this.applicationType = applicationType;
             return this;
         }
-
         public Builder applicationType(@Nullable String applicationType) {
             this.applicationType = Output.ofNullable(applicationType);
             return this;
         }
-
         public Builder computeProfile(@Nullable Output<ComputeProfileArgs> computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
-
         public Builder computeProfile(@Nullable ComputeProfileArgs computeProfile) {
             this.computeProfile = Output.ofNullable(computeProfile);
             return this;
         }
-
         public Builder errors(@Nullable Output<List<ErrorsArgs>> errors) {
             this.errors = errors;
             return this;
         }
-
         public Builder errors(@Nullable List<ErrorsArgs> errors) {
             this.errors = Output.ofNullable(errors);
             return this;
         }
-
+        public Builder errors(ErrorsArgs... errors) {
+            return errors(List.of(errors));
+        }
         public Builder httpsEndpoints(@Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints) {
             this.httpsEndpoints = httpsEndpoints;
             return this;
         }
-
         public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointArgs> httpsEndpoints) {
             this.httpsEndpoints = Output.ofNullable(httpsEndpoints);
             return this;
         }
-
+        public Builder httpsEndpoints(ApplicationGetHttpsEndpointArgs... httpsEndpoints) {
+            return httpsEndpoints(List.of(httpsEndpoints));
+        }
         public Builder installScriptActions(@Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions) {
             this.installScriptActions = installScriptActions;
             return this;
         }
-
         public Builder installScriptActions(@Nullable List<RuntimeScriptActionArgs> installScriptActions) {
             this.installScriptActions = Output.ofNullable(installScriptActions);
             return this;
         }
-
+        public Builder installScriptActions(RuntimeScriptActionArgs... installScriptActions) {
+            return installScriptActions(List.of(installScriptActions));
+        }
         public Builder sshEndpoints(@Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints) {
             this.sshEndpoints = sshEndpoints;
             return this;
         }
-
         public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointArgs> sshEndpoints) {
             this.sshEndpoints = Output.ofNullable(sshEndpoints);
             return this;
         }
-
+        public Builder sshEndpoints(ApplicationGetEndpointArgs... sshEndpoints) {
+            return sshEndpoints(List.of(sshEndpoints));
+        }
         public Builder uninstallScriptActions(@Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions) {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-
         public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionArgs> uninstallScriptActions) {
             this.uninstallScriptActions = Output.ofNullable(uninstallScriptActions);
             return this;
         }
-        public ApplicationPropertiesArgs build() {
+        public Builder uninstallScriptActions(RuntimeScriptActionArgs... uninstallScriptActions) {
+            return uninstallScriptActions(List.of(uninstallScriptActions));
+        }        public ApplicationPropertiesArgs build() {
             return new ApplicationPropertiesArgs(applicationType, computeProfile, errors, httpsEndpoints, installScriptActions, sshEndpoints, uninstallScriptActions);
         }
     }

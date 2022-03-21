@@ -151,37 +151,30 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse {
             this.cost = Objects.requireNonNull(cost);
             return this;
         }
-
         public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
-
         public Builder originalPrice(Double originalPrice) {
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
-
         public Builder price(Double price) {
             this.price = Objects.requireNonNull(price);
             return this;
         }
-
         public Builder priceEffectiveTime(String priceEffectiveTime) {
             this.priceEffectiveTime = Objects.requireNonNull(priceEffectiveTime);
             return this;
         }
-
         public Builder priceExpireTime(String priceExpireTime) {
             this.priceExpireTime = Objects.requireNonNull(priceExpireTime);
             return this;
         }
-
         public Builder priceRange(GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
-        }
-        public GoogleCloudRetailV2alphaPriceInfoResponse build() {
+        }        public GoogleCloudRetailV2alphaPriceInfoResponse build() {
             return new GoogleCloudRetailV2alphaPriceInfoResponse(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime, priceRange);
         }
     }

@@ -61,12 +61,10 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
             return this;
         }
-
         public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
             this.userServiceAccountMapping = Output.of(Objects.requireNonNull(userServiceAccountMapping));
             return this;
-        }
-        public IdentityConfigArgs build() {
+        }        public IdentityConfigArgs build() {
             return new IdentityConfigArgs(userServiceAccountMapping);
         }
     }

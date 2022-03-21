@@ -87,17 +87,14 @@ public final class AssignmentPrincipalResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
             this.principalMetadata = principalMetadata;
             return this;
         }
-
         public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
-        }
-        public AssignmentPrincipalResponse build() {
+        }        public AssignmentPrincipalResponse build() {
             return new AssignmentPrincipalResponse(principalId, principalMetadata, principalType);
         }
     }

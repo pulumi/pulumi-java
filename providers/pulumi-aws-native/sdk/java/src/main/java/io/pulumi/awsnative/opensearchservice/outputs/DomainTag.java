@@ -53,12 +53,10 @@ public final class DomainTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public DomainTag build() {
+        }        public DomainTag build() {
             return new DomainTag(key, value);
         }
     }

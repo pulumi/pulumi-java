@@ -136,32 +136,29 @@ public final class GetEnvironmentResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder testCasesConfig(GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig) {
             this.testCasesConfig = Objects.requireNonNull(testCasesConfig);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public Builder versionConfigs(List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs) {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
-        public GetEnvironmentResult build() {
+        public Builder versionConfigs(GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse... versionConfigs) {
+            return versionConfigs(List.of(versionConfigs));
+        }        public GetEnvironmentResult build() {
             return new GetEnvironmentResult(description, displayName, name, testCasesConfig, updateTime, versionConfigs);
         }
     }

@@ -105,52 +105,42 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
             this.comment = comment;
             return this;
         }
-
         public Builder comment(@Nullable String comment) {
             this.comment = Output.ofNullable(comment);
             return this;
         }
-
         public Builder corsConfig(@Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig) {
             this.corsConfig = corsConfig;
             return this;
         }
-
         public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfigArgs corsConfig) {
             this.corsConfig = Output.ofNullable(corsConfig);
             return this;
         }
-
         public Builder customHeadersConfig(@Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig) {
             this.customHeadersConfig = customHeadersConfig;
             return this;
         }
-
         public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfigArgs customHeadersConfig) {
             this.customHeadersConfig = Output.ofNullable(customHeadersConfig);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder securityHeadersConfig(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig) {
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
-
         public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfigArgs securityHeadersConfig) {
             this.securityHeadersConfig = Output.ofNullable(securityHeadersConfig);
             return this;
-        }
-        public ResponseHeadersPolicyConfigArgs build() {
+        }        public ResponseHeadersPolicyConfigArgs build() {
             return new ResponseHeadersPolicyConfigArgs(comment, corsConfig, customHeadersConfig, name, securityHeadersConfig);
         }
     }

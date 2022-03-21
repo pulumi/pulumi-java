@@ -80,12 +80,10 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
-
         public Builder target(Double target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public AutoscalerAutoscalingPolicyCpuUtilization build() {
+        }        public AutoscalerAutoscalingPolicyCpuUtilization build() {
             return new AutoscalerAutoscalingPolicyCpuUtilization(predictiveMethod, target);
         }
     }

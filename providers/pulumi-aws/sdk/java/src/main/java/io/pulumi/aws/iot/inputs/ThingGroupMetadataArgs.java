@@ -84,32 +84,29 @@ public final class ThingGroupMetadataArgs extends io.pulumi.resources.ResourceAr
             this.creationDate = creationDate;
             return this;
         }
-
         public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
-
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
-
         public Builder parentGroupName(@Nullable String parentGroupName) {
             this.parentGroupName = Output.ofNullable(parentGroupName);
             return this;
         }
-
         public Builder rootToParentGroups(@Nullable Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups) {
             this.rootToParentGroups = rootToParentGroups;
             return this;
         }
-
         public Builder rootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroupArgs> rootToParentGroups) {
             this.rootToParentGroups = Output.ofNullable(rootToParentGroups);
             return this;
         }
-        public ThingGroupMetadataArgs build() {
+        public Builder rootToParentGroups(ThingGroupMetadataRootToParentGroupArgs... rootToParentGroups) {
+            return rootToParentGroups(List.of(rootToParentGroups));
+        }        public ThingGroupMetadataArgs build() {
             return new ThingGroupMetadataArgs(creationDate, parentGroupName, rootToParentGroups);
         }
     }

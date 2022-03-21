@@ -119,27 +119,22 @@ public final class OpenIdConnectConfigResponse {
             this.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
-
         public Builder certificationUri(@Nullable String certificationUri) {
             this.certificationUri = certificationUri;
             return this;
         }
-
         public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
-
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
-
         public Builder wellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
-        }
-        public OpenIdConnectConfigResponse build() {
+        }        public OpenIdConnectConfigResponse build() {
             return new OpenIdConnectConfigResponse(authorizationEndpoint, certificationUri, issuer, tokenEndpoint, wellKnownOpenIdConfiguration);
         }
     }

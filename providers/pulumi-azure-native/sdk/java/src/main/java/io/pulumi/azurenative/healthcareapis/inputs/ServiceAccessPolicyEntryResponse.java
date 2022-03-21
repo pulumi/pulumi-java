@@ -58,8 +58,7 @@ public final class ServiceAccessPolicyEntryResponse extends io.pulumi.resources.
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
-        }
-        public ServiceAccessPolicyEntryResponse build() {
+        }        public ServiceAccessPolicyEntryResponse build() {
             return new ServiceAccessPolicyEntryResponse(objectId);
         }
     }

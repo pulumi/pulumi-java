@@ -61,12 +61,10 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
             this.applicationId = applicationId;
             return this;
         }
-
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Output.ofNullable(applicationId);
             return this;
-        }
-        public ManagementLockOwnerArgs build() {
+        }        public ManagementLockOwnerArgs build() {
             return new ManagementLockOwnerArgs(applicationId);
         }
     }

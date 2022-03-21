@@ -61,12 +61,10 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
             this.vpc = vpc;
             return this;
         }
-
         public Builder vpc(@Nullable String vpc) {
             this.vpc = Output.ofNullable(vpc);
             return this;
-        }
-        public VpcPeeringConnectivityArgs build() {
+        }        public VpcPeeringConnectivityArgs build() {
             return new VpcPeeringConnectivityArgs(vpc);
         }
     }

@@ -71,12 +71,13 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
             this.allowAllPackageNames = Objects.requireNonNull(allowAllPackageNames);
             return this;
         }
-
         public Builder allowedPackageNames(List<String> allowedPackageNames) {
             this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
             return this;
         }
-        public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse build() {
+        public Builder allowedPackageNames(String... allowedPackageNames) {
+            return allowedPackageNames(List.of(allowedPackageNames));
+        }        public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(allowAllPackageNames, allowedPackageNames);
         }
     }

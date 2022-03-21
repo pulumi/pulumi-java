@@ -72,12 +72,10 @@ public final class InstanceState {
             this.code = code;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public InstanceState build() {
+        }        public InstanceState build() {
             return new InstanceState(code, name);
         }
     }

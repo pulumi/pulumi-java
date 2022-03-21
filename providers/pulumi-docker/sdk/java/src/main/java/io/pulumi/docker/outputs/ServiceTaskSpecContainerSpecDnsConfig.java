@@ -63,17 +63,23 @@ public final class ServiceTaskSpecContainerSpecDnsConfig {
             this.nameservers = Objects.requireNonNull(nameservers);
             return this;
         }
-
+        public Builder nameservers(String... nameservers) {
+            return nameservers(List.of(nameservers));
+        }
         public Builder options(@Nullable List<String> options) {
             this.options = options;
             return this;
         }
-
+        public Builder options(String... options) {
+            return options(List.of(options));
+        }
         public Builder searches(@Nullable List<String> searches) {
             this.searches = searches;
             return this;
         }
-        public ServiceTaskSpecContainerSpecDnsConfig build() {
+        public Builder searches(String... searches) {
+            return searches(List.of(searches));
+        }        public ServiceTaskSpecContainerSpecDnsConfig build() {
             return new ServiceTaskSpecContainerSpecDnsConfig(nameservers, options, searches);
         }
     }

@@ -51,8 +51,7 @@ public final class ResourceGroupPropertiesResponse {
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
-        }
-        public ResourceGroupPropertiesResponse build() {
+        }        public ResourceGroupPropertiesResponse build() {
             return new ResourceGroupPropertiesResponse(provisioningState);
         }
     }

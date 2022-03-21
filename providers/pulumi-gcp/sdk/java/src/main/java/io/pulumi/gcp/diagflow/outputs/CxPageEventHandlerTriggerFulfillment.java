@@ -108,22 +108,21 @@ public final class CxPageEventHandlerTriggerFulfillment {
             this.messages = messages;
             return this;
         }
-
+        public Builder messages(CxPageEventHandlerTriggerFulfillmentMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder webhook(@Nullable String webhook) {
             this.webhook = webhook;
             return this;
-        }
-        public CxPageEventHandlerTriggerFulfillment build() {
+        }        public CxPageEventHandlerTriggerFulfillment build() {
             return new CxPageEventHandlerTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }
     }

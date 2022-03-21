@@ -98,17 +98,17 @@ public final class BotClarificationPrompt {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
-
         public Builder messages(List<BotClarificationPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
+        public Builder messages(BotClarificationPromptMessage... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
-        }
-        public BotClarificationPrompt build() {
+        }        public BotClarificationPrompt build() {
             return new BotClarificationPrompt(maxAttempts, messages, responseCard);
         }
     }

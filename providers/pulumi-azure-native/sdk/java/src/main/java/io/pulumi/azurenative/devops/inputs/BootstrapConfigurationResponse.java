@@ -79,12 +79,10 @@ public final class BootstrapConfigurationResponse extends io.pulumi.resources.In
             this.sourceRepository = sourceRepository;
             return this;
         }
-
         public Builder template(PipelineTemplateResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
-        }
-        public BootstrapConfigurationResponse build() {
+        }        public BootstrapConfigurationResponse build() {
             return new BootstrapConfigurationResponse(sourceRepository, template);
         }
     }

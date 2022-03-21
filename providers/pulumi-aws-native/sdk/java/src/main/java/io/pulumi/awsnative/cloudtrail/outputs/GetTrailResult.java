@@ -276,82 +276,75 @@ public final class GetTrailResult {
             this.arn = arn;
             return this;
         }
-
         public Builder cloudWatchLogsLogGroupArn(@Nullable String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
             return this;
         }
-
         public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
-
         public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
             this.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
-
         public Builder eventSelectors(@Nullable List<TrailEventSelector> eventSelectors) {
             this.eventSelectors = eventSelectors;
             return this;
         }
-
+        public Builder eventSelectors(TrailEventSelector... eventSelectors) {
+            return eventSelectors(List.of(eventSelectors));
+        }
         public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
-
         public Builder insightSelectors(@Nullable List<TrailInsightSelector> insightSelectors) {
             this.insightSelectors = insightSelectors;
             return this;
         }
-
+        public Builder insightSelectors(TrailInsightSelector... insightSelectors) {
+            return insightSelectors(List.of(insightSelectors));
+        }
         public Builder isLogging(@Nullable Boolean isLogging) {
             this.isLogging = isLogging;
             return this;
         }
-
         public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
             this.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
-
         public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
             this.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
-
         public Builder kMSKeyId(@Nullable String kMSKeyId) {
             this.kMSKeyId = kMSKeyId;
             return this;
         }
-
         public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
-
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
-
         public Builder snsTopicName(@Nullable String snsTopicName) {
             this.snsTopicName = snsTopicName;
             return this;
         }
-
         public Builder tags(@Nullable List<TrailTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetTrailResult build() {
+        public Builder tags(TrailTag... tags) {
+            return tags(List.of(tags));
+        }        public GetTrailResult build() {
             return new GetTrailResult(arn, cloudWatchLogsLogGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, eventSelectors, includeGlobalServiceEvents, insightSelectors, isLogging, isMultiRegionTrail, isOrganizationTrail, kMSKeyId, s3BucketName, s3KeyPrefix, snsTopicArn, snsTopicName, tags);
         }
     }

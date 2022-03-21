@@ -68,22 +68,21 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
             this.mode = mode;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = Output.ofNullable(mode);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ServiceEndpointSpecPortGetArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public ServiceEndpointSpecGetArgs build() {
+        public Builder ports(ServiceEndpointSpecPortGetArgs... ports) {
+            return ports(List.of(ports));
+        }        public ServiceEndpointSpecGetArgs build() {
             return new ServiceEndpointSpecGetArgs(mode, ports);
         }
     }

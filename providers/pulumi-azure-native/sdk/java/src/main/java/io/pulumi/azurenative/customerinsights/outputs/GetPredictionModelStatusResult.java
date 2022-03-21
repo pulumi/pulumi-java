@@ -214,57 +214,46 @@ public final class GetPredictionModelStatusResult {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public Builder modelVersion(String modelVersion) {
             this.modelVersion = Objects.requireNonNull(modelVersion);
             return this;
         }
-
         public Builder predictionGuidId(String predictionGuidId) {
             this.predictionGuidId = Objects.requireNonNull(predictionGuidId);
             return this;
         }
-
         public Builder predictionName(String predictionName) {
             this.predictionName = Objects.requireNonNull(predictionName);
             return this;
         }
-
         public Builder signalsUsed(Integer signalsUsed) {
             this.signalsUsed = Objects.requireNonNull(signalsUsed);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder testSetCount(Integer testSetCount) {
             this.testSetCount = Objects.requireNonNull(testSetCount);
             return this;
         }
-
         public Builder trainingAccuracy(Integer trainingAccuracy) {
             this.trainingAccuracy = Objects.requireNonNull(trainingAccuracy);
             return this;
         }
-
         public Builder trainingSetCount(Integer trainingSetCount) {
             this.trainingSetCount = Objects.requireNonNull(trainingSetCount);
             return this;
         }
-
         public Builder validationSetCount(Integer validationSetCount) {
             this.validationSetCount = Objects.requireNonNull(validationSetCount);
             return this;
-        }
-        public GetPredictionModelStatusResult build() {
+        }        public GetPredictionModelStatusResult build() {
             return new GetPredictionModelStatusResult(message, modelVersion, predictionGuidId, predictionName, signalsUsed, status, tenantId, testSetCount, trainingAccuracy, trainingSetCount, validationSetCount);
         }
     }

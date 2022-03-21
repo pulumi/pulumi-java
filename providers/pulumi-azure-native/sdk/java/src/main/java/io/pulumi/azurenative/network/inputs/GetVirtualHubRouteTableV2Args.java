@@ -88,17 +88,14 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder routeTableName(String routeTableName) {
             this.routeTableName = Objects.requireNonNull(routeTableName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
-        }
-        public GetVirtualHubRouteTableV2Args build() {
+        }        public GetVirtualHubRouteTableV2Args build() {
             return new GetVirtualHubRouteTableV2Args(resourceGroupName, routeTableName, virtualHubName);
         }
     }

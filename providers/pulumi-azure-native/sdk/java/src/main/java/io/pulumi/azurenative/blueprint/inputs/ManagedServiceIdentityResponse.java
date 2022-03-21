@@ -112,22 +112,18 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
             this.principalId = principalId;
             return this;
         }
-
         public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public ManagedServiceIdentityResponse build() {
+        }        public ManagedServiceIdentityResponse build() {
             return new ManagedServiceIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

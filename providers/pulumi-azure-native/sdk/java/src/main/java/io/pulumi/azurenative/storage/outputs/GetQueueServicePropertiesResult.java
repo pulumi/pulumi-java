@@ -104,22 +104,18 @@ public final class GetQueueServicePropertiesResult {
             this.cors = cors;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetQueueServicePropertiesResult build() {
+        }        public GetQueueServicePropertiesResult build() {
             return new GetQueueServicePropertiesResult(cors, id, name, type);
         }
     }

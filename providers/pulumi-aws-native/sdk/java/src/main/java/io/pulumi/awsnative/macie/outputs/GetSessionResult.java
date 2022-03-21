@@ -105,22 +105,18 @@ public final class GetSessionResult {
             this.awsAccountId = awsAccountId;
             return this;
         }
-
         public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-
         public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
-
         public Builder status(@Nullable SessionStatus status) {
             this.status = status;
             return this;
-        }
-        public GetSessionResult build() {
+        }        public GetSessionResult build() {
             return new GetSessionResult(awsAccountId, findingPublishingFrequency, serviceRole, status);
         }
     }

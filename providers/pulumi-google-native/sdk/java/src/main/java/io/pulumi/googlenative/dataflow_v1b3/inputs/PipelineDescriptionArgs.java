@@ -97,32 +97,35 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
             this.displayData = displayData;
             return this;
         }
-
         public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
             this.displayData = Output.ofNullable(displayData);
             return this;
         }
-
+        public Builder displayData(DisplayDataArgs... displayData) {
+            return displayData(List.of(displayData));
+        }
         public Builder executionPipelineStage(@Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
             this.executionPipelineStage = executionPipelineStage;
             return this;
         }
-
         public Builder executionPipelineStage(@Nullable List<ExecutionStageSummaryArgs> executionPipelineStage) {
             this.executionPipelineStage = Output.ofNullable(executionPipelineStage);
             return this;
         }
-
+        public Builder executionPipelineStage(ExecutionStageSummaryArgs... executionPipelineStage) {
+            return executionPipelineStage(List.of(executionPipelineStage));
+        }
         public Builder originalPipelineTransform(@Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform) {
             this.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
-
         public Builder originalPipelineTransform(@Nullable List<TransformSummaryArgs> originalPipelineTransform) {
             this.originalPipelineTransform = Output.ofNullable(originalPipelineTransform);
             return this;
         }
-        public PipelineDescriptionArgs build() {
+        public Builder originalPipelineTransform(TransformSummaryArgs... originalPipelineTransform) {
+            return originalPipelineTransform(List.of(originalPipelineTransform));
+        }        public PipelineDescriptionArgs build() {
             return new PipelineDescriptionArgs(displayData, executionPipelineStage, originalPipelineTransform);
         }
     }

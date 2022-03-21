@@ -74,22 +74,18 @@ public final class ConfigurationProfileValidatorArgs extends io.pulumi.resources
             this.content = content;
             return this;
         }
-
         public Builder content(@Nullable String content) {
             this.content = Output.ofNullable(content);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ConfigurationProfileValidatorArgs build() {
+        }        public ConfigurationProfileValidatorArgs build() {
             return new ConfigurationProfileValidatorArgs(content, type);
         }
     }

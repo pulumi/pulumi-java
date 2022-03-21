@@ -45,8 +45,7 @@ public final class NotificationChannelSnsChannelConfig {
         public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
-        }
-        public NotificationChannelSnsChannelConfig build() {
+        }        public NotificationChannelSnsChannelConfig build() {
             return new NotificationChannelSnsChannelConfig(topicArn);
         }
     }

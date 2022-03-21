@@ -69,12 +69,10 @@ public final class GoogleAccountResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
-        }
-        public GoogleAccountResponse build() {
+        }        public GoogleAccountResponse build() {
             return new GoogleAccountResponse(password, username);
         }
     }

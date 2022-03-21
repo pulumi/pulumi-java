@@ -293,77 +293,68 @@ public final class AzureMLExecutePipelineActivityResponse extends io.pulumi.reso
             this.continueOnStepFailure = continueOnStepFailure;
             return this;
         }
-
         public Builder dataPathAssignments(@Nullable Object dataPathAssignments) {
             this.dataPathAssignments = dataPathAssignments;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder experimentName(@Nullable Object experimentName) {
             this.experimentName = experimentName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder mlParentRunId(@Nullable Object mlParentRunId) {
             this.mlParentRunId = mlParentRunId;
             return this;
         }
-
         public Builder mlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
             this.mlPipelineEndpointId = mlPipelineEndpointId;
             return this;
         }
-
         public Builder mlPipelineId(@Nullable Object mlPipelineId) {
             this.mlPipelineId = mlPipelineId;
             return this;
         }
-
         public Builder mlPipelineParameters(@Nullable Object mlPipelineParameters) {
             this.mlPipelineParameters = mlPipelineParameters;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
+        public Builder userProperties(UserPropertyResponse... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
-        }
-        public AzureMLExecutePipelineActivityResponse build() {
+        }        public AzureMLExecutePipelineActivityResponse build() {
             return new AzureMLExecutePipelineActivityResponse(continueOnStepFailure, dataPathAssignments, dependsOn, description, experimentName, linkedServiceName, mlParentRunId, mlPipelineEndpointId, mlPipelineId, mlPipelineParameters, name, policy, type, userProperties, version);
         }
     }

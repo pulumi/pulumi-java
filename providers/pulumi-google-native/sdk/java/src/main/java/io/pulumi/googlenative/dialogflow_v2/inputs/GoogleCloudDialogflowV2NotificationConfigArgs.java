@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowV2NotificationConfigArgs extends io.pulu
             this.messageFormat = messageFormat;
             return this;
         }
-
         public Builder messageFormat(@Nullable GoogleCloudDialogflowV2NotificationConfigMessageFormat messageFormat) {
             this.messageFormat = Output.ofNullable(messageFormat);
             return this;
         }
-
         public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
-
         public Builder topic(@Nullable String topic) {
             this.topic = Output.ofNullable(topic);
             return this;
-        }
-        public GoogleCloudDialogflowV2NotificationConfigArgs build() {
+        }        public GoogleCloudDialogflowV2NotificationConfigArgs build() {
             return new GoogleCloudDialogflowV2NotificationConfigArgs(messageFormat, topic);
         }
     }

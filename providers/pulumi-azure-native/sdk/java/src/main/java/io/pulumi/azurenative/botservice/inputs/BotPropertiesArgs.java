@@ -468,262 +468,213 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.allSettings = allSettings;
             return this;
         }
-
         public Builder allSettings(@Nullable Map<String,String> allSettings) {
             this.allSettings = Output.ofNullable(allSettings);
             return this;
         }
-
         public Builder appPasswordHint(@Nullable Output<String> appPasswordHint) {
             this.appPasswordHint = appPasswordHint;
             return this;
         }
-
         public Builder appPasswordHint(@Nullable String appPasswordHint) {
             this.appPasswordHint = Output.ofNullable(appPasswordHint);
             return this;
         }
-
         public Builder cmekKeyVaultUrl(@Nullable Output<String> cmekKeyVaultUrl) {
             this.cmekKeyVaultUrl = cmekKeyVaultUrl;
             return this;
         }
-
         public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
             this.cmekKeyVaultUrl = Output.ofNullable(cmekKeyVaultUrl);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder developerAppInsightKey(@Nullable Output<String> developerAppInsightKey) {
             this.developerAppInsightKey = developerAppInsightKey;
             return this;
         }
-
         public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
             this.developerAppInsightKey = Output.ofNullable(developerAppInsightKey);
             return this;
         }
-
         public Builder developerAppInsightsApiKey(@Nullable Output<String> developerAppInsightsApiKey) {
             this.developerAppInsightsApiKey = developerAppInsightsApiKey;
             return this;
         }
-
         public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
             this.developerAppInsightsApiKey = Output.ofNullable(developerAppInsightsApiKey);
             return this;
         }
-
         public Builder developerAppInsightsApplicationId(@Nullable Output<String> developerAppInsightsApplicationId) {
             this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
             return this;
         }
-
         public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
             this.developerAppInsightsApplicationId = Output.ofNullable(developerAppInsightsApplicationId);
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public Builder endpoint(String endpoint) {
             this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
-
         public Builder iconUrl(@Nullable Output<String> iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
-
         public Builder iconUrl(@Nullable String iconUrl) {
             this.iconUrl = Output.ofNullable(iconUrl);
             return this;
         }
-
         public Builder isCmekEnabled(@Nullable Output<Boolean> isCmekEnabled) {
             this.isCmekEnabled = isCmekEnabled;
             return this;
         }
-
         public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
             this.isCmekEnabled = Output.ofNullable(isCmekEnabled);
             return this;
         }
-
         public Builder isStreamingSupported(@Nullable Output<Boolean> isStreamingSupported) {
             this.isStreamingSupported = isStreamingSupported;
             return this;
         }
-
         public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
             this.isStreamingSupported = Output.ofNullable(isStreamingSupported);
             return this;
         }
-
         public Builder luisAppIds(@Nullable Output<List<String>> luisAppIds) {
             this.luisAppIds = luisAppIds;
             return this;
         }
-
         public Builder luisAppIds(@Nullable List<String> luisAppIds) {
             this.luisAppIds = Output.ofNullable(luisAppIds);
             return this;
         }
-
+        public Builder luisAppIds(String... luisAppIds) {
+            return luisAppIds(List.of(luisAppIds));
+        }
         public Builder luisKey(@Nullable Output<String> luisKey) {
             this.luisKey = luisKey;
             return this;
         }
-
         public Builder luisKey(@Nullable String luisKey) {
             this.luisKey = Output.ofNullable(luisKey);
             return this;
         }
-
         public Builder manifestUrl(@Nullable Output<String> manifestUrl) {
             this.manifestUrl = manifestUrl;
             return this;
         }
-
         public Builder manifestUrl(@Nullable String manifestUrl) {
             this.manifestUrl = Output.ofNullable(manifestUrl);
             return this;
         }
-
         public Builder msaAppId(Output<String> msaAppId) {
             this.msaAppId = Objects.requireNonNull(msaAppId);
             return this;
         }
-
         public Builder msaAppId(String msaAppId) {
             this.msaAppId = Output.of(Objects.requireNonNull(msaAppId));
             return this;
         }
-
         public Builder msaAppMSIResourceId(@Nullable Output<String> msaAppMSIResourceId) {
             this.msaAppMSIResourceId = msaAppMSIResourceId;
             return this;
         }
-
         public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
             this.msaAppMSIResourceId = Output.ofNullable(msaAppMSIResourceId);
             return this;
         }
-
         public Builder msaAppTenantId(@Nullable Output<String> msaAppTenantId) {
             this.msaAppTenantId = msaAppTenantId;
             return this;
         }
-
         public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
             this.msaAppTenantId = Output.ofNullable(msaAppTenantId);
             return this;
         }
-
         public Builder msaAppType(@Nullable Output<Either<String,MsaAppType>> msaAppType) {
             this.msaAppType = msaAppType;
             return this;
         }
-
         public Builder msaAppType(@Nullable Either<String,MsaAppType> msaAppType) {
             this.msaAppType = Output.ofNullable(msaAppType);
             return this;
         }
-
         public Builder openWithHint(@Nullable Output<String> openWithHint) {
             this.openWithHint = openWithHint;
             return this;
         }
-
         public Builder openWithHint(@Nullable String openWithHint) {
             this.openWithHint = Output.ofNullable(openWithHint);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public Builder publishingCredentials(@Nullable Output<String> publishingCredentials) {
             this.publishingCredentials = publishingCredentials;
             return this;
         }
-
         public Builder publishingCredentials(@Nullable String publishingCredentials) {
             this.publishingCredentials = Output.ofNullable(publishingCredentials);
             return this;
         }
-
         public Builder schemaTransformationVersion(@Nullable Output<String> schemaTransformationVersion) {
             this.schemaTransformationVersion = schemaTransformationVersion;
             return this;
         }
-
         public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
             this.schemaTransformationVersion = Output.ofNullable(schemaTransformationVersion);
             return this;
         }
-
         public Builder storageResourceId(@Nullable Output<String> storageResourceId) {
             this.storageResourceId = storageResourceId;
             return this;
         }
-
         public Builder storageResourceId(@Nullable String storageResourceId) {
             this.storageResourceId = Output.ofNullable(storageResourceId);
             return this;
-        }
-        public BotPropertiesArgs build() {
+        }        public BotPropertiesArgs build() {
             return new BotPropertiesArgs(allSettings, appPasswordHint, cmekKeyVaultUrl, description, developerAppInsightKey, developerAppInsightsApiKey, developerAppInsightsApplicationId, disableLocalAuth, displayName, endpoint, iconUrl, isCmekEnabled, isStreamingSupported, luisAppIds, luisKey, manifestUrl, msaAppId, msaAppMSIResourceId, msaAppTenantId, msaAppType, openWithHint, parameters, publicNetworkAccess, publishingCredentials, schemaTransformationVersion, storageResourceId);
         }
     }

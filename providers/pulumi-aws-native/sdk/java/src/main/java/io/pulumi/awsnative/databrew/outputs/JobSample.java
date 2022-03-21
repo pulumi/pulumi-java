@@ -56,12 +56,10 @@ public final class JobSample {
             this.mode = mode;
             return this;
         }
-
         public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
-        }
-        public JobSample build() {
+        }        public JobSample build() {
             return new JobSample(mode, size);
         }
     }

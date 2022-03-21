@@ -91,32 +91,26 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.responseModels = responseModels;
             return this;
         }
-
         public Builder responseModels(@Nullable Object responseModels) {
             this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
-
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
         public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public MethodResponseArgs build() {
+        }        public MethodResponseArgs build() {
             return new MethodResponseArgs(responseModels, responseParameters, statusCode);
         }
     }

@@ -56,12 +56,10 @@ public final class GatewayRouteSpecHttp2RouteActionTargetArgs extends io.pulumi.
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
-
         public Builder virtualService(GatewayRouteSpecHttp2RouteActionTargetVirtualServiceArgs virtualService) {
             this.virtualService = Output.of(Objects.requireNonNull(virtualService));
             return this;
-        }
-        public GatewayRouteSpecHttp2RouteActionTargetArgs build() {
+        }        public GatewayRouteSpecHttp2RouteActionTargetArgs build() {
             return new GatewayRouteSpecHttp2RouteActionTargetArgs(virtualService);
         }
     }

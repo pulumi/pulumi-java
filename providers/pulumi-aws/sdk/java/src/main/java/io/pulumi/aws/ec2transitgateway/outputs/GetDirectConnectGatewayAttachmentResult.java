@@ -98,27 +98,25 @@ public final class GetDirectConnectGatewayAttachmentResult {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
-
         public Builder filters(@Nullable List<GetDirectConnectGatewayAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
-
+        public Builder filters(GetDirectConnectGatewayAttachmentFilter... filters) {
+            return filters(List.of(filters));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
-        }
-        public GetDirectConnectGatewayAttachmentResult build() {
+        }        public GetDirectConnectGatewayAttachmentResult build() {
             return new GetDirectConnectGatewayAttachmentResult(dxGatewayId, filters, id, tags, transitGatewayId);
         }
     }

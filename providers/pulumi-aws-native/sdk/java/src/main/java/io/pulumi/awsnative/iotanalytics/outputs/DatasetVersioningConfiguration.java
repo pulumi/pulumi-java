@@ -56,12 +56,10 @@ public final class DatasetVersioningConfiguration {
             this.maxVersions = maxVersions;
             return this;
         }
-
         public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = unlimited;
             return this;
-        }
-        public DatasetVersioningConfiguration build() {
+        }        public DatasetVersioningConfiguration build() {
             return new DatasetVersioningConfiguration(maxVersions, unlimited);
         }
     }

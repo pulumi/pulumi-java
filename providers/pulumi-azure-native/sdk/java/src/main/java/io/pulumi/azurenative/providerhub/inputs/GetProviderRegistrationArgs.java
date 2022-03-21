@@ -54,8 +54,7 @@ public final class GetProviderRegistrationArgs extends io.pulumi.resources.Invok
         public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
-        }
-        public GetProviderRegistrationArgs build() {
+        }        public GetProviderRegistrationArgs build() {
             return new GetProviderRegistrationArgs(providerNamespace);
         }
     }

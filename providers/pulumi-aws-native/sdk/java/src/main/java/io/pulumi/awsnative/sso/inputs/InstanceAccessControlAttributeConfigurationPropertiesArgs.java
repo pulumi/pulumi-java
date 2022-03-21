@@ -57,12 +57,13 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }
-
         public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
             this.accessControlAttributes = Output.of(Objects.requireNonNull(accessControlAttributes));
             return this;
         }
-        public InstanceAccessControlAttributeConfigurationPropertiesArgs build() {
+        public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs... accessControlAttributes) {
+            return accessControlAttributes(List.of(accessControlAttributes));
+        }        public InstanceAccessControlAttributeConfigurationPropertiesArgs build() {
             return new InstanceAccessControlAttributeConfigurationPropertiesArgs(accessControlAttributes);
         }
     }

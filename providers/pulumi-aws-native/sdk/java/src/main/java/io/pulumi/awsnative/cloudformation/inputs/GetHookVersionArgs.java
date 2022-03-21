@@ -54,8 +54,7 @@ public final class GetHookVersionArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetHookVersionArgs build() {
+        }        public GetHookVersionArgs build() {
             return new GetHookVersionArgs(arn);
         }
     }

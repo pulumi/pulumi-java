@@ -74,22 +74,18 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
             this.datastoreName = datastoreName;
             return this;
         }
-
         public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
-
         public Builder relativePath(@Nullable Output<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
-
         public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = Output.ofNullable(relativePath);
             return this;
-        }
-        public DatasetCreateRequestDataPathArgs build() {
+        }        public DatasetCreateRequestDataPathArgs build() {
             return new DatasetCreateRequestDataPathArgs(datastoreName, relativePath);
         }
     }

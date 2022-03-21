@@ -88,17 +88,14 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
             this.recoveryPlanName = Objects.requireNonNull(recoveryPlanName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetReplicationRecoveryPlanArgs build() {
+        }        public GetReplicationRecoveryPlanArgs build() {
             return new GetReplicationRecoveryPlanArgs(recoveryPlanName, resourceGroupName, resourceName);
         }
     }

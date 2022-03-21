@@ -108,42 +108,34 @@ public final class DiskResourcePolicyAttachmentArgs extends io.pulumi.resources.
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
-
         public Builder disk(String disk) {
             this.disk = Output.of(Objects.requireNonNull(disk));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public DiskResourcePolicyAttachmentArgs build() {
+        }        public DiskResourcePolicyAttachmentArgs build() {
             return new DiskResourcePolicyAttachmentArgs(disk, name, project, zone);
         }
     }

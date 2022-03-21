@@ -292,152 +292,125 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
             this.admCredential = admCredential;
             return this;
         }
-
         public Builder admCredential(@Nullable AdmCredentialArgs admCredential) {
             this.admCredential = Output.ofNullable(admCredential);
             return this;
         }
-
         public Builder apnsCredential(@Nullable Output<ApnsCredentialArgs> apnsCredential) {
             this.apnsCredential = apnsCredential;
             return this;
         }
-
         public Builder apnsCredential(@Nullable ApnsCredentialArgs apnsCredential) {
             this.apnsCredential = Output.ofNullable(apnsCredential);
             return this;
         }
-
         public Builder authorizationRules(@Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules) {
             this.authorizationRules = authorizationRules;
             return this;
         }
-
         public Builder authorizationRules(@Nullable List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
             this.authorizationRules = Output.ofNullable(authorizationRules);
             return this;
         }
-
+        public Builder authorizationRules(SharedAccessAuthorizationRulePropertiesArgs... authorizationRules) {
+            return authorizationRules(List.of(authorizationRules));
+        }
         public Builder baiduCredential(@Nullable Output<BaiduCredentialArgs> baiduCredential) {
             this.baiduCredential = baiduCredential;
             return this;
         }
-
         public Builder baiduCredential(@Nullable BaiduCredentialArgs baiduCredential) {
             this.baiduCredential = Output.ofNullable(baiduCredential);
             return this;
         }
-
         public Builder gcmCredential(@Nullable Output<GcmCredentialArgs> gcmCredential) {
             this.gcmCredential = gcmCredential;
             return this;
         }
-
         public Builder gcmCredential(@Nullable GcmCredentialArgs gcmCredential) {
             this.gcmCredential = Output.ofNullable(gcmCredential);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder mpnsCredential(@Nullable Output<MpnsCredentialArgs> mpnsCredential) {
             this.mpnsCredential = mpnsCredential;
             return this;
         }
-
         public Builder mpnsCredential(@Nullable MpnsCredentialArgs mpnsCredential) {
             this.mpnsCredential = Output.ofNullable(mpnsCredential);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
-
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
-
         public Builder notificationHubName(@Nullable Output<String> notificationHubName) {
             this.notificationHubName = notificationHubName;
             return this;
         }
-
         public Builder notificationHubName(@Nullable String notificationHubName) {
             this.notificationHubName = Output.ofNullable(notificationHubName);
             return this;
         }
-
         public Builder registrationTtl(@Nullable Output<String> registrationTtl) {
             this.registrationTtl = registrationTtl;
             return this;
         }
-
         public Builder registrationTtl(@Nullable String registrationTtl) {
             this.registrationTtl = Output.ofNullable(registrationTtl);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder wnsCredential(@Nullable Output<WnsCredentialArgs> wnsCredential) {
             this.wnsCredential = wnsCredential;
             return this;
         }
-
         public Builder wnsCredential(@Nullable WnsCredentialArgs wnsCredential) {
             this.wnsCredential = Output.ofNullable(wnsCredential);
             return this;
-        }
-        public NotificationHubArgs build() {
+        }        public NotificationHubArgs build() {
             return new NotificationHubArgs(admCredential, apnsCredential, authorizationRules, baiduCredential, gcmCredential, location, mpnsCredential, name, namespaceName, notificationHubName, registrationTtl, resourceGroupName, sku, tags, wnsCredential);
         }
     }

@@ -76,22 +76,24 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsGetArgs extends i
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-
         public Builder onDemandSpecifications(@Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs> onDemandSpecifications) {
             this.onDemandSpecifications = Output.ofNullable(onDemandSpecifications);
             return this;
         }
-
+        public Builder onDemandSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs... onDemandSpecifications) {
+            return onDemandSpecifications(List.of(onDemandSpecifications));
+        }
         public Builder spotSpecifications(@Nullable Output<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
-
         public Builder spotSpecifications(@Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs> spotSpecifications) {
             this.spotSpecifications = Output.ofNullable(spotSpecifications);
             return this;
         }
-        public ClusterCoreInstanceFleetLaunchSpecificationsGetArgs build() {
+        public Builder spotSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs... spotSpecifications) {
+            return spotSpecifications(List.of(spotSpecifications));
+        }        public ClusterCoreInstanceFleetLaunchSpecificationsGetArgs build() {
             return new ClusterCoreInstanceFleetLaunchSpecificationsGetArgs(onDemandSpecifications, spotSpecifications);
         }
     }

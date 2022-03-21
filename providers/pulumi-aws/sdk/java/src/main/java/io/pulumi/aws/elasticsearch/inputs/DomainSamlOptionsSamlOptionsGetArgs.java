@@ -157,72 +157,58 @@ public final class DomainSamlOptionsSamlOptionsGetArgs extends io.pulumi.resourc
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder idp(@Nullable Output<DomainSamlOptionsSamlOptionsIdpGetArgs> idp) {
             this.idp = idp;
             return this;
         }
-
         public Builder idp(@Nullable DomainSamlOptionsSamlOptionsIdpGetArgs idp) {
             this.idp = Output.ofNullable(idp);
             return this;
         }
-
         public Builder masterBackendRole(@Nullable Output<String> masterBackendRole) {
             this.masterBackendRole = masterBackendRole;
             return this;
         }
-
         public Builder masterBackendRole(@Nullable String masterBackendRole) {
             this.masterBackendRole = Output.ofNullable(masterBackendRole);
             return this;
         }
-
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
-
         public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = Output.ofNullable(masterUserName);
             return this;
         }
-
         public Builder rolesKey(@Nullable Output<String> rolesKey) {
             this.rolesKey = rolesKey;
             return this;
         }
-
         public Builder rolesKey(@Nullable String rolesKey) {
             this.rolesKey = Output.ofNullable(rolesKey);
             return this;
         }
-
         public Builder sessionTimeoutMinutes(@Nullable Output<Integer> sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = sessionTimeoutMinutes;
             return this;
         }
-
         public Builder sessionTimeoutMinutes(@Nullable Integer sessionTimeoutMinutes) {
             this.sessionTimeoutMinutes = Output.ofNullable(sessionTimeoutMinutes);
             return this;
         }
-
         public Builder subjectKey(@Nullable Output<String> subjectKey) {
             this.subjectKey = subjectKey;
             return this;
         }
-
         public Builder subjectKey(@Nullable String subjectKey) {
             this.subjectKey = Output.ofNullable(subjectKey);
             return this;
-        }
-        public DomainSamlOptionsSamlOptionsGetArgs build() {
+        }        public DomainSamlOptionsSamlOptionsGetArgs build() {
             return new DomainSamlOptionsSamlOptionsGetArgs(enabled, idp, masterBackendRole, masterUserName, rolesKey, sessionTimeoutMinutes, subjectKey);
         }
     }

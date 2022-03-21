@@ -77,12 +77,10 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public MonitoredResourceResponse build() {
+        }        public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(labels, type);
         }
     }

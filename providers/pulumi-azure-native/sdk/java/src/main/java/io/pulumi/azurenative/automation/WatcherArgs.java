@@ -204,102 +204,82 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
-
         public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder executionFrequencyInSeconds(@Nullable Output<Double> executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
-
         public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = Output.ofNullable(executionFrequencyInSeconds);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder scriptName(@Nullable Output<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
-
         public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Output.ofNullable(scriptName);
             return this;
         }
-
         public Builder scriptParameters(@Nullable Output<Map<String,String>> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
-
         public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
             this.scriptParameters = Output.ofNullable(scriptParameters);
             return this;
         }
-
         public Builder scriptRunOn(@Nullable Output<String> scriptRunOn) {
             this.scriptRunOn = scriptRunOn;
             return this;
         }
-
         public Builder scriptRunOn(@Nullable String scriptRunOn) {
             this.scriptRunOn = Output.ofNullable(scriptRunOn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder watcherName(@Nullable Output<String> watcherName) {
             this.watcherName = watcherName;
             return this;
         }
-
         public Builder watcherName(@Nullable String watcherName) {
             this.watcherName = Output.ofNullable(watcherName);
             return this;
-        }
-        public WatcherArgs build() {
+        }        public WatcherArgs build() {
             return new WatcherArgs(automationAccountName, description, executionFrequencyInSeconds, location, resourceGroupName, scriptName, scriptParameters, scriptRunOn, tags, watcherName);
         }
     }

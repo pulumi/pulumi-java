@@ -62,12 +62,10 @@ public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceAr
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public EventChannelSourceArgs build() {
+        }        public EventChannelSourceArgs build() {
             return new EventChannelSourceArgs(source);
         }
     }

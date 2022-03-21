@@ -61,12 +61,10 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
             this.logAnalytics = logAnalytics;
             return this;
         }
-
         public Builder logAnalytics(@Nullable LogAnalyticsArgs logAnalytics) {
             this.logAnalytics = Output.ofNullable(logAnalytics);
             return this;
-        }
-        public ContainerGroupDiagnosticsArgs build() {
+        }        public ContainerGroupDiagnosticsArgs build() {
             return new ContainerGroupDiagnosticsArgs(logAnalytics);
         }
     }

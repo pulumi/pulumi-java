@@ -58,8 +58,7 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
         public Builder accessTime(String accessTime) {
             this.accessTime = Objects.requireNonNull(accessTime);
             return this;
-        }
-        public ConditionContextResponse build() {
+        }        public ConditionContextResponse build() {
             return new ConditionContextResponse(accessTime);
         }
     }

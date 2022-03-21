@@ -149,62 +149,50 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
             this.appProtocol = appProtocol;
             return this;
         }
-
         public Builder appProtocol(@Nullable String appProtocol) {
             this.appProtocol = Output.ofNullable(appProtocol);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder nodePort(@Nullable Output<Integer> nodePort) {
             this.nodePort = nodePort;
             return this;
         }
-
         public Builder nodePort(@Nullable Integer nodePort) {
             this.nodePort = Output.ofNullable(nodePort);
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
-
         public Builder protocol(@Nullable String protocol) {
             this.protocol = Output.ofNullable(protocol);
             return this;
         }
-
         public Builder targetPort(@Nullable Output<Either<Integer,String>> targetPort) {
             this.targetPort = targetPort;
             return this;
         }
-
         public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
             this.targetPort = Output.ofNullable(targetPort);
             return this;
-        }
-        public ServicePortArgs build() {
+        }        public ServicePortArgs build() {
             return new ServicePortArgs(appProtocol, name, nodePort, port, protocol, targetPort);
         }
     }

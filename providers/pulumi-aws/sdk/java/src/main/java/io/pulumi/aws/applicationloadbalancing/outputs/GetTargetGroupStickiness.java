@@ -71,22 +71,18 @@ public final class GetTargetGroupStickiness {
             this.cookieDuration = Objects.requireNonNull(cookieDuration);
             return this;
         }
-
         public Builder cookieName(String cookieName) {
             this.cookieName = Objects.requireNonNull(cookieName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetTargetGroupStickiness build() {
+        }        public GetTargetGroupStickiness build() {
             return new GetTargetGroupStickiness(cookieDuration, cookieName, enabled, type);
         }
     }

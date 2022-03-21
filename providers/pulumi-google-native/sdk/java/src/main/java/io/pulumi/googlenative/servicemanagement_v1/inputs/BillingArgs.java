@@ -62,12 +62,13 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
             this.consumerDestinations = consumerDestinations;
             return this;
         }
-
         public Builder consumerDestinations(@Nullable List<BillingDestinationArgs> consumerDestinations) {
             this.consumerDestinations = Output.ofNullable(consumerDestinations);
             return this;
         }
-        public BillingArgs build() {
+        public Builder consumerDestinations(BillingDestinationArgs... consumerDestinations) {
+            return consumerDestinations(List.of(consumerDestinations));
+        }        public BillingArgs build() {
             return new BillingArgs(consumerDestinations);
         }
     }

@@ -127,52 +127,42 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
             this.functionAppResourceId = Objects.requireNonNull(functionAppResourceId);
             return this;
         }
-
         public Builder functionAppResourceId(String functionAppResourceId) {
             this.functionAppResourceId = Output.of(Objects.requireNonNull(functionAppResourceId));
             return this;
         }
-
         public Builder functionName(Output<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
-
         public Builder functionName(String functionName) {
             this.functionName = Output.of(Objects.requireNonNull(functionName));
             return this;
         }
-
         public Builder httpTriggerUrl(Output<String> httpTriggerUrl) {
             this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl);
             return this;
         }
-
         public Builder httpTriggerUrl(String httpTriggerUrl) {
             this.httpTriggerUrl = Output.of(Objects.requireNonNull(httpTriggerUrl));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
-        }
-        public AzureFunctionReceiverArgs build() {
+        }        public AzureFunctionReceiverArgs build() {
             return new AzureFunctionReceiverArgs(functionAppResourceId, functionName, httpTriggerUrl, name, useCommonAlertSchema);
         }
     }

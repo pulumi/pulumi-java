@@ -104,22 +104,21 @@ public final class BqmlTrainingRunResponse {
             this.iterationResults = Objects.requireNonNull(iterationResults);
             return this;
         }
-
+        public Builder iterationResults(BqmlIterationResultResponse... iterationResults) {
+            return iterationResults(List.of(iterationResults));
+        }
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public Builder trainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
             this.trainingOptions = Objects.requireNonNull(trainingOptions);
             return this;
-        }
-        public BqmlTrainingRunResponse build() {
+        }        public BqmlTrainingRunResponse build() {
             return new BqmlTrainingRunResponse(iterationResults, startTime, state, trainingOptions);
         }
     }

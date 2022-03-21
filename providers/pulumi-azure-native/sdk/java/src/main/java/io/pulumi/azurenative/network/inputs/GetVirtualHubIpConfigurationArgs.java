@@ -88,17 +88,14 @@ public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.
             this.ipConfigName = Objects.requireNonNull(ipConfigName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
-        }
-        public GetVirtualHubIpConfigurationArgs build() {
+        }        public GetVirtualHubIpConfigurationArgs build() {
             return new GetVirtualHubIpConfigurationArgs(ipConfigName, resourceGroupName, virtualHubName);
         }
     }

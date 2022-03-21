@@ -140,62 +140,50 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
             this.eTag = eTag;
             return this;
         }
-
         public Builder eTag(@Nullable String eTag) {
             this.eTag = Output.ofNullable(eTag);
             return this;
         }
-
         public Builder identity(@Nullable Output<DppIdentityDetailsArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable DppIdentityDetailsArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceGuardsName(@Nullable Output<String> resourceGuardsName) {
             this.resourceGuardsName = resourceGuardsName;
             return this;
         }
-
         public Builder resourceGuardsName(@Nullable String resourceGuardsName) {
             this.resourceGuardsName = Output.ofNullable(resourceGuardsName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResourceGuardArgs build() {
+        }        public ResourceGuardArgs build() {
             return new ResourceGuardArgs(eTag, identity, location, resourceGroupName, resourceGuardsName, tags);
         }
     }

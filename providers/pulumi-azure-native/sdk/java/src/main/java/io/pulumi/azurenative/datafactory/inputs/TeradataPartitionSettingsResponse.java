@@ -94,17 +94,14 @@ public final class TeradataPartitionSettingsResponse extends io.pulumi.resources
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
-
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
-        }
-        public TeradataPartitionSettingsResponse build() {
+        }        public TeradataPartitionSettingsResponse build() {
             return new TeradataPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }
     }

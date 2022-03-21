@@ -53,8 +53,7 @@ public final class ClusterAddonsConfigConfigConnectorConfig {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ClusterAddonsConfigConfigConnectorConfig build() {
+        }        public ClusterAddonsConfigConfigConnectorConfig build() {
             return new ClusterAddonsConfigConfigConnectorConfig(enabled);
         }
     }

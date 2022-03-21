@@ -319,87 +319,82 @@ public final class DeploymentPropertiesExtendedResponse {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
-
         public Builder debugSetting(DebugSettingResponse debugSetting) {
             this.debugSetting = Objects.requireNonNull(debugSetting);
             return this;
         }
-
         public Builder dependencies(List<DependencyResponse> dependencies) {
             this.dependencies = Objects.requireNonNull(dependencies);
             return this;
         }
-
+        public Builder dependencies(DependencyResponse... dependencies) {
+            return dependencies(List.of(dependencies));
+        }
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder onErrorDeployment(OnErrorDeploymentExtendedResponse onErrorDeployment) {
             this.onErrorDeployment = Objects.requireNonNull(onErrorDeployment);
             return this;
         }
-
         public Builder outputResources(List<ResourceReferenceResponse> outputResources) {
             this.outputResources = Objects.requireNonNull(outputResources);
             return this;
         }
-
+        public Builder outputResources(ResourceReferenceResponse... outputResources) {
+            return outputResources(List.of(outputResources));
+        }
         public Builder outputs(Object outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
-
         public Builder parameters(Object parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public Builder parametersLink(ParametersLinkResponse parametersLink) {
             this.parametersLink = Objects.requireNonNull(parametersLink);
             return this;
         }
-
         public Builder providers(List<ProviderResponse> providers) {
             this.providers = Objects.requireNonNull(providers);
             return this;
         }
-
+        public Builder providers(ProviderResponse... providers) {
+            return providers(List.of(providers));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder templateHash(String templateHash) {
             this.templateHash = Objects.requireNonNull(templateHash);
             return this;
         }
-
         public Builder templateLink(TemplateLinkResponse templateLink) {
             this.templateLink = Objects.requireNonNull(templateLink);
             return this;
         }
-
         public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public Builder validatedResources(List<ResourceReferenceResponse> validatedResources) {
             this.validatedResources = Objects.requireNonNull(validatedResources);
             return this;
         }
-        public DeploymentPropertiesExtendedResponse build() {
+        public Builder validatedResources(ResourceReferenceResponse... validatedResources) {
+            return validatedResources(List.of(validatedResources));
+        }        public DeploymentPropertiesExtendedResponse build() {
             return new DeploymentPropertiesExtendedResponse(correlationId, debugSetting, dependencies, duration, error, mode, onErrorDeployment, outputResources, outputs, parameters, parametersLink, providers, provisioningState, templateHash, templateLink, timestamp, validatedResources);
         }
     }

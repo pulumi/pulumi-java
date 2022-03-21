@@ -80,22 +80,18 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends io.pulumi.res
             this.input = input;
             return this;
         }
-
         public Builder input(@Nullable GetTdeCertificatesSqlTaskInputArgs input) {
             this.input = Output.ofNullable(input);
             return this;
         }
-
         public Builder taskType(Output<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public Builder taskType(String taskType) {
             this.taskType = Output.of(Objects.requireNonNull(taskType));
             return this;
-        }
-        public GetTdeCertificatesSqlTaskPropertiesArgs build() {
+        }        public GetTdeCertificatesSqlTaskPropertiesArgs build() {
             return new GetTdeCertificatesSqlTaskPropertiesArgs(input, taskType);
         }
     }

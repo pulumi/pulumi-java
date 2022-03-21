@@ -106,42 +106,34 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
             this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn);
             return this;
         }
-
         public Builder customerGatewayArn(String customerGatewayArn) {
             this.customerGatewayArn = Output.of(Objects.requireNonNull(customerGatewayArn));
             return this;
         }
-
         public Builder deviceId(Output<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
-
         public Builder deviceId(String deviceId) {
             this.deviceId = Output.of(Objects.requireNonNull(deviceId));
             return this;
         }
-
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
-
         public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
-
         public Builder linkId(@Nullable Output<String> linkId) {
             this.linkId = linkId;
             return this;
         }
-
         public Builder linkId(@Nullable String linkId) {
             this.linkId = Output.ofNullable(linkId);
             return this;
-        }
-        public CustomerGatewayAssociationArgs build() {
+        }        public CustomerGatewayAssociationArgs build() {
             return new CustomerGatewayAssociationArgs(customerGatewayArn, deviceId, globalNetworkId, linkId);
         }
     }

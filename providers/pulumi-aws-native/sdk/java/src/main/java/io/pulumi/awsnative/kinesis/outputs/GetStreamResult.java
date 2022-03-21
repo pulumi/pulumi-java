@@ -140,32 +140,29 @@ public final class GetStreamResult {
             this.arn = arn;
             return this;
         }
-
         public Builder retentionPeriodHours(@Nullable Integer retentionPeriodHours) {
             this.retentionPeriodHours = retentionPeriodHours;
             return this;
         }
-
         public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = shardCount;
             return this;
         }
-
         public Builder streamEncryption(@Nullable StreamEncryption streamEncryption) {
             this.streamEncryption = streamEncryption;
             return this;
         }
-
         public Builder streamModeDetails(@Nullable StreamModeDetails streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
-
         public Builder tags(@Nullable List<StreamTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetStreamResult build() {
+        public Builder tags(StreamTag... tags) {
+            return tags(List.of(tags));
+        }        public GetStreamResult build() {
             return new GetStreamResult(arn, retentionPeriodHours, shardCount, streamEncryption, streamModeDetails, tags);
         }
     }

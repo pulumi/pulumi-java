@@ -62,12 +62,13 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
             this.conditions = conditions;
             return this;
         }
-
         public Builder conditions(@Nullable List<FlowSchemaConditionArgs> conditions) {
             this.conditions = Output.ofNullable(conditions);
             return this;
         }
-        public FlowSchemaStatusArgs build() {
+        public Builder conditions(FlowSchemaConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }        public FlowSchemaStatusArgs build() {
             return new FlowSchemaStatusArgs(conditions);
         }
     }

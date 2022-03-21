@@ -80,22 +80,21 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
             this.actions = actions;
             return this;
         }
-
         public Builder actions(@Nullable List<String> actions) {
             this.actions = Output.ofNullable(actions);
             return this;
         }
-
+        public Builder actions(String... actions) {
+            return actions(List.of(actions));
+        }
         public Builder resource(@Nullable Output<PrivilegeResourceArgs> resource) {
             this.resource = resource;
             return this;
         }
-
         public Builder resource(@Nullable PrivilegeResourceArgs resource) {
             this.resource = Output.ofNullable(resource);
             return this;
-        }
-        public PrivilegeArgs build() {
+        }        public PrivilegeArgs build() {
             return new PrivilegeArgs(actions, resource);
         }
     }

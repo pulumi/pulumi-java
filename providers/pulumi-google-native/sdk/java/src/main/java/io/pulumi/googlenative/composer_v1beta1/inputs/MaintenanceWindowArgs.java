@@ -93,32 +93,26 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
-
         public Builder recurrence(Output<String> recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
-
         public Builder recurrence(String recurrence) {
             this.recurrence = Output.of(Objects.requireNonNull(recurrence));
             return this;
         }
-
         public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public MaintenanceWindowArgs build() {
+        }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(endTime, recurrence, startTime);
         }
     }

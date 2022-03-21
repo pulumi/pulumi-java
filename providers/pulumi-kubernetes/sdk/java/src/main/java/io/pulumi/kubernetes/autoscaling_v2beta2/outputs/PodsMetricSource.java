@@ -70,12 +70,10 @@ public final class PodsMetricSource {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
-        }
-        public PodsMetricSource build() {
+        }        public PodsMetricSource build() {
             return new PodsMetricSource(metric, target);
         }
     }

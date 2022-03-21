@@ -96,32 +96,29 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
             this.hostname = hostname;
             return this;
         }
-
         public Builder hostname(@Nullable String hostname) {
             this.hostname = Output.ofNullable(hostname);
             return this;
         }
-
         public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
-
         public Builder ip(@Nullable String ip) {
             this.ip = Output.ofNullable(ip);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<PortStatusArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<PortStatusArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-        public LoadBalancerIngressArgs build() {
+        public Builder ports(PortStatusArgs... ports) {
+            return ports(List.of(ports));
+        }        public LoadBalancerIngressArgs build() {
             return new LoadBalancerIngressArgs(hostname, ip, ports);
         }
     }

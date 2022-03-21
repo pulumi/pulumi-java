@@ -127,62 +127,50 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
-
         public Builder apiConfig(String apiConfig) {
             this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public GatewayArgs build() {
+        }        public GatewayArgs build() {
             return new GatewayArgs(apiConfig, displayName, gatewayId, labels, location, project);
         }
     }

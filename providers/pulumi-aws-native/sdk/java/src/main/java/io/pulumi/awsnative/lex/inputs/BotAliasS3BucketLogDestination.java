@@ -94,17 +94,14 @@ public final class BotAliasS3BucketLogDestination extends io.pulumi.resources.In
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder logPrefix(String logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
-
         public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
-        }
-        public BotAliasS3BucketLogDestination build() {
+        }        public BotAliasS3BucketLogDestination build() {
             return new BotAliasS3BucketLogDestination(kmsKeyArn, logPrefix, s3BucketArn);
         }
     }

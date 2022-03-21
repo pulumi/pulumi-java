@@ -72,12 +72,10 @@ public final class GetprivateLinkServicesForM365SecurityCenterArgs extends io.pu
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
-        }
-        public GetprivateLinkServicesForM365SecurityCenterArgs build() {
+        }        public GetprivateLinkServicesForM365SecurityCenterArgs build() {
             return new GetprivateLinkServicesForM365SecurityCenterArgs(resourceGroupName, resourceName);
         }
     }

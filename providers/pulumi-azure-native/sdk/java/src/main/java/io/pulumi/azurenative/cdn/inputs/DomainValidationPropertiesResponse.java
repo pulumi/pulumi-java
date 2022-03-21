@@ -76,12 +76,10 @@ public final class DomainValidationPropertiesResponse extends io.pulumi.resource
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
-
         public Builder validationToken(String validationToken) {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
-        }
-        public DomainValidationPropertiesResponse build() {
+        }        public DomainValidationPropertiesResponse build() {
             return new DomainValidationPropertiesResponse(expirationDate, validationToken);
         }
     }

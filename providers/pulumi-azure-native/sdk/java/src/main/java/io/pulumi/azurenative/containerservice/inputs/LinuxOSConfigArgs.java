@@ -112,42 +112,34 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.swapFileSizeMB = swapFileSizeMB;
             return this;
         }
-
         public Builder swapFileSizeMB(@Nullable Integer swapFileSizeMB) {
             this.swapFileSizeMB = Output.ofNullable(swapFileSizeMB);
             return this;
         }
-
         public Builder sysctls(@Nullable Output<SysctlConfigArgs> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
-
         public Builder sysctls(@Nullable SysctlConfigArgs sysctls) {
             this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
-
         public Builder transparentHugePageDefrag(@Nullable Output<String> transparentHugePageDefrag) {
             this.transparentHugePageDefrag = transparentHugePageDefrag;
             return this;
         }
-
         public Builder transparentHugePageDefrag(@Nullable String transparentHugePageDefrag) {
             this.transparentHugePageDefrag = Output.ofNullable(transparentHugePageDefrag);
             return this;
         }
-
         public Builder transparentHugePageEnabled(@Nullable Output<String> transparentHugePageEnabled) {
             this.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;
         }
-
         public Builder transparentHugePageEnabled(@Nullable String transparentHugePageEnabled) {
             this.transparentHugePageEnabled = Output.ofNullable(transparentHugePageEnabled);
             return this;
-        }
-        public LinuxOSConfigArgs build() {
+        }        public LinuxOSConfigArgs build() {
             return new LinuxOSConfigArgs(swapFileSizeMB, sysctls, transparentHugePageDefrag, transparentHugePageEnabled);
         }
     }

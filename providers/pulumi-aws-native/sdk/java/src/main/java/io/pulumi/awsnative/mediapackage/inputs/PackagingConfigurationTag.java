@@ -64,12 +64,10 @@ public final class PackagingConfigurationTag extends io.pulumi.resources.InvokeA
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public PackagingConfigurationTag build() {
+        }        public PackagingConfigurationTag build() {
             return new PackagingConfigurationTag(key, value);
         }
     }

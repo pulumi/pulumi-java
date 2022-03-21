@@ -143,62 +143,50 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             this.certificateAuthorityConfiguration = Objects.requireNonNull(certificateAuthorityConfiguration);
             return this;
         }
-
         public Builder certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfigurationArgs certificateAuthorityConfiguration) {
             this.certificateAuthorityConfiguration = Output.of(Objects.requireNonNull(certificateAuthorityConfiguration));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
-
         public Builder permanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
             this.permanentDeletionTimeInDays = Output.ofNullable(permanentDeletionTimeInDays);
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
-
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
             this.revocationConfiguration = Output.ofNullable(revocationConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public CertificateAuthorityArgs build() {
+        }        public CertificateAuthorityArgs build() {
             return new CertificateAuthorityArgs(certificateAuthorityConfiguration, enabled, permanentDeletionTimeInDays, revocationConfiguration, tags, type);
         }
     }

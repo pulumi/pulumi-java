@@ -57,12 +57,10 @@ public final class FleetOnDemandOptionsGetArgs extends io.pulumi.resources.Resou
             this.allocationStrategy = allocationStrategy;
             return this;
         }
-
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
-        }
-        public FleetOnDemandOptionsGetArgs build() {
+        }        public FleetOnDemandOptionsGetArgs build() {
             return new FleetOnDemandOptionsGetArgs(allocationStrategy);
         }
     }

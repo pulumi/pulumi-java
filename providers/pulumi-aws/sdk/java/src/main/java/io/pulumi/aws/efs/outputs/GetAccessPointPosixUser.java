@@ -88,17 +88,17 @@ public final class GetAccessPointPosixUser {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
-
         public Builder secondaryGids(List<Integer> secondaryGids) {
             this.secondaryGids = Objects.requireNonNull(secondaryGids);
             return this;
         }
-
+        public Builder secondaryGids(Integer... secondaryGids) {
+            return secondaryGids(List.of(secondaryGids));
+        }
         public Builder uid(Integer uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
-        }
-        public GetAccessPointPosixUser build() {
+        }        public GetAccessPointPosixUser build() {
             return new GetAccessPointPosixUser(gid, secondaryGids, uid);
         }
     }

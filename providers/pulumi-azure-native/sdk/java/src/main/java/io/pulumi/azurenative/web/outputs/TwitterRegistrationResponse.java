@@ -77,12 +77,10 @@ public final class TwitterRegistrationResponse {
             this.consumerKey = consumerKey;
             return this;
         }
-
         public Builder consumerSecretSettingName(@Nullable String consumerSecretSettingName) {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
-        }
-        public TwitterRegistrationResponse build() {
+        }        public TwitterRegistrationResponse build() {
             return new TwitterRegistrationResponse(consumerKey, consumerSecretSettingName);
         }
     }

@@ -57,12 +57,10 @@ public final class EventSourceMappingFilterCriteriaFilterGetArgs extends io.pulu
             this.pattern = pattern;
             return this;
         }
-
         public Builder pattern(@Nullable String pattern) {
             this.pattern = Output.ofNullable(pattern);
             return this;
-        }
-        public EventSourceMappingFilterCriteriaFilterGetArgs build() {
+        }        public EventSourceMappingFilterCriteriaFilterGetArgs build() {
             return new EventSourceMappingFilterCriteriaFilterGetArgs(pattern);
         }
     }

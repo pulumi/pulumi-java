@@ -159,72 +159,61 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
             this.apiStages = apiStages;
             return this;
         }
-
         public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
             this.apiStages = Output.ofNullable(apiStages);
             return this;
         }
-
+        public Builder apiStages(UsagePlanApiStageArgs... apiStages) {
+            return apiStages(List.of(apiStages));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder productCode(@Nullable Output<String> productCode) {
             this.productCode = productCode;
             return this;
         }
-
         public Builder productCode(@Nullable String productCode) {
             this.productCode = Output.ofNullable(productCode);
             return this;
         }
-
         public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings) {
             this.quotaSettings = quotaSettings;
             return this;
         }
-
         public Builder quotaSettings(@Nullable UsagePlanQuotaSettingsArgs quotaSettings) {
             this.quotaSettings = Output.ofNullable(quotaSettings);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
             this.throttleSettings = throttleSettings;
             return this;
         }
-
         public Builder throttleSettings(@Nullable UsagePlanThrottleSettingsArgs throttleSettings) {
             this.throttleSettings = Output.ofNullable(throttleSettings);
             return this;
-        }
-        public UsagePlanArgs build() {
+        }        public UsagePlanArgs build() {
             return new UsagePlanArgs(apiStages, description, name, productCode, quotaSettings, tags, throttleSettings);
         }
     }

@@ -137,32 +137,26 @@ public final class RollingUpgradePolicyResponse {
             this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
-
         public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
             this.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
-
         public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
             this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
-
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
             this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
-
         public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
             this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
-
         public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
             this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
-        }
-        public RollingUpgradePolicyResponse build() {
+        }        public RollingUpgradePolicyResponse build() {
             return new RollingUpgradePolicyResponse(enableCrossZoneUpgrade, maxBatchInstancePercent, maxUnhealthyInstancePercent, maxUnhealthyUpgradedInstancePercent, pauseTimeBetweenBatches, prioritizeUnhealthyInstances);
         }
     }

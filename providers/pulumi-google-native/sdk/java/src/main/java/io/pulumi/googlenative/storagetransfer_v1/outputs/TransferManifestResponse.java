@@ -51,8 +51,7 @@ public final class TransferManifestResponse {
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
-        }
-        public TransferManifestResponse build() {
+        }        public TransferManifestResponse build() {
             return new TransferManifestResponse(location);
         }
     }

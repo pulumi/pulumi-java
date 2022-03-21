@@ -120,27 +120,22 @@ public final class VoiceConnectorOrganizationRoute {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
-
         public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
-        }
-        public VoiceConnectorOrganizationRoute build() {
+        }        public VoiceConnectorOrganizationRoute build() {
             return new VoiceConnectorOrganizationRoute(host, port, priority, protocol, weight);
         }
     }

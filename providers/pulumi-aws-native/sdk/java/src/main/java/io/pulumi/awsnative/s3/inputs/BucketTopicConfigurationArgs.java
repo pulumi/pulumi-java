@@ -95,32 +95,26 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public Builder event(String event) {
             this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
-
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public BucketTopicConfigurationArgs build() {
+        }        public BucketTopicConfigurationArgs build() {
             return new BucketTopicConfigurationArgs(event, filter, topic);
         }
     }

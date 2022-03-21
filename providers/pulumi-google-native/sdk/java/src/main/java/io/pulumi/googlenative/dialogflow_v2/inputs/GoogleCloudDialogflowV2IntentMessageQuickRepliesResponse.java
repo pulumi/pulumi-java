@@ -77,12 +77,13 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
             this.quickReplies = Objects.requireNonNull(quickReplies);
             return this;
         }
-
+        public Builder quickReplies(String... quickReplies) {
+            return quickReplies(List.of(quickReplies));
+        }
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse build() {
+        }        public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse(quickReplies, title);
         }
     }

@@ -122,52 +122,42 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder diagnosticId(Output<String> diagnosticId) {
             this.diagnosticId = Objects.requireNonNull(diagnosticId);
             return this;
         }
-
         public Builder diagnosticId(String diagnosticId) {
             this.diagnosticId = Output.of(Objects.requireNonNull(diagnosticId));
             return this;
         }
-
         public Builder loggerid(@Nullable Output<String> loggerid) {
             this.loggerid = loggerid;
             return this;
         }
-
         public Builder loggerid(@Nullable String loggerid) {
             this.loggerid = Output.ofNullable(loggerid);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ApiDiagnosticLoggerArgs build() {
+        }        public ApiDiagnosticLoggerArgs build() {
             return new ApiDiagnosticLoggerArgs(apiId, diagnosticId, loggerid, resourceGroupName, serviceName);
         }
     }

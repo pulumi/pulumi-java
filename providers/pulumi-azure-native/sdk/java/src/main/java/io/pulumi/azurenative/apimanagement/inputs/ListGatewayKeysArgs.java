@@ -88,17 +88,14 @@ public final class ListGatewayKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
-        }
-        public ListGatewayKeysArgs build() {
+        }        public ListGatewayKeysArgs build() {
             return new ListGatewayKeysArgs(gatewayId, resourceGroupName, serviceName);
         }
     }

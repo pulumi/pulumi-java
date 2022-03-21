@@ -103,22 +103,18 @@ public final class GraphQLApiUserPoolConfig {
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
-
         public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
-
         public Builder defaultAction(String defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
-
         public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
-        }
-        public GraphQLApiUserPoolConfig build() {
+        }        public GraphQLApiUserPoolConfig build() {
             return new GraphQLApiUserPoolConfig(appIdClientRegex, awsRegion, defaultAction, userPoolId);
         }
     }

@@ -172,82 +172,66 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
-
         public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = Output.ofNullable(versionHeaderName);
             return this;
         }
-
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
-
         public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = Output.ofNullable(versionQueryName);
             return this;
         }
-
         public Builder versionSetId(@Nullable Output<String> versionSetId) {
             this.versionSetId = versionSetId;
             return this;
         }
-
         public Builder versionSetId(@Nullable String versionSetId) {
             this.versionSetId = Output.ofNullable(versionSetId);
             return this;
         }
-
         public Builder versioningScheme(Output<Either<String,VersioningScheme>> versioningScheme) {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
         }
-
         public Builder versioningScheme(Either<String,VersioningScheme> versioningScheme) {
             this.versioningScheme = Output.of(Objects.requireNonNull(versioningScheme));
             return this;
-        }
-        public ApiVersionSetArgs build() {
+        }        public ApiVersionSetArgs build() {
             return new ApiVersionSetArgs(description, displayName, resourceGroupName, serviceName, versionHeaderName, versionQueryName, versionSetId, versioningScheme);
         }
     }

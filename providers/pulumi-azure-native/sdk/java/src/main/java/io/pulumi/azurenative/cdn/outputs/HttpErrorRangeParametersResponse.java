@@ -71,12 +71,10 @@ public final class HttpErrorRangeParametersResponse {
             this.begin = begin;
             return this;
         }
-
         public Builder end(@Nullable Integer end) {
             this.end = end;
             return this;
-        }
-        public HttpErrorRangeParametersResponse build() {
+        }        public HttpErrorRangeParametersResponse build() {
             return new HttpErrorRangeParametersResponse(begin, end);
         }
     }

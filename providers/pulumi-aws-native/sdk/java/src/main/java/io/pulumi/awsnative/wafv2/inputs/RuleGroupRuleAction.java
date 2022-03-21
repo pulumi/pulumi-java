@@ -113,22 +113,18 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
             this.allow = allow;
             return this;
         }
-
         public Builder block(@Nullable RuleGroupRuleActionBlockProperties block) {
             this.block = block;
             return this;
         }
-
         public Builder captcha(@Nullable RuleGroupRuleActionCaptchaProperties captcha) {
             this.captcha = captcha;
             return this;
         }
-
         public Builder count(@Nullable RuleGroupRuleActionCountProperties count) {
             this.count = count;
             return this;
-        }
-        public RuleGroupRuleAction build() {
+        }        public RuleGroupRuleAction build() {
             return new RuleGroupRuleAction(allow, block, captcha, count);
         }
     }

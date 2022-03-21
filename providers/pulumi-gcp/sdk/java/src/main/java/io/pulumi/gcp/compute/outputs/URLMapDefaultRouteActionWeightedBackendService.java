@@ -107,17 +107,14 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
             this.backendService = backendService;
             return this;
         }
-
         public Builder headerAction(@Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public URLMapDefaultRouteActionWeightedBackendService build() {
+        }        public URLMapDefaultRouteActionWeightedBackendService build() {
             return new URLMapDefaultRouteActionWeightedBackendService(backendService, headerAction, weight);
         }
     }

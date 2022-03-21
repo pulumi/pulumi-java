@@ -79,22 +79,18 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
             this.field = field;
             return this;
         }
-
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Output.ofNullable(field);
             return this;
         }
-
         public Builder table(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
             this.table = Output.ofNullable(table);
             return this;
-        }
-        public GooglePrivacyDlpV2BigQueryFieldArgs build() {
+        }        public GooglePrivacyDlpV2BigQueryFieldArgs build() {
             return new GooglePrivacyDlpV2BigQueryFieldArgs(field, table);
         }
     }

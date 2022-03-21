@@ -60,8 +60,7 @@ public final class DataSourceAthenaParameters extends io.pulumi.resources.Invoke
         public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = workGroup;
             return this;
-        }
-        public DataSourceAthenaParameters build() {
+        }        public DataSourceAthenaParameters build() {
             return new DataSourceAthenaParameters(workGroup);
         }
     }

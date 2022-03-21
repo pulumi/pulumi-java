@@ -137,62 +137,53 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder state(@Nullable Output<ModelStateArgs> state) {
             this.state = state;
             return this;
         }
-
         public Builder state(@Nullable ModelStateArgs state) {
             this.state = Output.ofNullable(state);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(String... tags) {
+            return tags(List.of(tags));
+        }
         public Builder tfliteModel(@Nullable Output<TfLiteModelArgs> tfliteModel) {
             this.tfliteModel = tfliteModel;
             return this;
         }
-
         public Builder tfliteModel(@Nullable TfLiteModelArgs tfliteModel) {
             this.tfliteModel = Output.ofNullable(tfliteModel);
             return this;
-        }
-        public ModelArgs build() {
+        }        public ModelArgs build() {
             return new ModelArgs(displayName, name, project, state, tags, tfliteModel);
         }
     }

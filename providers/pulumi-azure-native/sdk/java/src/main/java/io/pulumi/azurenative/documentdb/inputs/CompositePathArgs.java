@@ -76,22 +76,18 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Either<String,CompositePathSortOrder> order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
-
         public Builder path(@Nullable String path) {
             this.path = Output.ofNullable(path);
             return this;
-        }
-        public CompositePathArgs build() {
+        }        public CompositePathArgs build() {
             return new CompositePathArgs(order, path);
         }
     }

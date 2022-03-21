@@ -90,17 +90,14 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
             this.peer = peer;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
             return this;
-        }
-        public GetVirtualNetworkGatewayBgpPeerStatusArgs build() {
+        }        public GetVirtualNetworkGatewayBgpPeerStatusArgs build() {
             return new GetVirtualNetworkGatewayBgpPeerStatusArgs(peer, resourceGroupName, virtualNetworkGatewayName);
         }
     }

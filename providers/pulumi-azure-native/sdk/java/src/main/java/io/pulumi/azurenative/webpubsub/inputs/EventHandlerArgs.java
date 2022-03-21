@@ -117,42 +117,37 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
             this.auth = auth;
             return this;
         }
-
         public Builder auth(@Nullable UpstreamAuthSettingsArgs auth) {
             this.auth = Output.ofNullable(auth);
             return this;
         }
-
         public Builder systemEvents(@Nullable Output<List<String>> systemEvents) {
             this.systemEvents = systemEvents;
             return this;
         }
-
         public Builder systemEvents(@Nullable List<String> systemEvents) {
             this.systemEvents = Output.ofNullable(systemEvents);
             return this;
         }
-
+        public Builder systemEvents(String... systemEvents) {
+            return systemEvents(List.of(systemEvents));
+        }
         public Builder urlTemplate(Output<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
-
         public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
             return this;
         }
-
         public Builder userEventPattern(@Nullable Output<String> userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
         }
-
         public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = Output.ofNullable(userEventPattern);
             return this;
-        }
-        public EventHandlerArgs build() {
+        }        public EventHandlerArgs build() {
             return new EventHandlerArgs(auth, systemEvents, urlTemplate, userEventPattern);
         }
     }

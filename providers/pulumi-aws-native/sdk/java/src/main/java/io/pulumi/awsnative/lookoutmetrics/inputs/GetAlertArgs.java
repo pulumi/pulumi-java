@@ -54,8 +54,7 @@ public final class GetAlertArgs extends io.pulumi.resources.InvokeArgs {
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
-        }
-        public GetAlertArgs build() {
+        }        public GetAlertArgs build() {
             return new GetAlertArgs(arn);
         }
     }

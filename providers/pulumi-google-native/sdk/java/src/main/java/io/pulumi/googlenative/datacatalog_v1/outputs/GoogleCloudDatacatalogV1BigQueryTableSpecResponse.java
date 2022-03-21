@@ -87,17 +87,14 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
             this.tableSourceType = Objects.requireNonNull(tableSourceType);
             return this;
         }
-
         public Builder tableSpec(GoogleCloudDatacatalogV1TableSpecResponse tableSpec) {
             this.tableSpec = Objects.requireNonNull(tableSpec);
             return this;
         }
-
         public Builder viewSpec(GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
-        }
-        public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
+        }        public GoogleCloudDatacatalogV1BigQueryTableSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(tableSourceType, tableSpec, viewSpec);
         }
     }

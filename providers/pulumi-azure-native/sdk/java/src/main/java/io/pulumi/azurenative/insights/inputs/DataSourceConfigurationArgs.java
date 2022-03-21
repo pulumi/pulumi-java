@@ -93,32 +93,35 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             this.eventLogs = eventLogs;
             return this;
         }
-
         public Builder eventLogs(@Nullable List<EventLogConfigurationArgs> eventLogs) {
             this.eventLogs = Output.ofNullable(eventLogs);
             return this;
         }
-
+        public Builder eventLogs(EventLogConfigurationArgs... eventLogs) {
+            return eventLogs(List.of(eventLogs));
+        }
         public Builder perfCounters(@Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters) {
             this.perfCounters = perfCounters;
             return this;
         }
-
         public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationArgs> perfCounters) {
             this.perfCounters = Output.ofNullable(perfCounters);
             return this;
         }
-
+        public Builder perfCounters(PerformanceCounterConfigurationArgs... perfCounters) {
+            return perfCounters(List.of(perfCounters));
+        }
         public Builder providers(@Nullable Output<List<EtwProviderConfigurationArgs>> providers) {
             this.providers = providers;
             return this;
         }
-
         public Builder providers(@Nullable List<EtwProviderConfigurationArgs> providers) {
             this.providers = Output.ofNullable(providers);
             return this;
         }
-        public DataSourceConfigurationArgs build() {
+        public Builder providers(EtwProviderConfigurationArgs... providers) {
+            return providers(List.of(providers));
+        }        public DataSourceConfigurationArgs build() {
             return new DataSourceConfigurationArgs(eventLogs, perfCounters, providers);
         }
     }

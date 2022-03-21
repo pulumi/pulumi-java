@@ -67,22 +67,18 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
             this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
             return this;
         }
-
         public Builder ruleConfiguration(DatasetLateDataRuleConfigurationArgs ruleConfiguration) {
             this.ruleConfiguration = Output.of(Objects.requireNonNull(ruleConfiguration));
             return this;
         }
-
         public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
-
         public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Output.ofNullable(ruleName);
             return this;
-        }
-        public DatasetLateDataRuleArgs build() {
+        }        public DatasetLateDataRuleArgs build() {
             return new DatasetLateDataRuleArgs(ruleConfiguration, ruleName);
         }
     }

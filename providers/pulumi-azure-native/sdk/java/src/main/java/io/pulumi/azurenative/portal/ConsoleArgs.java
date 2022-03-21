@@ -75,22 +75,18 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
             this.consoleName = consoleName;
             return this;
         }
-
         public Builder consoleName(@Nullable String consoleName) {
             this.consoleName = Output.ofNullable(consoleName);
             return this;
         }
-
         public Builder properties(Output<ConsoleCreatePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(ConsoleCreatePropertiesArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
-        }
-        public ConsoleArgs build() {
+        }        public ConsoleArgs build() {
             return new ConsoleArgs(consoleName, properties);
         }
     }

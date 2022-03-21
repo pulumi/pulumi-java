@@ -53,8 +53,7 @@ public final class DeploymentGroupLoadBalancerInfoElbInfo {
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public DeploymentGroupLoadBalancerInfoElbInfo build() {
+        }        public DeploymentGroupLoadBalancerInfoElbInfo build() {
             return new DeploymentGroupLoadBalancerInfoElbInfo(name);
         }
     }

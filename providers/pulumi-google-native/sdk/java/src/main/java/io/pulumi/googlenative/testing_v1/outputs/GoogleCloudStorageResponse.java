@@ -51,8 +51,7 @@ public final class GoogleCloudStorageResponse {
         public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
-        }
-        public GoogleCloudStorageResponse build() {
+        }        public GoogleCloudStorageResponse build() {
             return new GoogleCloudStorageResponse(gcsPath);
         }
     }

@@ -233,62 +233,50 @@ public final class GetStorageAccountCredentialResult {
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder accountType(String accountType) {
             this.accountType = Objects.requireNonNull(accountType);
             return this;
         }
-
         public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
-
         public Builder blobDomainName(@Nullable String blobDomainName) {
             this.blobDomainName = blobDomainName;
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder sslStatus(String sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
-
         public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
-        }
-        public GetStorageAccountCredentialResult build() {
+        }        public GetStorageAccountCredentialResult build() {
             return new GetStorageAccountCredentialResult(accountKey, accountType, alias, blobDomainName, connectionString, id, name, sslStatus, storageAccountId, systemData, type, userName);
         }
     }

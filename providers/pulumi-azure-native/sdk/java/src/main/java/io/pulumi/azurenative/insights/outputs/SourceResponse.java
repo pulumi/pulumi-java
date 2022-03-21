@@ -104,22 +104,21 @@ public final class SourceResponse {
             this.authorizedResources = authorizedResources;
             return this;
         }
-
+        public Builder authorizedResources(String... authorizedResources) {
+            return authorizedResources(List.of(authorizedResources));
+        }
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
-
         public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
-
         public Builder queryType(@Nullable String queryType) {
             this.queryType = queryType;
             return this;
-        }
-        public SourceResponse build() {
+        }        public SourceResponse build() {
             return new SourceResponse(authorizedResources, dataSourceId, query, queryType);
         }
     }

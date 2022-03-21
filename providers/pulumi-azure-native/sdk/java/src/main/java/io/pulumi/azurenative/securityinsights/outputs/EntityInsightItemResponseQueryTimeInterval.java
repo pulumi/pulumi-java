@@ -71,12 +71,10 @@ public final class EntityInsightItemResponseQueryTimeInterval {
             this.endTime = endTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
-        }
-        public EntityInsightItemResponseQueryTimeInterval build() {
+        }        public EntityInsightItemResponseQueryTimeInterval build() {
             return new EntityInsightItemResponseQueryTimeInterval(endTime, startTime);
         }
     }

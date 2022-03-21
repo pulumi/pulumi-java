@@ -78,27 +78,22 @@ public final class DataSourceConnectionConfiguration {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
-
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public Builder databasePort(Integer databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
-
         public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
-        }
-        public DataSourceConnectionConfiguration build() {
+        }        public DataSourceConnectionConfiguration build() {
             return new DataSourceConnectionConfiguration(databaseHost, databaseName, databasePort, secretArn, tableName);
         }
     }

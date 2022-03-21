@@ -194,92 +194,86 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
             this.allowCookies = allowCookies;
             return this;
         }
-
         public Builder allowCookies(@Nullable Boolean allowCookies) {
             this.allowCookies = Output.ofNullable(allowCookies);
             return this;
         }
-
         public Builder enableXRay(@Nullable Output<Boolean> enableXRay) {
             this.enableXRay = enableXRay;
             return this;
         }
-
         public Builder enableXRay(@Nullable Boolean enableXRay) {
             this.enableXRay = Output.ofNullable(enableXRay);
             return this;
         }
-
         public Builder excludedPages(@Nullable Output<List<String>> excludedPages) {
             this.excludedPages = excludedPages;
             return this;
         }
-
         public Builder excludedPages(@Nullable List<String> excludedPages) {
             this.excludedPages = Output.ofNullable(excludedPages);
             return this;
         }
-
+        public Builder excludedPages(String... excludedPages) {
+            return excludedPages(List.of(excludedPages));
+        }
         public Builder favoritePages(@Nullable Output<List<String>> favoritePages) {
             this.favoritePages = favoritePages;
             return this;
         }
-
         public Builder favoritePages(@Nullable List<String> favoritePages) {
             this.favoritePages = Output.ofNullable(favoritePages);
             return this;
         }
-
+        public Builder favoritePages(String... favoritePages) {
+            return favoritePages(List.of(favoritePages));
+        }
         public Builder guestRoleArn(@Nullable Output<String> guestRoleArn) {
             this.guestRoleArn = guestRoleArn;
             return this;
         }
-
         public Builder guestRoleArn(@Nullable String guestRoleArn) {
             this.guestRoleArn = Output.ofNullable(guestRoleArn);
             return this;
         }
-
         public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
-
         public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Output.ofNullable(identityPoolId);
             return this;
         }
-
         public Builder includedPages(@Nullable Output<List<String>> includedPages) {
             this.includedPages = includedPages;
             return this;
         }
-
         public Builder includedPages(@Nullable List<String> includedPages) {
             this.includedPages = Output.ofNullable(includedPages);
             return this;
         }
-
+        public Builder includedPages(String... includedPages) {
+            return includedPages(List.of(includedPages));
+        }
         public Builder sessionSampleRate(@Nullable Output<Double> sessionSampleRate) {
             this.sessionSampleRate = sessionSampleRate;
             return this;
         }
-
         public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
             this.sessionSampleRate = Output.ofNullable(sessionSampleRate);
             return this;
         }
-
         public Builder telemetries(@Nullable Output<List<AppMonitorTelemetry>> telemetries) {
             this.telemetries = telemetries;
             return this;
         }
-
         public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
             this.telemetries = Output.ofNullable(telemetries);
             return this;
         }
-        public AppMonitorConfigurationArgs build() {
+        public Builder telemetries(AppMonitorTelemetry... telemetries) {
+            return telemetries(List.of(telemetries));
+        }        public AppMonitorConfigurationArgs build() {
             return new AppMonitorConfigurationArgs(allowCookies, enableXRay, excludedPages, favoritePages, guestRoleArn, identityPoolId, includedPages, sessionSampleRate, telemetries);
         }
     }

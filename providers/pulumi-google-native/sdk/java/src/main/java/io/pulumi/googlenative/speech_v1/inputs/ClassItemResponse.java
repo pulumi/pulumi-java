@@ -58,8 +58,7 @@ public final class ClassItemResponse extends io.pulumi.resources.InvokeArgs {
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ClassItemResponse build() {
+        }        public ClassItemResponse build() {
             return new ClassItemResponse(value);
         }
     }

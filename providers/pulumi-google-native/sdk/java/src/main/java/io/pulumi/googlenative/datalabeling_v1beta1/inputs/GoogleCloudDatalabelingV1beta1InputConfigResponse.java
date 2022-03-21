@@ -144,32 +144,26 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
             this.annotationType = Objects.requireNonNull(annotationType);
             return this;
         }
-
         public Builder bigquerySource(GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource) {
             this.bigquerySource = Objects.requireNonNull(bigquerySource);
             return this;
         }
-
         public Builder classificationMetadata(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata) {
             this.classificationMetadata = Objects.requireNonNull(classificationMetadata);
             return this;
         }
-
         public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
-
         public Builder gcsSource(GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
-
         public Builder textMetadata(GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
             this.textMetadata = Objects.requireNonNull(textMetadata);
             return this;
-        }
-        public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
+        }        public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigResponse(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }
     }

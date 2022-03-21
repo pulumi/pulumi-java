@@ -66,22 +66,21 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
-
         public Builder backupVaultEvents(List<String> backupVaultEvents) {
             this.backupVaultEvents = Output.of(Objects.requireNonNull(backupVaultEvents));
             return this;
         }
-
+        public Builder backupVaultEvents(String... backupVaultEvents) {
+            return backupVaultEvents(List.of(backupVaultEvents));
+        }
         public Builder sNSTopicArn(Output<String> sNSTopicArn) {
             this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
             return this;
         }
-
         public Builder sNSTopicArn(String sNSTopicArn) {
             this.sNSTopicArn = Output.of(Objects.requireNonNull(sNSTopicArn));
             return this;
-        }
-        public BackupVaultNotificationObjectTypeArgs build() {
+        }        public BackupVaultNotificationObjectTypeArgs build() {
             return new BackupVaultNotificationObjectTypeArgs(backupVaultEvents, sNSTopicArn);
         }
     }

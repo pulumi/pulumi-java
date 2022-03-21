@@ -79,22 +79,18 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
             this.days = days;
             return this;
         }
-
         public Builder days(@Nullable Integer days) {
             this.days = Output.ofNullable(days);
             return this;
         }
-
         public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
-        }
-        public RestorePolicyPropertiesArgs build() {
+        }        public RestorePolicyPropertiesArgs build() {
             return new RestorePolicyPropertiesArgs(days, enabled);
         }
     }

@@ -130,52 +130,45 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.iam = iam;
             return this;
         }
-
         public Builder iam(@Nullable ConditionIam iam) {
             this.iam = Output.ofNullable(iam);
             return this;
         }
-
         public Builder op(@Nullable Output<ConditionOp> op) {
             this.op = op;
             return this;
         }
-
         public Builder op(@Nullable ConditionOp op) {
             this.op = Output.ofNullable(op);
             return this;
         }
-
         public Builder svc(@Nullable Output<String> svc) {
             this.svc = svc;
             return this;
         }
-
         public Builder svc(@Nullable String svc) {
             this.svc = Output.ofNullable(svc);
             return this;
         }
-
         public Builder sys(@Nullable Output<ConditionSys> sys) {
             this.sys = sys;
             return this;
         }
-
         public Builder sys(@Nullable ConditionSys sys) {
             this.sys = Output.ofNullable(sys);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public ConditionArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ConditionArgs build() {
             return new ConditionArgs(iam, op, svc, sys, values);
         }
     }

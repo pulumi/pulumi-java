@@ -147,62 +147,50 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
-
         public Builder osType(@Nullable Either<String,OSType> osType) {
             this.osType = Output.ofNullable(osType);
             return this;
         }
-
         public Builder role(@Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role) {
             this.role = role;
             return this;
         }
-
         public Builder role(@Nullable Either<String,OpenShiftAgentPoolProfileRole> role) {
             this.role = Output.ofNullable(role);
             return this;
         }
-
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
-
         public Builder subnetCidr(@Nullable String subnetCidr) {
             this.subnetCidr = Output.ofNullable(subnetCidr);
             return this;
         }
-
         public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
-
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
             this.vmSize = Output.of(Objects.requireNonNull(vmSize));
             return this;
-        }
-        public OpenShiftManagedClusterAgentPoolProfileArgs build() {
+        }        public OpenShiftManagedClusterAgentPoolProfileArgs build() {
             return new OpenShiftManagedClusterAgentPoolProfileArgs(count, name, osType, role, subnetCidr, vmSize);
         }
     }

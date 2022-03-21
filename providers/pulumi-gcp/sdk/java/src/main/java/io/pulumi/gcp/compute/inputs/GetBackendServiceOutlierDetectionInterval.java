@@ -64,12 +64,10 @@ public final class GetBackendServiceOutlierDetectionInterval extends io.pulumi.r
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
-        }
-        public GetBackendServiceOutlierDetectionInterval build() {
+        }        public GetBackendServiceOutlierDetectionInterval build() {
             return new GetBackendServiceOutlierDetectionInterval(nanos, seconds);
         }
     }

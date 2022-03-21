@@ -75,12 +75,10 @@ public final class GetGlobalAddressArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetGlobalAddressArgs build() {
+        }        public GetGlobalAddressArgs build() {
             return new GetGlobalAddressArgs(name, project);
         }
     }

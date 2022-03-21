@@ -128,52 +128,42 @@ public final class GetCertificateResult {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
-
         public Builder certificateId(Integer certificateId) {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
-
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
-
         public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
-        }
-        public GetCertificateResult build() {
+        }        public GetCertificateResult build() {
             return new GetCertificateResult(certificate, certificateId, creationTimestamp, description, id, name, namePrefix, privateKey, project, selfLink);
         }
     }

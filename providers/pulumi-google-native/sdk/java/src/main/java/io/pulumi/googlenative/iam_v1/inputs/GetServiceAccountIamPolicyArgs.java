@@ -78,17 +78,14 @@ public final class GetServiceAccountIamPolicyArgs extends io.pulumi.resources.In
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
-        }
-        public GetServiceAccountIamPolicyArgs build() {
+        }        public GetServiceAccountIamPolicyArgs build() {
             return new GetServiceAccountIamPolicyArgs(optionsRequestedPolicyVersion, project, serviceAccountId);
         }
     }

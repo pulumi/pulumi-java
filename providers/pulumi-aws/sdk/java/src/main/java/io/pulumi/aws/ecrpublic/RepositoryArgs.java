@@ -88,32 +88,26 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.catalogData = catalogData;
             return this;
         }
-
         public Builder catalogData(@Nullable RepositoryCatalogDataArgs catalogData) {
             this.catalogData = Output.ofNullable(catalogData);
             return this;
         }
-
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
-
         public Builder repositoryName(String repositoryName) {
             this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
-        }
-        public RepositoryArgs build() {
+        }        public RepositoryArgs build() {
             return new RepositoryArgs(catalogData, forceDestroy, repositoryName);
         }
     }

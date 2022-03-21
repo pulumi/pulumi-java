@@ -299,82 +299,75 @@ public final class EndpointResponse {
             this.customHeaders = customHeaders;
             return this;
         }
-
+        public Builder customHeaders(EndpointPropertiesResponseCustomHeaders... customHeaders) {
+            return customHeaders(List.of(customHeaders));
+        }
         public Builder endpointLocation(@Nullable String endpointLocation) {
             this.endpointLocation = endpointLocation;
             return this;
         }
-
         public Builder endpointMonitorStatus(@Nullable String endpointMonitorStatus) {
             this.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
-
         public Builder endpointStatus(@Nullable String endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
-
         public Builder geoMapping(@Nullable List<String> geoMapping) {
             this.geoMapping = geoMapping;
             return this;
         }
-
+        public Builder geoMapping(String... geoMapping) {
+            return geoMapping(List.of(geoMapping));
+        }
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
             this.minChildEndpoints = minChildEndpoints;
             return this;
         }
-
         public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
-
         public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder priority(@Nullable Double priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder subnets(@Nullable List<EndpointPropertiesResponseSubnets> subnets) {
             this.subnets = subnets;
             return this;
         }
-
+        public Builder subnets(EndpointPropertiesResponseSubnets... subnets) {
+            return subnets(List.of(subnets));
+        }
         public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
-
         public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
-        }
-        public EndpointResponse build() {
+        }        public EndpointResponse build() {
             return new EndpointResponse(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
         }
     }

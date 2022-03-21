@@ -87,17 +87,14 @@ public final class OSDiskDetailsResponse {
             this.osType = osType;
             return this;
         }
-
         public Builder osVhdId(@Nullable String osVhdId) {
             this.osVhdId = osVhdId;
             return this;
         }
-
         public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
-        }
-        public OSDiskDetailsResponse build() {
+        }        public OSDiskDetailsResponse build() {
             return new OSDiskDetailsResponse(osType, osVhdId, vhdName);
         }
     }

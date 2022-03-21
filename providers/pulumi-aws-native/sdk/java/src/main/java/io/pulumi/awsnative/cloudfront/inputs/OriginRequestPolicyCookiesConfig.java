@@ -67,12 +67,13 @@ public final class OriginRequestPolicyCookiesConfig extends io.pulumi.resources.
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
-
         public Builder cookies(@Nullable List<String> cookies) {
             this.cookies = cookies;
             return this;
         }
-        public OriginRequestPolicyCookiesConfig build() {
+        public Builder cookies(String... cookies) {
+            return cookies(List.of(cookies));
+        }        public OriginRequestPolicyCookiesConfig build() {
             return new OriginRequestPolicyCookiesConfig(cookieBehavior, cookies);
         }
     }

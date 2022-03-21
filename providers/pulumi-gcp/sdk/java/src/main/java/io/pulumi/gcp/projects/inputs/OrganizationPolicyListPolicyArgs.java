@@ -106,42 +106,34 @@ public final class OrganizationPolicyListPolicyArgs extends io.pulumi.resources.
             this.allow = allow;
             return this;
         }
-
         public Builder allow(@Nullable OrganizationPolicyListPolicyAllowArgs allow) {
             this.allow = Output.ofNullable(allow);
             return this;
         }
-
         public Builder deny(@Nullable Output<OrganizationPolicyListPolicyDenyArgs> deny) {
             this.deny = deny;
             return this;
         }
-
         public Builder deny(@Nullable OrganizationPolicyListPolicyDenyArgs deny) {
             this.deny = Output.ofNullable(deny);
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
-
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Output.ofNullable(inheritFromParent);
             return this;
         }
-
         public Builder suggestedValue(@Nullable Output<String> suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }
-
         public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = Output.ofNullable(suggestedValue);
             return this;
-        }
-        public OrganizationPolicyListPolicyArgs build() {
+        }        public OrganizationPolicyListPolicyArgs build() {
             return new OrganizationPolicyListPolicyArgs(allow, deny, inheritFromParent, suggestedValue);
         }
     }

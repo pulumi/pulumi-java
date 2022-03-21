@@ -263,132 +263,112 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
         public Builder confidential(@Nullable Output<Boolean> confidential) {
             this.confidential = confidential;
             return this;
         }
-
         public Builder confidential(@Nullable Boolean confidential) {
             this.confidential = Output.ofNullable(confidential);
             return this;
         }
-
         public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
-
         public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = Output.ofNullable(containerConcurrency);
             return this;
         }
-
         public Builder containers(@Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
-
         public Builder containers(@Nullable List<GoogleCloudRunOpV2ContainerArgs> containers) {
             this.containers = Output.ofNullable(containers);
             return this;
         }
-
+        public Builder containers(GoogleCloudRunOpV2ContainerArgs... containers) {
+            return containers(List.of(containers));
+        }
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
-
         public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
-
         public Builder executionEnvironment(@Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment) {
             this.executionEnvironment = executionEnvironment;
             return this;
         }
-
         public Builder executionEnvironment(@Nullable GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment executionEnvironment) {
             this.executionEnvironment = Output.ofNullable(executionEnvironment);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
-
         public Builder revision(@Nullable String revision) {
             this.revision = Output.ofNullable(revision);
             return this;
         }
-
         public Builder scaling(@Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling) {
             this.scaling = scaling;
             return this;
         }
-
         public Builder scaling(@Nullable GoogleCloudRunOpV2RevisionScalingArgs scaling) {
             this.scaling = Output.ofNullable(scaling);
             return this;
         }
-
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
-
         public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder volumes(@Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
-
         public Builder volumes(@Nullable List<GoogleCloudRunOpV2VolumeArgs> volumes) {
             this.volumes = Output.ofNullable(volumes);
             return this;
         }
-
+        public Builder volumes(GoogleCloudRunOpV2VolumeArgs... volumes) {
+            return volumes(List.of(volumes));
+        }
         public Builder vpcAccess(@Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess) {
             this.vpcAccess = vpcAccess;
             return this;
         }
-
         public Builder vpcAccess(@Nullable GoogleCloudRunOpV2VpcAccessArgs vpcAccess) {
             this.vpcAccess = Output.ofNullable(vpcAccess);
             return this;
-        }
-        public GoogleCloudRunOpV2RevisionTemplateArgs build() {
+        }        public GoogleCloudRunOpV2RevisionTemplateArgs build() {
             return new GoogleCloudRunOpV2RevisionTemplateArgs(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
         }
     }

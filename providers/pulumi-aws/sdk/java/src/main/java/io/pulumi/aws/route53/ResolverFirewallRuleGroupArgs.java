@@ -75,22 +75,18 @@ public final class ResolverFirewallRuleGroupArgs extends io.pulumi.resources.Res
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ResolverFirewallRuleGroupArgs build() {
+        }        public ResolverFirewallRuleGroupArgs build() {
             return new ResolverFirewallRuleGroupArgs(name, tags);
         }
     }

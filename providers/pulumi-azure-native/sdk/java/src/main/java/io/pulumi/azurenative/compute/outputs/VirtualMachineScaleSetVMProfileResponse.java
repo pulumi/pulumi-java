@@ -239,62 +239,50 @@ public final class VirtualMachineScaleSetVMProfileResponse {
             this.billingProfile = billingProfile;
             return this;
         }
-
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-
         public Builder evictionPolicy(@Nullable String evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
-
         public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
-
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
-
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
-        }
-        public VirtualMachineScaleSetVMProfileResponse build() {
+        }        public VirtualMachineScaleSetVMProfileResponse build() {
             return new VirtualMachineScaleSetVMProfileResponse(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
         }
     }

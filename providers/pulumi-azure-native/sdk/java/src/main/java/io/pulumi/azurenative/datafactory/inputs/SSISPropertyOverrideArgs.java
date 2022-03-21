@@ -79,22 +79,18 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
             this.isSensitive = isSensitive;
             return this;
         }
-
         public Builder isSensitive(@Nullable Boolean isSensitive) {
             this.isSensitive = Output.ofNullable(isSensitive);
             return this;
         }
-
         public Builder value(Output<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(Object value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public SSISPropertyOverrideArgs build() {
+        }        public SSISPropertyOverrideArgs build() {
             return new SSISPropertyOverrideArgs(isSensitive, value);
         }
     }

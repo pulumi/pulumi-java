@@ -143,62 +143,50 @@ public final class AiFeatureStoreArgs extends io.pulumi.resources.ResourceArgs {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig) {
             this.onlineServingConfig = onlineServingConfig;
             return this;
         }
-
         public Builder onlineServingConfig(@Nullable AiFeatureStoreOnlineServingConfigArgs onlineServingConfig) {
             this.onlineServingConfig = Output.ofNullable(onlineServingConfig);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
-        }
-        public AiFeatureStoreArgs build() {
+        }        public AiFeatureStoreArgs build() {
             return new AiFeatureStoreArgs(forceDestroy, labels, name, onlineServingConfig, project, region);
         }
     }

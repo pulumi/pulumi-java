@@ -53,12 +53,10 @@ public final class KnowledgeBaseTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public KnowledgeBaseTag build() {
+        }        public KnowledgeBaseTag build() {
             return new KnowledgeBaseTag(key, value);
         }
     }

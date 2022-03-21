@@ -121,27 +121,25 @@ public final class RepositoryResponse {
             this.branch = branch;
             return this;
         }
-
         public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
             this.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
-
         public Builder displayUrl(@Nullable String displayUrl) {
             this.displayUrl = displayUrl;
             return this;
         }
-
         public Builder pathMapping(@Nullable List<ContentPathMapResponse> pathMapping) {
             this.pathMapping = pathMapping;
             return this;
         }
-
+        public Builder pathMapping(ContentPathMapResponse... pathMapping) {
+            return pathMapping(List.of(pathMapping));
+        }
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
-        }
-        public RepositoryResponse build() {
+        }        public RepositoryResponse build() {
             return new RepositoryResponse(branch, deploymentLogsUrl, displayUrl, pathMapping, url);
         }
     }

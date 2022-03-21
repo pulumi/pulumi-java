@@ -207,52 +207,66 @@ public final class JobConfigResponse {
             this.adBreaks = Objects.requireNonNull(adBreaks);
             return this;
         }
-
+        public Builder adBreaks(AdBreakResponse... adBreaks) {
+            return adBreaks(List.of(adBreaks));
+        }
         public Builder editList(List<EditAtomResponse> editList) {
             this.editList = Objects.requireNonNull(editList);
             return this;
         }
-
+        public Builder editList(EditAtomResponse... editList) {
+            return editList(List.of(editList));
+        }
         public Builder elementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
             this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
             return this;
         }
-
+        public Builder elementaryStreams(ElementaryStreamResponse... elementaryStreams) {
+            return elementaryStreams(List.of(elementaryStreams));
+        }
         public Builder inputs(List<InputResponse> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
-
+        public Builder inputs(InputResponse... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder manifests(List<ManifestResponse> manifests) {
             this.manifests = Objects.requireNonNull(manifests);
             return this;
         }
-
+        public Builder manifests(ManifestResponse... manifests) {
+            return manifests(List.of(manifests));
+        }
         public Builder muxStreams(List<MuxStreamResponse> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
-
+        public Builder muxStreams(MuxStreamResponse... muxStreams) {
+            return muxStreams(List.of(muxStreams));
+        }
         public Builder output(OutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public Builder overlays(List<OverlayResponse> overlays) {
             this.overlays = Objects.requireNonNull(overlays);
             return this;
         }
-
+        public Builder overlays(OverlayResponse... overlays) {
+            return overlays(List.of(overlays));
+        }
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public Builder spriteSheets(List<SpriteSheetResponse> spriteSheets) {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }
-        public JobConfigResponse build() {
+        public Builder spriteSheets(SpriteSheetResponse... spriteSheets) {
+            return spriteSheets(List.of(spriteSheets));
+        }        public JobConfigResponse build() {
             return new JobConfigResponse(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
         }
     }

@@ -143,82 +143,72 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
             this.authorizerConfig = authorizerConfig;
             return this;
         }
-
         public Builder authorizerConfig(@Nullable DomainConfigurationAuthorizerConfigArgs authorizerConfig) {
             this.authorizerConfig = Output.ofNullable(authorizerConfig);
             return this;
         }
-
         public Builder domainConfigurationName(@Nullable Output<String> domainConfigurationName) {
             this.domainConfigurationName = domainConfigurationName;
             return this;
         }
-
         public Builder domainConfigurationName(@Nullable String domainConfigurationName) {
             this.domainConfigurationName = Output.ofNullable(domainConfigurationName);
             return this;
         }
-
         public Builder domainConfigurationStatus(@Nullable Output<DomainConfigurationStatus> domainConfigurationStatus) {
             this.domainConfigurationStatus = domainConfigurationStatus;
             return this;
         }
-
         public Builder domainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
             this.domainConfigurationStatus = Output.ofNullable(domainConfigurationStatus);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder serverCertificateArns(@Nullable Output<List<String>> serverCertificateArns) {
             this.serverCertificateArns = serverCertificateArns;
             return this;
         }
-
         public Builder serverCertificateArns(@Nullable List<String> serverCertificateArns) {
             this.serverCertificateArns = Output.ofNullable(serverCertificateArns);
             return this;
         }
-
+        public Builder serverCertificateArns(String... serverCertificateArns) {
+            return serverCertificateArns(List.of(serverCertificateArns));
+        }
         public Builder serviceType(@Nullable Output<DomainConfigurationServiceType> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
-
         public Builder serviceType(@Nullable DomainConfigurationServiceType serviceType) {
             this.serviceType = Output.ofNullable(serviceType);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DomainConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainConfigurationTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(DomainConfigurationTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder validationCertificateArn(@Nullable Output<String> validationCertificateArn) {
             this.validationCertificateArn = validationCertificateArn;
             return this;
         }
-
         public Builder validationCertificateArn(@Nullable String validationCertificateArn) {
             this.validationCertificateArn = Output.ofNullable(validationCertificateArn);
             return this;
-        }
-        public DomainConfigurationArgs build() {
+        }        public DomainConfigurationArgs build() {
             return new DomainConfigurationArgs(authorizerConfig, domainConfigurationName, domainConfigurationStatus, domainName, serverCertificateArns, serviceType, tags, validationCertificateArn);
         }
     }

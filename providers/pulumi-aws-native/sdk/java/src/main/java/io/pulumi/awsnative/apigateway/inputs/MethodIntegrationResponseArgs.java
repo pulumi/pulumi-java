@@ -124,52 +124,42 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
             this.contentHandling = contentHandling;
             return this;
         }
-
         public Builder contentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
             this.contentHandling = Output.ofNullable(contentHandling);
             return this;
         }
-
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
-
         public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
-
         public Builder responseTemplates(@Nullable Output<Object> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
-
         public Builder responseTemplates(@Nullable Object responseTemplates) {
             this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
-
         public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
-
         public Builder selectionPattern(@Nullable String selectionPattern) {
             this.selectionPattern = Output.ofNullable(selectionPattern);
             return this;
         }
-
         public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public Builder statusCode(String statusCode) {
             this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
-        }
-        public MethodIntegrationResponseArgs build() {
+        }        public MethodIntegrationResponseArgs build() {
             return new MethodIntegrationResponseArgs(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
         }
     }

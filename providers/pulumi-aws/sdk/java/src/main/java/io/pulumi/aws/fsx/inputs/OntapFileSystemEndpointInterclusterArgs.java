@@ -75,22 +75,21 @@ public final class OntapFileSystemEndpointInterclusterArgs extends io.pulumi.res
             this.dnsName = dnsName;
             return this;
         }
-
         public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
-
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
-        public OntapFileSystemEndpointInterclusterArgs build() {
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }        public OntapFileSystemEndpointInterclusterArgs build() {
             return new OntapFileSystemEndpointInterclusterArgs(dnsName, ipAddresses);
         }
     }

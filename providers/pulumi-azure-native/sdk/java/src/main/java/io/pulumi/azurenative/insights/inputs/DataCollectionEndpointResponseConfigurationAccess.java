@@ -58,8 +58,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess extends io.
         public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
-        }
-        public DataCollectionEndpointResponseConfigurationAccess build() {
+        }        public DataCollectionEndpointResponseConfigurationAccess build() {
             return new DataCollectionEndpointResponseConfigurationAccess(endpoint);
         }
     }

@@ -53,8 +53,7 @@ public final class CloudErrorResponse {
         public Builder error(@Nullable CloudErrorBodyResponse error) {
             this.error = error;
             return this;
-        }
-        public CloudErrorResponse build() {
+        }        public CloudErrorResponse build() {
             return new CloudErrorResponse(error);
         }
     }

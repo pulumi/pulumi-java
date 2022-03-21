@@ -79,12 +79,10 @@ public final class FirewallPolicyIntrusionDetectionResponse extends io.pulumi.re
             this.configuration = configuration;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
-        }
-        public FirewallPolicyIntrusionDetectionResponse build() {
+        }        public FirewallPolicyIntrusionDetectionResponse build() {
             return new FirewallPolicyIntrusionDetectionResponse(configuration, mode);
         }
     }

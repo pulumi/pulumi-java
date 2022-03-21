@@ -56,12 +56,10 @@ public final class ClusterClusterTelemetryArgs extends io.pulumi.resources.Resou
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ClusterClusterTelemetryArgs build() {
+        }        public ClusterClusterTelemetryArgs build() {
             return new ClusterClusterTelemetryArgs(type);
         }
     }

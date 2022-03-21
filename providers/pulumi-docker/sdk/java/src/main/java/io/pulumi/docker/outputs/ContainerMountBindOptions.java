@@ -45,8 +45,7 @@ public final class ContainerMountBindOptions {
         public Builder propagation(@Nullable String propagation) {
             this.propagation = propagation;
             return this;
-        }
-        public ContainerMountBindOptions build() {
+        }        public ContainerMountBindOptions build() {
             return new ContainerMountBindOptions(propagation);
         }
     }

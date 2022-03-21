@@ -69,12 +69,10 @@ public final class WebAclRuleActionCountCustomRequestHandlingInsertHeader {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public WebAclRuleActionCountCustomRequestHandlingInsertHeader build() {
+        }        public WebAclRuleActionCountCustomRequestHandlingInsertHeader build() {
             return new WebAclRuleActionCountCustomRequestHandlingInsertHeader(name, value);
         }
     }

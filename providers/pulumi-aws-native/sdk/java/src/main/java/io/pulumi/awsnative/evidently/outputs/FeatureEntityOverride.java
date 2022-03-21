@@ -55,12 +55,10 @@ public final class FeatureEntityOverride {
             this.entityId = entityId;
             return this;
         }
-
         public Builder variation(@Nullable String variation) {
             this.variation = variation;
             return this;
-        }
-        public FeatureEntityOverride build() {
+        }        public FeatureEntityOverride build() {
             return new FeatureEntityOverride(entityId, variation);
         }
     }

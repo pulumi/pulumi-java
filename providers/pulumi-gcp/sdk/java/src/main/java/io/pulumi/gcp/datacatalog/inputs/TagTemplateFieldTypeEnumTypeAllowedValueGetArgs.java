@@ -56,12 +56,10 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
-        }
-        public TagTemplateFieldTypeEnumTypeAllowedValueGetArgs build() {
+        }        public TagTemplateFieldTypeEnumTypeAllowedValueGetArgs build() {
             return new TagTemplateFieldTypeEnumTypeAllowedValueGetArgs(displayName);
         }
     }

@@ -69,12 +69,10 @@ public final class ApplianceCredentialKubeconfigResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ApplianceCredentialKubeconfigResponse build() {
+        }        public ApplianceCredentialKubeconfigResponse build() {
             return new ApplianceCredentialKubeconfigResponse(name, value);
         }
     }

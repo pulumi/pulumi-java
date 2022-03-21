@@ -76,22 +76,21 @@ public final class PolicyListPolicyDenyArgs extends io.pulumi.resources.Resource
             this.all = all;
             return this;
         }
-
         public Builder all(@Nullable Boolean all) {
             this.all = Output.ofNullable(all);
             return this;
         }
-
         public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = Output.ofNullable(values);
             return this;
         }
-        public PolicyListPolicyDenyArgs build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public PolicyListPolicyDenyArgs build() {
             return new PolicyListPolicyDenyArgs(all, values);
         }
     }

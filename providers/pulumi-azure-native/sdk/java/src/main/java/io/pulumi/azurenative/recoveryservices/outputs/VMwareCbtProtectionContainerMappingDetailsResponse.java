@@ -151,37 +151,30 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
-
         public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
-
         public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
-
         public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
             this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
             return this;
         }
-
         public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
             this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
             return this;
         }
-
         public Builder targetLocation(String targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
-        }
-        public VMwareCbtProtectionContainerMappingDetailsResponse build() {
+        }        public VMwareCbtProtectionContainerMappingDetailsResponse build() {
             return new VMwareCbtProtectionContainerMappingDetailsResponse(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
         }
     }

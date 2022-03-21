@@ -156,72 +156,58 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactRoot = artifactRoot;
             return this;
         }
-
         public Builder artifactRoot(@Nullable String artifactRoot) {
             this.artifactRoot = Output.ofNullable(artifactRoot);
             return this;
         }
-
         public Builder artifactSourceName(@Nullable Output<String> artifactSourceName) {
             this.artifactSourceName = artifactSourceName;
             return this;
         }
-
         public Builder artifactSourceName(@Nullable String artifactSourceName) {
             this.artifactSourceName = Output.ofNullable(artifactSourceName);
             return this;
         }
-
         public Builder authentication(Output<SasAuthenticationArgs> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
-
         public Builder authentication(SasAuthenticationArgs authentication) {
             this.authentication = Output.of(Objects.requireNonNull(authentication));
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sourceType(Output<String> sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public Builder sourceType(String sourceType) {
             this.sourceType = Output.of(Objects.requireNonNull(sourceType));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public ArtifactSourceArgs build() {
+        }        public ArtifactSourceArgs build() {
             return new ArtifactSourceArgs(artifactRoot, artifactSourceName, authentication, location, resourceGroupName, sourceType, tags);
         }
     }

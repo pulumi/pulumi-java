@@ -94,32 +94,26 @@ public final class KpiThresholdsArgs extends io.pulumi.resources.ResourceArgs {
             this.increasingKpi = Objects.requireNonNull(increasingKpi);
             return this;
         }
-
         public Builder increasingKpi(Boolean increasingKpi) {
             this.increasingKpi = Output.of(Objects.requireNonNull(increasingKpi));
             return this;
         }
-
         public Builder lowerLimit(Output<Double> lowerLimit) {
             this.lowerLimit = Objects.requireNonNull(lowerLimit);
             return this;
         }
-
         public Builder lowerLimit(Double lowerLimit) {
             this.lowerLimit = Output.of(Objects.requireNonNull(lowerLimit));
             return this;
         }
-
         public Builder upperLimit(Output<Double> upperLimit) {
             this.upperLimit = Objects.requireNonNull(upperLimit);
             return this;
         }
-
         public Builder upperLimit(Double upperLimit) {
             this.upperLimit = Output.of(Objects.requireNonNull(upperLimit));
             return this;
-        }
-        public KpiThresholdsArgs build() {
+        }        public KpiThresholdsArgs build() {
             return new KpiThresholdsArgs(increasingKpi, lowerLimit, upperLimit);
         }
     }

@@ -71,12 +71,13 @@ public final class ImageAnnotationResponse {
             this.boundingPolys = Objects.requireNonNull(boundingPolys);
             return this;
         }
-
+        public Builder boundingPolys(BoundingPolyResponse... boundingPolys) {
+            return boundingPolys(List.of(boundingPolys));
+        }
         public Builder frameIndex(Integer frameIndex) {
             this.frameIndex = Objects.requireNonNull(frameIndex);
             return this;
-        }
-        public ImageAnnotationResponse build() {
+        }        public ImageAnnotationResponse build() {
             return new ImageAnnotationResponse(boundingPolys, frameIndex);
         }
     }

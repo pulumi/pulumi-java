@@ -75,12 +75,10 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetRoleArgs build() {
+        }        public GetRoleArgs build() {
             return new GetRoleArgs(name, tags);
         }
     }

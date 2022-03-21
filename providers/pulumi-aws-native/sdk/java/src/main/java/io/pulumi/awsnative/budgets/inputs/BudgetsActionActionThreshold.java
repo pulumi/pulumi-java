@@ -65,12 +65,10 @@ public final class BudgetsActionActionThreshold extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BudgetsActionActionThreshold build() {
+        }        public BudgetsActionActionThreshold build() {
             return new BudgetsActionActionThreshold(type, value);
         }
     }

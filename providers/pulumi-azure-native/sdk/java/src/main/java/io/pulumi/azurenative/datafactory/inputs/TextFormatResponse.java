@@ -240,62 +240,50 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
-
         public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = deserializer;
             return this;
         }
-
         public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
-
         public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
-
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
-
         public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = nullValue;
             return this;
         }
-
         public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
-
         public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
-
         public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
-
         public Builder skipLineCount(@Nullable Object skipLineCount) {
             this.skipLineCount = skipLineCount;
             return this;
         }
-
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
             this.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public TextFormatResponse build() {
+        }        public TextFormatResponse build() {
             return new TextFormatResponse(columnDelimiter, deserializer, encodingName, escapeChar, firstRowAsHeader, nullValue, quoteChar, rowDelimiter, serializer, skipLineCount, treatEmptyAsNull, type);
         }
     }

@@ -241,62 +241,56 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
             this.buildOptions = Objects.requireNonNull(buildOptions);
             return this;
         }
-
         public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
-
         public Builder builtArtifacts(List<ArtifactResponse> builtArtifacts) {
             this.builtArtifacts = Objects.requireNonNull(builtArtifacts);
             return this;
         }
-
+        public Builder builtArtifacts(ArtifactResponse... builtArtifacts) {
+            return builtArtifacts(List.of(builtArtifacts));
+        }
         public Builder commands(List<CommandResponse> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
-
+        public Builder commands(CommandResponse... commands) {
+            return commands(List.of(commands));
+        }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder logsUri(String logsUri) {
             this.logsUri = Objects.requireNonNull(logsUri);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder sourceProvenance(SourceResponse sourceProvenance) {
             this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder triggerId(String triggerId) {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
-        }
-        public BuildProvenanceResponse build() {
+        }        public BuildProvenanceResponse build() {
             return new BuildProvenanceResponse(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, endTime, logsUri, project, sourceProvenance, startTime, triggerId);
         }
     }

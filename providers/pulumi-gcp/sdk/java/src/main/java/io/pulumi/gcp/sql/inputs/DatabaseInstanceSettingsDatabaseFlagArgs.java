@@ -75,22 +75,18 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public DatabaseInstanceSettingsDatabaseFlagArgs build() {
+        }        public DatabaseInstanceSettingsDatabaseFlagArgs build() {
             return new DatabaseInstanceSettingsDatabaseFlagArgs(name, value);
         }
     }

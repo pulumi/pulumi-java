@@ -169,47 +169,44 @@ public final class GetRepositoryResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder encryptionConfigurations(List<GetRepositoryEncryptionConfiguration> encryptionConfigurations) {
             this.encryptionConfigurations = Objects.requireNonNull(encryptionConfigurations);
             return this;
         }
-
+        public Builder encryptionConfigurations(GetRepositoryEncryptionConfiguration... encryptionConfigurations) {
+            return encryptionConfigurations(List.of(encryptionConfigurations));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder imageScanningConfigurations(List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations) {
             this.imageScanningConfigurations = Objects.requireNonNull(imageScanningConfigurations);
             return this;
         }
-
+        public Builder imageScanningConfigurations(GetRepositoryImageScanningConfiguration... imageScanningConfigurations) {
+            return imageScanningConfigurations(List.of(imageScanningConfigurations));
+        }
         public Builder imageTagMutability(String imageTagMutability) {
             this.imageTagMutability = Objects.requireNonNull(imageTagMutability);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
-        }
-        public GetRepositoryResult build() {
+        }        public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, encryptionConfigurations, id, imageScanningConfigurations, imageTagMutability, name, registryId, repositoryUrl, tags);
         }
     }

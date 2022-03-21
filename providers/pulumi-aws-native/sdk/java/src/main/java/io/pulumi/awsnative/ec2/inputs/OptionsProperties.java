@@ -94,17 +94,14 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
-
         public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
-
         public Builder ipv6Support(@Nullable String ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
-        }
-        public OptionsProperties build() {
+        }        public OptionsProperties build() {
             return new OptionsProperties(applianceModeSupport, dnsSupport, ipv6Support);
         }
     }

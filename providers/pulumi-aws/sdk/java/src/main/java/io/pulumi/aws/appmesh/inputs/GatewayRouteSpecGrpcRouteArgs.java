@@ -74,22 +74,18 @@ public final class GatewayRouteSpecGrpcRouteArgs extends io.pulumi.resources.Res
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public Builder action(GatewayRouteSpecGrpcRouteActionArgs action) {
             this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
-
         public Builder match(Output<GatewayRouteSpecGrpcRouteMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
-
         public Builder match(GatewayRouteSpecGrpcRouteMatchArgs match) {
             this.match = Output.of(Objects.requireNonNull(match));
             return this;
-        }
-        public GatewayRouteSpecGrpcRouteArgs build() {
+        }        public GatewayRouteSpecGrpcRouteArgs build() {
             return new GatewayRouteSpecGrpcRouteArgs(action, match);
         }
     }

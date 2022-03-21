@@ -62,17 +62,14 @@ public final class GetClusterClusterAutoscalingResourceLimit {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
-
         public Builder minimum(Integer minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
-        }
-        public GetClusterClusterAutoscalingResourceLimit build() {
+        }        public GetClusterClusterAutoscalingResourceLimit build() {
             return new GetClusterClusterAutoscalingResourceLimit(maximum, minimum, resourceType);
         }
     }

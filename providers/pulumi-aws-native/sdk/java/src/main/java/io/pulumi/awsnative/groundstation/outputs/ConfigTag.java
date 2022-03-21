@@ -55,12 +55,10 @@ public final class ConfigTag {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public ConfigTag build() {
+        }        public ConfigTag build() {
             return new ConfigTag(key, value);
         }
     }

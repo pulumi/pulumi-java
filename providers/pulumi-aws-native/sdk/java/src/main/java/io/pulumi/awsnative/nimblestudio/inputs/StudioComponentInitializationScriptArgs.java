@@ -104,42 +104,34 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
             this.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
-
         public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
             this.launchProfileProtocolVersion = Output.ofNullable(launchProfileProtocolVersion);
             return this;
         }
-
         public Builder platform(@Nullable Output<StudioComponentLaunchProfilePlatform> platform) {
             this.platform = platform;
             return this;
         }
-
         public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
             this.platform = Output.ofNullable(platform);
             return this;
         }
-
         public Builder runContext(@Nullable Output<StudioComponentInitializationScriptRunContext> runContext) {
             this.runContext = runContext;
             return this;
         }
-
         public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
             this.runContext = Output.ofNullable(runContext);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
-        }
-        public StudioComponentInitializationScriptArgs build() {
+        }        public StudioComponentInitializationScriptArgs build() {
             return new StudioComponentInitializationScriptArgs(launchProfileProtocolVersion, platform, runContext, script);
         }
     }

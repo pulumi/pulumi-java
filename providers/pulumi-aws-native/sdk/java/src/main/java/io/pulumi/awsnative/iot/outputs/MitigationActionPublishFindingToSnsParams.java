@@ -51,8 +51,7 @@ public final class MitigationActionPublishFindingToSnsParams {
         public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
-        }
-        public MitigationActionPublishFindingToSnsParams build() {
+        }        public MitigationActionPublishFindingToSnsParams build() {
             return new MitigationActionPublishFindingToSnsParams(topicArn);
         }
     }

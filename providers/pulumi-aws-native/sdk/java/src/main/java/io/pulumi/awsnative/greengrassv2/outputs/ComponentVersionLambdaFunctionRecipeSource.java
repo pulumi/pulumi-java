@@ -91,32 +91,29 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
             this.componentDependencies = componentDependencies;
             return this;
         }
-
         public Builder componentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters) {
             this.componentLambdaParameters = componentLambdaParameters;
             return this;
         }
-
         public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
-
         public Builder componentPlatforms(@Nullable List<ComponentVersionComponentPlatform> componentPlatforms) {
             this.componentPlatforms = componentPlatforms;
             return this;
         }
-
+        public Builder componentPlatforms(ComponentVersionComponentPlatform... componentPlatforms) {
+            return componentPlatforms(List.of(componentPlatforms));
+        }
         public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
-
         public Builder lambdaArn(@Nullable String lambdaArn) {
             this.lambdaArn = lambdaArn;
             return this;
-        }
-        public ComponentVersionLambdaFunctionRecipeSource build() {
+        }        public ComponentVersionLambdaFunctionRecipeSource build() {
             return new ComponentVersionLambdaFunctionRecipeSource(componentDependencies, componentLambdaParameters, componentName, componentPlatforms, componentVersion, lambdaArn);
         }
     }

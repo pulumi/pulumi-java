@@ -90,22 +90,18 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder privateConnectionId(String privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder routeId(String routeId) {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
-        }
-        public GetRouteArgs build() {
+        }        public GetRouteArgs build() {
             return new GetRouteArgs(location, privateConnectionId, project, routeId);
         }
     }

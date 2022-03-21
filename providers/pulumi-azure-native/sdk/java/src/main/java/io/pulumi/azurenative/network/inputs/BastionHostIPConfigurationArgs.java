@@ -129,52 +129,42 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
-
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
             return this;
         }
-
         public Builder publicIPAddress(Output<SubResourceArgs> publicIPAddress) {
             this.publicIPAddress = Objects.requireNonNull(publicIPAddress);
             return this;
         }
-
         public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
             this.publicIPAddress = Output.of(Objects.requireNonNull(publicIPAddress));
             return this;
         }
-
         public Builder subnet(Output<SubResourceArgs> subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public Builder subnet(SubResourceArgs subnet) {
             this.subnet = Output.of(Objects.requireNonNull(subnet));
             return this;
-        }
-        public BastionHostIPConfigurationArgs build() {
+        }        public BastionHostIPConfigurationArgs build() {
             return new BastionHostIPConfigurationArgs(id, name, privateIPAllocationMethod, publicIPAddress, subnet);
         }
     }

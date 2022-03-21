@@ -106,42 +106,34 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
-
         public Builder accountName(String accountName) {
             this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
-
         public Builder applicationName(Output<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
-
         public Builder applicationName(String applicationName) {
             this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
-
         public Builder versionName(@Nullable String versionName) {
             this.versionName = Output.ofNullable(versionName);
             return this;
-        }
-        public ApplicationPackageArgs build() {
+        }        public ApplicationPackageArgs build() {
             return new ApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);
         }
     }

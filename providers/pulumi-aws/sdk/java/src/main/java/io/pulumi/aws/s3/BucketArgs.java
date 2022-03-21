@@ -395,207 +395,178 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             this.accelerationStatus = accelerationStatus;
             return this;
         }
-
         public Builder accelerationStatus(@Nullable String accelerationStatus) {
             this.accelerationStatus = Output.ofNullable(accelerationStatus);
             return this;
         }
-
         public Builder acl(@Nullable Output<Either<String,CannedAcl>> acl) {
             this.acl = acl;
             return this;
         }
-
         public Builder acl(@Nullable Either<String,CannedAcl> acl) {
             this.acl = Output.ofNullable(acl);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
-
         public Builder bucket(@Nullable String bucket) {
             this.bucket = Output.ofNullable(bucket);
             return this;
         }
-
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
-
         public Builder corsRules(@Nullable Output<List<BucketCorsRuleArgs>> corsRules) {
             this.corsRules = corsRules;
             return this;
         }
-
         public Builder corsRules(@Nullable List<BucketCorsRuleArgs> corsRules) {
             this.corsRules = Output.ofNullable(corsRules);
             return this;
         }
-
+        public Builder corsRules(BucketCorsRuleArgs... corsRules) {
+            return corsRules(List.of(corsRules));
+        }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
-
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
-
         public Builder grants(@Nullable Output<List<BucketGrantArgs>> grants) {
             this.grants = grants;
             return this;
         }
-
         public Builder grants(@Nullable List<BucketGrantArgs> grants) {
             this.grants = Output.ofNullable(grants);
             return this;
         }
-
+        public Builder grants(BucketGrantArgs... grants) {
+            return grants(List.of(grants));
+        }
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
-
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
-
         public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules) {
             this.lifecycleRules = lifecycleRules;
             return this;
         }
-
         public Builder lifecycleRules(@Nullable List<BucketLifecycleRuleArgs> lifecycleRules) {
             this.lifecycleRules = Output.ofNullable(lifecycleRules);
             return this;
         }
-
+        public Builder lifecycleRules(BucketLifecycleRuleArgs... lifecycleRules) {
+            return lifecycleRules(List.of(lifecycleRules));
+        }
         public Builder loggings(@Nullable Output<List<BucketLoggingArgs>> loggings) {
             this.loggings = loggings;
             return this;
         }
-
         public Builder loggings(@Nullable List<BucketLoggingArgs> loggings) {
             this.loggings = Output.ofNullable(loggings);
             return this;
         }
-
+        public Builder loggings(BucketLoggingArgs... loggings) {
+            return loggings(List.of(loggings));
+        }
         public Builder objectLockConfiguration(@Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
             this.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
-
         public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
             this.objectLockConfiguration = Output.ofNullable(objectLockConfiguration);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
-
         public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
             this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
             return this;
         }
-
         public Builder requestPayer(@Nullable Output<String> requestPayer) {
             this.requestPayer = requestPayer;
             return this;
         }
-
         public Builder requestPayer(@Nullable String requestPayer) {
             this.requestPayer = Output.ofNullable(requestPayer);
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable Output<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
-
         public Builder serverSideEncryptionConfiguration(@Nullable BucketServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
-
         public Builder versioning(@Nullable BucketVersioningArgs versioning) {
             this.versioning = Output.ofNullable(versioning);
             return this;
         }
-
         public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
             this.website = website;
             return this;
         }
-
         public Builder website(@Nullable BucketWebsiteArgs website) {
             this.website = Output.ofNullable(website);
             return this;
         }
-
         public Builder websiteDomain(@Nullable Output<String> websiteDomain) {
             this.websiteDomain = websiteDomain;
             return this;
         }
-
         public Builder websiteDomain(@Nullable String websiteDomain) {
             this.websiteDomain = Output.ofNullable(websiteDomain);
             return this;
         }
-
         public Builder websiteEndpoint(@Nullable Output<String> websiteEndpoint) {
             this.websiteEndpoint = websiteEndpoint;
             return this;
         }
-
         public Builder websiteEndpoint(@Nullable String websiteEndpoint) {
             this.websiteEndpoint = Output.ofNullable(websiteEndpoint);
             return this;
-        }
-        public BucketArgs build() {
+        }        public BucketArgs build() {
             return new BucketArgs(accelerationStatus, acl, arn, bucket, bucketPrefix, corsRules, forceDestroy, grants, hostedZoneId, lifecycleRules, loggings, objectLockConfiguration, policy, replicationConfiguration, requestPayer, serverSideEncryptionConfiguration, tags, versioning, website, websiteDomain, websiteEndpoint);
         }
     }

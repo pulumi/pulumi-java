@@ -286,152 +286,122 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
             this.category = Objects.requireNonNull(category);
             return this;
         }
-
         public Builder category(String category) {
             this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
-
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder identity(@Nullable Output<WorkbookManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
-
         public Builder identity(@Nullable WorkbookManagedIdentityArgs identity) {
             this.identity = Output.ofNullable(identity);
             return this;
         }
-
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Output.ofNullable(kind);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
-
         public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
-
         public Builder serializedData(Output<String> serializedData) {
             this.serializedData = Objects.requireNonNull(serializedData);
             return this;
         }
-
         public Builder serializedData(String serializedData) {
             this.serializedData = Output.of(Objects.requireNonNull(serializedData));
             return this;
         }
-
         public Builder sourceId(@Nullable Output<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
-
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Output.ofNullable(sourceId);
             return this;
         }
-
         public Builder storageUri(@Nullable Output<String> storageUri) {
             this.storageUri = storageUri;
             return this;
         }
-
         public Builder storageUri(@Nullable String storageUri) {
             this.storageUri = Output.ofNullable(storageUri);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public WorkbookArgs build() {
+        }        public WorkbookArgs build() {
             return new WorkbookArgs(category, displayName, id, identity, kind, location, name, resourceGroupName, resourceName, serializedData, sourceId, storageUri, tags, type, version);
         }
     }

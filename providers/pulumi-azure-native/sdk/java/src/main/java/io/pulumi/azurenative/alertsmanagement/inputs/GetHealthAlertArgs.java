@@ -72,12 +72,10 @@ public final class GetHealthAlertArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
-        }
-        public GetHealthAlertArgs build() {
+        }        public GetHealthAlertArgs build() {
             return new GetHealthAlertArgs(resourceGroupName, ruleName);
         }
     }

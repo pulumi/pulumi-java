@@ -79,32 +79,26 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
             this.credentials = credentials;
             return this;
         }
-
         public Builder credentials(@Nullable String credentials) {
             this.credentials = Output.ofNullable(credentials);
             return this;
         }
-
         public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
-
         public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
-        }
-        public DataSourceProxyConfigurationArgs build() {
+        }        public DataSourceProxyConfigurationArgs build() {
             return new DataSourceProxyConfigurationArgs(credentials, host, port);
         }
     }

@@ -57,12 +57,10 @@ public final class NodeGroupResourceAutoscalingGroupGetArgs extends io.pulumi.re
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public NodeGroupResourceAutoscalingGroupGetArgs build() {
+        }        public NodeGroupResourceAutoscalingGroupGetArgs build() {
             return new NodeGroupResourceAutoscalingGroupGetArgs(name);
         }
     }

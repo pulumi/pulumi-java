@@ -75,12 +75,10 @@ public final class GetDirectoryArgs extends io.pulumi.resources.InvokeArgs {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDirectoryArgs build() {
+        }        public GetDirectoryArgs build() {
             return new GetDirectoryArgs(directoryId, tags);
         }
     }

@@ -120,27 +120,22 @@ public final class GetGuestConfigurationHCRPAssignmentResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(GuestConfigurationAssignmentPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetGuestConfigurationHCRPAssignmentResult build() {
+        }        public GetGuestConfigurationHCRPAssignmentResult build() {
             return new GetGuestConfigurationHCRPAssignmentResult(id, location, name, properties, type);
         }
     }

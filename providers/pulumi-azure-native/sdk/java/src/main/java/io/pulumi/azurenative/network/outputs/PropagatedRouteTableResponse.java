@@ -72,12 +72,16 @@ public final class PropagatedRouteTableResponse {
             this.ids = ids;
             return this;
         }
-
+        public Builder ids(SubResourceResponse... ids) {
+            return ids(List.of(ids));
+        }
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
-        public PropagatedRouteTableResponse build() {
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }        public PropagatedRouteTableResponse build() {
             return new PropagatedRouteTableResponse(ids, labels);
         }
     }

@@ -90,17 +90,14 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
-
         public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public Builder select(@Nullable String select) {
             this.select = select;
             return this;
-        }
-        public GetAndroidMAMPolicyByNameArgs build() {
+        }        public GetAndroidMAMPolicyByNameArgs build() {
             return new GetAndroidMAMPolicyByNameArgs(hostName, policyName, select);
         }
     }

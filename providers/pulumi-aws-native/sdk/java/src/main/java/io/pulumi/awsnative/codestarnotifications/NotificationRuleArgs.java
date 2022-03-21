@@ -167,102 +167,88 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
-
         public Builder detailType(Output<NotificationRuleDetailType> detailType) {
             this.detailType = Objects.requireNonNull(detailType);
             return this;
         }
-
         public Builder detailType(NotificationRuleDetailType detailType) {
             this.detailType = Output.of(Objects.requireNonNull(detailType));
             return this;
         }
-
         public Builder eventTypeId(@Nullable Output<String> eventTypeId) {
             this.eventTypeId = eventTypeId;
             return this;
         }
-
         public Builder eventTypeId(@Nullable String eventTypeId) {
             this.eventTypeId = Output.ofNullable(eventTypeId);
             return this;
         }
-
         public Builder eventTypeIds(Output<List<String>> eventTypeIds) {
             this.eventTypeIds = Objects.requireNonNull(eventTypeIds);
             return this;
         }
-
         public Builder eventTypeIds(List<String> eventTypeIds) {
             this.eventTypeIds = Output.of(Objects.requireNonNull(eventTypeIds));
             return this;
         }
-
+        public Builder eventTypeIds(String... eventTypeIds) {
+            return eventTypeIds(List.of(eventTypeIds));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public Builder resource(String resource) {
             this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public Builder status(@Nullable Output<NotificationRuleStatus> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable NotificationRuleStatus status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetAddress(@Nullable Output<String> targetAddress) {
             this.targetAddress = targetAddress;
             return this;
         }
-
         public Builder targetAddress(@Nullable String targetAddress) {
             this.targetAddress = Output.ofNullable(targetAddress);
             return this;
         }
-
         public Builder targets(Output<List<NotificationRuleTargetArgs>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
-
         public Builder targets(List<NotificationRuleTargetArgs> targets) {
             this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
-        public NotificationRuleArgs build() {
+        public Builder targets(NotificationRuleTargetArgs... targets) {
+            return targets(List.of(targets));
+        }        public NotificationRuleArgs build() {
             return new NotificationRuleArgs(createdBy, detailType, eventTypeId, eventTypeIds, name, resource, status, tags, targetAddress, targets);
         }
     }

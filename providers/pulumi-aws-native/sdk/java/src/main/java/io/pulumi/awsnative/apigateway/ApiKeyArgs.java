@@ -174,82 +174,72 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.customerId = customerId;
             return this;
         }
-
         public Builder customerId(@Nullable String customerId) {
             this.customerId = Output.ofNullable(customerId);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder generateDistinctId(@Nullable Output<Boolean> generateDistinctId) {
             this.generateDistinctId = generateDistinctId;
             return this;
         }
-
         public Builder generateDistinctId(@Nullable Boolean generateDistinctId) {
             this.generateDistinctId = Output.ofNullable(generateDistinctId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder stageKeys(@Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys) {
             this.stageKeys = stageKeys;
             return this;
         }
-
         public Builder stageKeys(@Nullable List<ApiKeyStageKeyArgs> stageKeys) {
             this.stageKeys = Output.ofNullable(stageKeys);
             return this;
         }
-
+        public Builder stageKeys(ApiKeyStageKeyArgs... stageKeys) {
+            return stageKeys(List.of(stageKeys));
+        }
         public Builder tags(@Nullable Output<List<ApiKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ApiKeyTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ApiKeyTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public ApiKeyArgs build() {
+        }        public ApiKeyArgs build() {
             return new ApiKeyArgs(customerId, description, enabled, generateDistinctId, name, stageKeys, tags, value);
         }
     }

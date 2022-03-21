@@ -109,42 +109,34 @@ public final class RegistryImageArgs extends io.pulumi.resources.ResourceArgs {
             this.build = build;
             return this;
         }
-
         public Builder build(@Nullable RegistryImageBuildArgs build) {
             this.build = Output.ofNullable(build);
             return this;
         }
-
         public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
             this.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
-
         public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
             this.insecureSkipVerify = Output.ofNullable(insecureSkipVerify);
             return this;
         }
-
         public Builder keepRemotely(@Nullable Output<Boolean> keepRemotely) {
             this.keepRemotely = keepRemotely;
             return this;
         }
-
         public Builder keepRemotely(@Nullable Boolean keepRemotely) {
             this.keepRemotely = Output.ofNullable(keepRemotely);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public RegistryImageArgs build() {
+        }        public RegistryImageArgs build() {
             return new RegistryImageArgs(build, insecureSkipVerify, keepRemotely, name);
         }
     }

@@ -136,32 +136,26 @@ public final class NetworkInterfaceTapConfigurationResponse {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder virtualNetworkTap(@Nullable VirtualNetworkTapResponse virtualNetworkTap) {
             this.virtualNetworkTap = virtualNetworkTap;
             return this;
-        }
-        public NetworkInterfaceTapConfigurationResponse build() {
+        }        public NetworkInterfaceTapConfigurationResponse build() {
             return new NetworkInterfaceTapConfigurationResponse(etag, id, name, provisioningState, type, virtualNetworkTap);
         }
     }

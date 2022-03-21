@@ -122,27 +122,22 @@ public final class PersistentVolumeClaim {
             this.apiVersion = apiVersion;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
-
         public Builder spec(@Nullable PersistentVolumeClaimSpec spec) {
             this.spec = spec;
             return this;
         }
-
         public Builder status(@Nullable PersistentVolumeClaimStatus status) {
             this.status = status;
             return this;
-        }
-        public PersistentVolumeClaim build() {
+        }        public PersistentVolumeClaim build() {
             return new PersistentVolumeClaim(apiVersion, kind, metadata, spec, status);
         }
     }

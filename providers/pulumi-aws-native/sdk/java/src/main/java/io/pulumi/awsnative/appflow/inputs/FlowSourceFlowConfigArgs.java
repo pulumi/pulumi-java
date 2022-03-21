@@ -113,42 +113,34 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
             this.connectorProfileName = connectorProfileName;
             return this;
         }
-
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
-
         public Builder connectorType(Output<FlowConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
-
         public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
-
         public Builder incrementalPullConfig(@Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
-
         public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfigArgs incrementalPullConfig) {
             this.incrementalPullConfig = Output.ofNullable(incrementalPullConfig);
             return this;
         }
-
         public Builder sourceConnectorProperties(Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
-
         public Builder sourceConnectorProperties(FlowSourceConnectorPropertiesArgs sourceConnectorProperties) {
             this.sourceConnectorProperties = Output.of(Objects.requireNonNull(sourceConnectorProperties));
             return this;
-        }
-        public FlowSourceFlowConfigArgs build() {
+        }        public FlowSourceFlowConfigArgs build() {
             return new FlowSourceFlowConfigArgs(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }
     }

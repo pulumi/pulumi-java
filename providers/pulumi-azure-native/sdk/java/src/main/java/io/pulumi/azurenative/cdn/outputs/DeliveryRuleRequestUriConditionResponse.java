@@ -72,12 +72,10 @@ public final class DeliveryRuleRequestUriConditionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder parameters(RequestUriMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
-        }
-        public DeliveryRuleRequestUriConditionResponse build() {
+        }        public DeliveryRuleRequestUriConditionResponse build() {
             return new DeliveryRuleRequestUriConditionResponse(name, parameters);
         }
     }

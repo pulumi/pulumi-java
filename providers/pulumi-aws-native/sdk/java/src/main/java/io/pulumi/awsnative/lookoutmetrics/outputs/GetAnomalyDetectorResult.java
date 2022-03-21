@@ -114,27 +114,25 @@ public final class GetAnomalyDetectorResult {
             this.anomalyDetectorConfig = anomalyDetectorConfig;
             return this;
         }
-
         public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
             this.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
-
         public Builder metricSetList(@Nullable List<AnomalyDetectorMetricSet> metricSetList) {
             this.metricSetList = metricSetList;
             return this;
         }
-        public GetAnomalyDetectorResult build() {
+        public Builder metricSetList(AnomalyDetectorMetricSet... metricSetList) {
+            return metricSetList(List.of(metricSetList));
+        }        public GetAnomalyDetectorResult build() {
             return new GetAnomalyDetectorResult(anomalyDetectorConfig, anomalyDetectorDescription, arn, kmsKeyArn, metricSetList);
         }
     }

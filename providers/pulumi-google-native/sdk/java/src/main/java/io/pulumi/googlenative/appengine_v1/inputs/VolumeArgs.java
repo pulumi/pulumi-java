@@ -95,32 +95,26 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sizeGb(@Nullable Output<Double> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
-
         public Builder sizeGb(@Nullable Double sizeGb) {
             this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
-
         public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
-
         public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Output.ofNullable(volumeType);
             return this;
-        }
-        public VolumeArgs build() {
+        }        public VolumeArgs build() {
             return new VolumeArgs(name, sizeGb, volumeType);
         }
     }

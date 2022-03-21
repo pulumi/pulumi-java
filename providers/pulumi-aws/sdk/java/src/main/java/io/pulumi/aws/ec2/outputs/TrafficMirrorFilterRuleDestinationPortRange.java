@@ -71,12 +71,10 @@ public final class TrafficMirrorFilterRuleDestinationPortRange {
             this.fromPort = fromPort;
             return this;
         }
-
         public Builder toPort(@Nullable Integer toPort) {
             this.toPort = toPort;
             return this;
-        }
-        public TrafficMirrorFilterRuleDestinationPortRange build() {
+        }        public TrafficMirrorFilterRuleDestinationPortRange build() {
             return new TrafficMirrorFilterRuleDestinationPortRange(fromPort, toPort);
         }
     }

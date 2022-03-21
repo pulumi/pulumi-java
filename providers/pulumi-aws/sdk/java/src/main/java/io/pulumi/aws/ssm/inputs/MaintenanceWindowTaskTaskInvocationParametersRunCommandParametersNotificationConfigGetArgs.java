@@ -91,32 +91,29 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             this.notificationArn = notificationArn;
             return this;
         }
-
         public Builder notificationArn(@Nullable String notificationArn) {
             this.notificationArn = Output.ofNullable(notificationArn);
             return this;
         }
-
         public Builder notificationEvents(@Nullable Output<List<String>> notificationEvents) {
             this.notificationEvents = notificationEvents;
             return this;
         }
-
         public Builder notificationEvents(@Nullable List<String> notificationEvents) {
             this.notificationEvents = Output.ofNullable(notificationEvents);
             return this;
         }
-
+        public Builder notificationEvents(String... notificationEvents) {
+            return notificationEvents(List.of(notificationEvents));
+        }
         public Builder notificationType(@Nullable Output<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
-
         public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = Output.ofNullable(notificationType);
             return this;
-        }
-        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs build() {
+        }        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs(notificationArn, notificationEvents, notificationType);
         }
     }

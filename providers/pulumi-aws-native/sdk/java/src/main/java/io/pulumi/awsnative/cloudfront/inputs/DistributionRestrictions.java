@@ -50,8 +50,7 @@ public final class DistributionRestrictions extends io.pulumi.resources.InvokeAr
         public Builder geoRestriction(DistributionGeoRestriction geoRestriction) {
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
-        }
-        public DistributionRestrictions build() {
+        }        public DistributionRestrictions build() {
             return new DistributionRestrictions(geoRestriction);
         }
     }

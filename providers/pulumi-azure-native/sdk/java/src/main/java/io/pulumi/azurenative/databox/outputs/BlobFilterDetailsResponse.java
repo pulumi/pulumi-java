@@ -87,17 +87,23 @@ public final class BlobFilterDetailsResponse {
             this.blobPathList = blobPathList;
             return this;
         }
-
+        public Builder blobPathList(String... blobPathList) {
+            return blobPathList(List.of(blobPathList));
+        }
         public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
             this.blobPrefixList = blobPrefixList;
             return this;
         }
-
+        public Builder blobPrefixList(String... blobPrefixList) {
+            return blobPrefixList(List.of(blobPrefixList));
+        }
         public Builder containerList(@Nullable List<String> containerList) {
             this.containerList = containerList;
             return this;
         }
-        public BlobFilterDetailsResponse build() {
+        public Builder containerList(String... containerList) {
+            return containerList(List.of(containerList));
+        }        public BlobFilterDetailsResponse build() {
             return new BlobFilterDetailsResponse(blobPathList, blobPrefixList, containerList);
         }
     }

@@ -58,8 +58,7 @@ public final class BinaryAuthorizationResponse extends io.pulumi.resources.Invok
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public BinaryAuthorizationResponse build() {
+        }        public BinaryAuthorizationResponse build() {
             return new BinaryAuthorizationResponse(enabled);
         }
     }

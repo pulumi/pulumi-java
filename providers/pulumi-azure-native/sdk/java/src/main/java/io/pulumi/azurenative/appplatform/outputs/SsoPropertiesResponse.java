@@ -104,22 +104,21 @@ public final class SsoPropertiesResponse {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
-
         public Builder scope(@Nullable List<String> scope) {
             this.scope = scope;
             return this;
         }
-        public SsoPropertiesResponse build() {
+        public Builder scope(String... scope) {
+            return scope(List.of(scope));
+        }        public SsoPropertiesResponse build() {
             return new SsoPropertiesResponse(clientId, clientSecret, issuerUri, scope);
         }
     }

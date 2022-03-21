@@ -103,22 +103,18 @@ public final class TimeSeriesQueryResponse {
             this.timeSeriesFilter = Objects.requireNonNull(timeSeriesFilter);
             return this;
         }
-
         public Builder timeSeriesFilterRatio(TimeSeriesFilterRatioResponse timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = Objects.requireNonNull(timeSeriesFilterRatio);
             return this;
         }
-
         public Builder timeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = Objects.requireNonNull(timeSeriesQueryLanguage);
             return this;
         }
-
         public Builder unitOverride(String unitOverride) {
             this.unitOverride = Objects.requireNonNull(unitOverride);
             return this;
-        }
-        public TimeSeriesQueryResponse build() {
+        }        public TimeSeriesQueryResponse build() {
             return new TimeSeriesQueryResponse(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
         }
     }

@@ -54,8 +54,7 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
         public Builder historyDefinitionId(String historyDefinitionId) {
             this.historyDefinitionId = Objects.requireNonNull(historyDefinitionId);
             return this;
-        }
-        public GetAccessReviewHistoryDefinitionByIdArgs build() {
+        }        public GetAccessReviewHistoryDefinitionByIdArgs build() {
             return new GetAccessReviewHistoryDefinitionByIdArgs(historyDefinitionId);
         }
     }

@@ -61,12 +61,10 @@ public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.Re
             this.namespace = namespace;
             return this;
         }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = Output.ofNullable(namespace);
             return this;
-        }
-        public SelfSubjectRulesReviewSpecArgs build() {
+        }        public SelfSubjectRulesReviewSpecArgs build() {
             return new SelfSubjectRulesReviewSpecArgs(namespace);
         }
     }

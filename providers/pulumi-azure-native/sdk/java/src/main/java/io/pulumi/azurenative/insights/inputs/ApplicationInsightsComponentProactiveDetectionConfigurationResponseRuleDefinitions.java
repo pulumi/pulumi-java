@@ -175,42 +175,34 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
             this.description = description;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder helpUrl(@Nullable String helpUrl) {
             this.helpUrl = helpUrl;
             return this;
         }
-
         public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
             this.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
-
         public Builder isHidden(@Nullable Boolean isHidden) {
             this.isHidden = isHidden;
             return this;
         }
-
         public Builder isInPreview(@Nullable Boolean isInPreview) {
             this.isInPreview = isInPreview;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
-        }
-        public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions build() {
+        }        public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions build() {
             return new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);
         }
     }

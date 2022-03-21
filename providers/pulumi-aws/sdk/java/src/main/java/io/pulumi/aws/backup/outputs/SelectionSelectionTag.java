@@ -85,17 +85,14 @@ public final class SelectionSelectionTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public SelectionSelectionTag build() {
+        }        public SelectionSelectionTag build() {
             return new SelectionSelectionTag(key, type, value);
         }
     }

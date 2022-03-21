@@ -331,92 +331,77 @@ public final class GetExtensionResult {
             this.aggregateState = Objects.requireNonNull(aggregateState);
             return this;
         }
-
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
-
         public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
-
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
-
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
-
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder perNodeExtensionDetails(List<PerNodeExtensionStateResponse> perNodeExtensionDetails) {
             this.perNodeExtensionDetails = Objects.requireNonNull(perNodeExtensionDetails);
             return this;
         }
-
+        public Builder perNodeExtensionDetails(PerNodeExtensionStateResponse... perNodeExtensionDetails) {
+            return perNodeExtensionDetails(List.of(perNodeExtensionDetails));
+        }
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
-
         public Builder settings(@Nullable Object settings) {
             this.settings = settings;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }
-        public GetExtensionResult build() {
+        }        public GetExtensionResult build() {
             return new GetExtensionResult(aggregateState, autoUpgradeMinorVersion, createdAt, createdBy, createdByType, forceUpdateTag, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, perNodeExtensionDetails, protectedSettings, provisioningState, publisher, settings, type, typeHandlerVersion);
         }
     }

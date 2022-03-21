@@ -80,12 +80,13 @@ public final class ApplicationComponentConfiguration extends io.pulumi.resources
             this.configurationDetails = configurationDetails;
             return this;
         }
-
         public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
-        public ApplicationComponentConfiguration build() {
+        public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfiguration... subComponentTypeConfigurations) {
+            return subComponentTypeConfigurations(List.of(subComponentTypeConfigurations));
+        }        public ApplicationComponentConfiguration build() {
             return new ApplicationComponentConfiguration(configurationDetails, subComponentTypeConfigurations);
         }
     }

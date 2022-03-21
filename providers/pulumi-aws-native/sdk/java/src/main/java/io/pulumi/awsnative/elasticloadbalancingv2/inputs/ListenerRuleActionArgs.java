@@ -144,82 +144,66 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
             this.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
-
         public Builder authenticateCognitoConfig(@Nullable ListenerRuleAuthenticateCognitoConfigArgs authenticateCognitoConfig) {
             this.authenticateCognitoConfig = Output.ofNullable(authenticateCognitoConfig);
             return this;
         }
-
         public Builder authenticateOidcConfig(@Nullable Output<ListenerRuleAuthenticateOidcConfigArgs> authenticateOidcConfig) {
             this.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
-
         public Builder authenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfigArgs authenticateOidcConfig) {
             this.authenticateOidcConfig = Output.ofNullable(authenticateOidcConfig);
             return this;
         }
-
         public Builder fixedResponseConfig(@Nullable Output<ListenerRuleFixedResponseConfigArgs> fixedResponseConfig) {
             this.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
-
         public Builder fixedResponseConfig(@Nullable ListenerRuleFixedResponseConfigArgs fixedResponseConfig) {
             this.fixedResponseConfig = Output.ofNullable(fixedResponseConfig);
             return this;
         }
-
         public Builder forwardConfig(@Nullable Output<ListenerRuleForwardConfigArgs> forwardConfig) {
             this.forwardConfig = forwardConfig;
             return this;
         }
-
         public Builder forwardConfig(@Nullable ListenerRuleForwardConfigArgs forwardConfig) {
             this.forwardConfig = Output.ofNullable(forwardConfig);
             return this;
         }
-
         public Builder order(@Nullable Output<Integer> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable Integer order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder redirectConfig(@Nullable Output<ListenerRuleRedirectConfigArgs> redirectConfig) {
             this.redirectConfig = redirectConfig;
             return this;
         }
-
         public Builder redirectConfig(@Nullable ListenerRuleRedirectConfigArgs redirectConfig) {
             this.redirectConfig = Output.ofNullable(redirectConfig);
             return this;
         }
-
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
-
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ListenerRuleActionArgs build() {
+        }        public ListenerRuleActionArgs build() {
             return new ListenerRuleActionArgs(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
         }
     }

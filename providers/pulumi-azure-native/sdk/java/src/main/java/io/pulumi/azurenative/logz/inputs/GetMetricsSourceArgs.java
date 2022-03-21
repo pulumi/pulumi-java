@@ -88,17 +88,14 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
             this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
             return this;
         }
-
         public Builder monitorName(String monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetMetricsSourceArgs build() {
+        }        public GetMetricsSourceArgs build() {
             return new GetMetricsSourceArgs(metricsSourceName, monitorName, resourceGroupName);
         }
     }

@@ -74,22 +74,18 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public Builder properties(TagsArgs properties) {
             this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public Builder scope(String scope) {
             this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
-        }
-        public TagAtScopeArgs build() {
+        }        public TagAtScopeArgs build() {
             return new TagAtScopeArgs(properties, scope);
         }
     }

@@ -75,22 +75,24 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
             this.sourceNatActiveIps = sourceNatActiveIps;
             return this;
         }
-
         public Builder sourceNatActiveIps(@Nullable List<String> sourceNatActiveIps) {
             this.sourceNatActiveIps = Output.ofNullable(sourceNatActiveIps);
             return this;
         }
-
+        public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
+            return sourceNatActiveIps(List.of(sourceNatActiveIps));
+        }
         public Builder sourceNatDrainIps(@Nullable Output<List<String>> sourceNatDrainIps) {
             this.sourceNatDrainIps = sourceNatDrainIps;
             return this;
         }
-
         public Builder sourceNatDrainIps(@Nullable List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Output.ofNullable(sourceNatDrainIps);
             return this;
         }
-        public RouterNatRuleActionArgs build() {
+        public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
+            return sourceNatDrainIps(List.of(sourceNatDrainIps));
+        }        public RouterNatRuleActionArgs build() {
             return new RouterNatRuleActionArgs(sourceNatActiveIps, sourceNatDrainIps);
         }
     }

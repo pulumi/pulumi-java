@@ -83,17 +83,14 @@ public final class ClusterCapacityProviderStrategyItem extends io.pulumi.resourc
             this.base = base;
             return this;
         }
-
         public Builder capacityProvider(@Nullable String capacityProvider) {
             this.capacityProvider = capacityProvider;
             return this;
         }
-
         public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
-        }
-        public ClusterCapacityProviderStrategyItem build() {
+        }        public ClusterCapacityProviderStrategyItem build() {
             return new ClusterCapacityProviderStrategyItem(base, capacityProvider, weight);
         }
     }

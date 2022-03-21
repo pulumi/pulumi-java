@@ -55,12 +55,10 @@ public final class GetBotVersionResult {
             this.botVersion = botVersion;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
-        }
-        public GetBotVersionResult build() {
+        }        public GetBotVersionResult build() {
             return new GetBotVersionResult(botVersion, description);
         }
     }

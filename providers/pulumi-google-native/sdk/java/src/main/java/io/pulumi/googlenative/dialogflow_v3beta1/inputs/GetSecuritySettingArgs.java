@@ -78,17 +78,14 @@ public final class GetSecuritySettingArgs extends io.pulumi.resources.InvokeArgs
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder securitySettingId(String securitySettingId) {
             this.securitySettingId = Objects.requireNonNull(securitySettingId);
             return this;
-        }
-        public GetSecuritySettingArgs build() {
+        }        public GetSecuritySettingArgs build() {
             return new GetSecuritySettingArgs(location, project, securitySettingId);
         }
     }

@@ -136,32 +136,32 @@ public final class ReportConfigFilterResponse {
             this.and = and;
             return this;
         }
-
+        public Builder and(ReportConfigFilterResponse... and) {
+            return and(List.of(and));
+        }
         public Builder dimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder or(@Nullable List<ReportConfigFilterResponse> or) {
             this.or = or;
             return this;
         }
-
+        public Builder or(ReportConfigFilterResponse... or) {
+            return or(List.of(or));
+        }
         public Builder tagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
             this.tagKey = tagKey;
             return this;
         }
-
         public Builder tagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
             this.tagValue = tagValue;
             return this;
         }
-
         public Builder tags(@Nullable ReportConfigComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
-        }
-        public ReportConfigFilterResponse build() {
+        }        public ReportConfigFilterResponse build() {
             return new ReportConfigFilterResponse(and, dimensions, or, tagKey, tagValue, tags);
         }
     }

@@ -104,22 +104,18 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
-
         public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
-        }
-        public RowAccessPolicyReferenceResponse build() {
+        }        public RowAccessPolicyReferenceResponse build() {
             return new RowAccessPolicyReferenceResponse(datasetId, policyId, project, tableId);
         }
     }

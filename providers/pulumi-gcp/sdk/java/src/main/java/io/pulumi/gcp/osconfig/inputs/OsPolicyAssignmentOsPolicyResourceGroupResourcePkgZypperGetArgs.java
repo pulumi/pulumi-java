@@ -56,12 +56,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetAr
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs build() {
+        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs(name);
         }
     }

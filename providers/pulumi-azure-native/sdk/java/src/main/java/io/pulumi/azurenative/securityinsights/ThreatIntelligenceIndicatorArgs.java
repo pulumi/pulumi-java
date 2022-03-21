@@ -580,332 +580,293 @@ public final class ThreatIntelligenceIndicatorArgs extends io.pulumi.resources.R
             this.confidence = confidence;
             return this;
         }
-
         public Builder confidence(@Nullable Integer confidence) {
             this.confidence = Output.ofNullable(confidence);
             return this;
         }
-
         public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
-
         public Builder created(@Nullable String created) {
             this.created = Output.ofNullable(created);
             return this;
         }
-
         public Builder createdByRef(@Nullable Output<String> createdByRef) {
             this.createdByRef = createdByRef;
             return this;
         }
-
         public Builder createdByRef(@Nullable String createdByRef) {
             this.createdByRef = Output.ofNullable(createdByRef);
             return this;
         }
-
         public Builder defanged(@Nullable Output<Boolean> defanged) {
             this.defanged = defanged;
             return this;
         }
-
         public Builder defanged(@Nullable Boolean defanged) {
             this.defanged = Output.ofNullable(defanged);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder extensions(@Nullable Output<Object> extensions) {
             this.extensions = extensions;
             return this;
         }
-
         public Builder extensions(@Nullable Object extensions) {
             this.extensions = Output.ofNullable(extensions);
             return this;
         }
-
         public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
-
         public Builder externalId(@Nullable String externalId) {
             this.externalId = Output.ofNullable(externalId);
             return this;
         }
-
         public Builder externalLastUpdatedTimeUtc(@Nullable Output<String> externalLastUpdatedTimeUtc) {
             this.externalLastUpdatedTimeUtc = externalLastUpdatedTimeUtc;
             return this;
         }
-
         public Builder externalLastUpdatedTimeUtc(@Nullable String externalLastUpdatedTimeUtc) {
             this.externalLastUpdatedTimeUtc = Output.ofNullable(externalLastUpdatedTimeUtc);
             return this;
         }
-
         public Builder externalReferences(@Nullable Output<List<ThreatIntelligenceExternalReferenceArgs>> externalReferences) {
             this.externalReferences = externalReferences;
             return this;
         }
-
         public Builder externalReferences(@Nullable List<ThreatIntelligenceExternalReferenceArgs> externalReferences) {
             this.externalReferences = Output.ofNullable(externalReferences);
             return this;
         }
-
+        public Builder externalReferences(ThreatIntelligenceExternalReferenceArgs... externalReferences) {
+            return externalReferences(List.of(externalReferences));
+        }
         public Builder granularMarkings(@Nullable Output<List<ThreatIntelligenceGranularMarkingModelArgs>> granularMarkings) {
             this.granularMarkings = granularMarkings;
             return this;
         }
-
         public Builder granularMarkings(@Nullable List<ThreatIntelligenceGranularMarkingModelArgs> granularMarkings) {
             this.granularMarkings = Output.ofNullable(granularMarkings);
             return this;
         }
-
+        public Builder granularMarkings(ThreatIntelligenceGranularMarkingModelArgs... granularMarkings) {
+            return granularMarkings(List.of(granularMarkings));
+        }
         public Builder indicatorTypes(@Nullable Output<List<String>> indicatorTypes) {
             this.indicatorTypes = indicatorTypes;
             return this;
         }
-
         public Builder indicatorTypes(@Nullable List<String> indicatorTypes) {
             this.indicatorTypes = Output.ofNullable(indicatorTypes);
             return this;
         }
-
+        public Builder indicatorTypes(String... indicatorTypes) {
+            return indicatorTypes(List.of(indicatorTypes));
+        }
         public Builder killChainPhases(@Nullable Output<List<ThreatIntelligenceKillChainPhaseArgs>> killChainPhases) {
             this.killChainPhases = killChainPhases;
             return this;
         }
-
         public Builder killChainPhases(@Nullable List<ThreatIntelligenceKillChainPhaseArgs> killChainPhases) {
             this.killChainPhases = Output.ofNullable(killChainPhases);
             return this;
         }
-
+        public Builder killChainPhases(ThreatIntelligenceKillChainPhaseArgs... killChainPhases) {
+            return killChainPhases(List.of(killChainPhases));
+        }
         public Builder kind(Output<Either<String,ThreatIntelligenceResourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder kind(Either<String,ThreatIntelligenceResourceKind> kind) {
             this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
-
         public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable List<String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
+        public Builder labels(String... labels) {
+            return labels(List.of(labels));
+        }
         public Builder language(@Nullable Output<String> language) {
             this.language = language;
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = Output.ofNullable(language);
             return this;
         }
-
         public Builder lastUpdatedTimeUtc(@Nullable Output<String> lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
             return this;
         }
-
         public Builder lastUpdatedTimeUtc(@Nullable String lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = Output.ofNullable(lastUpdatedTimeUtc);
             return this;
         }
-
         public Builder modified(@Nullable Output<String> modified) {
             this.modified = modified;
             return this;
         }
-
         public Builder modified(@Nullable String modified) {
             this.modified = Output.ofNullable(modified);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder objectMarkingRefs(@Nullable Output<List<String>> objectMarkingRefs) {
             this.objectMarkingRefs = objectMarkingRefs;
             return this;
         }
-
         public Builder objectMarkingRefs(@Nullable List<String> objectMarkingRefs) {
             this.objectMarkingRefs = Output.ofNullable(objectMarkingRefs);
             return this;
         }
-
+        public Builder objectMarkingRefs(String... objectMarkingRefs) {
+            return objectMarkingRefs(List.of(objectMarkingRefs));
+        }
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
-
         public Builder parsedPattern(@Nullable Output<List<ThreatIntelligenceParsedPatternArgs>> parsedPattern) {
             this.parsedPattern = parsedPattern;
             return this;
         }
-
         public Builder parsedPattern(@Nullable List<ThreatIntelligenceParsedPatternArgs> parsedPattern) {
             this.parsedPattern = Output.ofNullable(parsedPattern);
             return this;
         }
-
+        public Builder parsedPattern(ThreatIntelligenceParsedPatternArgs... parsedPattern) {
+            return parsedPattern(List.of(parsedPattern));
+        }
         public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
-
         public Builder pattern(@Nullable String pattern) {
             this.pattern = Output.ofNullable(pattern);
             return this;
         }
-
         public Builder patternType(@Nullable Output<String> patternType) {
             this.patternType = patternType;
             return this;
         }
-
         public Builder patternType(@Nullable String patternType) {
             this.patternType = Output.ofNullable(patternType);
             return this;
         }
-
         public Builder patternVersion(@Nullable Output<String> patternVersion) {
             this.patternVersion = patternVersion;
             return this;
         }
-
         public Builder patternVersion(@Nullable String patternVersion) {
             this.patternVersion = Output.ofNullable(patternVersion);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder revoked(@Nullable Output<Boolean> revoked) {
             this.revoked = revoked;
             return this;
         }
-
         public Builder revoked(@Nullable Boolean revoked) {
             this.revoked = Output.ofNullable(revoked);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder threatIntelligenceTags(@Nullable Output<List<String>> threatIntelligenceTags) {
             this.threatIntelligenceTags = threatIntelligenceTags;
             return this;
         }
-
         public Builder threatIntelligenceTags(@Nullable List<String> threatIntelligenceTags) {
             this.threatIntelligenceTags = Output.ofNullable(threatIntelligenceTags);
             return this;
         }
-
+        public Builder threatIntelligenceTags(String... threatIntelligenceTags) {
+            return threatIntelligenceTags(List.of(threatIntelligenceTags));
+        }
         public Builder threatTypes(@Nullable Output<List<String>> threatTypes) {
             this.threatTypes = threatTypes;
             return this;
         }
-
         public Builder threatTypes(@Nullable List<String> threatTypes) {
             this.threatTypes = Output.ofNullable(threatTypes);
             return this;
         }
-
+        public Builder threatTypes(String... threatTypes) {
+            return threatTypes(List.of(threatTypes));
+        }
         public Builder validFrom(@Nullable Output<String> validFrom) {
             this.validFrom = validFrom;
             return this;
         }
-
         public Builder validFrom(@Nullable String validFrom) {
             this.validFrom = Output.ofNullable(validFrom);
             return this;
         }
-
         public Builder validUntil(@Nullable Output<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
-
         public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = Output.ofNullable(validUntil);
             return this;
         }
-
         public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
-        }
-        public ThreatIntelligenceIndicatorArgs build() {
+        }        public ThreatIntelligenceIndicatorArgs build() {
             return new ThreatIntelligenceIndicatorArgs(confidence, created, createdByRef, defanged, description, displayName, extensions, externalId, externalLastUpdatedTimeUtc, externalReferences, granularMarkings, indicatorTypes, killChainPhases, kind, labels, language, lastUpdatedTimeUtc, modified, name, objectMarkingRefs, operationalInsightsResourceProvider, parsedPattern, pattern, patternType, patternVersion, resourceGroupName, revoked, source, threatIntelligenceTags, threatTypes, validFrom, validUntil, workspaceName);
         }
     }

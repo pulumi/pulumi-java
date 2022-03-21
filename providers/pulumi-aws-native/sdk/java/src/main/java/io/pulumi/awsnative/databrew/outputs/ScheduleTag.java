@@ -53,12 +53,10 @@ public final class ScheduleTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ScheduleTag build() {
+        }        public ScheduleTag build() {
             return new ScheduleTag(key, value);
         }
     }

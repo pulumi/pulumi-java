@@ -151,37 +151,30 @@ public final class GetCacheResult {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder useFromLocation(String useFromLocation) {
             this.useFromLocation = Objects.requireNonNull(useFromLocation);
             return this;
-        }
-        public GetCacheResult build() {
+        }        public GetCacheResult build() {
             return new GetCacheResult(connectionString, description, id, name, resourceId, type, useFromLocation);
         }
     }

@@ -96,17 +96,14 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
             this.model = model;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder scaleSettings(@Nullable DeploymentScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
-        }
-        public DeploymentPropertiesResponse build() {
+        }        public DeploymentPropertiesResponse build() {
             return new DeploymentPropertiesResponse(model, provisioningState, scaleSettings);
         }
     }

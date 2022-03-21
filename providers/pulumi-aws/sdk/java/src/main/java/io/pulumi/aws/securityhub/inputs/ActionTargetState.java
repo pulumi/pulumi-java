@@ -106,42 +106,34 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
-
         public Builder identifier(@Nullable String identifier) {
             this.identifier = Output.ofNullable(identifier);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ActionTargetState build() {
+        }        public ActionTargetState build() {
             return new ActionTargetState(arn, description, identifier, name);
         }
     }

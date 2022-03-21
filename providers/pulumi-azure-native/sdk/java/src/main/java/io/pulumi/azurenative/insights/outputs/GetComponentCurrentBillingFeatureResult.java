@@ -73,12 +73,13 @@ public final class GetComponentCurrentBillingFeatureResult {
             this.currentBillingFeatures = currentBillingFeatures;
             return this;
         }
-
+        public Builder currentBillingFeatures(String... currentBillingFeatures) {
+            return currentBillingFeatures(List.of(currentBillingFeatures));
+        }
         public Builder dataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
             this.dataVolumeCap = dataVolumeCap;
             return this;
-        }
-        public GetComponentCurrentBillingFeatureResult build() {
+        }        public GetComponentCurrentBillingFeatureResult build() {
             return new GetComponentCurrentBillingFeatureResult(currentBillingFeatures, dataVolumeCap);
         }
     }

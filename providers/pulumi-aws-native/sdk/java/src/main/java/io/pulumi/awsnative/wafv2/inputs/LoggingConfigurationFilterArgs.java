@@ -92,32 +92,29 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
-
         public Builder behavior(LoggingConfigurationFilterBehavior behavior) {
             this.behavior = Output.of(Objects.requireNonNull(behavior));
             return this;
         }
-
         public Builder conditions(Output<List<LoggingConfigurationConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public Builder conditions(List<LoggingConfigurationConditionArgs> conditions) {
             this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
-
+        public Builder conditions(LoggingConfigurationConditionArgs... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder requirement(Output<LoggingConfigurationFilterRequirement> requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
-
         public Builder requirement(LoggingConfigurationFilterRequirement requirement) {
             this.requirement = Output.of(Objects.requireNonNull(requirement));
             return this;
-        }
-        public LoggingConfigurationFilterArgs build() {
+        }        public LoggingConfigurationFilterArgs build() {
             return new LoggingConfigurationFilterArgs(behavior, conditions, requirement);
         }
     }

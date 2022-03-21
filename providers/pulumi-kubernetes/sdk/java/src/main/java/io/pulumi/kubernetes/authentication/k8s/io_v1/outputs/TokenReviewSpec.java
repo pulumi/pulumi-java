@@ -72,12 +72,13 @@ public final class TokenReviewSpec {
             this.audiences = audiences;
             return this;
         }
-
+        public Builder audiences(String... audiences) {
+            return audiences(List.of(audiences));
+        }
         public Builder token(@Nullable String token) {
             this.token = token;
             return this;
-        }
-        public TokenReviewSpec build() {
+        }        public TokenReviewSpec build() {
             return new TokenReviewSpec(audiences, token);
         }
     }

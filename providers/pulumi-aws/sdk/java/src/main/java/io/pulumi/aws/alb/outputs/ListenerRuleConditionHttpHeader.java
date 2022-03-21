@@ -70,12 +70,13 @@ public final class ListenerRuleConditionHttpHeader {
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
-
         public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-        public ListenerRuleConditionHttpHeader build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ListenerRuleConditionHttpHeader build() {
             return new ListenerRuleConditionHttpHeader(httpHeaderName, values);
         }
     }

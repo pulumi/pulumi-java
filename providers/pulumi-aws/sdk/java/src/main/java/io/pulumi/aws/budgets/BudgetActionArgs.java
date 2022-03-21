@@ -190,92 +190,77 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder actionThreshold(Output<BudgetActionActionThresholdArgs> actionThreshold) {
             this.actionThreshold = Objects.requireNonNull(actionThreshold);
             return this;
         }
-
         public Builder actionThreshold(BudgetActionActionThresholdArgs actionThreshold) {
             this.actionThreshold = Output.of(Objects.requireNonNull(actionThreshold));
             return this;
         }
-
         public Builder actionType(Output<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder actionType(String actionType) {
             this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
-
         public Builder approvalModel(Output<String> approvalModel) {
             this.approvalModel = Objects.requireNonNull(approvalModel);
             return this;
         }
-
         public Builder approvalModel(String approvalModel) {
             this.approvalModel = Output.of(Objects.requireNonNull(approvalModel));
             return this;
         }
-
         public Builder budgetName(Output<String> budgetName) {
             this.budgetName = Objects.requireNonNull(budgetName);
             return this;
         }
-
         public Builder budgetName(String budgetName) {
             this.budgetName = Output.of(Objects.requireNonNull(budgetName));
             return this;
         }
-
         public Builder definition(Output<BudgetActionDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
-
         public Builder definition(BudgetActionDefinitionArgs definition) {
             this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
-
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
-
         public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
-
         public Builder notificationType(Output<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
-
         public Builder notificationType(String notificationType) {
             this.notificationType = Output.of(Objects.requireNonNull(notificationType));
             return this;
         }
-
         public Builder subscribers(Output<List<BudgetActionSubscriberArgs>> subscribers) {
             this.subscribers = Objects.requireNonNull(subscribers);
             return this;
         }
-
         public Builder subscribers(List<BudgetActionSubscriberArgs> subscribers) {
             this.subscribers = Output.of(Objects.requireNonNull(subscribers));
             return this;
         }
-        public BudgetActionArgs build() {
+        public Builder subscribers(BudgetActionSubscriberArgs... subscribers) {
+            return subscribers(List.of(subscribers));
+        }        public BudgetActionArgs build() {
             return new BudgetActionArgs(accountId, actionThreshold, actionType, approvalModel, budgetName, definition, executionRoleArn, notificationType, subscribers);
         }
     }

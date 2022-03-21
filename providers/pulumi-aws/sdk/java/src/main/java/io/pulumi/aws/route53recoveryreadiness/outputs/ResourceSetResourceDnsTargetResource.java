@@ -120,27 +120,22 @@ public final class ResourceSetResourceDnsTargetResource {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
-
         public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
-
         public Builder recordType(@Nullable String recordType) {
             this.recordType = recordType;
             return this;
         }
-
         public Builder targetResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResource targetResource) {
             this.targetResource = targetResource;
             return this;
-        }
-        public ResourceSetResourceDnsTargetResource build() {
+        }        public ResourceSetResourceDnsTargetResource build() {
             return new ResourceSetResourceDnsTargetResource(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
         }
     }

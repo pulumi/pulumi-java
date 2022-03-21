@@ -54,8 +54,7 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends io.pulumi.re
         public Builder virtualNodeName(String virtualNodeName) {
             this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
             return this;
-        }
-        public GetVirtualServiceSpecProviderVirtualNode build() {
+        }        public GetVirtualServiceSpecProviderVirtualNode build() {
             return new GetVirtualServiceSpecProviderVirtualNode(virtualNodeName);
         }
     }

@@ -166,82 +166,66 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable String parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
-
         public Builder portfolioId(@Nullable String portfolioId) {
             this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ConstraintState build() {
+        }        public ConstraintState build() {
             return new ConstraintState(acceptLanguage, description, owner, parameters, portfolioId, productId, status, type);
         }
     }

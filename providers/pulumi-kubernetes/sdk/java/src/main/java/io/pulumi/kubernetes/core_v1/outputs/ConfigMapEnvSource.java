@@ -72,12 +72,10 @@ public final class ConfigMapEnvSource {
             this.name = name;
             return this;
         }
-
         public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
-        }
-        public ConfigMapEnvSource build() {
+        }        public ConfigMapEnvSource build() {
             return new ConfigMapEnvSource(name, optional);
         }
     }

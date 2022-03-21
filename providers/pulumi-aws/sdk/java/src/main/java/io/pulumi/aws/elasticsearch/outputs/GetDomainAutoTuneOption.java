@@ -87,17 +87,17 @@ public final class GetDomainAutoTuneOption {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
-
         public Builder maintenanceSchedules(List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules) {
             this.maintenanceSchedules = Objects.requireNonNull(maintenanceSchedules);
             return this;
         }
-
+        public Builder maintenanceSchedules(GetDomainAutoTuneOptionMaintenanceSchedule... maintenanceSchedules) {
+            return maintenanceSchedules(List.of(maintenanceSchedules));
+        }
         public Builder rollbackOnDisable(String rollbackOnDisable) {
             this.rollbackOnDisable = Objects.requireNonNull(rollbackOnDisable);
             return this;
-        }
-        public GetDomainAutoTuneOption build() {
+        }        public GetDomainAutoTuneOption build() {
             return new GetDomainAutoTuneOption(desiredState, maintenanceSchedules, rollbackOnDisable);
         }
     }

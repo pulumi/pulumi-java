@@ -303,157 +303,138 @@ public final class GetInstanceResult {
             this.alternativeLocationId = Objects.requireNonNull(alternativeLocationId);
             return this;
         }
-
         public Builder authEnabled(Boolean authEnabled) {
             this.authEnabled = Objects.requireNonNull(authEnabled);
             return this;
         }
-
         public Builder authString(String authString) {
             this.authString = Objects.requireNonNull(authString);
             return this;
         }
-
         public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
-
         public Builder connectMode(String connectMode) {
             this.connectMode = Objects.requireNonNull(connectMode);
             return this;
         }
-
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder currentLocationId(String currentLocationId) {
             this.currentLocationId = Objects.requireNonNull(currentLocationId);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder locationId(String locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
-
         public Builder maintenancePolicies(List<GetInstanceMaintenancePolicy> maintenancePolicies) {
             this.maintenancePolicies = Objects.requireNonNull(maintenancePolicies);
             return this;
         }
-
+        public Builder maintenancePolicies(GetInstanceMaintenancePolicy... maintenancePolicies) {
+            return maintenancePolicies(List.of(maintenancePolicies));
+        }
         public Builder maintenanceSchedules(List<GetInstanceMaintenanceSchedule> maintenanceSchedules) {
             this.maintenanceSchedules = Objects.requireNonNull(maintenanceSchedules);
             return this;
         }
-
+        public Builder maintenanceSchedules(GetInstanceMaintenanceSchedule... maintenanceSchedules) {
+            return maintenanceSchedules(List.of(maintenanceSchedules));
+        }
         public Builder memorySizeGb(Integer memorySizeGb) {
             this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder nodes(List<GetInstanceNode> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
+        public Builder nodes(GetInstanceNode... nodes) {
+            return nodes(List.of(nodes));
+        }
         public Builder persistenceIamIdentity(String persistenceIamIdentity) {
             this.persistenceIamIdentity = Objects.requireNonNull(persistenceIamIdentity);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder readEndpoint(String readEndpoint) {
             this.readEndpoint = Objects.requireNonNull(readEndpoint);
             return this;
         }
-
         public Builder readEndpointPort(Integer readEndpointPort) {
             this.readEndpointPort = Objects.requireNonNull(readEndpointPort);
             return this;
         }
-
         public Builder readReplicasMode(String readReplicasMode) {
             this.readReplicasMode = Objects.requireNonNull(readReplicasMode);
             return this;
         }
-
         public Builder redisConfigs(Map<String,String> redisConfigs) {
             this.redisConfigs = Objects.requireNonNull(redisConfigs);
             return this;
         }
-
         public Builder redisVersion(String redisVersion) {
             this.redisVersion = Objects.requireNonNull(redisVersion);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder replicaCount(Integer replicaCount) {
             this.replicaCount = Objects.requireNonNull(replicaCount);
             return this;
         }
-
         public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
-
         public Builder serverCaCerts(List<GetInstanceServerCaCert> serverCaCerts) {
             this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
             return this;
         }
-
+        public Builder serverCaCerts(GetInstanceServerCaCert... serverCaCerts) {
+            return serverCaCerts(List.of(serverCaCerts));
+        }
         public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public Builder transitEncryptionMode(String transitEncryptionMode) {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
-        }
-        public GetInstanceResult build() {
+        }        public GetInstanceResult build() {
             return new GetInstanceResult(alternativeLocationId, authEnabled, authString, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, id, labels, locationId, maintenancePolicies, maintenanceSchedules, memorySizeGb, name, nodes, persistenceIamIdentity, port, project, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, region, replicaCount, reservedIpRange, serverCaCerts, tier, transitEncryptionMode);
         }
     }

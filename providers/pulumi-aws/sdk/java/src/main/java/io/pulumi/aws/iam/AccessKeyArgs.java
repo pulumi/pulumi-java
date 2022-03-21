@@ -90,32 +90,26 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.pgpKey = pgpKey;
             return this;
         }
-
         public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
-
         public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
-
         public Builder status(@Nullable String status) {
             this.status = Output.ofNullable(status);
             return this;
         }
-
         public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public Builder user(String user) {
             this.user = Output.of(Objects.requireNonNull(user));
             return this;
-        }
-        public AccessKeyArgs build() {
+        }        public AccessKeyArgs build() {
             return new AccessKeyArgs(pgpKey, status, user);
         }
     }

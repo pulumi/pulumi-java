@@ -57,12 +57,13 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
             this.listenerArns = Objects.requireNonNull(listenerArns);
             return this;
         }
-
         public Builder listenerArns(List<String> listenerArns) {
             this.listenerArns = Output.of(Objects.requireNonNull(listenerArns));
             return this;
         }
-        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs build() {
+        public Builder listenerArns(String... listenerArns) {
+            return listenerArns(List.of(listenerArns));
+        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs(listenerArns);
         }
     }

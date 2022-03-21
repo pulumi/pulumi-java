@@ -57,12 +57,10 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
             this.capacityReservationId = capacityReservationId;
             return this;
         }
-
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = Output.ofNullable(capacityReservationId);
             return this;
-        }
-        public InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs build() {
+        }        public InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs build() {
             return new InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs(capacityReservationId);
         }
     }

@@ -94,17 +94,14 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
             this.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
-
         public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
-        }
-        public CertificateDescriptionResponse build() {
+        }        public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(thumbprint, thumbprintSecondary, x509StoreName);
         }
     }

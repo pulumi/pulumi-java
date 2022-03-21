@@ -106,42 +106,34 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
             this.contentItemId = contentItemId;
             return this;
         }
-
         public Builder contentItemId(@Nullable String contentItemId) {
             this.contentItemId = Output.ofNullable(contentItemId);
             return this;
         }
-
         public Builder contentTypeId(Output<String> contentTypeId) {
             this.contentTypeId = Objects.requireNonNull(contentTypeId);
             return this;
         }
-
         public Builder contentTypeId(String contentTypeId) {
             this.contentTypeId = Output.of(Objects.requireNonNull(contentTypeId));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public Builder serviceName(String serviceName) {
             this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
-        }
-        public ContentItemArgs build() {
+        }        public ContentItemArgs build() {
             return new ContentItemArgs(contentItemId, contentTypeId, resourceGroupName, serviceName);
         }
     }

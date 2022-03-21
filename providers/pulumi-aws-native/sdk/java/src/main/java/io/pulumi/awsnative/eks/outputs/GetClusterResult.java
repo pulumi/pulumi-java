@@ -187,52 +187,45 @@ public final class GetClusterResult {
             this.arn = arn;
             return this;
         }
-
         public Builder certificateAuthorityData(@Nullable String certificateAuthorityData) {
             this.certificateAuthorityData = certificateAuthorityData;
             return this;
         }
-
         public Builder clusterSecurityGroupId(@Nullable String clusterSecurityGroupId) {
             this.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
-
         public Builder encryptionConfigKeyArn(@Nullable String encryptionConfigKeyArn) {
             this.encryptionConfigKeyArn = encryptionConfigKeyArn;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder logging(@Nullable ClusterLogging logging) {
             this.logging = logging;
             return this;
         }
-
         public Builder openIdConnectIssuerUrl(@Nullable String openIdConnectIssuerUrl) {
             this.openIdConnectIssuerUrl = openIdConnectIssuerUrl;
             return this;
         }
-
         public Builder resourcesVpcConfig(@Nullable ClusterResourcesVpcConfig resourcesVpcConfig) {
             this.resourcesVpcConfig = resourcesVpcConfig;
             return this;
         }
-
         public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ClusterTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetClusterResult build() {
+        }        public GetClusterResult build() {
             return new GetClusterResult(arn, certificateAuthorityData, clusterSecurityGroupId, encryptionConfigKeyArn, endpoint, logging, openIdConnectIssuerUrl, resourcesVpcConfig, tags, version);
         }
     }

@@ -73,12 +73,10 @@ public final class ListConnectionKeysResult {
             this.connectionKey = connectionKey;
             return this;
         }
-
         public Builder parameterValues(@Nullable Map<String,Object> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
-        }
-        public ListConnectionKeysResult build() {
+        }        public ListConnectionKeysResult build() {
             return new ListConnectionKeysResult(connectionKey, parameterValues);
         }
     }

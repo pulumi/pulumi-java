@@ -64,12 +64,10 @@ public final class GetKeyMultiRegionConfigurationReplicaKey extends io.pulumi.re
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public GetKeyMultiRegionConfigurationReplicaKey build() {
+        }        public GetKeyMultiRegionConfigurationReplicaKey build() {
             return new GetKeyMultiRegionConfigurationReplicaKey(arn, region);
         }
     }

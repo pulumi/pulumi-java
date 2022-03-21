@@ -72,12 +72,13 @@ public final class ScopeResponse {
             this.scopeType = scopeType;
             return this;
         }
-
         public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }
-        public ScopeResponse build() {
+        public Builder values(String... values) {
+            return values(List.of(values));
+        }        public ScopeResponse build() {
             return new ScopeResponse(scopeType, values);
         }
     }

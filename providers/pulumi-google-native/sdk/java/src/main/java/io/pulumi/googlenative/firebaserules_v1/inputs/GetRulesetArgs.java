@@ -66,12 +66,10 @@ public final class GetRulesetArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder rulesetId(String rulesetId) {
             this.rulesetId = Objects.requireNonNull(rulesetId);
             return this;
-        }
-        public GetRulesetArgs build() {
+        }        public GetRulesetArgs build() {
             return new GetRulesetArgs(project, rulesetId);
         }
     }

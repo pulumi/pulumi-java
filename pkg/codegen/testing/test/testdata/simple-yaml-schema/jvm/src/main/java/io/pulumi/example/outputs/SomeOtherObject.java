@@ -45,8 +45,7 @@ public final class SomeOtherObject {
         public Builder baz(@Nullable String baz) {
             this.baz = baz;
             return this;
-        }
-        public SomeOtherObject build() {
+        }        public SomeOtherObject build() {
             return new SomeOtherObject(baz);
         }
     }

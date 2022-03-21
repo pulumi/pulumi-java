@@ -75,22 +75,18 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArg
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public Builder repository(String repository) {
             this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
-
         public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
-
         public Builder tag(@Nullable String tag) {
             this.tag = Output.ofNullable(tag);
             return this;
-        }
-        public RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs build() {
+        }        public RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs(repository, tag);
         }
     }

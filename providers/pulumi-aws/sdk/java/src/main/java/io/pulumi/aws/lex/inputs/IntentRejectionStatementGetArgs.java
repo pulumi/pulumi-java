@@ -80,22 +80,21 @@ public final class IntentRejectionStatementGetArgs extends io.pulumi.resources.R
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
-
         public Builder messages(List<IntentRejectionStatementMessageGetArgs> messages) {
             this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
-
+        public Builder messages(IntentRejectionStatementMessageGetArgs... messages) {
+            return messages(List.of(messages));
+        }
         public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
-
         public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Output.ofNullable(responseCard);
             return this;
-        }
-        public IntentRejectionStatementGetArgs build() {
+        }        public IntentRejectionStatementGetArgs build() {
             return new IntentRejectionStatementGetArgs(messages, responseCard);
         }
     }

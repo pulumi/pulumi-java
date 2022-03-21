@@ -136,62 +136,50 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             this.mirrorConfig = mirrorConfig;
             return this;
         }
-
         public Builder mirrorConfig(@Nullable MirrorConfigArgs mirrorConfig) {
             this.mirrorConfig = Output.ofNullable(mirrorConfig);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder pubsubConfigs(@Nullable Output<Map<String,String>> pubsubConfigs) {
             this.pubsubConfigs = pubsubConfigs;
             return this;
         }
-
         public Builder pubsubConfigs(@Nullable Map<String,String> pubsubConfigs) {
             this.pubsubConfigs = Output.ofNullable(pubsubConfigs);
             return this;
         }
-
         public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = Output.ofNullable(size);
             return this;
         }
-
         public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
-
         public Builder url(@Nullable String url) {
             this.url = Output.ofNullable(url);
             return this;
-        }
-        public RepoArgs build() {
+        }        public RepoArgs build() {
             return new RepoArgs(mirrorConfig, name, project, pubsubConfigs, size, url);
         }
     }

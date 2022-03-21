@@ -72,22 +72,21 @@ public final class ContainerNetworksAdvanced {
             this.aliases = aliases;
             return this;
         }
-
+        public Builder aliases(String... aliases) {
+            return aliases(List.of(aliases));
+        }
         public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }
-        public ContainerNetworksAdvanced build() {
+        }        public ContainerNetworksAdvanced build() {
             return new ContainerNetworksAdvanced(aliases, ipv4Address, ipv6Address, name);
         }
     }

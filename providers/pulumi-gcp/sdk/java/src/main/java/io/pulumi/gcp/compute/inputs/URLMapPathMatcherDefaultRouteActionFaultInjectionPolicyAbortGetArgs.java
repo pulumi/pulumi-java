@@ -77,22 +77,18 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortG
             this.httpStatus = httpStatus;
             return this;
         }
-
         public Builder httpStatus(@Nullable Integer httpStatus) {
             this.httpStatus = Output.ofNullable(httpStatus);
             return this;
         }
-
         public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
-
         public Builder percentage(@Nullable Double percentage) {
             this.percentage = Output.ofNullable(percentage);
             return this;
-        }
-        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
+        }        public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
         }
     }

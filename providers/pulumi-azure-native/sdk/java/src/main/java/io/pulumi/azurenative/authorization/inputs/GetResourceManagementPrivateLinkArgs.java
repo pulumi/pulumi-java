@@ -72,12 +72,10 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder rmplName(String rmplName) {
             this.rmplName = Objects.requireNonNull(rmplName);
             return this;
-        }
-        public GetResourceManagementPrivateLinkArgs build() {
+        }        public GetResourceManagementPrivateLinkArgs build() {
             return new GetResourceManagementPrivateLinkArgs(resourceGroupName, rmplName);
         }
     }

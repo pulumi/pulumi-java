@@ -217,82 +217,75 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
-
         public Builder activities(List<Object> activities) {
             this.activities = Output.of(Objects.requireNonNull(activities));
             return this;
         }
-
+        public Builder activities(Object... activities) {
+            return activities(List.of(activities));
+        }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expression(Output<ExpressionArgs> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public Builder expression(ExpressionArgs expression) {
             this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder timeout(@Nullable Output<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable Object timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-        public UntilActivityArgs build() {
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }        public UntilActivityArgs build() {
             return new UntilActivityArgs(activities, dependsOn, description, expression, name, timeout, type, userProperties);
         }
     }

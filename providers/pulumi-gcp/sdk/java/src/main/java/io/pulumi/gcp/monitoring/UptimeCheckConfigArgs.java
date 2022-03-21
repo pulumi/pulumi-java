@@ -214,102 +214,88 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
             this.contentMatchers = contentMatchers;
             return this;
         }
-
         public Builder contentMatchers(@Nullable List<UptimeCheckConfigContentMatcherArgs> contentMatchers) {
             this.contentMatchers = Output.ofNullable(contentMatchers);
             return this;
         }
-
+        public Builder contentMatchers(UptimeCheckConfigContentMatcherArgs... contentMatchers) {
+            return contentMatchers(List.of(contentMatchers));
+        }
         public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public Builder httpCheck(@Nullable Output<UptimeCheckConfigHttpCheckArgs> httpCheck) {
             this.httpCheck = httpCheck;
             return this;
         }
-
         public Builder httpCheck(@Nullable UptimeCheckConfigHttpCheckArgs httpCheck) {
             this.httpCheck = Output.ofNullable(httpCheck);
             return this;
         }
-
         public Builder monitoredResource(@Nullable Output<UptimeCheckConfigMonitoredResourceArgs> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
-
         public Builder monitoredResource(@Nullable UptimeCheckConfigMonitoredResourceArgs monitoredResource) {
             this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
         }
-
         public Builder period(@Nullable Output<String> period) {
             this.period = period;
             return this;
         }
-
         public Builder period(@Nullable String period) {
             this.period = Output.ofNullable(period);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder resourceGroup(@Nullable Output<UptimeCheckConfigResourceGroupArgs> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
-
         public Builder resourceGroup(@Nullable UptimeCheckConfigResourceGroupArgs resourceGroup) {
             this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
-
         public Builder selectedRegions(@Nullable Output<List<String>> selectedRegions) {
             this.selectedRegions = selectedRegions;
             return this;
         }
-
         public Builder selectedRegions(@Nullable List<String> selectedRegions) {
             this.selectedRegions = Output.ofNullable(selectedRegions);
             return this;
         }
-
+        public Builder selectedRegions(String... selectedRegions) {
+            return selectedRegions(List.of(selectedRegions));
+        }
         public Builder tcpCheck(@Nullable Output<UptimeCheckConfigTcpCheckArgs> tcpCheck) {
             this.tcpCheck = tcpCheck;
             return this;
         }
-
         public Builder tcpCheck(@Nullable UptimeCheckConfigTcpCheckArgs tcpCheck) {
             this.tcpCheck = Output.ofNullable(tcpCheck);
             return this;
         }
-
         public Builder timeout(Output<String> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Output.of(Objects.requireNonNull(timeout));
             return this;
-        }
-        public UptimeCheckConfigArgs build() {
+        }        public UptimeCheckConfigArgs build() {
             return new UptimeCheckConfigArgs(contentMatchers, displayName, httpCheck, monitoredResource, period, project, resourceGroup, selectedRegions, tcpCheck, timeout);
         }
     }

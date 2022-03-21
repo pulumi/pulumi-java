@@ -66,12 +66,10 @@ public final class GetConnectivityTestArgs extends io.pulumi.resources.InvokeArg
             this.connectivityTestId = Objects.requireNonNull(connectivityTestId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetConnectivityTestArgs build() {
+        }        public GetConnectivityTestArgs build() {
             return new GetConnectivityTestArgs(connectivityTestId, project);
         }
     }

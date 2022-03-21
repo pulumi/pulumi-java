@@ -61,12 +61,10 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ipv6Address = ipv6Address;
             return this;
         }
-
         public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
-        }
-        public AaaaRecordArgs build() {
+        }        public AaaaRecordArgs build() {
             return new AaaaRecordArgs(ipv6Address);
         }
     }

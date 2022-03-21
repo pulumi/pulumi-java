@@ -76,22 +76,21 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public ClusterArgs build() {
+        public Builder tags(ClusterTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public ClusterArgs build() {
             return new ClusterArgs(name, tags);
         }
     }

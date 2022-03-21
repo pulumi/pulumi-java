@@ -94,17 +94,14 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
             this.firewallRuleName = firewallRuleName;
             return this;
         }
-
         public Builder rangeEnd(@Nullable String rangeEnd) {
             this.rangeEnd = rangeEnd;
             return this;
         }
-
         public Builder rangeStart(@Nullable String rangeStart) {
             this.rangeStart = rangeStart;
             return this;
-        }
-        public IPv4FirewallRuleResponse build() {
+        }        public IPv4FirewallRuleResponse build() {
             return new IPv4FirewallRuleResponse(firewallRuleName, rangeEnd, rangeStart);
         }
     }

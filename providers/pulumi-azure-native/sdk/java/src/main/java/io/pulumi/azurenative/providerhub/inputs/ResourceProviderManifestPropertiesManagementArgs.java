@@ -141,82 +141,78 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
             this.incidentContactEmail = incidentContactEmail;
             return this;
         }
-
         public Builder incidentContactEmail(@Nullable String incidentContactEmail) {
             this.incidentContactEmail = Output.ofNullable(incidentContactEmail);
             return this;
         }
-
         public Builder incidentRoutingService(@Nullable Output<String> incidentRoutingService) {
             this.incidentRoutingService = incidentRoutingService;
             return this;
         }
-
         public Builder incidentRoutingService(@Nullable String incidentRoutingService) {
             this.incidentRoutingService = Output.ofNullable(incidentRoutingService);
             return this;
         }
-
         public Builder incidentRoutingTeam(@Nullable Output<String> incidentRoutingTeam) {
             this.incidentRoutingTeam = incidentRoutingTeam;
             return this;
         }
-
         public Builder incidentRoutingTeam(@Nullable String incidentRoutingTeam) {
             this.incidentRoutingTeam = Output.ofNullable(incidentRoutingTeam);
             return this;
         }
-
         public Builder manifestOwners(@Nullable Output<List<String>> manifestOwners) {
             this.manifestOwners = manifestOwners;
             return this;
         }
-
         public Builder manifestOwners(@Nullable List<String> manifestOwners) {
             this.manifestOwners = Output.ofNullable(manifestOwners);
             return this;
         }
-
+        public Builder manifestOwners(String... manifestOwners) {
+            return manifestOwners(List.of(manifestOwners));
+        }
         public Builder resourceAccessPolicy(@Nullable Output<String> resourceAccessPolicy) {
             this.resourceAccessPolicy = resourceAccessPolicy;
             return this;
         }
-
         public Builder resourceAccessPolicy(@Nullable String resourceAccessPolicy) {
             this.resourceAccessPolicy = Output.ofNullable(resourceAccessPolicy);
             return this;
         }
-
         public Builder resourceAccessRoles(@Nullable Output<List<Object>> resourceAccessRoles) {
             this.resourceAccessRoles = resourceAccessRoles;
             return this;
         }
-
         public Builder resourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
             this.resourceAccessRoles = Output.ofNullable(resourceAccessRoles);
             return this;
         }
-
+        public Builder resourceAccessRoles(Object... resourceAccessRoles) {
+            return resourceAccessRoles(List.of(resourceAccessRoles));
+        }
         public Builder schemaOwners(@Nullable Output<List<String>> schemaOwners) {
             this.schemaOwners = schemaOwners;
             return this;
         }
-
         public Builder schemaOwners(@Nullable List<String> schemaOwners) {
             this.schemaOwners = Output.ofNullable(schemaOwners);
             return this;
         }
-
+        public Builder schemaOwners(String... schemaOwners) {
+            return schemaOwners(List.of(schemaOwners));
+        }
         public Builder serviceTreeInfos(@Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
-
         public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
             this.serviceTreeInfos = Output.ofNullable(serviceTreeInfos);
             return this;
         }
-        public ResourceProviderManifestPropertiesManagementArgs build() {
+        public Builder serviceTreeInfos(ServiceTreeInfoArgs... serviceTreeInfos) {
+            return serviceTreeInfos(List.of(serviceTreeInfos));
+        }        public ResourceProviderManifestPropertiesManagementArgs build() {
             return new ResourceProviderManifestPropertiesManagementArgs(incidentContactEmail, incidentRoutingService, incidentRoutingTeam, manifestOwners, resourceAccessPolicy, resourceAccessRoles, schemaOwners, serviceTreeInfos);
         }
     }

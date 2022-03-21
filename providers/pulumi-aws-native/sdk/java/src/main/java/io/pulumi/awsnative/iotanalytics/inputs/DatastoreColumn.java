@@ -64,12 +64,10 @@ public final class DatastoreColumn extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DatastoreColumn build() {
+        }        public DatastoreColumn build() {
             return new DatastoreColumn(name, type);
         }
     }

@@ -70,12 +70,10 @@ public final class ProfilingGroupChannel extends io.pulumi.resources.InvokeArgs 
             this.channelId = channelId;
             return this;
         }
-
         public Builder channelUri(String channelUri) {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
-        }
-        public ProfilingGroupChannel build() {
+        }        public ProfilingGroupChannel build() {
             return new ProfilingGroupChannel(channelId, channelUri);
         }
     }

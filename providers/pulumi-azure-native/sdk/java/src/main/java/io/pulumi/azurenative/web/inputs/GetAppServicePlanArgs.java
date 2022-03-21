@@ -72,12 +72,10 @@ public final class GetAppServicePlanArgs extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetAppServicePlanArgs build() {
+        }        public GetAppServicePlanArgs build() {
             return new GetAppServicePlanArgs(name, resourceGroupName);
         }
     }

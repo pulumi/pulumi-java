@@ -52,8 +52,7 @@ public final class RuleGroupStatefulRuleOptions extends io.pulumi.resources.Invo
         public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
             this.ruleOrder = ruleOrder;
             return this;
-        }
-        public RuleGroupStatefulRuleOptions build() {
+        }        public RuleGroupStatefulRuleOptions build() {
             return new RuleGroupStatefulRuleOptions(ruleOrder);
         }
     }

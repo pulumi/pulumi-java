@@ -94,32 +94,26 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
             this.configMapRef = configMapRef;
             return this;
         }
-
         public Builder configMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs configMapRef) {
             this.configMapRef = Output.ofNullable(configMapRef);
             return this;
         }
-
         public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
-
         public Builder prefix(@Nullable String prefix) {
             this.prefix = Output.ofNullable(prefix);
             return this;
         }
-
         public Builder secretRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
-
         public Builder secretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefGetArgs secretRef) {
             this.secretRef = Output.ofNullable(secretRef);
             return this;
-        }
-        public ServiceTemplateSpecContainerEnvFromGetArgs build() {
+        }        public ServiceTemplateSpecContainerEnvFromGetArgs build() {
             return new ServiceTemplateSpecContainerEnvFromGetArgs(configMapRef, prefix, secretRef);
         }
     }

@@ -57,12 +57,10 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
-
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Output.of(Objects.requireNonNull(signatureAlgorithm));
             return this;
-        }
-        public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs build() {
+        }        public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(signatureAlgorithm);
         }
     }

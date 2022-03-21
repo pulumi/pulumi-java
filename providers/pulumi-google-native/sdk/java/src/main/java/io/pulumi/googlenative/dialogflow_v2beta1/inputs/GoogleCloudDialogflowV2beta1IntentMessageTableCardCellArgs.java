@@ -60,12 +60,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs ex
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder text(String text) {
             this.text = Output.of(Objects.requireNonNull(text));
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs(text);
         }
     }

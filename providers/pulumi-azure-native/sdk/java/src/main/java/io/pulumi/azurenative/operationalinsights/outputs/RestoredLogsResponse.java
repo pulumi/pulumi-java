@@ -87,17 +87,14 @@ public final class RestoredLogsResponse {
             this.endRestoreTime = endRestoreTime;
             return this;
         }
-
         public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
-
         public Builder startRestoreTime(@Nullable String startRestoreTime) {
             this.startRestoreTime = startRestoreTime;
             return this;
-        }
-        public RestoredLogsResponse build() {
+        }        public RestoredLogsResponse build() {
             return new RestoredLogsResponse(endRestoreTime, sourceTable, startRestoreTime);
         }
     }

@@ -106,42 +106,34 @@ public final class ReceiptFilterState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder cidr(@Nullable Output<String> cidr) {
             this.cidr = cidr;
             return this;
         }
-
         public Builder cidr(@Nullable String cidr) {
             this.cidr = Output.ofNullable(cidr);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable String policy) {
             this.policy = Output.ofNullable(policy);
             return this;
-        }
-        public ReceiptFilterState build() {
+        }        public ReceiptFilterState build() {
             return new ReceiptFilterState(arn, cidr, name, policy);
         }
     }

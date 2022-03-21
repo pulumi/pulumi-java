@@ -65,12 +65,10 @@ public final class GetTableTtl extends io.pulumi.resources.InvokeArgs {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
-
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public GetTableTtl build() {
+        }        public GetTableTtl build() {
             return new GetTableTtl(attributeName, enabled);
         }
     }

@@ -58,8 +58,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
         public Builder jobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
-        }
-        public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse build() {
+        }        public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse build() {
             return new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(jobConfig);
         }
     }

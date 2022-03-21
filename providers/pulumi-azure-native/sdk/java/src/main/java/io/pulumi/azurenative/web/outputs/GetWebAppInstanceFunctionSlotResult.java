@@ -314,87 +314,70 @@ public final class GetWebAppInstanceFunctionSlotResult {
             this.config = config;
             return this;
         }
-
         public Builder configHref(@Nullable String configHref) {
             this.configHref = configHref;
             return this;
         }
-
         public Builder files(@Nullable Map<String,String> files) {
             this.files = files;
             return this;
         }
-
         public Builder functionAppId(@Nullable String functionAppId) {
             this.functionAppId = functionAppId;
             return this;
         }
-
         public Builder href(@Nullable String href) {
             this.href = href;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder invokeUrlTemplate(@Nullable String invokeUrlTemplate) {
             this.invokeUrlTemplate = invokeUrlTemplate;
             return this;
         }
-
         public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder scriptHref(@Nullable String scriptHref) {
             this.scriptHref = scriptHref;
             return this;
         }
-
         public Builder scriptRootPathHref(@Nullable String scriptRootPathHref) {
             this.scriptRootPathHref = scriptRootPathHref;
             return this;
         }
-
         public Builder secretsFileHref(@Nullable String secretsFileHref) {
             this.secretsFileHref = secretsFileHref;
             return this;
         }
-
         public Builder testData(@Nullable String testData) {
             this.testData = testData;
             return this;
         }
-
         public Builder testDataHref(@Nullable String testDataHref) {
             this.testDataHref = testDataHref;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetWebAppInstanceFunctionSlotResult build() {
+        }        public GetWebAppInstanceFunctionSlotResult build() {
             return new GetWebAppInstanceFunctionSlotResult(config, configHref, files, functionAppId, href, id, invokeUrlTemplate, isDisabled, kind, language, name, scriptHref, scriptRootPathHref, secretsFileHref, testData, testDataHref, type);
         }
     }

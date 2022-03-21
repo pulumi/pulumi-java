@@ -106,22 +106,18 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
-
         public Builder featureName(@Nullable String featureName) {
             this.featureName = featureName;
             return this;
         }
-
         public Builder featureType(@Nullable String featureType) {
             this.featureType = featureType;
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetExposureControlFeatureValueByFactoryArgs build() {
+        }        public GetExposureControlFeatureValueByFactoryArgs build() {
             return new GetExposureControlFeatureValueByFactoryArgs(factoryName, featureName, featureType, resourceGroupName);
         }
     }

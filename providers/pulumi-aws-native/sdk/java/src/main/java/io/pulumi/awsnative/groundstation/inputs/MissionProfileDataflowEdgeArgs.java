@@ -66,22 +66,18 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
             this.destination = destination;
             return this;
         }
-
         public Builder destination(@Nullable String destination) {
             this.destination = Output.ofNullable(destination);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
-        }
-        public MissionProfileDataflowEdgeArgs build() {
+        }        public MissionProfileDataflowEdgeArgs build() {
             return new MissionProfileDataflowEdgeArgs(destination, source);
         }
     }

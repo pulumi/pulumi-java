@@ -111,42 +111,34 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
             this.destinationPort = destinationPort;
             return this;
         }
-
         public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
-
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Output.ofNullable(privateIPAddress);
             return this;
         }
-
         public Builder publicPort(@Nullable Output<Integer> publicPort) {
             this.publicPort = publicPort;
             return this;
         }
-
         public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = Output.ofNullable(publicPort);
             return this;
-        }
-        public ApplicationGetEndpointArgs build() {
+        }        public ApplicationGetEndpointArgs build() {
             return new ApplicationGetEndpointArgs(destinationPort, location, privateIPAddress, publicPort);
         }
     }

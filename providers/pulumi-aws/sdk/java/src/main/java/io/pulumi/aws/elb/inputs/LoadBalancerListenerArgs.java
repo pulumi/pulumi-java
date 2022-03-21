@@ -126,52 +126,42 @@ public final class LoadBalancerListenerArgs extends io.pulumi.resources.Resource
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
-
         public Builder instancePort(Integer instancePort) {
             this.instancePort = Output.of(Objects.requireNonNull(instancePort));
             return this;
         }
-
         public Builder instanceProtocol(Output<String> instanceProtocol) {
             this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
             return this;
         }
-
         public Builder instanceProtocol(String instanceProtocol) {
             this.instanceProtocol = Output.of(Objects.requireNonNull(instanceProtocol));
             return this;
         }
-
         public Builder lbPort(Output<Integer> lbPort) {
             this.lbPort = Objects.requireNonNull(lbPort);
             return this;
         }
-
         public Builder lbPort(Integer lbPort) {
             this.lbPort = Output.of(Objects.requireNonNull(lbPort));
             return this;
         }
-
         public Builder lbProtocol(Output<String> lbProtocol) {
             this.lbProtocol = Objects.requireNonNull(lbProtocol);
             return this;
         }
-
         public Builder lbProtocol(String lbProtocol) {
             this.lbProtocol = Output.of(Objects.requireNonNull(lbProtocol));
             return this;
         }
-
         public Builder sslCertificateId(@Nullable Output<String> sslCertificateId) {
             this.sslCertificateId = sslCertificateId;
             return this;
         }
-
         public Builder sslCertificateId(@Nullable String sslCertificateId) {
             this.sslCertificateId = Output.ofNullable(sslCertificateId);
             return this;
-        }
-        public LoadBalancerListenerArgs build() {
+        }        public LoadBalancerListenerArgs build() {
             return new LoadBalancerListenerArgs(instancePort, instanceProtocol, lbPort, lbProtocol, sslCertificateId);
         }
     }

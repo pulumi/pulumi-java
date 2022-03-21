@@ -77,12 +77,10 @@ public final class EdgeCacheKeysetPublicKey {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public EdgeCacheKeysetPublicKey build() {
+        }        public EdgeCacheKeysetPublicKey build() {
             return new EdgeCacheKeysetPublicKey(id, value);
         }
     }

@@ -71,12 +71,10 @@ public final class InsightsTableResultResponseColumns {
             this.name = name;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public InsightsTableResultResponseColumns build() {
+        }        public InsightsTableResultResponseColumns build() {
             return new InsightsTableResultResponseColumns(name, type);
         }
     }

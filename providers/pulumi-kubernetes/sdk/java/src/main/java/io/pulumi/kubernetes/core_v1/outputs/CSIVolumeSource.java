@@ -122,27 +122,22 @@ public final class CSIVolumeSource {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
-
         public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
-
         public Builder nodePublishSecretRef(@Nullable LocalObjectReference nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
-
         public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
-
         public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
-        }
-        public CSIVolumeSource build() {
+        }        public CSIVolumeSource build() {
             return new CSIVolumeSource(driver, fsType, nodePublishSecretRef, readOnly, volumeAttributes);
         }
     }

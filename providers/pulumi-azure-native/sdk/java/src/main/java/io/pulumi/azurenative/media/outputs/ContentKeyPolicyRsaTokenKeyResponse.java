@@ -87,17 +87,14 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
             this.exponent = Objects.requireNonNull(exponent);
             return this;
         }
-
         public Builder modulus(String modulus) {
             this.modulus = Objects.requireNonNull(modulus);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public ContentKeyPolicyRsaTokenKeyResponse build() {
+        }        public ContentKeyPolicyRsaTokenKeyResponse build() {
             return new ContentKeyPolicyRsaTokenKeyResponse(exponent, modulus, odataType);
         }
     }

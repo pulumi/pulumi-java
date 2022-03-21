@@ -56,8 +56,7 @@ public final class GetDefaultServiceAccountArgs extends io.pulumi.resources.Invo
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetDefaultServiceAccountArgs build() {
+        }        public GetDefaultServiceAccountArgs build() {
             return new GetDefaultServiceAccountArgs(project);
         }
     }

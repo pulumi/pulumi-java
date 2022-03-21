@@ -75,22 +75,18 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
             this.actionCondition = actionCondition;
             return this;
         }
-
         public Builder actionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs actionCondition) {
             this.actionCondition = Output.ofNullable(actionCondition);
             return this;
         }
-
         public Builder labelNameCondition(@Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition) {
             this.labelNameCondition = labelNameCondition;
             return this;
         }
-
         public Builder labelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs labelNameCondition) {
             this.labelNameCondition = Output.ofNullable(labelNameCondition);
             return this;
-        }
-        public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs build() {
+        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(actionCondition, labelNameCondition);
         }
     }

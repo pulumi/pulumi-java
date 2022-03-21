@@ -71,12 +71,10 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
             this.imageVersionId = Objects.requireNonNull(imageVersionId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public ImageTemplateSharedImageVersionSourceResponse build() {
+        }        public ImageTemplateSharedImageVersionSourceResponse build() {
             return new ImageTemplateSharedImageVersionSourceResponse(imageVersionId, type);
         }
     }

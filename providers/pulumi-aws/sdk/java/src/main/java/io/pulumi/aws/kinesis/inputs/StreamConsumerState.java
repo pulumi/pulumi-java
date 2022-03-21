@@ -106,42 +106,34 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder streamArn(@Nullable Output<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
-
         public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = Output.ofNullable(streamArn);
             return this;
-        }
-        public StreamConsumerState build() {
+        }        public StreamConsumerState build() {
             return new StreamConsumerState(arn, creationTimestamp, name, streamArn);
         }
     }

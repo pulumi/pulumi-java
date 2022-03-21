@@ -53,7 +53,9 @@ public final class InputDefinition {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-        public InputDefinition build() {
+        public Builder attributes(InputAttribute... attributes) {
+            return attributes(List.of(attributes));
+        }        public InputDefinition build() {
             return new InputDefinition(attributes);
         }
     }

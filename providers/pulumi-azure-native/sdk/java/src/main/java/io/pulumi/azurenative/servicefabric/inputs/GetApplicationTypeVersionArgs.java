@@ -104,22 +104,18 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
             this.applicationTypeName = Objects.requireNonNull(applicationTypeName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public GetApplicationTypeVersionArgs build() {
+        }        public GetApplicationTypeVersionArgs build() {
             return new GetApplicationTypeVersionArgs(applicationTypeName, clusterName, resourceGroupName, version);
         }
     }

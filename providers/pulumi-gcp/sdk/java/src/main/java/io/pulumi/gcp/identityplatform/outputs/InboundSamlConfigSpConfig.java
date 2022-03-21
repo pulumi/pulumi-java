@@ -93,17 +93,17 @@ public final class InboundSamlConfigSpConfig {
             this.callbackUri = callbackUri;
             return this;
         }
-
         public Builder spCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
-
+        public Builder spCertificates(InboundSamlConfigSpConfigSpCertificate... spCertificates) {
+            return spCertificates(List.of(spCertificates));
+        }
         public Builder spEntityId(@Nullable String spEntityId) {
             this.spEntityId = spEntityId;
             return this;
-        }
-        public InboundSamlConfigSpConfig build() {
+        }        public InboundSamlConfigSpConfig build() {
             return new InboundSamlConfigSpConfig(callbackUri, spCertificates, spEntityId);
         }
     }

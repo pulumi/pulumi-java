@@ -72,12 +72,10 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.actionGroupName = Objects.requireNonNull(actionGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetActionGroupArgs build() {
+        }        public GetActionGroupArgs build() {
             return new GetActionGroupArgs(actionGroupName, resourceGroupName);
         }
     }

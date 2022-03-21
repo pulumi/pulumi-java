@@ -50,8 +50,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
-        }
-        public GetBotArgs build() {
+        }        public GetBotArgs build() {
             return new GetBotArgs(id);
         }
     }

@@ -128,27 +128,25 @@ public final class PipelineRunRequestResponse {
             this.artifacts = artifacts;
             return this;
         }
-
+        public Builder artifacts(String... artifacts) {
+            return artifacts(List.of(artifacts));
+        }
         public Builder catalogDigest(@Nullable String catalogDigest) {
             this.catalogDigest = catalogDigest;
             return this;
         }
-
         public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
             this.pipelineResourceId = pipelineResourceId;
             return this;
         }
-
         public Builder source(@Nullable PipelineRunSourcePropertiesResponse source) {
             this.source = source;
             return this;
         }
-
         public Builder target(@Nullable PipelineRunTargetPropertiesResponse target) {
             this.target = target;
             return this;
-        }
-        public PipelineRunRequestResponse build() {
+        }        public PipelineRunRequestResponse build() {
             return new PipelineRunRequestResponse(artifacts, catalogDigest, pipelineResourceId, source, target);
         }
     }

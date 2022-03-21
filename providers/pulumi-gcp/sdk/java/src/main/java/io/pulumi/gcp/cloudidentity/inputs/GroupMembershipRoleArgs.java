@@ -57,12 +57,10 @@ public final class GroupMembershipRoleArgs extends io.pulumi.resources.ResourceA
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public GroupMembershipRoleArgs build() {
+        }        public GroupMembershipRoleArgs build() {
             return new GroupMembershipRoleArgs(name);
         }
     }

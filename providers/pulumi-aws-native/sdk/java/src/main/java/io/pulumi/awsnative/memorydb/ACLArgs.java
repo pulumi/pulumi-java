@@ -92,32 +92,32 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
             this.aCLName = aCLName;
             return this;
         }
-
         public Builder aCLName(@Nullable String aCLName) {
             this.aCLName = Output.ofNullable(aCLName);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<ACLTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<ACLTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(ACLTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder userNames(@Nullable Output<List<String>> userNames) {
             this.userNames = userNames;
             return this;
         }
-
         public Builder userNames(@Nullable List<String> userNames) {
             this.userNames = Output.ofNullable(userNames);
             return this;
         }
-        public ACLArgs build() {
+        public Builder userNames(String... userNames) {
+            return userNames(List.of(userNames));
+        }        public ACLArgs build() {
             return new ACLArgs(aCLName, tags, userNames);
         }
     }

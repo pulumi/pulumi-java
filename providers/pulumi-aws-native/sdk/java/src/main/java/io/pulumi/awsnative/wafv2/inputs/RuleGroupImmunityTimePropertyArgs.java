@@ -52,12 +52,10 @@ public final class RuleGroupImmunityTimePropertyArgs extends io.pulumi.resources
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
-
         public Builder immunityTime(Integer immunityTime) {
             this.immunityTime = Output.of(Objects.requireNonNull(immunityTime));
             return this;
-        }
-        public RuleGroupImmunityTimePropertyArgs build() {
+        }        public RuleGroupImmunityTimePropertyArgs build() {
             return new RuleGroupImmunityTimePropertyArgs(immunityTime);
         }
     }

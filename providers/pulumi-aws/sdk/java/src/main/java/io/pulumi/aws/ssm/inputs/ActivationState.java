@@ -205,102 +205,82 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
             this.activationCode = activationCode;
             return this;
         }
-
         public Builder activationCode(@Nullable String activationCode) {
             this.activationCode = Output.ofNullable(activationCode);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
-
         public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Output.ofNullable(expirationDate);
             return this;
         }
-
         public Builder expired(@Nullable Output<Boolean> expired) {
             this.expired = expired;
             return this;
         }
-
         public Builder expired(@Nullable Boolean expired) {
             this.expired = Output.ofNullable(expired);
             return this;
         }
-
         public Builder iamRole(@Nullable Output<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
-
         public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = Output.ofNullable(iamRole);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder registrationCount(@Nullable Output<Integer> registrationCount) {
             this.registrationCount = registrationCount;
             return this;
         }
-
         public Builder registrationCount(@Nullable Integer registrationCount) {
             this.registrationCount = Output.ofNullable(registrationCount);
             return this;
         }
-
         public Builder registrationLimit(@Nullable Output<Integer> registrationLimit) {
             this.registrationLimit = registrationLimit;
             return this;
         }
-
         public Builder registrationLimit(@Nullable Integer registrationLimit) {
             this.registrationLimit = Output.ofNullable(registrationLimit);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
-        }
-        public ActivationState build() {
+        }        public ActivationState build() {
             return new ActivationState(activationCode, description, expirationDate, expired, iamRole, name, registrationCount, registrationLimit, tags, tagsAll);
         }
     }

@@ -102,22 +102,18 @@ public final class AlexaChannelPropertiesResponse {
             this.alexaSkillId = Objects.requireNonNull(alexaSkillId);
             return this;
         }
-
         public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public Builder serviceEndpointUri(String serviceEndpointUri) {
             this.serviceEndpointUri = Objects.requireNonNull(serviceEndpointUri);
             return this;
         }
-
         public Builder urlFragment(String urlFragment) {
             this.urlFragment = Objects.requireNonNull(urlFragment);
             return this;
-        }
-        public AlexaChannelPropertiesResponse build() {
+        }        public AlexaChannelPropertiesResponse build() {
             return new AlexaChannelPropertiesResponse(alexaSkillId, isEnabled, serviceEndpointUri, urlFragment);
         }
     }

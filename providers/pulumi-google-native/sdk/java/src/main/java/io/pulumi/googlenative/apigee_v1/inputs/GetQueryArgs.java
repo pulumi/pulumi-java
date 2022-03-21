@@ -76,17 +76,14 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder queryId(String queryId) {
             this.queryId = Objects.requireNonNull(queryId);
             return this;
-        }
-        public GetQueryArgs build() {
+        }        public GetQueryArgs build() {
             return new GetQueryArgs(environmentId, organizationId, queryId);
         }
     }

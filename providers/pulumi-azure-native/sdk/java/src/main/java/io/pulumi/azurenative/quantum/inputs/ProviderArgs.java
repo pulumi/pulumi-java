@@ -144,62 +144,50 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.applicationName = applicationName;
             return this;
         }
-
         public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
-
         public Builder instanceUri(@Nullable Output<String> instanceUri) {
             this.instanceUri = instanceUri;
             return this;
         }
-
         public Builder instanceUri(@Nullable String instanceUri) {
             this.instanceUri = Output.ofNullable(instanceUri);
             return this;
         }
-
         public Builder providerId(@Nullable Output<String> providerId) {
             this.providerId = providerId;
             return this;
         }
-
         public Builder providerId(@Nullable String providerId) {
             this.providerId = Output.ofNullable(providerId);
             return this;
         }
-
         public Builder providerSku(@Nullable Output<String> providerSku) {
             this.providerSku = providerSku;
             return this;
         }
-
         public Builder providerSku(@Nullable String providerSku) {
             this.providerSku = Output.ofNullable(providerSku);
             return this;
         }
-
         public Builder provisioningState(@Nullable Output<Either<String,Status>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder provisioningState(@Nullable Either<String,Status> provisioningState) {
             this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
-
         public Builder resourceUsageId(@Nullable Output<String> resourceUsageId) {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
             this.resourceUsageId = Output.ofNullable(resourceUsageId);
             return this;
-        }
-        public ProviderArgs build() {
+        }        public ProviderArgs build() {
             return new ProviderArgs(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
         }
     }

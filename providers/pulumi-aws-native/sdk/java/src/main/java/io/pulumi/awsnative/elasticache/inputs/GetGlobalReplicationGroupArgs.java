@@ -54,8 +54,7 @@ public final class GetGlobalReplicationGroupArgs extends io.pulumi.resources.Inv
         public Builder globalReplicationGroupId(String globalReplicationGroupId) {
             this.globalReplicationGroupId = Objects.requireNonNull(globalReplicationGroupId);
             return this;
-        }
-        public GetGlobalReplicationGroupArgs build() {
+        }        public GetGlobalReplicationGroupArgs build() {
             return new GetGlobalReplicationGroupArgs(globalReplicationGroupId);
         }
     }

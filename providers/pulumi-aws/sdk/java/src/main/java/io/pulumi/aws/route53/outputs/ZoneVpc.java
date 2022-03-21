@@ -71,12 +71,10 @@ public final class ZoneVpc {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
-
         public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
-        }
-        public ZoneVpc build() {
+        }        public ZoneVpc build() {
             return new ZoneVpc(vpcId, vpcRegion);
         }
     }

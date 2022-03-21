@@ -94,32 +94,26 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
-
         public Builder accessKey(String accessKey) {
             this.accessKey = Output.of(Objects.requireNonNull(accessKey));
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder suffix(@Nullable Output<String> suffix) {
             this.suffix = suffix;
             return this;
         }
-
         public Builder suffix(@Nullable String suffix) {
             this.suffix = Output.ofNullable(suffix);
             return this;
-        }
-        public AddStorageAccountWithAccountParametersArgs build() {
+        }        public AddStorageAccountWithAccountParametersArgs build() {
             return new AddStorageAccountWithAccountParametersArgs(accessKey, name, suffix);
         }
     }

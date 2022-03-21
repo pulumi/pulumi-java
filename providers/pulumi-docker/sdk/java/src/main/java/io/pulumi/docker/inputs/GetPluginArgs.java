@@ -66,12 +66,10 @@ public final class GetPluginArgs extends io.pulumi.resources.InvokeArgs {
             this.alias = alias;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
-        }
-        public GetPluginArgs build() {
+        }        public GetPluginArgs build() {
             return new GetPluginArgs(alias, id);
         }
     }

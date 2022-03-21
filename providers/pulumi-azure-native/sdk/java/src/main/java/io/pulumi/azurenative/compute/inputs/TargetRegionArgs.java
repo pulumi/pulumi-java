@@ -114,42 +114,34 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
             this.encryption = encryption;
             return this;
         }
-
         public Builder encryption(@Nullable EncryptionImagesArgs encryption) {
             this.encryption = Output.ofNullable(encryption);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder regionalReplicaCount(@Nullable Output<Integer> regionalReplicaCount) {
             this.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
-
         public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
             this.regionalReplicaCount = Output.ofNullable(regionalReplicaCount);
             return this;
         }
-
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
-        }
-        public TargetRegionArgs build() {
+        }        public TargetRegionArgs build() {
             return new TargetRegionArgs(encryption, name, regionalReplicaCount, storageAccountType);
         }
     }

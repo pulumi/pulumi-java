@@ -94,32 +94,26 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder publicCertData(Output<String> publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public Builder publicCertData(String publicCertData) {
             this.publicCertData = Output.of(Objects.requireNonNull(publicCertData));
             return this;
-        }
-        public VpnClientRootCertificateArgs build() {
+        }        public VpnClientRootCertificateArgs build() {
             return new VpnClientRootCertificateArgs(id, name, publicCertData);
         }
     }

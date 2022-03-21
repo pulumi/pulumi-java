@@ -261,132 +261,109 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             this.additionalHeaders = additionalHeaders;
             return this;
         }
-
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = Output.ofNullable(additionalHeaders);
             return this;
         }
-
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Output.ofNullable(annotations);
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
-
         public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Output.ofNullable(folder);
             return this;
         }
-
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
-
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
-
         public Builder paginationRules(@Nullable Output<Object> paginationRules) {
             this.paginationRules = paginationRules;
             return this;
         }
-
         public Builder paginationRules(@Nullable Object paginationRules) {
             this.paginationRules = Output.ofNullable(paginationRules);
             return this;
         }
-
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
-
         public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = Output.ofNullable(relativeUrl);
             return this;
         }
-
         public Builder requestBody(@Nullable Output<Object> requestBody) {
             this.requestBody = requestBody;
             return this;
         }
-
         public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = Output.ofNullable(requestBody);
             return this;
         }
-
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
-
         public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = Output.ofNullable(requestMethod);
             return this;
         }
-
         public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
-
         public Builder schema(@Nullable Object schema) {
             this.schema = Output.ofNullable(schema);
             return this;
         }
-
         public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
-
         public Builder structure(@Nullable Object structure) {
             this.structure = Output.ofNullable(structure);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public RestResourceDatasetArgs build() {
+        }        public RestResourceDatasetArgs build() {
             return new RestResourceDatasetArgs(additionalHeaders, annotations, description, folder, linkedServiceName, paginationRules, parameters, relativeUrl, requestBody, requestMethod, schema, structure, type);
         }
     }

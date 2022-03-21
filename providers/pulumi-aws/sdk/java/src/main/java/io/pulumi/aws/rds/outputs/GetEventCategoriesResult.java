@@ -80,17 +80,17 @@ public final class GetEventCategoriesResult {
             this.eventCategories = Objects.requireNonNull(eventCategories);
             return this;
         }
-
+        public Builder eventCategories(String... eventCategories) {
+            return eventCategories(List.of(eventCategories));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
-        }
-        public GetEventCategoriesResult build() {
+        }        public GetEventCategoriesResult build() {
             return new GetEventCategoriesResult(eventCategories, id, sourceType);
         }
     }

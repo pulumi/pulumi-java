@@ -61,12 +61,13 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public Builder replicas(List<ReplicaArgs> replicas) {
             this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
-        public UserManagedArgs build() {
+        public Builder replicas(ReplicaArgs... replicas) {
+            return replicas(List.of(replicas));
+        }        public UserManagedArgs build() {
             return new UserManagedArgs(replicas);
         }
     }

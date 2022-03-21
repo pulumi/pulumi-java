@@ -81,27 +81,25 @@ public final class GetEntitlementResult {
             this.appVisibility = appVisibility;
             return this;
         }
-
         public Builder attributes(@Nullable List<EntitlementAttribute> attributes) {
             this.attributes = attributes;
             return this;
         }
-
+        public Builder attributes(EntitlementAttribute... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
-        }
-        public GetEntitlementResult build() {
+        }        public GetEntitlementResult build() {
             return new GetEntitlementResult(appVisibility, attributes, createdTime, description, lastModifiedTime);
         }
     }

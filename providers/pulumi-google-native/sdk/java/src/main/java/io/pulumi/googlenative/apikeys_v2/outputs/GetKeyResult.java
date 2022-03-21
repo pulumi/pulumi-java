@@ -182,47 +182,38 @@ public final class GetKeyResult {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
-
         public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder keyString(String keyString) {
             this.keyString = Objects.requireNonNull(keyString);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder restrictions(V2RestrictionsResponse restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
-
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
-        }
-        public GetKeyResult build() {
+        }        public GetKeyResult build() {
             return new GetKeyResult(createTime, deleteTime, displayName, etag, keyString, name, restrictions, uid, updateTime);
         }
     }

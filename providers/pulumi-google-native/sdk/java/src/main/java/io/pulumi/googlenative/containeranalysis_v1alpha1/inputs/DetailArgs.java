@@ -225,112 +225,90 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             this.cpeUri = cpeUri;
             return this;
         }
-
         public Builder cpeUri(@Nullable String cpeUri) {
             this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
             this.fixedLocation = fixedLocation;
             return this;
         }
-
         public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
             this.fixedLocation = Output.ofNullable(fixedLocation);
             return this;
         }
-
         public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
             this.isObsolete = isObsolete;
             return this;
         }
-
         public Builder isObsolete(@Nullable Boolean isObsolete) {
             this.isObsolete = Output.ofNullable(isObsolete);
             return this;
         }
-
         public Builder maxAffectedVersion(@Nullable Output<VersionArgs> maxAffectedVersion) {
             this.maxAffectedVersion = maxAffectedVersion;
             return this;
         }
-
         public Builder maxAffectedVersion(@Nullable VersionArgs maxAffectedVersion) {
             this.maxAffectedVersion = Output.ofNullable(maxAffectedVersion);
             return this;
         }
-
         public Builder minAffectedVersion(@Nullable Output<VersionArgs> minAffectedVersion) {
             this.minAffectedVersion = minAffectedVersion;
             return this;
         }
-
         public Builder minAffectedVersion(@Nullable VersionArgs minAffectedVersion) {
             this.minAffectedVersion = Output.ofNullable(minAffectedVersion);
             return this;
         }
-
         public Builder $package(@Nullable Output<String> $package) {
             this.$package = $package;
             return this;
         }
-
         public Builder $package(@Nullable String $package) {
             this.$package = Output.ofNullable($package);
             return this;
         }
-
         public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
-
         public Builder packageType(@Nullable String packageType) {
             this.packageType = Output.ofNullable(packageType);
             return this;
         }
-
         public Builder severityName(@Nullable Output<String> severityName) {
             this.severityName = severityName;
             return this;
         }
-
         public Builder severityName(@Nullable String severityName) {
             this.severityName = Output.ofNullable(severityName);
             return this;
         }
-
         public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
-
         public Builder source(@Nullable String source) {
             this.source = Output.ofNullable(source);
             return this;
         }
-
         public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
-
         public Builder vendor(@Nullable String vendor) {
             this.vendor = Output.ofNullable(vendor);
             return this;
-        }
-        public DetailArgs build() {
+        }        public DetailArgs build() {
             return new DetailArgs(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, $package, packageType, severityName, source, vendor);
         }
     }

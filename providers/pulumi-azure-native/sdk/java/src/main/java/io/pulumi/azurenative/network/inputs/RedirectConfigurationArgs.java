@@ -161,72 +161,58 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
             this.customFragment = customFragment;
             return this;
         }
-
         public Builder customFragment(@Nullable String customFragment) {
             this.customFragment = Output.ofNullable(customFragment);
             return this;
         }
-
         public Builder customHost(@Nullable Output<String> customHost) {
             this.customHost = customHost;
             return this;
         }
-
         public Builder customHost(@Nullable String customHost) {
             this.customHost = Output.ofNullable(customHost);
             return this;
         }
-
         public Builder customPath(@Nullable Output<String> customPath) {
             this.customPath = customPath;
             return this;
         }
-
         public Builder customPath(@Nullable String customPath) {
             this.customPath = Output.ofNullable(customPath);
             return this;
         }
-
         public Builder customQueryString(@Nullable Output<String> customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
-
         public Builder customQueryString(@Nullable String customQueryString) {
             this.customQueryString = Output.ofNullable(customQueryString);
             return this;
         }
-
         public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public Builder redirectProtocol(@Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
             this.redirectProtocol = redirectProtocol;
             return this;
         }
-
         public Builder redirectProtocol(@Nullable Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
             this.redirectProtocol = Output.ofNullable(redirectProtocol);
             return this;
         }
-
         public Builder redirectType(@Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
             this.redirectType = redirectType;
             return this;
         }
-
         public Builder redirectType(@Nullable Either<String,FrontDoorRedirectType> redirectType) {
             this.redirectType = Output.ofNullable(redirectType);
             return this;
-        }
-        public RedirectConfigurationArgs build() {
+        }        public RedirectConfigurationArgs build() {
             return new RedirectConfigurationArgs(customFragment, customHost, customPath, customQueryString, odataType, redirectProtocol, redirectType);
         }
     }

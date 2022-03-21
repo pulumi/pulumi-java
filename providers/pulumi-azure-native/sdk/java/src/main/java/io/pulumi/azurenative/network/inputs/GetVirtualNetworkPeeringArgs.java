@@ -88,17 +88,14 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }
-
         public Builder virtualNetworkPeeringName(String virtualNetworkPeeringName) {
             this.virtualNetworkPeeringName = Objects.requireNonNull(virtualNetworkPeeringName);
             return this;
-        }
-        public GetVirtualNetworkPeeringArgs build() {
+        }        public GetVirtualNetworkPeeringArgs build() {
             return new GetVirtualNetworkPeeringArgs(resourceGroupName, virtualNetworkName, virtualNetworkPeeringName);
         }
     }

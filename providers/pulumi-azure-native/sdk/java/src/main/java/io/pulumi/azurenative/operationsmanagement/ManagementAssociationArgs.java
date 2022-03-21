@@ -155,72 +155,58 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder managementAssociationName(@Nullable Output<String> managementAssociationName) {
             this.managementAssociationName = managementAssociationName;
             return this;
         }
-
         public Builder managementAssociationName(@Nullable String managementAssociationName) {
             this.managementAssociationName = Output.ofNullable(managementAssociationName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ManagementAssociationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ManagementAssociationPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public Builder providerName(String providerName) {
             this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public Builder resourceName(String resourceName) {
             this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public Builder resourceType(String resourceType) {
             this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
-        }
-        public ManagementAssociationArgs build() {
+        }        public ManagementAssociationArgs build() {
             return new ManagementAssociationArgs(location, managementAssociationName, properties, providerName, resourceGroupName, resourceName, resourceType);
         }
     }

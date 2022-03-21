@@ -91,32 +91,26 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
             this.includeExecutionData = includeExecutionData;
             return this;
         }
-
         public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = Output.ofNullable(includeExecutionData);
             return this;
         }
-
         public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
-
         public Builder level(@Nullable String level) {
             this.level = Output.ofNullable(level);
             return this;
         }
-
         public Builder logDestination(@Nullable Output<String> logDestination) {
             this.logDestination = logDestination;
             return this;
         }
-
         public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = Output.ofNullable(logDestination);
             return this;
-        }
-        public StateMachineLoggingConfigurationArgs build() {
+        }        public StateMachineLoggingConfigurationArgs build() {
             return new StateMachineLoggingConfigurationArgs(includeExecutionData, level, logDestination);
         }
     }

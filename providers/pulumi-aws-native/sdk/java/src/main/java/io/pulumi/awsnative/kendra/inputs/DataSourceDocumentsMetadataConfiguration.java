@@ -52,8 +52,7 @@ public final class DataSourceDocumentsMetadataConfiguration extends io.pulumi.re
         public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
-        }
-        public DataSourceDocumentsMetadataConfiguration build() {
+        }        public DataSourceDocumentsMetadataConfiguration build() {
             return new DataSourceDocumentsMetadataConfiguration(s3Prefix);
         }
     }

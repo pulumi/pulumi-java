@@ -91,17 +91,14 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
-
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
-        }
-        public GetAuthorizationTokenArgs build() {
+        }        public GetAuthorizationTokenArgs build() {
             return new GetAuthorizationTokenArgs(domain, domainOwner, durationSeconds);
         }
     }

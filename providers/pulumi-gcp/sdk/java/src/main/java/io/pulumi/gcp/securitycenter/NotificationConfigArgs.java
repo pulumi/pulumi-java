@@ -126,52 +126,42 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
-
         public Builder configId(String configId) {
             this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
-
         public Builder organization(String organization) {
             this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
         }
-
         public Builder pubsubTopic(Output<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
-
         public Builder streamingConfig(Output<NotificationConfigStreamingConfigArgs> streamingConfig) {
             this.streamingConfig = Objects.requireNonNull(streamingConfig);
             return this;
         }
-
         public Builder streamingConfig(NotificationConfigStreamingConfigArgs streamingConfig) {
             this.streamingConfig = Output.of(Objects.requireNonNull(streamingConfig));
             return this;
-        }
-        public NotificationConfigArgs build() {
+        }        public NotificationConfigArgs build() {
             return new NotificationConfigArgs(configId, description, organization, pubsubTopic, streamingConfig);
         }
     }

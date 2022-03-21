@@ -74,22 +74,18 @@ public final class InstanceTemplateGuestAcceleratorGetArgs extends io.pulumi.res
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public Builder count(Integer count) {
             this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public InstanceTemplateGuestAcceleratorGetArgs build() {
+        }        public InstanceTemplateGuestAcceleratorGetArgs build() {
             return new InstanceTemplateGuestAcceleratorGetArgs(count, type);
         }
     }

@@ -92,32 +92,26 @@ public final class TopicIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
-
         public Builder policyData(String policyData) {
             this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public Builder topic(String topic) {
             this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
-        }
-        public TopicIAMPolicyArgs build() {
+        }        public TopicIAMPolicyArgs build() {
             return new TopicIAMPolicyArgs(policyData, project, topic);
         }
     }

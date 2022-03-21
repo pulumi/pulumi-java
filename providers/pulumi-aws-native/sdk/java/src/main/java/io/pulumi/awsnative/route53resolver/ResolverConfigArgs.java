@@ -74,22 +74,18 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.autodefinedReverseFlag = Objects.requireNonNull(autodefinedReverseFlag);
             return this;
         }
-
         public Builder autodefinedReverseFlag(ResolverConfigAutodefinedReverseFlag autodefinedReverseFlag) {
             this.autodefinedReverseFlag = Output.of(Objects.requireNonNull(autodefinedReverseFlag));
             return this;
         }
-
         public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
-        }
-        public ResolverConfigArgs build() {
+        }        public ResolverConfigArgs build() {
             return new ResolverConfigArgs(autodefinedReverseFlag, resourceId);
         }
     }

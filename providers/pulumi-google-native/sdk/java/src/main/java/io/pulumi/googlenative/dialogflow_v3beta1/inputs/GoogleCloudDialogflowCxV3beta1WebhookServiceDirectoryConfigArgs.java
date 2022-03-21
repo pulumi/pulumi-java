@@ -79,22 +79,18 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigAr
             this.genericWebService = genericWebService;
             return this;
         }
-
         public Builder genericWebService(@Nullable GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs genericWebService) {
             this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
-
         public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public Builder service(String service) {
             this.service = Output.of(Objects.requireNonNull(service));
             return this;
-        }
-        public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs build() {
+        }        public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs build() {
             return new GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs(genericWebService, service);
         }
     }

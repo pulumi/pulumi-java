@@ -101,22 +101,18 @@ public final class GetPartitionResult {
             this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder partition(String partition) {
             this.partition = Objects.requireNonNull(partition);
             return this;
         }
-
         public Builder reverseDnsPrefix(String reverseDnsPrefix) {
             this.reverseDnsPrefix = Objects.requireNonNull(reverseDnsPrefix);
             return this;
-        }
-        public GetPartitionResult build() {
+        }        public GetPartitionResult build() {
             return new GetPartitionResult(dnsSuffix, id, partition, reverseDnsPrefix);
         }
     }

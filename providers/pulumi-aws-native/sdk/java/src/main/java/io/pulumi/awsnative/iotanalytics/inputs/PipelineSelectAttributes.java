@@ -79,17 +79,17 @@ public final class PipelineSelectAttributes extends io.pulumi.resources.InvokeAr
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
+        public Builder attributes(String... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = next;
             return this;
-        }
-        public PipelineSelectAttributes build() {
+        }        public PipelineSelectAttributes build() {
             return new PipelineSelectAttributes(attributes, name, next);
         }
     }

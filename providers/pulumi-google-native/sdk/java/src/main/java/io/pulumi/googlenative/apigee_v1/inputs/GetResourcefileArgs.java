@@ -88,22 +88,18 @@ public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetResourcefileArgs build() {
+        }        public GetResourcefileArgs build() {
             return new GetResourcefileArgs(environmentId, name, organizationId, type);
         }
     }

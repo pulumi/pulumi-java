@@ -72,22 +72,21 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
             this.dataset = dataset;
             return this;
         }
-
         public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
             this.dataset = Output.ofNullable(dataset);
             return this;
         }
-
         public Builder targetTypes(@Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
             this.targetTypes = targetTypes;
             return this;
         }
-
         public Builder targetTypes(@Nullable List<DatasetAccessEntryTargetTypesItem> targetTypes) {
             this.targetTypes = Output.ofNullable(targetTypes);
             return this;
         }
-        public DatasetAccessEntryArgs build() {
+        public Builder targetTypes(DatasetAccessEntryTargetTypesItem... targetTypes) {
+            return targetTypes(List.of(targetTypes));
+        }        public DatasetAccessEntryArgs build() {
             return new DatasetAccessEntryArgs(dataset, targetTypes);
         }
     }

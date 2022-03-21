@@ -212,62 +212,59 @@ public final class GetAdaptiveApplicationControlResult {
             this.configurationStatus = Objects.requireNonNull(configurationStatus);
             return this;
         }
-
         public Builder enforcementMode(@Nullable String enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder issues(List<AdaptiveApplicationControlIssueSummaryResponse> issues) {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }
-
+        public Builder issues(AdaptiveApplicationControlIssueSummaryResponse... issues) {
+            return issues(List.of(issues));
+        }
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder pathRecommendations(@Nullable List<PathRecommendationResponse> pathRecommendations) {
             this.pathRecommendations = pathRecommendations;
             return this;
         }
-
+        public Builder pathRecommendations(PathRecommendationResponse... pathRecommendations) {
+            return pathRecommendations(List.of(pathRecommendations));
+        }
         public Builder protectionMode(@Nullable ProtectionModeResponse protectionMode) {
             this.protectionMode = protectionMode;
             return this;
         }
-
         public Builder recommendationStatus(String recommendationStatus) {
             this.recommendationStatus = Objects.requireNonNull(recommendationStatus);
             return this;
         }
-
         public Builder sourceSystem(String sourceSystem) {
             this.sourceSystem = Objects.requireNonNull(sourceSystem);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder vmRecommendations(@Nullable List<VmRecommendationResponse> vmRecommendations) {
             this.vmRecommendations = vmRecommendations;
             return this;
         }
-        public GetAdaptiveApplicationControlResult build() {
+        public Builder vmRecommendations(VmRecommendationResponse... vmRecommendations) {
+            return vmRecommendations(List.of(vmRecommendations));
+        }        public GetAdaptiveApplicationControlResult build() {
             return new GetAdaptiveApplicationControlResult(configurationStatus, enforcementMode, id, issues, location, name, pathRecommendations, protectionMode, recommendationStatus, sourceSystem, type, vmRecommendations);
         }
     }

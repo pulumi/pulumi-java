@@ -94,17 +94,14 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
             this.password = password;
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
-        }
-        public BackendProxyContractResponse build() {
+        }        public BackendProxyContractResponse build() {
             return new BackendProxyContractResponse(password, url, username);
         }
     }

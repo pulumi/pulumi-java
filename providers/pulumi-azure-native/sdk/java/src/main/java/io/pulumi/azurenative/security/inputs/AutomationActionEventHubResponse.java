@@ -111,22 +111,18 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
-
         public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
             this.eventHubResourceId = eventHubResourceId;
             return this;
         }
-
         public Builder sasPolicyName(String sasPolicyName) {
             this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
             return this;
-        }
-        public AutomationActionEventHubResponse build() {
+        }        public AutomationActionEventHubResponse build() {
             return new AutomationActionEventHubResponse(actionType, connectionString, eventHubResourceId, sasPolicyName);
         }
     }

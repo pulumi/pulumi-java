@@ -91,17 +91,17 @@ public final class EdgeCacheServiceRoutingPathMatcher {
             this.description = description;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder routeRules(List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }
-        public EdgeCacheServiceRoutingPathMatcher build() {
+        public Builder routeRules(EdgeCacheServiceRoutingPathMatcherRouteRule... routeRules) {
+            return routeRules(List.of(routeRules));
+        }        public EdgeCacheServiceRoutingPathMatcher build() {
             return new EdgeCacheServiceRoutingPathMatcher(description, name, routeRules);
         }
     }

@@ -248,132 +248,109 @@ public final class HostedPublicVirtualInterfaceState extends io.pulumi.resources
             this.addressFamily = addressFamily;
             return this;
         }
-
         public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
-
         public Builder amazonAddress(@Nullable Output<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
-
         public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Output.ofNullable(amazonAddress);
             return this;
         }
-
         public Builder amazonSideAsn(@Nullable Output<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
-
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
-
         public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
-
         public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
-
         public Builder bgpAsn(@Nullable Output<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
-
         public Builder bgpAsn(@Nullable Integer bgpAsn) {
             this.bgpAsn = Output.ofNullable(bgpAsn);
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable Output<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
-
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
             return this;
         }
-
         public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
-
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
-
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
-
         public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Output.ofNullable(customerAddress);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
-
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
         }
-
         public Builder routeFilterPrefixes(@Nullable Output<List<String>> routeFilterPrefixes) {
             this.routeFilterPrefixes = routeFilterPrefixes;
             return this;
         }
-
         public Builder routeFilterPrefixes(@Nullable List<String> routeFilterPrefixes) {
             this.routeFilterPrefixes = Output.ofNullable(routeFilterPrefixes);
             return this;
         }
-
+        public Builder routeFilterPrefixes(String... routeFilterPrefixes) {
+            return routeFilterPrefixes(List.of(routeFilterPrefixes));
+        }
         public Builder vlan(@Nullable Output<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
-
         public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Output.ofNullable(vlan);
             return this;
-        }
-        public HostedPublicVirtualInterfaceState build() {
+        }        public HostedPublicVirtualInterfaceState build() {
             return new HostedPublicVirtualInterfaceState(addressFamily, amazonAddress, amazonSideAsn, arn, awsDevice, bgpAsn, bgpAuthKey, connectionId, customerAddress, name, ownerAccountId, routeFilterPrefixes, vlan);
         }
     }

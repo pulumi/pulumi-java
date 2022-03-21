@@ -88,17 +88,14 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder securityRuleName(String securityRuleName) {
             this.securityRuleName = Objects.requireNonNull(securityRuleName);
             return this;
-        }
-        public GetSecurityRuleArgs build() {
+        }        public GetSecurityRuleArgs build() {
             return new GetSecurityRuleArgs(networkSecurityGroupName, resourceGroupName, securityRuleName);
         }
     }

@@ -113,42 +113,34 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs dictionary) {
             this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-
         public Builder excludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs excludeInfoTypes) {
             this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
-
         public Builder matchingType(Output<String> matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
-
         public Builder matchingType(String matchingType) {
             this.matchingType = Output.of(Objects.requireNonNull(matchingType));
             return this;
         }
-
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
-        }
-        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs build() {
+        }        public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs(dictionary, excludeInfoTypes, matchingType, regex);
         }
     }

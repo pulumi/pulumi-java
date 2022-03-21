@@ -174,82 +174,66 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.hanaInstanceName = hanaInstanceName;
             return this;
         }
-
         public Builder hanaInstanceName(@Nullable String hanaInstanceName) {
             this.hanaInstanceName = Output.ofNullable(hanaInstanceName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
-
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
-
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
-
         public Builder osProfile(@Nullable OSProfileArgs osProfile) {
             this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
-
         public Builder partnerNodeId(@Nullable Output<String> partnerNodeId) {
             this.partnerNodeId = partnerNodeId;
             return this;
         }
-
         public Builder partnerNodeId(@Nullable String partnerNodeId) {
             this.partnerNodeId = Output.ofNullable(partnerNodeId);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
-
         public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public HanaInstanceArgs build() {
+        }        public HanaInstanceArgs build() {
             return new HanaInstanceArgs(hanaInstanceName, location, networkProfile, osProfile, partnerNodeId, resourceGroupName, storageProfile, tags);
         }
     }

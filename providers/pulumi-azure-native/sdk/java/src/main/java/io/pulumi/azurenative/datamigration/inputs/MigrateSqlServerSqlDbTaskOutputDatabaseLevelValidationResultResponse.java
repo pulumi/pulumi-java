@@ -224,57 +224,46 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
             this.dataIntegrityValidationResult = Objects.requireNonNull(dataIntegrityValidationResult);
             return this;
         }
-
         public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder migrationId(String migrationId) {
             this.migrationId = Objects.requireNonNull(migrationId);
             return this;
         }
-
         public Builder queryAnalysisValidationResult(QueryAnalysisValidationResultResponse queryAnalysisValidationResult) {
             this.queryAnalysisValidationResult = Objects.requireNonNull(queryAnalysisValidationResult);
             return this;
         }
-
         public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public Builder schemaValidationResult(SchemaComparisonValidationResultResponse schemaValidationResult) {
             this.schemaValidationResult = Objects.requireNonNull(schemaValidationResult);
             return this;
         }
-
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
-
         public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder targetDatabaseName(String targetDatabaseName) {
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
-        }
-        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
+        }        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(dataIntegrityValidationResult, endedOn, id, migrationId, queryAnalysisValidationResult, resultType, schemaValidationResult, sourceDatabaseName, startedOn, status, targetDatabaseName);
         }
     }

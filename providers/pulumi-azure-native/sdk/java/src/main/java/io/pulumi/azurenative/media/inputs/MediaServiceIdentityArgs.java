@@ -58,12 +58,10 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(Either<String,ManagedIdentityType> type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public MediaServiceIdentityArgs build() {
+        }        public MediaServiceIdentityArgs build() {
             return new MediaServiceIdentityArgs(type);
         }
     }

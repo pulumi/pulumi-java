@@ -60,8 +60,7 @@ public final class WorkloadNetworkSegmentPortVifResponse extends io.pulumi.resou
         public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
-        }
-        public WorkloadNetworkSegmentPortVifResponse build() {
+        }        public WorkloadNetworkSegmentPortVifResponse build() {
             return new WorkloadNetworkSegmentPortVifResponse(portName);
         }
     }

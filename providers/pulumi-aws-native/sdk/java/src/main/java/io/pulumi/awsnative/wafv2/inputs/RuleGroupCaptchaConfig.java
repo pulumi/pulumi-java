@@ -52,8 +52,7 @@ public final class RuleGroupCaptchaConfig extends io.pulumi.resources.InvokeArgs
         public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
-        }
-        public RuleGroupCaptchaConfig build() {
+        }        public RuleGroupCaptchaConfig build() {
             return new RuleGroupCaptchaConfig(immunityTimeProperty);
         }
     }

@@ -76,12 +76,10 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulum
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
-        }
-        public ComputeInstanceConnectivityEndpointsResponse build() {
+        }        public ComputeInstanceConnectivityEndpointsResponse build() {
             return new ComputeInstanceConnectivityEndpointsResponse(privateIpAddress, publicIpAddress);
         }
     }

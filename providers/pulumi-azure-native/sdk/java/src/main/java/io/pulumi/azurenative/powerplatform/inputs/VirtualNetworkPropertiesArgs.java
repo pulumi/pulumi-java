@@ -79,22 +79,18 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder subnet(@Nullable Output<SubnetPropertiesArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
-
         public Builder subnet(@Nullable SubnetPropertiesArgs subnet) {
             this.subnet = Output.ofNullable(subnet);
             return this;
-        }
-        public VirtualNetworkPropertiesArgs build() {
+        }        public VirtualNetworkPropertiesArgs build() {
             return new VirtualNetworkPropertiesArgs(id, subnet);
         }
     }

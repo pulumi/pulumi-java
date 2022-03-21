@@ -188,92 +188,74 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
             this.arn = arn;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = Output.ofNullable(arn);
             return this;
         }
-
         public Builder domainId(@Nullable Output<String> domainId) {
             this.domainId = domainId;
             return this;
         }
-
         public Builder domainId(@Nullable String domainId) {
             this.domainId = Output.ofNullable(domainId);
             return this;
         }
-
         public Builder homeEfsFileSystemUid(@Nullable Output<String> homeEfsFileSystemUid) {
             this.homeEfsFileSystemUid = homeEfsFileSystemUid;
             return this;
         }
-
         public Builder homeEfsFileSystemUid(@Nullable String homeEfsFileSystemUid) {
             this.homeEfsFileSystemUid = Output.ofNullable(homeEfsFileSystemUid);
             return this;
         }
-
         public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
-
         public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = Output.ofNullable(singleSignOnUserIdentifier);
             return this;
         }
-
         public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
             this.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
-
         public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
             this.singleSignOnUserValue = Output.ofNullable(singleSignOnUserValue);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
-
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
-
         public Builder userProfileName(@Nullable Output<String> userProfileName) {
             this.userProfileName = userProfileName;
             return this;
         }
-
         public Builder userProfileName(@Nullable String userProfileName) {
             this.userProfileName = Output.ofNullable(userProfileName);
             return this;
         }
-
         public Builder userSettings(@Nullable Output<UserProfileUserSettingsGetArgs> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
-
         public Builder userSettings(@Nullable UserProfileUserSettingsGetArgs userSettings) {
             this.userSettings = Output.ofNullable(userSettings);
             return this;
-        }
-        public UserProfileState build() {
+        }        public UserProfileState build() {
             return new UserProfileState(arn, domainId, homeEfsFileSystemUid, singleSignOnUserIdentifier, singleSignOnUserValue, tags, tagsAll, userProfileName, userSettings);
         }
     }

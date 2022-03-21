@@ -72,12 +72,13 @@ public final class PrivateEndpointPropertiesResponse {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
-
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-        public PrivateEndpointPropertiesResponse build() {
+        public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
+        }        public PrivateEndpointPropertiesResponse build() {
             return new PrivateEndpointPropertiesResponse(createdDate, manualPrivateLinkServiceConnections);
         }
     }

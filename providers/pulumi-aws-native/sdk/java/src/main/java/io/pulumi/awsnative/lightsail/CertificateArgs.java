@@ -108,42 +108,40 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
             return this;
         }
-
+        public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
+            return subjectAlternativeNames(List.of(subjectAlternativeNames));
+        }
         public Builder tags(@Nullable Output<List<CertificateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<CertificateTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public CertificateArgs build() {
+        public Builder tags(CertificateTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public CertificateArgs build() {
             return new CertificateArgs(certificateName, domainName, subjectAlternativeNames, tags);
         }
     }

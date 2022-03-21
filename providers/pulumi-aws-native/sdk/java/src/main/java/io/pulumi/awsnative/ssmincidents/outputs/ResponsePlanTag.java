@@ -53,12 +53,10 @@ public final class ResponsePlanTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public ResponsePlanTag build() {
+        }        public ResponsePlanTag build() {
             return new ResponsePlanTag(key, value);
         }
     }

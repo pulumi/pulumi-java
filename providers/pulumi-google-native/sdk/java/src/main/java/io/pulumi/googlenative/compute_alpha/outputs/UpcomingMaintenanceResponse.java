@@ -87,17 +87,14 @@ public final class UpcomingMaintenanceResponse {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
-
         public Builder startTimeWindow(UpcomingMaintenanceTimeWindowResponse startTimeWindow) {
             this.startTimeWindow = Objects.requireNonNull(startTimeWindow);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public UpcomingMaintenanceResponse build() {
+        }        public UpcomingMaintenanceResponse build() {
             return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
         }
     }

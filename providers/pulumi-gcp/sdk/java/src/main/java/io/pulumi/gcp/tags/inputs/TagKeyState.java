@@ -157,72 +157,58 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
             this.createTime = createTime;
             return this;
         }
-
         public Builder createTime(@Nullable String createTime) {
             this.createTime = Output.ofNullable(createTime);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder namespacedName(@Nullable Output<String> namespacedName) {
             this.namespacedName = namespacedName;
             return this;
         }
-
         public Builder namespacedName(@Nullable String namespacedName) {
             this.namespacedName = Output.ofNullable(namespacedName);
             return this;
         }
-
         public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
-
         public Builder parent(@Nullable String parent) {
             this.parent = Output.ofNullable(parent);
             return this;
         }
-
         public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
-
         public Builder shortName(@Nullable String shortName) {
             this.shortName = Output.ofNullable(shortName);
             return this;
         }
-
         public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-
         public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Output.ofNullable(updateTime);
             return this;
-        }
-        public TagKeyState build() {
+        }        public TagKeyState build() {
             return new TagKeyState(createTime, description, name, namespacedName, parent, shortName, updateTime);
         }
     }

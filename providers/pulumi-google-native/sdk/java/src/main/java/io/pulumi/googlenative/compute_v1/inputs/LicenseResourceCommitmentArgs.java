@@ -94,32 +94,26 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
             this.amount = amount;
             return this;
         }
-
         public Builder amount(@Nullable String amount) {
             this.amount = Output.ofNullable(amount);
             return this;
         }
-
         public Builder coresPerLicense(@Nullable Output<String> coresPerLicense) {
             this.coresPerLicense = coresPerLicense;
             return this;
         }
-
         public Builder coresPerLicense(@Nullable String coresPerLicense) {
             this.coresPerLicense = Output.ofNullable(coresPerLicense);
             return this;
         }
-
         public Builder license(@Nullable Output<String> license) {
             this.license = license;
             return this;
         }
-
         public Builder license(@Nullable String license) {
             this.license = Output.ofNullable(license);
             return this;
-        }
-        public LicenseResourceCommitmentArgs build() {
+        }        public LicenseResourceCommitmentArgs build() {
             return new LicenseResourceCommitmentArgs(amount, coresPerLicense, license);
         }
     }

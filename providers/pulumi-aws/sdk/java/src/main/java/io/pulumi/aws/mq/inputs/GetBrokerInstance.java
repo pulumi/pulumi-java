@@ -77,17 +77,17 @@ public final class GetBrokerInstance extends io.pulumi.resources.InvokeArgs {
             this.consoleUrl = Objects.requireNonNull(consoleUrl);
             return this;
         }
-
         public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
-
+        public Builder endpoints(String... endpoints) {
+            return endpoints(List.of(endpoints));
+        }
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
-        }
-        public GetBrokerInstance build() {
+        }        public GetBrokerInstance build() {
             return new GetBrokerInstance(consoleUrl, endpoints, ipAddress);
         }
     }

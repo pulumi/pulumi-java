@@ -77,12 +77,10 @@ public final class BasicScalingResponse extends io.pulumi.resources.InvokeArgs {
             this.idleTimeout = Objects.requireNonNull(idleTimeout);
             return this;
         }
-
         public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
-        }
-        public BasicScalingResponse build() {
+        }        public BasicScalingResponse build() {
             return new BasicScalingResponse(idleTimeout, maxInstances);
         }
     }

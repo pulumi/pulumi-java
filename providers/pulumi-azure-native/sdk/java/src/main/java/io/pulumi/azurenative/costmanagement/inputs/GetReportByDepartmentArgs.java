@@ -72,12 +72,10 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
             this.departmentId = Objects.requireNonNull(departmentId);
             return this;
         }
-
         public Builder reportName(String reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
-        }
-        public GetReportByDepartmentArgs build() {
+        }        public GetReportByDepartmentArgs build() {
             return new GetReportByDepartmentArgs(departmentId, reportName);
         }
     }

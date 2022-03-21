@@ -140,37 +140,39 @@ public final class GetResponsePlanResult {
             this.actions = actions;
             return this;
         }
-
+        public Builder actions(ResponsePlanAction... actions) {
+            return actions(List.of(actions));
+        }
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder chatChannel(@Nullable ResponsePlanChatChannel chatChannel) {
             this.chatChannel = chatChannel;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder engagements(@Nullable List<String> engagements) {
             this.engagements = engagements;
             return this;
         }
-
+        public Builder engagements(String... engagements) {
+            return engagements(List.of(engagements));
+        }
         public Builder incidentTemplate(@Nullable ResponsePlanIncidentTemplate incidentTemplate) {
             this.incidentTemplate = incidentTemplate;
             return this;
         }
-
         public Builder tags(@Nullable List<ResponsePlanTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetResponsePlanResult build() {
+        public Builder tags(ResponsePlanTag... tags) {
+            return tags(List.of(tags));
+        }        public GetResponsePlanResult build() {
             return new GetResponsePlanResult(actions, arn, chatChannel, displayName, engagements, incidentTemplate, tags);
         }
     }

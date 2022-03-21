@@ -91,17 +91,14 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
             this.guestFlush = guestFlush;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder storageLocations(@Nullable String storageLocations) {
             this.storageLocations = storageLocations;
             return this;
-        }
-        public ResourcePolicySnapshotSchedulePolicySnapshotProperties build() {
+        }        public ResourcePolicySnapshotSchedulePolicySnapshotProperties build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotProperties(guestFlush, labels, storageLocations);
         }
     }

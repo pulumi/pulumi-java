@@ -322,87 +322,73 @@ public final class CosmosDbLinkedServiceResponse {
             this.accountEndpoint = accountEndpoint;
             return this;
         }
-
         public Builder accountKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
-
         public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
-
+        public Builder annotations(Object... annotations) {
+            return annotations(List.of(annotations));
+        }
         public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
-
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
-
         public Builder connectionMode(@Nullable String connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
-
         public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = connectionString;
             return this;
         }
-
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
-
         public Builder database(@Nullable Object database) {
             this.database = database;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential) {
             this.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
-
         public Builder servicePrincipalCredentialType(@Nullable String servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
-
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
-
         public Builder tenant(@Nullable Object tenant) {
             this.tenant = tenant;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public CosmosDbLinkedServiceResponse build() {
+        }        public CosmosDbLinkedServiceResponse build() {
             return new CosmosDbLinkedServiceResponse(accountEndpoint, accountKey, annotations, azureCloudType, connectVia, connectionMode, connectionString, credential, database, description, encryptedCredential, parameters, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, tenant, type);
         }
     }

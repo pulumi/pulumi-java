@@ -107,42 +107,34 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
             this.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
-
         public Builder configurationProfileAssignmentName(@Nullable String configurationProfileAssignmentName) {
             this.configurationProfileAssignmentName = Output.ofNullable(configurationProfileAssignmentName);
             return this;
         }
-
         public Builder properties(@Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable ConfigurationProfileAssignmentPropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder vmName(Output<String> vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public Builder vmName(String vmName) {
             this.vmName = Output.of(Objects.requireNonNull(vmName));
             return this;
-        }
-        public ConfigurationProfileAssignmentArgs build() {
+        }        public ConfigurationProfileAssignmentArgs build() {
             return new ConfigurationProfileAssignmentArgs(configurationProfileAssignmentName, properties, resourceGroupName, vmName);
         }
     }

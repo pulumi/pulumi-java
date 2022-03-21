@@ -90,22 +90,18 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
             this.changeId = Objects.requireNonNull(changeId);
             return this;
         }
-
         public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
-
         public Builder managedZone(String managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetChangeArgs build() {
+        }        public GetChangeArgs build() {
             return new GetChangeArgs(changeId, clientOperationId, managedZone, project);
         }
     }

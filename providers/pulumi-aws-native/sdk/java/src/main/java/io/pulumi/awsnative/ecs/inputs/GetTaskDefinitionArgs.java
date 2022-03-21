@@ -54,8 +54,7 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
         public Builder taskDefinitionArn(String taskDefinitionArn) {
             this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
             return this;
-        }
-        public GetTaskDefinitionArgs build() {
+        }        public GetTaskDefinitionArgs build() {
             return new GetTaskDefinitionArgs(taskDefinitionArn);
         }
     }

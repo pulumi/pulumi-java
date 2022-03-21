@@ -184,47 +184,38 @@ public final class GetApplicationTypeVersionResult {
             this.appPackageUrl = Objects.requireNonNull(appPackageUrl);
             return this;
         }
-
         public Builder defaultParameterList(Map<String,String> defaultParameterList) {
             this.defaultParameterList = Objects.requireNonNull(defaultParameterList);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetApplicationTypeVersionResult build() {
+        }        public GetApplicationTypeVersionResult build() {
             return new GetApplicationTypeVersionResult(appPackageUrl, defaultParameterList, etag, id, location, name, provisioningState, tags, type);
         }
     }

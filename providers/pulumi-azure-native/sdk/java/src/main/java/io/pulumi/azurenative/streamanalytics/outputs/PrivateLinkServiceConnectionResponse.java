@@ -105,22 +105,21 @@ public final class PrivateLinkServiceConnectionResponse {
             this.groupIds = groupIds;
             return this;
         }
-
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
+        }
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
-
         public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
-        }
-        public PrivateLinkServiceConnectionResponse build() {
+        }        public PrivateLinkServiceConnectionResponse build() {
             return new PrivateLinkServiceConnectionResponse(groupIds, privateLinkServiceConnectionState, privateLinkServiceId, requestMessage);
         }
     }

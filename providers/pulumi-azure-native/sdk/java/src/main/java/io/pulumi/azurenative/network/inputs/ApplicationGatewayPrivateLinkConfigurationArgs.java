@@ -96,32 +96,29 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipConfigurations(@Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
-
         public Builder ipConfigurations(@Nullable List<ApplicationGatewayPrivateLinkIpConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
-
+        public Builder ipConfigurations(ApplicationGatewayPrivateLinkIpConfigurationArgs... ipConfigurations) {
+            return ipConfigurations(List.of(ipConfigurations));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
-        }
-        public ApplicationGatewayPrivateLinkConfigurationArgs build() {
+        }        public ApplicationGatewayPrivateLinkConfigurationArgs build() {
             return new ApplicationGatewayPrivateLinkConfigurationArgs(id, ipConfigurations, name);
         }
     }

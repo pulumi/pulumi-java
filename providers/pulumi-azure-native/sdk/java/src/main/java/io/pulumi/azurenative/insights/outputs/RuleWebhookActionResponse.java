@@ -90,17 +90,14 @@ public final class RuleWebhookActionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = serviceUri;
             return this;
-        }
-        public RuleWebhookActionResponse build() {
+        }        public RuleWebhookActionResponse build() {
             return new RuleWebhookActionResponse(odataType, properties, serviceUri);
         }
     }

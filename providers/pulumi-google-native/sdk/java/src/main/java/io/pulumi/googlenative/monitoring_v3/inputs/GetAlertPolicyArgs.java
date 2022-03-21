@@ -66,12 +66,10 @@ public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.alertPolicyId = Objects.requireNonNull(alertPolicyId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
-        }
-        public GetAlertPolicyArgs build() {
+        }        public GetAlertPolicyArgs build() {
             return new GetAlertPolicyArgs(alertPolicyId, project);
         }
     }

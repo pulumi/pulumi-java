@@ -196,47 +196,38 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
             this.boostAction = Objects.requireNonNull(boostAction);
             return this;
         }
-
         public Builder condition(GoogleCloudRetailV2alphaConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public Builder doNotAssociateAction(GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction) {
             this.doNotAssociateAction = Objects.requireNonNull(doNotAssociateAction);
             return this;
         }
-
         public Builder filterAction(GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction) {
             this.filterAction = Objects.requireNonNull(filterAction);
             return this;
         }
-
         public Builder ignoreAction(GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction) {
             this.ignoreAction = Objects.requireNonNull(ignoreAction);
             return this;
         }
-
         public Builder onewaySynonymsAction(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction) {
             this.onewaySynonymsAction = Objects.requireNonNull(onewaySynonymsAction);
             return this;
         }
-
         public Builder redirectAction(GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction) {
             this.redirectAction = Objects.requireNonNull(redirectAction);
             return this;
         }
-
         public Builder replacementAction(GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction) {
             this.replacementAction = Objects.requireNonNull(replacementAction);
             return this;
         }
-
         public Builder twowaySynonymsAction(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
             this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
             return this;
-        }
-        public GoogleCloudRetailV2alphaRuleResponse build() {
+        }        public GoogleCloudRetailV2alphaRuleResponse build() {
             return new GoogleCloudRetailV2alphaRuleResponse(boostAction, condition, doNotAssociateAction, filterAction, ignoreAction, onewaySynonymsAction, redirectAction, replacementAction, twowaySynonymsAction);
         }
     }

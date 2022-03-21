@@ -109,42 +109,34 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
-
         public Builder domainName(String domainName) {
             this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
-
         public Builder domainNameConfiguration(Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration) {
             this.domainNameConfiguration = Objects.requireNonNull(domainNameConfiguration);
             return this;
         }
-
         public Builder domainNameConfiguration(DomainNameDomainNameConfigurationArgs domainNameConfiguration) {
             this.domainNameConfiguration = Output.of(Objects.requireNonNull(domainNameConfiguration));
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DomainNameArgs build() {
+        }        public DomainNameArgs build() {
             return new DomainNameArgs(domainName, domainNameConfiguration, mutualTlsAuthentication, tags);
         }
     }

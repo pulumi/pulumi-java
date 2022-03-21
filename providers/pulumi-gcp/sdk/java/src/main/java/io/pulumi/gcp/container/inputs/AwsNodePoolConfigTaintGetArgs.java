@@ -89,32 +89,26 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
-
         public Builder effect(String effect) {
             this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
-
         public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Output.of(Objects.requireNonNull(value));
             return this;
-        }
-        public AwsNodePoolConfigTaintGetArgs build() {
+        }        public AwsNodePoolConfigTaintGetArgs build() {
             return new AwsNodePoolConfigTaintGetArgs(effect, key, value);
         }
     }

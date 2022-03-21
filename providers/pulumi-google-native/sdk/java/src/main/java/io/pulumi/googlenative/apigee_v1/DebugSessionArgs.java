@@ -187,102 +187,82 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
-
         public Builder apiId(String apiId) {
             this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
-
         public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
-
         public Builder count(@Nullable Integer count) {
             this.count = Output.ofNullable(count);
             return this;
         }
-
         public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
-
         public Builder environmentId(String environmentId) {
             this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public Builder organizationId(String organizationId) {
             this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public Builder revisionId(Output<String> revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public Builder revisionId(String revisionId) {
             this.revisionId = Output.of(Objects.requireNonNull(revisionId));
             return this;
         }
-
         public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
-
         public Builder timeout(@Nullable String timeout) {
             this.timeout = Output.ofNullable(timeout);
             return this;
         }
-
         public Builder tracesize(@Nullable Output<Integer> tracesize) {
             this.tracesize = tracesize;
             return this;
         }
-
         public Builder tracesize(@Nullable Integer tracesize) {
             this.tracesize = Output.ofNullable(tracesize);
             return this;
         }
-
         public Builder validity(@Nullable Output<Integer> validity) {
             this.validity = validity;
             return this;
         }
-
         public Builder validity(@Nullable Integer validity) {
             this.validity = Output.ofNullable(validity);
             return this;
-        }
-        public DebugSessionArgs build() {
+        }        public DebugSessionArgs build() {
             return new DebugSessionArgs(apiId, count, environmentId, filter, name, organizationId, revisionId, timeout, tracesize, validity);
         }
     }

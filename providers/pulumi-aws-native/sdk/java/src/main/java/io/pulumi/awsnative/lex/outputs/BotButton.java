@@ -69,12 +69,10 @@ public final class BotButton {
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public BotButton build() {
+        }        public BotButton build() {
             return new BotButton(text, value);
         }
     }

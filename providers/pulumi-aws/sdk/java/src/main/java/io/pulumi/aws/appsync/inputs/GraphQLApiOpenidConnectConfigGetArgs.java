@@ -107,42 +107,34 @@ public final class GraphQLApiOpenidConnectConfigGetArgs extends io.pulumi.resour
             this.authTtl = authTtl;
             return this;
         }
-
         public Builder authTtl(@Nullable Integer authTtl) {
             this.authTtl = Output.ofNullable(authTtl);
             return this;
         }
-
         public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
-
         public Builder clientId(@Nullable String clientId) {
             this.clientId = Output.ofNullable(clientId);
             return this;
         }
-
         public Builder iatTtl(@Nullable Output<Integer> iatTtl) {
             this.iatTtl = iatTtl;
             return this;
         }
-
         public Builder iatTtl(@Nullable Integer iatTtl) {
             this.iatTtl = Output.ofNullable(iatTtl);
             return this;
         }
-
         public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public Builder issuer(String issuer) {
             this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
-        }
-        public GraphQLApiOpenidConnectConfigGetArgs build() {
+        }        public GraphQLApiOpenidConnectConfigGetArgs build() {
             return new GraphQLApiOpenidConnectConfigGetArgs(authTtl, clientId, iatTtl, issuer);
         }
     }

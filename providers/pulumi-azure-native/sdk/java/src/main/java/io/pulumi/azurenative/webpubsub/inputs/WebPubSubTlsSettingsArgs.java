@@ -61,12 +61,10 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
-
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = Output.ofNullable(clientCertEnabled);
             return this;
-        }
-        public WebPubSubTlsSettingsArgs build() {
+        }        public WebPubSubTlsSettingsArgs build() {
             return new WebPubSubTlsSettingsArgs(clientCertEnabled);
         }
     }

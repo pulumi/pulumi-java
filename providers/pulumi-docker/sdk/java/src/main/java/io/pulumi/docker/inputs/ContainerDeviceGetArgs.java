@@ -78,32 +78,26 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
             this.containerPath = containerPath;
             return this;
         }
-
         public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
-
         public Builder hostPath(Output<String> hostPath) {
             this.hostPath = Objects.requireNonNull(hostPath);
             return this;
         }
-
         public Builder hostPath(String hostPath) {
             this.hostPath = Output.of(Objects.requireNonNull(hostPath));
             return this;
         }
-
         public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
-
         public Builder permissions(@Nullable String permissions) {
             this.permissions = Output.ofNullable(permissions);
             return this;
-        }
-        public ContainerDeviceGetArgs build() {
+        }        public ContainerDeviceGetArgs build() {
             return new ContainerDeviceGetArgs(containerPath, hostPath, permissions);
         }
     }

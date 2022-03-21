@@ -104,17 +104,14 @@ public final class PortStatus {
             this.error = error;
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public PortStatus build() {
+        }        public PortStatus build() {
             return new PortStatus(error, port, protocol);
         }
     }

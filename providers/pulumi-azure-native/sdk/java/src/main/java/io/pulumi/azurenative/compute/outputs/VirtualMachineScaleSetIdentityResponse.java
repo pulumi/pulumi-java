@@ -105,22 +105,18 @@ public final class VirtualMachineScaleSetIdentityResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder userAssignedIdentities(@Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }
-        public VirtualMachineScaleSetIdentityResponse build() {
+        }        public VirtualMachineScaleSetIdentityResponse build() {
             return new VirtualMachineScaleSetIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }
     }

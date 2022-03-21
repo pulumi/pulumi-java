@@ -92,32 +92,26 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
             this.maxFiles = Objects.requireNonNull(maxFiles);
             return this;
         }
-
         public Builder maxFiles(Integer maxFiles) {
             this.maxFiles = Output.of(Objects.requireNonNull(maxFiles));
             return this;
         }
-
         public Builder order(@Nullable Output<DatasetFilesLimitOrder> order) {
             this.order = order;
             return this;
         }
-
         public Builder order(@Nullable DatasetFilesLimitOrder order) {
             this.order = Output.ofNullable(order);
             return this;
         }
-
         public Builder orderedBy(@Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
             this.orderedBy = orderedBy;
             return this;
         }
-
         public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
             this.orderedBy = Output.ofNullable(orderedBy);
             return this;
-        }
-        public DatasetFilesLimitArgs build() {
+        }        public DatasetFilesLimitArgs build() {
             return new DatasetFilesLimitArgs(maxFiles, order, orderedBy);
         }
     }

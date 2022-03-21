@@ -90,32 +90,26 @@ public final class VpcAssociationAuthorizationState extends io.pulumi.resources.
             this.vpcId = vpcId;
             return this;
         }
-
         public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
-
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
-
         public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
         }
-
         public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
-
         public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Output.ofNullable(zoneId);
             return this;
-        }
-        public VpcAssociationAuthorizationState build() {
+        }        public VpcAssociationAuthorizationState build() {
             return new VpcAssociationAuthorizationState(vpcId, vpcRegion, zoneId);
         }
     }

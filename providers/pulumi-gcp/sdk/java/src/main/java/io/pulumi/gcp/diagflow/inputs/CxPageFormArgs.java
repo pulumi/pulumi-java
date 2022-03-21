@@ -59,12 +59,13 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<CxPageFormParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-        public CxPageFormArgs build() {
+        public Builder parameters(CxPageFormParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }        public CxPageFormArgs build() {
             return new CxPageFormArgs(parameters);
         }
     }

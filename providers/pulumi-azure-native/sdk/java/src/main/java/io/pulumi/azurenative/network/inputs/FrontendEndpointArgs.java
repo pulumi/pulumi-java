@@ -146,62 +146,50 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             this.hostName = hostName;
             return this;
         }
-
         public Builder hostName(@Nullable String hostName) {
             this.hostName = Output.ofNullable(hostName);
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder sessionAffinityEnabledState(@Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
-
         public Builder sessionAffinityEnabledState(@Nullable Either<String,SessionAffinityEnabledState> sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = Output.ofNullable(sessionAffinityEnabledState);
             return this;
         }
-
         public Builder sessionAffinityTtlSeconds(@Nullable Output<Integer> sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
-
         public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = Output.ofNullable(sessionAffinityTtlSeconds);
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
             return this;
-        }
-        public FrontendEndpointArgs build() {
+        }        public FrontendEndpointArgs build() {
             return new FrontendEndpointArgs(hostName, id, name, sessionAffinityEnabledState, sessionAffinityTtlSeconds, webApplicationFirewallPolicyLink);
         }
     }

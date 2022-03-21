@@ -301,82 +301,66 @@ public final class SqlDWSinkResponse {
             this.allowCopyCommand = allowCopyCommand;
             return this;
         }
-
         public Builder allowPolyBase(@Nullable Object allowPolyBase) {
             this.allowPolyBase = allowPolyBase;
             return this;
         }
-
         public Builder copyCommandSettings(@Nullable DWCopyCommandSettingsResponse copyCommandSettings) {
             this.copyCommandSettings = copyCommandSettings;
             return this;
         }
-
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-
         public Builder polyBaseSettings(@Nullable PolybaseSettingsResponse polyBaseSettings) {
             this.polyBaseSettings = polyBaseSettings;
             return this;
         }
-
         public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
-
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
-
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
-
         public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
-
         public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = tableOption;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder upsertSettings(@Nullable SqlDWUpsertSettingsResponse upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
-
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
-
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
-        }
-        public SqlDWSinkResponse build() {
+        }        public SqlDWSinkResponse build() {
             return new SqlDWSinkResponse(allowCopyCommand, allowPolyBase, copyCommandSettings, disableMetricsCollection, maxConcurrentConnections, polyBaseSettings, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterUseTableLock, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
         }
     }

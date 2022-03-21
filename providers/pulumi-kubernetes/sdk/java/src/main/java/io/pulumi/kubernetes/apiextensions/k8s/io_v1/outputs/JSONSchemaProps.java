@@ -542,222 +542,199 @@ public final class JSONSchemaProps {
             this.$ref = $ref;
             return this;
         }
-
         public Builder $schema(@Nullable String $schema) {
             this.$schema = $schema;
             return this;
         }
-
         public Builder additionalItems(@Nullable Either<JSONSchemaProps,Boolean> additionalItems) {
             this.additionalItems = additionalItems;
             return this;
         }
-
         public Builder additionalProperties(@Nullable Either<JSONSchemaProps,Boolean> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
-
         public Builder allOf(@Nullable List<JSONSchemaProps> allOf) {
             this.allOf = allOf;
             return this;
         }
-
+        public Builder allOf(JSONSchemaProps... allOf) {
+            return allOf(List.of(allOf));
+        }
         public Builder anyOf(@Nullable List<JSONSchemaProps> anyOf) {
             this.anyOf = anyOf;
             return this;
         }
-
+        public Builder anyOf(JSONSchemaProps... anyOf) {
+            return anyOf(List.of(anyOf));
+        }
         public Builder $default(@Nullable JsonElement $default) {
             this.$default = $default;
             return this;
         }
-
         public Builder definitions(@Nullable Map<String,JSONSchemaProps> definitions) {
             this.definitions = definitions;
             return this;
         }
-
         public Builder dependencies(@Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies) {
             this.dependencies = dependencies;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder $enum(@Nullable List<JsonElement> $enum) {
             this.$enum = $enum;
             return this;
         }
-
+        public Builder $enum(JsonElement... $enum) {
+            return $enum(List.of($enum));
+        }
         public Builder example(@Nullable JsonElement example) {
             this.example = example;
             return this;
         }
-
         public Builder exclusiveMaximum(@Nullable Boolean exclusiveMaximum) {
             this.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
-
         public Builder exclusiveMinimum(@Nullable Boolean exclusiveMinimum) {
             this.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
-
         public Builder externalDocs(@Nullable ExternalDocumentation externalDocs) {
             this.externalDocs = externalDocs;
             return this;
         }
-
         public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder items(@Nullable Either<JSONSchemaProps,List<JsonElement>> items) {
             this.items = items;
             return this;
         }
-
         public Builder maxItems(@Nullable Integer maxItems) {
             this.maxItems = maxItems;
             return this;
         }
-
         public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = maxLength;
             return this;
         }
-
         public Builder maxProperties(@Nullable Integer maxProperties) {
             this.maxProperties = maxProperties;
             return this;
         }
-
         public Builder maximum(@Nullable Double maximum) {
             this.maximum = maximum;
             return this;
         }
-
         public Builder minItems(@Nullable Integer minItems) {
             this.minItems = minItems;
             return this;
         }
-
         public Builder minLength(@Nullable Integer minLength) {
             this.minLength = minLength;
             return this;
         }
-
         public Builder minProperties(@Nullable Integer minProperties) {
             this.minProperties = minProperties;
             return this;
         }
-
         public Builder minimum(@Nullable Double minimum) {
             this.minimum = minimum;
             return this;
         }
-
         public Builder multipleOf(@Nullable Double multipleOf) {
             this.multipleOf = multipleOf;
             return this;
         }
-
         public Builder not(@Nullable JSONSchemaProps not) {
             this.not = not;
             return this;
         }
-
         public Builder nullable(@Nullable Boolean nullable) {
             this.nullable = nullable;
             return this;
         }
-
         public Builder oneOf(@Nullable List<JSONSchemaProps> oneOf) {
             this.oneOf = oneOf;
             return this;
         }
-
+        public Builder oneOf(JSONSchemaProps... oneOf) {
+            return oneOf(List.of(oneOf));
+        }
         public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
-
         public Builder patternProperties(@Nullable Map<String,JSONSchemaProps> patternProperties) {
             this.patternProperties = patternProperties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,JSONSchemaProps> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder required(@Nullable List<String> required) {
             this.required = required;
             return this;
         }
-
+        public Builder required(String... required) {
+            return required(List.of(required));
+        }
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
-
         public Builder uniqueItems(@Nullable Boolean uniqueItems) {
             this.uniqueItems = uniqueItems;
             return this;
         }
-
         public Builder x_kubernetes_embedded_resource(@Nullable Boolean x_kubernetes_embedded_resource) {
             this.x_kubernetes_embedded_resource = x_kubernetes_embedded_resource;
             return this;
         }
-
         public Builder x_kubernetes_int_or_string(@Nullable Boolean x_kubernetes_int_or_string) {
             this.x_kubernetes_int_or_string = x_kubernetes_int_or_string;
             return this;
         }
-
         public Builder x_kubernetes_list_map_keys(@Nullable List<String> x_kubernetes_list_map_keys) {
             this.x_kubernetes_list_map_keys = x_kubernetes_list_map_keys;
             return this;
         }
-
+        public Builder x_kubernetes_list_map_keys(String... x_kubernetes_list_map_keys) {
+            return x_kubernetes_list_map_keys(List.of(x_kubernetes_list_map_keys));
+        }
         public Builder x_kubernetes_list_type(@Nullable String x_kubernetes_list_type) {
             this.x_kubernetes_list_type = x_kubernetes_list_type;
             return this;
         }
-
         public Builder x_kubernetes_map_type(@Nullable String x_kubernetes_map_type) {
             this.x_kubernetes_map_type = x_kubernetes_map_type;
             return this;
         }
-
         public Builder x_kubernetes_preserve_unknown_fields(@Nullable Boolean x_kubernetes_preserve_unknown_fields) {
             this.x_kubernetes_preserve_unknown_fields = x_kubernetes_preserve_unknown_fields;
             return this;
         }
-
         public Builder x_kubernetes_validations(@Nullable List<ValidationRule> x_kubernetes_validations) {
             this.x_kubernetes_validations = x_kubernetes_validations;
             return this;
         }
-        public JSONSchemaProps build() {
+        public Builder x_kubernetes_validations(ValidationRule... x_kubernetes_validations) {
+            return x_kubernetes_validations(List.of(x_kubernetes_validations));
+        }        public JSONSchemaProps build() {
             return new JSONSchemaProps($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, $default, definitions, dependencies, description, $enum, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields, x_kubernetes_validations);
         }
     }

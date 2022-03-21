@@ -73,22 +73,18 @@ public final class EventDestinationKinesisDestinationArgs extends io.pulumi.reso
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public Builder roleArn(String roleArn) {
             this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public Builder streamArn(Output<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
-
         public Builder streamArn(String streamArn) {
             this.streamArn = Output.of(Objects.requireNonNull(streamArn));
             return this;
-        }
-        public EventDestinationKinesisDestinationArgs build() {
+        }        public EventDestinationKinesisDestinationArgs build() {
             return new EventDestinationKinesisDestinationArgs(roleArn, streamArn);
         }
     }

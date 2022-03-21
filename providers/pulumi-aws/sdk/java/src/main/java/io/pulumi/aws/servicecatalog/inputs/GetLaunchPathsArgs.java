@@ -74,12 +74,10 @@ public final class GetLaunchPathsArgs extends io.pulumi.resources.InvokeArgs {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
-
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
-        }
-        public GetLaunchPathsArgs build() {
+        }        public GetLaunchPathsArgs build() {
             return new GetLaunchPathsArgs(acceptLanguage, productId);
         }
     }

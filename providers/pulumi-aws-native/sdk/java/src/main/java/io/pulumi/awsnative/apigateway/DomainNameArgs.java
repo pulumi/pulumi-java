@@ -142,82 +142,69 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateArn = certificateArn;
             return this;
         }
-
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
-
         public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
-
         public Builder domainName(@Nullable String domainName) {
             this.domainName = Output.ofNullable(domainName);
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
-
         public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationArgs endpointConfiguration) {
             this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
-
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
-
         public Builder ownershipVerificationCertificateArn(@Nullable Output<String> ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
             return this;
         }
-
         public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = Output.ofNullable(ownershipVerificationCertificateArn);
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable Output<String> regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
-
         public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = Output.ofNullable(regionalCertificateArn);
             return this;
         }
-
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
-
         public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Output.ofNullable(securityPolicy);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<DomainNameTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<DomainNameTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-        public DomainNameArgs build() {
+        public Builder tags(DomainNameTagArgs... tags) {
+            return tags(List.of(tags));
+        }        public DomainNameArgs build() {
             return new DomainNameArgs(certificateArn, domainName, endpointConfiguration, mutualTlsAuthentication, ownershipVerificationCertificateArn, regionalCertificateArn, securityPolicy, tags);
         }
     }

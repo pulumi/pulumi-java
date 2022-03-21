@@ -89,32 +89,26 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
-
         public Builder outpostId(String outpostId) {
             this.outpostId = Output.of(Objects.requireNonNull(outpostId));
             return this;
         }
-
         public Builder securityGroupId(Output<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
-
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
-
         public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
-        }
-        public EndpointArgs build() {
+        }        public EndpointArgs build() {
             return new EndpointArgs(outpostId, securityGroupId, subnetId);
         }
     }

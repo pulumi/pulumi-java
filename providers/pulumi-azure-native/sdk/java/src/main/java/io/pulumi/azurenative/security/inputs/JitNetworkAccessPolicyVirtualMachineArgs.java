@@ -92,32 +92,29 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder ports(Output<List<JitNetworkAccessPortRuleArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public Builder ports(List<JitNetworkAccessPortRuleArgs> ports) {
             this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
-
+        public Builder ports(JitNetworkAccessPortRuleArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
-        }
-        public JitNetworkAccessPolicyVirtualMachineArgs build() {
+        }        public JitNetworkAccessPolicyVirtualMachineArgs build() {
             return new JitNetworkAccessPolicyVirtualMachineArgs(id, ports, publicIpAddress);
         }
     }

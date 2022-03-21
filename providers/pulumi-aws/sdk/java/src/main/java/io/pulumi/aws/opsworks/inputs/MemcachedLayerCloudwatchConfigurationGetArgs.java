@@ -68,22 +68,21 @@ public final class MemcachedLayerCloudwatchConfigurationGetArgs extends io.pulum
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder logStreams(@Nullable Output<List<MemcachedLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
-
         public Builder logStreams(@Nullable List<MemcachedLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Output.ofNullable(logStreams);
             return this;
         }
-        public MemcachedLayerCloudwatchConfigurationGetArgs build() {
+        public Builder logStreams(MemcachedLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {
+            return logStreams(List.of(logStreams));
+        }        public MemcachedLayerCloudwatchConfigurationGetArgs build() {
             return new MemcachedLayerCloudwatchConfigurationGetArgs(enabled, logStreams);
         }
     }

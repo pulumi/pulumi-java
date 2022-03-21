@@ -61,12 +61,10 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
             this.bundleLocation = bundleLocation;
             return this;
         }
-
         public Builder bundleLocation(@Nullable FileReferenceArgs bundleLocation) {
             this.bundleLocation = Output.ofNullable(bundleLocation);
             return this;
-        }
-        public AppBundleArgs build() {
+        }        public AppBundleArgs build() {
             return new AppBundleArgs(bundleLocation);
         }
     }

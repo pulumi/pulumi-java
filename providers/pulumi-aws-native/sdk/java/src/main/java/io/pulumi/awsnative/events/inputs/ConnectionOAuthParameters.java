@@ -93,22 +93,18 @@ public final class ConnectionOAuthParameters extends io.pulumi.resources.InvokeA
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
-
         public Builder clientParameters(ConnectionClientParameters clientParameters) {
             this.clientParameters = Objects.requireNonNull(clientParameters);
             return this;
         }
-
         public Builder httpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
-
         public Builder oAuthHttpParameters(@Nullable ConnectionHttpParameters oAuthHttpParameters) {
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
-        }
-        public ConnectionOAuthParameters build() {
+        }        public ConnectionOAuthParameters build() {
             return new ConnectionOAuthParameters(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);
         }
     }

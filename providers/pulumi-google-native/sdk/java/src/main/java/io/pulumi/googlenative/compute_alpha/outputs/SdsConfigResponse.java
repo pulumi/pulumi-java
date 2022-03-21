@@ -51,8 +51,7 @@ public final class SdsConfigResponse {
         public Builder grpcServiceConfig(GrpcServiceConfigResponse grpcServiceConfig) {
             this.grpcServiceConfig = Objects.requireNonNull(grpcServiceConfig);
             return this;
-        }
-        public SdsConfigResponse build() {
+        }        public SdsConfigResponse build() {
             return new SdsConfigResponse(grpcServiceConfig);
         }
     }

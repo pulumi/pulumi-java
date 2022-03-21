@@ -155,72 +155,58 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             this.compatibility = Objects.requireNonNull(compatibility);
             return this;
         }
-
         public Builder compatibility(String compatibility) {
             this.compatibility = Output.of(Objects.requireNonNull(compatibility));
             return this;
         }
-
         public Builder dataFormat(Output<String> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
-
         public Builder dataFormat(String dataFormat) {
             this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder registryArn(@Nullable Output<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
-
         public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = Output.ofNullable(registryArn);
             return this;
         }
-
         public Builder schemaDefinition(Output<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
-
         public Builder schemaDefinition(String schemaDefinition) {
             this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
-
         public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
-
         public Builder schemaName(String schemaName) {
             this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public SchemaArgs build() {
+        }        public SchemaArgs build() {
             return new SchemaArgs(compatibility, dataFormat, description, registryArn, schemaDefinition, schemaName, tags);
         }
     }

@@ -60,7 +60,9 @@ public final class ExecActionResponse extends io.pulumi.resources.InvokeArgs {
             this.command = Objects.requireNonNull(command);
             return this;
         }
-        public ExecActionResponse build() {
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }        public ExecActionResponse build() {
             return new ExecActionResponse(command);
         }
     }

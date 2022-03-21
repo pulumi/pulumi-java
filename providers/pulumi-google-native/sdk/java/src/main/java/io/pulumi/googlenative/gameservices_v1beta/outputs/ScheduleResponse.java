@@ -101,22 +101,18 @@ public final class ScheduleResponse {
             this.cronJobDuration = Objects.requireNonNull(cronJobDuration);
             return this;
         }
-
         public Builder cronSpec(String cronSpec) {
             this.cronSpec = Objects.requireNonNull(cronSpec);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
-        }
-        public ScheduleResponse build() {
+        }        public ScheduleResponse build() {
             return new ScheduleResponse(cronJobDuration, cronSpec, endTime, startTime);
         }
     }

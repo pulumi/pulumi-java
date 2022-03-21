@@ -146,62 +146,53 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
-
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = Output.ofNullable(continueOnFailure);
             return this;
         }
-
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
-
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Output.ofNullable(jarFileUris);
             return this;
         }
-
+        public Builder jarFileUris(String... jarFileUris) {
+            return jarFileUris(List.of(jarFileUris));
+        }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
-
         public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Output.ofNullable(queryFileUri);
             return this;
         }
-
         public Builder queryList(@Nullable Output<QueryListArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
-
         public Builder queryList(@Nullable QueryListArgs queryList) {
             this.queryList = Output.ofNullable(queryList);
             return this;
         }
-
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = Output.ofNullable(scriptVariables);
             return this;
-        }
-        public HiveJobArgs build() {
+        }        public HiveJobArgs build() {
             return new HiveJobArgs(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }
     }

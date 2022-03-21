@@ -77,22 +77,18 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
-
         public Builder sourceName(String sourceName) {
             this.sourceName = Output.of(Objects.requireNonNull(sourceName));
             return this;
         }
-
         public Builder sourceType(Output<String> sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public Builder sourceType(String sourceType) {
             this.sourceType = Output.of(Objects.requireNonNull(sourceType));
             return this;
-        }
-        public MetricDimensionArgs build() {
+        }        public MetricDimensionArgs build() {
             return new MetricDimensionArgs(sourceName, sourceType);
         }
     }

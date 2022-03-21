@@ -209,102 +209,88 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             this.admins = admins;
             return this;
         }
-
         public Builder admins(@Nullable List<PrincipalsArgs> admins) {
             this.admins = Output.ofNullable(admins);
             return this;
         }
-
+        public Builder admins(PrincipalsArgs... admins) {
+            return admins(List.of(admins));
+        }
         public Builder catalogName(@Nullable Output<String> catalogName) {
             this.catalogName = catalogName;
             return this;
         }
-
         public Builder catalogName(@Nullable String catalogName) {
             this.catalogName = Output.ofNullable(catalogName);
             return this;
         }
-
         public Builder enableAutomaticUnitAdjustment(@Nullable Output<Boolean> enableAutomaticUnitAdjustment) {
             this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
             return this;
         }
-
         public Builder enableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
             this.enableAutomaticUnitAdjustment = Output.ofNullable(enableAutomaticUnitAdjustment);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder sku(@Nullable Output<Either<String,SkuType>> sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder sku(@Nullable Either<String,SkuType> sku) {
             this.sku = Output.ofNullable(sku);
             return this;
         }
-
         public Builder successfullyProvisioned(@Nullable Output<Boolean> successfullyProvisioned) {
             this.successfullyProvisioned = successfullyProvisioned;
             return this;
         }
-
         public Builder successfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
             this.successfullyProvisioned = Output.ofNullable(successfullyProvisioned);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder units(@Nullable Output<Integer> units) {
             this.units = units;
             return this;
         }
-
         public Builder units(@Nullable Integer units) {
             this.units = Output.ofNullable(units);
             return this;
         }
-
         public Builder users(@Nullable Output<List<PrincipalsArgs>> users) {
             this.users = users;
             return this;
         }
-
         public Builder users(@Nullable List<PrincipalsArgs> users) {
             this.users = Output.ofNullable(users);
             return this;
         }
-        public ADCCatalogArgs build() {
+        public Builder users(PrincipalsArgs... users) {
+            return users(List.of(users));
+        }        public ADCCatalogArgs build() {
             return new ADCCatalogArgs(admins, catalogName, enableAutomaticUnitAdjustment, location, resourceGroupName, sku, successfullyProvisioned, tags, units, users);
         }
     }

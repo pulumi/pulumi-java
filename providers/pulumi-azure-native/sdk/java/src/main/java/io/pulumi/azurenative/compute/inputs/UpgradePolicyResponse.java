@@ -96,17 +96,14 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
-
         public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
-
         public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
-        }
-        public UpgradePolicyResponse build() {
+        }        public UpgradePolicyResponse build() {
             return new UpgradePolicyResponse(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);
         }
     }

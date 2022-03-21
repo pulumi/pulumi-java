@@ -56,12 +56,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public Builder secretName(String secretName) {
             this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
-        }
-        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs build() {
+        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsArgs(secretName);
         }
     }

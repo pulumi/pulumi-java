@@ -51,8 +51,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
-        }
-        public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload build() {
+        }        public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload build() {
             return new BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload(daysAfterInitiation);
         }
     }

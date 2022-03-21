@@ -88,17 +88,14 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
-
         public Builder provisioningServiceName(String provisioningServiceName) {
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
-        }
-        public GetDpsCertificateArgs build() {
+        }        public GetDpsCertificateArgs build() {
             return new GetDpsCertificateArgs(certificateName, provisioningServiceName, resourceGroupName);
         }
     }

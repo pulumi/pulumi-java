@@ -80,22 +80,21 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
             this.mysqlColumns = mysqlColumns;
             return this;
         }
-
         public Builder mysqlColumns(@Nullable List<MysqlColumnArgs> mysqlColumns) {
             this.mysqlColumns = Output.ofNullable(mysqlColumns);
             return this;
         }
-
+        public Builder mysqlColumns(MysqlColumnArgs... mysqlColumns) {
+            return mysqlColumns(List.of(mysqlColumns));
+        }
         public Builder table(@Nullable Output<String> table) {
             this.table = table;
             return this;
         }
-
         public Builder table(@Nullable String table) {
             this.table = Output.ofNullable(table);
             return this;
-        }
-        public MysqlTableArgs build() {
+        }        public MysqlTableArgs build() {
             return new MysqlTableArgs(mysqlColumns, table);
         }
     }

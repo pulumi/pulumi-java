@@ -577,242 +577,212 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
-
         public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
             this.dataIntegrationUnits = Output.ofNullable(dataIntegrationUnits);
             return this;
         }
-
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
-
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
-
+        public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
+            return dependsOn(List.of(dependsOn));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enableSkipIncompatibleRow(@Nullable Output<Object> enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
-
         public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = Output.ofNullable(enableSkipIncompatibleRow);
             return this;
         }
-
         public Builder enableStaging(@Nullable Output<Object> enableStaging) {
             this.enableStaging = enableStaging;
             return this;
         }
-
         public Builder enableStaging(@Nullable Object enableStaging) {
             this.enableStaging = Output.ofNullable(enableStaging);
             return this;
         }
-
         public Builder inputs(@Nullable Output<List<DatasetReferenceArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
-
         public Builder inputs(@Nullable List<DatasetReferenceArgs> inputs) {
             this.inputs = Output.ofNullable(inputs);
             return this;
         }
-
+        public Builder inputs(DatasetReferenceArgs... inputs) {
+            return inputs(List.of(inputs));
+        }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
-
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
-
         public Builder logSettings(@Nullable Output<LogSettingsArgs> logSettings) {
             this.logSettings = logSettings;
             return this;
         }
-
         public Builder logSettings(@Nullable LogSettingsArgs logSettings) {
             this.logSettings = Output.ofNullable(logSettings);
             return this;
         }
-
         public Builder logStorageSettings(@Nullable Output<LogStorageSettingsArgs> logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
-
         public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
             this.logStorageSettings = Output.ofNullable(logStorageSettings);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder outputs(@Nullable Output<List<DatasetReferenceArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
-
         public Builder outputs(@Nullable List<DatasetReferenceArgs> outputs) {
             this.outputs = Output.ofNullable(outputs);
             return this;
         }
-
+        public Builder outputs(DatasetReferenceArgs... outputs) {
+            return outputs(List.of(outputs));
+        }
         public Builder parallelCopies(@Nullable Output<Object> parallelCopies) {
             this.parallelCopies = parallelCopies;
             return this;
         }
-
         public Builder parallelCopies(@Nullable Object parallelCopies) {
             this.parallelCopies = Output.ofNullable(parallelCopies);
             return this;
         }
-
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
-
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Output.ofNullable(policy);
             return this;
         }
-
         public Builder preserve(@Nullable Output<List<Object>> preserve) {
             this.preserve = preserve;
             return this;
         }
-
         public Builder preserve(@Nullable List<Object> preserve) {
             this.preserve = Output.ofNullable(preserve);
             return this;
         }
-
+        public Builder preserve(Object... preserve) {
+            return preserve(List.of(preserve));
+        }
         public Builder preserveRules(@Nullable Output<List<Object>> preserveRules) {
             this.preserveRules = preserveRules;
             return this;
         }
-
         public Builder preserveRules(@Nullable List<Object> preserveRules) {
             this.preserveRules = Output.ofNullable(preserveRules);
             return this;
         }
-
+        public Builder preserveRules(Object... preserveRules) {
+            return preserveRules(List.of(preserveRules));
+        }
         public Builder redirectIncompatibleRowSettings(@Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
-
         public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsArgs redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = Output.ofNullable(redirectIncompatibleRowSettings);
             return this;
         }
-
         public Builder sink(Output<Object> sink) {
             this.sink = Objects.requireNonNull(sink);
             return this;
         }
-
         public Builder sink(Object sink) {
             this.sink = Output.of(Objects.requireNonNull(sink));
             return this;
         }
-
         public Builder skipErrorFile(@Nullable Output<SkipErrorFileArgs> skipErrorFile) {
             this.skipErrorFile = skipErrorFile;
             return this;
         }
-
         public Builder skipErrorFile(@Nullable SkipErrorFileArgs skipErrorFile) {
             this.skipErrorFile = Output.ofNullable(skipErrorFile);
             return this;
         }
-
         public Builder source(Output<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public Builder source(Object source) {
             this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
-
         public Builder stagingSettings(@Nullable Output<StagingSettingsArgs> stagingSettings) {
             this.stagingSettings = stagingSettings;
             return this;
         }
-
         public Builder stagingSettings(@Nullable StagingSettingsArgs stagingSettings) {
             this.stagingSettings = Output.ofNullable(stagingSettings);
             return this;
         }
-
         public Builder translator(@Nullable Output<Object> translator) {
             this.translator = translator;
             return this;
         }
-
         public Builder translator(@Nullable Object translator) {
             this.translator = Output.ofNullable(translator);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
-
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
-
+        public Builder userProperties(UserPropertyArgs... userProperties) {
+            return userProperties(List.of(userProperties));
+        }
         public Builder validateDataConsistency(@Nullable Output<Object> validateDataConsistency) {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
-
         public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
             this.validateDataConsistency = Output.ofNullable(validateDataConsistency);
             return this;
-        }
-        public CopyActivityArgs build() {
+        }        public CopyActivityArgs build() {
             return new CopyActivityArgs(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }
     }

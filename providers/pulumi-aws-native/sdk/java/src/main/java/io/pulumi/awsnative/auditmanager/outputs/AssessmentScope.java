@@ -72,12 +72,16 @@ public final class AssessmentScope {
             this.awsAccounts = awsAccounts;
             return this;
         }
-
+        public Builder awsAccounts(AssessmentAWSAccount... awsAccounts) {
+            return awsAccounts(List.of(awsAccounts));
+        }
         public Builder awsServices(@Nullable List<AssessmentAWSService> awsServices) {
             this.awsServices = awsServices;
             return this;
         }
-        public AssessmentScope build() {
+        public Builder awsServices(AssessmentAWSService... awsServices) {
+            return awsServices(List.of(awsServices));
+        }        public AssessmentScope build() {
             return new AssessmentScope(awsAccounts, awsServices);
         }
     }

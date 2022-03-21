@@ -52,12 +52,10 @@ public final class FlowTrendmicroSourcePropertiesArgs extends io.pulumi.resource
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
-        }
-        public FlowTrendmicroSourcePropertiesArgs build() {
+        }        public FlowTrendmicroSourcePropertiesArgs build() {
             return new FlowTrendmicroSourcePropertiesArgs(object);
         }
     }

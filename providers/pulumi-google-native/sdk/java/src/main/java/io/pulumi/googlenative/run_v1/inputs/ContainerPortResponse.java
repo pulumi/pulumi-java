@@ -93,17 +93,14 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
-        }
-        public ContainerPortResponse build() {
+        }        public ContainerPortResponse build() {
             return new ContainerPortResponse(containerPort, name, protocol);
         }
     }

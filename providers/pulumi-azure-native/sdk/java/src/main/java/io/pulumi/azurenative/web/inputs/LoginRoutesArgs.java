@@ -61,12 +61,10 @@ public final class LoginRoutesArgs extends io.pulumi.resources.ResourceArgs {
             this.logoutEndpoint = logoutEndpoint;
             return this;
         }
-
         public Builder logoutEndpoint(@Nullable String logoutEndpoint) {
             this.logoutEndpoint = Output.ofNullable(logoutEndpoint);
             return this;
-        }
-        public LoginRoutesArgs build() {
+        }        public LoginRoutesArgs build() {
             return new LoginRoutesArgs(logoutEndpoint);
         }
     }

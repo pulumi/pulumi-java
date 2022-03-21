@@ -112,42 +112,37 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
             this.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
-
         public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
             this.dnsSearchDomain = Output.ofNullable(dnsSearchDomain);
             return this;
         }
-
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Output.ofNullable(dnsServers);
             return this;
         }
-
+        public Builder dnsServers(String... dnsServers) {
+            return dnsServers(List.of(dnsServers));
+        }
         public Builder mtu(@Nullable Output<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
-
         public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Output.ofNullable(mtu);
             return this;
         }
-
         public Builder ntpServer(@Nullable Output<String> ntpServer) {
             this.ntpServer = ntpServer;
             return this;
         }
-
         public Builder ntpServer(@Nullable String ntpServer) {
             this.ntpServer = Output.ofNullable(ntpServer);
             return this;
-        }
-        public CacheNetworkSettingsArgs build() {
+        }        public CacheNetworkSettingsArgs build() {
             return new CacheNetworkSettingsArgs(dnsSearchDomain, dnsServers, mtu, ntpServer);
         }
     }

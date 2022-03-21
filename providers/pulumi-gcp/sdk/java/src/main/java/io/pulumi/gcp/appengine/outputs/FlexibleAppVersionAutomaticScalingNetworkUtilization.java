@@ -103,22 +103,18 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
             this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
-
         public Builder targetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
-
         public Builder targetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
-
         public Builder targetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
-        }
-        public FlexibleAppVersionAutomaticScalingNetworkUtilization build() {
+        }        public FlexibleAppVersionAutomaticScalingNetworkUtilization build() {
             return new FlexibleAppVersionAutomaticScalingNetworkUtilization(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }
     }

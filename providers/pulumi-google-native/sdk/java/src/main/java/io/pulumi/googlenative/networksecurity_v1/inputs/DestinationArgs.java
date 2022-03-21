@@ -113,42 +113,43 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
-
         public Builder hosts(List<String> hosts) {
             this.hosts = Output.of(Objects.requireNonNull(hosts));
             return this;
         }
-
+        public Builder hosts(String... hosts) {
+            return hosts(List.of(hosts));
+        }
         public Builder httpHeaderMatch(@Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch) {
             this.httpHeaderMatch = httpHeaderMatch;
             return this;
         }
-
         public Builder httpHeaderMatch(@Nullable HttpHeaderMatchArgs httpHeaderMatch) {
             this.httpHeaderMatch = Output.ofNullable(httpHeaderMatch);
             return this;
         }
-
         public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
-
         public Builder methods(@Nullable List<String> methods) {
             this.methods = Output.ofNullable(methods);
             return this;
         }
-
+        public Builder methods(String... methods) {
+            return methods(List.of(methods));
+        }
         public Builder ports(Output<List<Integer>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public Builder ports(List<Integer> ports) {
             this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
-        public DestinationArgs build() {
+        public Builder ports(Integer... ports) {
+            return ports(List.of(ports));
+        }        public DestinationArgs build() {
             return new DestinationArgs(hosts, httpHeaderMatch, methods, ports);
         }
     }

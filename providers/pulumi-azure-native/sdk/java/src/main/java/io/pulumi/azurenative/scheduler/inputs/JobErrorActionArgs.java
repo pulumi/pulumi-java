@@ -143,62 +143,50 @@ public final class JobErrorActionArgs extends io.pulumi.resources.ResourceArgs {
             this.queueMessage = queueMessage;
             return this;
         }
-
         public Builder queueMessage(@Nullable StorageQueueMessageArgs queueMessage) {
             this.queueMessage = Output.ofNullable(queueMessage);
             return this;
         }
-
         public Builder request(@Nullable Output<HttpRequestArgs> request) {
             this.request = request;
             return this;
         }
-
         public Builder request(@Nullable HttpRequestArgs request) {
             this.request = Output.ofNullable(request);
             return this;
         }
-
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
-
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
-
         public Builder serviceBusQueueMessage(@Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage) {
             this.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
-
         public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageArgs serviceBusQueueMessage) {
             this.serviceBusQueueMessage = Output.ofNullable(serviceBusQueueMessage);
             return this;
         }
-
         public Builder serviceBusTopicMessage(@Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage) {
             this.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
-
         public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageArgs serviceBusTopicMessage) {
             this.serviceBusTopicMessage = Output.ofNullable(serviceBusTopicMessage);
             return this;
         }
-
         public Builder type(@Nullable Output<JobActionType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable JobActionType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public JobErrorActionArgs build() {
+        }        public JobErrorActionArgs build() {
             return new JobErrorActionArgs(queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }
     }

@@ -52,12 +52,10 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigGetArgs extends io.pu
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public Builder mode(String mode) {
             this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
-        }
-        public NodePoolNodeConfigWorkloadMetadataConfigGetArgs build() {
+        }        public NodePoolNodeConfigWorkloadMetadataConfigGetArgs build() {
             return new NodePoolNodeConfigWorkloadMetadataConfigGetArgs(mode);
         }
     }

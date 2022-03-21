@@ -201,47 +201,41 @@ public final class JobStatus {
             this.active = active;
             return this;
         }
-
         public Builder completedIndexes(@Nullable String completedIndexes) {
             this.completedIndexes = completedIndexes;
             return this;
         }
-
         public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = completionTime;
             return this;
         }
-
         public Builder conditions(@Nullable List<JobCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
-
+        public Builder conditions(JobCondition... conditions) {
+            return conditions(List.of(conditions));
+        }
         public Builder failed(@Nullable Integer failed) {
             this.failed = failed;
             return this;
         }
-
         public Builder ready(@Nullable Integer ready) {
             this.ready = ready;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = succeeded;
             return this;
         }
-
         public Builder uncountedTerminatedPods(@Nullable UncountedTerminatedPods uncountedTerminatedPods) {
             this.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
-        }
-        public JobStatus build() {
+        }        public JobStatus build() {
             return new JobStatus(active, completedIndexes, completionTime, conditions, failed, ready, startTime, succeeded, uncountedTerminatedPods);
         }
     }

@@ -53,12 +53,10 @@ public final class OriginEndpointTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public OriginEndpointTag build() {
+        }        public OriginEndpointTag build() {
             return new OriginEndpointTag(key, value);
         }
     }

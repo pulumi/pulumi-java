@@ -77,12 +77,10 @@ public final class AzPowerShellSetupResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
-        }
-        public AzPowerShellSetupResponse build() {
+        }        public AzPowerShellSetupResponse build() {
             return new AzPowerShellSetupResponse(type, version);
         }
     }

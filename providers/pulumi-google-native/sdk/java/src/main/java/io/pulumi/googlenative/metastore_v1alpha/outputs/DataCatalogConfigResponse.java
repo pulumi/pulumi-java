@@ -51,8 +51,7 @@ public final class DataCatalogConfigResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public DataCatalogConfigResponse build() {
+        }        public DataCatalogConfigResponse build() {
             return new DataCatalogConfigResponse(enabled);
         }
     }

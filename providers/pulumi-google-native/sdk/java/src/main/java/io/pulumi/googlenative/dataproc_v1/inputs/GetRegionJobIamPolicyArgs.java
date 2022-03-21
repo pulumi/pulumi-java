@@ -78,17 +78,14 @@ public final class GetRegionJobIamPolicyArgs extends io.pulumi.resources.InvokeA
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder regionId(String regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
-        }
-        public GetRegionJobIamPolicyArgs build() {
+        }        public GetRegionJobIamPolicyArgs build() {
             return new GetRegionJobIamPolicyArgs(jobId, project, regionId);
         }
     }

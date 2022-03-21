@@ -70,12 +70,16 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
             this.userGroups = Objects.requireNonNull(userGroups);
             return this;
         }
-
+        public Builder userGroups(String... userGroups) {
+            return userGroups(List.of(userGroups));
+        }
         public Builder userIds(List<String> userIds) {
             this.userIds = Objects.requireNonNull(userIds);
             return this;
         }
-        public GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission build() {
+        public Builder userIds(String... userIds) {
+            return userIds(List.of(userIds));
+        }        public GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission build() {
             return new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(userGroups, userIds);
         }
     }

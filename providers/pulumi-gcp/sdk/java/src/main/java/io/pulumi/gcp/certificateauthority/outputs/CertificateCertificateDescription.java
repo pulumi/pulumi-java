@@ -119,42 +119,58 @@ public final class CertificateCertificateDescription {
             this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
-
+        public Builder aiaIssuingCertificateUrls(String... aiaIssuingCertificateUrls) {
+            return aiaIssuingCertificateUrls(List.of(aiaIssuingCertificateUrls));
+        }
         public Builder authorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds) {
             this.authorityKeyIds = authorityKeyIds;
             return this;
         }
-
+        public Builder authorityKeyIds(CertificateCertificateDescriptionAuthorityKeyId... authorityKeyIds) {
+            return authorityKeyIds(List.of(authorityKeyIds));
+        }
         public Builder certFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints) {
             this.certFingerprints = certFingerprints;
             return this;
         }
-
+        public Builder certFingerprints(CertificateCertificateDescriptionCertFingerprint... certFingerprints) {
+            return certFingerprints(List.of(certFingerprints));
+        }
         public Builder configValues(@Nullable List<CertificateCertificateDescriptionConfigValue> configValues) {
             this.configValues = configValues;
             return this;
         }
-
+        public Builder configValues(CertificateCertificateDescriptionConfigValue... configValues) {
+            return configValues(List.of(configValues));
+        }
         public Builder crlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
             this.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
-
+        public Builder crlDistributionPoints(String... crlDistributionPoints) {
+            return crlDistributionPoints(List.of(crlDistributionPoints));
+        }
         public Builder publicKeys(@Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
-
+        public Builder publicKeys(CertificateCertificateDescriptionPublicKey... publicKeys) {
+            return publicKeys(List.of(publicKeys));
+        }
         public Builder subjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions) {
             this.subjectDescriptions = subjectDescriptions;
             return this;
         }
-
+        public Builder subjectDescriptions(CertificateCertificateDescriptionSubjectDescription... subjectDescriptions) {
+            return subjectDescriptions(List.of(subjectDescriptions));
+        }
         public Builder subjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
             this.subjectKeyIds = subjectKeyIds;
             return this;
         }
-        public CertificateCertificateDescription build() {
+        public Builder subjectKeyIds(CertificateCertificateDescriptionSubjectKeyId... subjectKeyIds) {
+            return subjectKeyIds(List.of(subjectKeyIds));
+        }        public CertificateCertificateDescription build() {
             return new CertificateCertificateDescription(aiaIssuingCertificateUrls, authorityKeyIds, certFingerprints, configValues, crlDistributionPoints, publicKeys, subjectDescriptions, subjectKeyIds);
         }
     }

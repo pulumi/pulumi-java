@@ -67,12 +67,10 @@ public final class ObjectTypeFieldMap extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public Builder objectTypeField(@Nullable ObjectTypeField objectTypeField) {
             this.objectTypeField = objectTypeField;
             return this;
-        }
-        public ObjectTypeFieldMap build() {
+        }        public ObjectTypeFieldMap build() {
             return new ObjectTypeFieldMap(name, objectTypeField);
         }
     }

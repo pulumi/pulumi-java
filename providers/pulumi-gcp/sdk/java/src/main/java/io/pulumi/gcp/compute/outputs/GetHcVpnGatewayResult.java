@@ -113,42 +113,37 @@ public final class GetHcVpnGatewayResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
-
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public Builder vpnInterfaces(List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }
-        public GetHcVpnGatewayResult build() {
+        public Builder vpnInterfaces(GetHcVpnGatewayVpnInterface... vpnInterfaces) {
+            return vpnInterfaces(List.of(vpnInterfaces));
+        }        public GetHcVpnGatewayResult build() {
             return new GetHcVpnGatewayResult(description, id, name, network, project, region, selfLink, vpnInterfaces);
         }
     }

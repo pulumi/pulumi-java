@@ -88,17 +88,14 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
-
         public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
-        }
-        public GetAddonArgs build() {
+        }        public GetAddonArgs build() {
             return new GetAddonArgs(addonName, clusterName, tags);
         }
     }

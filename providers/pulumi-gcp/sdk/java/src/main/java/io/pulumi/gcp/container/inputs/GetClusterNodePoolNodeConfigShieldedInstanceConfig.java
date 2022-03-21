@@ -64,12 +64,10 @@ public final class GetClusterNodePoolNodeConfigShieldedInstanceConfig extends io
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
-
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
-        }
-        public GetClusterNodePoolNodeConfigShieldedInstanceConfig build() {
+        }        public GetClusterNodePoolNodeConfigShieldedInstanceConfig build() {
             return new GetClusterNodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
         }
     }

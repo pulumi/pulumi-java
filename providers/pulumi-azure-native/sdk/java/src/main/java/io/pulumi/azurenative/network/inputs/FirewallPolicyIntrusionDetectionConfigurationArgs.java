@@ -80,22 +80,24 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.
             this.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
-
         public Builder bypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs> bypassTrafficSettings) {
             this.bypassTrafficSettings = Output.ofNullable(bypassTrafficSettings);
             return this;
         }
-
+        public Builder bypassTrafficSettings(FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs... bypassTrafficSettings) {
+            return bypassTrafficSettings(List.of(bypassTrafficSettings));
+        }
         public Builder signatureOverrides(@Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides) {
             this.signatureOverrides = signatureOverrides;
             return this;
         }
-
         public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs> signatureOverrides) {
             this.signatureOverrides = Output.ofNullable(signatureOverrides);
             return this;
         }
-        public FirewallPolicyIntrusionDetectionConfigurationArgs build() {
+        public Builder signatureOverrides(FirewallPolicyIntrusionDetectionSignatureSpecificationArgs... signatureOverrides) {
+            return signatureOverrides(List.of(signatureOverrides));
+        }        public FirewallPolicyIntrusionDetectionConfigurationArgs build() {
             return new FirewallPolicyIntrusionDetectionConfigurationArgs(bypassTrafficSettings, signatureOverrides);
         }
     }

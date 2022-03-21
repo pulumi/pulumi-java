@@ -67,22 +67,18 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder value(@Nullable Output<Integer> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable Integer value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public IndexValueImportanceItemArgs build() {
+        }        public IndexValueImportanceItemArgs build() {
             return new IndexValueImportanceItemArgs(key, value);
         }
     }

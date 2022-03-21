@@ -94,32 +94,26 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
             this.domainNameLabel = domainNameLabel;
             return this;
         }
-
         public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = Output.ofNullable(domainNameLabel);
             return this;
         }
-
         public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
-
         public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
-
         public Builder reverseFqdn(@Nullable Output<String> reverseFqdn) {
             this.reverseFqdn = reverseFqdn;
             return this;
         }
-
         public Builder reverseFqdn(@Nullable String reverseFqdn) {
             this.reverseFqdn = Output.ofNullable(reverseFqdn);
             return this;
-        }
-        public PublicIPAddressDnsSettingsArgs build() {
+        }        public PublicIPAddressDnsSettingsArgs build() {
             return new PublicIPAddressDnsSettingsArgs(domainNameLabel, fqdn, reverseFqdn);
         }
     }

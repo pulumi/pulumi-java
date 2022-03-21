@@ -199,92 +199,77 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder proxyId(@Nullable Output<Integer> proxyId) {
             this.proxyId = proxyId;
             return this;
         }
-
         public Builder proxyId(@Nullable Integer proxyId) {
             this.proxyId = Output.ofNullable(proxyId);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
-
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
             this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
-
+        public Builder sslCertificates(String... sslCertificates) {
+            return sslCertificates(List.of(sslCertificates));
+        }
         public Builder urlMap(@Nullable Output<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
-
         public Builder urlMap(@Nullable String urlMap) {
             this.urlMap = Output.ofNullable(urlMap);
             return this;
-        }
-        public RegionTargetHttpsProxyState build() {
+        }        public RegionTargetHttpsProxyState build() {
             return new RegionTargetHttpsProxyState(creationTimestamp, description, name, project, proxyId, region, selfLink, sslCertificates, urlMap);
         }
     }

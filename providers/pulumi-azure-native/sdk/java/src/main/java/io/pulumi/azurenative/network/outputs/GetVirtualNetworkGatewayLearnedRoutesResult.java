@@ -54,7 +54,9 @@ public final class GetVirtualNetworkGatewayLearnedRoutesResult {
             this.value = value;
             return this;
         }
-        public GetVirtualNetworkGatewayLearnedRoutesResult build() {
+        public Builder value(GatewayRouteResponse... value) {
+            return value(List.of(value));
+        }        public GetVirtualNetworkGatewayLearnedRoutesResult build() {
             return new GetVirtualNetworkGatewayLearnedRoutesResult(value);
         }
     }

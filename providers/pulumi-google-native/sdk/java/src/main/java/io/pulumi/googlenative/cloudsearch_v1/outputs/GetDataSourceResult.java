@@ -184,47 +184,47 @@ public final class GetDataSourceResult {
             this.disableModifications = Objects.requireNonNull(disableModifications);
             return this;
         }
-
         public Builder disableServing(Boolean disableServing) {
             this.disableServing = Objects.requireNonNull(disableServing);
             return this;
         }
-
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder indexingServiceAccounts(List<String> indexingServiceAccounts) {
             this.indexingServiceAccounts = Objects.requireNonNull(indexingServiceAccounts);
             return this;
         }
-
+        public Builder indexingServiceAccounts(String... indexingServiceAccounts) {
+            return indexingServiceAccounts(List.of(indexingServiceAccounts));
+        }
         public Builder itemsVisibility(List<GSuitePrincipalResponse> itemsVisibility) {
             this.itemsVisibility = Objects.requireNonNull(itemsVisibility);
             return this;
         }
-
+        public Builder itemsVisibility(GSuitePrincipalResponse... itemsVisibility) {
+            return itemsVisibility(List.of(itemsVisibility));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder operationIds(List<String> operationIds) {
             this.operationIds = Objects.requireNonNull(operationIds);
             return this;
         }
-
+        public Builder operationIds(String... operationIds) {
+            return operationIds(List.of(operationIds));
+        }
         public Builder returnThumbnailUrls(Boolean returnThumbnailUrls) {
             this.returnThumbnailUrls = Objects.requireNonNull(returnThumbnailUrls);
             return this;
         }
-
         public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
-        }
-        public GetDataSourceResult build() {
+        }        public GetDataSourceResult build() {
             return new GetDataSourceResult(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);
         }
     }

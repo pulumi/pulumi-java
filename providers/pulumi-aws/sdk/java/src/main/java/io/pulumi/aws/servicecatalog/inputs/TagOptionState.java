@@ -103,42 +103,34 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
             this.active = active;
             return this;
         }
-
         public Builder active(@Nullable Boolean active) {
             this.active = Output.ofNullable(active);
             return this;
         }
-
         public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
-
         public Builder key(@Nullable String key) {
             this.key = Output.ofNullable(key);
             return this;
         }
-
         public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
-
         public Builder owner(@Nullable String owner) {
             this.owner = Output.ofNullable(owner);
             return this;
         }
-
         public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = Output.ofNullable(value);
             return this;
-        }
-        public TagOptionState build() {
+        }        public TagOptionState build() {
             return new TagOptionState(active, key, owner, value);
         }
     }

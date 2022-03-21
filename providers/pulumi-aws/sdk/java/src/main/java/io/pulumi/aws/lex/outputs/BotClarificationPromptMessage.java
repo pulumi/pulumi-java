@@ -90,17 +90,14 @@ public final class BotClarificationPromptMessage {
             this.content = Objects.requireNonNull(content);
             return this;
         }
-
         public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
-        }
-        public BotClarificationPromptMessage build() {
+        }        public BotClarificationPromptMessage build() {
             return new BotClarificationPromptMessage(content, contentType, groupNumber);
         }
     }

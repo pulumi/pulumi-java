@@ -95,32 +95,29 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
-
         public Builder recordColumns(List<AnalyticsApplicationInputsSchemaRecordColumnArgs> recordColumns) {
             this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
-
+        public Builder recordColumns(AnalyticsApplicationInputsSchemaRecordColumnArgs... recordColumns) {
+            return recordColumns(List.of(recordColumns));
+        }
         public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
-
         public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
-
         public Builder recordFormat(Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
-
         public Builder recordFormat(AnalyticsApplicationInputsSchemaRecordFormatArgs recordFormat) {
             this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
-        }
-        public AnalyticsApplicationInputsSchemaArgs build() {
+        }        public AnalyticsApplicationInputsSchemaArgs build() {
             return new AnalyticsApplicationInputsSchemaArgs(recordColumns, recordEncoding, recordFormat);
         }
     }

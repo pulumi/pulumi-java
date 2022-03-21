@@ -87,32 +87,26 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder outputConfig(Output<OutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public Builder outputConfig(OutputConfigArgs outputConfig) {
             this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
-        }
-        public TraceSinkArgs build() {
+        }        public TraceSinkArgs build() {
             return new TraceSinkArgs(name, outputConfig, project);
         }
     }

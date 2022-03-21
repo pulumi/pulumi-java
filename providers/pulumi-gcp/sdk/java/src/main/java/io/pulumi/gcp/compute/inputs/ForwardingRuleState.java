@@ -504,232 +504,189 @@ public final class ForwardingRuleState extends io.pulumi.resources.ResourceArgs 
             this.allPorts = allPorts;
             return this;
         }
-
         public Builder allPorts(@Nullable Boolean allPorts) {
             this.allPorts = Output.ofNullable(allPorts);
             return this;
         }
-
         public Builder allowGlobalAccess(@Nullable Output<Boolean> allowGlobalAccess) {
             this.allowGlobalAccess = allowGlobalAccess;
             return this;
         }
-
         public Builder allowGlobalAccess(@Nullable Boolean allowGlobalAccess) {
             this.allowGlobalAccess = Output.ofNullable(allowGlobalAccess);
             return this;
         }
-
         public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
-
         public Builder backendService(@Nullable String backendService) {
             this.backendService = Output.ofNullable(backendService);
             return this;
         }
-
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-
         public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
-
         public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
-
         public Builder ipProtocol(@Nullable String ipProtocol) {
             this.ipProtocol = Output.ofNullable(ipProtocol);
             return this;
         }
-
         public Builder isMirroringCollector(@Nullable Output<Boolean> isMirroringCollector) {
             this.isMirroringCollector = isMirroringCollector;
             return this;
         }
-
         public Builder isMirroringCollector(@Nullable Boolean isMirroringCollector) {
             this.isMirroringCollector = Output.ofNullable(isMirroringCollector);
             return this;
         }
-
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
-
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Output.ofNullable(labelFingerprint);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
-
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
             this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder networkTier(@Nullable Output<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
-
         public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
-
         public Builder portRange(@Nullable Output<String> portRange) {
             this.portRange = portRange;
             return this;
         }
-
         public Builder portRange(@Nullable String portRange) {
             this.portRange = Output.ofNullable(portRange);
             return this;
         }
-
         public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<String> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(String... ports) {
+            return ports(List.of(ports));
+        }
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = Output.ofNullable(region);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
-
         public Builder serviceLabel(@Nullable Output<String> serviceLabel) {
             this.serviceLabel = serviceLabel;
             return this;
         }
-
         public Builder serviceLabel(@Nullable String serviceLabel) {
             this.serviceLabel = Output.ofNullable(serviceLabel);
             return this;
         }
-
         public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
-
         public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
-
         public Builder target(@Nullable String target) {
             this.target = Output.ofNullable(target);
             return this;
-        }
-        public ForwardingRuleState build() {
+        }        public ForwardingRuleState build() {
             return new ForwardingRuleState(allPorts, allowGlobalAccess, backendService, creationTimestamp, description, ipAddress, ipProtocol, isMirroringCollector, labelFingerprint, labels, loadBalancingScheme, name, network, networkTier, portRange, ports, project, region, selfLink, serviceLabel, serviceName, subnetwork, target);
         }
     }

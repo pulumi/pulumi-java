@@ -103,22 +103,18 @@ public final class PresetAudioCodecOptions {
             this.bitDepth = bitDepth;
             return this;
         }
-
         public Builder bitOrder(@Nullable String bitOrder) {
             this.bitOrder = bitOrder;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder signed(@Nullable String signed) {
             this.signed = signed;
             return this;
-        }
-        public PresetAudioCodecOptions build() {
+        }        public PresetAudioCodecOptions build() {
             return new PresetAudioCodecOptions(bitDepth, bitOrder, profile, signed);
         }
     }

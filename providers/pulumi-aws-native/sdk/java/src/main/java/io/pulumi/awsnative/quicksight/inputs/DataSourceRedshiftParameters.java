@@ -114,22 +114,18 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
             this.clusterId = clusterId;
             return this;
         }
-
         public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
-
         public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
-
         public Builder port(@Nullable Double port) {
             this.port = port;
             return this;
-        }
-        public DataSourceRedshiftParameters build() {
+        }        public DataSourceRedshiftParameters build() {
             return new DataSourceRedshiftParameters(clusterId, database, host, port);
         }
     }

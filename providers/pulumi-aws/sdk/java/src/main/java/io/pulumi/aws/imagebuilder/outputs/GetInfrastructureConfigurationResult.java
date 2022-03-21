@@ -281,82 +281,75 @@ public final class GetInfrastructureConfigurationResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
-
         public Builder dateUpdated(String dateUpdated) {
             this.dateUpdated = Objects.requireNonNull(dateUpdated);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder instanceProfileName(String instanceProfileName) {
             this.instanceProfileName = Objects.requireNonNull(instanceProfileName);
             return this;
         }
-
         public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
-
+        public Builder instanceTypes(String... instanceTypes) {
+            return instanceTypes(List.of(instanceTypes));
+        }
         public Builder keyPair(String keyPair) {
             this.keyPair = Objects.requireNonNull(keyPair);
             return this;
         }
-
         public Builder loggings(List<GetInfrastructureConfigurationLogging> loggings) {
             this.loggings = Objects.requireNonNull(loggings);
             return this;
         }
-
+        public Builder loggings(GetInfrastructureConfigurationLogging... loggings) {
+            return loggings(List.of(loggings));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceTags(Map<String,String> resourceTags) {
             this.resourceTags = Objects.requireNonNull(resourceTags);
             return this;
         }
-
         public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
-
         public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
-
         public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public Builder terminateInstanceOnFailure(Boolean terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = Objects.requireNonNull(terminateInstanceOnFailure);
             return this;
-        }
-        public GetInfrastructureConfigurationResult build() {
+        }        public GetInfrastructureConfigurationResult build() {
             return new GetInfrastructureConfigurationResult(arn, dateCreated, dateUpdated, description, id, instanceProfileName, instanceTypes, keyPair, loggings, name, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, terminateInstanceOnFailure);
         }
     }

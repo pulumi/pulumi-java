@@ -78,22 +78,18 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder format(PublicKeyFormat format) {
             this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
-
         public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder key(String key) {
             this.key = Output.of(Objects.requireNonNull(key));
             return this;
-        }
-        public PublicKeyArgs build() {
+        }        public PublicKeyArgs build() {
             return new PublicKeyArgs(format, key);
         }
     }

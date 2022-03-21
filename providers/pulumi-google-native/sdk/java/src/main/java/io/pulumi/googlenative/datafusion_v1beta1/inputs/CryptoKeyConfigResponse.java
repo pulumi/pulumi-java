@@ -58,8 +58,7 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
         public Builder keyReference(String keyReference) {
             this.keyReference = Objects.requireNonNull(keyReference);
             return this;
-        }
-        public CryptoKeyConfigResponse build() {
+        }        public CryptoKeyConfigResponse build() {
             return new CryptoKeyConfigResponse(keyReference);
         }
     }

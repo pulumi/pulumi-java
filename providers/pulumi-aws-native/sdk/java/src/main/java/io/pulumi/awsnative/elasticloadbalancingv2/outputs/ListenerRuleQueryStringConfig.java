@@ -46,7 +46,9 @@ public final class ListenerRuleQueryStringConfig {
             this.values = values;
             return this;
         }
-        public ListenerRuleQueryStringConfig build() {
+        public Builder values(ListenerRuleQueryStringKeyValue... values) {
+            return values(List.of(values));
+        }        public ListenerRuleQueryStringConfig build() {
             return new ListenerRuleQueryStringConfig(values);
         }
     }

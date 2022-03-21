@@ -52,8 +52,7 @@ public final class RuleGroupLabelSummary extends io.pulumi.resources.InvokeArgs 
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public RuleGroupLabelSummary build() {
+        }        public RuleGroupLabelSummary build() {
             return new RuleGroupLabelSummary(name);
         }
     }

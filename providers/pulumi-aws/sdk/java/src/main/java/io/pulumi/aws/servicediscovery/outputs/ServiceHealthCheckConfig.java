@@ -88,17 +88,14 @@ public final class ServiceHealthCheckConfig {
             this.failureThreshold = failureThreshold;
             return this;
         }
-
         public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
-        }
-        public ServiceHealthCheckConfig build() {
+        }        public ServiceHealthCheckConfig build() {
             return new ServiceHealthCheckConfig(failureThreshold, resourcePath, type);
         }
     }

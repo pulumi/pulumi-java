@@ -102,27 +102,22 @@ public final class GetBuildArgs extends io.pulumi.resources.InvokeArgs {
             this.buildId = Objects.requireNonNull(buildId);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
-        }
-        public GetBuildArgs build() {
+        }        public GetBuildArgs build() {
             return new GetBuildArgs(buildId, id, location, project, projectId);
         }
     }

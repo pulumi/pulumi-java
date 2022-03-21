@@ -91,32 +91,26 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.filterExpression = Objects.requireNonNull(filterExpression);
             return this;
         }
-
         public Builder filterExpression(String filterExpression) {
             this.filterExpression = Output.of(Objects.requireNonNull(filterExpression));
             return this;
         }
-
         public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public Builder groupName(String groupName) {
             this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public GroupArgs build() {
+        }        public GroupArgs build() {
             return new GroupArgs(filterExpression, groupName, tags);
         }
     }

@@ -61,12 +61,10 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.address = address;
             return this;
         }
-
         public Builder address(@Nullable String address) {
             this.address = Output.ofNullable(address);
             return this;
-        }
-        public IpAddressArgs build() {
+        }        public IpAddressArgs build() {
             return new IpAddressArgs(address);
         }
     }

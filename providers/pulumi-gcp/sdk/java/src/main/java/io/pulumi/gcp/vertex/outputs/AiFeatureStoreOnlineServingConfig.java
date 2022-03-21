@@ -51,8 +51,7 @@ public final class AiFeatureStoreOnlineServingConfig {
         public Builder fixedNodeCount(Integer fixedNodeCount) {
             this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount);
             return this;
-        }
-        public AiFeatureStoreOnlineServingConfig build() {
+        }        public AiFeatureStoreOnlineServingConfig build() {
             return new AiFeatureStoreOnlineServingConfig(fixedNodeCount);
         }
     }

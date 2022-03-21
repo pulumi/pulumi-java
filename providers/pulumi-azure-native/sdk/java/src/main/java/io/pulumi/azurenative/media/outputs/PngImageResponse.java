@@ -187,47 +187,41 @@ public final class PngImageResponse {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
-
         public Builder layers(@Nullable List<PngLayerResponse> layers) {
             this.layers = layers;
             return this;
         }
-
+        public Builder layers(PngLayerResponse... layers) {
+            return layers(List.of(layers));
+        }
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
-
         public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public Builder step(@Nullable String step) {
             this.step = step;
             return this;
         }
-
         public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
-
         public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
-        }
-        public PngImageResponse build() {
+        }        public PngImageResponse build() {
             return new PngImageResponse(keyFrameInterval, label, layers, odataType, range, start, step, stretchMode, syncMode);
         }
     }

@@ -80,22 +80,21 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
             this.customImages = customImages;
             return this;
         }
-
         public Builder customImages(@Nullable List<UserProfileCustomImageArgs> customImages) {
             this.customImages = Output.ofNullable(customImages);
             return this;
         }
-
+        public Builder customImages(UserProfileCustomImageArgs... customImages) {
+            return customImages(List.of(customImages));
+        }
         public Builder defaultResourceSpec(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
-        }
-        public UserProfileKernelGatewayAppSettingsArgs build() {
+        }        public UserProfileKernelGatewayAppSettingsArgs build() {
             return new UserProfileKernelGatewayAppSettingsArgs(customImages, defaultResourceSpec);
         }
     }

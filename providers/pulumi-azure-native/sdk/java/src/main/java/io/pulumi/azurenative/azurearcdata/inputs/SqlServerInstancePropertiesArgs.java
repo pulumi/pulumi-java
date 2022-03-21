@@ -254,132 +254,106 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
             this.collation = collation;
             return this;
         }
-
         public Builder collation(@Nullable String collation) {
             this.collation = Output.ofNullable(collation);
             return this;
         }
-
         public Builder containerResourceId(Output<String> containerResourceId) {
             this.containerResourceId = Objects.requireNonNull(containerResourceId);
             return this;
         }
-
         public Builder containerResourceId(String containerResourceId) {
             this.containerResourceId = Output.of(Objects.requireNonNull(containerResourceId));
             return this;
         }
-
         public Builder currentVersion(@Nullable Output<String> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
-
         public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = Output.ofNullable(currentVersion);
             return this;
         }
-
         public Builder edition(@Nullable Output<String> edition) {
             this.edition = edition;
             return this;
         }
-
         public Builder edition(@Nullable String edition) {
             this.edition = Output.ofNullable(edition);
             return this;
         }
-
         public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
-
         public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
-
         public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
-
         public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
-
         public Builder patchLevel(@Nullable Output<String> patchLevel) {
             this.patchLevel = patchLevel;
             return this;
         }
-
         public Builder patchLevel(@Nullable String patchLevel) {
             this.patchLevel = Output.ofNullable(patchLevel);
             return this;
         }
-
         public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
-
         public Builder productId(@Nullable String productId) {
             this.productId = Output.ofNullable(productId);
             return this;
         }
-
         public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
-
         public Builder tcpDynamicPorts(@Nullable Output<String> tcpDynamicPorts) {
             this.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
-
         public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
             this.tcpDynamicPorts = Output.ofNullable(tcpDynamicPorts);
             return this;
         }
-
         public Builder tcpStaticPorts(@Nullable Output<String> tcpStaticPorts) {
             this.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
-
         public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
             this.tcpStaticPorts = Output.ofNullable(tcpStaticPorts);
             return this;
         }
-
         public Builder vCore(@Nullable Output<String> vCore) {
             this.vCore = vCore;
             return this;
         }
-
         public Builder vCore(@Nullable String vCore) {
             this.vCore = Output.ofNullable(vCore);
             return this;
         }
-
         public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public SqlServerInstancePropertiesArgs build() {
+        }        public SqlServerInstancePropertiesArgs build() {
             return new SqlServerInstancePropertiesArgs(collation, containerResourceId, currentVersion, edition, instanceName, licenseType, patchLevel, productId, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);
         }
     }

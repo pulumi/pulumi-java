@@ -55,12 +55,10 @@ public final class EnvironmentSettingResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public EnvironmentSettingResponse build() {
+        }        public EnvironmentSettingResponse build() {
             return new EnvironmentSettingResponse(name, value);
         }
     }

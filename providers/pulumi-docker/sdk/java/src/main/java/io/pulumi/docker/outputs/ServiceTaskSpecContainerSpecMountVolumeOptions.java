@@ -75,22 +75,21 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptions {
             this.driverName = driverName;
             return this;
         }
-
         public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
-
         public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabel> labels) {
             this.labels = labels;
             return this;
         }
-
+        public Builder labels(ServiceTaskSpecContainerSpecMountVolumeOptionsLabel... labels) {
+            return labels(List.of(labels));
+        }
         public Builder noCopy(@Nullable Boolean noCopy) {
             this.noCopy = noCopy;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountVolumeOptions build() {
+        }        public ServiceTaskSpecContainerSpecMountVolumeOptions build() {
             return new ServiceTaskSpecContainerSpecMountVolumeOptions(driverName, driverOptions, labels, noCopy);
         }
     }

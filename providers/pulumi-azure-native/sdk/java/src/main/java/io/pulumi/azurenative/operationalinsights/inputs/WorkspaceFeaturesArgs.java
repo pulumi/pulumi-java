@@ -127,52 +127,42 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
             this.clusterResourceId = clusterResourceId;
             return this;
         }
-
         public Builder clusterResourceId(@Nullable String clusterResourceId) {
             this.clusterResourceId = Output.ofNullable(clusterResourceId);
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
-
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
             return this;
         }
-
         public Builder enableDataExport(@Nullable Output<Boolean> enableDataExport) {
             this.enableDataExport = enableDataExport;
             return this;
         }
-
         public Builder enableDataExport(@Nullable Boolean enableDataExport) {
             this.enableDataExport = Output.ofNullable(enableDataExport);
             return this;
         }
-
         public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Output<Boolean> enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
-
         public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = Output.ofNullable(enableLogAccessUsingOnlyResourcePermissions);
             return this;
         }
-
         public Builder immediatePurgeDataOn30Days(@Nullable Output<Boolean> immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
-
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = Output.ofNullable(immediatePurgeDataOn30Days);
             return this;
-        }
-        public WorkspaceFeaturesArgs build() {
+        }        public WorkspaceFeaturesArgs build() {
             return new WorkspaceFeaturesArgs(clusterResourceId, disableLocalAuth, enableDataExport, enableLogAccessUsingOnlyResourcePermissions, immediatePurgeDataOn30Days);
         }
     }

@@ -77,12 +77,10 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.locked = Objects.requireNonNull(locked);
             return this;
         }
-
         public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
-        }
-        public LockConfigResponse build() {
+        }        public LockConfigResponse build() {
             return new LockConfigResponse(locked, reason);
         }
     }

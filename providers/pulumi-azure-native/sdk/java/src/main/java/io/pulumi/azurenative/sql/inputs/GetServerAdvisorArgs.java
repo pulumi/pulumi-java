@@ -88,17 +88,14 @@ public final class GetServerAdvisorArgs extends io.pulumi.resources.InvokeArgs {
             this.advisorName = Objects.requireNonNull(advisorName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
-        }
-        public GetServerAdvisorArgs build() {
+        }        public GetServerAdvisorArgs build() {
             return new GetServerAdvisorArgs(advisorName, resourceGroupName, serverName);
         }
     }

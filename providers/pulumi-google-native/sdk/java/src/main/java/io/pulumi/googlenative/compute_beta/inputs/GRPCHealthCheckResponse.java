@@ -105,22 +105,18 @@ public final class GRPCHealthCheckResponse extends io.pulumi.resources.InvokeArg
             this.grpcServiceName = Objects.requireNonNull(grpcServiceName);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
-
         public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
-        }
-        public GRPCHealthCheckResponse build() {
+        }        public GRPCHealthCheckResponse build() {
             return new GRPCHealthCheckResponse(grpcServiceName, port, portName, portSpecification);
         }
     }

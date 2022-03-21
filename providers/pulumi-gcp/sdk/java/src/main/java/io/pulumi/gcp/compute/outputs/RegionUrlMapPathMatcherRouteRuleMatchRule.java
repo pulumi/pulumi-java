@@ -206,37 +206,39 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRule {
             this.fullPathMatch = fullPathMatch;
             return this;
         }
-
         public Builder headerMatches(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
-
+        public Builder headerMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch... headerMatches) {
+            return headerMatches(List.of(headerMatches));
+        }
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
-
         public Builder metadataFilters(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
-
+        public Builder metadataFilters(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter... metadataFilters) {
+            return metadataFilters(List.of(metadataFilters));
+        }
         public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public Builder queryParameterMatches(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-
+        public Builder queryParameterMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch... queryParameterMatches) {
+            return queryParameterMatches(List.of(queryParameterMatches));
+        }
         public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = regexMatch;
             return this;
-        }
-        public RegionUrlMapPathMatcherRouteRuleMatchRule build() {
+        }        public RegionUrlMapPathMatcherRouteRuleMatchRule build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }
     }

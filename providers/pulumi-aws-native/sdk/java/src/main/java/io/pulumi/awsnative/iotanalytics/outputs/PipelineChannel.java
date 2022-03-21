@@ -63,17 +63,14 @@ public final class PipelineChannel {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder next(@Nullable String next) {
             this.next = next;
             return this;
-        }
-        public PipelineChannel build() {
+        }        public PipelineChannel build() {
             return new PipelineChannel(channelName, name, next);
         }
     }

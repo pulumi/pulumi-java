@@ -96,22 +96,18 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder properties(@Nullable ProviderRegistrationResponseProperties properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public DefaultRolloutSpecificationResponseProviderRegistration build() {
+        }        public DefaultRolloutSpecificationResponseProviderRegistration build() {
             return new DefaultRolloutSpecificationResponseProviderRegistration(id, name, properties, type);
         }
     }

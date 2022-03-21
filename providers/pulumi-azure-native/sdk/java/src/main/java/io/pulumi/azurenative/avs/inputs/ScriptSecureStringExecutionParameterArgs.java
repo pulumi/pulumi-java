@@ -95,32 +95,26 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder secureValue(@Nullable Output<String> secureValue) {
             this.secureValue = secureValue;
             return this;
         }
-
         public Builder secureValue(@Nullable String secureValue) {
             this.secureValue = Output.ofNullable(secureValue);
             return this;
         }
-
         public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder type(String type) {
             this.type = Output.of(Objects.requireNonNull(type));
             return this;
-        }
-        public ScriptSecureStringExecutionParameterArgs build() {
+        }        public ScriptSecureStringExecutionParameterArgs build() {
             return new ScriptSecureStringExecutionParameterArgs(name, secureValue, type);
         }
     }

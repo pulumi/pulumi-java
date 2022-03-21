@@ -88,17 +88,14 @@ public final class ServiceAuthenticationConfigurationInfoResponse {
             this.audience = audience;
             return this;
         }
-
         public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
-
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
-        }
-        public ServiceAuthenticationConfigurationInfoResponse build() {
+        }        public ServiceAuthenticationConfigurationInfoResponse build() {
             return new ServiceAuthenticationConfigurationInfoResponse(audience, authority, smartProxyEnabled);
         }
     }

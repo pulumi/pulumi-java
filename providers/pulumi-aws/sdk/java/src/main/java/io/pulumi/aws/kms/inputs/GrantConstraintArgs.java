@@ -75,22 +75,18 @@ public final class GrantConstraintArgs extends io.pulumi.resources.ResourceArgs 
             this.encryptionContextEquals = encryptionContextEquals;
             return this;
         }
-
         public Builder encryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
             this.encryptionContextEquals = Output.ofNullable(encryptionContextEquals);
             return this;
         }
-
         public Builder encryptionContextSubset(@Nullable Output<Map<String,String>> encryptionContextSubset) {
             this.encryptionContextSubset = encryptionContextSubset;
             return this;
         }
-
         public Builder encryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
             this.encryptionContextSubset = Output.ofNullable(encryptionContextSubset);
             return this;
-        }
-        public GrantConstraintArgs build() {
+        }        public GrantConstraintArgs build() {
             return new GrantConstraintArgs(encryptionContextEquals, encryptionContextSubset);
         }
     }

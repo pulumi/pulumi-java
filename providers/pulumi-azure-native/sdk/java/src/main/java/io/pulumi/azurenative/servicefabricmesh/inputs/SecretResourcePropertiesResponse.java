@@ -143,32 +143,26 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
             this.contentType = contentType;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
-        }
-        public SecretResourcePropertiesResponse build() {
+        }        public SecretResourcePropertiesResponse build() {
             return new SecretResourcePropertiesResponse(contentType, description, kind, provisioningState, status, statusDetails);
         }
     }

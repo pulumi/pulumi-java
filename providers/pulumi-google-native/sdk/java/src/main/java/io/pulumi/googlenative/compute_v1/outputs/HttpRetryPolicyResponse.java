@@ -88,17 +88,17 @@ public final class HttpRetryPolicyResponse {
             this.numRetries = Objects.requireNonNull(numRetries);
             return this;
         }
-
         public Builder perTryTimeout(DurationResponse perTryTimeout) {
             this.perTryTimeout = Objects.requireNonNull(perTryTimeout);
             return this;
         }
-
         public Builder retryConditions(List<String> retryConditions) {
             this.retryConditions = Objects.requireNonNull(retryConditions);
             return this;
         }
-        public HttpRetryPolicyResponse build() {
+        public Builder retryConditions(String... retryConditions) {
+            return retryConditions(List.of(retryConditions));
+        }        public HttpRetryPolicyResponse build() {
             return new HttpRetryPolicyResponse(numRetries, perTryTimeout, retryConditions);
         }
     }

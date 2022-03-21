@@ -121,27 +121,22 @@ public final class SelectAudioTrackByAttributeResponse {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
-
         public Builder channelMapping(@Nullable String channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
-
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = filterValue;
             return this;
         }
-
         public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
-        }
-        public SelectAudioTrackByAttributeResponse build() {
+        }        public SelectAudioTrackByAttributeResponse build() {
             return new SelectAudioTrackByAttributeResponse(attribute, channelMapping, filter, filterValue, odataType);
         }
     }

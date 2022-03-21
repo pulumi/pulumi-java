@@ -64,12 +64,10 @@ public final class GetProfilePermissionArgs extends io.pulumi.resources.InvokeAr
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
-
         public Builder statementId(String statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
-        }
-        public GetProfilePermissionArgs build() {
+        }        public GetProfilePermissionArgs build() {
             return new GetProfilePermissionArgs(profileName, statementId);
         }
     }

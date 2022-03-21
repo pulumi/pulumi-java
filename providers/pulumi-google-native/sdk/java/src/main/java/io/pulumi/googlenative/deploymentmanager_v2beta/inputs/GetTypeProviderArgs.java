@@ -66,12 +66,10 @@ public final class GetTypeProviderArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public Builder typeProvider(String typeProvider) {
             this.typeProvider = Objects.requireNonNull(typeProvider);
             return this;
-        }
-        public GetTypeProviderArgs build() {
+        }        public GetTypeProviderArgs build() {
             return new GetTypeProviderArgs(project, typeProvider);
         }
     }

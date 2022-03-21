@@ -70,12 +70,10 @@ public final class ConnectorWorkerConfiguration {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public Builder workerConfigurationArn(String workerConfigurationArn) {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
-        }
-        public ConnectorWorkerConfiguration build() {
+        }        public ConnectorWorkerConfiguration build() {
             return new ConnectorWorkerConfiguration(revision, workerConfigurationArn);
         }
     }

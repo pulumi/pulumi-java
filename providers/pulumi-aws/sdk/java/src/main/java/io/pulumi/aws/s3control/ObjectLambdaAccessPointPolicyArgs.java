@@ -86,32 +86,26 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
             this.accountId = accountId;
             return this;
         }
-
         public Builder accountId(@Nullable String accountId) {
             this.accountId = Output.ofNullable(accountId);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
-
         public Builder policy(String policy) {
             this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
-        }
-        public ObjectLambdaAccessPointPolicyArgs build() {
+        }        public ObjectLambdaAccessPointPolicyArgs build() {
             return new ObjectLambdaAccessPointPolicyArgs(accountId, name, policy);
         }
     }

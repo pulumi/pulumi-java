@@ -76,12 +76,10 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
-        }
-        public HealthCheckAlarmIdentifier build() {
+        }        public HealthCheckAlarmIdentifier build() {
             return new HealthCheckAlarmIdentifier(name, region);
         }
     }

@@ -56,12 +56,10 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
-
         public Builder s3(RecordingConfigurationS3DestinationConfigurationArgs s3) {
             this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
-        }
-        public RecordingConfigurationDestinationConfigurationArgs build() {
+        }        public RecordingConfigurationDestinationConfigurationArgs build() {
             return new RecordingConfigurationDestinationConfigurationArgs(s3);
         }
     }

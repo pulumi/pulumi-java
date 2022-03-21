@@ -88,17 +88,17 @@ public final class GetDomainMappingResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             this.resourceRecords = Objects.requireNonNull(resourceRecords);
             return this;
         }
-
+        public Builder resourceRecords(ResourceRecordResponse... resourceRecords) {
+            return resourceRecords(List.of(resourceRecords));
+        }
         public Builder sslSettings(SslSettingsResponse sslSettings) {
             this.sslSettings = Objects.requireNonNull(sslSettings);
             return this;
-        }
-        public GetDomainMappingResult build() {
+        }        public GetDomainMappingResult build() {
             return new GetDomainMappingResult(name, resourceRecords, sslSettings);
         }
     }

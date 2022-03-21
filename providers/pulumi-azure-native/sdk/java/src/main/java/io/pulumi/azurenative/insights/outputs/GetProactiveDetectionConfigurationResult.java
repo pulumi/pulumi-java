@@ -138,32 +138,29 @@ public final class GetProactiveDetectionConfigurationResult {
             this.customEmails = customEmails;
             return this;
         }
-
+        public Builder customEmails(String... customEmails) {
+            return customEmails(List.of(customEmails));
+        }
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder ruleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions) {
             this.ruleDefinitions = ruleDefinitions;
             return this;
         }
-
         public Builder sendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
             this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
-        }
-        public GetProactiveDetectionConfigurationResult build() {
+        }        public GetProactiveDetectionConfigurationResult build() {
             return new GetProactiveDetectionConfigurationResult(customEmails, enabled, lastUpdatedTime, name, ruleDefinitions, sendEmailsToSubscriptionOwners);
         }
     }

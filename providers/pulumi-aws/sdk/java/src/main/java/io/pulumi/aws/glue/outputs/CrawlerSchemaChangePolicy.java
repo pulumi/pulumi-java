@@ -71,12 +71,10 @@ public final class CrawlerSchemaChangePolicy {
             this.deleteBehavior = deleteBehavior;
             return this;
         }
-
         public Builder updateBehavior(@Nullable String updateBehavior) {
             this.updateBehavior = updateBehavior;
             return this;
-        }
-        public CrawlerSchemaChangePolicy build() {
+        }        public CrawlerSchemaChangePolicy build() {
             return new CrawlerSchemaChangePolicy(deleteBehavior, updateBehavior);
         }
     }

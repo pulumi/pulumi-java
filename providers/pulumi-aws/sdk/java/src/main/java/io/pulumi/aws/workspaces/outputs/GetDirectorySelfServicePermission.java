@@ -117,27 +117,22 @@ public final class GetDirectorySelfServicePermission {
             this.changeComputeType = Objects.requireNonNull(changeComputeType);
             return this;
         }
-
         public Builder increaseVolumeSize(Boolean increaseVolumeSize) {
             this.increaseVolumeSize = Objects.requireNonNull(increaseVolumeSize);
             return this;
         }
-
         public Builder rebuildWorkspace(Boolean rebuildWorkspace) {
             this.rebuildWorkspace = Objects.requireNonNull(rebuildWorkspace);
             return this;
         }
-
         public Builder restartWorkspace(Boolean restartWorkspace) {
             this.restartWorkspace = Objects.requireNonNull(restartWorkspace);
             return this;
         }
-
         public Builder switchRunningMode(Boolean switchRunningMode) {
             this.switchRunningMode = Objects.requireNonNull(switchRunningMode);
             return this;
-        }
-        public GetDirectorySelfServicePermission build() {
+        }        public GetDirectorySelfServicePermission build() {
             return new GetDirectorySelfServicePermission(changeComputeType, increaseVolumeSize, rebuildWorkspace, restartWorkspace, switchRunningMode);
         }
     }

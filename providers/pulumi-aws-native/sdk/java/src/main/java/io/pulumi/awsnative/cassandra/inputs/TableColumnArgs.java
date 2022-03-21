@@ -65,22 +65,18 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
-
         public Builder columnName(String columnName) {
             this.columnName = Output.of(Objects.requireNonNull(columnName));
             return this;
         }
-
         public Builder columnType(Output<String> columnType) {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }
-
         public Builder columnType(String columnType) {
             this.columnType = Output.of(Objects.requireNonNull(columnType));
             return this;
-        }
-        public TableColumnArgs build() {
+        }        public TableColumnArgs build() {
             return new TableColumnArgs(columnName, columnType);
         }
     }

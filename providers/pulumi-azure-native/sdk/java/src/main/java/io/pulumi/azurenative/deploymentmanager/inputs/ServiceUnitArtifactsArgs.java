@@ -110,42 +110,34 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
             this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
-
         public Builder parametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
             this.parametersArtifactSourceRelativePath = Output.ofNullable(parametersArtifactSourceRelativePath);
             return this;
         }
-
         public Builder parametersUri(@Nullable Output<String> parametersUri) {
             this.parametersUri = parametersUri;
             return this;
         }
-
         public Builder parametersUri(@Nullable String parametersUri) {
             this.parametersUri = Output.ofNullable(parametersUri);
             return this;
         }
-
         public Builder templateArtifactSourceRelativePath(@Nullable Output<String> templateArtifactSourceRelativePath) {
             this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
-
         public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
             this.templateArtifactSourceRelativePath = Output.ofNullable(templateArtifactSourceRelativePath);
             return this;
         }
-
         public Builder templateUri(@Nullable Output<String> templateUri) {
             this.templateUri = templateUri;
             return this;
         }
-
         public Builder templateUri(@Nullable String templateUri) {
             this.templateUri = Output.ofNullable(templateUri);
             return this;
-        }
-        public ServiceUnitArtifactsArgs build() {
+        }        public ServiceUnitArtifactsArgs build() {
             return new ServiceUnitArtifactsArgs(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
         }
     }

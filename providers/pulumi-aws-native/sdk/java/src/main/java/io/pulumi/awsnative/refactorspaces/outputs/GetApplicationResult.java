@@ -121,47 +121,41 @@ public final class GetApplicationResult {
             this.apiGatewayId = apiGatewayId;
             return this;
         }
-
         public Builder applicationIdentifier(@Nullable String applicationIdentifier) {
             this.applicationIdentifier = applicationIdentifier;
             return this;
         }
-
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
-
         public Builder nlbArn(@Nullable String nlbArn) {
             this.nlbArn = nlbArn;
             return this;
         }
-
         public Builder nlbName(@Nullable String nlbName) {
             this.nlbName = nlbName;
             return this;
         }
-
         public Builder proxyUrl(@Nullable String proxyUrl) {
             this.proxyUrl = proxyUrl;
             return this;
         }
-
         public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }
-
         public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }
-
+        public Builder tags(ApplicationTag... tags) {
+            return tags(List.of(tags));
+        }
         public Builder vpcLinkId(@Nullable String vpcLinkId) {
             this.vpcLinkId = vpcLinkId;
             return this;
-        }
-        public GetApplicationResult build() {
+        }        public GetApplicationResult build() {
             return new GetApplicationResult(apiGatewayId, applicationIdentifier, arn, nlbArn, nlbName, proxyUrl, stageName, tags, vpcLinkId);
         }
     }

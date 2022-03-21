@@ -80,17 +80,14 @@ public final class NetworkInterfaceAttachment {
             this.attachmentId = attachmentId;
             return this;
         }
-
         public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
-
         public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
-        }
-        public NetworkInterfaceAttachment build() {
+        }        public NetworkInterfaceAttachment build() {
             return new NetworkInterfaceAttachment(attachmentId, deviceIndex, instance);
         }
     }

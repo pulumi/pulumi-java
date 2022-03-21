@@ -77,22 +77,18 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
             this.maxScaledDownReplicas = maxScaledDownReplicas;
             return this;
         }
-
         public Builder maxScaledDownReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs maxScaledDownReplicas) {
             this.maxScaledDownReplicas = Output.ofNullable(maxScaledDownReplicas);
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = Output.ofNullable(timeWindowSec);
             return this;
-        }
-        public RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs build() {
+        }        public RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs(maxScaledDownReplicas, timeWindowSec);
         }
     }

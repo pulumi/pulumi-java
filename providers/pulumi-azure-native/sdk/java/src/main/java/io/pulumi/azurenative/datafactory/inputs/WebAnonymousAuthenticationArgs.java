@@ -79,22 +79,18 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
-
         public Builder authenticationType(String authenticationType) {
             this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
-
         public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public Builder url(Object url) {
             this.url = Output.of(Objects.requireNonNull(url));
             return this;
-        }
-        public WebAnonymousAuthenticationArgs build() {
+        }        public WebAnonymousAuthenticationArgs build() {
             return new WebAnonymousAuthenticationArgs(authenticationType, url);
         }
     }

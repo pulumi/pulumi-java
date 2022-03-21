@@ -110,22 +110,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
-
         public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
-
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse(description, image, info, title);
         }
     }

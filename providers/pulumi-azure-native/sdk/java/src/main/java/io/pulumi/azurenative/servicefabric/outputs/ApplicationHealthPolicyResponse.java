@@ -73,12 +73,10 @@ public final class ApplicationHealthPolicyResponse {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
-
         public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
             this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
-        }
-        public ApplicationHealthPolicyResponse build() {
+        }        public ApplicationHealthPolicyResponse build() {
             return new ApplicationHealthPolicyResponse(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);
         }
     }

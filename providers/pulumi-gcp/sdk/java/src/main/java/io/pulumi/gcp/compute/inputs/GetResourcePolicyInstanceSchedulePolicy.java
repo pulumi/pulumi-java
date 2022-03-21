@@ -103,27 +103,28 @@ public final class GetResourcePolicyInstanceSchedulePolicy extends io.pulumi.res
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public Builder vmStartSchedules(List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules) {
             this.vmStartSchedules = Objects.requireNonNull(vmStartSchedules);
             return this;
         }
-
+        public Builder vmStartSchedules(GetResourcePolicyInstanceSchedulePolicyVmStartSchedule... vmStartSchedules) {
+            return vmStartSchedules(List.of(vmStartSchedules));
+        }
         public Builder vmStopSchedules(List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
             this.vmStopSchedules = Objects.requireNonNull(vmStopSchedules);
             return this;
         }
-        public GetResourcePolicyInstanceSchedulePolicy build() {
+        public Builder vmStopSchedules(GetResourcePolicyInstanceSchedulePolicyVmStopSchedule... vmStopSchedules) {
+            return vmStopSchedules(List.of(vmStopSchedules));
+        }        public GetResourcePolicyInstanceSchedulePolicy build() {
             return new GetResourcePolicyInstanceSchedulePolicy(expirationTime, startTime, timeZone, vmStartSchedules, vmStopSchedules);
         }
     }

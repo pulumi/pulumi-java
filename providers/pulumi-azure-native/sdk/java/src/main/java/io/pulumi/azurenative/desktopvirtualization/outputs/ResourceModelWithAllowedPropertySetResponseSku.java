@@ -120,27 +120,22 @@ public final class ResourceModelWithAllowedPropertySetResponseSku {
             this.capacity = capacity;
             return this;
         }
-
         public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
-
         public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
-        }
-        public ResourceModelWithAllowedPropertySetResponseSku build() {
+        }        public ResourceModelWithAllowedPropertySetResponseSku build() {
             return new ResourceModelWithAllowedPropertySetResponseSku(capacity, family, name, size, tier);
         }
     }

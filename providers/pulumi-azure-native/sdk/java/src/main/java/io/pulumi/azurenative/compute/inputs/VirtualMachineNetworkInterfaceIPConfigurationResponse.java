@@ -178,42 +178,43 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
-
+        public Builder applicationGatewayBackendAddressPools(SubResourceResponse... applicationGatewayBackendAddressPools) {
+            return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
+        }
         public Builder applicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
-
+        public Builder applicationSecurityGroups(SubResourceResponse... applicationSecurityGroups) {
+            return applicationSecurityGroups(List.of(applicationSecurityGroups));
+        }
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-
+        public Builder loadBalancerBackendAddressPools(SubResourceResponse... loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
-
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
-
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
-
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
-        }
-        public VirtualMachineNetworkInterfaceIPConfigurationResponse build() {
+        }        public VirtualMachineNetworkInterfaceIPConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, loadBalancerBackendAddressPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }
     }

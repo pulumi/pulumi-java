@@ -69,12 +69,10 @@ public final class ProjectEnvironmentRegistryCredential {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
-
         public Builder credentialProvider(String credentialProvider) {
             this.credentialProvider = Objects.requireNonNull(credentialProvider);
             return this;
-        }
-        public ProjectEnvironmentRegistryCredential build() {
+        }        public ProjectEnvironmentRegistryCredential build() {
             return new ProjectEnvironmentRegistryCredential(credential, credentialProvider);
         }
     }

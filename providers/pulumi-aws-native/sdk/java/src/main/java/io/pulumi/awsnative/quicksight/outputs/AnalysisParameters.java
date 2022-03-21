@@ -106,22 +106,30 @@ public final class AnalysisParameters {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
-
+        public Builder dateTimeParameters(AnalysisDateTimeParameter... dateTimeParameters) {
+            return dateTimeParameters(List.of(dateTimeParameters));
+        }
         public Builder decimalParameters(@Nullable List<AnalysisDecimalParameter> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
-
+        public Builder decimalParameters(AnalysisDecimalParameter... decimalParameters) {
+            return decimalParameters(List.of(decimalParameters));
+        }
         public Builder integerParameters(@Nullable List<AnalysisIntegerParameter> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
-
+        public Builder integerParameters(AnalysisIntegerParameter... integerParameters) {
+            return integerParameters(List.of(integerParameters));
+        }
         public Builder stringParameters(@Nullable List<AnalysisStringParameter> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
-        public AnalysisParameters build() {
+        public Builder stringParameters(AnalysisStringParameter... stringParameters) {
+            return stringParameters(List.of(stringParameters));
+        }        public AnalysisParameters build() {
             return new AnalysisParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }
     }

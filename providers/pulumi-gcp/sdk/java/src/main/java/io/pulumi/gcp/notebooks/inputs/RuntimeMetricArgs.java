@@ -54,12 +54,10 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.systemMetrics = systemMetrics;
             return this;
         }
-
         public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
             this.systemMetrics = Output.ofNullable(systemMetrics);
             return this;
-        }
-        public RuntimeMetricArgs build() {
+        }        public RuntimeMetricArgs build() {
             return new RuntimeMetricArgs(systemMetrics);
         }
     }

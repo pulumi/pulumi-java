@@ -53,12 +53,10 @@ public final class TopicRuleHttpAuthorizationArgs extends io.pulumi.resources.Re
             this.sigv4 = sigv4;
             return this;
         }
-
         public Builder sigv4(@Nullable TopicRuleSigV4AuthorizationArgs sigv4) {
             this.sigv4 = Output.ofNullable(sigv4);
             return this;
-        }
-        public TopicRuleHttpAuthorizationArgs build() {
+        }        public TopicRuleHttpAuthorizationArgs build() {
             return new TopicRuleHttpAuthorizationArgs(sigv4);
         }
     }

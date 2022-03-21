@@ -126,27 +126,25 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
-
         public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
-
         public Builder bucketValues(List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
-
+        public Builder bucketValues(GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse... bucketValues) {
+            return bucketValues(List.of(bucketValues));
+        }
         public Builder maxAnonymity(String maxAnonymity) {
             this.maxAnonymity = Objects.requireNonNull(maxAnonymity);
             return this;
         }
-
         public Builder minAnonymity(String minAnonymity) {
             this.minAnonymity = Objects.requireNonNull(minAnonymity);
             return this;
-        }
-        public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
+        }        public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxAnonymity, minAnonymity);
         }
     }

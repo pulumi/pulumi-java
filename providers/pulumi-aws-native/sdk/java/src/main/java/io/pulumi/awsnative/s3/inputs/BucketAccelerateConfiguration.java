@@ -54,8 +54,7 @@ public final class BucketAccelerateConfiguration extends io.pulumi.resources.Inv
         public Builder accelerationStatus(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
             this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
             return this;
-        }
-        public BucketAccelerateConfiguration build() {
+        }        public BucketAccelerateConfiguration build() {
             return new BucketAccelerateConfiguration(accelerationStatus);
         }
     }

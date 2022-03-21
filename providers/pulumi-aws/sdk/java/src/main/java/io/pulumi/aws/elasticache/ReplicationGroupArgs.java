@@ -555,322 +555,273 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             this.applyImmediately = applyImmediately;
             return this;
         }
-
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
-
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
-
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
             return this;
         }
-
         public Builder authToken(@Nullable Output<String> authToken) {
             this.authToken = authToken;
             return this;
         }
-
         public Builder authToken(@Nullable String authToken) {
             this.authToken = Output.ofNullable(authToken);
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
-
         public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
             this.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
-
         public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
             this.automaticFailoverEnabled = Output.ofNullable(automaticFailoverEnabled);
             return this;
         }
-
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
-
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
-
+        public Builder availabilityZones(String... availabilityZones) {
+            return availabilityZones(List.of(availabilityZones));
+        }
         public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeArgs> clusterMode) {
             this.clusterMode = clusterMode;
             return this;
         }
-
         public Builder clusterMode(@Nullable ReplicationGroupClusterModeArgs clusterMode) {
             this.clusterMode = Output.ofNullable(clusterMode);
             return this;
         }
-
         public Builder dataTieringEnabled(@Nullable Output<Boolean> dataTieringEnabled) {
             this.dataTieringEnabled = dataTieringEnabled;
             return this;
         }
-
         public Builder dataTieringEnabled(@Nullable Boolean dataTieringEnabled) {
             this.dataTieringEnabled = Output.ofNullable(dataTieringEnabled);
             return this;
         }
-
         public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
-
         public Builder engine(@Nullable String engine) {
             this.engine = Output.ofNullable(engine);
             return this;
         }
-
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
-
         public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
-
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
-
         public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = Output.ofNullable(finalSnapshotIdentifier);
             return this;
         }
-
         public Builder globalReplicationGroupId(@Nullable Output<String> globalReplicationGroupId) {
             this.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
-
         public Builder globalReplicationGroupId(@Nullable String globalReplicationGroupId) {
             this.globalReplicationGroupId = Output.ofNullable(globalReplicationGroupId);
             return this;
         }
-
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
-
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
-
         public Builder multiAzEnabled(@Nullable Output<Boolean> multiAzEnabled) {
             this.multiAzEnabled = multiAzEnabled;
             return this;
         }
-
         public Builder multiAzEnabled(@Nullable Boolean multiAzEnabled) {
             this.multiAzEnabled = Output.ofNullable(multiAzEnabled);
             return this;
         }
-
         public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
-
         public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
-
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
-
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
             return this;
         }
-
         public Builder numberCacheClusters(@Nullable Output<Integer> numberCacheClusters) {
             this.numberCacheClusters = numberCacheClusters;
             return this;
         }
-
         public Builder numberCacheClusters(@Nullable Integer numberCacheClusters) {
             this.numberCacheClusters = Output.ofNullable(numberCacheClusters);
             return this;
         }
-
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
-
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder replicationGroupDescription(Output<String> replicationGroupDescription) {
             this.replicationGroupDescription = Objects.requireNonNull(replicationGroupDescription);
             return this;
         }
-
         public Builder replicationGroupDescription(String replicationGroupDescription) {
             this.replicationGroupDescription = Output.of(Objects.requireNonNull(replicationGroupDescription));
             return this;
         }
-
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
-
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = Output.ofNullable(replicationGroupId);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             this.securityGroupNames = securityGroupNames;
             return this;
         }
-
         public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
             this.securityGroupNames = Output.ofNullable(securityGroupNames);
             return this;
         }
-
+        public Builder securityGroupNames(String... securityGroupNames) {
+            return securityGroupNames(List.of(securityGroupNames));
+        }
         public Builder snapshotArns(@Nullable Output<List<String>> snapshotArns) {
             this.snapshotArns = snapshotArns;
             return this;
         }
-
         public Builder snapshotArns(@Nullable List<String> snapshotArns) {
             this.snapshotArns = Output.ofNullable(snapshotArns);
             return this;
         }
-
+        public Builder snapshotArns(String... snapshotArns) {
+            return snapshotArns(List.of(snapshotArns));
+        }
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
-
         public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
-
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
-
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Output.ofNullable(snapshotRetentionLimit);
             return this;
         }
-
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
-
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
             this.snapshotWindow = Output.ofNullable(snapshotWindow);
             return this;
         }
-
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
-
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
-
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
             this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
             return this;
         }
-
         public Builder userGroupIds(@Nullable Output<List<String>> userGroupIds) {
             this.userGroupIds = userGroupIds;
             return this;
         }
-
         public Builder userGroupIds(@Nullable List<String> userGroupIds) {
             this.userGroupIds = Output.ofNullable(userGroupIds);
             return this;
         }
-        public ReplicationGroupArgs build() {
+        public Builder userGroupIds(String... userGroupIds) {
+            return userGroupIds(List.of(userGroupIds));
+        }        public ReplicationGroupArgs build() {
             return new ReplicationGroupArgs(applyImmediately, atRestEncryptionEnabled, authToken, autoMinorVersionUpgrade, automaticFailoverEnabled, availabilityZones, clusterMode, dataTieringEnabled, engine, engineVersion, finalSnapshotIdentifier, globalReplicationGroupId, kmsKeyId, maintenanceWindow, multiAzEnabled, nodeType, notificationTopicArn, numberCacheClusters, parameterGroupName, port, replicationGroupDescription, replicationGroupId, securityGroupIds, securityGroupNames, snapshotArns, snapshotName, snapshotRetentionLimit, snapshotWindow, subnetGroupName, tags, transitEncryptionEnabled, userGroupIds);
         }
     }

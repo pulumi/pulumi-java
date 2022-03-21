@@ -118,27 +118,28 @@ public final class NetworkConfigResponse {
             this.connectMode = Objects.requireNonNull(connectMode);
             return this;
         }
-
         public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
-
+        public Builder ipAddresses(String... ipAddresses) {
+            return ipAddresses(List.of(ipAddresses));
+        }
         public Builder modes(List<String> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
-
+        public Builder modes(String... modes) {
+            return modes(List.of(modes));
+        }
         public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
-        }
-        public NetworkConfigResponse build() {
+        }        public NetworkConfigResponse build() {
             return new NetworkConfigResponse(connectMode, ipAddresses, modes, network, reservedIpRange);
         }
     }

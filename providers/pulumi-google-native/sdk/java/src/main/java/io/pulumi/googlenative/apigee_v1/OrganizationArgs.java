@@ -269,142 +269,117 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             this.addonsConfig = addonsConfig;
             return this;
         }
-
         public Builder addonsConfig(@Nullable GoogleCloudApigeeV1AddonsConfigArgs addonsConfig) {
             this.addonsConfig = Output.ofNullable(addonsConfig);
             return this;
         }
-
         public Builder analyticsRegion(Output<String> analyticsRegion) {
             this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
             return this;
         }
-
         public Builder analyticsRegion(String analyticsRegion) {
             this.analyticsRegion = Output.of(Objects.requireNonNull(analyticsRegion));
             return this;
         }
-
         public Builder attributes(@Nullable Output<List<String>> attributes) {
             this.attributes = attributes;
             return this;
         }
-
         public Builder attributes(@Nullable List<String> attributes) {
             this.attributes = Output.ofNullable(attributes);
             return this;
         }
-
+        public Builder attributes(String... attributes) {
+            return attributes(List.of(attributes));
+        }
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
-
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
-
         public Builder billingType(@Nullable Output<OrganizationBillingType> billingType) {
             this.billingType = billingType;
             return this;
         }
-
         public Builder billingType(@Nullable OrganizationBillingType billingType) {
             this.billingType = Output.ofNullable(billingType);
             return this;
         }
-
         public Builder customerName(@Nullable Output<String> customerName) {
             this.customerName = customerName;
             return this;
         }
-
         public Builder customerName(@Nullable String customerName) {
             this.customerName = Output.ofNullable(customerName);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public Builder parent(String parent) {
             this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
-
         public Builder portalDisabled(@Nullable Output<Boolean> portalDisabled) {
             this.portalDisabled = portalDisabled;
             return this;
         }
-
         public Builder portalDisabled(@Nullable Boolean portalDisabled) {
             this.portalDisabled = Output.ofNullable(portalDisabled);
             return this;
         }
-
         public Builder properties(@Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
-
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
-
         public Builder runtimeType(Output<OrganizationRuntimeType> runtimeType) {
             this.runtimeType = Objects.requireNonNull(runtimeType);
             return this;
         }
-
         public Builder runtimeType(OrganizationRuntimeType runtimeType) {
             this.runtimeType = Output.of(Objects.requireNonNull(runtimeType));
             return this;
         }
-
         public Builder type(@Nullable Output<OrganizationType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable OrganizationType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OrganizationArgs build() {
+        }        public OrganizationArgs build() {
             return new OrganizationArgs(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, customerName, description, displayName, parent, portalDisabled, properties, runtimeDatabaseEncryptionKeyName, runtimeType, type);
         }
     }

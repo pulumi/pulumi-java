@@ -91,32 +91,26 @@ public final class HoursOfOperationConfigGetArgs extends io.pulumi.resources.Res
             this.day = Objects.requireNonNull(day);
             return this;
         }
-
         public Builder day(String day) {
             this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
-
         public Builder endTime(Output<HoursOfOperationConfigEndTimeGetArgs> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder endTime(HoursOfOperationConfigEndTimeGetArgs endTime) {
             this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
-
         public Builder startTime(Output<HoursOfOperationConfigStartTimeGetArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder startTime(HoursOfOperationConfigStartTimeGetArgs startTime) {
             this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
-        }
-        public HoursOfOperationConfigGetArgs build() {
+        }        public HoursOfOperationConfigGetArgs build() {
             return new HoursOfOperationConfigGetArgs(day, endTime, startTime);
         }
     }

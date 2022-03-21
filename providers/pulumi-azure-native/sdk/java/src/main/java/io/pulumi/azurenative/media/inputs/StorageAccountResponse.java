@@ -78,12 +78,10 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.id = id;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public StorageAccountResponse build() {
+        }        public StorageAccountResponse build() {
             return new StorageAccountResponse(id, type);
         }
     }

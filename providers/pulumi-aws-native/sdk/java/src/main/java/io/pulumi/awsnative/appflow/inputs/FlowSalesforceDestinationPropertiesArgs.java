@@ -97,42 +97,37 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
             this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
             return this;
         }
-
         public Builder idFieldNames(@Nullable Output<List<String>> idFieldNames) {
             this.idFieldNames = idFieldNames;
             return this;
         }
-
         public Builder idFieldNames(@Nullable List<String> idFieldNames) {
             this.idFieldNames = Output.ofNullable(idFieldNames);
             return this;
         }
-
+        public Builder idFieldNames(String... idFieldNames) {
+            return idFieldNames(List.of(idFieldNames));
+        }
         public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public Builder object(String object) {
             this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
-
         public Builder writeOperationType(@Nullable Output<FlowWriteOperationType> writeOperationType) {
             this.writeOperationType = writeOperationType;
             return this;
         }
-
         public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
             this.writeOperationType = Output.ofNullable(writeOperationType);
             return this;
-        }
-        public FlowSalesforceDestinationPropertiesArgs build() {
+        }        public FlowSalesforceDestinationPropertiesArgs build() {
             return new FlowSalesforceDestinationPropertiesArgs(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }
     }

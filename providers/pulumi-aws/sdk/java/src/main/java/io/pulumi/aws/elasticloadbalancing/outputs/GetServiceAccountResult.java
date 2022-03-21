@@ -79,17 +79,14 @@ public final class GetServiceAccountResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
-        }
-        public GetServiceAccountResult build() {
+        }        public GetServiceAccountResult build() {
             return new GetServiceAccountResult(arn, id, region);
         }
     }

@@ -88,17 +88,14 @@ public final class EncryptionServiceResponse {
             this.enabled = enabled;
             return this;
         }
-
         public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
         }
-
         public Builder lastEnabledTime(String lastEnabledTime) {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
-        }
-        public EncryptionServiceResponse build() {
+        }        public EncryptionServiceResponse build() {
             return new EncryptionServiceResponse(enabled, keyType, lastEnabledTime);
         }
     }

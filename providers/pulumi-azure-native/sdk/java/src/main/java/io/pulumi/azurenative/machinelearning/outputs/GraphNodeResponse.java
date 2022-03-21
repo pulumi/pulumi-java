@@ -105,22 +105,18 @@ public final class GraphNodeResponse {
             this.assetId = assetId;
             return this;
         }
-
         public Builder inputId(@Nullable String inputId) {
             this.inputId = inputId;
             return this;
         }
-
         public Builder outputId(@Nullable String outputId) {
             this.outputId = outputId;
             return this;
         }
-
         public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
-        }
-        public GraphNodeResponse build() {
+        }        public GraphNodeResponse build() {
             return new GraphNodeResponse(assetId, inputId, outputId, parameters);
         }
     }

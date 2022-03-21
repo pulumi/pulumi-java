@@ -106,22 +106,21 @@ public final class GetDistributionConfigurationResult {
             this.arn = arn;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder distributions(@Nullable List<DistributionConfigurationDistribution> distributions) {
             this.distributions = distributions;
             return this;
         }
-
+        public Builder distributions(DistributionConfigurationDistribution... distributions) {
+            return distributions(List.of(distributions));
+        }
         public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
-        }
-        public GetDistributionConfigurationResult build() {
+        }        public GetDistributionConfigurationResult build() {
             return new GetDistributionConfigurationResult(arn, description, distributions, tags);
         }
     }

@@ -45,8 +45,7 @@ public final class DetectorModel {
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
-        }
-        public DetectorModel build() {
+        }        public DetectorModel build() {
             return new DetectorModel(arn);
         }
     }

@@ -137,32 +137,29 @@ public final class ClassifierCsvClassifier {
             this.allowSingleColumn = allowSingleColumn;
             return this;
         }
-
         public Builder containsHeader(@Nullable String containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
-
         public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
-
         public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
             this.disableValueTrimming = disableValueTrimming;
             return this;
         }
-
         public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
-
+        public Builder headers(String... headers) {
+            return headers(List.of(headers));
+        }
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
-        }
-        public ClassifierCsvClassifier build() {
+        }        public ClassifierCsvClassifier build() {
             return new ClassifierCsvClassifier(allowSingleColumn, containsHeader, delimiter, disableValueTrimming, headers, quoteSymbol);
         }
     }

@@ -60,8 +60,7 @@ public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
         public Builder time(@Nullable String time) {
             this.time = time;
             return this;
-        }
-        public DayDetailsResponse build() {
+        }        public DayDetailsResponse build() {
             return new DayDetailsResponse(time);
         }
     }

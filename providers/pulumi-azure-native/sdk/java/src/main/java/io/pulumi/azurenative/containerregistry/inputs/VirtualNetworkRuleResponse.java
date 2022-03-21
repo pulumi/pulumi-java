@@ -78,12 +78,10 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
             this.action = action;
             return this;
         }
-
         public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
-        }
-        public VirtualNetworkRuleResponse build() {
+        }        public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(action, virtualNetworkResourceId);
         }
     }

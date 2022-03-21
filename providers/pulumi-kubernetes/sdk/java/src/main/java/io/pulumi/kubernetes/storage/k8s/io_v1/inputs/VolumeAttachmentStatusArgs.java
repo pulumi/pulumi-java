@@ -113,42 +113,34 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
             this.attachError = attachError;
             return this;
         }
-
         public Builder attachError(@Nullable VolumeErrorArgs attachError) {
             this.attachError = Output.ofNullable(attachError);
             return this;
         }
-
         public Builder attached(Output<Boolean> attached) {
             this.attached = Objects.requireNonNull(attached);
             return this;
         }
-
         public Builder attached(Boolean attached) {
             this.attached = Output.of(Objects.requireNonNull(attached));
             return this;
         }
-
         public Builder attachmentMetadata(@Nullable Output<Map<String,String>> attachmentMetadata) {
             this.attachmentMetadata = attachmentMetadata;
             return this;
         }
-
         public Builder attachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
             this.attachmentMetadata = Output.ofNullable(attachmentMetadata);
             return this;
         }
-
         public Builder detachError(@Nullable Output<VolumeErrorArgs> detachError) {
             this.detachError = detachError;
             return this;
         }
-
         public Builder detachError(@Nullable VolumeErrorArgs detachError) {
             this.detachError = Output.ofNullable(detachError);
             return this;
-        }
-        public VolumeAttachmentStatusArgs build() {
+        }        public VolumeAttachmentStatusArgs build() {
             return new VolumeAttachmentStatusArgs(attachError, attached, attachmentMetadata, detachError);
         }
     }

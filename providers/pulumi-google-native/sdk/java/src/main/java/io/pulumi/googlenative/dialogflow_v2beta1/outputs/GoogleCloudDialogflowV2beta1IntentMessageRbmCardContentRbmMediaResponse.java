@@ -85,17 +85,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
-
         public Builder height(String height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
-
         public Builder thumbnailUri(String thumbnailUri) {
             this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
             return this;
-        }
-        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse build() {
+        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(fileUri, height, thumbnailUri);
         }
     }

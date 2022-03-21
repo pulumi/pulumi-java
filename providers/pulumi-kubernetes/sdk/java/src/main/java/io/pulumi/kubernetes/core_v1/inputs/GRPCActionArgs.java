@@ -77,22 +77,18 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public Builder port(Integer port) {
             this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
-
         public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
-
         public Builder service(@Nullable String service) {
             this.service = Output.ofNullable(service);
             return this;
-        }
-        public GRPCActionArgs build() {
+        }        public GRPCActionArgs build() {
             return new GRPCActionArgs(port, service);
         }
     }

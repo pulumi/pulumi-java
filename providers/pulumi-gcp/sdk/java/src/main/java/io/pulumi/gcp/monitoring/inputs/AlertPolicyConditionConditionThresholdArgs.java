@@ -249,82 +249,72 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
             this.aggregations = aggregations;
             return this;
         }
-
         public Builder aggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregationArgs> aggregations) {
             this.aggregations = Output.ofNullable(aggregations);
             return this;
         }
-
+        public Builder aggregations(AlertPolicyConditionConditionThresholdAggregationArgs... aggregations) {
+            return aggregations(List.of(aggregations));
+        }
         public Builder comparison(Output<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
-
         public Builder comparison(String comparison) {
             this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
-
         public Builder denominatorAggregations(@Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations) {
             this.denominatorAggregations = denominatorAggregations;
             return this;
         }
-
         public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs> denominatorAggregations) {
             this.denominatorAggregations = Output.ofNullable(denominatorAggregations);
             return this;
         }
-
+        public Builder denominatorAggregations(AlertPolicyConditionConditionThresholdDenominatorAggregationArgs... denominatorAggregations) {
+            return denominatorAggregations(List.of(denominatorAggregations));
+        }
         public Builder denominatorFilter(@Nullable Output<String> denominatorFilter) {
             this.denominatorFilter = denominatorFilter;
             return this;
         }
-
         public Builder denominatorFilter(@Nullable String denominatorFilter) {
             this.denominatorFilter = Output.ofNullable(denominatorFilter);
             return this;
         }
-
         public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(String duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
-
         public Builder filter(@Nullable String filter) {
             this.filter = Output.ofNullable(filter);
             return this;
         }
-
         public Builder thresholdValue(@Nullable Output<Double> thresholdValue) {
             this.thresholdValue = thresholdValue;
             return this;
         }
-
         public Builder thresholdValue(@Nullable Double thresholdValue) {
             this.thresholdValue = Output.ofNullable(thresholdValue);
             return this;
         }
-
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionThresholdTriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
-
         public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTriggerArgs trigger) {
             this.trigger = Output.ofNullable(trigger);
             return this;
-        }
-        public AlertPolicyConditionConditionThresholdArgs build() {
+        }        public AlertPolicyConditionConditionThresholdArgs build() {
             return new AlertPolicyConditionConditionThresholdArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }
     }

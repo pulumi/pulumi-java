@@ -106,42 +106,34 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
             this.certificateName = certificateName;
             return this;
         }
-
         public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
-
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
-
         public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
-
         public Builder publicBlob(@Nullable Output<String> publicBlob) {
             this.publicBlob = publicBlob;
             return this;
         }
-
         public Builder publicBlob(@Nullable String publicBlob) {
             this.publicBlob = Output.ofNullable(publicBlob);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
-        }
-        public ServerTrustCertificateArgs build() {
+        }        public ServerTrustCertificateArgs build() {
             return new ServerTrustCertificateArgs(certificateName, managedInstanceName, publicBlob, resourceGroupName);
         }
     }

@@ -72,22 +72,18 @@ public final class ServiceTaskSpecRestartPolicy {
             this.condition = condition;
             return this;
         }
-
         public Builder delay(@Nullable String delay) {
             this.delay = delay;
             return this;
         }
-
         public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
-
         public Builder window(@Nullable String window) {
             this.window = window;
             return this;
-        }
-        public ServiceTaskSpecRestartPolicy build() {
+        }        public ServiceTaskSpecRestartPolicy build() {
             return new ServiceTaskSpecRestartPolicy(condition, delay, maxAttempts, window);
         }
     }

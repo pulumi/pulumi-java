@@ -129,52 +129,42 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder dictionary(@Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
-
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
             this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder largeCustomDictionary(@Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary) {
             this.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
-
         public Builder largeCustomDictionary(@Nullable GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs largeCustomDictionary) {
             this.largeCustomDictionary = Output.ofNullable(largeCustomDictionary);
             return this;
         }
-
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
-
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
             this.regex = Output.ofNullable(regex);
             return this;
-        }
-        public GooglePrivacyDlpV2StoredInfoTypeConfigArgs build() {
+        }        public GooglePrivacyDlpV2StoredInfoTypeConfigArgs build() {
             return new GooglePrivacyDlpV2StoredInfoTypeConfigArgs(description, dictionary, displayName, largeCustomDictionary, regex);
         }
     }

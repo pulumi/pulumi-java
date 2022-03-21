@@ -58,12 +58,10 @@ public final class StandardAppVersionManualScalingArgs extends io.pulumi.resourc
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public Builder instances(Integer instances) {
             this.instances = Output.of(Objects.requireNonNull(instances));
             return this;
-        }
-        public StandardAppVersionManualScalingArgs build() {
+        }        public StandardAppVersionManualScalingArgs build() {
             return new StandardAppVersionManualScalingArgs(instances);
         }
     }

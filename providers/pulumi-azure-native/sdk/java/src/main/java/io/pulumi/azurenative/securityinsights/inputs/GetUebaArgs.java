@@ -104,22 +104,18 @@ public final class GetUebaArgs extends io.pulumi.resources.InvokeArgs {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder settingsName(String settingsName) {
             this.settingsName = Objects.requireNonNull(settingsName);
             return this;
         }
-
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
-        }
-        public GetUebaArgs build() {
+        }        public GetUebaArgs build() {
             return new GetUebaArgs(operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
         }
     }

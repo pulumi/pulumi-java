@@ -51,8 +51,7 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualService {
         public Builder virtualServiceName(String virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
-        }
-        public GatewayRouteSpecHttp2RouteActionTargetVirtualService build() {
+        }        public GatewayRouteSpecHttp2RouteActionTargetVirtualService build() {
             return new GatewayRouteSpecHttp2RouteActionTargetVirtualService(virtualServiceName);
         }
     }

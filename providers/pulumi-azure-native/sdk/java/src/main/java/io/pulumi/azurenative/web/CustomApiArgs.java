@@ -140,62 +140,50 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
             this.apiName = apiName;
             return this;
         }
-
         public Builder apiName(@Nullable String apiName) {
             this.apiName = Output.ofNullable(apiName);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder properties(@Nullable Output<CustomApiPropertiesDefinitionArgs> properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder properties(@Nullable CustomApiPropertiesDefinitionArgs properties) {
             this.properties = Output.ofNullable(properties);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public CustomApiArgs build() {
+        }        public CustomApiArgs build() {
             return new CustomApiArgs(apiName, location, properties, resourceGroupName, subscriptionId, tags);
         }
     }

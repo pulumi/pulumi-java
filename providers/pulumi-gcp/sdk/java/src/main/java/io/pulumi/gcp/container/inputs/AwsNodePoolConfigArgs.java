@@ -192,92 +192,80 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
-
         public Builder configEncryption(AwsNodePoolConfigConfigEncryptionArgs configEncryption) {
             this.configEncryption = Output.of(Objects.requireNonNull(configEncryption));
             return this;
         }
-
         public Builder iamInstanceProfile(Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
-
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Output.of(Objects.requireNonNull(iamInstanceProfile));
             return this;
         }
-
         public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
-
         public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder rootVolume(@Nullable Output<AwsNodePoolConfigRootVolumeArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
-
         public Builder rootVolume(@Nullable AwsNodePoolConfigRootVolumeArgs rootVolume) {
             this.rootVolume = Output.ofNullable(rootVolume);
             return this;
         }
-
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
-
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
         public Builder sshConfig(@Nullable Output<AwsNodePoolConfigSshConfigArgs> sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
-
         public Builder sshConfig(@Nullable AwsNodePoolConfigSshConfigArgs sshConfig) {
             this.sshConfig = Output.ofNullable(sshConfig);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder taints(@Nullable Output<List<AwsNodePoolConfigTaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
-
         public Builder taints(@Nullable List<AwsNodePoolConfigTaintArgs> taints) {
             this.taints = Output.ofNullable(taints);
             return this;
         }
-        public AwsNodePoolConfigArgs build() {
+        public Builder taints(AwsNodePoolConfigTaintArgs... taints) {
+            return taints(List.of(taints));
+        }        public AwsNodePoolConfigArgs build() {
             return new AwsNodePoolConfigArgs(configEncryption, iamInstanceProfile, instanceType, labels, rootVolume, securityGroupIds, sshConfig, tags, taints);
         }
     }

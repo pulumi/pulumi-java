@@ -54,7 +54,9 @@ public final class ClusterClientAuthenticationTls {
             this.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
-        public ClusterClientAuthenticationTls build() {
+        public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
+            return certificateAuthorityArns(List.of(certificateAuthorityArns));
+        }        public ClusterClientAuthenticationTls build() {
             return new ClusterClientAuthenticationTls(certificateAuthorityArns);
         }
     }

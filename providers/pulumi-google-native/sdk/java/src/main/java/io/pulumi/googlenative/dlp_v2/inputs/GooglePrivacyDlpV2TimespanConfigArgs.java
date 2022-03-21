@@ -112,42 +112,34 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
             this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
-
         public Builder enableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = Output.ofNullable(enableAutoPopulationOfTimespanConfig);
             return this;
         }
-
         public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
-
         public Builder endTime(@Nullable String endTime) {
             this.endTime = Output.ofNullable(endTime);
             return this;
         }
-
         public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
-
         public Builder startTime(@Nullable String startTime) {
             this.startTime = Output.ofNullable(startTime);
             return this;
         }
-
         public Builder timestampField(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
             this.timestampField = timestampField;
             return this;
         }
-
         public Builder timestampField(@Nullable GooglePrivacyDlpV2FieldIdArgs timestampField) {
             this.timestampField = Output.ofNullable(timestampField);
             return this;
-        }
-        public GooglePrivacyDlpV2TimespanConfigArgs build() {
+        }        public GooglePrivacyDlpV2TimespanConfigArgs build() {
             return new GooglePrivacyDlpV2TimespanConfigArgs(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }
     }

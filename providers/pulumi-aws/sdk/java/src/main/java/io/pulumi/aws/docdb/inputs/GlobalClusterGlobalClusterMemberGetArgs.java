@@ -75,22 +75,18 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
             this.dbClusterArn = dbClusterArn;
             return this;
         }
-
         public Builder dbClusterArn(@Nullable String dbClusterArn) {
             this.dbClusterArn = Output.ofNullable(dbClusterArn);
             return this;
         }
-
         public Builder isWriter(@Nullable Output<Boolean> isWriter) {
             this.isWriter = isWriter;
             return this;
         }
-
         public Builder isWriter(@Nullable Boolean isWriter) {
             this.isWriter = Output.ofNullable(isWriter);
             return this;
-        }
-        public GlobalClusterGlobalClusterMemberGetArgs build() {
+        }        public GlobalClusterGlobalClusterMemberGetArgs build() {
             return new GlobalClusterGlobalClusterMemberGetArgs(dbClusterArn, isWriter);
         }
     }

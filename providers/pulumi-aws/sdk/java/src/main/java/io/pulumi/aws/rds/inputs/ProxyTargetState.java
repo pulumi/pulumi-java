@@ -203,102 +203,82 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
-
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
-
         public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
-
         public Builder dbProxyName(@Nullable String dbProxyName) {
             this.dbProxyName = Output.ofNullable(dbProxyName);
             return this;
         }
-
         public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
-
         public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
-
         public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
-
         public Builder port(@Nullable Integer port) {
             this.port = Output.ofNullable(port);
             return this;
         }
-
         public Builder rdsResourceId(@Nullable Output<String> rdsResourceId) {
             this.rdsResourceId = rdsResourceId;
             return this;
         }
-
         public Builder rdsResourceId(@Nullable String rdsResourceId) {
             this.rdsResourceId = Output.ofNullable(rdsResourceId);
             return this;
         }
-
         public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
-
         public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
-
         public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
             this.targetGroupName = targetGroupName;
             return this;
         }
-
         public Builder targetGroupName(@Nullable String targetGroupName) {
             this.targetGroupName = Output.ofNullable(targetGroupName);
             return this;
         }
-
         public Builder trackedClusterId(@Nullable Output<String> trackedClusterId) {
             this.trackedClusterId = trackedClusterId;
             return this;
         }
-
         public Builder trackedClusterId(@Nullable String trackedClusterId) {
             this.trackedClusterId = Output.ofNullable(trackedClusterId);
             return this;
         }
-
         public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable String type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public ProxyTargetState build() {
+        }        public ProxyTargetState build() {
             return new ProxyTargetState(dbClusterIdentifier, dbInstanceIdentifier, dbProxyName, endpoint, port, rdsResourceId, targetArn, targetGroupName, trackedClusterId, type);
         }
     }

@@ -78,17 +78,14 @@ public final class GetTagTemplateIamPolicyArgs extends io.pulumi.resources.Invok
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder tagTemplateId(String tagTemplateId) {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
-        }
-        public GetTagTemplateIamPolicyArgs build() {
+        }        public GetTagTemplateIamPolicyArgs build() {
             return new GetTagTemplateIamPolicyArgs(location, project, tagTemplateId);
         }
     }

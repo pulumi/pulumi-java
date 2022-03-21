@@ -58,12 +58,10 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
-
         public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
             return this;
-        }
-        public BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs build() {
+        }        public BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs build() {
             return new BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs(sseKmsEncryptedObjects);
         }
     }

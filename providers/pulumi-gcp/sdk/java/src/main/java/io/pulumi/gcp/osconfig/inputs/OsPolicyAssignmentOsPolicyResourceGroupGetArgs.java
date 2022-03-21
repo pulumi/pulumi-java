@@ -76,22 +76,24 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
             this.inventoryFilters = inventoryFilters;
             return this;
         }
-
         public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
             this.inventoryFilters = Output.ofNullable(inventoryFilters);
             return this;
         }
-
+        public Builder inventoryFilters(OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs... inventoryFilters) {
+            return inventoryFilters(List.of(inventoryFilters));
+        }
         public Builder resources(Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs> resources) {
             this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
-        public OsPolicyAssignmentOsPolicyResourceGroupGetArgs build() {
+        public Builder resources(OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs... resources) {
+            return resources(List.of(resources));
+        }        public OsPolicyAssignmentOsPolicyResourceGroupGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupGetArgs(inventoryFilters, resources);
         }
     }

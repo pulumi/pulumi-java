@@ -92,17 +92,14 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
             this.instituteSize = Objects.requireNonNull(instituteSize);
             return this;
         }
-
         public Builder instituteType(String instituteType) {
             this.instituteType = Objects.requireNonNull(instituteType);
             return this;
         }
-
         public Builder website(String website) {
             this.website = Objects.requireNonNull(website);
             return this;
-        }
-        public GoogleCloudChannelV1EduDataResponse build() {
+        }        public GoogleCloudChannelV1EduDataResponse build() {
             return new GoogleCloudChannelV1EduDataResponse(instituteSize, instituteType, website);
         }
     }

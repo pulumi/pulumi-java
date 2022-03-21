@@ -77,22 +77,18 @@ public final class RegionBackendServiceOutlierDetectionIntervalArgs extends io.p
             this.nanos = nanos;
             return this;
         }
-
         public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Output.ofNullable(nanos);
             return this;
         }
-
         public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public Builder seconds(Integer seconds) {
             this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
-        }
-        public RegionBackendServiceOutlierDetectionIntervalArgs build() {
+        }        public RegionBackendServiceOutlierDetectionIntervalArgs build() {
             return new RegionBackendServiceOutlierDetectionIntervalArgs(nanos, seconds);
         }
     }

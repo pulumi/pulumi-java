@@ -69,12 +69,10 @@ public final class JobTemplateTag {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }
-        public JobTemplateTag build() {
+        }        public JobTemplateTag build() {
             return new JobTemplateTag(key, value);
         }
     }

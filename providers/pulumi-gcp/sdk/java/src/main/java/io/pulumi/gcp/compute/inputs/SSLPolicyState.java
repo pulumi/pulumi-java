@@ -229,102 +229,88 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
-
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
-
         public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
             this.customFeatures = customFeatures;
             return this;
         }
-
         public Builder customFeatures(@Nullable List<String> customFeatures) {
             this.customFeatures = Output.ofNullable(customFeatures);
             return this;
         }
-
+        public Builder customFeatures(String... customFeatures) {
+            return customFeatures(List.of(customFeatures));
+        }
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder enabledFeatures(@Nullable Output<List<String>> enabledFeatures) {
             this.enabledFeatures = enabledFeatures;
             return this;
         }
-
         public Builder enabledFeatures(@Nullable List<String> enabledFeatures) {
             this.enabledFeatures = Output.ofNullable(enabledFeatures);
             return this;
         }
-
+        public Builder enabledFeatures(String... enabledFeatures) {
+            return enabledFeatures(List.of(enabledFeatures));
+        }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
-
         public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
-
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
-
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
-
         public Builder profile(@Nullable String profile) {
             this.profile = Output.ofNullable(profile);
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
-
         public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Output.ofNullable(selfLink);
             return this;
-        }
-        public SSLPolicyState build() {
+        }        public SSLPolicyState build() {
             return new SSLPolicyState(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, minTlsVersion, name, profile, project, selfLink);
         }
     }

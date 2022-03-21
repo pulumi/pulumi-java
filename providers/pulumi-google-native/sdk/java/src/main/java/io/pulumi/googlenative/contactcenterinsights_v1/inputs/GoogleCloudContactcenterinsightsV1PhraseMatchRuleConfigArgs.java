@@ -61,12 +61,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
             this.exactMatchConfig = exactMatchConfig;
             return this;
         }
-
         public Builder exactMatchConfig(@Nullable GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
             this.exactMatchConfig = Output.ofNullable(exactMatchConfig);
             return this;
-        }
-        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
+        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(exactMatchConfig);
         }
     }

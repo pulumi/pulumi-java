@@ -105,42 +105,34 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
             this.active = Objects.requireNonNull(active);
             return this;
         }
-
         public Builder active(Boolean active) {
             this.active = Output.of(Objects.requireNonNull(active));
             return this;
         }
-
         public Builder startResponse(@Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse) {
             this.startResponse = startResponse;
             return this;
         }
-
         public Builder startResponse(@Nullable BotFulfillmentStartResponseSpecificationArgs startResponse) {
             this.startResponse = Output.ofNullable(startResponse);
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
-
         public Builder updateResponse(@Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse) {
             this.updateResponse = updateResponse;
             return this;
         }
-
         public Builder updateResponse(@Nullable BotFulfillmentUpdateResponseSpecificationArgs updateResponse) {
             this.updateResponse = Output.ofNullable(updateResponse);
             return this;
-        }
-        public BotFulfillmentUpdatesSpecificationArgs build() {
+        }        public BotFulfillmentUpdatesSpecificationArgs build() {
             return new BotFulfillmentUpdatesSpecificationArgs(active, startResponse, timeoutInSeconds, updateResponse);
         }
     }

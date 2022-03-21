@@ -61,12 +61,10 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = Output.ofNullable(prometheusPort);
             return this;
-        }
-        public ApplicationHAClusterPrometheusExporterArgs build() {
+        }        public ApplicationHAClusterPrometheusExporterArgs build() {
             return new ApplicationHAClusterPrometheusExporterArgs(prometheusPort);
         }
     }

@@ -79,22 +79,18 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
             this.code = code;
             return this;
         }
-
         public Builder code(@Nullable ScanConfigErrorCode code) {
             this.code = Output.ofNullable(code);
             return this;
         }
-
         public Builder fieldName(@Nullable Output<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
-
         public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = Output.ofNullable(fieldName);
             return this;
-        }
-        public ScanConfigErrorArgs build() {
+        }        public ScanConfigErrorArgs build() {
             return new ScanConfigErrorArgs(code, fieldName);
         }
     }

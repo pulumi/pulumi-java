@@ -112,42 +112,37 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.and = and;
             return this;
         }
-
         public Builder and(@Nullable List<BudgetFilterPropertiesArgs> and) {
             this.and = Output.ofNullable(and);
             return this;
         }
-
+        public Builder and(BudgetFilterPropertiesArgs... and) {
+            return and(List.of(and));
+        }
         public Builder dimensions(@Nullable Output<BudgetComparisonExpressionArgs> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
-
         public Builder dimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
             this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
-
         public Builder not(@Nullable Output<BudgetFilterPropertiesArgs> not) {
             this.not = not;
             return this;
         }
-
         public Builder not(@Nullable BudgetFilterPropertiesArgs not) {
             this.not = Output.ofNullable(not);
             return this;
         }
-
         public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable BudgetComparisonExpressionArgs tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public BudgetFilterArgs build() {
+        }        public BudgetFilterArgs build() {
             return new BudgetFilterArgs(and, dimensions, not, tags);
         }
     }

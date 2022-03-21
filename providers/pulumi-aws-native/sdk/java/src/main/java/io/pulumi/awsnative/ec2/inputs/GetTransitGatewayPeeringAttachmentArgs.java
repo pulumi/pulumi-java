@@ -54,8 +54,7 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends io.pulumi.reso
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
-        }
-        public GetTransitGatewayPeeringAttachmentArgs build() {
+        }        public GetTransitGatewayPeeringAttachmentArgs build() {
             return new GetTransitGatewayPeeringAttachmentArgs(transitGatewayAttachmentId);
         }
     }

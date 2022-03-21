@@ -96,32 +96,26 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
-
         public Builder bigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
-
         public Builder enableNetworkEgressMetering(@Nullable Output<Boolean> enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
-
         public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Output.ofNullable(enableNetworkEgressMetering);
             return this;
         }
-
         public Builder enableResourceConsumptionMetering(@Nullable Output<Boolean> enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }
-
         public Builder enableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = Output.ofNullable(enableResourceConsumptionMetering);
             return this;
-        }
-        public ClusterResourceUsageExportConfigArgs build() {
+        }        public ClusterResourceUsageExportConfigArgs build() {
             return new ClusterResourceUsageExportConfigArgs(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);
         }
     }

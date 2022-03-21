@@ -85,17 +85,14 @@ public final class GetIdentityAwareProxyClientResult {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
-        }
-        public GetIdentityAwareProxyClientResult build() {
+        }        public GetIdentityAwareProxyClientResult build() {
             return new GetIdentityAwareProxyClientResult(displayName, name, secret);
         }
     }

@@ -186,47 +186,38 @@ public final class GetHubVirtualNetworkConnectionResult {
             this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
             return this;
         }
-
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
             this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder remoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
-        }
-        public GetHubVirtualNetworkConnectionResult build() {
+        }        public GetHubVirtualNetworkConnectionResult build() {
             return new GetHubVirtualNetworkConnectionResult(allowHubToRemoteVnetTransit, allowRemoteVnetToUseHubVnetGateways, enableInternetSecurity, etag, id, name, provisioningState, remoteVirtualNetwork, routingConfiguration);
         }
     }

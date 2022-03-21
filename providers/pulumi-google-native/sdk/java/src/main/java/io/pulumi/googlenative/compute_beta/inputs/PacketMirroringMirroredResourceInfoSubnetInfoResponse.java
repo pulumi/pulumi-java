@@ -72,12 +72,10 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
             this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
             return this;
         }
-
         public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
-        }
-        public PacketMirroringMirroredResourceInfoSubnetInfoResponse build() {
+        }        public PacketMirroringMirroredResourceInfoSubnetInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoSubnetInfoResponse(canonicalUrl, url);
         }
     }

@@ -45,8 +45,7 @@ public final class ServiceTaskSpecContainerSpecMountBindOptions {
         public Builder propagation(@Nullable String propagation) {
             this.propagation = propagation;
             return this;
-        }
-        public ServiceTaskSpecContainerSpecMountBindOptions build() {
+        }        public ServiceTaskSpecContainerSpecMountBindOptions build() {
             return new ServiceTaskSpecContainerSpecMountBindOptions(propagation);
         }
     }

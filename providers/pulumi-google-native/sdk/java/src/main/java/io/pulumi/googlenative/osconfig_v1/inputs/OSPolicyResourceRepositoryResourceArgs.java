@@ -113,42 +113,34 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
             this.apt = apt;
             return this;
         }
-
         public Builder apt(@Nullable OSPolicyResourceRepositoryResourceAptRepositoryArgs apt) {
             this.apt = Output.ofNullable(apt);
             return this;
         }
-
         public Builder goo(@Nullable Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo) {
             this.goo = goo;
             return this;
         }
-
         public Builder goo(@Nullable OSPolicyResourceRepositoryResourceGooRepositoryArgs goo) {
             this.goo = Output.ofNullable(goo);
             return this;
         }
-
         public Builder yum(@Nullable Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum) {
             this.yum = yum;
             return this;
         }
-
         public Builder yum(@Nullable OSPolicyResourceRepositoryResourceYumRepositoryArgs yum) {
             this.yum = Output.ofNullable(yum);
             return this;
         }
-
         public Builder zypper(@Nullable Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
-
         public Builder zypper(@Nullable OSPolicyResourceRepositoryResourceZypperRepositoryArgs zypper) {
             this.zypper = Output.ofNullable(zypper);
             return this;
-        }
-        public OSPolicyResourceRepositoryResourceArgs build() {
+        }        public OSPolicyResourceRepositoryResourceArgs build() {
             return new OSPolicyResourceRepositoryResourceArgs(apt, goo, yum, zypper);
         }
     }

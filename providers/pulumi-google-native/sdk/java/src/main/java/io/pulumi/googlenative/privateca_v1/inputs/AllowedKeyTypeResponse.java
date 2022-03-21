@@ -77,12 +77,10 @@ public final class AllowedKeyTypeResponse extends io.pulumi.resources.InvokeArgs
             this.ellipticCurve = Objects.requireNonNull(ellipticCurve);
             return this;
         }
-
         public Builder rsa(RsaKeyTypeResponse rsa) {
             this.rsa = Objects.requireNonNull(rsa);
             return this;
-        }
-        public AllowedKeyTypeResponse build() {
+        }        public AllowedKeyTypeResponse build() {
             return new AllowedKeyTypeResponse(ellipticCurve, rsa);
         }
     }

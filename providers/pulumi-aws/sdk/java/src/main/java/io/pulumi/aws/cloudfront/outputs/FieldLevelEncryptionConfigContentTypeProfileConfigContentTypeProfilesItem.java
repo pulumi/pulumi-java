@@ -87,17 +87,14 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
-
         public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
-
         public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
-        }
-        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem build() {
+        }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem(contentType, format, profileId);
         }
     }

@@ -56,12 +56,10 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQue
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
-        }
-        public RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
+        }        public RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentGetArgs build() {
             return new RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentGetArgs(name);
         }
     }

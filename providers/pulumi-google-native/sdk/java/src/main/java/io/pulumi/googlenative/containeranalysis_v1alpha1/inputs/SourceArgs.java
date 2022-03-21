@@ -147,62 +147,53 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.additionalContexts = additionalContexts;
             return this;
         }
-
         public Builder additionalContexts(@Nullable List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> additionalContexts) {
             this.additionalContexts = Output.ofNullable(additionalContexts);
             return this;
         }
-
+        public Builder additionalContexts(GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs... additionalContexts) {
+            return additionalContexts(List.of(additionalContexts));
+        }
         public Builder artifactStorageSource(@Nullable Output<StorageSourceArgs> artifactStorageSource) {
             this.artifactStorageSource = artifactStorageSource;
             return this;
         }
-
         public Builder artifactStorageSource(@Nullable StorageSourceArgs artifactStorageSource) {
             this.artifactStorageSource = Output.ofNullable(artifactStorageSource);
             return this;
         }
-
         public Builder context(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context) {
             this.context = context;
             return this;
         }
-
         public Builder context(@Nullable GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs context) {
             this.context = Output.ofNullable(context);
             return this;
         }
-
         public Builder fileHashes(@Nullable Output<Map<String,String>> fileHashes) {
             this.fileHashes = fileHashes;
             return this;
         }
-
         public Builder fileHashes(@Nullable Map<String,String> fileHashes) {
             this.fileHashes = Output.ofNullable(fileHashes);
             return this;
         }
-
         public Builder repoSource(@Nullable Output<RepoSourceArgs> repoSource) {
             this.repoSource = repoSource;
             return this;
         }
-
         public Builder repoSource(@Nullable RepoSourceArgs repoSource) {
             this.repoSource = Output.ofNullable(repoSource);
             return this;
         }
-
         public Builder storageSource(@Nullable Output<StorageSourceArgs> storageSource) {
             this.storageSource = storageSource;
             return this;
         }
-
         public Builder storageSource(@Nullable StorageSourceArgs storageSource) {
             this.storageSource = Output.ofNullable(storageSource);
             return this;
-        }
-        public SourceArgs build() {
+        }        public SourceArgs build() {
             return new SourceArgs(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
         }
     }

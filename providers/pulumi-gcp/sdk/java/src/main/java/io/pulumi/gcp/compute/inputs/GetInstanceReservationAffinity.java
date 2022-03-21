@@ -70,12 +70,13 @@ public final class GetInstanceReservationAffinity extends io.pulumi.resources.In
             this.specificReservations = Objects.requireNonNull(specificReservations);
             return this;
         }
-
+        public Builder specificReservations(GetInstanceReservationAffinitySpecificReservation... specificReservations) {
+            return specificReservations(List.of(specificReservations));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public GetInstanceReservationAffinity build() {
+        }        public GetInstanceReservationAffinity build() {
             return new GetInstanceReservationAffinity(specificReservations, type);
         }
     }

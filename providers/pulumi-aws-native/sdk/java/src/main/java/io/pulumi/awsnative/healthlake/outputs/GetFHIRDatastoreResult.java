@@ -91,32 +91,29 @@ public final class GetFHIRDatastoreResult {
             this.createdAt = createdAt;
             return this;
         }
-
         public Builder datastoreArn(@Nullable String datastoreArn) {
             this.datastoreArn = datastoreArn;
             return this;
         }
-
         public Builder datastoreEndpoint(@Nullable String datastoreEndpoint) {
             this.datastoreEndpoint = datastoreEndpoint;
             return this;
         }
-
         public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
-
         public Builder datastoreStatus(@Nullable FHIRDatastoreDatastoreStatus datastoreStatus) {
             this.datastoreStatus = datastoreStatus;
             return this;
         }
-
         public Builder tags(@Nullable List<FHIRDatastoreTag> tags) {
             this.tags = tags;
             return this;
         }
-        public GetFHIRDatastoreResult build() {
+        public Builder tags(FHIRDatastoreTag... tags) {
+            return tags(List.of(tags));
+        }        public GetFHIRDatastoreResult build() {
             return new GetFHIRDatastoreResult(createdAt, datastoreArn, datastoreEndpoint, datastoreId, datastoreStatus, tags);
         }
     }

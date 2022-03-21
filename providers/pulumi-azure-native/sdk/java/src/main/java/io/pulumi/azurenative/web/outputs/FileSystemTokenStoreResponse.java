@@ -53,8 +53,7 @@ public final class FileSystemTokenStoreResponse {
         public Builder directory(@Nullable String directory) {
             this.directory = directory;
             return this;
-        }
-        public FileSystemTokenStoreResponse build() {
+        }        public FileSystemTokenStoreResponse build() {
             return new FileSystemTokenStoreResponse(directory);
         }
     }

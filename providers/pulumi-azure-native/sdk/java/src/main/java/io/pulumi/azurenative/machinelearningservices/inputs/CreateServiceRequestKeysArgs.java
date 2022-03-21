@@ -78,22 +78,18 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
             this.primaryKey = primaryKey;
             return this;
         }
-
         public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
-
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = Output.ofNullable(secondaryKey);
             return this;
-        }
-        public CreateServiceRequestKeysArgs build() {
+        }        public CreateServiceRequestKeysArgs build() {
             return new CreateServiceRequestKeysArgs(primaryKey, secondaryKey);
         }
     }

@@ -81,22 +81,18 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable Either<String,AzureFirewallSkuName> name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tier(@Nullable Output<Either<String,AzureFirewallSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
-
         public Builder tier(@Nullable Either<String,AzureFirewallSkuTier> tier) {
             this.tier = Output.ofNullable(tier);
             return this;
-        }
-        public AzureFirewallSkuArgs build() {
+        }        public AzureFirewallSkuArgs build() {
             return new AzureFirewallSkuArgs(name, tier);
         }
     }

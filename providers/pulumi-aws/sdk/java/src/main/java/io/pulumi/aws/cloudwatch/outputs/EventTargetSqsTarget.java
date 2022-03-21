@@ -53,8 +53,7 @@ public final class EventTargetSqsTarget {
         public Builder messageGroupId(@Nullable String messageGroupId) {
             this.messageGroupId = messageGroupId;
             return this;
-        }
-        public EventTargetSqsTarget build() {
+        }        public EventTargetSqsTarget build() {
             return new EventTargetSqsTarget(messageGroupId);
         }
     }

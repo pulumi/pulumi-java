@@ -112,22 +112,21 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
             this.counterSets = Objects.requireNonNull(counterSets);
             return this;
         }
-
+        public Builder counterSets(MetricCounterSetResponse... counterSets) {
+            return counterSets(List.of(counterSets));
+        }
         public Builder mdmAccount(@Nullable String mdmAccount) {
             this.mdmAccount = mdmAccount;
             return this;
         }
-
         public Builder metricNameSpace(@Nullable String metricNameSpace) {
             this.metricNameSpace = metricNameSpace;
             return this;
         }
-
         public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
-        }
-        public MetricConfigurationResponse build() {
+        }        public MetricConfigurationResponse build() {
             return new MetricConfigurationResponse(counterSets, mdmAccount, metricNameSpace, resourceId);
         }
     }

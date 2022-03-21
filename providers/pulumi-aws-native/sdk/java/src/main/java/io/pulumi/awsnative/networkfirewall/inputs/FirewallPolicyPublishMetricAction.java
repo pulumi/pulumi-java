@@ -52,7 +52,9 @@ public final class FirewallPolicyPublishMetricAction extends io.pulumi.resources
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
-        public FirewallPolicyPublishMetricAction build() {
+        public Builder dimensions(FirewallPolicyDimension... dimensions) {
+            return dimensions(List.of(dimensions));
+        }        public FirewallPolicyPublishMetricAction build() {
             return new FirewallPolicyPublishMetricAction(dimensions);
         }
     }

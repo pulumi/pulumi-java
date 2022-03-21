@@ -58,12 +58,10 @@ public final class InboundSamlConfigIdpConfigIdpCertificateArgs extends io.pulum
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = Output.ofNullable(x509Certificate);
             return this;
-        }
-        public InboundSamlConfigIdpConfigIdpCertificateArgs build() {
+        }        public InboundSamlConfigIdpConfigIdpCertificateArgs build() {
             return new InboundSamlConfigIdpConfigIdpCertificateArgs(x509Certificate);
         }
     }

@@ -69,12 +69,10 @@ public final class AS2AgreementContentResponse {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
-
         public Builder sendAgreement(AS2OneWayAgreementResponse sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
-        }
-        public AS2AgreementContentResponse build() {
+        }        public AS2AgreementContentResponse build() {
             return new AS2AgreementContentResponse(receiveAgreement, sendAgreement);
         }
     }

@@ -251,132 +251,106 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             this.contentType = contentType;
             return this;
         }
-
         public Builder contentType(@Nullable String contentType) {
             this.contentType = Output.ofNullable(contentType);
             return this;
         }
-
         public Builder correlationId(@Nullable Output<String> correlationId) {
             this.correlationId = correlationId;
             return this;
         }
-
         public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = Output.ofNullable(correlationId);
             return this;
         }
-
         public Builder forcePersistence(@Nullable Output<Boolean> forcePersistence) {
             this.forcePersistence = forcePersistence;
             return this;
         }
-
         public Builder forcePersistence(@Nullable Boolean forcePersistence) {
             this.forcePersistence = Output.ofNullable(forcePersistence);
             return this;
         }
-
         public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
-
         public Builder label(@Nullable String label) {
             this.label = Output.ofNullable(label);
             return this;
         }
-
         public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
-
         public Builder messageId(@Nullable String messageId) {
             this.messageId = Output.ofNullable(messageId);
             return this;
         }
-
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
-
         public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
-
         public Builder replyTo(@Nullable Output<String> replyTo) {
             this.replyTo = replyTo;
             return this;
         }
-
         public Builder replyTo(@Nullable String replyTo) {
             this.replyTo = Output.ofNullable(replyTo);
             return this;
         }
-
         public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
-
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
             this.replyToSessionId = Output.ofNullable(replyToSessionId);
             return this;
         }
-
         public Builder scheduledEnqueueTimeUtc(@Nullable Output<String> scheduledEnqueueTimeUtc) {
             this.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
             return this;
         }
-
         public Builder scheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
             this.scheduledEnqueueTimeUtc = Output.ofNullable(scheduledEnqueueTimeUtc);
             return this;
         }
-
         public Builder sessionId(@Nullable Output<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
-
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = Output.ofNullable(sessionId);
             return this;
         }
-
         public Builder timeToLive(@Nullable Output<String> timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }
-
         public Builder timeToLive(@Nullable String timeToLive) {
             this.timeToLive = Output.ofNullable(timeToLive);
             return this;
         }
-
         public Builder to(@Nullable Output<String> to) {
             this.to = to;
             return this;
         }
-
         public Builder to(@Nullable String to) {
             this.to = Output.ofNullable(to);
             return this;
         }
-
         public Builder viaPartitionKey(@Nullable Output<String> viaPartitionKey) {
             this.viaPartitionKey = viaPartitionKey;
             return this;
         }
-
         public Builder viaPartitionKey(@Nullable String viaPartitionKey) {
             this.viaPartitionKey = Output.ofNullable(viaPartitionKey);
             return this;
-        }
-        public ServiceBusBrokeredMessagePropertiesArgs build() {
+        }        public ServiceBusBrokeredMessagePropertiesArgs build() {
             return new ServiceBusBrokeredMessagePropertiesArgs(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);
         }
     }

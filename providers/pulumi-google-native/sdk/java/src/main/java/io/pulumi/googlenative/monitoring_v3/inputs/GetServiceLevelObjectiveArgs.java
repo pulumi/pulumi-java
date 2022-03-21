@@ -102,27 +102,22 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public Builder serviceLevelObjectiveId(String serviceLevelObjectiveId) {
             this.serviceLevelObjectiveId = Objects.requireNonNull(serviceLevelObjectiveId);
             return this;
         }
-
         public Builder v3Id(String v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
-
         public Builder v3Id1(String v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
-
         public Builder view(@Nullable String view) {
             this.view = view;
             return this;
-        }
-        public GetServiceLevelObjectiveArgs build() {
+        }        public GetServiceLevelObjectiveArgs build() {
             return new GetServiceLevelObjectiveArgs(serviceId, serviceLevelObjectiveId, v3Id, v3Id1, view);
         }
     }

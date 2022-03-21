@@ -111,22 +111,18 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
-
         public Builder properties(@Nullable ScalarFunctionPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FunctionResponse build() {
+        }        public FunctionResponse build() {
             return new FunctionResponse(id, name, properties, type);
         }
     }

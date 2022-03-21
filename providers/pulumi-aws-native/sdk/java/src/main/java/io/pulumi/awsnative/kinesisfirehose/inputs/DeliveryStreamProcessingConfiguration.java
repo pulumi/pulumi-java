@@ -68,12 +68,13 @@ public final class DeliveryStreamProcessingConfiguration extends io.pulumi.resou
             this.enabled = enabled;
             return this;
         }
-
         public Builder processors(@Nullable List<DeliveryStreamProcessor> processors) {
             this.processors = processors;
             return this;
         }
-        public DeliveryStreamProcessingConfiguration build() {
+        public Builder processors(DeliveryStreamProcessor... processors) {
+            return processors(List.of(processors));
+        }        public DeliveryStreamProcessingConfiguration build() {
             return new DeliveryStreamProcessingConfiguration(enabled, processors);
         }
     }

@@ -61,8 +61,7 @@ public final class ThemeGutterStyle extends io.pulumi.resources.InvokeArgs {
         public Builder show(@Nullable Boolean show) {
             this.show = show;
             return this;
-        }
-        public ThemeGutterStyle build() {
+        }        public ThemeGutterStyle build() {
             return new ThemeGutterStyle(show);
         }
     }

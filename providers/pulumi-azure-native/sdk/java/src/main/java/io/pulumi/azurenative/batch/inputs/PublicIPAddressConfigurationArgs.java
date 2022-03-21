@@ -80,22 +80,21 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
             this.ipAddressIds = ipAddressIds;
             return this;
         }
-
         public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
             this.ipAddressIds = Output.ofNullable(ipAddressIds);
             return this;
         }
-
+        public Builder ipAddressIds(String... ipAddressIds) {
+            return ipAddressIds(List.of(ipAddressIds));
+        }
         public Builder provision(@Nullable Output<IPAddressProvisioningType> provision) {
             this.provision = provision;
             return this;
         }
-
         public Builder provision(@Nullable IPAddressProvisioningType provision) {
             this.provision = Output.ofNullable(provision);
             return this;
-        }
-        public PublicIPAddressConfigurationArgs build() {
+        }        public PublicIPAddressConfigurationArgs build() {
             return new PublicIPAddressConfigurationArgs(ipAddressIds, provision);
         }
     }

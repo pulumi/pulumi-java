@@ -172,42 +172,34 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
-
         public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
-
         public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = Objects.requireNonNull(defaultContentKeyPolicyName);
             return this;
         }
-
         public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public Builder streamingLocatorId(String streamingLocatorId) {
             this.streamingLocatorId = Objects.requireNonNull(streamingLocatorId);
             return this;
         }
-
         public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
-        }
-        public AssetStreamingLocatorResponse build() {
+        }        public AssetStreamingLocatorResponse build() {
             return new AssetStreamingLocatorResponse(assetName, created, defaultContentKeyPolicyName, endTime, name, startTime, streamingLocatorId, streamingPolicyName);
         }
     }

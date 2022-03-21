@@ -80,22 +80,24 @@ public final class InMageDiskExclusionInputArgs extends io.pulumi.resources.Reso
             this.diskSignatureOptions = diskSignatureOptions;
             return this;
         }
-
         public Builder diskSignatureOptions(@Nullable List<InMageDiskSignatureExclusionOptionsArgs> diskSignatureOptions) {
             this.diskSignatureOptions = Output.ofNullable(diskSignatureOptions);
             return this;
         }
-
+        public Builder diskSignatureOptions(InMageDiskSignatureExclusionOptionsArgs... diskSignatureOptions) {
+            return diskSignatureOptions(List.of(diskSignatureOptions));
+        }
         public Builder volumeOptions(@Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
             this.volumeOptions = volumeOptions;
             return this;
         }
-
         public Builder volumeOptions(@Nullable List<InMageVolumeExclusionOptionsArgs> volumeOptions) {
             this.volumeOptions = Output.ofNullable(volumeOptions);
             return this;
         }
-        public InMageDiskExclusionInputArgs build() {
+        public Builder volumeOptions(InMageVolumeExclusionOptionsArgs... volumeOptions) {
+            return volumeOptions(List.of(volumeOptions));
+        }        public InMageDiskExclusionInputArgs build() {
             return new InMageDiskExclusionInputArgs(diskSignatureOptions, volumeOptions);
         }
     }

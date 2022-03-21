@@ -57,12 +57,10 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
             this.idleTimeout = idleTimeout;
             return this;
         }
-
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = Output.ofNullable(idleTimeout);
             return this;
-        }
-        public ClusterAutoTerminationPolicyGetArgs build() {
+        }        public ClusterAutoTerminationPolicyGetArgs build() {
             return new ClusterAutoTerminationPolicyGetArgs(idleTimeout);
         }
     }

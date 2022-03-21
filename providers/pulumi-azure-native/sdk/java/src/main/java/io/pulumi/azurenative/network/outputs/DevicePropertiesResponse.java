@@ -88,17 +88,14 @@ public final class DevicePropertiesResponse {
             this.deviceModel = deviceModel;
             return this;
         }
-
         public Builder deviceVendor(@Nullable String deviceVendor) {
             this.deviceVendor = deviceVendor;
             return this;
         }
-
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
-        }
-        public DevicePropertiesResponse build() {
+        }        public DevicePropertiesResponse build() {
             return new DevicePropertiesResponse(deviceModel, deviceVendor, linkSpeedInMbps);
         }
     }

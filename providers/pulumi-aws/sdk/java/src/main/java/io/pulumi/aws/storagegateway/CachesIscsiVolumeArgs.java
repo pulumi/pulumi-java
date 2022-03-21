@@ -189,92 +189,74 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
-
         public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
-
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
             return this;
         }
-
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
-
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
-
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
-
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
-
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
-
         public Builder sourceVolumeArn(@Nullable Output<String> sourceVolumeArn) {
             this.sourceVolumeArn = sourceVolumeArn;
             return this;
         }
-
         public Builder sourceVolumeArn(@Nullable String sourceVolumeArn) {
             this.sourceVolumeArn = Output.ofNullable(sourceVolumeArn);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
         public Builder targetName(Output<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
-
         public Builder targetName(String targetName) {
             this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
         }
-
         public Builder volumeSizeInBytes(Output<Integer> volumeSizeInBytes) {
             this.volumeSizeInBytes = Objects.requireNonNull(volumeSizeInBytes);
             return this;
         }
-
         public Builder volumeSizeInBytes(Integer volumeSizeInBytes) {
             this.volumeSizeInBytes = Output.of(Objects.requireNonNull(volumeSizeInBytes));
             return this;
-        }
-        public CachesIscsiVolumeArgs build() {
+        }        public CachesIscsiVolumeArgs build() {
             return new CachesIscsiVolumeArgs(gatewayArn, kmsEncrypted, kmsKey, networkInterfaceId, snapshotId, sourceVolumeArn, tags, targetName, volumeSizeInBytes);
         }
     }

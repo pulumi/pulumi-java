@@ -372,202 +372,171 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             this.connectionBandwidth = connectionBandwidth;
             return this;
         }
-
         public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
             this.connectionBandwidth = Output.ofNullable(connectionBandwidth);
             return this;
         }
-
         public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
-
         public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
-
         public Builder dpdTimeoutSeconds(@Nullable Output<Integer> dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
-
         public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = Output.ofNullable(dpdTimeoutSeconds);
             return this;
         }
-
         public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
-
         public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = Output.ofNullable(enableBgp);
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
             return this;
         }
-
         public Builder enableRateLimiting(@Nullable Output<Boolean> enableRateLimiting) {
             this.enableRateLimiting = enableRateLimiting;
             return this;
         }
-
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
             this.enableRateLimiting = Output.ofNullable(enableRateLimiting);
             return this;
         }
-
         public Builder gatewayName(Output<String> gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
-
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = Output.of(Objects.requireNonNull(gatewayName));
             return this;
         }
-
         public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = Output.ofNullable(id);
             return this;
         }
-
         public Builder ipsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
-
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
             this.ipsecPolicies = Output.ofNullable(ipsecPolicies);
             return this;
         }
-
+        public Builder ipsecPolicies(IpsecPolicyArgs... ipsecPolicies) {
+            return ipsecPolicies(List.of(ipsecPolicies));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder remoteVpnSite(@Nullable Output<SubResourceArgs> remoteVpnSite) {
             this.remoteVpnSite = remoteVpnSite;
             return this;
         }
-
         public Builder remoteVpnSite(@Nullable SubResourceArgs remoteVpnSite) {
             this.remoteVpnSite = Output.ofNullable(remoteVpnSite);
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
-
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
             this.routingConfiguration = Output.ofNullable(routingConfiguration);
             return this;
         }
-
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
-
         public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = Output.ofNullable(routingWeight);
             return this;
         }
-
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
-
         public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Output.ofNullable(sharedKey);
             return this;
         }
-
         public Builder trafficSelectorPolicies(@Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
-
         public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyArgs> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = Output.ofNullable(trafficSelectorPolicies);
             return this;
         }
-
+        public Builder trafficSelectorPolicies(TrafficSelectorPolicyArgs... trafficSelectorPolicies) {
+            return trafficSelectorPolicies(List.of(trafficSelectorPolicies));
+        }
         public Builder useLocalAzureIpAddress(@Nullable Output<Boolean> useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
-
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = Output.ofNullable(useLocalAzureIpAddress);
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Output<Boolean> usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
-
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = Output.ofNullable(usePolicyBasedTrafficSelectors);
             return this;
         }
-
         public Builder vpnConnectionProtocolType(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
-
         public Builder vpnConnectionProtocolType(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = Output.ofNullable(vpnConnectionProtocolType);
             return this;
         }
-
         public Builder vpnLinkConnections(@Nullable Output<List<VpnSiteLinkConnectionArgs>> vpnLinkConnections) {
             this.vpnLinkConnections = vpnLinkConnections;
             return this;
         }
-
         public Builder vpnLinkConnections(@Nullable List<VpnSiteLinkConnectionArgs> vpnLinkConnections) {
             this.vpnLinkConnections = Output.ofNullable(vpnLinkConnections);
             return this;
         }
-        public VpnConnectionArgs build() {
+        public Builder vpnLinkConnections(VpnSiteLinkConnectionArgs... vpnLinkConnections) {
+            return vpnLinkConnections(List.of(vpnLinkConnections));
+        }        public VpnConnectionArgs build() {
             return new VpnConnectionArgs(connectionBandwidth, connectionName, dpdTimeoutSeconds, enableBgp, enableInternetSecurity, enableRateLimiting, gatewayName, id, ipsecPolicies, name, remoteVpnSite, resourceGroupName, routingConfiguration, routingWeight, sharedKey, trafficSelectorPolicies, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnections);
         }
     }

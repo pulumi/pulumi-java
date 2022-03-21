@@ -69,12 +69,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             this.displayPrice = Objects.requireNonNull(displayPrice);
             return this;
         }
-
         public Builder originalPrice(Double originalPrice) {
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
-        }
-        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
+        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(displayPrice, originalPrice);
         }
     }

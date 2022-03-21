@@ -307,162 +307,133 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
             this.additionalExperiments = additionalExperiments;
             return this;
         }
-
         public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
             this.additionalExperiments = Output.ofNullable(additionalExperiments);
             return this;
         }
-
+        public Builder additionalExperiments(String... additionalExperiments) {
+            return additionalExperiments(List.of(additionalExperiments));
+        }
         public Builder additionalUserLabels(@Nullable Output<Map<String,String>> additionalUserLabels) {
             this.additionalUserLabels = additionalUserLabels;
             return this;
         }
-
         public Builder additionalUserLabels(@Nullable Map<String,String> additionalUserLabels) {
             this.additionalUserLabels = Output.ofNullable(additionalUserLabels);
             return this;
         }
-
         public Builder bypassTempDirValidation(@Nullable Output<Boolean> bypassTempDirValidation) {
             this.bypassTempDirValidation = bypassTempDirValidation;
             return this;
         }
-
         public Builder bypassTempDirValidation(@Nullable Boolean bypassTempDirValidation) {
             this.bypassTempDirValidation = Output.ofNullable(bypassTempDirValidation);
             return this;
         }
-
         public Builder enableStreamingEngine(@Nullable Output<Boolean> enableStreamingEngine) {
             this.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
-
         public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Output.ofNullable(enableStreamingEngine);
             return this;
         }
-
         public Builder ipConfiguration(@Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public Builder ipConfiguration(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration ipConfiguration) {
             this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
-
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
-
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
-
         public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
-
         public Builder machineType(@Nullable String machineType) {
             this.machineType = Output.ofNullable(machineType);
             return this;
         }
-
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
-
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = Output.ofNullable(maxWorkers);
             return this;
         }
-
         public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
-
         public Builder network(@Nullable String network) {
             this.network = Output.ofNullable(network);
             return this;
         }
-
         public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
             this.numWorkers = numWorkers;
             return this;
         }
-
         public Builder numWorkers(@Nullable Integer numWorkers) {
             this.numWorkers = Output.ofNullable(numWorkers);
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
-
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
-
         public Builder tempLocation(@Nullable Output<String> tempLocation) {
             this.tempLocation = tempLocation;
             return this;
         }
-
         public Builder tempLocation(@Nullable String tempLocation) {
             this.tempLocation = Output.ofNullable(tempLocation);
             return this;
         }
-
         public Builder workerRegion(@Nullable Output<String> workerRegion) {
             this.workerRegion = workerRegion;
             return this;
         }
-
         public Builder workerRegion(@Nullable String workerRegion) {
             this.workerRegion = Output.ofNullable(workerRegion);
             return this;
         }
-
         public Builder workerZone(@Nullable Output<String> workerZone) {
             this.workerZone = workerZone;
             return this;
         }
-
         public Builder workerZone(@Nullable String workerZone) {
             this.workerZone = Output.ofNullable(workerZone);
             return this;
         }
-
         public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
-
         public Builder zone(@Nullable String zone) {
             this.zone = Output.ofNullable(zone);
             return this;
-        }
-        public GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs build() {
+        }        public GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs build() {
             return new GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs(additionalExperiments, additionalUserLabels, bypassTempDirValidation, enableStreamingEngine, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
         }
     }

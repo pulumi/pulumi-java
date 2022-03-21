@@ -418,222 +418,199 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.args = args;
             return this;
         }
-
         public Builder args(@Nullable List<String> args) {
             this.args = Output.ofNullable(args);
             return this;
         }
-
+        public Builder args(String... args) {
+            return args(List.of(args));
+        }
         public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
-
         public Builder command(@Nullable List<String> command) {
             this.command = Output.ofNullable(command);
             return this;
         }
-
+        public Builder command(String... command) {
+            return command(List.of(command));
+        }
         public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
-
         public Builder env(@Nullable List<EnvVarArgs> env) {
             this.env = Output.ofNullable(env);
             return this;
         }
-
+        public Builder env(EnvVarArgs... env) {
+            return env(List.of(env));
+        }
         public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
-
         public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
             this.envFrom = Output.ofNullable(envFrom);
             return this;
         }
-
+        public Builder envFrom(EnvFromSourceArgs... envFrom) {
+            return envFrom(List.of(envFrom));
+        }
         public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
-
         public Builder image(@Nullable String image) {
             this.image = Output.ofNullable(image);
             return this;
         }
-
         public Builder imagePullPolicy(@Nullable Output<String> imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
-
         public Builder imagePullPolicy(@Nullable String imagePullPolicy) {
             this.imagePullPolicy = Output.ofNullable(imagePullPolicy);
             return this;
         }
-
         public Builder lifecycle(@Nullable Output<LifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
-
         public Builder lifecycle(@Nullable LifecycleArgs lifecycle) {
             this.lifecycle = Output.ofNullable(lifecycle);
             return this;
         }
-
         public Builder livenessProbe(@Nullable Output<ProbeArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-
         public Builder livenessProbe(@Nullable ProbeArgs livenessProbe) {
             this.livenessProbe = Output.ofNullable(livenessProbe);
             return this;
         }
-
         public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
-
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
-
         public Builder ports(@Nullable List<ContainerPortArgs> ports) {
             this.ports = Output.ofNullable(ports);
             return this;
         }
-
+        public Builder ports(ContainerPortArgs... ports) {
+            return ports(List.of(ports));
+        }
         public Builder readinessProbe(@Nullable Output<ProbeArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-
         public Builder readinessProbe(@Nullable ProbeArgs readinessProbe) {
             this.readinessProbe = Output.ofNullable(readinessProbe);
             return this;
         }
-
         public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
-
         public Builder resources(@Nullable ResourceRequirementsArgs resources) {
             this.resources = Output.ofNullable(resources);
             return this;
         }
-
         public Builder securityContext(@Nullable Output<SecurityContextArgs> securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-
         public Builder securityContext(@Nullable SecurityContextArgs securityContext) {
             this.securityContext = Output.ofNullable(securityContext);
             return this;
         }
-
         public Builder startupProbe(@Nullable Output<ProbeArgs> startupProbe) {
             this.startupProbe = startupProbe;
             return this;
         }
-
         public Builder startupProbe(@Nullable ProbeArgs startupProbe) {
             this.startupProbe = Output.ofNullable(startupProbe);
             return this;
         }
-
         public Builder stdin(@Nullable Output<Boolean> stdin) {
             this.stdin = stdin;
             return this;
         }
-
         public Builder stdin(@Nullable Boolean stdin) {
             this.stdin = Output.ofNullable(stdin);
             return this;
         }
-
         public Builder stdinOnce(@Nullable Output<Boolean> stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
-
         public Builder stdinOnce(@Nullable Boolean stdinOnce) {
             this.stdinOnce = Output.ofNullable(stdinOnce);
             return this;
         }
-
         public Builder terminationMessagePath(@Nullable Output<String> terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
-
         public Builder terminationMessagePath(@Nullable String terminationMessagePath) {
             this.terminationMessagePath = Output.ofNullable(terminationMessagePath);
             return this;
         }
-
         public Builder terminationMessagePolicy(@Nullable Output<String> terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
-
         public Builder terminationMessagePolicy(@Nullable String terminationMessagePolicy) {
             this.terminationMessagePolicy = Output.ofNullable(terminationMessagePolicy);
             return this;
         }
-
         public Builder tty(@Nullable Output<Boolean> tty) {
             this.tty = tty;
             return this;
         }
-
         public Builder tty(@Nullable Boolean tty) {
             this.tty = Output.ofNullable(tty);
             return this;
         }
-
         public Builder volumeDevices(@Nullable Output<List<VolumeDeviceArgs>> volumeDevices) {
             this.volumeDevices = volumeDevices;
             return this;
         }
-
         public Builder volumeDevices(@Nullable List<VolumeDeviceArgs> volumeDevices) {
             this.volumeDevices = Output.ofNullable(volumeDevices);
             return this;
         }
-
+        public Builder volumeDevices(VolumeDeviceArgs... volumeDevices) {
+            return volumeDevices(List.of(volumeDevices));
+        }
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
-
+        public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
+            return volumeMounts(List.of(volumeMounts));
+        }
         public Builder workingDir(@Nullable Output<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
-
         public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = Output.ofNullable(workingDir);
             return this;
-        }
-        public ContainerArgs build() {
+        }        public ContainerArgs build() {
             return new ContainerArgs(args, command, env, envFrom, image, imagePullPolicy, lifecycle, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, stdin, stdinOnce, terminationMessagePath, terminationMessagePolicy, tty, volumeDevices, volumeMounts, workingDir);
         }
     }

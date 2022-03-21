@@ -237,122 +237,98 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
-
         public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
             this.allowUnassociatedTargets = Output.ofNullable(allowUnassociatedTargets);
             return this;
         }
-
         public Builder cutoff(Output<Integer> cutoff) {
             this.cutoff = Objects.requireNonNull(cutoff);
             return this;
         }
-
         public Builder cutoff(Integer cutoff) {
             this.cutoff = Output.of(Objects.requireNonNull(cutoff));
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder duration(Output<Integer> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public Builder duration(Integer duration) {
             this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
-
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
-
         public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Output.ofNullable(enabled);
             return this;
         }
-
         public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
-
         public Builder endDate(@Nullable String endDate) {
             this.endDate = Output.ofNullable(endDate);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public Builder schedule(String schedule) {
             this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
-
         public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
             this.scheduleOffset = Output.ofNullable(scheduleOffset);
             return this;
         }
-
         public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
             this.scheduleTimezone = scheduleTimezone;
             return this;
         }
-
         public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
             this.scheduleTimezone = Output.ofNullable(scheduleTimezone);
             return this;
         }
-
         public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
-
         public Builder startDate(@Nullable String startDate) {
             this.startDate = Output.ofNullable(startDate);
             return this;
         }
-
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public MaintenanceWindowArgs build() {
+        }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(allowUnassociatedTargets, cutoff, description, duration, enabled, endDate, name, schedule, scheduleOffset, scheduleTimezone, startDate, tags);
         }
     }

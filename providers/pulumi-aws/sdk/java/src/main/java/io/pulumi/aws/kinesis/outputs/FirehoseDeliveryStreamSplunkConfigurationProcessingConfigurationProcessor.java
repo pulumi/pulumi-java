@@ -72,12 +72,13 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
             this.parameters = parameters;
             return this;
         }
-
+        public Builder parameters(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }
-        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor build() {
+        }        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor build() {
             return new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor(parameters, type);
         }
     }

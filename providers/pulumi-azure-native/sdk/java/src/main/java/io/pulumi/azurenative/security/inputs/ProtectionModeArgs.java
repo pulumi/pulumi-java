@@ -110,42 +110,34 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
             this.exe = exe;
             return this;
         }
-
         public Builder exe(@Nullable String exe) {
             this.exe = Output.ofNullable(exe);
             return this;
         }
-
         public Builder executable(@Nullable Output<String> executable) {
             this.executable = executable;
             return this;
         }
-
         public Builder executable(@Nullable String executable) {
             this.executable = Output.ofNullable(executable);
             return this;
         }
-
         public Builder msi(@Nullable Output<String> msi) {
             this.msi = msi;
             return this;
         }
-
         public Builder msi(@Nullable String msi) {
             this.msi = Output.ofNullable(msi);
             return this;
         }
-
         public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
-
         public Builder script(@Nullable String script) {
             this.script = Output.ofNullable(script);
             return this;
-        }
-        public ProtectionModeArgs build() {
+        }        public ProtectionModeArgs build() {
             return new ProtectionModeArgs(exe, executable, msi, script);
         }
     }

@@ -51,8 +51,7 @@ public final class ShieldedNodesResponse {
         public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
-        }
-        public ShieldedNodesResponse build() {
+        }        public ShieldedNodesResponse build() {
             return new ShieldedNodesResponse(enabled);
         }
     }

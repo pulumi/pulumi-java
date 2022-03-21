@@ -79,22 +79,18 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
             this.receiverType = receiverType;
             return this;
         }
-
         public Builder receiverType(@Nullable String receiverType) {
             this.receiverType = Output.ofNullable(receiverType);
             return this;
         }
-
         public Builder receiverValue(@Nullable Output<NotificationReceiverValueArgs> receiverValue) {
             this.receiverValue = receiverValue;
             return this;
         }
-
         public Builder receiverValue(@Nullable NotificationReceiverValueArgs receiverValue) {
             this.receiverValue = Output.ofNullable(receiverValue);
             return this;
-        }
-        public NotificationEventReceiverArgs build() {
+        }        public NotificationEventReceiverArgs build() {
             return new NotificationEventReceiverArgs(receiverType, receiverValue);
         }
     }

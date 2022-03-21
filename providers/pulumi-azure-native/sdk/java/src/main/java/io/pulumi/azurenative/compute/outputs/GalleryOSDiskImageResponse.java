@@ -89,17 +89,14 @@ public final class GalleryOSDiskImageResponse {
             this.hostCaching = hostCaching;
             return this;
         }
-
         public Builder sizeInGB(Integer sizeInGB) {
             this.sizeInGB = Objects.requireNonNull(sizeInGB);
             return this;
         }
-
         public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
             this.source = source;
             return this;
-        }
-        public GalleryOSDiskImageResponse build() {
+        }        public GalleryOSDiskImageResponse build() {
             return new GalleryOSDiskImageResponse(hostCaching, sizeInGB, source);
         }
     }

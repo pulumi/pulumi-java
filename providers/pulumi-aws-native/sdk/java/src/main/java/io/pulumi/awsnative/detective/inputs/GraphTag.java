@@ -78,12 +78,10 @@ public final class GraphTag extends io.pulumi.resources.InvokeArgs {
             this.key = key;
             return this;
         }
-
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }
-        public GraphTag build() {
+        }        public GraphTag build() {
             return new GraphTag(key, value);
         }
     }

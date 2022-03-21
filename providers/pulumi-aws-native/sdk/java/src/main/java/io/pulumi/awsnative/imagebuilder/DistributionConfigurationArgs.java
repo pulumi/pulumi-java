@@ -109,42 +109,37 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder distributions(Output<List<DistributionConfigurationDistributionArgs>> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
-
         public Builder distributions(List<DistributionConfigurationDistributionArgs> distributions) {
             this.distributions = Output.of(Objects.requireNonNull(distributions));
             return this;
         }
-
+        public Builder distributions(DistributionConfigurationDistributionArgs... distributions) {
+            return distributions(List.of(distributions));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable Object tags) {
             this.tags = Output.ofNullable(tags);
             return this;
-        }
-        public DistributionConfigurationArgs build() {
+        }        public DistributionConfigurationArgs build() {
             return new DistributionConfigurationArgs(description, distributions, name, tags);
         }
     }

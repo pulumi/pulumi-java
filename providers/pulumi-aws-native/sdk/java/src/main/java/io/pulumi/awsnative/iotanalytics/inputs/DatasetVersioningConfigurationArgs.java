@@ -67,22 +67,18 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
             this.maxVersions = maxVersions;
             return this;
         }
-
         public Builder maxVersions(@Nullable Integer maxVersions) {
             this.maxVersions = Output.ofNullable(maxVersions);
             return this;
         }
-
         public Builder unlimited(@Nullable Output<Boolean> unlimited) {
             this.unlimited = unlimited;
             return this;
         }
-
         public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = Output.ofNullable(unlimited);
             return this;
-        }
-        public DatasetVersioningConfigurationArgs build() {
+        }        public DatasetVersioningConfigurationArgs build() {
             return new DatasetVersioningConfigurationArgs(maxVersions, unlimited);
         }
     }

@@ -418,122 +418,101 @@ public final class GetWebAppSiteExtensionSlotResult {
             this.authors = authors;
             return this;
         }
-
+        public Builder authors(String... authors) {
+            return authors(List.of(authors));
+        }
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
-
         public Builder downloadCount(@Nullable Integer downloadCount) {
             this.downloadCount = downloadCount;
             return this;
         }
-
         public Builder extensionId(@Nullable String extensionId) {
             this.extensionId = extensionId;
             return this;
         }
-
         public Builder extensionType(@Nullable String extensionType) {
             this.extensionType = extensionType;
             return this;
         }
-
         public Builder extensionUrl(@Nullable String extensionUrl) {
             this.extensionUrl = extensionUrl;
             return this;
         }
-
         public Builder feedUrl(@Nullable String feedUrl) {
             this.feedUrl = feedUrl;
             return this;
         }
-
         public Builder iconUrl(@Nullable String iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
-
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder installedDateTime(@Nullable String installedDateTime) {
             this.installedDateTime = installedDateTime;
             return this;
         }
-
         public Builder installerCommandLineParams(@Nullable String installerCommandLineParams) {
             this.installerCommandLineParams = installerCommandLineParams;
             return this;
         }
-
         public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
-
         public Builder licenseUrl(@Nullable String licenseUrl) {
             this.licenseUrl = licenseUrl;
             return this;
         }
-
         public Builder localIsLatestVersion(@Nullable Boolean localIsLatestVersion) {
             this.localIsLatestVersion = localIsLatestVersion;
             return this;
         }
-
         public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder projectUrl(@Nullable String projectUrl) {
             this.projectUrl = projectUrl;
             return this;
         }
-
         public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public Builder publishedDateTime(@Nullable String publishedDateTime) {
             this.publishedDateTime = publishedDateTime;
             return this;
         }
-
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
-
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;
-        }
-        public GetWebAppSiteExtensionSlotResult build() {
+        }        public GetWebAppSiteExtensionSlotResult build() {
             return new GetWebAppSiteExtensionSlotResult(authors, comment, description, downloadCount, extensionId, extensionType, extensionUrl, feedUrl, iconUrl, id, installedDateTime, installerCommandLineParams, kind, licenseUrl, localIsLatestVersion, localPath, name, projectUrl, provisioningState, publishedDateTime, summary, title, type, version);
         }
     }

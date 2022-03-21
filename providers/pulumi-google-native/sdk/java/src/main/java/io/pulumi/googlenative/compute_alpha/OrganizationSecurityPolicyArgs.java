@@ -248,142 +248,120 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
-
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
             return this;
         }
-
         public Builder advancedOptionsConfig(@Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
             this.advancedOptionsConfig = advancedOptionsConfig;
             return this;
         }
-
         public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
             this.advancedOptionsConfig = Output.ofNullable(advancedOptionsConfig);
             return this;
         }
-
         public Builder associations(@Nullable Output<List<SecurityPolicyAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
-
         public Builder associations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
             this.associations = Output.ofNullable(associations);
             return this;
         }
-
+        public Builder associations(SecurityPolicyAssociationArgs... associations) {
+            return associations(List.of(associations));
+        }
         public Builder cloudArmorConfig(@Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig) {
             this.cloudArmorConfig = cloudArmorConfig;
             return this;
         }
-
         public Builder cloudArmorConfig(@Nullable SecurityPolicyCloudArmorConfigArgs cloudArmorConfig) {
             this.cloudArmorConfig = Output.ofNullable(cloudArmorConfig);
             return this;
         }
-
         public Builder ddosProtectionConfig(@Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig) {
             this.ddosProtectionConfig = ddosProtectionConfig;
             return this;
         }
-
         public Builder ddosProtectionConfig(@Nullable SecurityPolicyDdosProtectionConfigArgs ddosProtectionConfig) {
             this.ddosProtectionConfig = Output.ofNullable(ddosProtectionConfig);
             return this;
         }
-
         public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
-
         public Builder displayName(@Nullable String displayName) {
             this.displayName = Output.ofNullable(displayName);
             return this;
         }
-
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
-
         public Builder parentId(@Nullable String parentId) {
             this.parentId = Output.ofNullable(parentId);
             return this;
         }
-
         public Builder recaptchaOptionsConfig(@Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = recaptchaOptionsConfig;
             return this;
         }
-
         public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Output.ofNullable(recaptchaOptionsConfig);
             return this;
         }
-
         public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
-
         public Builder requestId(@Nullable String requestId) {
             this.requestId = Output.ofNullable(requestId);
             return this;
         }
-
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
-
         public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
             this.rules = Output.ofNullable(rules);
             return this;
         }
-
+        public Builder rules(SecurityPolicyRuleArgs... rules) {
+            return rules(List.of(rules));
+        }
         public Builder type(@Nullable Output<OrganizationSecurityPolicyType> type) {
             this.type = type;
             return this;
         }
-
         public Builder type(@Nullable OrganizationSecurityPolicyType type) {
             this.type = Output.ofNullable(type);
             return this;
-        }
-        public OrganizationSecurityPolicyArgs build() {
+        }        public OrganizationSecurityPolicyArgs build() {
             return new OrganizationSecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, associations, cloudArmorConfig, ddosProtectionConfig, description, displayName, labels, name, parentId, recaptchaOptionsConfig, requestId, rules, type);
         }
     }

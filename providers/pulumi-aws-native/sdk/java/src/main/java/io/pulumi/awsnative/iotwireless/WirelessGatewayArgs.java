@@ -141,62 +141,53 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
             this.description = description;
             return this;
         }
-
         public Builder description(@Nullable String description) {
             this.description = Output.ofNullable(description);
             return this;
         }
-
         public Builder lastUplinkReceivedAt(@Nullable Output<String> lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
-
         public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = Output.ofNullable(lastUplinkReceivedAt);
             return this;
         }
-
         public Builder loRaWAN(Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN) {
             this.loRaWAN = Objects.requireNonNull(loRaWAN);
             return this;
         }
-
         public Builder loRaWAN(WirelessGatewayLoRaWANGatewayArgs loRaWAN) {
             this.loRaWAN = Output.of(Objects.requireNonNull(loRaWAN));
             return this;
         }
-
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder tags(@Nullable Output<List<WirelessGatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder tags(@Nullable List<WirelessGatewayTagArgs> tags) {
             this.tags = Output.ofNullable(tags);
             return this;
         }
-
+        public Builder tags(WirelessGatewayTagArgs... tags) {
+            return tags(List.of(tags));
+        }
         public Builder thingArn(@Nullable Output<String> thingArn) {
             this.thingArn = thingArn;
             return this;
         }
-
         public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = Output.ofNullable(thingArn);
             return this;
-        }
-        public WirelessGatewayArgs build() {
+        }        public WirelessGatewayArgs build() {
             return new WirelessGatewayArgs(description, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn);
         }
     }

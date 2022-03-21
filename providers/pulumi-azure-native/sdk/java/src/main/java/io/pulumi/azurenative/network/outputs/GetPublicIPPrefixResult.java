@@ -352,97 +352,87 @@ public final class GetPublicIPPrefixResult {
             this.customIPPrefix = customIPPrefix;
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
-
         public Builder ipPrefix(String ipPrefix) {
             this.ipPrefix = Objects.requireNonNull(ipPrefix);
             return this;
         }
-
         public Builder ipTags(@Nullable List<IpTagResponse> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
-
+        public Builder ipTags(IpTagResponse... ipTags) {
+            return ipTags(List.of(ipTags));
+        }
         public Builder loadBalancerFrontendIpConfiguration(SubResourceResponse loadBalancerFrontendIpConfiguration) {
             this.loadBalancerFrontendIpConfiguration = Objects.requireNonNull(loadBalancerFrontendIpConfiguration);
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder natGateway(@Nullable NatGatewayResponse natGateway) {
             this.natGateway = natGateway;
             return this;
         }
-
         public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
-
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
-
         public Builder publicIPAddresses(List<ReferencedPublicIpAddressResponse> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
-
+        public Builder publicIPAddresses(ReferencedPublicIpAddressResponse... publicIPAddresses) {
+            return publicIPAddresses(List.of(publicIPAddresses));
+        }
         public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
-
         public Builder sku(@Nullable PublicIPPrefixSkuResponse sku) {
             this.sku = sku;
             return this;
         }
-
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
-
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }
-        public GetPublicIPPrefixResult build() {
+        public Builder zones(String... zones) {
+            return zones(List.of(zones));
+        }        public GetPublicIPPrefixResult build() {
             return new GetPublicIPPrefixResult(customIPPrefix, etag, extendedLocation, id, ipPrefix, ipTags, loadBalancerFrontendIpConfiguration, location, name, natGateway, prefixLength, provisioningState, publicIPAddressVersion, publicIPAddresses, resourceGuid, sku, tags, type, zones);
         }
     }

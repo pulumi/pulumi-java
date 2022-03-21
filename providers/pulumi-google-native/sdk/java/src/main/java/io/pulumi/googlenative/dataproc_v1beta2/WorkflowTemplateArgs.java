@@ -184,92 +184,80 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.dagTimeout = dagTimeout;
             return this;
         }
-
         public Builder dagTimeout(@Nullable String dagTimeout) {
             this.dagTimeout = Output.ofNullable(dagTimeout);
             return this;
         }
-
         public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public Builder id(String id) {
             this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
-
         public Builder jobs(Output<List<OrderedJobArgs>> jobs) {
             this.jobs = Objects.requireNonNull(jobs);
             return this;
         }
-
         public Builder jobs(List<OrderedJobArgs> jobs) {
             this.jobs = Output.of(Objects.requireNonNull(jobs));
             return this;
         }
-
+        public Builder jobs(OrderedJobArgs... jobs) {
+            return jobs(List.of(jobs));
+        }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
-
         public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Output.ofNullable(labels);
             return this;
         }
-
         public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
-
         public Builder location(@Nullable String location) {
             this.location = Output.ofNullable(location);
             return this;
         }
-
         public Builder parameters(@Nullable Output<List<TemplateParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<TemplateParameterArgs> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(TemplateParameterArgs... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder placement(Output<WorkflowTemplatePlacementArgs> placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
-
         public Builder placement(WorkflowTemplatePlacementArgs placement) {
             this.placement = Output.of(Objects.requireNonNull(placement));
             return this;
         }
-
         public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = Output.ofNullable(project);
             return this;
         }
-
         public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
-
         public Builder version(@Nullable Integer version) {
             this.version = Output.ofNullable(version);
             return this;
-        }
-        public WorkflowTemplateArgs build() {
+        }        public WorkflowTemplateArgs build() {
             return new WorkflowTemplateArgs(dagTimeout, id, jobs, labels, location, parameters, placement, project, version);
         }
     }

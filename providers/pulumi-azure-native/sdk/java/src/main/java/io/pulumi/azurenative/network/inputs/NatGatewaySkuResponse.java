@@ -60,8 +60,7 @@ public final class NatGatewaySkuResponse extends io.pulumi.resources.InvokeArgs 
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }
-        public NatGatewaySkuResponse build() {
+        }        public NatGatewaySkuResponse build() {
             return new NatGatewaySkuResponse(name);
         }
     }

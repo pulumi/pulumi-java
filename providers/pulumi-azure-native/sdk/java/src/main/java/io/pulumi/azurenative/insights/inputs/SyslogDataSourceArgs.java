@@ -118,42 +118,43 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
             this.facilityNames = facilityNames;
             return this;
         }
-
         public Builder facilityNames(@Nullable List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
             this.facilityNames = Output.ofNullable(facilityNames);
             return this;
         }
-
+        public Builder facilityNames(Either<String,KnownSyslogDataSourceFacilityNames>... facilityNames) {
+            return facilityNames(List.of(facilityNames));
+        }
         public Builder logLevels(@Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
             this.logLevels = logLevels;
             return this;
         }
-
         public Builder logLevels(@Nullable List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
             this.logLevels = Output.ofNullable(logLevels);
             return this;
         }
-
+        public Builder logLevels(Either<String,KnownSyslogDataSourceLogLevels>... logLevels) {
+            return logLevels(List.of(logLevels));
+        }
         public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
-
         public Builder name(@Nullable String name) {
             this.name = Output.ofNullable(name);
             return this;
         }
-
         public Builder streams(@Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
-
         public Builder streams(@Nullable List<Either<String,KnownSyslogDataSourceStreams>> streams) {
             this.streams = Output.ofNullable(streams);
             return this;
         }
-        public SyslogDataSourceArgs build() {
+        public Builder streams(Either<String,KnownSyslogDataSourceStreams>... streams) {
+            return streams(List.of(streams));
+        }        public SyslogDataSourceArgs build() {
             return new SyslogDataSourceArgs(facilityNames, logLevels, name, streams);
         }
     }

@@ -78,17 +78,14 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
-
         public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
-
         public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
-        }
-        public GetNodeGroupArgs build() {
+        }        public GetNodeGroupArgs build() {
             return new GetNodeGroupArgs(nodeGroup, project, zone);
         }
     }

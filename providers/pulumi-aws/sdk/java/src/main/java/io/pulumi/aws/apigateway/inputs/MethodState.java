@@ -224,107 +224,89 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
-
         public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
             this.apiKeyRequired = Output.ofNullable(apiKeyRequired);
             return this;
         }
-
         public Builder authorization(@Nullable Output<String> authorization) {
             this.authorization = authorization;
             return this;
         }
-
         public Builder authorization(@Nullable String authorization) {
             this.authorization = Output.ofNullable(authorization);
             return this;
         }
-
         public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
-
         public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
             this.authorizationScopes = Output.ofNullable(authorizationScopes);
             return this;
         }
-
+        public Builder authorizationScopes(String... authorizationScopes) {
+            return authorizationScopes(List.of(authorizationScopes));
+        }
         public Builder authorizerId(@Nullable Output<String> authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
-
         public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = Output.ofNullable(authorizerId);
             return this;
         }
-
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
-
         public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
-
         public Builder operationName(@Nullable Output<String> operationName) {
             this.operationName = operationName;
             return this;
         }
-
         public Builder operationName(@Nullable String operationName) {
             this.operationName = Output.ofNullable(operationName);
             return this;
         }
-
         public Builder requestModels(@Nullable Output<Map<String,String>> requestModels) {
             this.requestModels = requestModels;
             return this;
         }
-
         public Builder requestModels(@Nullable Map<String,String> requestModels) {
             this.requestModels = Output.ofNullable(requestModels);
             return this;
         }
-
         public Builder requestParameters(@Nullable Output<Map<String,Boolean>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
-
         public Builder requestParameters(@Nullable Map<String,Boolean> requestParameters) {
             this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
-
         public Builder requestValidatorId(@Nullable Output<String> requestValidatorId) {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
-
         public Builder requestValidatorId(@Nullable String requestValidatorId) {
             this.requestValidatorId = Output.ofNullable(requestValidatorId);
             return this;
         }
-
         public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
-
         public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
-
         public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
-        }
-        public MethodState build() {
+        }        public MethodState build() {
             return new MethodState(apiKeyRequired, authorization, authorizationScopes, authorizerId, httpMethod, operationName, requestModels, requestParameters, requestValidatorId, resourceId, restApi);
         }
     }

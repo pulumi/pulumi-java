@@ -151,37 +151,30 @@ public final class WsfcDomainProfileResponse {
             this.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
-
         public Builder clusterOperatorAccount(@Nullable String clusterOperatorAccount) {
             this.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
-
         public Builder domainFqdn(@Nullable String domainFqdn) {
             this.domainFqdn = domainFqdn;
             return this;
         }
-
         public Builder fileShareWitnessPath(@Nullable String fileShareWitnessPath) {
             this.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
-
         public Builder ouPath(@Nullable String ouPath) {
             this.ouPath = ouPath;
             return this;
         }
-
         public Builder sqlServiceAccount(@Nullable String sqlServiceAccount) {
             this.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
-
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
-        }
-        public WsfcDomainProfileResponse build() {
+        }        public WsfcDomainProfileResponse build() {
             return new WsfcDomainProfileResponse(clusterBootstrapAccount, clusterOperatorAccount, domainFqdn, fileShareWitnessPath, ouPath, sqlServiceAccount, storageAccountUrl);
         }
     }

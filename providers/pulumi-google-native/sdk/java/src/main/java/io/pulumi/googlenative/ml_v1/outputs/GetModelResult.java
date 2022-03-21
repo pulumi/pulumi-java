@@ -169,42 +169,37 @@ public final class GetModelResult {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
-
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
-
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public Builder onlinePredictionConsoleLogging(Boolean onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = Objects.requireNonNull(onlinePredictionConsoleLogging);
             return this;
         }
-
         public Builder onlinePredictionLogging(Boolean onlinePredictionLogging) {
             this.onlinePredictionLogging = Objects.requireNonNull(onlinePredictionLogging);
             return this;
         }
-
         public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-        public GetModelResult build() {
+        public Builder regions(String... regions) {
+            return regions(List.of(regions));
+        }        public GetModelResult build() {
             return new GetModelResult(defaultVersion, description, etag, labels, name, onlinePredictionConsoleLogging, onlinePredictionLogging, regions);
         }
     }

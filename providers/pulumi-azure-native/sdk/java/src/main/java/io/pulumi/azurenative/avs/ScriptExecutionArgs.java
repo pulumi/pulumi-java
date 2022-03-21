@@ -224,112 +224,99 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             this.failureReason = failureReason;
             return this;
         }
-
         public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = Output.ofNullable(failureReason);
             return this;
         }
-
         public Builder hiddenParameters(@Nullable Output<List<Object>> hiddenParameters) {
             this.hiddenParameters = hiddenParameters;
             return this;
         }
-
         public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
             this.hiddenParameters = Output.ofNullable(hiddenParameters);
             return this;
         }
-
+        public Builder hiddenParameters(Object... hiddenParameters) {
+            return hiddenParameters(List.of(hiddenParameters));
+        }
         public Builder namedOutputs(@Nullable Output<Map<String,Object>> namedOutputs) {
             this.namedOutputs = namedOutputs;
             return this;
         }
-
         public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
             this.namedOutputs = Output.ofNullable(namedOutputs);
             return this;
         }
-
         public Builder output(@Nullable Output<List<String>> output) {
             this.output = output;
             return this;
         }
-
         public Builder output(@Nullable List<String> output) {
             this.output = Output.ofNullable(output);
             return this;
         }
-
+        public Builder output(String... output) {
+            return output(List.of(output));
+        }
         public Builder parameters(@Nullable Output<List<Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
-
         public Builder parameters(@Nullable List<Object> parameters) {
             this.parameters = Output.ofNullable(parameters);
             return this;
         }
-
+        public Builder parameters(Object... parameters) {
+            return parameters(List.of(parameters));
+        }
         public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
-
         public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
-
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public Builder retention(@Nullable Output<String> retention) {
             this.retention = retention;
             return this;
         }
-
         public Builder retention(@Nullable String retention) {
             this.retention = Output.ofNullable(retention);
             return this;
         }
-
         public Builder scriptCmdletId(@Nullable Output<String> scriptCmdletId) {
             this.scriptCmdletId = scriptCmdletId;
             return this;
         }
-
         public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
             this.scriptCmdletId = Output.ofNullable(scriptCmdletId);
             return this;
         }
-
         public Builder scriptExecutionName(@Nullable Output<String> scriptExecutionName) {
             this.scriptExecutionName = scriptExecutionName;
             return this;
         }
-
         public Builder scriptExecutionName(@Nullable String scriptExecutionName) {
             this.scriptExecutionName = Output.ofNullable(scriptExecutionName);
             return this;
         }
-
         public Builder timeout(Output<String> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public Builder timeout(String timeout) {
             this.timeout = Output.of(Objects.requireNonNull(timeout));
             return this;
-        }
-        public ScriptExecutionArgs build() {
+        }        public ScriptExecutionArgs build() {
             return new ScriptExecutionArgs(failureReason, hiddenParameters, namedOutputs, output, parameters, privateCloudName, resourceGroupName, retention, scriptCmdletId, scriptExecutionName, timeout);
         }
     }
