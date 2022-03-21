@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"strings"
@@ -40,20 +41,26 @@ func main() {
 	args := flag.Args()
 	logging.InitLogging(false, 0, false)
 	cmdutil.InitTracing("pulumi-language-jvm", "pulumi-language-jvm", tracing)
-	var jvmExec string
+
+	var jvmExec *jvmExecutor
 	switch {
 	case givenExecutor != "":
 		logging.V(3).Infof("language host asked to use specific executor: `%s`", givenExecutor)
-		jvmExec = givenExecutor
-	default:
-		pathExec, err := exec.LookPath("gradle")
+		var err error
+		jvmExec, err = resolveExecutor(givenExecutor)
 		if err != nil {
-			err = errors.Wrap(err, "could not find `gradle` on the $PATH")
 			cmdutil.Exit(err)
 		}
-
+	default:
+		pathExec, err := probeExecutor()
+		if err != nil {
+			cmdutil.Exit(err)
+		}
 		logging.V(3).Infof("language host identified executor from path: `%s`", pathExec)
-		jvmExec = pathExec
+		jvmExec, err = resolveExecutor(pathExec)
+		if err != nil {
+			cmdutil.Exit(err)
+		}
 	}
 
 	// Optionally pluck out the engine so we can do logging, etc.
@@ -83,16 +90,20 @@ func main() {
 	}
 }
 
+type jvmExecutor struct {
+	cmd     string
+	runArgs []string
+}
+
 // jvmLanguageHost implements the LanguageRuntimeServer interface
 // for use as an API endpoint.
 type jvmLanguageHost struct {
-	exec          string
+	exec          *jvmExecutor
 	engineAddress string
 	tracing       string
 }
 
-func newLanguageHost(exec, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
-
+func newLanguageHost(exec *jvmExecutor, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
 	return &jvmLanguageHost{
 		exec:          exec,
 		engineAddress: engineAddress,
@@ -127,11 +138,9 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 		return nil, err
 	}
 
-	executable := host.exec
-	args := []string{}
-
 	// Run from source.
-	args = append(args, "run", "--console=plain")
+	executable := host.exec.cmd
+	args := host.exec.runArgs
 
 	if logging.V(5) {
 		commandStr := strings.Join(args, " ")
@@ -227,4 +236,60 @@ func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Emp
 	return &pulumirpc.PluginInfo{
 		Version: version.Version,
 	}, nil
+}
+
+func probeExecutor() (string, error) {
+	pwd, err := os.Getwd()
+	if err != nil {
+		return "", errors.Wrap(err, "could not get the working directory")
+	}
+	files, err := ioutil.ReadDir(pwd)
+	if err != nil {
+		return "", errors.Wrap(err, "could not read the working directory")
+	}
+	for _, file := range files {
+		if !file.IsDir() {
+			switch file.Name() {
+			case "pom.xml":
+				return "mvn", nil
+			case "settings.gradle", "settings.gradle.kts":
+				return "gradle", nil
+			}
+		}
+	}
+	return "", errors.New("did not found an executor, expected one of: gradle (settings.gradle), maven (pom.xml)")
+}
+
+func resolveExecutor(exec string) (*jvmExecutor, error) {
+	// TODO: we might want to look for gradlew and mvnw, before gradle and mvn
+	switch exec {
+	case "gradle":
+		cmd, err := lookupPath("gradle")
+		if err != nil {
+			return nil, err
+		}
+		return &jvmExecutor{
+			cmd:     cmd,
+			runArgs: []string{"run", "--console=plain"},
+		}, nil
+	case "maven", "mvn":
+		cmd, err := lookupPath("mvn")
+		if err != nil {
+			return nil, err
+		}
+		return &jvmExecutor{
+			cmd:     cmd,
+			runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
+		}, nil
+	default:
+		return nil, errors.Errorf("did not recognize the executor '%s', expected one of: gradle, maven", exec)
+	}
+}
+
+func lookupPath(file string) (string, error) {
+	pathExec, err := exec.LookPath(file)
+	if err != nil {
+		return "", errors.Wrapf(err, "could not find `%s` on the $PATH", file)
+	}
+	return pathExec, nil
 }
