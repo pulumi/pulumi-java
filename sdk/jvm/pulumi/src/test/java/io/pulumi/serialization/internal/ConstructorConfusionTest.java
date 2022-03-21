@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
+import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.deployment.MockCallArgs;
 import io.pulumi.deployment.MockResourceArgs;
@@ -27,11 +28,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ConstructorConfusionTest {
     @Test
     void TryConstuctNotConfusedByTwoN3Constructors() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder().setOptions(new TestOptions(true)).setMocks(new ConfusionMocks()).setSpyGlobalInstance();
+        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+                .setOptions(new TestOptions(true))
+                .setMocks(new ConfusionMocks())
+                .setSpyGlobalInstance();
         var resources = mock.testAsync(ConfusionStack.class).join();
         assertThat(resources).isNotEmpty();
     }
-
 
     @AfterEach
     public void cleanupMocks() {
@@ -40,7 +43,7 @@ public class ConstructorConfusionTest {
 
     public static class ConfusionMocks implements Mocks {
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "test:index/MinifiedConfigMap":
