@@ -107,9 +107,9 @@ func (ts TypeShape) ParameterTypesTransformed(f func(TypeShape) string) []string
 	return parameterTypes
 }
 
-func (propertyType TypeShape) ListType(ctx *classFileContext) string {
-	if propertyType.Type.String() == names.List.String() {
-		for _, a := range propertyType.Parameters {
+func (ts TypeShape) ListType(ctx *classFileContext) string {
+	if ts.Type.String() == names.List.String() {
+		for _, a := range ts.Parameters {
 			if strings.HasPrefix(a.Type.String(), names.JavaUtil.Dot("").String()) {
 				continue
 			}
