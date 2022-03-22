@@ -318,7 +318,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          cache: 'gradle'
+          cache: 'maven'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
@@ -356,7 +356,6 @@ jobs:
           make bin/pulumi-language-jvm
           export PATH="$PATH:$(pwd)/bin/" &&
             cd tests/examples/minimal &&
-            ./gradlew install &&
             ss=0
             pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
