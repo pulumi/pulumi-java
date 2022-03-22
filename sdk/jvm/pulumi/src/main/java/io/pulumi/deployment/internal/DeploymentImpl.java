@@ -30,6 +30,7 @@ import io.pulumi.serialization.internal.Structs;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
+import pulumirpc.Provider;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Resource.ReadResourceRequest;
@@ -79,6 +80,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RegisterResource registerResource;
     private final RegisterResourceOutputs registerResourceOutputs;
     private final RootResource rootResource;
+    private static final AtomicInteger deploymentIdGenerator = new AtomicInteger(0);
+    private final int deploymentId = deploymentIdGenerator.incrementAndGet();
 
     DeploymentImpl() {
         this(fromEnvironment());
@@ -91,19 +94,21 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     DeploymentImpl(
             DeploymentState state
     ) {
+        var tracker = new DeploymentTracker(this.deploymentId);
+        var trackingMonitor = new DeploymentTrackingMonitor(tracker, state.monitor);
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
-        this.featureSupport = new FeatureSupport(state.monitor);
+        this.featureSupport = new FeatureSupport(trackingMonitor);
         this.serialization = new PropertiesSerializer(this.log);
         this.converter = new Converter(this.log);
-        this.invoke = new Invoke(this.log, state.monitor, this.featureSupport, this.serialization, this.converter);
+        this.invoke = new Invoke(this.log, trackingMonitor, this.featureSupport, this.serialization, this.converter);
         this.rootResource = new RootResource(state.engine);
         this.prepare = new Prepare(this.log, this.featureSupport, this.rootResource, this.serialization);
-        this.call = new Call(this.log, state.monitor, this.prepare, this.serialization, this.converter);
-        this.readResource = new ReadResource(this.log, this.prepare, state.monitor);
-        this.registerResource = new RegisterResource(this.log, this.prepare, state.monitor);
+        this.call = new Call(this.log, trackingMonitor, this.prepare, this.serialization, this.converter);
+        this.readResource = new ReadResource(this.log, this.prepare, trackingMonitor);
+        this.registerResource = new RegisterResource(this.log, this.prepare, trackingMonitor);
         this.readOrRegisterResource = new ReadOrRegisterResource(state.runner, this.invoke, this.readResource, this.registerResource, this.converter, state.isDryRun);
-        this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, state.monitor, this.featureSupport, this.serialization);
+        this.registerResourceOutputs = new RegisterResourceOutputs(this.log, state.runner, trackingMonitor, this.featureSupport, this.serialization);
     }
 
     /**
@@ -1082,7 +1087,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 var data = response.t3;
                                 var dependencies = response.t4;
 
-
                                 // Run in a try/catch/finally so that we always resolve all the outputs of the resource
                                 // regardless of whether we encounter an errors computing the action.
                                 try {
@@ -1377,6 +1381,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @Override
     public void registerResourceOutputs(Resource resource, Output<Map<String, Optional<Object>>> outputs) {
         this.registerResourceOutputs.registerResourceOutputs(resource, outputs);
+    }
+
+    @Override
+    public int getDeploymentId() {
+        return deploymentId;
     }
 
     private static final class RegisterResourceOutputs {
@@ -1967,4 +1976,80 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return CompletableFuture.completedFuture("");
         }
     }
+
+    private static final class DeploymentTrackingMonitor implements Monitor {
+        private final Monitor monitor;
+        private final DeploymentTracker tracker;
+
+        public DeploymentTrackingMonitor(DeploymentTracker tracker, Monitor monitor) {
+            this.monitor = monitor;
+            this.tracker = tracker;
+        }
+
+        @Override
+        public CompletableFuture<pulumirpc.Resource.SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request) {
+            return tracker.wrap(() -> this.monitor.supportsFeatureAsync(request));
+        }
+
+        @Override
+        public CompletableFuture<Provider.InvokeResponse> invokeAsync(InvokeRequest request) {
+            return tracker.wrap(() -> this.monitor.invokeAsync(request));
+        }
+
+        @Override
+        public CompletableFuture<Provider.CallResponse> callAsync(CallRequest request) {
+            return tracker.wrap(() -> this.monitor.callAsync(request));
+        }
+
+        @Override
+        public CompletableFuture<pulumirpc.Resource.ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
+            return tracker.wrap(() -> this.monitor.readResourceAsync(resource, request));
+        }
+
+        @Override
+        public CompletableFuture<pulumirpc.Resource.RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
+            return tracker.wrap(() -> this.monitor.registerResourceAsync(resource, request));
+        }
+
+        @Override
+        public CompletableFuture<Void> registerResourceOutputsAsync(pulumirpc.Resource.RegisterResourceOutputsRequest request) {
+            return tracker.wrap(() -> this.monitor.registerResourceOutputsAsync(request));
+        }
+    }
+
+    private static final class DeploymentTracker {
+        private final int originalDeploymentId;
+
+        public DeploymentTracker(int originalDeploymentId) {
+            this.originalDeploymentId = originalDeploymentId;
+        }
+
+        public <T> CompletableFuture<T> wrap(Supplier<CompletableFuture<T>> func) {
+            return CompletableFuture.completedFuture(0)
+                    .thenApply(__ -> func.get())
+                    .thenCompose(this::throwIfDeploymentCancelled)
+                    .thenCompose(x -> x)
+                    .thenCompose(this::throwIfDeploymentCancelled);
+        }
+
+        public <T> CompletableFuture<T> throwIfDeploymentCancelled(T value) {
+            var currentId = getCurrentDeploymentId();
+            if (currentId == originalDeploymentId) {
+                return CompletableFuture.completedFuture(value);
+            } else {
+                return CompletableFuture.failedFuture(new DeploymentCancelledException());
+            }
+        }
+
+        private static int getCurrentDeploymentId() {
+            var deployment = DeploymentInternal.getInstanceOptional();
+            if (deployment.isPresent()) {
+                return deployment.get().getDeploymentId();
+            } else {
+                return -1;
+            }
+        }
+    }
+
+    private static final class DeploymentCancelledException extends Exception { }
 }
