@@ -42,6 +42,8 @@ providers_generate_all: provider.random.generate provider.aws.generate provider.
 
 providers_all: provider.random.install provider.aws.install provider.aws-native.install provider.docker.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install provider.eks.install
 
+provider.eks.build: provider.kubernetes.install provider.aws.install
+
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
 	cd providers/pulumi-$*/sdk/java && gradle build
@@ -61,8 +63,7 @@ provider.%.install:	provider.%.build
 
 # Integration tests will use PULUMI_ACCESS_TOKEN to provision tests
 # stacks in Pulumi service.
-integration_tests::	bin/pulumi-language-jvm ensure_tests provider.random.install
-	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run TestJava -test.v
+integration_tests::	bin/pulumi-language-jvm ensure_tests
 
 ensure_tests::	submodule_update
 	pulumi plugin install resource random v4.3.1
