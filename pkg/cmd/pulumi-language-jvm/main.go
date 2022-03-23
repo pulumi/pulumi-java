@@ -3,15 +3,22 @@
 package main
 
 import (
+	"archive/zip"
 	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
+	"io/ioutil"
 	"os"
 	"os/exec"
 	"path"
+	"path/filepath"
 	"strings"
 	"syscall"
+
+	"github.com/blang/semver"
+	multierror "github.com/hashicorp/go-multierror"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
@@ -108,68 +115,18 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 
 	var err error
 	logging.V(5).Infof("GetRequiredPlugins: %v", req.GetProgram())
-
-	project := "gradle"
-
-	var plugins []*pulumirpc.PluginDependency
-
-	getPluginsGradle := func(req *pulumirpc.GetRequiredPluginsRequest) ([]*pulumirpc.PluginDependency, error) {
-		plugins := []*pulumirpc.PluginDependency{}
-		buildFilePath := path.Join(req.GetPwd(), "app/build.gradle")
-		f, err := os.ReadFile(buildFilePath)
-
-		if err != nil {
-			return plugins, err
-		}
-
-		for _, s := range strings.Split(string(f), "\n") {
-			// i.e. s := `     implementation 'io.pulumi:aws:4.37.3'`
-			elem := strings.Trim(s, " ")
-			elems := strings.Split(elem, " ")
-			if len(elems) < 2 {
-				continue
-			}
-
-			key, value := elems[0], elems[1]
-			if key != "implementation" {
-				continue
-			}
-			//i.e value = "io.pulumi:aws:4.37.3"
-			tuple := strings.Split(strings.Trim(value, "'\""), ":")
-			var ns string
-			var name string
-			var version string
-			switch len(tuple) {
-			case 3:
-				version = tuple[2]
-				fallthrough
-			case 2:
-				name = tuple[1]
-				fallthrough
-			case 1:
-				ns = tuple[0]
-			}
-			if ns != "io.pulumi" {
-				continue
-			}
-			plugins = append(plugins, &pulumirpc.PluginDependency{
-				Name:    name,
-				Kind:    "resource",
-				Version: version,
-			})
-		}
-		return plugins, nil
+	pulumiPackagePathToVersionMap := make(map[string]semver.Version)
+	homePath, err := os.UserHomeDir()
+	if err != nil {
+		return nil, err
 	}
-
-	switch project {
-	case "gradle":
-		plugins, err = getPluginsGradle(req)
-		if err != nil {
-			return nil, err
-		}
-	case "maven":
-	case "ant":
-	default:
+	classpath := []string{
+		path.Join(homePath, ".m2"),
+		path.Join(homePath, ".gradle"),
+	}
+	plugins, err := getPluginsFromClasspath(classpath, pulumiPackagePathToVersionMap)
+	if err != nil {
+		return nil, err
 	}
 
 	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
@@ -224,6 +181,121 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	}
 
 	return &pulumirpc.RunResponse{Error: errResult}, nil
+}
+
+// getPackageInfo returns a bool indicating whether the given package.json package has an associated Pulumi
+// resource provider plugin.  If it does, thre strings are returned, the plugin name, and its semantic version and
+// an optional server that can be used to download the plugin (this may be empty, in which case the "default" location
+// should be used).
+func getPackageInfo(jarPath string) (bool, string, string, string, error) {
+	r, err := zip.OpenReader(jarPath)
+	if err != nil {
+		return false, "", "", "", err
+	}
+	defer r.Close()
+	f, err := r.Open("META-INF/MANIFEST.MF")
+	if err != nil {
+		return false, "", "", "", nil // no manifest
+	}
+	defer f.Close()
+	buf, err := io.ReadAll(f)
+	if err != nil {
+		return false, "", "", "", nil // unreadable
+	}
+	body := string(buf)
+	lines := strings.Split(body, "\r\n") // TODO discuss this
+	var name string
+	var version string
+	var server string
+	for _, line := range lines {
+		keyValue := strings.SplitN(line, ": ", 2)
+		if len(keyValue) < 2 {
+			continue
+		}
+		key, value := keyValue[0], keyValue[1]
+		if name == "" && key == "Pulumi-ResourceProvider-Name" { // TODO make this a const
+			name = (value + ".")[:len(value)]
+			continue
+		} else if version == "" && key == "Pulumi-ResourceProvider-Version" { // TODO make this a const
+			version = (value + ".")[:len(value)]
+			continue
+		} else if server == "" && key == "Pulumi-ResourceProvider-Server" { // TODO make this a const
+			server = (value + ".")[:len(value)]
+			continue
+		}
+	}
+	if name == "" {
+		return false, "", "", "", nil
+	}
+	// TODO add sanity checking
+	return true, name, version, server, nil
+}
+
+// getPluginsFromDir enumerates all node_modules/ directories, deeply, and returns the fully concatenated results.
+func getPluginsFromClasspath(
+	classpath []string,
+	pulumiPackagePathToVersionMap map[string]semver.Version) ([]*pulumirpc.PluginDependency, error) {
+
+	plugins := make([]*pulumirpc.PluginDependency, 0)
+	for _, dir := range classpath {
+
+		dirPlugins, err := getPluginsFromDir(dir, pulumiPackagePathToVersionMap)
+		if err != nil {
+			panic(err.Error())
+		}
+		plugins = append(plugins, dirPlugins...)
+	}
+	return plugins, nil
+}
+
+// getPluginsFromDir enumerates all node_modules/ directories, deeply, and returns the fully concatenated results.
+func getPluginsFromDir(
+	dir string,
+	pulumiPackagePathToVersionMap map[string]semver.Version) ([]*pulumirpc.PluginDependency, error) {
+	files, err := ioutil.ReadDir(dir)
+	if err != nil {
+		return nil, errors.Wrapf(err, "reading plugin dir %s", dir)
+	}
+
+	plugins := make([]*pulumirpc.PluginDependency, 0)
+	var allErrors *multierror.Error
+	for _, file := range files {
+		name := file.Name()
+		curr := filepath.Join(dir, name)
+
+		// Re-stat the directory, in case it is a symlink.
+		file, err = os.Stat(curr)
+		if err != nil {
+			allErrors = multierror.Append(allErrors, err)
+			continue
+		}
+		if file.IsDir() {
+			// if a directory, recurse.
+			more, err := getPluginsFromDir(curr, pulumiPackagePathToVersionMap)
+			if err != nil {
+				allErrors = multierror.Append(allErrors, err)
+			}
+			// Even if there was an error, still append any plugins found in the dir.
+			plugins = append(plugins, more...)
+			continue
+		} else if !strings.HasSuffix(name, ".jar") {
+			// if not a .jar
+			continue
+		}
+
+		ok, name, version, server, err := getPackageInfo(curr)
+		if err != nil {
+			allErrors = multierror.Append(allErrors, errors.Wrapf(err, "unmarshaling package.json %s", curr))
+		} else if ok {
+			plugins = append(plugins, &pulumirpc.PluginDependency{
+				Name:    name,
+				Kind:    "resource",
+				Version: version,
+				Server:  server,
+			})
+		}
+	}
+	return plugins, allErrors.ErrorOrNil()
 }
 
 // constructEnv constructs an environ for `pulumi-language-jvm`

@@ -205,6 +205,13 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
 }
+
+jar {
+    manifest {
+        attributes["Pulumi-ResourceProvider-Name"] = '{{ .Name }}'
+        attributes["Pulumi-ResourceProvider-Version"] = project.version
+    }
+}
 `
 
 var jvmBuildTemplate = Template("JavaBuild", jvmBuildTemplateText)
