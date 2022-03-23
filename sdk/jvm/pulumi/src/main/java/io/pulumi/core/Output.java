@@ -10,7 +10,6 @@ import com.google.gson.JsonNull;
 import io.pulumi.core.internal.*;
 
 import javax.annotation.Nullable;
-import java.util.Objects;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -107,13 +106,6 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     static <T> Output<T> ofSecret(T value) {
         return new OutputInternal<>(value, true);
-    }
-
-    static <T> Output<T> ofNullable(@Nullable T value) {
-        if (value == null) {
-            return of(null);
-        }
-        return Output.of(value);
     }
 
     static <T> Output<T> unknown() {

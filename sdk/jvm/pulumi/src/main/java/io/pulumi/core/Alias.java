@@ -120,7 +120,7 @@ public class Alias {
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Output.of(name);
             return this;
         }
 
@@ -130,7 +130,7 @@ public class Alias {
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Output.of(type);
             return this;
         }
 
@@ -140,7 +140,7 @@ public class Alias {
         }
 
         public Builder stack(@Nullable String stack) {
-            this.stack = Output.ofNullable(stack);
+            this.stack = Output.of(stack);
             return this;
         }
 
@@ -150,7 +150,7 @@ public class Alias {
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Output.of(project);
             return this;
         }
 
