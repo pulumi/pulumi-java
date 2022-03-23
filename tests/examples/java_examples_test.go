@@ -126,7 +126,10 @@ func TestCloudExamples(t *testing.T) {
 				Config: map[string]string{
 					"aws:region": "us-west-1",
 				},
-				Quick: true,
+				SkipRefresh:            true,
+				SkipEmptyPreviewUpdate: true,
+				SkipExportImport:       true,
+				SkipUpdate:             true,
 				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 					o := stackInfo.Outputs
 					kubeconfig := o["kubeconfig"].(string)
