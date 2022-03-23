@@ -20,7 +20,7 @@ class ResourceOptionsTest {
     private static Stream<Arguments> testMergeSharedOptions() {
         return Stream.of(
                 arguments(new TestResourceOptions(), new TestResourceOptions(), new TestResourceOptions(
-                        null, null, Output.empty(), false, null,
+                        null, null, Output.of(List.of()), false, null,
                         null, null, null, null, null, null, null
                 )),
                 arguments(new TestResourceOptions(
@@ -54,7 +54,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.empty(),
+                                Output.of(List.of()),
                                 true,
                                 List.of("a", "b"),
                                 "test",

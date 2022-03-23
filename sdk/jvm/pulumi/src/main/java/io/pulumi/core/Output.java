@@ -286,44 +286,18 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Concatenates two lists of @see {@link Output}, can take a {@code @Nullable}, returns {@code non-null}.
+     * Concatenates two lists of @see {@link Output}, can take a {@code @Nullable} that will be treated as an empty list,
+     * always returns {@code non-null}.
      */
     static <E> Output<List<E>> concatList(@Nullable Output</* @Nullable */ List<E>> left, @Nullable Output</* @Nullable */List<E>> right) {
-        if (left == null && right == null) {
-            return Output.empty();
-        }
-        if (left == null) {
-            left = Output.empty();
-        }
-        if (right == null) {
-            right = Output.empty();
-        }
-
-        return concatListInternal(left, right);
+        return tuple(
+                left == null ? Output.of(List.of()) : left,
+                right == null ? Output.of(List.of()) : right
+        ).applyValue(tuple -> ImmutableList.<E>builder()
+                .addAll(tuple.t1 == null ? List.of() : tuple.t1)
+                .addAll(tuple.t2 == null ? List.of() : tuple.t2)
+                .build());
     }
-
-    private static <E> Output<List<E>> concatListInternal(Output</* @Nullable */ List<E>> left, Output</* @Nullable */List<E>> right) {
-        return Output.ofFuture(Internal.of(left).isEmpty().thenCompose(
-                leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
-                        rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
-                                l -> Internal.of(right).getValueNullable().thenApply(
-                                        r -> {
-                                            if (leftIsEmpty && rightIsEmpty) {
-                                                return null;
-                                            }
-                                            return Stream
-                                                    .concat(
-                                                            (l == null ? ImmutableList.<E>of() : l).stream(),
-                                                            (r == null ? ImmutableList.<E>of() : r).stream()
-                                                    )
-                                                    .collect(toImmutableList());
-                                        }
-                                )
-                        )
-                )
-        ));
-    }
-
 
     /**
      * @see #ofList(Object)
