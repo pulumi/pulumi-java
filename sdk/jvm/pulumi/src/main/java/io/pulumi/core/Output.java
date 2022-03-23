@@ -18,7 +18,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.OutputData.allHelperAsync;
 import static io.pulumi.core.internal.OutputInternal.TupleZeroOut;
@@ -480,49 +479,26 @@ public interface Output<T> extends Copyable<Output<T>> {
      * Returns a new instance without modifying any of the arguments.
      * <p/>
      * If both maps contain the same key, the value from the second map takes over.
+     * <p/>
+     * Null values in the Output or Map layer are treated as empty maps.
      *
      * @param left  The first @see {@code Output<Map<V>>}
      * @param right The second @see {@code Output<Map<V>>}, it has higher priority in case of key clash.
      * @return A new instance of {@code Output<Map<V>>} that contains the items from both input maps.
      */
     static <V> Output<Map<String, V>> concatMap(@Nullable Output<Map<String, V>> left, @Nullable Output<Map<String, V>> right) {
-        if (left == null && right == null) {
-            return Output.empty();
-        }
-        if (left == null) {
-            left = Output.empty();
-        }
-        if (right == null) {
-            right = Output.empty();
-        }
-
-        return concatMapInternal(left, right);
-    }
-
-    private static <V> Output<Map<String, V>> concatMapInternal(Output<Map<String, V>> left, Output<Map<String, V>> right) {
-        return Output.ofFuture(Internal.of(left).isEmpty().thenCompose(
-                leftIsEmpty -> Internal.of(right).isEmpty().thenCompose(
-                        rightIsEmpty -> Internal.of(left).getValueNullable().thenCompose(
-                                l -> Internal.of(right).getValueNullable().thenApply(
-                                        r -> {
-                                            if (leftIsEmpty && rightIsEmpty) {
-                                                return null;
-                                            }
-                                            return Stream
-                                                    .concat(
-                                                            (l == null ? ImmutableMap.<String, V>of() : l).entrySet().stream(),
-                                                            (r == null ? ImmutableMap.<String, V>of() : r).entrySet().stream()
-                                                    )
-                                                    .collect(toImmutableMap(
-                                                            Map.Entry::getKey,
-                                                            Map.Entry::getValue,
-                                                            (v1, v2) -> v2 // in case of duplicate, ignore the v1
-                                                    ));
-                                        }
-                                )
-                        )
-                )
-        ));
+        return tuple(
+                left == null ? Output.of(Map.of()) : left,
+                right == null ? Output.of(Map.of()) : right
+        ).applyValue(tuple ->
+                Stream.concat(
+                        (tuple.t1 == null ? ImmutableMap.<String, V>of() : tuple.t1).entrySet().stream(),
+                        (tuple.t2 == null ? ImmutableMap.<String, V>of() : tuple.t2).entrySet().stream()
+                ).collect(toImmutableMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v2 // in case of duplicate, ignore the v1
+                )));
     }
 
     /**
