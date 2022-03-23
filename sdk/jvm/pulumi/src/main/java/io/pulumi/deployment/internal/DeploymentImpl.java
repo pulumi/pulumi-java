@@ -1106,10 +1106,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     for (var entry : completionSources.entrySet()) {
                                         var fieldName = entry.getKey();
                                         OutputCompletionSource<?> completionSource = entry.getValue();
-                                        if (Constants.UrnPropertyName.equals(fieldName) || Constants.IdPropertyName.equals(fieldName)) {
-                                            // Already handled specially above.
-                                            continue;
-                                        }
 
                                         // We process and deserialize each field (instead of bulk processing
                                         // 'response.data' so that each field can have independent isKnown/isSecret values.
